@@ -1,0 +1,462 @@
+<!--
+  Seite: pages/islands/mykonos.html
+  Zweck: Insel-Detailseite Mykonos. Enthält Hero- und Statistik-Sektionen,
+  Beschreibungen, Sehenswürdigkeiten und lokale Hinweise. Diese Datei
+  wird von der Hauptseite verlinkt bzw. in einem Overlay geöffnet.
+  Hinweis: Nur erläuternde Kommentare wurden hinzugefügt; kein Laufzeitcode
+  wurde verändert.
+-->
+
+<div class="myk-back-bar">
+  <button class="myk-back-btn" onclick="closeMykonos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="myk-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Mykonos</span></p>
+</div>
+
+<!-- Hero -->
+<div class="myk-hero">
+  <div class="myk-hero-dots"></div>
+  <div class="myk-hero-glow"></div>
+  <p class="myk-hero-tag">Kykladen · Ägäis</p>
+  <h1 class="myk-hero-title">Mykonos<em>Die Kosmopolite</em></h1>
+  <p class="myk-hero-sub">Weiß getünchte Gassen, ikonische Windmühlen und das pulsierendste Nachtleben der Ägäis — Mykonos ist Griechenlands glamouröseste Insel.</p>
+  <div class="myk-hero-pills">
+    <span class="myk-hero-pill">Kykladen</span>
+    <span class="myk-hero-pill">Traumstrände</span>
+    <span class="myk-hero-pill">Nachtleben</span>
+    <span class="myk-hero-pill">Windmühlen</span>
+    <span class="myk-hero-pill">Little Venice</span>
+  </div>
+  <div class="myk-hero-waves"></div>
+</div>
+
+<!-- Stats bar -->
+<div class="myk-stats-bar">
+  <div class="myk-stat-item">
+    <div class="myk-stat-num">85 km²</div>
+    <div class="myk-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="myk-stat-item">
+    <div class="myk-stat-num">10.000</div>
+    <div class="myk-stat-lbl">Einwohner</div>
+  </div>
+  <div class="myk-stat-item">
+    <div class="myk-stat-num">5</div>
+    <div class="myk-stat-lbl">Windmühlen (Kato Mili)</div>
+  </div>
+  <div class="myk-stat-item">
+    <div class="myk-stat-num">300+</div>
+    <div class="myk-stat-lbl">Sonnenstunden/Jahr</div>
+  </div>
+  <div class="myk-stat-item">
+    <div class="myk-stat-num">25+</div>
+    <div class="myk-stat-lbl">Traumstrände</div>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="myk-content">
+
+  <!-- 1. GESCHICHTE -->
+  <section class="myk-section">
+    <div class="myk-section-head">
+      <p class="myk-section-label">01 — Geschichte</p>
+      <h2 class="myk-section-title">Von den Göttern<br><em>zur Weltbühne</em></h2>
+      <div class="myk-divider"></div>
+    </div>
+    <div class="myk-history-grid">
+      <div class="myk-history-text">
+        <p>Mykonos trägt seinen Namen vom mythischen Helden Mykons, einem Enkel des Gottes Apollon. Die Insel war schon in der Antike bewohnt — seit mindestens 3.000 vor Christus lebten hier Menschen, die von Fischfang, Handel und Landwirtschaft lebten. Ihre Nachbarschaft zur heiligen Insel Delos machte Mykonos zu einem bedeutenden Knotenpunkt der antiken Ägäis.</p>
+        <p>Im Mittelalter war Mykonos Teil des venezianischen Herrschaftsgebiets, was seine Architektur bis heute prägt. Die charakteristischen weißgetünchten Häuser mit den bunten Türen entstanden ursprünglich, um Piraten zu verwirren — das Labyrinth enger Gassen der Chora war ein natürlicher Schutzwall.</p>
+        <p>Nach der griechischen Unabhängigkeit 1821, an der die Mykoniotinnen aktiv teilnahmen — allen voran die legendäre Kriegsheldin Manto Mavrogenous — entwickelte sich die Insel langsam. Erst in den 1950er und 1960er Jahren entdeckten europäische Künstler und Intellektuelle Mykonos: Jackie Kennedy, Aristoteles Onassis und Marlene Dietrich machten die Insel zur Legende des Mittelmeer-Glamours.</p>
+      </div>
+      <div class="myk-timeline">
+        <div class="myk-tl-item">
+          <div class="myk-tl-dot"></div>
+          <div class="myk-tl-year">~3000 v. Chr.</div>
+          <div class="myk-tl-event">Erste Besiedlung der Insel. Mykonos wird Teil des kykladischen Handelsnetzes und profitiert von der Nähe zur heiligen Insel Delos.</div>
+        </div>
+        <div class="myk-tl-item">
+          <div class="myk-tl-dot"></div>
+          <div class="myk-tl-year">~1000 v. Chr.</div>
+          <div class="myk-tl-event">Ionische Besiedlung. Mykonos gilt als Geburtsort des Helden Mykons, Enkel des Gottes Apollon — daher der Name der Insel.</div>
+        </div>
+        <div class="myk-tl-item">
+          <div class="myk-tl-dot"></div>
+          <div class="myk-tl-year">13. Jh.</div>
+          <div class="myk-tl-event">Venezianische Herrschaft unter dem Ghisi-Clan. Die weißgetünchten Labyrinthe der Chora entstehen als Schutz vor Piratenangriffen.</div>
+        </div>
+        <div class="myk-tl-item">
+          <div class="myk-tl-dot"></div>
+          <div class="myk-tl-year">1821</div>
+          <div class="myk-tl-event">Manto Mavrogenous, Tochter von Mykonos, finanziert aus eigenem Vermögen Schiffe und Soldaten für den griechischen Unabhängigkeitskampf.</div>
+        </div>
+        <div class="myk-tl-item">
+          <div class="myk-tl-dot"></div>
+          <div class="myk-tl-year">1950er</div>
+          <div class="myk-tl-event">Internationale Celebrities entdecken Mykonos: Jackie Kennedy, Onassis und europäische Künstler verwandeln die Insel in den Glamour-Hotspot des Mittelmeers.</div>
+        </div>
+        <div class="myk-tl-item">
+          <div class="myk-tl-dot"></div>
+          <div class="myk-tl-year">Heute</div>
+          <div class="myk-tl-event">Eines der begehrtesten Reiseziele weltweit mit Luxushotels, Strandclubs und dem kosmopolitischsten Nachtleben Griechenlands.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. BELIEBTESTE ORTE -->
+  <section class="myk-section">
+    <div class="myk-section-head">
+      <p class="myk-section-label">02 — Beliebteste Orte</p>
+      <h2 class="myk-section-title">Jede Gasse ein<br><em>Meisterwerk</em></h2>
+      <div class="myk-divider"></div>
+    </div>
+    <div class="myk-orte-grid">
+
+      <div class="myk-ort-card">
+        <div class="myk-ort-visual ort-chora"></div>
+        <div class="myk-ort-body">
+          <h3 class="myk-ort-name">Mykonos-Stadt (Chora)</h3>
+          <p class="myk-ort-desc">Das Herz der Insel: ein weißes Labyrinth aus engen Gassen, blumengeschmückten Balkonen und lebhaften Plätzen. Boutiquen, Galerien und Cafés wechseln sich in diesem organisch gewachsenen Stadtkern ab.</p>
+          <div class="myk-ort-tags">
+            <span class="myk-ort-tag">Altstadt</span>
+            <span class="myk-ort-tag">Shopping</span>
+            <span class="myk-ort-tag">Nachtleben</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="myk-ort-card">
+        <div class="myk-ort-visual ort-windmuehlen"></div>
+        <div class="myk-ort-body">
+          <h3 class="myk-ort-name">Windmühlen (Kato Mili)</h3>
+          <p class="myk-ort-desc">Fünf ikonische Windmühlen aus dem 16. Jahrhundert thronen über dem Hafen der Chora. Einst mahlten sie Getreide für die Seeleute — heute sind sie das Symbol von Mykonos und Pflichtfoto-Kulisse.</p>
+          <div class="myk-ort-tags">
+            <span class="myk-ort-tag">Wahrzeichen</span>
+            <span class="myk-ort-tag">Sonnenuntergang</span>
+            <span class="myk-ort-tag">Venezianisch</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="myk-ort-card">
+        <div class="myk-ort-visual ort-little-venice"></div>
+        <div class="myk-ort-body">
+          <h3 class="myk-ort-name">Little Venice</h3>
+          <p class="myk-ort-desc">Bunte Häuser, die direkt ins Meer gebaut sind — mit Balkonen über den Wellen. Das malerischste Viertel der Insel ist der ideale Platz für einen Cocktail beim Sonnenuntergang, während das Meer unter Ihnen rauscht.</p>
+          <div class="myk-ort-tags">
+            <span class="myk-ort-tag">Fotogen</span>
+            <span class="myk-ort-tag">Sonnenuntergang</span>
+            <span class="myk-ort-tag">Bars</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="myk-ort-card">
+        <div class="myk-ort-visual ort-delos"></div>
+        <div class="myk-ort-body">
+          <h3 class="myk-ort-name">Heilige Insel Delos</h3>
+          <p class="myk-ort-desc">Nur 30 Minuten mit dem Boot entfernt liegt eine der bedeutendsten archäologischen Stätten der Antike. Laut griechischer Mythologie war Delos der Geburtsort von Apollon und Artemis. UNESCO-Welterbe.</p>
+          <div class="myk-ort-tags">
+            <span class="myk-ort-tag">UNESCO</span>
+            <span class="myk-ort-tag">Antike</span>
+            <span class="myk-ort-tag">Tagesausflug</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="myk-ort-card">
+        <div class="myk-ort-visual ort-paradise"></div>
+        <div class="myk-ort-body">
+          <h3 class="myk-ort-name">Paradise & Super Paradise Beach</h3>
+          <p class="myk-ort-desc">Die berühmtesten Strände der Insel — mit türkisem Wasser, Strandclubs und einer Atmosphäre, die ihresgleichen sucht. Paradise Beach ist der Mittelpunkt des Partylebens, Super Paradise etwas exklusiver.</p>
+          <div class="myk-ort-tags">
+            <span class="myk-ort-tag">Strand</span>
+            <span class="myk-ort-tag">Strandclub</span>
+            <span class="myk-ort-tag">Party</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="myk-ort-card">
+        <div class="myk-ort-visual ort-ano-mera"></div>
+        <div class="myk-ort-body">
+          <h3 class="myk-ort-name">Ano Mera</h3>
+          <p class="myk-ort-desc">Das authentische Gegenstück zur glamourösen Chora: Das einzige echte Dorf der Insel mit dem historischen Kloster Panagia Tourliani aus dem 16. Jahrhundert und traditionellen Tavernen für das echte Mykonos-Erlebnis.</p>
+          <div class="myk-ort-tags">
+            <span class="myk-ort-tag">Authentisch</span>
+            <span class="myk-ort-tag">Kloster</span>
+            <span class="myk-ort-tag">Dorf</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. TAVERNEN -->
+  <section class="myk-section">
+    <div class="myk-section-head">
+      <p class="myk-section-label">03 — Tavernen</p>
+      <h2 class="myk-section-title">Kulinarik zwischen<br><em>Meer &amp; Glamour</em></h2>
+      <div class="myk-divider"></div>
+    </div>
+    <div class="myk-tav-grid">
+
+      <div class="myk-tav-card">
+        <div class="myk-tav-top">
+          <div>
+            <h3 class="myk-tav-name">Kikis Tavern</h3>
+            <div class="myk-tav-loc">📍 Agios Sostis Strand, North Coast</div>
+          </div>
+          <div class="myk-tav-stars">★★★★★</div>
+        </div>
+        <p class="myk-tav-desc">Das wohl berühmteste Geheimnis von Mykonos: keine Karte, keine Reservierungen, kein Strom — nur ein Holzgrill, frischer Fang und Salate. Mittagessen mit Blick auf einen der schönsten und ruhigsten Strände der Insel. Warteschlange einplanen!</p>
+        <div class="myk-tav-dishes">
+          <span class="myk-tav-dish">Gegrillter Oktopus</span>
+          <span class="myk-tav-dish">Frischer Fisch</span>
+          <span class="myk-tav-dish">Choriatiki</span>
+        </div>
+        <p class="myk-tav-price">Preisklasse: <span>€€ · Nur Mittagessen · Cash only</span></p>
+      </div>
+
+      <div class="myk-tav-card">
+        <div class="myk-tav-top">
+          <div>
+            <h3 class="myk-tav-name">Spilia Seaside</h3>
+            <div class="myk-tav-loc">📍 Kavos, Bucht von Mykonos</div>
+          </div>
+          <div class="myk-tav-stars">★★★★★</div>
+        </div>
+        <p class="myk-tav-desc">Eingebettet in eine natürliche Meereshöhle aus weißem Fels — ein der außergewöhnlichsten Restaurants Griechenlands. Frische Meeresfrüchte und Fischspezialitäten, direkt über dem Meer serviert, mit Blick auf die glitzernde Ägäis.</p>
+        <div class="myk-tav-dishes">
+          <span class="myk-tav-dish">Gegrillte Languste</span>
+          <span class="myk-tav-dish">Tintenfisch</span>
+          <span class="myk-tav-dish">Meeresfrüchte-Pasta</span>
+        </div>
+        <p class="myk-tav-price">Preisklasse: <span>€€€ · Fine Dining am Meer</span></p>
+      </div>
+
+      <div class="myk-tav-card">
+        <div class="myk-tav-top">
+          <div>
+            <h3 class="myk-tav-name">Nikos Taverna</h3>
+            <div class="myk-tav-loc">📍 Chora, Mykonos-Stadt</div>
+          </div>
+          <div class="myk-tav-stars">★★★★☆</div>
+        </div>
+        <p class="myk-tav-desc">Eines der ältesten und verlässlichsten Restaurants der Insel mitten in der Chora. Bodenständige griechische Küche zu fairen Preisen, beliebt bei Einheimischen und Reisenden gleichermaßen. Die frische Auswahl am Tresen jeden Morgen ist ein Muss.</p>
+        <div class="myk-tav-dishes">
+          <span class="myk-tav-dish">Moussaka</span>
+          <span class="myk-tav-dish">Taramosalata</span>
+          <span class="myk-tav-dish">Frischer Fisch vom Tresen</span>
+        </div>
+        <p class="myk-tav-price">Preisklasse: <span>€€ · Traditionelle Küche</span></p>
+      </div>
+
+      <div class="myk-tav-card">
+        <div class="myk-tav-top">
+          <div>
+            <h3 class="myk-tav-name">Avra Restaurant</h3>
+            <div class="myk-tav-loc">📍 Chora, Matogianni Straße</div>
+          </div>
+          <div class="myk-tav-stars">★★★★★</div>
+        </div>
+        <p class="myk-tav-desc">In einem bezaubernden Innenhof mit Bougainvillea-Blüten gelegen, serviert Avra mediterrane Küche auf höchstem Niveau. Der Innenhofgarten ist einer der romantischsten Orte der Insel — perfekt für ein Abendessen zu zweit unter den Sternen.</p>
+        <div class="myk-tav-dishes">
+          <span class="myk-tav-dish">Lammkoteletts</span>
+          <span class="myk-tav-dish">Garnelen-Saganaki</span>
+          <span class="myk-tav-dish">Kritharoto</span>
+        </div>
+        <p class="myk-tav-price">Preisklasse: <span>€€€ · Romantisch</span></p>
+      </div>
+
+      <div class="myk-tav-card">
+        <div class="myk-tav-top">
+          <div>
+            <h3 class="myk-tav-name">To Maereio</h3>
+            <div class="myk-tav-loc">📍 Ano Mera, traditionelles Dorf</div>
+          </div>
+          <div class="myk-tav-stars">★★★★☆</div>
+        </div>
+        <p class="myk-tav-desc">Das authentischste Erlebnis für echte Liebhaber griechischer Hausmannskost. Im Dorf Ano Mera, fernab des Touristentrubels, werden täglich frische Speisen nach Großmutterrezept zubereitet. Günstig, ehrlich und köstlich.</p>
+        <div class="myk-tav-dishes">
+          <span class="myk-tav-dish">Gemüseeintopf</span>
+          <span class="myk-tav-dish">Gefüllte Weinblätter</span>
+          <span class="myk-tav-dish">Loukoumades</span>
+        </div>
+        <p class="myk-tav-price">Preisklasse: <span>€ · Hausmannskost</span></p>
+      </div>
+
+      <div class="myk-tav-card">
+        <div class="myk-tav-top">
+          <div>
+            <h3 class="myk-tav-name">M-eating</h3>
+            <div class="myk-tav-loc">📍 Chora, nahe Hauptplatz</div>
+          </div>
+          <div class="myk-tav-stars">★★★★★</div>
+        </div>
+        <p class="myk-tav-desc">Moderne griechische Küche trifft auf internationale Einflüsse — eines der kreativsten Restaurants der Insel. Lokale Zutaten werden mit zeitgenössischen Techniken neu interpretiert. Die Weinkarte mit kykladischen Weinen ist außergewöhnlich.</p>
+        <div class="myk-tav-dishes">
+          <span class="myk-tav-dish">Mykonos-Kopanisti</span>
+          <span class="myk-tav-dish">Kürbisrisotto</span>
+          <span class="myk-tav-dish">Dessert-Tasting</span>
+        </div>
+        <p class="myk-tav-price">Preisklasse: <span>€€€€ · Kreative Küche</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. MUSEEN -->
+  <section class="myk-section">
+    <div class="myk-section-head">
+      <p class="myk-section-label">04 — Museen</p>
+      <h2 class="myk-section-title">Kunst &amp;<br><em>Geschichte entdecken</em></h2>
+      <div class="myk-divider"></div>
+    </div>
+    <div class="myk-museum-grid">
+
+      <div class="myk-museum-card">
+        <div class="myk-museum-icon">🏺</div>
+        <div>
+          <p class="myk-museum-type">Archäologie</p>
+          <h3 class="myk-museum-name">Archäologisches Museum Mykonos</h3>
+          <p class="myk-museum-desc">Bedeutende Sammlung von Funden aus Delos und Rinia: Keramiken aus der geometrischen Periode, Marmorfiguren und Grabbeigaben. Das Herzstück ist ein großer Pithos aus dem 7. Jahrhundert v. Chr. mit mythologischen Szenen.</p>
+          <p class="myk-museum-hours">⏰ Di–So 8:30–15:30 Uhr · Eintritt: 4 €</p>
+        </div>
+      </div>
+
+      <div class="myk-museum-card">
+        <div class="myk-museum-icon">⛵</div>
+        <div>
+          <p class="myk-museum-type">Maritime Geschichte</p>
+          <h3 class="myk-museum-name">Aegean Maritime Museum</h3>
+          <p class="myk-museum-desc">Eines der besten Schifffahrtsmuseen Griechenlands mit Modellen historischer Schiffe, Seekarten, nautischen Instrumenten und dem originalen Leuchtturmapparat aus dem 19. Jahrhundert. Einzigartiger Einblick in die Seefahrtgeschichte der Ägäis.</p>
+          <p class="myk-museum-hours">⏰ Tägl. 10:30–13:00 & 18:30–21:00 Uhr · Eintritt: 4 €</p>
+        </div>
+      </div>
+
+      <div class="myk-museum-card">
+        <div class="myk-museum-icon">🪡</div>
+        <div>
+          <p class="myk-museum-type">Volkskunst</p>
+          <h3 class="myk-museum-name">Folklore Museum (Lena's House)</h3>
+          <p class="myk-museum-desc">Ein vollständig erhaltenes Bürgerhaus aus dem 19. Jahrhundert mit originalem Mobiliar, Trachten, Keramiken und alltäglichen Gegenständen. Zeigt das Leben einer wohlhabenden mykonischen Familie — zeitlos und berührend.</p>
+          <p class="myk-museum-hours">⏰ Apr–Okt Mo–Sa 18:00–21:00 Uhr · Eintritt frei</p>
+        </div>
+      </div>
+
+      <div class="myk-museum-card">
+        <div class="myk-museum-icon">🎨</div>
+        <div>
+          <p class="myk-museum-type">Zeitgenössische Kunst</p>
+          <h3 class="myk-museum-name">Rarity Gallery</h3>
+          <p class="myk-museum-desc">Eine der renommiertesten Galerien der Kykladen zeigt internationale zeitgenössische Kunst in wechselnden Ausstellungen. Während der Sommersaison werden besonders hochkarätige Werke gezeigt — Mykonos als Kunstmetropole.</p>
+          <p class="myk-museum-hours">⏰ Saisonal tägl. 11:00–22:00 Uhr · Eintritt frei</p>
+        </div>
+      </div>
+
+      <div class="myk-museum-card">
+        <div class="myk-museum-icon">🏛️</div>
+        <div>
+          <p class="myk-museum-type">Antike Stätte</p>
+          <h3 class="myk-museum-name">Archäologische Stätte Delos</h3>
+          <p class="myk-museum-desc">30 Minuten per Boot von Mykonos entfernt: eine der besterhaltenen antiken Stätten der Welt. Das Geburtsland der Götter Apollon und Artemis ist komplett unbewohnt und UNESCO-Welterbe. Mit eigenem Museum vor Ort.</p>
+          <p class="myk-museum-hours">⏰ Di–So 8:00–15:00 Uhr · Eintritt: 12 € + Fähre ca. 20 €</p>
+        </div>
+      </div>
+
+      <div class="myk-museum-card">
+        <div class="myk-museum-icon">⛪</div>
+        <div>
+          <p class="myk-museum-type">Religiöses Erbe</p>
+          <h3 class="myk-museum-name">Kloster Panagia Tourliani (Ano Mera)</h3>
+          <p class="myk-museum-desc">Das wichtigste Kloster der Insel aus dem Jahr 1542 beherbergt eine Sammlung byzantinischer Ikonen, geschnitzter Holzaltäre und liturgischer Objekte. Der prächtige Marmorglockenturm im Barockstil ist ein architektonisches Meisterwerk.</p>
+          <p class="myk-museum-hours">⏰ Tägl. 9:00–13:00 & 17:00–19:00 Uhr · Eintritt frei</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. ANDERE SEHENSWÜRDIGKEITEN -->
+  <section class="myk-section">
+    <div class="myk-section-head">
+      <p class="myk-section-label">05 — Weitere Sehenswürdigkeiten</p>
+      <h2 class="myk-section-title">Unvergessliche<br><em>Momente &amp; Orte</em></h2>
+      <div class="myk-divider"></div>
+    </div>
+    <div class="myk-sights-grid">
+
+      <div class="myk-sight-card">
+        <div class="myk-sight-emoji">🌅</div>
+        <p class="myk-sight-cat">Sonnenuntergang</p>
+        <h3 class="myk-sight-name">Sonnenuntergang bei den Windmühlen</h3>
+        <p class="myk-sight-desc">Jeden Abend versammeln sich Hunderte an den Kato Mili Windmühlen und in Little Venice, um den berühmten mykonischen Sonnenuntergang zu erleben. Früh kommen für den besten Blick!</p>
+      </div>
+
+      <div class="myk-sight-card">
+        <div class="myk-sight-emoji">🏖️</div>
+        <p class="myk-sight-cat">Strand</p>
+        <h3 class="myk-sight-name">Psarou Beach</h3>
+        <p class="myk-sight-desc">Der exklusivste Strand der Insel mit kristallklarem Wasser und luxuriösen Sonnenliegen. Psarou ist bekannt als Treffpunkt der Reichen und Schönen — Reservierung empfohlen.</p>
+      </div>
+
+      <div class="myk-sight-card">
+        <div class="myk-sight-emoji">🐟</div>
+        <p class="myk-sight-cat">Wahrzeichen</p>
+        <h3 class="myk-sight-name">Petros der Pelikan</h3>
+        <p class="myk-sight-desc">Seit 1954 ist ein Pelikan das offizielle Maskottchen von Mykonos. Der aktuelle Petros III. schlendert durch die Gassen der Chora und lässt sich bereitwillig fotografieren — ein unvergessliches Erlebnis.</p>
+      </div>
+
+      <div class="myk-sight-card">
+        <div class="myk-sight-emoji">🌊</div>
+        <p class="myk-sight-cat">Strand</p>
+        <h3 class="myk-sight-name">Elia Beach</h3>
+        <p class="myk-sight-desc">Der längste Strand der Insel — ruhiger als Paradise, aber genauso schön. Elia ist bekannt für seine entspannte Atmosphäre und das kristallklare Wasser. Ideal für Familien und Ruhesuchende.</p>
+      </div>
+
+      <div class="myk-sight-card">
+        <div class="myk-sight-emoji">🛥️</div>
+        <p class="myk-sight-cat">Ausflug</p>
+        <h3 class="myk-sight-name">Bootstouren & Inselhüpfen</h3>
+        <p class="myk-sight-desc">Von Mykonos aus lassen sich zahlreiche kleinere Inseln erkunden: Rineia, Paros und Naxos sind beliebt. Private Bootstouren um die Insel mit Schwimmstopps sind ein absolutes Highlight.</p>
+      </div>
+
+      <div class="myk-sight-card">
+        <div class="myk-sight-emoji">🎉</div>
+        <p class="myk-sight-cat">Nachtleben</p>
+        <h3 class="myk-sight-name">Nachtleben in der Chora</h3>
+        <p class="myk-sight-desc">Mykonos hat das berühmteste Nachtleben Griechenlands: Cavo Paradiso, Scorpios und die Bars von Little Venice sind weltbekannt. Das Partyleben beginnt spät und endet mit dem Sonnenaufgang.</p>
+      </div>
+
+      <div class="myk-sight-card">
+        <div class="myk-sight-emoji">🛍️</div>
+        <p class="myk-sight-cat">Shopping</p>
+        <h3 class="myk-sight-name">Matogianni Straße</h3>
+        <p class="myk-sight-desc">Die berühmteste Einkaufsstraße der Insel mit Luxusboutiquen, internationalen Designermarken und lokalen Kunsthandwerkern. Ein Schaufensterbummel durch die Chora ist Pflichtprogramm.</p>
+      </div>
+
+      <div class="myk-sight-card">
+        <div class="myk-sight-emoji">🤿</div>
+        <p class="myk-sight-cat">Wassersport</p>
+        <h3 class="myk-sight-name">Tauchen & Schnorcheln</h3>
+        <p class="myk-sight-desc">Die klaren Gewässer rund um Mykonos bieten exzellente Bedingungen zum Tauchen. Tauchschulen bieten Ausflüge zu Unterwasserhöhlen, Felsen und den Ruinen in den Gewässern nahe Delos an.</p>
+      </div>
+
+      <div class="myk-sight-card">
+        <div class="myk-sight-emoji">🪄</div>
+        <p class="myk-sight-cat">Kulissenzauber</p>
+        <h3 class="myk-sight-name">Gassen der Chora bei Nacht</h3>
+        <p class="myk-sight-desc">Wenn sich die Gassen der Chora am Abend in ein Labyrinth aus warmem Licht verwandeln, ist Mykonos am schönsten. Verlieren Sie sich ohne Karte — jede Biegung führt zu einem neuen Wunder.</p>
+      </div>
+
+    </div>
+  </section>
+
+</div><!-- end .myk-content -->
+</div><!-- end #mykonos-page -->

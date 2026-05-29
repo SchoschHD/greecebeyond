@@ -1,0 +1,237 @@
+/* =============================================
+   TZATZIKI — Rezept-Unterseite
+   ============================================= */
+
+#tzatziki-page {
+  font-family: 'Outfit', sans-serif;
+  color: #1c1a17;
+}
+
+/* ── BACK BAR ── */
+.tz-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(250,248,244,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(200,180,140,0.3);
+}
+.tz-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(26,95,138,0.3);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #1a5f8a; transition: all 0.2s;
+}
+.tz-back-btn:hover { background: #c8e6f5; border-color: #1a5f8a; }
+.tz-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.tz-breadcrumb { font-size: 0.8rem; color: #8a7d6e; letter-spacing: 0.05em; }
+.tz-breadcrumb span { color: #1a5f8a; }
+
+/* ── HERO BILD ── */
+.tz-hero {
+  height: 70vh; min-height: 460px;
+  position: relative;
+  display: flex; align-items: flex-end;
+  overflow: hidden;
+}
+.tz-hero-img {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, #e8f5e8 0%, #c8e6c8 20%, #f0f8e8 40%, #e8dcc8 60%, #c8e6f5 80%, #f5f0e8 100%);
+}
+/* Dekoratives Muster */
+.tz-hero-img::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(ellipse 60% 40% at 30% 60%, rgba(255,255,255,0.5) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 70% 40%, rgba(200,230,200,0.4) 0%, transparent 70%);
+}
+/* Großes dekoratives Emoji als Bild-Ersatz */
+.tz-hero-visual {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18rem;
+  opacity: 0.18;
+  user-select: none;
+  filter: blur(2px);
+}
+.tz-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(13,46,66,0.75) 0%, rgba(13,46,66,0.1) 55%, transparent 100%);
+}
+.tz-hero-content {
+  position: relative; z-index: 2;
+  padding: 3rem;
+  color: white;
+  width: 100%;
+}
+.tz-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: rgba(255,255,255,0.6);
+  margin-bottom: 0.8rem;
+}
+.tz-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  font-weight: 300; line-height: 0.9;
+  margin-bottom: 1rem;
+}
+.tz-hero-title em { font-style: italic; display: block; color: #c8e6f5; }
+.tz-hero-desc {
+  font-size: 1rem; font-weight: 300;
+  color: rgba(255,255,255,0.75); max-width: 520px; line-height: 1.7;
+}
+.tz-hero-pills {
+  display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1.2rem;
+}
+.tz-hero-pill {
+  padding: 4px 14px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 30px;
+  font-size: 0.7rem; letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.85);
+}
+
+/* ── REZEPT-LAYOUT ── */
+.tz-content {
+  max-width: 1100px; margin: 0 auto;
+  padding: 4rem 3rem 6rem;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* ── ZUTATEN (links) ── */
+.tz-zutaten-box {
+  position: sticky; top: 90px;
+  background: #f5f0e8;
+  border-radius: 4px;
+  padding: 2rem;
+  border-top: 3px solid #2d8a4a;
+}
+.tz-box-label {
+  font-size: 0.65rem; letter-spacing: 0.35em;
+  text-transform: uppercase; color: #2d8a4a;
+  margin-bottom: 0.6rem;
+}
+.tz-box-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem; font-weight: 300; color: #0d2e42;
+  margin-bottom: 1.6rem; line-height: 1.1;
+}
+.tz-zutat-group { margin-bottom: 1.4rem; }
+.tz-zutat-group-name {
+  font-size: 0.68rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #8a7d6e;
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(200,180,140,0.4);
+}
+.tz-zutat-item {
+  display: flex; align-items: baseline; gap: 0.7rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid rgba(200,180,140,0.2);
+}
+.tz-zutat-item:last-child { border-bottom: none; }
+.tz-zutat-menge {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.95rem; font-weight: 600;
+  color: #2d8a4a; min-width: 80px; flex-shrink: 0;
+}
+.tz-zutat-name {
+  font-size: 0.88rem; color: #4a4038; font-weight: 300; line-height: 1.4;
+}
+.tz-meta-row {
+  display: flex; gap: 1.2rem; margin-top: 1.6rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(200,180,140,0.3);
+}
+.tz-meta-item { text-align: center; flex: 1; }
+.tz-meta-icon { font-size: 1.2rem; margin-bottom: 0.25rem; }
+.tz-meta-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; font-weight: 600; color: #0d2e42; line-height: 1;
+}
+.tz-meta-lbl {
+  font-size: 0.62rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #8a7d6e; margin-top: 0.2rem;
+}
+
+/* ── SCHRITTE (rechts) ── */
+.tz-schritte-head {
+  margin-bottom: 2rem;
+}
+.tz-schritte-label {
+  font-size: 0.65rem; letter-spacing: 0.35em;
+  text-transform: uppercase; color: #2d8a4a; margin-bottom: 0.5rem;
+}
+.tz-schritte-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem; font-weight: 300; color: #0d2e42; line-height: 1.1;
+}
+.tz-schritte-title em { font-style: italic; color: #1a5f8a; }
+.tz-divider { width: 36px; height: 2px; background: #2d8a4a; margin-top: 1rem; }
+
+.tz-schritt {
+  display: flex; gap: 1.5rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid rgba(200,180,140,0.2);
+}
+.tz-schritt:last-child { border-bottom: none; }
+.tz-schritt-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300;
+  color: rgba(45,138,74,0.2);
+  line-height: 1; flex-shrink: 0;
+  width: 48px; text-align: right;
+}
+.tz-schritt-body { padding-top: 0.3rem; }
+.tz-schritt-title {
+  font-size: 0.7rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #2d8a4a; margin-bottom: 0.5rem;
+}
+.tz-schritt-text {
+  font-size: 0.95rem; color: #4a4038;
+  line-height: 1.85; font-weight: 300;
+}
+.tz-schritt-tip {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  margin-top: 0.8rem; padding: 0.5rem 1rem;
+  background: #e8f5e8; border-radius: 30px;
+  font-size: 0.78rem; color: #2d8a4a;
+}
+
+/* ── SERVIEREN ── */
+.tz-servieren {
+  grid-column: 1 / -1;
+  margin-top: 1rem;
+  background: linear-gradient(135deg, #0d2e42 0%, #1a5f8a 60%, #2d8a4a 100%);
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.tz-servieren-emoji { font-size: 4rem; flex-shrink: 0; }
+.tz-servieren-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300; color: white;
+  margin-bottom: 0.6rem;
+}
+.tz-servieren-text p {
+  font-size: 0.92rem; color: rgba(255,255,255,0.7);
+  line-height: 1.75; font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .tz-back-bar { padding: 0.8rem 1.2rem; }
+  .tz-content { grid-template-columns: 1fr; padding: 2rem 1.2rem 4rem; }
+  .tz-zutaten-box { position: static; }
+  .tz-hero-content { padding: 2rem 1.5rem; }
+  .tz-servieren { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+}

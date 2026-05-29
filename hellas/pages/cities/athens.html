@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Athen — Hellas Städte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+/* =============================================
+   ATHEN — Stadt-Unterseite
+   Akzentfarbe: Azurblau / Marmor-Weiß
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#athens-page {
+  font-family: 'Outfit', sans-serif;
+  color: #1a1c20;
+  background: #f8f9fc;
+}
+
+/* ── BACK BAR ── */
+.at-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(248,249,252,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(100,140,200,0.2);
+}
+.at-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(60,100,180,0.35);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #2a5aaa; transition: all 0.2s;
+}
+.at-back-btn:hover { background: #eef3fc; border-color: #2a5aaa; }
+.at-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.at-breadcrumb { font-size: 0.8rem; color: #7a8090; letter-spacing: 0.05em; }
+.at-breadcrumb span { color: #2a5aaa; }
+
+/* ── HERO ── */
+.at-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.at-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, #050d20 0%, #0a1f4a 20%, #10448a 50%, #2a7acc 75%, #9ac8f0 100%);
+}
+.at-hero-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(ellipse 70% 50% at 50% 70%, rgba(42,122,204,0.25) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 75% 25%, rgba(16,68,138,0.3) 0%, transparent 70%);
+}
+/* Marble/column texture dots */
+.at-hero-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+/* Acropolis silhouette */
+.at-hero-silhouette {
+  position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%);
+  width: 900px; height: 180px;
+  opacity: 0.12;
+}
+.at-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(5,15,40,0.48);
+}
+.at-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23f8f9fc' fill-opacity='1' d='M0,64L60,58.7C120,53,240,43,360,48C480,53,600,75,720,80C840,85,960,75,1080,64C1200,53,1320,43,1380,37.3L1440,32L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.at-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.at-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: rgba(255,255,255,0.5);
+  margin-bottom: 1.2rem;
+}
+.at-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 300; line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+.at-hero-title em { font-style: italic; display: block; color: #9ac8f0; }
+.at-hero-sub {
+  max-width: 580px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(255,255,255,0.70); line-height: 1.75; font-weight: 300;
+}
+.at-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.at-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.82);
+}
+
+/* ── STATS BAR ── */
+.at-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(100,140,200,0.18);
+}
+.at-stat-item {
+  flex: 1; max-width: 200px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(100,140,200,0.15);
+}
+.at-stat-item:last-child { border-right: none; }
+.at-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: #2a5aaa; line-height: 1;
+}
+.at-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #7a8090; margin-top: 0.3rem;
+}
+
+/* ── CONTENT ── */
+.at-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.at-section { padding: 4rem 0 2rem; }
+.at-section-head { margin-bottom: 2.5rem; }
+.at-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #2a5aaa; margin-bottom: 0.8rem;
+}
+.at-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300; color: #0d1e3a; line-height: 1.15;
+}
+.at-section-title em { font-style: italic; color: #2a5aaa; }
+.at-divider { width: 40px; height: 2px; background: #2a5aaa; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.at-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.at-history-text p {
+  font-size: 1rem; line-height: 1.9; color: #3a4050;
+  font-weight: 300; margin-bottom: 1.2rem;
+}
+.at-timeline { position: relative; padding-left: 2rem; }
+.at-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(42,90,170,0.2);
+}
+.at-tl-item { position: relative; margin-bottom: 1.8rem; }
+.at-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: white; border: 2px solid #2a5aaa;
+}
+.at-tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 600; color: #2a5aaa; margin-bottom: 0.25rem;
+}
+.at-tl-event {
+  font-size: 0.88rem; color: #3a4050; line-height: 1.6; font-weight: 300;
+}
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.at-sights-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem;
+}
+.at-sight-card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid rgba(100,140,200,0.2);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.at-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(13,30,58,0.1); }
+.at-sight-visual {
+  height: 140px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 4rem;
+}
+.at-sight-body { padding: 1.2rem; }
+.at-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #2a5aaa; margin-bottom: 0.35rem;
+}
+.at-sight-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 300; color: #0d1e3a; margin-bottom: 0.4rem;
+}
+.at-sight-desc { font-size: 0.83rem; color: #5a6070; line-height: 1.65; font-weight: 300; }
+
+/* sight visuals */
+.sv-acropolis   { background: linear-gradient(160deg, #1a1a0a 0%, #5a5020 50%, #e8d88a 100%); }
+.sv-parthenon   { background: linear-gradient(160deg, #0a1a3a 0%, #2a4a8a 50%, #9ac8f0 100%); }
+.sv-agora       { background: linear-gradient(160deg, #1a2a1a 0%, #3a6a3a 55%, #b0d890 100%); }
+.sv-museum      { background: linear-gradient(160deg, #2a1a0a 0%, #7a4a1a 55%, #d4a870 100%); }
+.sv-plaka       { background: linear-gradient(160deg, #3a0a1a 0%, #8a3a5a 55%, #f0a0b0 100%); }
+.sv-lycabettus  { background: linear-gradient(160deg, #0a1a2a 0%, #1a4a7a 50%, #5aabdf 100%); }
+
+/* ── TAVERNEN ── */
+.at-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.at-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(100,140,200,0.2);
+  border-radius: 4px; border-left: 3px solid #2a5aaa;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.at-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(13,30,58,0.08); }
+.at-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.at-tav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300; color: #0d1e3a;
+}
+.at-tav-loc { font-size: 0.75rem; color: #7a8090; margin-top: 0.2rem; }
+.at-tav-stars { color: #2a5aaa; font-size: 0.85rem; letter-spacing: 2px; }
+.at-tav-desc { font-size: 0.88rem; color: #3a4050; line-height: 1.75; font-weight: 300; margin-bottom: 1rem; }
+.at-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.at-tav-dish {
+  padding: 3px 10px; background: #eef3fc; color: #2a4070;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+}
+.at-tav-price { font-size: 0.8rem; color: #7a8090; }
+.at-tav-price span { color: #2a5aaa; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.at-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.at-viertel-card {
+  padding: 1.8rem; background: #f0f4fb;
+  border-radius: 4px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.at-viertel-card:hover { background: #dde8f8; transform: translateY(-4px); }
+.at-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.at-viertel-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300; color: #0d1e3a; margin-bottom: 0.5rem;
+}
+.at-viertel-desc { font-size: 0.82rem; color: #5a6070; line-height: 1.65; font-weight: 300; }
+
+/* ── TIP BANNER ── */
+.at-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #050d20 0%, #0a1f4a 40%, #2a7acc 100%);
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.at-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.at-tip-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300; color: white; margin-bottom: 0.6rem;
+}
+.at-tip-text p {
+  font-size: 0.92rem; color: rgba(255,255,255,0.72); line-height: 1.75; font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .at-back-bar { padding: 0.8rem 1.2rem; }
+  .at-content { padding: 2rem 1.2rem 4rem; }
+  .at-history-grid { grid-template-columns: 1fr; }
+  .at-sights-grid { grid-template-columns: 1fr 1fr; }
+  .at-tav-grid { grid-template-columns: 1fr; }
+  .at-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .at-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+}
+  </style>
+</head>
+<body>
+<div id="athens-page">
+
+<!-- Back bar -->
+<div class="at-back-bar">
+  <button class="at-back-btn" onclick="closeAthens()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="at-breadcrumb">Hellas &nbsp;/&nbsp; Städte &nbsp;/&nbsp; <span>Athen</span></p>
+</div>
+
+<!-- Hero -->
+<div class="at-hero">
+  <div class="at-hero-bg"></div>
+  <div class="at-hero-dots"></div>
+  <!-- Acropolis silhouette SVG -->
+  <svg class="at-hero-silhouette" viewBox="0 0 900 180" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Hill -->
+    <ellipse cx="450" cy="200" rx="420" ry="80"/>
+    <!-- Parthenon columns simplified -->
+    <rect x="240" y="80" width="420" height="12" rx="2"/>
+    <rect x="240" y="130" width="420" height="12" rx="2"/>
+    <rect x="255" y="92" width="18" height="38"/>
+    <rect x="295" y="92" width="18" height="38"/>
+    <rect x="335" y="92" width="18" height="38"/>
+    <rect x="375" y="92" width="18" height="38"/>
+    <rect x="415" y="92" width="18" height="38"/>
+    <rect x="455" y="92" width="18" height="38"/>
+    <rect x="495" y="92" width="18" height="38"/>
+    <rect x="535" y="92" width="18" height="38"/>
+    <rect x="575" y="92" width="18" height="38"/>
+    <rect x="615" y="92" width="18" height="38"/>
+    <!-- Roof -->
+    <polygon points="230,80 670,80 640,50 260,50"/>
+    <polygon points="260,50 640,50 450,20"/>
+  </svg>
+  <div class="at-hero-overlay"></div>
+  <div class="at-hero-content">
+    <p class="at-hero-tag">Attika · Zentralgriechenland</p>
+    <h1 class="at-hero-title">Athen<em>Αθήνα</em></h1>
+    <p class="at-hero-sub">Die Wiege der Demokratie, der Philosophie und der westlichen Zivilisation — Athen thront über drei Jahrtausenden Geschichte und pulsiert zugleich als eine der lebendigsten Metropolen Europas.</p>
+    <div class="at-hero-pills">
+      <span class="at-hero-pill">Antike</span>
+      <span class="at-hero-pill">UNESCO</span>
+      <span class="at-hero-pill">Philosophie</span>
+      <span class="at-hero-pill">Streetfood</span>
+      <span class="at-hero-pill">Nachtleben</span>
+    </div>
+  </div>
+  <div class="at-hero-waves"></div>
+</div>
+
+<!-- Stats -->
+<div class="at-stats-bar">
+  <div class="at-stat-item">
+    <div class="at-stat-num">3,6 Mio.</div>
+    <div class="at-stat-lbl">Einwohner</div>
+  </div>
+  <div class="at-stat-item">
+    <div class="at-stat-num">3000+ v.Chr.</div>
+    <div class="at-stat-lbl">Besiedlung</div>
+  </div>
+  <div class="at-stat-item">
+    <div class="at-stat-num">7</div>
+    <div class="at-stat-lbl">UNESCO-Stätten</div>
+  </div>
+  <div class="at-stat-item">
+    <div class="at-stat-num">5000+</div>
+    <div class="at-stat-lbl">Jahre Geschichte</div>
+  </div>
+  <div class="at-stat-item">
+    <div class="at-stat-num">#1</div>
+    <div class="at-stat-lbl">Hauptstadt Griechenlands</div>
+  </div>
+</div>
+
+<div class="at-content">
+
+  <!-- 1. GESCHICHTE -->
+  <section class="at-section">
+    <div class="at-section-head">
+      <p class="at-section-label">01 — Geschichte</p>
+      <h2 class="at-section-title">Von der Göttin Athene<br><em>zur Welthauptstadt des Geistes</em></h2>
+      <div class="at-divider"></div>
+    </div>
+    <div class="at-history-grid">
+      <div class="at-history-text">
+        <p>Die Geschichte Athens reicht bis ins dritte Jahrtausend vor Christus zurück. Der Akropolis-Fels war schon in der Bronzezeit besiedelt, und nach der Göttin Athena benannt, der Schutzpatronin der Stadt. Im 5. Jahrhundert v. Chr. erlebte Athen seine goldene Blüte: Perikles ließ den Parthenon erbauen, Sokrates philosophierte auf den Agora-Stufen, Sophokles schrieb seine Tragödien, und Athen erfand die Demokratie.</p>
+        <p>Durch Römer, Byzantiner und Osmanen hindurch blieb Athen spirituelles Zentrum der hellenischen Welt. 1834 wurde es zur Hauptstadt des neugegründeten griechischen Königreichs erklärt und neu aufgebaut. Die erste Olympiade der Neuzeit fand 1896 hier statt.</p>
+        <p>Heute ist Athen eine pulsierende Millionenmetropole — chaotisch, lebensfroh und von einem archäologischen Schatz durchzogen, der in keiner anderen europäischen Stadt seinesgleichen hat. Unter jedem neuen Bauwerk schlummert die Antike.</p>
+      </div>
+      <div class="at-timeline">
+        <div class="at-tl-item">
+          <div class="at-tl-dot"></div>
+          <div class="at-tl-year">3000 v. Chr.</div>
+          <div class="at-tl-event">Erste Besiedlung des Akropolis-Felsens. Die Bronzezeit-Siedlung wächst zur mykenischen Festungsstadt heran.</div>
+        </div>
+        <div class="at-tl-item">
+          <div class="at-tl-dot"></div>
+          <div class="at-tl-year">490 v. Chr.</div>
+          <div class="at-tl-event">Sieg bei Marathon gegen die Perser — der Beginn des Goldenen Zeitalters Athens unter Themistokles und Perikles.</div>
+        </div>
+        <div class="at-tl-item">
+          <div class="at-tl-dot"></div>
+          <div class="at-tl-year">447 v. Chr.</div>
+          <div class="at-tl-event">Baubeginn des Parthenon. Perikles macht Athen zur schönsten Stadt der antiken Welt — Philosophie, Theater und Demokratie blühen.</div>
+        </div>
+        <div class="at-tl-item">
+          <div class="at-tl-dot"></div>
+          <div class="at-tl-year">86 v. Chr.</div>
+          <div class="at-tl-event">Sulla plündert Athen. Unter der Römerherrschaft erhält die Stadt neue Tempel und Bibliotheken — Kaiser Hadrian baut das Olympieion fertig.</div>
+        </div>
+        <div class="at-tl-item">
+          <div class="at-tl-dot"></div>
+          <div class="at-tl-year">1458</div>
+          <div class="at-tl-event">Osmanische Eroberung. Der Parthenon wird zur Moschee umgebaut. Fast vier Jahrhunderte osmanische Herrschaft folgen.</div>
+        </div>
+        <div class="at-tl-item">
+          <div class="at-tl-dot"></div>
+          <div class="at-tl-year">1896</div>
+          <div class="at-tl-event">Die ersten Olympischen Spiele der Neuzeit im Panathinaiko-Stadion. Athen ist wieder Mittelpunkt der Welt.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SEHENSWÜRDIGKEITEN -->
+  <section class="at-section">
+    <div class="at-section-head">
+      <p class="at-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="at-section-title">5000 Jahre<br><em>auf einem Spaziergang</em></h2>
+      <div class="at-divider"></div>
+    </div>
+    <div class="at-sights-grid">
+
+      <div class="at-sight-card">
+        <div class="at-sight-visual sv-acropolis"></div>
+        <div class="at-sight-body">
+          <p class="at-sight-cat">UNESCO · Wahrzeichen</p>
+          <h3 class="at-sight-name">Akropolis</h3>
+          <p class="at-sight-desc">Das bedeutendste Denkmal der antiken Welt — der Fels mit dem Parthenon, den Propyläen und dem Erechtheion thront über der Stadt. Kein Bild der Welt bereitet auf den ersten Anblick vor.</p>
+        </div>
+      </div>
+
+      <div class="at-sight-card">
+        <div class="at-sight-visual sv-parthenon"></div>
+        <div class="at-sight-body">
+          <p class="at-sight-cat">UNESCO · Antike</p>
+          <h3 class="at-sight-name">Parthenon</h3>
+          <p class="at-sight-desc">Das Symbol der griechischen Zivilisation — erbaut 447–432 v. Chr. zu Ehren der Göttin Athena aus pentelischem Marmor. Eine Meisterleistung dorischer Architektur, die trotz 2500 Jahren noch immer atemberaubt.</p>
+        </div>
+      </div>
+
+      <div class="at-sight-card">
+        <div class="at-sight-visual sv-agora"></div>
+        <div class="at-sight-body">
+          <p class="at-sight-cat">Antike · Ausgrabung</p>
+          <h3 class="at-sight-name">Antike Agora</h3>
+          <p class="at-sight-desc">Der Marktplatz des antiken Athen — hier debattierte Sokrates, hier entstand die Demokratie. Der rekonstruierte Stoa des Attalos beherbergt heute ein faszinierendes Museum. Grün, ruhig, fast magisch.</p>
+        </div>
+      </div>
+
+      <div class="at-sight-card">
+        <div class="at-sight-visual sv-museum"></div>
+        <div class="at-sight-body">
+          <p class="at-sight-cat">Museum · Weltklasse</p>
+          <h3 class="at-sight-name">Neues Akropolis-Museum</h3>
+          <p class="at-sight-desc">Eines der schönsten Museen Europas — 2009 eröffnet, mit Blick direkt auf die Akropolis. Die originalen Parthenon-Friese, Koren und antike Schätze in einem architektonischen Meisterwerk von Bernard Tschumi.</p>
+        </div>
+      </div>
+
+      <div class="at-sight-card">
+        <div class="at-sight-visual sv-plaka"></div>
+        <div class="at-sight-body">
+          <p class="at-sight-cat">Altstadt · Viertel</p>
+          <h3 class="at-sight-name">Plaka</h3>
+          <p class="at-sight-desc">Das älteste bewohnte Viertel Athens — blaue Fensterläden, blühende Bougainvillea, verwinkelte Gassen am Fuß der Akropolis. Romantisch, touristisch und unvermeidlich schön zugleich.</p>
+        </div>
+      </div>
+
+      <div class="at-sight-card">
+        <div class="at-sight-visual sv-lycabettus"></div>
+        <div class="at-sight-body">
+          <p class="at-sight-cat">Aussichtspunkt</p>
+          <h3 class="at-sight-name">Lykabettus-Hügel</h3>
+          <p class="at-sight-desc">Der höchste Punkt Athens — 277 Meter über der Stadt. Zu Fuß oder per Seilbahn hinauf, oben wartet der beste Panoramablick über die gesamte Athener Ebene bis zum Saronischen Golf und der Akropolis zu Füßen.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. ESSEN & TAVERNEN -->
+  <section class="at-section">
+    <div class="at-section-head">
+      <p class="at-section-label">03 — Tavernen & Küche</p>
+      <h2 class="at-section-title">Zwischen Souvlaki<br><em>und Sternegastronomie</em></h2>
+      <div class="at-divider"></div>
+    </div>
+    <div class="at-tav-grid">
+
+      <div class="at-tav-card">
+        <div class="at-tav-top">
+          <div>
+            <h3 class="at-tav-name">Diporto Agoras</h3>
+            <div class="at-tav-loc">📍 Zentralmarkt, Athinas-Straße</div>
+          </div>
+          <div class="at-tav-stars">★★★★★</div>
+        </div>
+        <p class="at-tav-desc">Keine Speisekarte, keine Schilder, keine Reservierung — nur was der Markt heute hergegeben hat. Dieses legendäre Kellerrestaurant im Athener Zentralmarkt existiert seit Jahrzehnten unverändert. Für Eingeweihte eine Pflichtadresse.</p>
+        <div class="at-tav-dishes">
+          <span class="at-tav-dish">Revithosoupa</span>
+          <span class="at-tav-dish">Bakaliaro</span>
+          <span class="at-tav-dish">Hauswein</span>
+        </div>
+        <p class="at-tav-price">Preisklasse: <span>€ · Mittagessen · Kein Schild</span></p>
+      </div>
+
+      <div class="at-tav-card">
+        <div class="at-tav-top">
+          <div>
+            <h3 class="at-tav-name">Tzitzikas & Mermigas</h3>
+            <div class="at-tav-loc">📍 Mitropoleos, Zentrum</div>
+          </div>
+          <div class="at-tav-stars">★★★★★</div>
+        </div>
+        <p class="at-tav-desc">Der Geheimtipp unter Athenern für moderne griechische Küche — frische Interpretation klassischer Meze mit saisonalen Produkten aus ganz Griechenland. Lebendig, warm, immer voll. Das Herz der athener Foodszene.</p>
+        <div class="at-tav-dishes">
+          <span class="at-tav-dish">Taramosalata</span>
+          <span class="at-tav-dish">Saganaki</span>
+          <span class="at-tav-dish">Loukoumades</span>
+        </div>
+        <p class="at-tav-price">Preisklasse: <span>€€ · Mittag & Abend</span></p>
+      </div>
+
+      <div class="at-tav-card">
+        <div class="at-tav-top">
+          <div>
+            <h3 class="at-tav-name">Karamanlidika tou Fani</h3>
+            <div class="at-tav-loc">📍 Evripidou-Straße, Psyrri</div>
+          </div>
+          <div class="at-tav-stars">★★★★★</div>
+        </div>
+        <p class="at-tav-desc">Gleichzeitig Feinkostladen und Taverne — ein Traum aus hängenden Würsten, anatolischen Käsen und makedonischen Spezialitäten. Man setzt sich zwischen die Regale und isst, was der Händler empfiehlt. Unverwechselbar athener.</p>
+        <div class="at-tav-dishes">
+          <span class="at-tav-dish">Pastourma</span>
+          <span class="at-tav-dish">Kasseri-Käse</span>
+          <span class="at-tav-dish">Tsipouro</span>
+        </div>
+        <p class="at-tav-price">Preisklasse: <span>€€ · Frühstück & Mittag</span></p>
+      </div>
+
+      <div class="at-tav-card">
+        <div class="at-tav-top">
+          <div>
+            <h3 class="at-tav-name">Kostas (Souvlaki)</h3>
+            <div class="at-tav-loc">📍 Pentelis-Gasse, Monastiraki</div>
+          </div>
+          <div class="at-tav-stars">★★★★☆</div>
+        </div>
+        <p class="at-tav-desc">Das beste Souvlaki Athens — seit 1950 am selben Platz, immer eine Schlange, immer der gleiche Preis. Kein Schnickschnack, keine Karte: Souvlaki mit Tomaten, Zwiebeln und scharfer Paprikasauce in Fladenbrot. Fertig.</p>
+        <div class="at-tav-dishes">
+          <span class="at-tav-dish">Schweine-Souvlaki</span>
+          <span class="at-tav-dish">Pita</span>
+          <span class="at-tav-dish">Tzatziki</span>
+        </div>
+        <p class="at-tav-price">Preisklasse: <span>€ · Mittagsschlange</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. VIERTEL -->
+  <section class="at-section">
+    <div class="at-section-head">
+      <p class="at-section-label">04 — Viertel</p>
+      <h2 class="at-section-title">Die vielen Gesichter<br><em>der Stadt erkunden</em></h2>
+      <div class="at-divider"></div>
+    </div>
+    <div class="at-viertel-grid">
+
+      <div class="at-viertel-card">
+        <div class="at-viertel-emoji">🏛️</div>
+        <h3 class="at-viertel-name">Plaka</h3>
+        <p class="at-viertel-desc">Die romantische Altstadt am Fuß der Akropolis — verwinkelte Gassen, neoklassische Häuschen, blaue Fensterläden und Tavernen. Das älteste bewohnte Viertel der Stadt, touristisch aber unwiderstehlich.</p>
+      </div>
+
+      <div class="at-viertel-card">
+        <div class="at-viertel-emoji">🎨</div>
+        <h3 class="at-viertel-name">Monastiraki & Psyrri</h3>
+        <p class="at-viertel-desc">Das kreative Herz Athens — der Flohmarkt, die Moschee, Street-Art-Wände und das lebhafteste Nachtleben der Stadt. Hier trifft osmanische Geschichte auf Hipster-Bars und Graffiti-Kunst.</p>
+      </div>
+
+      <div class="at-viertel-card">
+        <div class="at-viertel-emoji">🌿</div>
+        <h3 class="at-viertel-name">Kolonaki</h3>
+        <p class="at-viertel-desc">Das noble Viertel am Lykabettus-Hang — Designerboutiquen, Gallerien und die beste Café-Kultur Athens. Wer die elegante Seite der Stadt sehen will, spaziert durch die Omirou-Straße.</p>
+      </div>
+
+      <div class="at-viertel-card">
+        <div class="at-viertel-emoji">🐟</div>
+        <h3 class="at-viertel-name">Varvakios Agora</h3>
+        <p class="at-viertel-desc">Der Zentralmarkt Athens — ein Fest der Sinne seit dem 19. Jahrhundert. Fischhändler, Fleischer, Gewürzhändler und die Geräusche des echten athener Alltags unter einem imposanten Metallgewölbe.</p>
+      </div>
+
+      <div class="at-viertel-card">
+        <div class="at-viertel-emoji">🎭</div>
+        <h3 class="at-viertel-name">Exarcheia</h3>
+        <p class="at-viertel-desc">Athen von seiner anarchischen, kreativen Seite — das Universitätsviertel mit politischen Murals, alternativen Buchläden, ruhigen Plätzen und einer Energie, die nirgendwo sonst zu finden ist.</p>
+      </div>
+
+      <div class="at-viertel-card">
+        <div class="at-viertel-emoji">🌊</div>
+        <h3 class="at-viertel-name">Piraeus & Küste</h3>
+        <p class="at-viertel-desc">Der Hafen Athens — Ausgangspunkt für alle Inseln des Ägäischen Meeres. Die Riviera entlang der Küste Richtung Glyfada mit ihren Strandbars ist das Sommerwohnzimmer der Athener.</p>
+      </div>
+
+    </div>
+
+    <!-- Tipp-Banner -->
+    <div class="at-tip-banner">
+      <div class="at-tip-emoji">🫒</div>
+      <div class="at-tip-text">
+        <h3>Die Stadt, die niemals schläft — wirklich</h3>
+        <p>Athen hat eine eigene Zeitrechnung: Das Abendessen beginnt um 21 Uhr, die Bars füllen sich um Mitternacht und die Clubs öffnen ihre besten Stunden erst nach 2 Uhr nachts. Aber wer früh aufsteht, erlebt den Varvakios-Markt im Morgengrauen, die Akropolis ohne Menschenmassen und einen Kaffee in der leeren Plaka — bevor die Stadt erwacht. Athen belohnt beide: die Nachteulen und die Frühaufsteher.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div><!-- end at-content -->
+</div><!-- end athens-page -->
+</body>
+</html>

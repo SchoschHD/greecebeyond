@@ -1,0 +1,258 @@
+/* =============================================
+   THESSALONIKI — Stadt-Unterseite
+   Akzentfarbe: Gold / Byzantinisch
+   ============================================= */
+
+#thessaloniki-page {
+  font-family: 'Outfit', sans-serif;
+  color: #1c1a17;
+}
+
+/* ── BACK BAR ── */
+.th-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(250,248,244,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(200,180,140,0.3);
+}
+.th-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(180,140,40,0.4);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #9a7a10; transition: all 0.2s;
+}
+.th-back-btn:hover { background: #fdf5d0; border-color: #c9933a; }
+.th-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.th-breadcrumb { font-size: 0.8rem; color: #8a7d6e; letter-spacing: 0.05em; }
+.th-breadcrumb span { color: #c9933a; }
+
+/* ── HERO ── */
+.th-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.th-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, #1a1020 0%, #2a1a4a 25%, #5a2a0a 55%, #c9933a 80%, #f5dca0 100%);
+}
+.th-hero-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(ellipse 60% 50% at 50% 60%, rgba(201,147,58,0.2) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 20% 30%, rgba(90,42,10,0.3) 0%, transparent 70%);
+}
+.th-hero-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+.th-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(15,10,25,0.55);
+}
+.th-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23faf8f4' fill-opacity='1' d='M0,64L60,58.7C120,53,240,43,360,48C480,53,600,75,720,80C840,85,960,75,1080,64C1200,53,1320,43,1380,37.3L1440,32L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.th-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.th-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: rgba(255,255,255,0.55);
+  margin-bottom: 1.2rem;
+}
+.th-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 300; line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+.th-hero-title em { font-style: italic; display: block; color: #f5dca0; }
+.th-hero-sub {
+  max-width: 560px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(255,255,255,0.72); line-height: 1.75; font-weight: 300;
+}
+.th-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.th-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.85);
+}
+
+/* ── STATS BAR ── */
+.th-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(200,180,140,0.25);
+}
+.th-stat-item {
+  flex: 1; max-width: 200px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(200,180,140,0.2);
+}
+.th-stat-item:last-child { border-right: none; }
+.th-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: #c9933a; line-height: 1;
+}
+.th-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #8a7d6e; margin-top: 0.3rem;
+}
+
+/* ── CONTENT ── */
+.th-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.th-section { padding: 4rem 0 2rem; }
+.th-section-head { margin-bottom: 2.5rem; }
+.th-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #c9933a; margin-bottom: 0.8rem;
+}
+.th-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300; color: #0d2e42; line-height: 1.15;
+}
+.th-section-title em { font-style: italic; color: #c9933a; }
+.th-divider { width: 40px; height: 2px; background: #c9933a; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.th-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.th-history-text p {
+  font-size: 1rem; line-height: 1.9; color: #4a4038;
+  font-weight: 300; margin-bottom: 1.2rem;
+}
+.th-timeline { position: relative; padding-left: 2rem; }
+.th-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(201,147,58,0.25);
+}
+.th-tl-item { position: relative; margin-bottom: 1.8rem; }
+.th-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: white; border: 2px solid #c9933a;
+}
+.th-tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 600; color: #c9933a; margin-bottom: 0.25rem;
+}
+.th-tl-event {
+  font-size: 0.88rem; color: #4a4038; line-height: 1.6; font-weight: 300;
+}
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.th-sights-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem;
+}
+.th-sight-card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid rgba(200,180,140,0.25);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.th-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(13,46,66,0.1); }
+.th-sight-visual {
+  height: 140px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 4rem;
+}
+.th-sight-body { padding: 1.2rem; }
+.th-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #c9933a; margin-bottom: 0.35rem;
+}
+.th-sight-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 300; color: #0d2e42; margin-bottom: 0.4rem;
+}
+.th-sight-desc { font-size: 0.83rem; color: #6a5e50; line-height: 1.65; font-weight: 300; }
+
+/* sight visuals */
+.sv-white-tower   { background: linear-gradient(160deg, #1a2a4a 0%, #2a4a7a 60%, #c9933a 100%); }
+.sv-rotunda       { background: linear-gradient(160deg, #3a1a0a 0%, #7a3a1a 50%, #c9933a 100%); }
+.sv-arch          { background: linear-gradient(160deg, #2a1a4a 0%, #6a3a8a 60%, #c9c0d0 100%); }
+.sv-ano-poli      { background: linear-gradient(160deg, #1a2a1a 0%, #3a6a2a 50%, #c8d890 100%); }
+.sv-waterfront    { background: linear-gradient(160deg, #0a1a3a 0%, #1a5a8a 50%, #56b4e0 100%); }
+.sv-museum        { background: linear-gradient(160deg, #2a2a1a 0%, #6a6a2a 50%, #c9b060 100%); }
+
+/* ── TAVERNEN ── */
+.th-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.th-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(200,180,140,0.25);
+  border-radius: 4px; border-left: 3px solid #c9933a;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.th-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(13,46,66,0.08); }
+.th-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.th-tav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300; color: #0d2e42;
+}
+.th-tav-loc { font-size: 0.75rem; color: #8a7d6e; margin-top: 0.2rem; }
+.th-tav-stars { color: #c9933a; font-size: 0.85rem; letter-spacing: 2px; }
+.th-tav-desc { font-size: 0.88rem; color: #4a4038; line-height: 1.75; font-weight: 300; margin-bottom: 1rem; }
+.th-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.th-tav-dish {
+  padding: 3px 10px; background: #fdf5d0; color: #4a4038;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+}
+.th-tav-price { font-size: 0.8rem; color: #8a7d6e; }
+.th-tav-price span { color: #c9933a; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.th-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.th-viertel-card {
+  padding: 1.8rem; background: #faf6ec;
+  border-radius: 4px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.th-viertel-card:hover { background: #f5edd0; transform: translateY(-4px); }
+.th-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.th-viertel-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300; color: #0d2e42; margin-bottom: 0.5rem;
+}
+.th-viertel-desc { font-size: 0.82rem; color: #6a5e50; line-height: 1.65; font-weight: 300; }
+
+/* ── TIP BANNER ── */
+.th-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #1a1020 0%, #2a1a4a 40%, #c9933a 100%);
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.th-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.th-tip-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300; color: white; margin-bottom: 0.6rem;
+}
+.th-tip-text p {
+  font-size: 0.92rem; color: rgba(255,255,255,0.75); line-height: 1.75; font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .th-back-bar { padding: 0.8rem 1.2rem; }
+  .th-content { padding: 2rem 1.2rem 4rem; }
+  .th-history-grid { grid-template-columns: 1fr; }
+  .th-sights-grid { grid-template-columns: 1fr 1fr; }
+  .th-tav-grid { grid-template-columns: 1fr; }
+  .th-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .th-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+}

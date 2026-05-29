@@ -1,0 +1,261 @@
+/* =============================================
+   RHODOS — Insel-Unterseite
+   Akzentfarbe: Johanniter-Violettblau / Mittelalterliches Indigo
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#rhodos-page {
+  font-family: 'Outfit', sans-serif;
+  color: #14141e;
+  background: #f5f5fa;
+}
+
+/* ── BACK BAR ── */
+.rh-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(245,245,250,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(80,60,160,0.2);
+}
+.rh-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(80,60,160,0.35);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #4a38a0; transition: all 0.2s;
+}
+.rh-back-btn:hover { background: #efecfb; border-color: #4a38a0; }
+.rh-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.rh-breadcrumb { font-size: 0.8rem; color: #7a7888; letter-spacing: 0.05em; }
+.rh-breadcrumb span { color: #4a38a0; }
+
+/* ── HERO ── */
+.rh-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.rh-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, #080810 0%, #18104a 22%, #301880 48%, #5838b0 70%, #a090e0 100%);
+}
+.rh-hero-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(ellipse 65% 55% at 50% 65%, rgba(88,56,176,0.25) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 75% 15%, rgba(48,24,128,0.35) 0%, transparent 65%);
+}
+.rh-hero-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+.rh-hero-silhouette {
+  position: absolute; bottom: 108px; left: 50%; transform: translateX(-50%);
+  width: 860px; height: 180px;
+  opacity: 0.10;
+}
+.rh-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(6,6,20,0.52);
+}
+.rh-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23f5f5fa' fill-opacity='1' d='M0,64L60,58.7C120,53,240,43,360,48C480,53,600,75,720,80C840,85,960,75,1080,64C1200,53,1320,43,1380,37.3L1440,32L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.rh-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.rh-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: rgba(255,255,255,0.48);
+  margin-bottom: 1.2rem;
+}
+.rh-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 300; line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+.rh-hero-title em { font-style: italic; display: block; color: #c8bcf8; }
+.rh-hero-sub {
+  max-width: 570px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(255,255,255,0.68); line-height: 1.75; font-weight: 300;
+}
+.rh-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.rh-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.80);
+}
+
+/* ── STATS BAR ── */
+.rh-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(80,60,160,0.14);
+}
+.rh-stat-item {
+  flex: 1; max-width: 200px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(80,60,160,0.1);
+}
+.rh-stat-item:last-child { border-right: none; }
+.rh-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: #4a38a0; line-height: 1;
+}
+.rh-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #7a7888; margin-top: 0.3rem;
+}
+
+/* ── CONTENT ── */
+.rh-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.rh-section { padding: 4rem 0 2rem; }
+.rh-section-head { margin-bottom: 2.5rem; }
+.rh-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #4a38a0; margin-bottom: 0.8rem;
+}
+.rh-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300; color: #0a0820; line-height: 1.15;
+}
+.rh-section-title em { font-style: italic; color: #4a38a0; }
+.rh-divider { width: 40px; height: 2px; background: #4a38a0; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.rh-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.rh-history-text p {
+  font-size: 1rem; line-height: 1.9; color: #303040;
+  font-weight: 300; margin-bottom: 1.2rem;
+}
+.rh-timeline { position: relative; padding-left: 2rem; }
+.rh-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(74,56,160,0.2);
+}
+.rh-tl-item { position: relative; margin-bottom: 1.8rem; }
+.rh-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: white; border: 2px solid #4a38a0;
+}
+.rh-tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 600; color: #4a38a0; margin-bottom: 0.25rem;
+}
+.rh-tl-event {
+  font-size: 0.88rem; color: #303040; line-height: 1.6; font-weight: 300;
+}
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.rh-sights-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem;
+}
+.rh-sight-card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid rgba(80,60,160,0.16);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.rh-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(10,8,32,0.1); }
+.rh-sight-visual { height: 140px; }
+.rh-sight-body { padding: 1.2rem; }
+.rh-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #4a38a0; margin-bottom: 0.35rem;
+}
+.rh-sight-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 300; color: #0a0820; margin-bottom: 0.4rem;
+}
+.rh-sight-desc { font-size: 0.83rem; color: #505060; line-height: 1.65; font-weight: 300; }
+
+.sv-rh-oldcity   { background: linear-gradient(160deg, #100818 0%, #381060 55%, #8060c0 100%); }
+.sv-rh-palace    { background: linear-gradient(160deg, #180c08 0%, #583018 55%, #c09060 100%); }
+.sv-rh-lindos    { background: linear-gradient(160deg, #081018 0%, #184060 55%, #60a0d0 100%); }
+.sv-rh-street    { background: linear-gradient(160deg, #101008 0%, #404018 55%, #a0a060 100%); }
+.sv-rh-beach     { background: linear-gradient(160deg, #081018 0%, #10508a 55%, #60c0e8 100%); }
+.sv-rh-colossus  { background: linear-gradient(160deg, #181008 0%, #504818 55%, #d0b840 100%); }
+
+/* ── TAVERNEN ── */
+.rh-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.rh-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(80,60,160,0.16);
+  border-radius: 4px; border-left: 3px solid #4a38a0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.rh-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(10,8,32,0.08); }
+.rh-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.rh-tav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300; color: #0a0820;
+}
+.rh-tav-loc { font-size: 0.75rem; color: #7a7888; margin-top: 0.2rem; }
+.rh-tav-stars { color: #4a38a0; font-size: 0.85rem; letter-spacing: 2px; }
+.rh-tav-desc { font-size: 0.88rem; color: #303040; line-height: 1.75; font-weight: 300; margin-bottom: 1rem; }
+.rh-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.rh-tav-dish {
+  padding: 3px 10px; background: #efecfb; color: #201848;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+}
+.rh-tav-price { font-size: 0.8rem; color: #7a7888; }
+.rh-tav-price span { color: #4a38a0; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.rh-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.rh-viertel-card {
+  padding: 1.8rem; background: #f0eefb;
+  border-radius: 4px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.rh-viertel-card:hover { background: #e0dcf8; transform: translateY(-4px); }
+.rh-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.rh-viertel-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300; color: #0a0820; margin-bottom: 0.5rem;
+}
+.rh-viertel-desc { font-size: 0.82rem; color: #505060; line-height: 1.65; font-weight: 300; }
+
+/* ── TIP BANNER ── */
+.rh-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #080810 0%, #201060 40%, #4a38a0 100%);
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.rh-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.rh-tip-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300; color: white; margin-bottom: 0.6rem;
+}
+.rh-tip-text p {
+  font-size: 0.92rem; color: rgba(255,255,255,0.70); line-height: 1.75; font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .rh-back-bar { padding: 0.8rem 1.2rem; }
+  .rh-content { padding: 2rem 1.2rem 4rem; }
+  .rh-history-grid { grid-template-columns: 1fr; }
+  .rh-sights-grid { grid-template-columns: 1fr 1fr; }
+  .rh-tav-grid { grid-template-columns: 1fr; }
+  .rh-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .rh-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+}

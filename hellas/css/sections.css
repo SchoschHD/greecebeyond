@@ -1,0 +1,522 @@
+/* =============================================
+   SECTIONS — Intro · Inseln · Städte · Kultur
+              Kulinarik · Regionen · Zitat
+   ============================================= */
+
+/* ── INTRO ── */
+.intro {
+  padding: 8rem 4rem 6rem;
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;
+}
+.intro-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1.5rem;
+}
+.intro-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.2rem;
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--deep);
+}
+.intro-heading em { font-style: italic; color: var(--azure); }
+.intro-text {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #4a4038;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+.stat-row { display: flex; gap: 2.5rem; padding-top: 1rem; }
+.stat { text-align: left; }
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--azure);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #8a7d6e;
+  margin-top: 0.3rem;
+}
+.intro-visual { position: relative; }
+.intro-img-frame {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: linear-gradient(135deg, #1a5f8a 0%, #0d3a5c 40%, #c4622d 100%);
+  border-radius: 2px;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.intro-img-frame::before {
+  content: '☉';
+  font-size: 12rem;
+  color: rgba(255,255,255,0.05);
+  position: absolute;
+}
+.intro-img-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 7rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.12);
+  letter-spacing: -0.02em;
+  text-align: center;
+  line-height: 0.9;
+}
+.intro-badge {
+  position: absolute;
+  bottom: -20px; left: -20px;
+  width: 120px; height: 120px;
+  background: var(--cream);
+  border: 1px solid var(--sand);
+  border-radius: 50%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 4px;
+}
+.intro-badge span:first-child {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  color: var(--terracotta);
+  line-height: 1;
+}
+.intro-badge span:last-child {
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8a7d6e;
+  text-align: center;
+}
+
+/* ── SECTION HEADING (wiederverwendbar) ── */
+.sec-head {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+}
+.sec-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+.sec-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--deep);
+  line-height: 1.1;
+}
+.sec-title em { font-style: italic; color: var(--azure); }
+.sec-line {
+  width: 40px; height: 1px;
+  background: var(--gold);
+  margin: 1.5rem auto 0;
+}
+
+/* ── ISLANDS GRID ── */
+.islands { padding: 2rem 3rem 6rem; max-width: 1300px; margin: 0 auto; }
+.islands-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+/* Wrapper für Kykladen-Markup: lassen die Kinder ins Eltern-Grid fallen */
+.kykladen-grid { display: contents; }
+.kyk-card.large { grid-column: span 2; }
+.island-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.island-card.large { grid-column: span 2; }
+.island-bg {
+  width: 100%;
+  aspect-ratio: auto;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.island-card.large .island-bg { height: 440px; }
+.island-card:not(.large) .island-bg { height: 280px; }
+.island-card:hover .island-bg { transform: scale(1.05); }
+.island-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,30,50,0.85) 0%, rgba(10,30,50,0.1) 60%);
+  transition: opacity 0.4s;
+}
+.island-info {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 2rem;
+  color: white;
+  transform: translateY(8px);
+  transition: transform 0.4s;
+}
+.island-card:hover .island-info { transform: translateY(0); }
+.island-region {
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.65;
+  margin-bottom: 0.5rem;
+}
+.island-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.island-card:not(.large) .island-name { font-size: 1.6rem; }
+.island-desc {
+  font-size: 0.82rem;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  line-height: 1.6;
+  font-weight: 300;
+  transition: opacity 0.3s, max-height 0.4s;
+  color: rgba(255,255,255,0.8);
+}
+.island-card:hover .island-desc { opacity: 1; max-height: 80px; }
+.island-tag {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 4px 12px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 20px;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.3s 0.1s;
+}
+.island-card:hover .island-tag { opacity: 1; }
+
+.island-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.island-photo {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.island-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Island Farbpaletten */
+.isle-santorini { background: linear-gradient(160deg, #1a4e8a 0%, #2980b9 50%, #c4622d 100%); }
+.isle-crete     { background: linear-gradient(160deg, #2d6a4f 0%, #1a5f8a 50%, #c9933a 100%); }
+.isle-mykonos   { background: linear-gradient(160deg, #e8dcc8 0%, #c8e6f5 50%, #1a5f8a 100%); }
+.isle-rhodes    { background: linear-gradient(160deg, #7b3f20 0%, #c4622d 50%, #1a5f8a 100%); }
+.isle-corfu     { background: linear-gradient(160deg, #1a4e3a 0%, #2d8a5f 50%, #a3c4a0 100%); }
+.isle-kefalonia { background: linear-gradient(160deg, #0d3a5c 0%, #1a8a6a 50%, #2980b9 100%); }
+
+/* ── CITIES ── */
+.cities { padding: 2rem 3rem 6rem; max-width: 1300px; margin: 0 auto; }
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.city-card {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.city-bg {
+  height: 360px;
+  transition: transform 0.6s ease;
+}
+.city-card:hover .city-bg { transform: scale(1.06); }
+.city-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(13,46,66,0.9) 0%, transparent 55%);
+}
+.city-info {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 1.5rem;
+  color: white;
+}
+.city-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+.city-subtitle {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-top: 0.3rem;
+}
+.city-highlights {
+  margin-top: 0.8rem;
+  display: flex; flex-wrap: wrap; gap: 6px;
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s;
+}
+.city-card:hover .city-highlights { max-height: 80px; }
+.city-pill {
+  padding: 3px 10px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+}
+.city-athens       { background: linear-gradient(160deg, #3d2b1f 0%, #7b4f2e 40%, #c9933a 100%); }
+.city-thessaloniki { background: linear-gradient(160deg, #1a2a4a 0%, #2a4a7a 50%, #c9933a 100%); }
+.city-nafplio      { background: linear-gradient(160deg, #1a5f8a 0%, #2d8a6a 50%, #e8dcc8 100%); }
+.city-delphi       { background: linear-gradient(160deg, #2d4a20 0%, #5a8a3a 50%, #c9933a 100%); }
+
+/* ── CULTURE STRIP ── */
+.culture {
+  background: var(--deep);
+  padding: 5rem 3rem;
+  margin: 2rem 0;
+}
+.culture-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 6rem;
+  align-items: center;
+}
+.culture-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.15;
+}
+.culture-heading em { color: var(--gold); font-style: italic; }
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.culture-icon {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+}
+.culture-title {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+.culture-desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(245,240,232,0.6);
+  font-weight: 300;
+}
+
+/* ── FOOD ── */
+.food { padding: 5rem 3rem 6rem; max-width: 1300px; margin: 0 auto; }
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.food-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--cream);
+  border-radius: 2px;
+  transition: background 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.food-card:hover {
+  background: var(--sand);
+  transform: translateY(-4px);
+}
+.food-emoji { font-size: 2.5rem; margin-bottom: 0.8rem; }
+.food-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  color: var(--deep);
+  margin-bottom: 0.3rem;
+}
+.food-note {
+  font-size: 0.72rem;
+  color: #8a7d6e;
+  letter-spacing: 0.05em;
+}
+
+/* ── REGIONS ── */
+.regions { background: var(--cream); padding: 5rem 3rem; }
+.regions-inner { max-width: 1300px; margin: 0 auto; }
+.regions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.region-card {
+  padding: 2rem;
+  background: white;
+  border-left: 3px solid var(--azure);
+  transition: border-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.region-card:hover {
+  border-color: var(--terracotta);
+  transform: translateX(4px);
+}
+.region-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--deep);
+  margin-bottom: 0.5rem;
+}
+.region-desc {
+  font-size: 0.85rem;
+  color: #6a5e50;
+  line-height: 1.7;
+  font-weight: 300;
+}
+.region-highlights {
+  margin-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.region-tag {
+  padding: 3px 10px;
+  background: var(--sky);
+  color: var(--deep);
+  border-radius: 20px;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+}
+
+/* ── QUOTE ── */
+.quote-section {
+  padding: 7rem 3rem;
+  text-align: center;
+  background: white;
+}
+blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--deep);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+blockquote::before { content: '\201C'; color: var(--gold); margin-right: 0.1em; }
+blockquote::after  { content: '\201D'; color: var(--gold); margin-left: 0.1em; }
+cite {
+  display: block;
+  margin-top: 2rem;
+  font-style: normal;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #8a7d6e;
+}
+
+/* ── DODEKANES GRID ── */
+.dodekanes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+/* Rhodos ist large (span 2) */
+.dod-card.large { grid-column: span 2; }
+.dod-card .island-bg    { height: 220px; }
+.dod-card.large .island-bg { height: 220px; }
+
+/* Dodekanes Farbpaletten */
+.isle-agathonisi  { background: linear-gradient(160deg, #0d3a5c 0%, #1a7a6a 50%, #56ccb2 100%); }
+.isle-astypalaia  { background: linear-gradient(160deg, #f5f0e8 0%, #c8e6f5 40%, #2560a0 100%); }
+.isle-kalymnos    { background: linear-gradient(160deg, #3a1a0a 0%, #8a4a20 50%, #c8a060 100%); }
+.isle-karpathos   { background: linear-gradient(160deg, #0a2a4a 0%, #1a6aaa 50%, #56b4e0 100%); }
+.isle-kasos       { background: linear-gradient(160deg, #2a1a0a 0%, #6a4a2a 50%, #c8a878 100%); }
+.isle-kastellorizo{ background: linear-gradient(160deg, #1a0a3a 0%, #4a2a8a 50%, #c8a0e0 100%); }
+.isle-kos         { background: linear-gradient(160deg, #0a3a1a 0%, #1a8a3a 50%, #78c860 100%); }
+.isle-lipsi       { background: linear-gradient(160deg, #0a2a3a 0%, #1a8aaa 45%, #a0e0f0 100%); }
+.isle-leros       { background: linear-gradient(160deg, #1a1a3a 0%, #3a3a8a 50%, #c0c8e8 100%); }
+.isle-nisyros     { background: linear-gradient(160deg, #1a0a00 0%, #5a2a0a 40%, #c86020 80%, #e8c060 100%); }
+.isle-patmos      { background: linear-gradient(160deg, #1a1a2a 0%, #4a3a6a 50%, #c8b8e0 100%); }
+.isle-symi        { background: linear-gradient(160deg, #c86020 0%, #e8a840 40%, #f5dca0 70%, #c8e6f5 100%); }
+.isle-tilos       { background: linear-gradient(160deg, #0a2a1a 0%, #2a7a3a 50%, #90c870 100%); }
+.isle-chalki      { background: linear-gradient(160deg, #0a1a3a 0%, #1a5a9a 45%, #f0c840 100%); }
+
+/* ── KYKLADEN GRID ── */
+.kykladen-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+/* Santorini & Naxos sind large (span 2) */
+.kyk-card.large { grid-column: span 2; }
+.kyk-card .island-bg    { height: 220px; }
+.kyk-card.large .island-bg { height: 220px; }
+
+/* Kykladen Farbpaletten */
+.isle-amorgos     { background: linear-gradient(160deg, #0a1e3a 0%, #1a4a8a 50%, #3a8abf 100%); }
+.isle-anafi       { background: linear-gradient(160deg, #f0e8d0 0%, #d0e8f8 40%, #1a5a9a 100%); }
+.isle-andros      { background: linear-gradient(160deg, #1a3a1a 0%, #2a7a3a 50%, #a0d080 100%); }
+.isle-antiparos   { background: linear-gradient(160deg, #d8c8a0 0%, #c8e0f0 50%, #1a6aaa 100%); }
+.isle-donoussa    { background: linear-gradient(160deg, #0a2a3a 0%, #1a9aaa 50%, #70e0e8 100%); }
+.isle-iraklia     { background: linear-gradient(160deg, #0a2a10 0%, #1a6a2a 50%, #60b060 100%); }
+.isle-thirassia   { background: linear-gradient(160deg, #1a0a00 0%, #3a1a0a 40%, #8a5a3a 80%, #c8b090 100%); }
+.isle-ios         { background: linear-gradient(160deg, #0a1a4a 0%, #2060c0 50%, #80b8e8 100%); }
+.isle-kea         { background: linear-gradient(160deg, #2a3a10 0%, #6a8a20 50%, #c8c860 100%); }
+.isle-kimolos     { background: linear-gradient(160deg, #e8e0d0 0%, #f0f0e8 50%, #a0c8e8 100%); }
+.isle-koufonisia  { background: linear-gradient(160deg, #00304a 0%, #00a0c0 45%, #60e8e0 100%); }
+.isle-kythnos     { background: linear-gradient(160deg, #3a2a0a 0%, #c09040 50%, #e8c870 100%); }
+.isle-milos       { background: linear-gradient(160deg, #3a0a10 0%, #c03020 45%, #e89060 80%, #f8d080 100%); }
+.isle-naxos       { background: linear-gradient(160deg, #1a3a10 0%, #4a8a30 40%, #c8a840 80%, #e8d090 100%); }
+.isle-paros       { background: linear-gradient(160deg, #e8e0d8 0%, #c8d8f0 45%, #1a60a0 100%); }
+.isle-serifos     { background: linear-gradient(160deg, #2a1a0a 0%, #8a3a10 45%, #c87040 100%); }
+.isle-sikinos     { background: linear-gradient(160deg, #2a2a3a 0%, #5a6a7a 50%, #a0b8c8 100%); }
+.isle-sifnos      { background: linear-gradient(160deg, #3a1a0a 0%, #c06030 45%, #e8a870 100%); }
+.isle-syros       { background: linear-gradient(160deg, #1a0a3a 0%, #5a3a9a 50%, #c0a8e0 100%); }
+.isle-schinoussa  { background: linear-gradient(160deg, #0a2a2a 0%, #2a9090 50%, #90d8d0 100%); }
+.isle-tinos       { background: linear-gradient(160deg, #d8d8e0 0%, #e8e8f0 45%, #1a3a8a 100%); }
+.isle-folegandros { background: linear-gradient(160deg, #1a0a2a 0%, #5a2a8a 45%, #c080d0 80%, #e8c0a0 100%); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .intro             { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 2rem 3rem; }
+  .intro-visual      { display: none; }
+  .islands-grid      { grid-template-columns: 1fr 1fr; }
+  .island-card.large { grid-column: span 2; }
+  .cities-grid       { grid-template-columns: 1fr 1fr; }
+  .culture-inner     { grid-template-columns: 1fr; gap: 3rem; }
+  .food-grid         { grid-template-columns: repeat(3, 1fr); }
+  .regions-grid      { grid-template-columns: 1fr 1fr; }
+  .dodekanes-grid    { grid-template-columns: 1fr 1fr; }
+  .dod-card.large    { grid-column: span 2; }
+  .kykladen-grid     { grid-template-columns: 1fr 1fr; }
+  .kyk-card.large    { grid-column: span 2; }
+}

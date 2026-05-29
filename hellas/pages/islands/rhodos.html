@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rhodos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="rhodos.css" />
+</head>
+<body>
+<div id="rhodos-page">
+
+<div class="rh-back-bar">
+  <button class="rh-back-btn" onclick="closeRhodos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="rh-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Rhodos</span></p>
+</div>
+
+<div class="rh-hero">
+  <div class="rh-hero-bg"></div>
+  <div class="rh-hero-dots"></div>
+  <!-- Medieval city walls + towers silhouette -->
+  <svg class="rh-hero-silhouette" viewBox="0 0 860 180" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Long city wall -->
+    <rect x="40" y="110" width="780" height="20" rx="2"/>
+    <!-- Battlements on wall -->
+    <rect x="50"  y="96" width="16" height="16"/>
+    <rect x="76"  y="96" width="16" height="16"/>
+    <rect x="102" y="96" width="16" height="16"/>
+    <rect x="128" y="96" width="16" height="16"/>
+    <rect x="154" y="96" width="16" height="16"/>
+    <rect x="200" y="96" width="16" height="16"/>
+    <rect x="226" y="96" width="16" height="16"/>
+    <rect x="320" y="96" width="16" height="16"/>
+    <rect x="346" y="96" width="16" height="16"/>
+    <rect x="440" y="96" width="16" height="16"/>
+    <rect x="466" y="96" width="16" height="16"/>
+    <rect x="560" y="96" width="16" height="16"/>
+    <rect x="586" y="96" width="16" height="16"/>
+    <rect x="680" y="96" width="16" height="16"/>
+    <rect x="706" y="96" width="16" height="16"/>
+    <rect x="760" y="96" width="16" height="16"/>
+    <!-- Gate of St John tower -->
+    <rect x="170" y="54" width="50" height="56"/>
+    <rect x="165" y="42" width="60" height="14"/>
+    <rect x="168" y="28" width="16" height="16"/>
+    <rect x="196" y="28" width="16" height="16"/>
+    <!-- Palace tower -->
+    <rect x="380" y="38" width="60" height="72"/>
+    <rect x="374" y="26" width="72" height="14"/>
+    <rect x="378" y="12" width="16" height="16"/>
+    <rect x="406" y="12" width="16" height="16"/>
+    <rect x="434" y="12" width="16" height="16"/>
+    <rect x="386" y="68" width="26" height="40"/> <!-- gate arch -->
+    <!-- St Paul's gate -->
+    <rect x="630" y="58" width="46" height="52"/>
+    <rect x="625" y="46" width="56" height="14"/>
+    <rect x="628" y="32" width="14" height="16"/>
+    <rect x="654" y="32" width="14" height="16"/>
+    <!-- Water, sea -->
+    <path d="M0,170 Q215,155 430,162 Q645,170 860,158 L860,180 L0,180Z" opacity="0.3"/>
+  </svg>
+  <div class="rh-hero-overlay"></div>
+  <div class="rh-hero-content">
+    <p class="rh-hero-tag">Dodekanes · Südliche Ägäis</p>
+    <h1 class="rh-hero-title">Rhodos<em>Ρόδος</em></h1>
+    <p class="rh-hero-sub">Die Insel der Ritter, des Kolossos und der tausend Sonnen — Rhodos vereint die besterhaltene mittelalterliche Stadtbefestigung Europas mit kristallklarem Meer, antiken Akropolen und dem Duft von Hibiskus und Thymian.</p>
+    <div class="rh-hero-pills">
+      <span class="rh-hero-pill">UNESCO</span>
+      <span class="rh-hero-pill">Mittelalterlich</span>
+      <span class="rh-hero-pill">Johanniter</span>
+      <span class="rh-hero-pill">Lindos</span>
+      <span class="rh-hero-pill">Weltwunder</span>
+    </div>
+  </div>
+  <div class="rh-hero-waves"></div>
+</div>
+
+<div class="rh-stats-bar">
+  <div class="rh-stat-item">
+    <div class="rh-stat-num">115.000</div>
+    <div class="rh-stat-lbl">Einwohner</div>
+  </div>
+  <div class="rh-stat-item">
+    <div class="rh-stat-num">408 v. Chr.</div>
+    <div class="rh-stat-lbl">Stadtgründung</div>
+  </div>
+  <div class="rh-stat-item">
+    <div class="rh-stat-num">4 km</div>
+    <div class="rh-stat-lbl">Mittelalterliche Mauern</div>
+  </div>
+  <div class="rh-stat-item">
+    <div class="rh-stat-num">300</div>
+    <div class="rh-stat-lbl">Sonnentage / Jahr</div>
+  </div>
+  <div class="rh-stat-item">
+    <div class="rh-stat-num">1988</div>
+    <div class="rh-stat-lbl">UNESCO-Welterbe</div>
+  </div>
+</div>
+
+<div class="rh-content">
+
+  <section class="rh-section">
+    <div class="rh-section-head">
+      <p class="rh-section-label">01 — Geschichte</p>
+      <h2 class="rh-section-title">Vom Koloss der Antike<br><em>zur Festung der Ritter</em></h2>
+      <div class="rh-divider"></div>
+    </div>
+    <div class="rh-history-grid">
+      <div class="rh-history-text">
+        <p>Rhodos wurde 408 v. Chr. als planmäßig angelegte Stadtanlage nach Entwürfen des Hippodamos von Milet gegründet — eine der ersten rational geplanten Städte der Geschichte. Schnell wurde sie zur mächtigsten Handelsmacht des östlichen Mittelmeers. Um 280 v. Chr. wurde der Koloss von Rhodos errichtet — eine 32 Meter hohe Bronzestatue des Sonnengottes Helios, eines der sieben Weltwunder der Antike.</p>
+        <p>Nach Jahrhunderten unter Byzantinern und kurz unter Arabern übernahmen 1309 die Johanniterritter die Insel. Zwei Jahrhunderte lang bauten sie die stärkste Festungsanlage des Mittelmeerraums — die 4 Kilometer langen Stadtmauern mit ihren Türmen und Bastionen stehen heute noch vollständig. 1522 mussten die Ritter nach einer halbjährigen Belagerung durch Süleyman den Prächtigen kapitulieren.</p>
+        <p>Die osmanische Herrschaft bis 1912, dann Italien bis 1947, dann Griechenland — die Altstadt von Rhodos trägt all diese Schichten gleichzeitig. Seit 1988 steht sie auf der UNESCO-Welterbeliste als eine der besterhaltenen mittelalterlichen Stadtanlagen der Welt.</p>
+      </div>
+      <div class="rh-timeline">
+        <div class="rh-tl-item">
+          <div class="rh-tl-dot"></div>
+          <div class="rh-tl-year">408 v. Chr.</div>
+          <div class="rh-tl-event">Gründung der Stadt Rhodos nach Hippodamos-Plan — Zusammenschluss der drei alten Städte Ialysos, Kameiros und Lindos.</div>
+        </div>
+        <div class="rh-tl-item">
+          <div class="rh-tl-dot"></div>
+          <div class="rh-tl-year">280 v. Chr.</div>
+          <div class="rh-tl-event">Errichtung des Kolossos von Rhodos — 32 Meter hohe Bronzestatue des Helios, sieben Weltwunder der Antike. Stürzte 227 v. Chr. nach einem Erdbeben um.</div>
+        </div>
+        <div class="rh-tl-item">
+          <div class="rh-tl-dot"></div>
+          <div class="rh-tl-year">1309</div>
+          <div class="rh-tl-event">Die Johanniterritter erobern Rhodos und machen es zum Hauptsitz ihres Ordens. Beginn des größten mittelalterlichen Festungsbaus im Mittelmeer.</div>
+        </div>
+        <div class="rh-tl-item">
+          <div class="rh-tl-dot"></div>
+          <div class="rh-tl-year">1480</div>
+          <div class="rh-tl-event">Erste osmanische Belagerung durch Mohammed II. — die Ritter halten stand. Rhodos gilt als uneinnehmbar.</div>
+        </div>
+        <div class="rh-tl-item">
+          <div class="rh-tl-dot"></div>
+          <div class="rh-tl-year">1522</div>
+          <div class="rh-tl-event">Nach sechsmonatiger Belagerung kapitulieren die Ritter vor Süleyman dem Prächtigen. Sie dürfen ehrenvoll abziehen — nach Malta.</div>
+        </div>
+        <div class="rh-tl-item">
+          <div class="rh-tl-dot"></div>
+          <div class="rh-tl-year">1988</div>
+          <div class="rh-tl-event">UNESCO-Welterbe. Die mittelalterliche Altstadt gilt als die vollständigste erhaltene Ritterstadt Europas — bewohnt, lebendig, unrestauriert echt.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rh-section">
+    <div class="rh-section-head">
+      <p class="rh-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="rh-section-title">Ritter, Akropolen<br><em>und azurblaues Meer</em></h2>
+      <div class="rh-divider"></div>
+    </div>
+    <div class="rh-sights-grid">
+
+      <div class="rh-sight-card">
+        <div class="rh-sight-visual sv-rh-oldcity"></div>
+        <div class="rh-sight-body">
+          <p class="rh-sight-cat">UNESCO · Altstadt</p>
+          <h3 class="rh-sight-name">Mittelalterliche Altstadt</h3>
+          <p class="rh-sight-desc">Die besterhaltene mittelalterliche Stadtbefestigung Europas — 4 km Mauern, 7 Stadttore, bewohnte Gassen aus dem 14. Jahrhundert. Kein Freilichtmuseum, sondern eine lebendige Stadt.</p>
+        </div>
+      </div>
+
+      <div class="rh-sight-card">
+        <div class="rh-sight-visual sv-rh-palace"></div>
+        <div class="rh-sight-body">
+          <p class="rh-sight-cat">Palast · Ritter</p>
+          <h3 class="rh-sight-name">Palast des Großmeisters</h3>
+          <p class="rh-sight-desc">Das mächtigste Gebäude der Altstadt — der Sitz der Johanniterritter, mit gewaltigen Türmen und Mauern, die noch heute einschüchtern. Innen ein Museum mit antiken Mosaiken aus Kos.</p>
+        </div>
+      </div>
+
+      <div class="rh-sight-card">
+        <div class="rh-sight-visual sv-rh-lindos"></div>
+        <div class="rh-sight-body">
+          <p class="rh-sight-cat">Antike · Dorf</p>
+          <h3 class="rh-sight-name">Lindos & Akropolis</h3>
+          <p class="rh-sight-desc">50 km südlich: das weiß getünchte Dorf Lindos, überragt von einer antiken Akropolis mit dorischen Säulen — der schönste Anblick der Insel. Die Bucht darunter türkisblau und windgeschützt.</p>
+        </div>
+      </div>
+
+      <div class="rh-sight-card">
+        <div class="rh-sight-visual sv-rh-street"></div>
+        <div class="rh-sight-body">
+          <p class="rh-sight-cat">Altstadt · Ritter</p>
+          <h3 class="rh-sight-name">Ritterstraße (Ippoton)</h3>
+          <p class="rh-sight-desc">Die besterhaltene mittelalterliche Straße Europas — gepflastert mit Kopfsteinpflaster, gesäumt von den Herbergen der verschiedenen Ritterzungen: Frankreich, England, Spanien, Italien.</p>
+        </div>
+      </div>
+
+      <div class="rh-sight-card">
+        <div class="rh-sight-visual sv-rh-beach"></div>
+        <div class="rh-sight-body">
+          <p class="rh-sight-cat">Strand</p>
+          <h3 class="rh-sight-name">Tsambika & Faliraki</h3>
+          <p class="rh-sight-desc">Rhodos hat die besten Strände des Dodekanes — Tsambika mit seinem roten Fels und türkisblauem Wasser, Faliraki für das Nachtleben, Anthony Quinn Bay für Taucher und Träumer.</p>
+        </div>
+      </div>
+
+      <div class="rh-sight-card">
+        <div class="rh-sight-visual sv-rh-colossus"></div>
+        <div class="rh-sight-body">
+          <p class="rh-sight-cat">Antike · Hafen</p>
+          <h3 class="rh-sight-name">Mandraki-Hafen</h3>
+          <p class="rh-sight-desc">Wo einst der Kolossos stand — heute bewacht von zwei bronzenen Hirschen. Der venezianisch anmutende Hafen mit seinen drei Windmühlen und dem Leuchtturm ist das schönste Einfahrtstor der Ägäis.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="rh-section">
+    <div class="rh-section-head">
+      <p class="rh-section-label">03 — Tavernen & Küche</p>
+      <h2 class="rh-section-title">Dodekanese-Küche<br><em>zwischen Orient und Okzident</em></h2>
+      <div class="rh-divider"></div>
+    </div>
+    <div class="rh-tav-grid">
+
+      <div class="rh-tav-card">
+        <div class="rh-tav-top">
+          <div>
+            <h3 class="rh-tav-name">Marco Polo Café</h3>
+            <div class="rh-tav-loc">📍 Altstadt, Fanouriou-Gasse</div>
+          </div>
+          <div class="rh-tav-stars">★★★★★</div>
+        </div>
+        <p class="rh-tav-desc">In einem osmanischen Herrenhaus aus dem 15. Jahrhundert — Kerzenlicht, Gewölbekeller, ein Innenhof voller Bougainvillea. Die Küche verbindet rhodiotische Traditionen mit anatolischen Einflüssen. Das romantischste Restaurant der Altstadt.</p>
+        <div class="rh-tav-dishes">
+          <span class="rh-tav-dish">Pitaroudia</span>
+          <span class="rh-tav-dish">Gegrillter Oktopus</span>
+          <span class="rh-tav-dish">Rhodiotischer Wein</span>
+        </div>
+        <p class="rh-tav-price">Preisklasse: <span>€€€ · Abendessen · Reservierung</span></p>
+      </div>
+
+      <div class="rh-tav-card">
+        <div class="rh-tav-top">
+          <div>
+            <h3 class="rh-tav-name">Hatzikelis</h3>
+            <div class="rh-tav-loc">📍 Altstadt, Solomou-Str.</div>
+          </div>
+          <div class="rh-tav-stars">★★★★★</div>
+        </div>
+        <p class="rh-tav-desc">Seit Jahrzehnten die Adresse für Meeresfrüchte in Rhodos-Stadt — ein kleines Lokal mit wenigen Tischen, täglich frischer Ware direkt vom Fischerboot und einer Weinkarte voller rhodiotischer Trauben. Kein Touristen-Schnickschnack.</p>
+        <div class="rh-tav-dishes">
+          <span class="rh-tav-dish">Garnelenrisotto</span>
+          <span class="rh-tav-dish">Hummer</span>
+          <span class="rh-tav-dish">Taramosalata</span>
+        </div>
+        <p class="rh-tav-price">Preisklasse: <span>€€€ · Mittag & Abend</span></p>
+      </div>
+
+      <div class="rh-tav-card">
+        <div class="rh-tav-top">
+          <div>
+            <h3 class="rh-tav-name">To Marouli</h3>
+            <div class="rh-tav-loc">📍 Altstadt, Aristofanous-Str.</div>
+          </div>
+          <div class="rh-tav-stars">★★★★☆</div>
+        </div>
+        <p class="rh-tav-desc">Die versteckte Taverne der Einheimischen — wer nicht weiß, wo er abbiegen muss, findet sie nicht. Lokale Hausmannskost ohne Kompromisse: Linsensuppe, gefüllte Weinblätter, Lamm aus dem Ofen. Kein Englisch auf der Karte.</p>
+        <div class="rh-tav-dishes">
+          <span class="rh-tav-dish">Dolmades</span>
+          <span class="rh-tav-dish">Arnaki sto Fourno</span>
+          <span class="rh-tav-dish">Fakes-Suppe</span>
+        </div>
+        <p class="rh-tav-price">Preisklasse: <span>€ · Mittagessen · Einheimische</span></p>
+      </div>
+
+      <div class="rh-tav-card">
+        <div class="rh-tav-top">
+          <div>
+            <h3 class="rh-tav-name">Lindos Taverne (Mavrikos)</h3>
+            <div class="rh-tav-loc">📍 Lindos, Dorfplatz</div>
+          </div>
+          <div class="rh-tav-stars">★★★★★</div>
+        </div>
+        <p class="rh-tav-desc">Das legendäre Mavrikos in Lindos — seit 1933 in Familienhand und mehrfach ausgezeichnet, eines der besten Restaurants Griechenlands überhaupt. Rhodiotische Küche auf Spitzenniveau, direkt unter der beleuchteten Akropolis.</p>
+        <div class="rh-tav-dishes">
+          <span class="rh-tav-dish">Linzer Hummer-Salat</span>
+          <span class="rh-tav-dish">Swordfish rhodiotisch</span>
+          <span class="rh-tav-dish">Eigener Wein</span>
+        </div>
+        <p class="rh-tav-price">Preisklasse: <span>€€€€ · Abendessen · Ausflug nach Lindos</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="rh-section">
+    <div class="rh-section-head">
+      <p class="rh-section-label">04 — Viertel & Orte</p>
+      <h2 class="rh-section-title">Die Insel<br><em>von Nord bis Süd</em></h2>
+      <div class="rh-divider"></div>
+    </div>
+    <div class="rh-viertel-grid">
+
+      <div class="rh-viertel-card">
+        <div class="rh-viertel-emoji">🏰</div>
+        <h3 class="rh-viertel-name">Altstadt</h3>
+        <p class="rh-viertel-desc">Das UNESCO-Herzstück — innerhalb der Mauern ein Labyrinth aus Gassen, in dem man sich täglich neu verläuft. Abends gehören die Gassen den Bewohnern und den Katzen.</p>
+      </div>
+
+      <div class="rh-viertel-card">
+        <div class="rh-viertel-emoji">🌊</div>
+        <h3 class="rh-viertel-name">Neue Stadt & Mandraki</h3>
+        <p class="rh-viertel-desc">Der elegante Teil der Hauptstadt — Art-déco-Gebäude aus der italienischen Besatzungszeit, der Hafen mit seinen drei Windmühlen und der Marktstoa. Café-Kultur und Strandpromenade.</p>
+      </div>
+
+      <div class="rh-viertel-card">
+        <div class="rh-viertel-emoji">🏛️</div>
+        <h3 class="rh-viertel-name">Lindos</h3>
+        <p class="rh-viertel-desc">Das weiß getünchte Dorf an der Ostküste, überragt von der antiken Akropolis — 50 km von der Hauptstadt, eine andere Welt. Autofreie Gassen, Kapitänshäuser aus dem 17. Jahrhundert.</p>
+      </div>
+
+      <div class="rh-viertel-card">
+        <div class="rh-viertel-emoji">🦋</div>
+        <h3 class="rh-viertel-name">Petaloudes (Schmetterlingstal)</h3>
+        <p class="rh-viertel-desc">Im Landesinneren: ein bewaldetes Tal, in dem sich von Juni bis September Millionen Schmetterlinge auf ihrem Zug versammeln — eines der naturwunderschönsten Phänomene der Ägäis.</p>
+      </div>
+
+      <div class="rh-viertel-card">
+        <div class="rh-viertel-emoji">🍷</div>
+        <h3 class="rh-viertel-name">Embonas & Wein</h3>
+        <p class="rh-viertel-desc">Das Weindorf am Attavyros-Berg — Rhodos hat eine der ältesten Weintraditionen Griechenlands. Die einheimischen Sorten Athiri und Mandilaria wachsen hier auf 800 Metern Höhe.</p>
+      </div>
+
+      <div class="rh-viertel-card">
+        <div class="rh-viertel-emoji">🐟</div>
+        <h3 class="rh-viertel-name">Kameiros & Westküste</h3>
+        <p class="rh-viertel-event">Die antike Stadt Kameiros an der Westküste — kaum besucht, windumweht, mit Blick aufs offene Meer. Die Westküste ist rauher als die Ostküste, die Strände wilder und leerer.</p>
+      </div>
+
+    </div>
+
+    <div class="rh-tip-banner">
+      <div class="rh-tip-emoji">⚔️</div>
+      <div class="rh-tip-text">
+        <h3>Die Altstadt nach Mitternacht</h3>
+        <p>Wer Rhodos wirklich versteht, schläft in der Altstadt — und geht nach Mitternacht durch die Gassen, wenn die letzten Touristengruppen verschwunden sind. Dann gehören die beleuchteten Ritterhäuser, das Kopfsteinpflaster und die osmanischen Brunnen einem allein. Kein einziges Gebäude ist jünger als 500 Jahre. Und die Katzen, die auf den Mauern schlafen, haben das alles schon immer gewusst.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!-- pages/food/moussaka.html — Rezeptseite für Moussaka. -->
+
+<!-- Back bar -->
+<div class="ms-back-bar">
+  <button class="ms-back-btn" onclick="closeMoussaka()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ms-breadcrumb">Hellas &nbsp;/&nbsp; Küche &nbsp;/&nbsp; <span>Moussaka</span></p>
+</div>
+
+<!-- Hero -->
+<div class="ms-hero">
+  <div class="ms-hero-img"></div>
+  <div class="ms-hero-visual">🫕</div>
+  <div class="ms-hero-overlay"></div>
+  <div class="ms-hero-content">
+    <p class="ms-hero-tag">Griechische Küche · Nationalgericht</p>
+    <h1 class="ms-hero-title">Moussaka<em>Μουσακάς</em></h1>
+    <p class="ms-hero-desc">Goldbraun gebackener Auflauf mit Auberginen, Zucchini, Kartoffeln, gewürztem Hackfleisch und samtig-cremiger Béchamelsauce — das Herzstück der griechischen Hausküche.</p>
+    <div class="ms-hero-pills">
+      <span class="ms-hero-pill">Hauptgericht</span>
+      <span class="ms-hero-pill">ca. 2 Std.</span>
+      <span class="ms-hero-pill">Mittel</span>
+      <span class="ms-hero-pill">Rezept von Akis Petretzikis</span>
+    </div>
+  </div>
+</div>
+
+<!-- Rezept -->
+<div class="ms-content">
+
+  <!-- ZUTATEN (sticky links) -->
+  <aside class="ms-zutaten-box">
+    <p class="ms-box-label">Zutaten</p>
+    <h2 class="ms-box-title">Was du brauchst</h2>
+
+    <div class="ms-zutat-group">
+      <p class="ms-zutat-group-name">Für das Gemüse</p>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">3</span>
+        <span class="ms-zutat-name">Kartoffeln, vorgekocht</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">5–6 EL</span>
+        <span class="ms-zutat-name">Olivenöl</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">1</span>
+        <span class="ms-zutat-name">Zwiebel</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">2 (mittel)</span>
+        <span class="ms-zutat-name">Zucchini</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">2</span>
+        <span class="ms-zutat-name">Auberginen</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">—</span>
+        <span class="ms-zutat-name">Thymian, Salz, Pfeffer</span>
+      </div>
+    </div>
+
+    <div class="ms-zutat-group">
+      <p class="ms-zutat-group-name">Für das Hackfleisch</p>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">1</span>
+        <span class="ms-zutat-name">Zwiebel</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">2 EL</span>
+        <span class="ms-zutat-name">Olivenöl</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">1 Zehe</span>
+        <span class="ms-zutat-name">Knoblauch</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">3 Prisen</span>
+        <span class="ms-zutat-name">Kristallzucker</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">½ TL</span>
+        <span class="ms-zutat-name">Muskatnuss, gerieben</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">1 TL</span>
+        <span class="ms-zutat-name">Zimt, gemahlen</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">1 EL</span>
+        <span class="ms-zutat-name">Tomatenmark</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">500 g</span>
+        <span class="ms-zutat-name">Rinderhackfleisch</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">400 g</span>
+        <span class="ms-zutat-name">Tomaten, stückig (Concassé)</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">—</span>
+        <span class="ms-zutat-name">Salz, Pfeffer</span>
+      </div>
+    </div>
+
+    <div class="ms-zutat-group">
+      <p class="ms-zutat-group-name">Für die Béchamel</p>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">100 g</span>
+        <span class="ms-zutat-name">Butter</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">100 g</span>
+        <span class="ms-zutat-name">Mehl (Typ 405)</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">750 ml</span>
+        <span class="ms-zutat-name">Vollmilch</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">100 g</span>
+        <span class="ms-zutat-name">Parmesan, gerieben</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">3</span>
+        <span class="ms-zutat-name">Eigelb</span>
+      </div>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">—</span>
+        <span class="ms-zutat-name">Pfeffer, Muskatnuss</span>
+      </div>
+    </div>
+
+    <div class="ms-zutat-group">
+      <p class="ms-zutat-group-name">Für die Schicht</p>
+      <div class="ms-zutat-item">
+        <span class="ms-zutat-menge">50 g</span>
+        <span class="ms-zutat-name">Parmesan, gerieben (zum Bestreuen)</span>
+      </div>
+    </div>
+
+    <div class="ms-meta-row">
+      <div class="ms-meta-item">
+        <div class="ms-meta-icon">⏱️</div>
+        <div class="ms-meta-val">~2 Std.</div>
+        <div class="ms-meta-lbl">Gesamt</div>
+      </div>
+      <div class="ms-meta-item">
+        <div class="ms-meta-icon">👤</div>
+        <div class="ms-meta-val">6–8</div>
+        <div class="ms-meta-lbl">Portionen</div>
+      </div>
+      <div class="ms-meta-item">
+        <div class="ms-meta-icon">📊</div>
+        <div class="ms-meta-val">Mittel</div>
+        <div class="ms-meta-lbl">Schwierigkeit</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- SCHRITTE (rechts) -->
+  <div class="ms-schritte">
+    <div class="ms-schritte-head">
+      <p class="ms-schritte-label">Zubereitung</p>
+      <h2 class="ms-schritte-title">Schicht für<br><em>Schicht</em></h2>
+      <div class="ms-divider"></div>
+    </div>
+
+    <!-- Phase 1: Gemüse -->
+    <span class="ms-phase">Phase 1 — Gemüse</span>
+
+    <div class="ms-schritt">
+      <div class="ms-schritt-num">1</div>
+      <div class="ms-schritt-body">
+        <p class="ms-schritt-title">Kartoffeln anbraten</p>
+        <p class="ms-schritt-text">Eine Pfanne auf hoher Hitze erhitzen. Die vorgekochten Kartoffeln in 1 cm dicke Scheiben schneiden und mit 2–3 EL Olivenöl von beiden Seiten goldbraun anbraten.</p>
+      </div>
+    </div>
+
+    <div class="ms-schritt">
+      <div class="ms-schritt-num">2</div>
+      <div class="ms-schritt-body">
+        <p class="ms-schritt-title">Erste Schicht legen</p>
+        <p class="ms-schritt-text">In ein 25×30 cm Backblech einen Hauch Olivenöl geben, die Kartoffelscheiben gleichmäßig auslegen, mit Thymian bestreuen und salzen &amp; pfeffern.</p>
+      </div>
+    </div>
+
+    <div class="ms-schritt">
+      <div class="ms-schritt-num">3</div>
+      <div class="ms-schritt-body">
+        <p class="ms-schritt-title">Zwiebel karamellisieren</p>
+        <p class="ms-schritt-text">Die Zwiebel in dünne Ringe schneiden und in derselben Pfanne mit etwas Olivenöl goldbraun karamellisieren. Über die Kartoffeln schichten.</p>
+      </div>
+    </div>
+
+    <div class="ms-schritt">
+      <div class="ms-schritt-num">4</div>
+      <div class="ms-schritt-body">
+        <p class="ms-schritt-title">Zucchini anbraten</p>
+        <p class="ms-schritt-text">Die Zucchini in Scheiben schneiden und in derselben Pfanne mit etwas Olivenöl anbraten, bis sie Farbe bekommen. Über die Zwiebeln legen, mit Thymian, Salz und Pfeffer würzen.</p>
+      </div>
+    </div>
+
+    <div class="ms-schritt">
+      <div class="ms-schritt-num">5</div>
+      <div class="ms-schritt-body">
+        <p class="ms-schritt-title">Auberginen anbraten</p>
+        <p class="ms-schritt-text">Die Auberginen in Scheiben schneiden und ebenfalls in der Pfanne mit Olivenöl anbraten, bis sie leicht goldbraun sind. Über die Zucchini-Schicht legen, wieder mit Thymian, Salz und Pfeffer würzen.</p>
+        <span class="ms-schritt-tip">💡 Immer in derselben Pfanne — so nehmen die Gemüse das Aroma des jeweils vorherigen auf</span>
+      </div>
+    </div>
+
+    <!-- Phase 2: Hackfleisch -->
+    <span class="ms-phase">Phase 2 — Hackfleisch</span>
+
+    <div class="ms-schritt">
+      <div class="ms-schritt-num">6</div>
+      <div class="ms-schritt-body">
+        <p class="ms-schritt-title">Zwiebel & Knoblauch anbraten</p>
+        <p class="ms-schritt-text">Die Zwiebel grob hacken und in derselben Pfanne bei hoher Hitze mit etwas Olivenöl anbraten. Den fein gehackten Knoblauch dazugeben.</p>
+      </div>
+    </div>
+
+    <div class="ms-schritt">
+      <div class="ms-schritt-num">7</div>
+      <div class="ms-schritt-body">
+        <p class="ms-schritt-title">Gewürze & Tomatenmark</p>
+        <p class="ms-schritt-text">Zucker, Muskatnuss, Zimt und Tomatenmark einrühren. Mit einem Holzlöffel den Pfannenboden kräftig abkratzen — so löst sich das Mark, nimmt Farbe an und verliert seine Bitterkeit.</p>
+        <span class="ms-schritt-tip">💡 Zimt im Hackfleisch ist das Geheimnis des authentischen Moussaka-Geschmacks</span>
+      </div>
+    </div>
+
+    <div class="ms-schritt">
+      <div class="ms-schritt-num">8</div>
+      <div class="ms-schritt-body">
+        <p class="ms-schritt-title">Hackfleisch anbraten</p>
+        <p class="ms-schritt-text">Das Rinderhackfleisch in die Pfanne geben und gut durchrühren, bis es karamellisiert und schön gebräunt ist.</p>
+      </div>
+    </div>
+
+    <div class="ms-schritt">
+      <div class="ms-schritt-num">9</div>
+      <div class="ms-schritt-body">
+        <p class="ms-schritt-title">Mit Tomaten ablöschen & einkochen</p>
+        <p class="ms-schritt-text">Die Tomatenstücke dazugeben, gut umrühren und bei niedriger Hitze 10–15 Minuten einkochen lassen. Dabei gelegentlich umrühren. Kurz vor dem Ende mit Salz und Pfeffer abschmecken.</p>
+      </div>
+    </div>
+
+    <!-- Phase 3: Béchamel -->
+    <span class="ms-phase">Phase 3 — Béchamel</span>
+
+    <div class="ms-schritt">
+      <div class="ms-schritt-num">10</div>
+      <div class="ms-schritt-body">
+        <p class="ms-schritt-title">Butter & Mehl</p>
+        <p class="ms-schritt-text">Einen kleinen Topf bei niedriger Hitze erhitzen. Die Butter schmelzen, dann das Mehl auf einmal dazugeben und sofort mit dem Schneebesen verrühren.</p>
+      </div>
+    </div>
+
+    <div class="ms-schritt">
+      <div class="ms-schritt-num">11</div>
+      <div class="ms-schritt-body">
+        <p class="ms-schritt-title">Milch schrittweise einarbeiten</p>
+        <p class="ms-schritt-text">Die Milch in kleinen Portionen dazugießen — erst wenn die vorherige Portion vollständig absorbiert ist und keine Klümpchen mehr zu sehen sind, die nächste Portion hinzufügen. Die Sauce dabei ununterbrochen rühren.</p>
+        <span class="ms-schritt-tip">💡 Kleine Portionen sind der Schlüssel zu einer klumpenfreien, seidigen Béchamel</span>
+      </div>
+    </div>
+
+    <div class="ms-schritt">
+      <div class="ms-schritt-num">12</div>
+      <div class="ms-schritt-body">
+        <p class="ms-schritt-title">Abschmecken & verfeinern</p>
+        <p class="ms-schritt-text">Sobald die Béchamel Blasen wirft, ist sie fertig — sie sollte cremig und glatt sein. Vom Herd nehmen, Pfeffer, Muskatnuss, Parmesan und die 3 Eigelb einrühren.</p>
+      </div>
+    </div>
+
+    <!-- Phase 4: Zusammensetzen -->
+    <span class="ms-phase">Phase 4 — Zusammensetzen & Backen</span>
+
+    <div class="ms-schritt">
+      <div class="ms-schritt-num">13</div>
+      <div class="ms-schritt-body">
+        <p class="ms-schritt-title">Backofen vorheizen</p>
+        <p class="ms-schritt-text">Den Ofen auf 200 °C Umluft vorheizen.</p>
+      </div>
+    </div>
+
+    <div class="ms-schritt">
+      <div class="ms-schritt-num">14</div>
+      <div class="ms-schritt-body">
+        <p class="ms-schritt-title">Hackfleisch binden</p>
+        <p class="ms-schritt-text">200 g Béchamel unter das Hackfleisch rühren — so hält die Hackfleischschicht beim Schneiden zusammen und bröckelt nicht auseinander.</p>
+        <span class="ms-schritt-tip">💡 Dieser Schritt macht den Unterschied zwischen einem perfekten und einem zerfallenden Moussaka</span>
+      </div>
+    </div>
+
+    <div class="ms-schritt">
+      <div class="ms-schritt-num">15</div>
+      <div class="ms-schritt-body">
+        <p class="ms-schritt-title">Schichten & Bestreuen</p>
+        <p class="ms-schritt-text">Das Hackfleisch gleichmäßig über das Gemüse im Backblech verteilen. Die restliche Béchamel darüber glatt streichen, darauf achten, dass jede Ecke bedeckt ist. Mit geriebenem Parmesan bestreuen.</p>
+      </div>
+    </div>
+
+    <div class="ms-schritt">
+      <div class="ms-schritt-num">16</div>
+      <div class="ms-schritt-body">
+        <p class="ms-schritt-title">Backen & ruhen lassen</p>
+        <p class="ms-schritt-text">35–40 Minuten backen, bis die Oberfläche goldbraun ist. Aus dem Ofen nehmen und <strong>mindestens 1 Stunde ruhen lassen</strong>, bevor der Moussaka in Stücke geschnitten wird.</p>
+        <span class="ms-schritt-tip">⏳ Das Ruhen ist unverzichtbar — erst dann lassen sich saubere Stücke schneiden</span>
+      </div>
+    </div>
+
+  </div><!-- end ms-schritte -->
+
+  <!-- PROFI-TIPP Banner -->
+  <div class="ms-tip-banner">
+    <div class="ms-tip-emoji">🫕</div>
+    <div class="ms-tip-text">
+      <h3>Tipp vom Profi</h3>
+      <p>Akis empfiehlt, alle Gemüseschichten in derselben Pfanne zu braten — so nehmen Zucchini und Auberginen die Aromen der Vorgänger auf. Der Moussaka schmeckt am nächsten Tag noch besser, da die Gewürze durchziehen können. Im Kühlschrank hält er sich bis zu 4 Tage.</p>
+    </div>
+  </div>
+
+</div><!-- end ms-content -->

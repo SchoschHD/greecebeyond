@@ -1,0 +1,93 @@
+/* =============================================
+   HERO — Vollbild-Einstiegssektion
+  Diese Datei gestaltet den großen Startbereich oben auf der Seite:
+  Hintergrund, Wellen, Kreise, Titel und den Scroll-Hinweis.
+   ============================================= */
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(160deg, #0d3a5c 0%, #1a5f8a 40%, #2980b9 70%, #1abc9c 100%);
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 180px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 180'%3E%3Cpath fill='%23f5f0e8' fill-opacity='1' d='M0,96L48,101.3C96,107,192,117,288,112C384,107,480,85,576,85.3C672,85,768,107,864,112C960,117,1056,107,1152,96C1248,85,1344,75,1392,69.3L1440,64L1440,180L1392,180C1344,180,1248,180,1152,180C1056,180,960,180,864,180C768,180,672,180,576,180C480,180,384,180,288,180C192,180,96,180,48,180L0,180Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.hero-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.hero-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.06;
+  background: white;
+}
+.hero-circle.c1 { width: 600px; height: 600px; top: -200px; right: -100px; }
+.hero-circle.c2 { width: 300px; height: 300px; bottom: 100px; left: -80px; }
+
+.hero-content {
+  text-align: center;
+  color: white;
+  position: relative; z-index: 2;
+  animation: fadeUp 1.2s ease both;
+}
+.hero-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 300;
+  line-height: 0.9;
+  margin-bottom: 2rem;
+}
+.hero-title em { font-style: italic; display: block; }
+.hero-sub {
+  font-size: 1rem;
+  font-weight: 300;
+  opacity: 0.75;
+  letter-spacing: 0.05em;
+  max-width: 460px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+.hero-cta {
+  display: inline-flex; gap: 1.5rem; align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.hero-cta::after {
+  content: '';
+  display: block;
+  width: 60px; height: 1px;
+  background: rgba(255,255,255,0.5);
+  transition: width 0.3s;
+}
+.hero-cta:hover::after { width: 100px; }
+
+.hero-scroll {
+  position: absolute; bottom: 220px; left: 50%;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+.scroll-line {
+  width: 1px; height: 60px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.4));
+  animation: scrollPulse 2s ease-in-out infinite;
+}

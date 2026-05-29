@@ -1,0 +1,425 @@
+<!--
+  Seite: pages/islands/santorini.html
+  Zweck: Insel-Detailseite Santorin. Enthält Hero, Statistiken, Timeline,
+  Sehenswürdigkeiten und Kultur-Informationen. Wird von der Hauptseite
+  referenziert und kann über `openSantorini()` geöffnet/geschlossen werden.
+  Anmerkung: Nur erläuternde Kommentare eingefügt; keine Code-Änderungen.
+-->
+
+<!-- Back bar -->
+<div class="snt-back-bar">
+  <button class="snt-back-btn" onclick="closeSantorini()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <span class="snt-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Santorin</span></span>
+</div>
+
+<!-- Hero -->
+<div class="snt-hero">
+  <div class="snt-hero-dots"></div>
+  <div class="snt-hero-glow"></div>
+  <picture>
+    <source type="image/webp" srcset="assets/img/islands/santorini/Santorini01-480.webp 480w, assets/img/islands/santorini/Santorini01-768.webp 768w, assets/img/islands/santorini/Santorini01-1200.webp 1200w" sizes="(max-width:600px) 100vw, (max-width:1200px) 80vw, 1200px">
+    <source type="image/jpeg" srcset="assets/img/islands/santorini/Santorini01-480.jpg 480w, assets/img/islands/santorini/Santorini01-768.jpg 768w, assets/img/islands/santorini/Santorini01-1200.jpg 1200w" sizes="(max-width:600px) 100vw, (max-width:1200px) 80vw, 1200px">
+    <img class="snt-hero-image" src="assets/img/islands/santorini/Santorini01-1200.jpg" srcset="assets/img/islands/santorini/Santorini01-480.jpg 480w, assets/img/islands/santorini/Santorini01-768.jpg 768w, assets/img/islands/santorini/Santorini01-1200.jpg 1200w" sizes="(max-width:600px) 100vw, (max-width:1200px) 80vw, 1200px" alt="Santorin Landschaftsbild" loading="lazy">
+  </picture>
+  <p class="snt-hero-tag">Kykladen · Ägäisches Meer</p>
+  <h1 class="snt-hero-title">Σαντορίνη<em>Santorin</em></h1>
+  <p class="snt-hero-sub">Entstanden aus dem Feuer eines Vulkans, geformt durch Jahrtausende — Santorin ist vielleicht die romantischste Insel der Welt.</p>
+  <div class="snt-hero-pills">
+    <span class="snt-hero-pill">Kykladen</span>
+    <span class="snt-hero-pill">Caldera-Insel</span>
+    <span class="snt-hero-pill">UNESCO-Erbe</span>
+    <span class="snt-hero-pill">3.000+ Sonnenstunden</span>
+  </div>
+  <div class="snt-hero-waves"></div>
+</div>
+
+<!-- Stats -->
+<div class="snt-stats-bar">
+  <div class="snt-stat-item"><div class="snt-stat-num">76 km²</div><div class="snt-stat-lbl">Fläche</div></div>
+  <div class="snt-stat-item"><div class="snt-stat-num">~15.000</div><div class="snt-stat-lbl">Einwohner</div></div>
+  <div class="snt-stat-item"><div class="snt-stat-num">396 m</div><div class="snt-stat-lbl">Höchster Punkt</div></div>
+  <div class="snt-stat-item"><div class="snt-stat-num">2 Mio.</div><div class="snt-stat-lbl">Besucher/Jahr</div></div>
+  <div class="snt-stat-item"><div class="snt-stat-num">3.600 v. Chr.</div><div class="snt-stat-lbl">Erste Besiedlung</div></div>
+</div>
+
+<!-- Content -->
+<div class="snt-content">
+
+  <!-- 1. GESCHICHTE -->
+  <section class="snt-section">
+    <div class="snt-section-head">
+      <p class="snt-section-label">01 — Geschichte</p>
+      <h2 class="snt-section-title">Aus Feuer geboren —<br><em>Jahrtausende der Legenden</em></h2>
+      <div class="snt-divider"></div>
+    </div>
+    <div class="snt-history-grid">
+      <div class="snt-history-text">
+        <p>Santorin, griechisch Θήρα (Thíra), ist das Ergebnis einer der gewaltigsten vulkanischen Katastrophen der Geschichte. Ursprünglich eine runde Insel, wurde sie um 1600 v. Chr. durch eine verheerende Eruption zerstört, die die Caldera schuf und möglicherweise den Mythos von Atlantis inspirierte.</p>
+        <p>Die minoische Kultur auf der Insel war eine der am weitesten entwickelten der Bronzezeit. Die Stadt Akrotiri, begraben unter Asche wie ein ägäisches Pompeji, gibt bis heute faszinierende Einblicke in das Leben vor der Katastrophe.</p>
+        <p>Im Mittelalter prägten die Venezianer die Insel — von ihnen stammt der Name „Santo Erini" (Heilige Irene), der zu Santorin wurde. Seit dem 19. Jahrhundert ist die Insel für ihren Wein, besonders den Assyrtiko-Weißwein, berühmt, der auf den Bimssteinböden wächst.</p>
+      </div>
+      <div class="snt-timeline">
+        <div class="snt-tl-item">
+          <div class="snt-tl-dot"></div>
+          <div class="snt-tl-year">~3.600 v. Chr.</div>
+          <div class="snt-tl-event">Erste menschliche Besiedlung der Insel durch vorhistorische Völker. Fruchtbare Böden ziehen Bauern und Fischer an.</div>
+        </div>
+        <div class="snt-tl-item">
+          <div class="snt-tl-dot"></div>
+          <div class="snt-tl-year">~2.000 v. Chr.</div>
+          <div class="snt-tl-event">Minoische Zivilisation errichtet die Blütezeit-Siedlung Akrotiri — eine der fortschrittlichsten Städte der antiken Welt.</div>
+        </div>
+        <div class="snt-tl-item">
+          <div class="snt-tl-dot"></div>
+          <div class="snt-tl-year">~1.600 v. Chr.</div>
+          <div class="snt-tl-event">Minoan-Eruption: Eine der stärksten Vulkanexplosionen der Geschichte zerstört die Insel und schafft die heutige Caldera. Möglicher Ursprung des Atlantis-Mythos.</div>
+        </div>
+        <div class="snt-tl-item">
+          <div class="snt-tl-dot"></div>
+          <div class="snt-tl-year">9. Jh. v. Chr.</div>
+          <div class="snt-tl-event">Dorische Griechen besiedeln die Insel neu und gründen die antike Stadt Thíra auf dem gleichnamigen Bergrücken.</div>
+        </div>
+        <div class="snt-tl-item">
+          <div class="snt-tl-dot"></div>
+          <div class="snt-tl-year">13. – 15. Jh.</div>
+          <div class="snt-tl-event">Venezianische Herrschaft unter den Barozzi. Bau der Festung Skaros. Der Name „Santorin" entsteht aus dem venezianischen „Santo Erini".</div>
+        </div>
+        <div class="snt-tl-item">
+          <div class="snt-tl-dot"></div>
+          <div class="snt-tl-year">1956</div>
+          <div class="snt-tl-event">Ein schweres Erdbeben verwüstet große Teile der Insel. Der Wiederaufbau prägt das heutige charakteristische weiße Erscheinungsbild.</div>
+        </div>
+        <div class="snt-tl-item">
+          <div class="snt-tl-dot"></div>
+          <div class="snt-tl-year">Heute</div>
+          <div class="snt-tl-event">Eines der meistbesuchten Reiseziele der Welt — bekannt für Sonnenuntergänge, blaue Kuppeln und ausgezeichneten Wein.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. BELIEBTESTE ORTE -->
+  <section class="snt-section">
+    <div class="snt-section-head">
+      <p class="snt-section-label">02 — Beliebteste Orte</p>
+      <h2 class="snt-section-title">Die schönsten<br><em>Dörfer & Strände</em></h2>
+      <div class="snt-divider"></div>
+    </div>
+    <div class="snt-orte-grid">
+      <div class="snt-ort-card">
+        <div class="snt-ort-visual ort-oia"></div>
+        <div class="snt-ort-body">
+          <h3 class="snt-ort-name">Oia (Oía)</h3>
+          <p class="snt-ort-desc">Das Postkartenmotiv Griechenlands: weißgetünchte Häuser mit blauen Kuppeln am Rand der Caldera. Der Sonnenuntergang von Oia ist weltberühmt — Tausende versammeln sich täglich für diesen Moment.</p>
+          <div class="snt-ort-tags"><span class="snt-ort-tag">Sonnenuntergang</span><span class="snt-ort-tag">Fotografie</span><span class="snt-ort-tag">Galerien</span></div>
+        </div>
+      </div>
+      <div class="snt-ort-card">
+        <div class="snt-ort-visual ort-fira"></div>
+        <div class="snt-ort-body">
+          <h3 class="snt-ort-name">Fira (Hauptstadt)</h3>
+          <p class="snt-ort-desc">Pulsierendes Herz der Insel: Boutiquen, Restaurants, Museen und atemberaubende Caldera-Ausblicke. Der Weg von der Fira-Seilbahn zum Hafen ist unvergesslich.</p>
+          <div class="snt-ort-tags"><span class="snt-ort-tag">Shopping</span><span class="snt-ort-tag">Nachtleben</span><span class="snt-ort-tag">Museen</span></div>
+        </div>
+      </div>
+      <div class="snt-ort-card">
+        <div class="snt-ort-visual ort-imerovigli"></div>
+        <div class="snt-ort-body">
+          <h3 class="snt-ort-name">Imerovígli</h3>
+          <p class="snt-ort-desc">Das stille Juwel zwischen Fira und Oia — auf dem höchsten Punkt der Caldera gelegen. Luxuriöse Höhlenhotels und der Fels Skaros bieten die spektakulärsten Ausblicke.</p>
+          <div class="snt-ort-tags"><span class="snt-ort-tag">Luxus</span><span class="snt-ort-tag">Panorama</span><span class="snt-ort-tag">Wandern</span></div>
+        </div>
+      </div>
+      <div class="snt-ort-card">
+        <div class="snt-ort-visual ort-akrotiri"></div>
+        <div class="snt-ort-body">
+          <h3 class="snt-ort-name">Akrotiri</h3>
+          <p class="snt-ort-desc">Nicht nur die archäologische Ausgrabungsstätte — das heutige Dorf liegt nahe dem berühmten Roten Strand (Kokkini Paralia) mit seinem leuchtend roten Vulkangestein.</p>
+          <div class="snt-ort-tags"><span class="snt-ort-tag">Ausgrabungen</span><span class="snt-ort-tag">Roter Strand</span><span class="snt-ort-tag">Geschichte</span></div>
+        </div>
+      </div>
+      <div class="snt-ort-card">
+        <div class="snt-ort-visual ort-perissa"></div>
+        <div class="snt-ort-body">
+          <h3 class="snt-ort-name">Perissa &amp; Perivolos</h3>
+          <p class="snt-ort-desc">Der berühmte schwarze Strand Santorins! Vulkanischer Lavasand schafft eine unwirkliche Atmosphäre. Tavernen und Bars direkt am Wasser laden zum Verweilen ein.</p>
+          <div class="snt-ort-tags"><span class="snt-ort-tag">Schwarzer Strand</span><span class="snt-ort-tag">Strandleben</span><span class="snt-ort-tag">Wassersport</span></div>
+        </div>
+      </div>
+      <div class="snt-ort-card">
+        <div class="snt-ort-visual ort-caldera"></div>
+        <div class="snt-ort-body">
+          <h3 class="snt-ort-name">Caldera &amp; Vulkaninsel Néa Kaméni</h3>
+          <p class="snt-ort-desc">Eine Bootsfahrt zur aktiven Vulkaninsel im Zentrum der Caldera ist Pflicht. Heiße Quellen, Kraterspaziergänge und der einzigartige Blick auf Santorin von unten.</p>
+          <div class="snt-ort-tags"><span class="snt-ort-tag">Vulkan</span><span class="snt-ort-tag">Bootsfahrt</span><span class="snt-ort-tag">Thermalquellen</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. TAVERNEN -->
+  <section class="snt-section">
+    <div class="snt-section-head">
+      <p class="snt-section-label">03 — Tavernen &amp; Restaurants</p>
+      <h2 class="snt-section-title">Kulinarische<br><em>Meisterwerke am Meer</em></h2>
+      <div class="snt-divider"></div>
+    </div>
+    <div class="snt-taverna-grid">
+
+      <div class="snt-taverna-card">
+        <div class="snt-tav-head">
+          <div>
+            <div class="snt-tav-name">Ambrosia</div>
+            <div class="snt-tav-loc">📍 Oia, Caldera-Rand</div>
+          </div>
+          <div class="snt-tav-stars">★★★★★</div>
+        </div>
+        <p class="snt-tav-desc">Das wohl romantischste Restaurant Santorins — direkt am Caldera-Rand in Oia, mit einem der besten Ausblicke der Insel. Exzellente griechische Küche trifft auf französische Finesse. Reservierung Monate im Voraus empfohlen.</p>
+        <div class="snt-tav-dishes">
+          <span class="snt-tav-dish">Hummer-Linguine</span>
+          <span class="snt-tav-dish">Gebratenes Lamm</span>
+          <span class="snt-tav-dish">Assyrtiko-Weinkarte</span>
+        </div>
+        <p class="snt-tav-price">Preisklasse: <span>€€€€ · Fine Dining</span></p>
+      </div>
+
+      <div class="snt-taverna-card">
+        <div class="snt-tav-head">
+          <div>
+            <div class="snt-tav-name">Metaxy Mas</div>
+            <div class="snt-tav-loc">📍 Exo Gonia, Inland</div>
+          </div>
+          <div class="snt-tav-stars">★★★★★</div>
+        </div>
+        <p class="snt-tav-desc">Eines der besten traditionellen Restaurants der Insel — abseits des Tourismus in einem authentischen Dorf. Hervorragende Kretisch-Griechische Küche, hausgemachte Pasta und Meeresfrüchte. Ein Geheimtipp der Einheimischen.</p>
+        <div class="snt-tav-dishes">
+          <span class="snt-tav-dish">Frischer Fisch vom Grill</span>
+          <span class="snt-tav-dish">Kritharoto</span>
+          <span class="snt-tav-dish">Lokale Weine</span>
+        </div>
+        <p class="snt-tav-price">Preisklasse: <span>€€€ · Gehoben</span></p>
+      </div>
+
+      <div class="snt-taverna-card">
+        <div class="snt-tav-head">
+          <div>
+            <div class="snt-tav-name">Katina's Fish Taverna</div>
+            <div class="snt-tav-loc">📍 Oia, Ammoudi-Hafen</div>
+          </div>
+          <div class="snt-tav-stars">★★★★☆</div>
+        </div>
+        <p class="snt-tav-desc">Direkt am kleinen Fischerhafen unterhalb von Oia — hier isst man frischen Hummer und Oktopus, der buchstäblich von den Booten kommt. Rustikale Atmosphäre, unschlagbare Frische. Die Treppen hinunter lohnen sich absolut.</p>
+        <div class="snt-tav-dishes">
+          <span class="snt-tav-dish">Lebendiger Hummer</span>
+          <span class="snt-tav-dish">Gegrillter Oktopus</span>
+          <span class="snt-tav-dish">Fischsuppe</span>
+        </div>
+        <p class="snt-tav-price">Preisklasse: <span>€€€ · Frischer Fisch</span></p>
+      </div>
+
+      <div class="snt-taverna-card">
+        <div class="snt-tav-head">
+          <div>
+            <div class="snt-tav-name">Assyrtiko Wine Restaurant</div>
+            <div class="snt-tav-loc">📍 Fira, Caldera-Terrasse</div>
+          </div>
+          <div class="snt-tav-stars">★★★★☆</div>
+        </div>
+        <p class="snt-tav-desc">Benannt nach dem berühmten Wein der Insel — bietet eine außergewöhnliche Weinauswahl lokaler Weingüter (Santo Wines, Estate Argyros). Moderne griechische Küche auf einer der schönsten Terrassen Firas.</p>
+        <div class="snt-tav-dishes">
+          <span class="snt-tav-dish">Weinverkostung</span>
+          <span class="snt-tav-dish">Meze-Platten</span>
+          <span class="snt-tav-dish">Gegrillte Meeresfrüchte</span>
+        </div>
+        <p class="snt-tav-price">Preisklasse: <span>€€€ · Wein &amp; Speisen</span></p>
+      </div>
+
+      <div class="snt-taverna-card">
+        <div class="snt-tav-head">
+          <div>
+            <div class="snt-tav-name">Taverna Nikos</div>
+            <div class="snt-tav-loc">📍 Fira, Altstadt</div>
+          </div>
+          <div class="snt-tav-stars">★★★★☆</div>
+        </div>
+        <p class="snt-tav-desc">Eine ehrliche, traditionelle Taverne mitten in Fira — ohne den touristischen Aufpreis der Caldera-Restaurants. Hausgemachte Moussaka, frische Salate und freundlichstes Personal. Das Lieblingslokal vieler Rückkehrenden.</p>
+        <div class="snt-tav-dishes">
+          <span class="snt-tav-dish">Moussaka</span>
+          <span class="snt-tav-dish">Souvlaki</span>
+          <span class="snt-tav-dish">Choriatiki</span>
+        </div>
+        <p class="snt-tav-price">Preisklasse: <span>€€ · Traditionell</span></p>
+      </div>
+
+      <div class="snt-taverna-card">
+        <div class="snt-tav-head">
+          <div>
+            <div class="snt-tav-name">1800 Restaurant</div>
+            <div class="snt-tav-loc">📍 Oia, historisches Herrenhaus</div>
+          </div>
+          <div class="snt-tav-stars">★★★★★</div>
+        </div>
+        <p class="snt-tav-desc">In einem restaurierten Kapitänshaus aus dem Jahr 1800 untergebracht. Mediterrane Haute Cuisine, einzigartiges Ambiente mit Antiquitäten und einer der besten Weinkeller der Kykladen. Absolutes Muss für Genießer.</p>
+        <div class="snt-tav-dishes">
+          <span class="snt-tav-dish">Périgord-Foie-gras</span>
+          <span class="snt-tav-dish">Kykladen-Dorade</span>
+          <span class="snt-tav-dish">Lokale Käseauswahl</span>
+        </div>
+        <p class="snt-tav-price">Preisklasse: <span>€€€€ · Fine Dining</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. MUSEEN -->
+  <section class="snt-section">
+    <div class="snt-section-head">
+      <p class="snt-section-label">04 — Museen</p>
+      <h2 class="snt-section-title">Kultur &amp;<br><em>Archäologische Schätze</em></h2>
+      <div class="snt-divider"></div>
+    </div>
+    <div class="snt-museum-grid">
+
+      <div class="snt-museum-card">
+        <div class="snt-museum-icon">🏺</div>
+        <div>
+          <p class="snt-museum-type">Archäologie</p>
+          <h3 class="snt-museum-name">Archäologisches Museum Fira</h3>
+          <p class="snt-museum-desc">Bedeutende Sammlung von Funden aus der prähistorischen Siedlung Akrotiri und der antiken Stadt Thíra. Keramiken, Skulpturen und Alltagsgegenstände aus über 3.000 Jahren Geschichte.</p>
+          <p class="snt-museum-hours">⏰ Di–So 8:30–15:30 Uhr · Eintritt: 6 €</p>
+        </div>
+      </div>
+
+      <div class="snt-museum-card">
+        <div class="snt-museum-icon">🌋</div>
+        <div>
+          <p class="snt-museum-type">Prähistorie</p>
+          <h3 class="snt-museum-name">Museum der prähistorischen Thira</h3>
+          <p class="snt-museum-desc">Das modernste Museum der Insel zeigt die außergewöhnlichen Wandmalereien aus Akrotiri — darunter die berühmten „Blauen Affen" und den „Fischerfresken". Atemberaubende Einblicke ins Leben vor der Eruption.</p>
+          <p class="snt-museum-hours">⏰ Di–So 8:00–20:00 Uhr · Eintritt: 6 €</p>
+        </div>
+      </div>
+
+      <div class="snt-museum-card">
+        <div class="snt-museum-icon">⛵</div>
+        <div>
+          <p class="snt-museum-type">Maritime Geschichte</p>
+          <h3 class="snt-museum-name">Nautiluseum Oia</h3>
+          <p class="snt-museum-desc">Das Maritime Museum von Oia erzählt die Seefahrtgeschichte Santorins durch nautische Instrumente, Schiffsmodelle, Gemälde und historische Dokumente des 18. und 19. Jahrhunderts.</p>
+          <p class="snt-museum-hours">⏰ Mi–Mo 10:00–14:00 &amp; 17:00–20:00 Uhr · Eintritt: 3 €</p>
+        </div>
+      </div>
+
+      <div class="snt-museum-card">
+        <div class="snt-museum-icon">🎨</div>
+        <div>
+          <p class="snt-museum-type">Zeitgenössische Kunst</p>
+          <h3 class="snt-museum-name">Gyzi Megaron Kulturzentrum</h3>
+          <p class="snt-museum-desc">In einem venezianischen Herrenhaus beherbergt das Kulturzentrum wechselnde Kunstausstellungen, Konzerte und Theateraufführungen. Auch historische Dokumente über die Eruption von 1956 sind ausgestellt.</p>
+          <p class="snt-museum-hours">⏰ Mai–Sep tägl. 10:30–16:00 &amp; 17:00–20:00 Uhr · Eintritt: 3 €</p>
+        </div>
+      </div>
+
+      <div class="snt-museum-card">
+        <div class="snt-museum-icon">🍷</div>
+        <div>
+          <p class="snt-museum-type">Weinmuseum &amp; Weingut</p>
+          <h3 class="snt-museum-name">Santo Wines &amp; Weinmuseum</h3>
+          <p class="snt-museum-desc">Ein unterirdisches Museum erklärt die einzigartige Weinkultur Santorins. Danach: Verkostung des berühmten Assyrtiko-Weins mit Panoramablick auf die Caldera. Die Reben wachsen in spiralförmigen Körben — einzigartig weltweit.</p>
+          <p class="snt-museum-hours">⏰ Tägl. 9:00–20:00 Uhr · Museumseintritt: 5 €</p>
+        </div>
+      </div>
+
+      <div class="snt-museum-card">
+        <div class="snt-museum-icon">🏛</div>
+        <div>
+          <p class="snt-museum-type">Archäologische Stätte</p>
+          <h3 class="snt-museum-name">Ausgrabungsstätte Akrotiri</h3>
+          <p class="snt-museum-desc">Das „Pompeji der Ägäis" — eine minoische Bronzezeitsiedlung, perfekt unter Vulkanasche konserviert. Mehrstöckige Häuser, Freskenfragmente und ein beeindruckendes modernes Schutzdach über dem ganzen Komplex.</p>
+          <p class="snt-museum-hours">⏰ Di–So 8:00–15:30 Uhr · Eintritt: 12 €</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. ANDERE SEHENSWÜRDIGKEITEN -->
+  <section class="snt-section">
+    <div class="snt-section-head">
+      <p class="snt-section-label">05 — Weitere Sehenswürdigkeiten</p>
+      <h2 class="snt-section-title">Unvergessliche<br><em>Erlebnisse &amp; Orte</em></h2>
+      <div class="snt-divider"></div>
+    </div>
+    <div class="snt-sights-grid">
+
+      <div class="snt-sight-card">
+        <div class="snt-sight-emoji">🔵</div>
+        <p class="snt-sight-cat">Kirche</p>
+        <h3 class="snt-sight-name">Blaue Kuppeln von Oia</h3>
+        <p class="snt-sight-desc">Die ikonischen blauen Kuppelkirchen — insbesondere die Anastasi-Kirche — sind das Symbol Santorins. Früh morgens bei weichem Licht fotografieren für das beste Erlebnis.</p>
+      </div>
+
+      <div class="snt-sight-card">
+        <div class="snt-sight-emoji">⛩️</div>
+        <p class="snt-sight-cat">Antike Stätte</p>
+        <h3 class="snt-sight-name">Antike Stadt Thíra</h3>
+        <p class="snt-sight-desc">Hoch oben auf dem Mesa Vouno-Felsen: eine gut erhaltene antike Stadt aus dorischer, ptolemäischer und byzantinischer Zeit. Tempel, Theater und atemberaubende Ausblicke.</p>
+      </div>
+
+      <div class="snt-sight-card">
+        <div class="snt-sight-emoji">🌅</div>
+        <p class="snt-sight-cat">Naturerlebnis</p>
+        <h3 class="snt-sight-name">Sonnenuntergang in Oia</h3>
+        <p class="snt-sight-desc">Einer der berühmtesten Sonnenuntergänge der Welt. Der Kastro-Bereich und die Windmühlen von Oia füllen sich täglich mit Hunderten. Kommen Sie eine Stunde früher für einen guten Platz.</p>
+      </div>
+
+      <div class="snt-sight-card">
+        <div class="snt-sight-emoji">🚡</div>
+        <p class="snt-sight-cat">Transport-Erlebnis</p>
+        <h3 class="snt-sight-name">Seilbahn Fira – Hafen</h3>
+        <p class="snt-sight-desc">Die Seilbahn verbindet Fira mit dem alten Hafen Skala. Alternativ: der malerische Eselweg. Unten im Hafen laden Cafés zum Verweilen ein, während Kreuzfahrtschiffe ankern.</p>
+      </div>
+
+      <div class="snt-sight-card">
+        <div class="snt-sight-emoji">🏊</div>
+        <p class="snt-sight-cat">Strand</p>
+        <h3 class="snt-sight-name">Roter Strand Kokkini Paralia</h3>
+        <p class="snt-sight-desc">Ein außergewöhnlicher Strand mit leuchtend rotem Vulkangestein und tiefdunkelblauem Wasser. In der Nähe von Akrotiri — eine der geologisch faszinierendsten Kulissen der Ägäis.</p>
+      </div>
+
+      <div class="snt-sight-card">
+        <div class="snt-sight-emoji">🌿</div>
+        <p class="snt-sight-cat">Wandern</p>
+        <h3 class="snt-sight-name">Caldera-Wanderweg Fira–Oia</h3>
+        <p class="snt-sight-desc">Der 10 km lange Wanderweg entlang der Caldera-Kante ist einer der schönsten Wanderwege Griechenlands. Vorbei an Imerovígli und Skaros — 3–4 Stunden reine Schönheit.</p>
+      </div>
+
+      <div class="snt-sight-card">
+        <div class="snt-sight-emoji">⛵</div>
+        <p class="snt-sight-cat">Bootsfahrt</p>
+        <h3 class="snt-sight-name">Caldera-Bootsfahrt</h3>
+        <p class="snt-sight-desc">Segeln oder Katamaran-Touren rund um die Caldera — mit Stopp am Vulkan Néa Kaméni, in den heißen Quellen von Palaia Kaméni und Schwimmen in traumhaften Buchten.</p>
+      </div>
+
+      <div class="snt-sight-card">
+        <div class="snt-sight-emoji">🍇</div>
+        <p class="snt-sight-cat">Weinerlebnis</p>
+        <h3 class="snt-sight-name">Weingutsbesuche</h3>
+        <p class="snt-sight-desc">Estate Argyros, Gavalas Winery und Domaine Sigalas — die Weingüter Santorins bieten Führungen und Verkostungen des weltbekannten Assyrtiko-Weins auf ursprünglichen Bimssteinböden.</p>
+      </div>
+
+      <div class="snt-sight-card">
+        <div class="snt-sight-emoji">🌊</div>
+        <p class="snt-sight-cat">Naturphänomen</p>
+        <h3 class="snt-sight-name">Schwarze Strände</h3>
+        <p class="snt-sight-desc">Perissa, Perivolos und Kamari — die schwarzen Vulkansandstrände Santorins sind einzigartig. Tauchen und Schnorcheln offenbaren eine reiche Unterwasserwelt in kristallklarem Wasser.</p>
+      </div>
+
+    </div>
+  </section>
+
+</div><!-- end .snt-content -->
+</div><!-- end #santorini-page -->

@@ -1,0 +1,45 @@
+/* =============================================
+   NAV — Fixierte Navigation mit Scroll-Effekt
+   ============================================= */
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 1.5rem 4rem;
+  display: flex; justify-content: space-between; align-items: center;
+  background: transparent;
+  transition: background 0.4s, padding 0.4s;
+}
+nav.scrolled {
+  background: rgba(250, 248, 244, 0.95);
+  padding: 1rem 4rem;
+  border-bottom: 1px solid rgba(200,180,140,0.3);
+  backdrop-filter: blur(8px);
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  transition: color 0.4s;
+}
+nav.scrolled .nav-logo { color: var(--deep); }
+
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(255,255,255,0.85);
+  transition: color 0.3s;
+}
+nav.scrolled .nav-links a { color: var(--deep); }
+.nav-links a:hover { color: var(--gold); }
+
+@media (max-width: 900px) {
+  nav         { padding: 1rem 2rem; }
+  nav.scrolled{ padding: 0.8rem 2rem; }
+  .nav-links  { display: none; }
+}

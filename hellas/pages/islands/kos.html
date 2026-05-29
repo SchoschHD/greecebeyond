@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="kos.css" />
+</head>
+<body>
+<div id="kos-page">
+
+<div class="ks-back-bar">
+  <button class="ks-back-btn" onclick="closeKos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ks-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Kos</span></p>
+</div>
+
+<div class="ks-hero">
+  <div class="ks-hero-bg"></div>
+  <div class="ks-hero-dots"></div>
+  <!-- Plane tree + Asklepion silhouette -->
+  <svg class="ks-hero-silhouette" viewBox="0 0 820 170" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Hippocrates Plane Tree (left) -->
+    <rect x="60" y="110" width="18" height="60"/>
+    <ellipse cx="69" cy="85" rx="55" ry="45"/>
+    <ellipse cx="42" cy="100" rx="30" ry="25"/>
+    <ellipse cx="96" cy="98" rx="35" ry="28"/>
+    <!-- Castle of the Knights (right of center) -->
+    <rect x="520" y="90" width="200" height="60"/>
+    <rect x="515" y="76" width="210" height="16"/>
+    <rect x="518" y="60" width="18" height="18"/>
+    <rect x="546" y="60" width="18" height="18"/>
+    <rect x="574" y="60" width="18" height="18"/>
+    <rect x="630" y="60" width="18" height="18"/>
+    <rect x="658" y="60" width="18" height="18"/>
+    <rect x="686" y="60" width="18" height="18"/>
+    <rect x="705" y="60" width="18" height="18"/>
+    <!-- Tower left -->
+    <rect x="510" y="50" width="40" height="90"/>
+    <rect x="505" y="38" width="50" height="14"/>
+    <rect x="508" y="24" width="14" height="16"/>
+    <rect x="532" y="24" width="14" height="16"/>
+    <!-- Tower right -->
+    <rect x="690" y="50" width="40" height="90"/>
+    <rect x="685" y="38" width="50" height="14"/>
+    <rect x="688" y="24" width="14" height="16"/>
+    <rect x="712" y="24" width="14" height="16"/>
+    <!-- Sea gentle waves -->
+    <path d="M0,160 Q205,148 410,155 Q615,162 820,150 L820,170 L0,170Z" opacity="0.3"/>
+    <!-- Asklepion terrace (far right) -->
+    <rect x="300" y="108" width="160" height="8"/>
+    <rect x="314" y="78" width="12" height="30"/>
+    <rect x="334" y="78" width="12" height="30"/>
+    <rect x="354" y="78" width="12" height="30"/>
+    <rect x="374" y="78" width="12" height="30"/>
+    <rect x="394" y="78" width="12" height="30"/>
+    <rect x="300" y="70" width="160" height="10"/>
+    <polygon points="292,70 468,70 380,44"/>
+  </svg>
+  <div class="ks-hero-overlay"></div>
+  <div class="ks-hero-content">
+    <p class="ks-hero-tag">Dodekanes · Südliche Ägäis</p>
+    <h1 class="ks-hero-title">Kos<em>Κως</em></h1>
+    <p class="ks-hero-sub">Geburtsort des Hippokrates, Insel des Lichts und des türkisblauen Meeres — Kos vereint das Erbe des Vaters der Medizin mit mittelalterlichen Ritterfestungen, antiken Tempelanlagen und einigen der schönsten Strände des Ägäischen Meeres.</p>
+    <div class="ks-hero-pills">
+      <span class="ks-hero-pill">Hippokrates</span>
+      <span class="ks-hero-pill">Antike</span>
+      <span class="ks-hero-pill">Johanniter</span>
+      <span class="ks-hero-pill">Strände</span>
+      <span class="ks-hero-pill">Fahrrad</span>
+    </div>
+  </div>
+  <div class="ks-hero-waves"></div>
+</div>
+
+<div class="ks-stats-bar">
+  <div class="ks-stat-item">
+    <div class="ks-stat-num">33.000</div>
+    <div class="ks-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ks-stat-item">
+    <div class="ks-stat-num">460 v. Chr.</div>
+    <div class="ks-stat-lbl">Hippokrates geboren</div>
+  </div>
+  <div class="ks-stat-item">
+    <div class="ks-stat-num">290 km²</div>
+    <div class="ks-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="ks-stat-item">
+    <div class="ks-stat-num">50+</div>
+    <div class="ks-stat-lbl">Strände</div>
+  </div>
+  <div class="ks-stat-item">
+    <div class="ks-stat-num">#1</div>
+    <div class="ks-stat-lbl">Fahrradinsel Griechenlands</div>
+  </div>
+</div>
+
+<div class="ks-content">
+
+  <section class="ks-section">
+    <div class="ks-section-head">
+      <p class="ks-section-label">01 — Geschichte</p>
+      <h2 class="ks-section-title">Wiege der Medizin,<br><em>Kreuzweg der Kulturen</em></h2>
+      <div class="ks-divider"></div>
+    </div>
+    <div class="ks-history-grid">
+      <div class="ks-history-text">
+        <p>Kos ist einer der ältesten bewohnten Orte der Ägäis — die mykenische Besiedlung reicht ins zweite Jahrtausend vor Christus zurück. Berühmt wurde die Insel jedoch durch einen Mann: Hippokrates, geboren um 460 v. Chr. auf Kos, gilt als Vater der westlichen Medizin. Er löste das Heilen vom Aberglauben und begründete die empirische Beobachtung als Grundlage ärztlicher Kunst. Der hippokratische Eid, den Ärzte noch heute ablegen, trägt seinen Namen.</p>
+        <p>Das Asklepieion — der Tempel- und Heilkomplex außerhalb der Stadt — war in der Antike eines der berühmtesten Heilzentren der Welt. Patienten kamen aus dem gesamten Mittelmeerraum. Nach der Blütezeit als hellenistische und dann römische Stadt folgten Byzantiner, Johanniterritter und Osmanen — all ihre Schichten sind noch sichtbar.</p>
+        <p>Kos-Stadt wurde 1933 durch ein schweres Erdbeben zerstört — die Italiener, die damals die Insel verwalteten, legten bei den Ausgrabungen danach unbeabsichtigt die gesamte antike Unterstadt frei. Heute flaniert man durch Ruinen, die mitten in der modernen Stadt liegen.</p>
+      </div>
+      <div class="ks-timeline">
+        <div class="ks-tl-item">
+          <div class="ks-tl-dot"></div>
+          <div class="ks-tl-year">1600 v. Chr.</div>
+          <div class="ks-tl-event">Mykenische Besiedlung der Insel. Kos gehört zum ägäischen Handelsnetz der Bronzezeit — Kontakte bis nach Ägypten sind nachgewiesen.</div>
+        </div>
+        <div class="ks-tl-item">
+          <div class="ks-tl-dot"></div>
+          <div class="ks-tl-year">460 v. Chr.</div>
+          <div class="ks-tl-event">Geburt des Hippokrates auf Kos — Begründer der rationalen Medizin, der Diagnose und der ärztlichen Ethik. Der hippokratische Eid gilt bis heute.</div>
+        </div>
+        <div class="ks-tl-item">
+          <div class="ks-tl-dot"></div>
+          <div class="ks-tl-year">366 v. Chr.</div>
+          <div class="ks-tl-event">Neugründung der Stadt Kos nach einem Erdbeben — nach Hippodamos-Plan, als eine der modernsten Städte der Antike. Bau des Asklepieions.</div>
+        </div>
+        <div class="ks-tl-item">
+          <div class="ks-tl-dot"></div>
+          <div class="ks-tl-year">1315</div>
+          <div class="ks-tl-event">Johanniterritter übernehmen die Insel und bauen die Burg von Kos zum stärksten Hafen-Kastell des Dodekanes aus.</div>
+        </div>
+        <div class="ks-tl-item">
+          <div class="ks-tl-dot"></div>
+          <div class="ks-tl-year">1933</div>
+          <div class="ks-tl-event">Verheerendes Erdbeben zerstört die Stadt. Bei den Aufräumarbeiten legen die Italiener zufällig das vollständige antike Stadtzentrum frei — eine der größten Zufallsentdeckungen der Archäologie.</div>
+        </div>
+        <div class="ks-tl-item">
+          <div class="ks-tl-dot"></div>
+          <div class="ks-tl-year">1947</div>
+          <div class="ks-tl-event">Anschluss an Griechenland zusammen mit dem gesamten Dodekanes. Ende der 35-jährigen italienischen Verwaltung.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ks-section">
+    <div class="ks-section-head">
+      <p class="ks-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ks-section-title">Hippokrates-Baum<br><em>bis Asklepios-Tempel</em></h2>
+      <div class="ks-divider"></div>
+    </div>
+    <div class="ks-sights-grid">
+
+      <div class="ks-sight-card">
+        <div class="ks-sight-visual sv-ks-plane-tree"></div>
+        <div class="ks-sight-body">
+          <p class="ks-sight-cat">Wahrzeichen · Legende</p>
+          <h3 class="ks-sight-name">Hippokrates-Platane</h3>
+          <p class="ks-sight-desc">Die angeblich älteste Platane Europas — unter diesem Baum soll Hippokrates seinen Schülern Medizin gelehrt haben. Der über 500 Jahre alte Baum am Hippokrates-Platz ist heute mit Eisenstützen gehalten, aber lebendig.</p>
+        </div>
+      </div>
+
+      <div class="ks-sight-card">
+        <div class="ks-sight-visual sv-ks-castle"></div>
+        <div class="ks-sight-body">
+          <p class="ks-sight-cat">Ritter · Festung</p>
+          <h3 class="ks-sight-name">Burg der Johanniter</h3>
+          <p class="ks-sight-desc">Das mächtige Kastell direkt am Hafen, erbaut vom 14. bis 16. Jahrhundert — Zugbrücke, doppelte Mauern, imposante Bastionen. Direkt von der Hafenpromenade zu betreten, innen ein begehbares Museum.</p>
+        </div>
+      </div>
+
+      <div class="ks-sight-card">
+        <div class="ks-sight-visual sv-ks-asklepion"></div>
+        <div class="ks-sight-body">
+          <p class="ks-sight-cat">UNESCO · Antike</p>
+          <h3 class="ks-sight-name">Asklepieion</h3>
+          <p class="ks-sight-desc">4 km außerhalb der Stadt auf einer Hügelterrasse mit Blick auf die türkische Küste — der antike Heilkomplex aus dem 4. Jahrhundert v. Chr. mit drei Tempelterrassen, ionischen Säulenhallen und dem Altar des Asklepios.</p>
+        </div>
+      </div>
+
+      <div class="ks-sight-card">
+        <div class="ks-sight-visual sv-ks-agora"></div>
+        <div class="ks-sight-body">
+          <p class="ks-sight-cat">Antike · Ausgrabung</p>
+          <h3 class="ks-sight-name">Antike Agora & Odeion</h3>
+          <p class="ks-sight-desc">Mitten in der Stadt liegt die freigelegte Agora der Antike — das Erdbeben von 1933 machte sie sichtbar. Das wiederaufgebaute Odeion (kleines Theater) aus der römischen Zeit ist noch heute für Veranstaltungen genutzt.</p>
+        </div>
+      </div>
+
+      <div class="ks-sight-card">
+        <div class="ks-sight-visual sv-ks-beach"></div>
+        <div class="ks-sight-body">
+          <p class="ks-sight-cat">Strand · Natur</p>
+          <h3 class="ks-sight-name">Tigaki & Paradise Beach</h3>
+          <p class="ks-sight-desc">Kos hat über 50 Strände — Tigaki an der Nordküste ist der weitläufigste, mit seichtem türkisblauem Wasser. Paradise Beach an der Südküste für Partyatmosphäre, Agios Stefanos für Ruine-plus-Meer-Kombination.</p>
+        </div>
+      </div>
+
+      <div class="ks-sight-card">
+        <div class="ks-sight-visual sv-ks-zia"></div>
+        <div class="ks-sight-body">
+          <p class="ks-sight-cat">Bergdorf · Aussicht</p>
+          <h3 class="ks-sight-name">Zia & Dikeos-Berg</h3>
+          <p class="ks-sight-desc">Das Bergdorf auf halber Höhe des Dikeos — mit dem schönsten Sonnenuntergang der Insel, der türkischen Küste in Sichtweite und traditionellen Tavernen unter Olivenbäumen. 15 Minuten vom Strand in eine andere Welt.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ks-section">
+    <div class="ks-section-head">
+      <p class="ks-section-label">03 — Tavernen & Küche</p>
+      <h2 class="ks-section-title">Frischer Fang<br><em>und ägäische Einfachheit</em></h2>
+      <div class="ks-divider"></div>
+    </div>
+    <div class="ks-tav-grid">
+
+      <div class="ks-tav-card">
+        <div class="ks-tav-top">
+          <div>
+            <h3 class="ks-tav-name">Petrino</h3>
+            <div class="ks-tav-loc">📍 Kos-Stadt, Theologou-Str.</div>
+          </div>
+          <div class="ks-tav-stars">★★★★★</div>
+        </div>
+        <p class="ks-tav-desc">Das schönste Lokal der Inselhauptstadt — in einem alten Steinhaus mit Innenhof, Kerzenbeleuchtung und einer Küche, die die dodekanese Tradition modern interpretiert. Das Geheimtipp-Restaurant der Einheimischen, das kein Geheimtipp mehr ist.</p>
+        <div class="ks-tav-dishes">
+          <span class="ks-tav-dish">Garnelen Saganaki</span>
+          <span class="ks-tav-dish">Gegrillte Meeräsche</span>
+          <span class="ks-tav-dish">Kos-Wein</span>
+        </div>
+        <p class="ks-tav-price">Preisklasse: <span>€€ · Abendessen · Innenhof</span></p>
+      </div>
+
+      <div class="ks-tav-card">
+        <div class="ks-tav-top">
+          <div>
+            <h3 class="ks-tav-name">Taverna Hellas</h3>
+            <div class="ks-tav-loc">📍 Kos-Stadt, Psaropoulos-Str.</div>
+          </div>
+          <div class="ks-tav-stars">★★★★★</div>
+        </div>
+        <p class="ks-tav-desc">Die älteste Taverne der Stadt, seit 1948 in Familienhand — keine Tourists-Kompromisse, kein englisches Menü, kein Blödsinn. Täglich frischer Fisch von den eigenen Booten, Hauswein aus dem Fass, Kellner die schon immer hier waren.</p>
+        <div class="ks-tav-dishes">
+          <span class="ks-tav-dish">Tagesfrischer Fisch</span>
+          <span class="ks-tav-dish">Kakavia (Fischsuppe)</span>
+          <span class="ks-tav-dish">Barrel-Wein</span>
+        </div>
+        <p class="ks-tav-price">Preisklasse: <span>€€ · Mittag & Abend</span></p>
+      </div>
+
+      <div class="ks-tav-card">
+        <div class="ks-tav-top">
+          <div>
+            <h3 class="ks-tav-name">Taverna Zia</h3>
+            <div class="ks-tav-loc">📍 Bergdorf Zia</div>
+          </div>
+          <div class="ks-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ks-tav-desc">Im Bergdorf Zia, mit Sonnenuntergangsblick auf die gesamte Insel und die türkische Küste — Bergküche aus eigenem Garten, Ziegenkäse, Lamm vom Dikeos. Das Spektakel des Sonnenuntergangs ist kostenlos dazu.</p>
+        <div class="ks-tav-dishes">
+          <span class="ks-tav-dish">Ziegenbraten</span>
+          <span class="ks-tav-dish">Horiatiki mit lokalem Käse</span>
+          <span class="ks-tav-dish">Frischer Thymian-Honig</span>
+        </div>
+        <p class="ks-tav-price">Preisklasse: <span>€€ · Sonnenuntergang Pflicht</span></p>
+      </div>
+
+      <div class="ks-tav-card">
+        <div class="ks-tav-top">
+          <div>
+            <h3 class="ks-tav-name">Agios Stefanos (Marmari)</h3>
+            <div class="ks-tav-loc">📍 Strand Agios Stefanos</div>
+          </div>
+          <div class="ks-tav-stars">★★★★★</div>
+        </div>
+        <p class="ks-tav-desc">Am ruhigsten Strand der Insel, direkt neben den versunkenen Ruinen einer frühchristlichen Basilika — Fischerboote, klares Wasser, eine kleine Strandtaverne. Hier isst man gebratene Sardellen mit den Füßen im Sand. Das ist Kos.</p>
+        <div class="ks-tav-dishes">
+          <span class="ks-tav-dish">Gebratene Sardellen</span>
+          <span class="ks-tav-dish">Tzatziki</span>
+          <span class="ks-tav-dish">Eiskaltes Bier</span>
+        </div>
+        <p class="ks-tav-price">Preisklasse: <span>€ · Mittagessen am Strand</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ks-section">
+    <div class="ks-section-head">
+      <p class="ks-section-label">04 — Orte & Charakter</p>
+      <h2 class="ks-section-title">Die Insel<br><em>per Fahrrad erkunden</em></h2>
+      <div class="ks-divider"></div>
+    </div>
+    <div class="ks-viertel-grid">
+
+      <div class="ks-viertel-card">
+        <div class="ks-viertel-emoji">🚲</div>
+        <h3 class="ks-viertel-name">Kos per Rad</h3>
+        <p class="ks-viertel-desc">Die flachste Insel des Dodekanes hat ein 30 km langes Radwegnetz, das Stadt, Strände und Ausgrabungsstätten verbindet. Fahrräder leihen gehört zur Insel wie das Meer selbst — kein Auto nötig.</p>
+      </div>
+
+      <div class="ks-viertel-card">
+        <div class="ks-viertel-emoji">🏙️</div>
+        <h3 class="ks-viertel-name">Kos-Stadt</h3>
+        <p class="ks-viertel-desc">Die Hauptstadt vereint Antike, Mittelalter und Moderne auf engstem Raum — Ritterburg am Hafen, römische Ruinen mitten in Fußgängerzonen, osmanische Moscheen und lebhafte Cafés Seite an Seite.</p>
+      </div>
+
+      <div class="ks-viertel-card">
+        <div class="ks-viertel-emoji">🏖️</div>
+        <h3 class="ks-viertel-name">Südküste</h3>
+        <p class="ks-viertel-desc">Die windigere Südseite der Insel — Paradies für Windsurf und Kitesurf. Kardamena für Partytourismus, Agios Stefanos für Stille und versunkene Basilika-Ruinen direkt im Wasser.</p>
+      </div>
+
+      <div class="ks-viertel-card">
+        <div class="ks-viertel-emoji">🫚</div>
+        <h3 class="ks-viertel-name">Antimachia</h3>
+        <p class="ks-viertel-desc">Das authentischste Dorf der Insel im Inland — mit einer weiteren johannitischen Burg, traditionellen Windmühlen und einem Wochenmarkt, auf dem die Inselbewohner ihre eigenen Produkte verkaufen.</p>
+      </div>
+
+      <div class="ks-viertel-card">
+        <div class="ks-viertel-emoji">⛪</div>
+        <h3 class="ks-viertel-name">Kefalos (Westzipfel)</h3>
+        <p class="ks-viertel-desc">Das alte Hauptdorf am westlichen Ende der Insel — mit der schönsten Bucht von Kos, einer Windmühle auf dem Hügel und dem Gefühl, weit weg von allem zu sein, obwohl man es nicht ist.</p>
+      </div>
+
+      <div class="ks-viertel-card">
+        <div class="ks-viertel-emoji">🇹🇷</div>
+        <h3 class="ks-viertel-name">Bodrum (Tagesausflug)</h3>
+        <p class="ks-viertel-desc">Die türkische Küste ist zum Greifen nah — von Kos-Stadt fährt täglich die Fähre nach Bodrum (ehemals Halikarnassos, Geburtsort Herodots). Ein Tagesausflug in eine andere Kultur, nur 30 Minuten entfernt.</p>
+      </div>
+
+    </div>
+
+    <div class="ks-tip-banner">
+      <div class="ks-tip-emoji">🌿</div>
+      <div class="ks-tip-text">
+        <h3>Primum non nocere — Zuerst nicht schaden</h3>
+        <p>Der hippokratische Grundsatz lässt sich auf das Reisen nach Kos anwenden: Die Insel ist leicht zu überwältigen — mit Ferienkomplexen, Bootspartys, All-Inclusive-Hotels. Wer dem widersteht und früh aufsteht, bekommt das Asklepieion allein, den Hippokrates-Platz im Morgenlicht und das Ägäische Meer in seiner stillen Schönheit. Ein Fahrrad, ein Picknick aus dem Markt, eine Bucht ohne Liegestühle — so funktioniert Kos.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>

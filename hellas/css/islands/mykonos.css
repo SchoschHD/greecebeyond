@@ -1,0 +1,244 @@
+/* =============================================
+   MYKONOS — Styles der Detail-Unterseite
+   ============================================= */
+
+#mykonos-page {
+  font-family: 'Outfit', sans-serif;
+  color: #1c1a17;
+}
+.myk-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(250,248,244,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(200,180,140,0.3);
+}
+.myk-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(26,95,138,0.3);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #1a5f8a; transition: all 0.2s;
+}
+.myk-back-btn:hover { background: #c8e6f5; border-color: #1a5f8a; }
+.myk-back-btn svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.myk-breadcrumb { font-size: 0.8rem; color: #8a7d6e; letter-spacing: 0.05em; }
+.myk-breadcrumb span { color: #1a5f8a; }
+
+.myk-hero {
+  height: 80vh; min-height: 520px;
+  background: linear-gradient(160deg, #1a2a4a 0%, #e8dcc8 35%, #c8e6f5 65%, #1a5f8a 100%);
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.myk-hero-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+.myk-hero-glow {
+  position: absolute;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: rgba(200,230,245,0.15);
+  top: -80px; right: -80px;
+}
+.myk-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: rgba(255,255,255,0.55);
+  margin-bottom: 1.2rem; position: relative; z-index: 2;
+}
+.myk-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 300; line-height: 0.9;
+  color: white; margin-bottom: 1.5rem; position: relative; z-index: 2;
+}
+.myk-hero-title em { font-style: italic; display: block; color: #c8e6f5; }
+.myk-hero-sub {
+  max-width: 540px; font-size: 1rem;
+  color: rgba(255,255,255,0.75); line-height: 1.75;
+  font-weight: 300; margin-bottom: 2.5rem; position: relative; z-index: 2;
+}
+.myk-hero-pills {
+  display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; position: relative; z-index: 2;
+}
+.myk-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.85);
+}
+.myk-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23faf8f4' fill-opacity='1' d='M0,64L60,58.7C120,53,240,43,360,48C480,53,600,75,720,80C840,85,960,75,1080,64C1200,53,1320,43,1380,37.3L1440,32L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+
+.myk-stats-bar {
+  display: flex; justify-content: center; gap: 0;
+  background: white;
+  border-bottom: 1px solid rgba(200,180,140,0.25);
+}
+.myk-stat-item {
+  flex: 1; max-width: 200px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(200,180,140,0.2);
+}
+.myk-stat-item:last-child { border-right: none; }
+.myk-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600;
+  color: #1a5f8a; line-height: 1;
+}
+.myk-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #8a7d6e; margin-top: 0.3rem;
+}
+
+.myk-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.myk-section { padding: 4rem 0 2rem; }
+.myk-section-head { margin-bottom: 2.5rem; }
+.myk-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #1a5f8a; margin-bottom: 0.8rem;
+}
+.myk-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300; color: #0d2e42; line-height: 1.15;
+}
+.myk-section-title em { font-style: italic; color: #1a5f8a; }
+.myk-divider {
+  width: 40px; height: 2px; background: #1a5f8a; margin-top: 1.2rem;
+}
+
+/* ── HISTORY ── */
+.myk-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.myk-history-text p {
+  font-size: 1rem; line-height: 1.9; color: #4a4038;
+  font-weight: 300; margin-bottom: 1.2rem;
+}
+.myk-timeline { position: relative; padding-left: 2rem; }
+.myk-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(26,95,138,0.2);
+}
+.myk-tl-item { position: relative; margin-bottom: 1.8rem; }
+.myk-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: white; border: 2px solid #1a5f8a;
+}
+.myk-tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 600; color: #1a5f8a;
+  margin-bottom: 0.25rem;
+}
+.myk-tl-event {
+  font-size: 0.88rem; color: #4a4038; line-height: 1.6; font-weight: 300;
+}
+
+/* ── ORTE ── */
+.myk-orte-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+}
+.myk-ort-card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid rgba(200,180,140,0.25);
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: white;
+}
+.myk-ort-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(13,46,66,0.1); }
+.myk-ort-visual { height: 160px; position: relative; overflow: hidden; }
+.myk-ort-body { padding: 1.2rem; }
+.myk-ort-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300; color: #0d2e42; margin-bottom: 0.4rem;
+}
+.myk-ort-desc { font-size: 0.83rem; color: #6a5e50; line-height: 1.65; font-weight: 300; }
+.myk-ort-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.8rem; }
+.myk-ort-tag {
+  padding: 3px 10px; background: #c8e6f5; color: #0d2e42;
+  border-radius: 20px; font-size: 0.66rem; letter-spacing: 0.1em;
+}
+.ort-chora { background: linear-gradient(160deg, #e8dcc8 0%, #c8e6f5 50%, #1a5f8a 100%); }
+.ort-windmuehlen { background: linear-gradient(160deg, #f5f0e8 0%, #c8e6f5 40%, #2980b9 100%); }
+.ort-little-venice { background: linear-gradient(160deg, #1a3a6a 0%, #2980b9 50%, #e8dcc8 100%); }
+.ort-delos { background: linear-gradient(160deg, #5a3a1a 0%, #c9933a 60%, #e8dcc8 100%); }
+.ort-paradise { background: linear-gradient(160deg, #0d3a5c 0%, #1a8aaa 50%, #56ccf2 100%); }
+.ort-ano-mera { background: linear-gradient(160deg, #2d4a20 0%, #5a8a4a 50%, #c8e6f5 100%); }
+
+/* ── TAVERNEN ── */
+.myk-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.myk-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(200,180,140,0.25); border-radius: 4px; border-left: 3px solid #1a5f8a;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.myk-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(13,46,66,0.08); }
+.myk-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.myk-tav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300; color: #0d2e42;
+}
+.myk-tav-loc { font-size: 0.75rem; color: #8a7d6e; margin-top: 0.2rem; }
+.myk-tav-stars { color: #c9933a; font-size: 0.85rem; letter-spacing: 2px; }
+.myk-tav-desc { font-size: 0.88rem; color: #4a4038; line-height: 1.75; font-weight: 300; margin-bottom: 1rem; }
+.myk-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.myk-tav-dish {
+  padding: 3px 10px; background: #f5f0e8; color: #4a4038;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+}
+.myk-tav-price { font-size: 0.8rem; color: #8a7d6e; }
+.myk-tav-price span { color: #1a5f8a; font-weight: 500; }
+
+/* ── MUSEEN ── */
+.myk-museum-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.myk-museum-card {
+  display: flex; gap: 1.2rem;
+  padding: 1.6rem; background: white;
+  border: 1px solid rgba(200,180,140,0.25); border-radius: 4px;
+  transition: box-shadow 0.3s;
+}
+.myk-museum-card:hover { box-shadow: 0 8px 30px rgba(13,46,66,0.1); }
+.myk-museum-icon {
+  font-size: 2rem; flex-shrink: 0;
+  width: 52px; height: 52px;
+  background: #c8e6f5; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.myk-museum-type {
+  font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: #1a5f8a; margin-bottom: 0.3rem;
+}
+.myk-museum-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; font-weight: 300; color: #0d2e42; margin-bottom: 0.5rem;
+}
+.myk-museum-desc { font-size: 0.83rem; color: #4a4038; line-height: 1.65; font-weight: 300; }
+.myk-museum-hours { font-size: 0.75rem; color: #8a7d6e; margin-top: 0.6rem; }
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.myk-sights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.myk-sight-card {
+  padding: 1.8rem; background: var(--cream, #f5f0e8);
+  border-radius: 4px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.myk-sight-card:hover { background: #e8dcc8; transform: translateY(-4px); }
+.myk-sight-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.myk-sight-cat {
+  font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: #1a5f8a; margin-bottom: 0.4rem;
+}
+.myk-sight-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem; font-weight: 300; color: #0d2e42; margin-bottom: 0.5rem;
+}
+.myk-sight-desc { font-size: 0.82rem; color: #6a5e50; line-height: 1.65; font-weight: 300; }
+</style>

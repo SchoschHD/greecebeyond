@@ -1,0 +1,32 @@
+/* =============================================
+   BASE — Reset · Variablen · Grundstyles
+  Diese Datei setzt das Grundlayout für die ganze Seite:
+  Abstände zurücksetzen, Farben definieren und die globale Schrift festlegen.
+   ============================================= */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --azure:      #1a5f8a;
+  --deep:       #0d2e42;
+  --sky:        #c8e6f5;
+  --cream:      #f5f0e8;
+  --sand:       #e8dcc8;
+  --terracotta: #c4622d;
+  --gold:       #c9933a;
+  --white:      #faf8f4;
+  --ink:        #1c1a17;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--white);
+  color: var(--ink);
+  overflow-x: hidden;
+}

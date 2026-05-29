@@ -1,0 +1,79 @@
+/* =============================================
+   ATHENS — Stadt-Unterseite (Athen / Αθήνα)
+   Akzentfarbe: Terrakotta / Klassisch
+   ============================================= */
+
+#athens-page {
+  font-family: 'Outfit', sans-serif;
+  color: #1c1a17;
+}
+
+/* ── BACK BAR ── */
+.ath-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(250,248,244,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(200,180,140,0.3);
+}
+.ath-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(180,90,40,0.4);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #a5582b; transition: all 0.2s;
+}
+.ath-back-btn:hover { background: #fff0e6; border-color: #a5582b; }
+.ath-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.ath-breadcrumb { font-size: 0.8rem; color: #8a7d6e; letter-spacing: 0.05em; }
+.ath-breadcrumb span { color: #a5582b; }
+
+/* ── HERO ── */
+.ath-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.ath-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, #3d2b1f 0%, #7b4f2e 40%, #c9933a 100%);
+}
+.ath-hero-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(ellipse 60% 50% at 50% 60%, rgba(201,147,58,0.2) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 20% 30%, rgba(90,42,10,0.3) 0%, transparent 70%);
+}
+.ath-hero-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+.ath-hero-overlay { position: absolute; inset: 0; background: rgba(15,10,25,0.55); }
+.ath-hero-waves { position: absolute; bottom: 0; left: 0; right: 0; height: 120px; }
+.ath-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.ath-hero-tag { font-size: 0.68rem; letter-spacing: 0.4em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 1.2rem; }
+.ath-hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(4rem, 9vw, 8rem); font-weight: 300; line-height: 0.9; margin-bottom: 1.5rem; }
+.ath-hero-title em { font-style: italic; display: block; color: #f5dca0; }
+.ath-hero-sub { max-width: 560px; font-size: 1rem; margin: 0 auto 2.5rem; color: rgba(255,255,255,0.72); line-height: 1.75; font-weight: 300; }
+.ath-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.ath-hero-pill { padding: 5px 16px; border: 1px solid rgba(255,255,255,0.28); border-radius: 30px; font-size: 0.72rem; letter-spacing: 0.12em; color: rgba(255,255,255,0.85); }
+
+/* Basic content styles (kept concise) */
+.ath-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.ath-section { padding: 4rem 0 2rem; }
+.ath-section-title { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 300; color: #0d2e42; }
+
+@media (max-width: 900px) {
+  .ath-back-bar { padding: 0.8rem 1.2rem; }
+  .ath-content { padding: 2rem 1.2rem 4rem; }
+}
