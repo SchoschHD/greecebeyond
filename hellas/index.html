@@ -952,7 +952,9 @@
     const res = await fetch('pages/' + file);
     const text = await res.text();
     const bodyMatch = text.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
-    container.innerHTML = bodyMatch ? bodyMatch[1] : text;
+    let content = bodyMatch ? bodyMatch[1] : text;
+    const wrapperMatch = content.match(/^\s*<div\s+id=["']([^"']+)["'][^>]*>([\s\S]*)<\/div>\s*$/i);
+    container.innerHTML = wrapperMatch ? wrapperMatch[2] : content;
   }
 
   function openSantorini() {
