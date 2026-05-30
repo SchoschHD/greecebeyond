@@ -40,3 +40,6 @@ function closeNaxos() { closePage('naxos-page'); }
 
 function openParos() { openPage('paros-page'); }
 function closeParos() { closePage('paros-page'); }
+
+function openSifnos() { openPage('sifnos-page'); }
+function closeSifnos() { closePage('sifnos-page'); }
