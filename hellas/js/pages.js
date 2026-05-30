@@ -34,3 +34,9 @@ function closeSantorini() { closePage('santorini-page'); }
 
 function openMykonos() { openPage('mykonos-page'); }
 function closeMykonos() { closePage('mykonos-page'); }
+
+function openNaxos() { openPage('naxos-page'); }
+function closeNaxos() { closePage('naxos-page'); }
+
+function openParos() { openPage('paros-page'); }
+function closeParos() { closePage('paros-page'); }

@@ -1,0 +1,257 @@
+/* =============================================
+   NAXOS — Insel-Unterseite
+   Akzentfarbe: Marmor-Ocker / Kykladen-Bernstein
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#naxos-page {
+  font-family: 'Outfit', sans-serif;
+  color: #1c1810;
+  background: #faf8f2;
+}
+
+/* ── BACK BAR ── */
+.nx-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(250,248,242,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(184,120,10,0.2);
+}
+.nx-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(184,120,10,0.38);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #9a6008; transition: all 0.2s;
+}
+.nx-back-btn:hover { background: #fdf0d8; border-color: #9a6008; }
+.nx-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.nx-breadcrumb { font-size: 0.8rem; color: #8a8070; letter-spacing: 0.05em; }
+.nx-breadcrumb span { color: #9a6008; }
+
+/* ── HERO ── */
+.nx-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.nx-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, #100c04 0%, #2a1c08 22%, #6a4010 48%, #b87820 70%, #e8c870 100%);
+}
+.nx-hero-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(ellipse 65% 55% at 50% 65%, rgba(184,120,32,0.22) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 78% 18%, rgba(106,64,16,0.32) 0%, transparent 65%);
+}
+.nx-hero-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+.nx-hero-silhouette {
+  position: absolute; bottom: 108px; left: 50%; transform: translateX(-50%);
+  width: 840px; height: 175px;
+  opacity: 0.10;
+}
+.nx-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(14,10,2,0.52);
+}
+.nx-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23faf8f2' fill-opacity='1' d='M0,64L60,58.7C120,53,240,43,360,48C480,53,600,75,720,80C840,85,960,75,1080,64C1200,53,1320,43,1380,37.3L1440,32L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.nx-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.nx-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: rgba(255,255,255,0.48);
+  margin-bottom: 1.2rem;
+}
+.nx-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 300; line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+.nx-hero-title em { font-style: italic; display: block; color: #f0d898; }
+.nx-hero-sub {
+  max-width: 570px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(255,255,255,0.68); line-height: 1.75; font-weight: 300;
+}
+.nx-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.nx-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.80);
+}
+
+/* ── STATS BAR ── */
+.nx-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(184,120,10,0.14);
+}
+.nx-stat-item {
+  flex: 1; max-width: 200px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(184,120,10,0.1);
+}
+.nx-stat-item:last-child { border-right: none; }
+.nx-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: #9a6008; line-height: 1;
+}
+.nx-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #8a8070; margin-top: 0.3rem;
+}
+
+/* ── CONTENT ── */
+.nx-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.nx-section { padding: 4rem 0 2rem; }
+.nx-section-head { margin-bottom: 2.5rem; }
+.nx-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #9a6008; margin-bottom: 0.8rem;
+}
+.nx-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300; color: #201408; line-height: 1.15;
+}
+.nx-section-title em { font-style: italic; color: #9a6008; }
+.nx-divider { width: 40px; height: 2px; background: #9a6008; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.nx-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.nx-history-text p {
+  font-size: 1rem; line-height: 1.9; color: #3a3020;
+  font-weight: 300; margin-bottom: 1.2rem;
+}
+.nx-timeline { position: relative; padding-left: 2rem; }
+.nx-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(154,96,8,0.22);
+}
+.nx-tl-item { position: relative; margin-bottom: 1.8rem; }
+.nx-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: white; border: 2px solid #9a6008;
+}
+.nx-tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 600; color: #9a6008; margin-bottom: 0.25rem;
+}
+.nx-tl-event { font-size: 0.88rem; color: #3a3020; line-height: 1.6; font-weight: 300; }
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.nx-sights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.nx-sight-card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid rgba(184,120,10,0.18);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.nx-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(32,20,8,0.1); }
+.nx-sight-visual { height: 140px; }
+.nx-sight-body { padding: 1.2rem; }
+.nx-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #9a6008; margin-bottom: 0.35rem;
+}
+.nx-sight-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 300; color: #201408; margin-bottom: 0.4rem;
+}
+.nx-sight-desc { font-size: 0.83rem; color: #5a5040; line-height: 1.65; font-weight: 300; }
+
+.sv-nx-portara   { background: linear-gradient(160deg, #080c18 0%, #183060 55%, #70a0e0 100%); }
+.sv-nx-chora     { background: linear-gradient(160deg, #181008 0%, #584020 55%, #e0b870 100%); }
+.sv-nx-marble    { background: linear-gradient(160deg, #181818 0%, #606060 55%, #e8e8e8 100%); }
+.sv-nx-temple    { background: linear-gradient(160deg, #101808 0%, #304820 55%, #98c060 100%); }
+.sv-nx-beach     { background: linear-gradient(160deg, #081018 0%, #105880 55%, #48c0e0 100%); }
+.sv-nx-halki     { background: linear-gradient(160deg, #180e08 0%, #503820 55%, #c89060 100%); }
+
+/* ── TAVERNEN ── */
+.nx-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.nx-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(184,120,10,0.18);
+  border-radius: 4px; border-left: 3px solid #9a6008;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.nx-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(32,20,8,0.08); }
+.nx-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.nx-tav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300; color: #201408;
+}
+.nx-tav-loc { font-size: 0.75rem; color: #8a8070; margin-top: 0.2rem; }
+.nx-tav-stars { color: #9a6008; font-size: 0.85rem; letter-spacing: 2px; }
+.nx-tav-desc { font-size: 0.88rem; color: #3a3020; line-height: 1.75; font-weight: 300; margin-bottom: 1rem; }
+.nx-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.nx-tav-dish {
+  padding: 3px 10px; background: #fdf0d8; color: #3a2008;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+}
+.nx-tav-price { font-size: 0.8rem; color: #8a8070; }
+.nx-tav-price span { color: #9a6008; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.nx-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.nx-viertel-card {
+  padding: 1.8rem; background: #fdf5e0;
+  border-radius: 4px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.nx-viertel-card:hover { background: #fae8b8; transform: translateY(-4px); }
+.nx-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.nx-viertel-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300; color: #201408; margin-bottom: 0.5rem;
+}
+.nx-viertel-desc { font-size: 0.82rem; color: #5a5040; line-height: 1.65; font-weight: 300; }
+
+/* ── TIP BANNER ── */
+.nx-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #100c04 0%, #3a2008 40%, #9a6008 100%);
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.nx-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.nx-tip-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300; color: white; margin-bottom: 0.6rem;
+}
+.nx-tip-text p {
+  font-size: 0.92rem; color: rgba(255,255,255,0.70); line-height: 1.75; font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .nx-back-bar { padding: 0.8rem 1.2rem; }
+  .nx-content { padding: 2rem 1.2rem 4rem; }
+  .nx-history-grid { grid-template-columns: 1fr; }
+  .nx-sights-grid { grid-template-columns: 1fr 1fr; }
+  .nx-tav-grid { grid-template-columns: 1fr; }
+  .nx-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .nx-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+}

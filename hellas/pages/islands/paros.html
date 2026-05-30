@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paros — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="paros.css" />
+</head>
+<body>
+<div id="paros-page">
+
+<div class="pr-back-bar">
+  <button class="pr-back-btn" type="button" onclick="closeParos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="pr-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Paros</span></p>
+</div>
+
+<div class="pr-hero">
+  <div class="pr-hero-bg"></div>
+  <div class="pr-hero-dots"></div>
+  <!-- Naoussa harbour + windmill + Ekatontapyliani silhouette -->
+  <svg class="pr-hero-silhouette" viewBox="0 0 840 170" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sea and harbour -->
+    <path d="M0,170 Q210,155 420,162 Q630,168 840,155 L840,170Z" opacity="0.3"/>
+    <!-- Naoussa harbour wall -->
+    <rect x="40" y="120" width="300" height="14" rx="2"/>
+    <rect x="40" y="108" width="16" height="14"/>
+    <rect x="66" y="108" width="16" height="14"/>
+    <rect x="92" y="108" width="16" height="14"/>
+    <rect x="320" y="108" width="16" height="14"/>
+    <!-- Venetian castle ruin in sea -->
+    <rect x="150" y="80" width="60" height="44"/>
+    <rect x="145" y="68" width="70" height="14"/>
+    <rect x="148" y="54" width="16" height="16"/>
+    <rect x="175" y="54" width="16" height="16"/>
+    <rect x="198" y="54" width="16" height="16"/>
+    <!-- Windmill (classic Cycladic) -->
+    <rect x="520" y="80" width="30" height="56"/>
+    <ellipse cx="535" cy="80" rx="18" ry="10"/>
+    <!-- Windmill sails -->
+    <line x1="535" y1="70" x2="535" y2="30" stroke="white" stroke-width="4"/>
+    <line x1="535" y1="70" x2="570" y2="55" stroke="white" stroke-width="4"/>
+    <line x1="535" y1="70" x2="555" y2="100" stroke="white" stroke-width="4"/>
+    <line x1="535" y1="70" x2="500" y2="100" stroke="white" stroke-width="4"/>
+    <line x1="535" y1="70" x2="500" y2="55" stroke="white" stroke-width="4"/>
+    <!-- Ekatontapyliani church dome -->
+    <rect x="640" y="90" width="100" height="46"/>
+    <ellipse cx="690" cy="90" rx="36" ry="22"/>
+    <rect x="680" y="68" width="20" height="24"/>
+    <ellipse cx="690" cy="68" rx="12" ry="8"/>
+    <!-- Bell tower -->
+    <rect x="750" y="70" width="20" height="66"/>
+    <ellipse cx="760" cy="70" rx="12" ry="8"/>
+    <!-- Small chapel -->
+    <rect x="420" y="108" width="40" height="28"/>
+    <polygon points="415,108 465,108 440,90"/>
+  </svg>
+  <div class="pr-hero-overlay"></div>
+  <div class="pr-hero-content">
+    <p class="pr-hero-tag">Kykladen · Zentralägäis</p>
+    <h1 class="pr-hero-title">Paros<em>Πάρος</em></h1>
+    <p class="pr-hero-sub">Weißes Licht, weiße Gassen, weißer Marmor — Paros ist die Kykladeninsel der feinen Balance: zwischen Lebendigkeit und Stille, zwischen Naoussa und Lefkes, zwischen dem besten Windsurf Europas und den ruhigsten Buchten der Ägäis.</p>
+    <div class="pr-hero-pills">
+      <span class="pr-hero-pill">Naoussa</span>
+      <span class="pr-hero-pill">Paros-Marmor</span>
+      <span class="pr-hero-pill">Windsurf</span>
+      <span class="pr-hero-pill">Kykladisch</span>
+      <span class="pr-hero-pill">Ekatontapyliani</span>
+    </div>
+  </div>
+  <div class="pr-hero-waves"></div>
+</div>
+
+<div class="pr-stats-bar">
+  <div class="pr-stat-item">
+    <div class="pr-stat-num">14.000</div>
+    <div class="pr-stat-lbl">Einwohner</div>
+  </div>
+  <div class="pr-stat-item">
+    <div class="pr-stat-num">195 km²</div>
+    <div class="pr-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="pr-stat-item">
+    <div class="pr-stat-num">4. Jh.</div>
+    <div class="pr-stat-lbl">Ekatontapyliani</div>
+  </div>
+  <div class="pr-stat-item">
+    <div class="pr-stat-num">30+</div>
+    <div class="pr-stat-lbl">Strände</div>
+  </div>
+  <div class="pr-stat-item">
+    <div class="pr-stat-num">#1</div>
+    <div class="pr-stat-lbl">Windsurf Europa (Golden Beach)</div>
+  </div>
+</div>
+
+<div class="pr-content">
+
+  <section class="pr-section">
+    <div class="pr-section-head">
+      <p class="pr-section-label">01 — Geschichte</p>
+      <h2 class="pr-section-title">Weißer Marmor<br><em>für die Wunder der Welt</em></h2>
+      <div class="pr-divider"></div>
+    </div>
+    <div class="pr-history-grid">
+      <div class="pr-history-text">
+        <p>Paros war in der Antike berühmter für seinen Marmor als für irgendetwas anderes. Der parische Marmor — feinkörnig, milchweiß, halbtransparent im Licht — war das begehrteste Baumaterial der antiken Welt. Die Venus von Milo besteht daraus. Teile des Parthenon-Frieses. Die Nike von Samothrake. Die Steinbrüche von Marathi im Inselinneren wurden seit dem 6. Jahrhundert v. Chr. abgebaut und lieferten Marmor für Tempel, Statuen und Grabdenkmäler von Athen bis Rom.</p>
+        <p>Die frühchristliche Kirche Ekatontapyliani — „Kirche der Hundert Türen" — aus dem 4. Jahrhundert n. Chr. ist die besterhaltene Kirche dieser Epoche in ganz Griechenland. Der Legende nach hat sie 99 bekannte Türen und eine versteckte, die erst geöffnet wird, wenn Konstantinopel wieder griechisch ist.</p>
+        <p>Venezianer, Osmanen, Fremdherrscher — Paros lebte still durch alle Epochen. Was die Insel heute ist, haben die letzten 50 Jahre gemacht: Naoussa, das Fischerdorf im Norden, wurde zum elegantesten Dorf der Kykladen. Parikia blieb Hafenstadt. Lefkes im Inneren blieb Bergdorf. Die Balance hält.</p>
+      </div>
+      <div class="pr-timeline">
+        <div class="pr-tl-item">
+          <div class="pr-tl-dot"></div>
+          <div class="pr-tl-year">3000 v. Chr.</div>
+          <div class="pr-tl-event">Frühe Kykladenbesiedlung. Paros gehört zu den Kern-Inseln der Kykladenkultur — die Steinbrüche von Marathi werden zum ersten Mal genutzt.</div>
+        </div>
+        <div class="pr-tl-item">
+          <div class="pr-tl-dot"></div>
+          <div class="pr-tl-year">700 v. Chr.</div>
+          <div class="pr-tl-event">Parischer Marmor wird zur begehrtesten Handelsware der Ägäis. Bildhauer aus ganz Griechenland bestellen Blöcke für ihre bedeutendsten Werke — Venus von Milo, Nike von Samothrake.</div>
+        </div>
+        <div class="pr-tl-item">
+          <div class="pr-tl-dot"></div>
+          <div class="pr-tl-year">480 v. Chr.</div>
+          <div class="pr-tl-event">Paros wird von den Persern geplündert — die Insel hatte sich nicht dem griechischen Widerstand angeschlossen. Themistokles fordert später Reparationen.</div>
+        </div>
+        <div class="pr-tl-item">
+          <div class="pr-tl-dot"></div>
+          <div class="pr-tl-year">4. Jh. n. Chr.</div>
+          <div class="pr-tl-event">Bau der Ekatontapyliani — Kirche der Hundert Türen. Die frühchristliche Basilika ist bis heute eine der am besten erhaltenen ihrer Art in der gesamten Orthodoxie.</div>
+        </div>
+        <div class="pr-tl-item">
+          <div class="pr-tl-dot"></div>
+          <div class="pr-tl-year">1260</div>
+          <div class="pr-tl-event">Venezianische Herrschaft. Die Sanudo-Dynastie regiert Paros als Teil des Herzogtums der Ägäis — das venezianische Kastell in Naoussa ist noch als Ruine im Meer sichtbar.</div>
+        </div>
+        <div class="pr-tl-item">
+          <div class="pr-tl-dot"></div>
+          <div class="pr-tl-year">1980er</div>
+          <div class="pr-tl-event">Naoussa entwickelt sich vom Fischerdorf zur elegantesten Adresse der Kykladen. Paros wird zur Lieblingsinsel der Griechen — weniger bekannt als Mykonos, schöner als die meisten.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pr-section">
+    <div class="pr-section-head">
+      <p class="pr-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="pr-section-title">Naoussa, Ekatontapyliani<br><em>und das Licht der Kykladen</em></h2>
+      <div class="pr-divider"></div>
+    </div>
+    <div class="pr-sights-grid">
+
+      <div class="pr-sight-card">
+        <div class="pr-sight-visual sv-pr-naoussa"></div>
+        <div class="pr-sight-body">
+          <p class="pr-sight-cat">Dorf · Ikone</p>
+          <h3 class="pr-sight-name">Naoussa</h3>
+          <p class="pr-sight-desc">Das eleganteste Fischerdorf der Kykladen — enge weiße Gassen, eine venezianische Burgruine im Meer, blaue Fischerboote im Hafen und Tavernen, die man nicht verlassen will. Der Inbegriff des kykladischen Lebens.</p>
+        </div>
+      </div>
+
+      <div class="pr-sight-card">
+        <div class="pr-sight-visual sv-pr-church"></div>
+        <div class="pr-sight-body">
+          <p class="pr-sight-cat">Frühchristlich · UNESCO</p>
+          <h3 class="pr-sight-name">Ekatontapyliani</h3>
+          <p class="pr-sight-desc">Die „Kirche der Hundert Türen" in Parikia — eine der ältesten und besterhaltenen frühchristlichen Kirchen Griechenlands, aus dem 4. Jahrhundert n. Chr. Drei Kirchen bilden einen Komplex voller Geschichte und byzantinischer Ikonen.</p>
+        </div>
+      </div>
+
+      <div class="pr-sight-card">
+        <div class="pr-sight-visual sv-pr-marble"></div>
+        <div class="pr-sight-body">
+          <p class="pr-sight-cat">Antike · Steinbruch</p>
+          <h3 class="pr-sight-name">Marathi-Steinbrüche</h3>
+          <p class="pr-sight-desc">Die antiken Marmorsteinbrüche im Inselinneren, seit dem 6. Jahrhundert v. Chr. in Betrieb — man kann in die langen unterirdischen Gänge hineingehen, wo das weiße Licht durch den halbtransparenten Stein fällt.</p>
+        </div>
+      </div>
+
+      <div class="pr-sight-card">
+        <div class="pr-sight-visual sv-pr-parikia"></div>
+        <div class="pr-sight-body">
+          <p class="pr-sight-cat">Hauptstadt · Hafen</p>
+          <h3 class="pr-sight-name">Parikia</h3>
+          <p class="pr-sight-desc">Die Hauptstadt mit ihrer kykladisch-weißen Chora, dem geschäftigen Hafen und dem Archäologischen Museum. Das Kastro-Viertel wurde aus Spolien antiker Tempel gebaut — Marmorsäulen stecken noch in den Stadtmauern.</p>
+        </div>
+      </div>
+
+      <div class="pr-sight-card">
+        <div class="pr-sight-visual sv-pr-beach"></div>
+        <div class="pr-sight-body">
+          <p class="pr-sight-cat">Strand · Sport</p>
+          <h3 class="pr-sight-name">Golden Beach &amp; Santa Maria</h3>
+          <p class="pr-sight-desc">Golden Beach an der Ostküste gilt als bestes Windsurfrevier Europas — der konstante Meltemi-Wind macht ihn zur Mekka der Kitesurfer. Santa Maria im Norden ist das Gegenteil: windgeschützt, türkisblau, still.</p>
+        </div>
+      </div>
+
+      <div class="pr-sight-card">
+        <div class="pr-sight-visual sv-pr-lefkes"></div>
+        <div class="pr-sight-body">
+          <p class="pr-sight-cat">Bergdorf · Inland</p>
+          <h3 class="pr-sight-name">Lefkes</h3>
+          <p class="pr-sight-desc">Das schönste Bergdorf von Paros — auf einem Hügel im Inselinneren, mit weißen Häusern, gepflasterten Marmorpfaden und der Kirche Agia Triada als Herzstück. Kein Touristenladen, keine Boutique, nur echtes Dorfleben.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="pr-section">
+    <div class="pr-section-head">
+      <p class="pr-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="pr-section-title">Fischertische<br><em>und kykladische Raffinesse</em></h2>
+      <div class="pr-divider"></div>
+    </div>
+    <div class="pr-tav-grid">
+
+      <div class="pr-tav-card">
+        <div class="pr-tav-top">
+          <div>
+            <h3 class="pr-tav-name">Trata</h3>
+            <div class="pr-tav-loc">📍 Naoussa, Hafengasse</div>
+          </div>
+          <div class="pr-tav-stars">★★★★★</div>
+        </div>
+        <p class="pr-tav-desc">Das beste Fischrestaurant in Naoussa — in einer Gasse keine zehn Meter vom Wasser, mit Tischen so nah zusammen, dass man unweigerlich mit den Nachbarn spricht. Täglich frischer Fang von den eigenen Booten, seit drei Generationen.</p>
+        <div class="pr-tav-dishes">
+          <span class="pr-tav-dish">Dorade frisch</span>
+          <span class="pr-tav-dish">Oktopus am Stein</span>
+          <span class="pr-tav-dish">Muschelsuppe</span>
+        </div>
+        <p class="pr-tav-price">Preisklasse: <span>€€€ · Abendessen · Naoussa</span></p>
+      </div>
+
+      <div class="pr-tav-card">
+        <div class="pr-tav-top">
+          <div>
+            <h3 class="pr-tav-name">Levantis</h3>
+            <div class="pr-tav-loc">📍 Parikia, Chora</div>
+          </div>
+          <div class="pr-tav-stars">★★★★★</div>
+        </div>
+        <p class="pr-tav-desc">Das kreativste Restaurant der Insel — in einem alten Stadthaus in Parikia, mit einem Innenhof unter Bougainvillea. Die Küche verbindet kykladische Basis mit asiatischen und Levante-Einflüssen. Für Paros außergewöhnlich, für die Kykladen einmalig.</p>
+        <div class="pr-tav-dishes">
+          <span class="pr-tav-dish">Thunfisch Tataki</span>
+          <span class="pr-tav-dish">Garnelen mit Miso</span>
+          <span class="pr-tav-dish">Paro-Wein</span>
+        </div>
+        <p class="pr-tav-price">Preisklasse: <span>€€€ · Abendessen · Reservierung</span></p>
+      </div>
+
+      <div class="pr-tav-card">
+        <div class="pr-tav-top">
+          <div>
+            <h3 class="pr-tav-name">Barbarossa</h3>
+            <div class="pr-tav-loc">📍 Naoussa, Kastro-Ruine</div>
+          </div>
+          <div class="pr-tav-stars">★★★★☆</div>
+        </div>
+        <p class="pr-tav-desc">Direkt unter der venezianischen Burgruine im Meer — Meze, Ouzo und der Blick auf die einlaufenden Fischerboote. Das Lokal existiert seit Jahrzehnten unverändert und hat keine Ambitionen außer der einen: gut zu sein.</p>
+        <div class="pr-tav-dishes">
+          <span class="pr-tav-dish">Taramosalata</span>
+          <span class="pr-tav-dish">Gegrillte Sardinen</span>
+          <span class="pr-tav-dish">Ouzo Plomari</span>
+        </div>
+        <p class="pr-tav-price">Preisklasse: <span>€€ · Mittag &amp; Abend</span></p>
+      </div>
+
+      <div class="pr-tav-card">
+        <div class="pr-tav-top">
+          <div>
+            <h3 class="pr-tav-name">To Tamarisko</h3>
+            <div class="pr-tav-loc">📍 Lefkes, Bergdorf</div>
+          </div>
+          <div class="pr-tav-stars">★★★★★</div>
+        </div>
+        <p class="pr-tav-desc">Im Bergdorf Lefkes, unter einem Tamariskenbaum, der dem Lokal den Namen gab — das authentischste Mittagessen auf Paros. Hausgemachte Pasta, Ziege aus dem Dorf, Wein aus dem Fass. Von der Küste aus 20 Minuten, von der Touristenwelt aus Lichtjahre entfernt.</p>
+        <div class="pr-tav-dishes">
+          <span class="pr-tav-dish">Hilopites (Nudelgericht)</span>
+          <span class="pr-tav-dish">Ziegenstifado</span>
+          <span class="pr-tav-dish">Lokaler Weißwein</span>
+        </div>
+        <p class="pr-tav-price">Preisklasse: <span>€ · Mittagessen im Dorf</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="pr-section">
+    <div class="pr-section-head">
+      <p class="pr-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="pr-section-title">Die Insel<br><em>der feinen Balance</em></h2>
+      <div class="pr-divider"></div>
+    </div>
+    <div class="pr-viertel-grid">
+
+      <div class="pr-viertel-card">
+        <div class="pr-viertel-emoji">⚓</div>
+        <h3 class="pr-viertel-name">Naoussa</h3>
+        <p class="pr-viertel-desc">Das eleganteste Fischerdorf der Kykladen — Galerien, Boutiquen, Tavernen und das Hafenleben in einem. Abends legt man sich auf die Mole und schaut den Fischerbooten zu, die ins Licht fahren.</p>
+      </div>
+
+      <div class="pr-viertel-card">
+        <div class="pr-viertel-emoji">🏙️</div>
+        <h3 class="pr-viertel-name">Parikia</h3>
+        <p class="pr-viertel-desc">Die Hauptstadt — Fähren, Ekatontapyliani, Kastro und das lebhafteste Nachtleben der Insel. Der Windmühlenpark am Hafen ist einer der ikonischsten Anblicke der Kykladen.</p>
+      </div>
+
+      <div class="pr-viertel-card">
+        <div class="pr-viertel-emoji">🏔️</div>
+        <h3 class="pr-viertel-name">Lefkes</h3>
+        <p class="pr-viertel-desc">Das stille Herz der Insel — auf einem Hügel, mit Marmorgassen, Kirchen und dem byzantinischen Pfad nach Prodromos. Für Wanderer und alle, die Paros jenseits des Strands entdecken wollen.</p>
+      </div>
+
+      <div class="pr-viertel-card">
+        <div class="pr-viertel-emoji">🏄</div>
+        <h3 class="pr-viertel-name">Golden Beach</h3>
+        <p class="pr-viertel-desc">Das Windsurfmekka Europas — der konstante Nordwind (Meltemi) macht die Ostküste zum Paradies für Kite- und Windsurfer. Im PWA-Weltcup ist Golden Beach fester Austragungsort.</p>
+      </div>
+
+      <div class="pr-viertel-card">
+        <div class="pr-viertel-emoji">🌊</div>
+        <h3 class="pr-viertel-name">Antiparos (Fähre)</h3>
+        <p class="pr-viertel-desc">Die kleine Schwesternsinsel, 5 Minuten per Fähre von Paros — ein Dorf, eine Hauptstraße, Strände ohne Touristen und eine Höhle mit Stalaktiten und Stalagmiten, die zu den schönsten Griechenlands gehört.</p>
+      </div>
+
+      <div class="pr-viertel-card">
+        <div class="pr-viertel-emoji">🕯️</div>
+        <h3 class="pr-viertel-name">Paros bei Nacht</h3>
+        <p class="pr-viertel-desc">Naoussa nach Mitternacht — die Gassen füllen sich, die Bars öffnen ihre Terrassen, Griechen tanzen bis in den Morgen. Paros hat das beste Nachtleben der ruhigen Kykladen, ohne das Chaos von Mykonos.</p>
+      </div>
+
+    </div>
+
+    <div class="pr-tip-banner">
+      <div class="pr-tip-emoji">🌬️</div>
+      <div class="pr-tip-text">
+        <h3>Der Meltemi und das Licht</h3>
+        <p>Der Nordwind der Kykladen — der Meltemi — weht auf Paros von Juni bis September fast täglich. Er kühlt die heiße Mittagssonne, peitscht das Meer auf der Ostseite auf und lässt die Westseite ruhig. Wer verstehen will, warum Kykladen-Licht so besonders ist, kommt am frühen Morgen nach Naoussa: Das Weiß der Häuser, das Blau des Wassers, die Windmühlen im ersten Sonnenlicht — das ist das Bild, das man mit nach Hause trägt.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>

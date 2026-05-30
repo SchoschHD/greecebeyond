@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naxos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="naxos.css" />
+</head>
+<body>
+<div id="naxos-page">
+
+<div class="nx-back-bar">
+  <button class="nx-back-btn" type="button" onclick="closeNaxos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="nx-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Naxos</span></p>
+</div>
+
+<div class="nx-hero">
+  <div class="nx-hero-bg"></div>
+  <div class="nx-hero-dots"></div>
+  <!-- Portara gate + Naxos chora silhouette -->
+  <svg class="nx-hero-silhouette" viewBox="0 0 840 175" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Small island / islet for Portara -->
+    <ellipse cx="200" cy="155" rx="140" ry="22"/>
+    <!-- Portara gate (Temple of Apollo) — two uprights + lintel -->
+    <rect x="148" y="68" width="22" height="90"/>
+    <rect x="230" y="68" width="22" height="90"/>
+    <rect x="140" y="58" width="122" height="18" rx="2"/>
+    <!-- Steps -->
+    <rect x="135" y="148" width="130" height="8" rx="1"/>
+    <rect x="130" y="154" width="140" height="6" rx="1"/>
+    <!-- Naxos chora hill skyline (right) -->
+    <path d="M430,175 Q500,100 560,80 Q600,68 630,72 Q670,78 700,68 Q730,58 760,62 Q800,68 840,90 L840,175Z" opacity="0.35"/>
+    <!-- Kastro tower on hill -->
+    <rect x="620" y="50" width="32" height="42"/>
+    <rect x="615" y="38" width="42" height="14"/>
+    <rect x="618" y="24" width="12" height="16"/>
+    <rect x="638" y="24" width="12" height="16"/>
+    <!-- Church dome -->
+    <rect x="680" y="58" width="24" height="30"/>
+    <ellipse cx="692" cy="58" rx="14" ry="10"/>
+    <!-- Sea reflection -->
+    <path d="M0,168 Q210,158 420,164 Q630,170 840,160 L840,175 L0,175Z" opacity="0.25"/>
+  </svg>
+  <div class="nx-hero-overlay"></div>
+  <div class="nx-hero-content">
+    <p class="nx-hero-tag">Kykladen · Zentralägäis</p>
+    <h1 class="nx-hero-title">Naxos<em>Νάξος</em></h1>
+    <p class="nx-hero-sub">Die größte und üppigste Kykladeninsel — weißer Marmor, grüne Bergdörfer, traumhafte Strände und die ikonische Portara am Hafen. Naxos ist die Kykladeninsel, die satt macht: an Geschichte, Landschaft und Genuss.</p>
+    <div class="nx-hero-pills">
+      <span class="nx-hero-pill">Portara</span>
+      <span class="nx-hero-pill">Marmor</span>
+      <span class="nx-hero-pill">Bergdörfer</span>
+      <span class="nx-hero-pill">Strände</span>
+      <span class="nx-hero-pill">Kulinarik</span>
+    </div>
+  </div>
+  <div class="nx-hero-waves"></div>
+</div>
+
+<div class="nx-stats-bar">
+  <div class="nx-stat-item">
+    <div class="nx-stat-num">18.000</div>
+    <div class="nx-stat-lbl">Einwohner</div>
+  </div>
+  <div class="nx-stat-item">
+    <div class="nx-stat-num">429 km²</div>
+    <div class="nx-stat-lbl">Größte Kykladeninsel</div>
+  </div>
+  <div class="nx-stat-item">
+    <div class="nx-stat-num">1001 m</div>
+    <div class="nx-stat-lbl">Höchster Punkt (Zeus-Berg)</div>
+  </div>
+  <div class="nx-stat-item">
+    <div class="nx-stat-num">530 v. Chr.</div>
+    <div class="nx-stat-lbl">Portara erbaut</div>
+  </div>
+  <div class="nx-stat-item">
+    <div class="nx-stat-num">#1</div>
+    <div class="nx-stat-lbl">Käse &amp; Kitron-Likör</div>
+  </div>
+</div>
+
+<div class="nx-content">
+
+  <section class="nx-section">
+    <div class="nx-section-head">
+      <p class="nx-section-label">01 — Geschichte</p>
+      <h2 class="nx-section-title">Von Zeus und Dionysos<br><em>zur venezianischen Herzogsinsel</em></h2>
+      <div class="nx-divider"></div>
+    </div>
+    <div class="nx-history-grid">
+      <div class="nx-history-text">
+        <p>Naxos ist die mythologisch reichste der Kykladeninseln. Hier soll Zeus, der Göttervater, aufgewachsen sein — der höchste Berg der Insel trägt noch heute seinen Namen. Und hier soll Dionysos, der Gott des Weins, die schlafende Ariadne gefunden haben, die Theseus auf Naxos zurückgelassen hatte. Das Unglück Ariadnes wurde zur Legende, der Wein der Insel zu einem der ältesten Griechenlands.</p>
+        <p>Die unvollendete Portara — das monumentale Tor eines nie fertiggestellten Apollon-Tempels aus dem 6. Jahrhundert v. Chr. — steht auf einem kleinen Felsenislet direkt vor dem Hafen und ist das Wahrzeichen der Insel. Die Venezianer regierten Naxos ab 1207 als Herzogtum der Ägäis und hinterließen das Kastro-Viertel der Chora mit seinen Adelshäusern und der lateinischen Kathedrale.</p>
+        <p>Das Innere der Insel blieb durch all diese Herrschaften hinweg von seinen Bergdörfern geprägt — Halki, Filoti, Apeiranthos. Diese Dörfer aus weißem Marmor und dunklem Schiefer sind heute noch so, wie sie immer waren: lebendige Gemeinden mit eigenen Tavernen, Kirchen und einer Stille, die die Küste nie hat.</p>
+      </div>
+      <div class="nx-timeline">
+        <div class="nx-tl-item">
+          <div class="nx-tl-dot"></div>
+          <div class="nx-tl-year">3200 v. Chr.</div>
+          <div class="nx-tl-event">Frühe Kykladenkultur — Naxos ist eines der Zentren der Kykladen-Marmorkunst. Die berühmten Kykladenfiguren (stilisierte Marmorstatuetten) stammen aus dieser Epoche.</div>
+        </div>
+        <div class="nx-tl-item">
+          <div class="nx-tl-dot"></div>
+          <div class="nx-tl-year">530 v. Chr.</div>
+          <div class="nx-tl-event">Bau des Apollon-Tempels auf dem Hafenislet Palatia — das monumentale Tor, die Portara, bleibt halbfertig stehen und wird zum Wahrzeichen der Insel für alle Zeit.</div>
+        </div>
+        <div class="nx-tl-item">
+          <div class="nx-tl-dot"></div>
+          <div class="nx-tl-year">490 v. Chr.</div>
+          <div class="nx-tl-event">Naxos wird von den Persern verwüstet — erste Reaktion auf den Widerstand der Insel gegen die Invasion. Naxos erholt sich und bleibt wichtige Handelsmacht.</div>
+        </div>
+        <div class="nx-tl-item">
+          <div class="nx-tl-dot"></div>
+          <div class="nx-tl-year">1207</div>
+          <div class="nx-tl-event">Marco Sanudo gründet das venezianische Herzogtum der Ägäis auf Naxos. Das Kastro-Viertel entsteht — venezianische Adelspalazzi, lateinische Kathedrale, Marmorgassen.</div>
+        </div>
+        <div class="nx-tl-item">
+          <div class="nx-tl-dot"></div>
+          <div class="nx-tl-year">1564</div>
+          <div class="nx-tl-event">Osmanische Herrschaft. Naxos behält jedoch als einzige Kykladeninsel einen hohen Grad an Selbstverwaltung — die Bergdörfer im Inneren bleiben weitgehend unangetastet.</div>
+        </div>
+        <div class="nx-tl-item">
+          <div class="nx-tl-dot"></div>
+          <div class="nx-tl-year">1830</div>
+          <div class="nx-tl-event">Anschluss an den neugegründeten griechischen Staat. Naxos bleibt bis heute die produktivste Kykladeninsel — Käse, Kartoffeln, Wein, Marmor und Kitron-Likör aus Zitronenblättern.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nx-section">
+    <div class="nx-section-head">
+      <p class="nx-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="nx-section-title">Portara, Marmor<br><em>und stille Bergdörfer</em></h2>
+      <div class="nx-divider"></div>
+    </div>
+    <div class="nx-sights-grid">
+
+      <div class="nx-sight-card">
+        <div class="nx-sight-visual sv-nx-portara"></div>
+        <div class="nx-sight-body">
+          <p class="nx-sight-cat">Wahrzeichen · Antike</p>
+          <h3 class="nx-sight-name">Portara</h3>
+          <p class="nx-sight-desc">Das unvollendete Tor des Apollon-Tempels auf dem Felsenislet Palatia — seit 2500 Jahren das Symbol von Naxos. Bei Sonnenuntergang färbt sich das weiße Marmor golden und das Meer ringsum türkisblau. Kein Bild macht es gerecht.</p>
+        </div>
+      </div>
+
+      <div class="nx-sight-card">
+        <div class="nx-sight-visual sv-nx-chora"></div>
+        <div class="nx-sight-body">
+          <p class="nx-sight-cat">Altstadt · Kastro</p>
+          <h3 class="nx-sight-name">Chora &amp; Kastro</h3>
+          <p class="nx-sight-desc">Die Hauptstadt mit ihrem venezianischen Kastro-Viertel — Adelspalazzi mit Wappenschildern, enge Marmorgassen, die lateinische Kathedrale und ein Museum in einem venezianischen Turm. Mittelalter und Kykladen in einem.</p>
+        </div>
+      </div>
+
+      <div class="nx-sight-card">
+        <div class="nx-sight-visual sv-nx-marble"></div>
+        <div class="nx-sight-body">
+          <p class="nx-sight-cat">Antike · Steinbruch</p>
+          <h3 class="nx-sight-name">Kouros von Apollonas</h3>
+          <p class="nx-sight-desc">Im Norden der Insel liegt ein riesiger unvollendeter Kouros — eine 10,5 Meter lange archaische Marmorstatue, die seit 2600 Jahren unbeweglich im Steinbruch liegt. Einer der eindrucksvollsten Zufallsfunde der Antike.</p>
+        </div>
+      </div>
+
+      <div class="nx-sight-card">
+        <div class="nx-sight-visual sv-nx-temple"></div>
+        <div class="nx-sight-body">
+          <p class="nx-sight-cat">Antike · Tempel</p>
+          <h3 class="nx-sight-name">Demeter-Tempel (Sangri)</h3>
+          <p class="nx-sight-desc">Im Inland, umgeben von Feldern: der teilweise rekonstruierte Demeter-Tempel aus dem 6. Jahrhundert v. Chr. — ein ruhiger, fast vergessener Ort mit weißem Marmor und weitem Blick über das Naxos-Tal.</p>
+        </div>
+      </div>
+
+      <div class="nx-sight-card">
+        <div class="nx-sight-visual sv-nx-beach"></div>
+        <div class="nx-sight-body">
+          <p class="nx-sight-cat">Strände</p>
+          <h3 class="nx-sight-name">Agios Prokopios &amp; Plaka</h3>
+          <p class="nx-sight-desc">Die Westküste von Naxos hat die besten Strände der Kykladen — Agios Prokopios mit feinem Sand und seichtem Wasser, Plaka mit 5 km ungebrochenem weißen Strand, Alyko für Wildheit und Dünen.</p>
+        </div>
+      </div>
+
+      <div class="nx-sight-card">
+        <div class="nx-sight-visual sv-nx-halki"></div>
+        <div class="nx-sight-body">
+          <p class="nx-sight-cat">Bergdorf · Inland</p>
+          <h3 class="nx-sight-name">Halki &amp; Apeiranthos</h3>
+          <p class="nx-sight-desc">Die schönsten Dörfer im Inselinneren — Halki mit venezianischen Türmen und Kitron-Destillerie, Apeiranthos komplett aus weißem Marmor gebaut, mit eigenen Museen und einer Lebendigkeit, die Touristendörfer nie haben.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="nx-section">
+    <div class="nx-section-head">
+      <p class="nx-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="nx-section-title">Die satteste<br><em>Kykladeninsel</em></h2>
+      <div class="nx-divider"></div>
+    </div>
+    <div class="nx-tav-grid">
+
+      <div class="nx-tav-card">
+        <div class="nx-tav-top">
+          <div>
+            <h3 class="nx-tav-name">To Elliniko</h3>
+            <div class="nx-tav-loc">📍 Chora, Kastro-Viertel</div>
+          </div>
+          <div class="nx-tav-stars">★★★★★</div>
+        </div>
+        <p class="nx-tav-desc">Im venezianischen Kastro, unter einem Gewölbe aus dem 13. Jahrhundert — das beste Restaurant der Inselhauptstadt. Naxiotische Küche mit Produkten ausschließlich von der Insel: Graviera-Käse, lokale Wurst, Gemüse aus dem Bergdorf.</p>
+        <div class="nx-tav-dishes">
+          <span class="nx-tav-dish">Naxos-Graviera</span>
+          <span class="nx-tav-dish">Louza (Wurst)</span>
+          <span class="nx-tav-dish">Kartoffelgericht naxiotisch</span>
+        </div>
+        <p class="nx-tav-price">Preisklasse: <span>€€ · Abendessen im Kastro</span></p>
+      </div>
+
+      <div class="nx-tav-card">
+        <div class="nx-tav-top">
+          <div>
+            <h3 class="nx-tav-name">Taverna Lefteris</h3>
+            <div class="nx-tav-loc">📍 Bergdorf Filoti</div>
+          </div>
+          <div class="nx-tav-stars">★★★★★</div>
+        </div>
+        <p class="nx-tav-desc">Im Bergdorf Filoti am Fuß des Zeus-Berges — eine Taverne wie aus einem anderen Jahrhundert. Ziege aus dem eigenen Stall, Wein aus dem eigenen Fass, Graviera-Käse aus der eigenen Molkerei. Kein Englisch, keine Karte, kein Problem.</p>
+        <div class="nx-tav-dishes">
+          <span class="nx-tav-dish">Kleftiko (Ziege)</span>
+          <span class="nx-tav-dish">Eigener Graviera</span>
+          <span class="nx-tav-dish">Fass-Wein</span>
+        </div>
+        <p class="nx-tav-price">Preisklasse: <span>€ · Bergdorf-Erlebnis</span></p>
+      </div>
+
+      <div class="nx-tav-card">
+        <div class="nx-tav-top">
+          <div>
+            <h3 class="nx-tav-name">Portara Café</h3>
+            <div class="nx-tav-loc">📍 Chora, Hafenpromenade</div>
+          </div>
+          <div class="nx-tav-stars">★★★★☆</div>
+        </div>
+        <p class="nx-tav-desc">Der beste Platz für Sonnenuntergang auf den Kykladen — direkt gegenüber der beleuchteten Portara, mit dem Meer auf beiden Seiten. Ein Kitron-Sour aus lokalem Zitronenblatt-Likör in der Hand, die Portara im Blick. Mehr braucht es nicht.</p>
+        <div class="nx-tav-dishes">
+          <span class="nx-tav-dish">Kitron-Sour</span>
+          <span class="nx-tav-dish">Naxos-Bier lokal</span>
+          <span class="nx-tav-dish">Mezeplatten</span>
+        </div>
+        <p class="nx-tav-price">Preisklasse: <span>€€ · Sonnenuntergang Pflicht</span></p>
+      </div>
+
+      <div class="nx-tav-card">
+        <div class="nx-tav-top">
+          <div>
+            <h3 class="nx-tav-name">Vallindras Kitron-Destillerie</h3>
+            <div class="nx-tav-loc">📍 Halki, Bergdorf</div>
+          </div>
+          <div class="nx-tav-stars">★★★★★</div>
+        </div>
+        <p class="nx-tav-desc">Keine Taverne, sondern ein Erlebnis: Die älteste Kitron-Destillerie der Insel in einem venezianischen Herrenhaus in Halki. Kostenlose Führung durch die alten Kupferkessel, Degustation des Zitronenblatt-Likörs, der nirgendwo sonst auf der Welt hergestellt wird.</p>
+        <div class="nx-tav-dishes">
+          <span class="nx-tav-dish">Kitron grün (süß)</span>
+          <span class="nx-tav-dish">Kitron gelb (halbtrocken)</span>
+          <span class="nx-tav-dish">Kitron weiß (trocken)</span>
+        </div>
+        <p class="nx-tav-price">Preisklasse: <span>€ · Führung kostenlos</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="nx-section">
+    <div class="nx-section-head">
+      <p class="nx-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="nx-section-title">Küste, Berge<br><em>und weiße Marmordörfer</em></h2>
+      <div class="nx-divider"></div>
+    </div>
+    <div class="nx-viertel-grid">
+
+      <div class="nx-viertel-card">
+        <div class="nx-viertel-emoji">🏙️</div>
+        <h3 class="nx-viertel-name">Naxos Chora</h3>
+        <p class="nx-viertel-desc">Die Hauptstadt mit dem venezianischen Kastro, dem geschäftigen Hafen und der Portara — lebendig, laut, schön. Einkaufsstraßen voller Käseläden, Likörgeschäfte und Goldschmiede mit lokalem Marmor.</p>
+      </div>
+
+      <div class="nx-viertel-card">
+        <div class="nx-viertel-emoji">🏔️</div>
+        <h3 class="nx-viertel-name">Tragaea-Tal</h3>
+        <p class="nx-viertel-desc">Das grüne Herz der Insel — ein Olivenhain-Tal umgeben von Bergdörfern, byzantinischen Kirchen und Marmorpfaden. Halki, Filoti, Chalki — jedes Dorf ein eigenes kleines Universum.</p>
+      </div>
+
+      <div class="nx-viertel-card">
+        <div class="nx-viertel-emoji">🏖️</div>
+        <h3 class="nx-viertel-name">Westküste</h3>
+        <p class="nx-viertel-desc">Agios Prokopios, Agia Anna, Plaka, Alyko — fünf Kilometer weißer Sandstrand an der Westküste, nahtlos ineinanderfließend. Dazu Dünen, Zedernwälder und eines der besten Kitesurfreviere Europas.</p>
+      </div>
+
+      <div class="nx-viertel-card">
+        <div class="nx-viertel-emoji">🪨</div>
+        <h3 class="nx-viertel-name">Apeiranthos</h3>
+        <p class="nx-viertel-desc">Das härteste und schönste Dorf der Insel — komplett aus grauem Marmor und Schiefer gebaut, auf 600 Metern Höhe, mit vier kleinen Museen und einem Charakter, der jeden Besucher still macht.</p>
+      </div>
+
+      <div class="nx-viertel-card">
+        <div class="nx-viertel-emoji">🧀</div>
+        <h3 class="nx-viertel-name">Naxos-Produkte</h3>
+        <p class="nx-viertel-desc">Naxos ist Griechenlands produktivste Kykladeninsel: Graviera-Käse (g.U.), Arseniko-Käse, Naxos-Kartoffeln (berühmt in ganz Griechenland), Kitron-Likör und Emery-Schmirgel aus den Bergminen.</p>
+      </div>
+
+      <div class="nx-viertel-card">
+        <div class="nx-viertel-emoji">⛪</div>
+        <h3 class="nx-viertel-name">Byzantinische Kirchen</h3>
+        <p class="nx-viertel-desc">Im Inneren der Insel gibt es über 40 byzantinische Kapellen und Kirchen, viele mit mittelalterlichen Fresken — versteckt in Olivenhainen, ohne Schilder, ohne Touristen. Für Entdecker, nicht für Gruppen.</p>
+      </div>
+
+    </div>
+
+    <div class="nx-tip-banner">
+      <div class="nx-tip-emoji">🍋</div>
+      <div class="nx-tip-text">
+        <h3>Die Insel, die alles hat — und es nicht zeigen muss</h3>
+        <p>Naxos hat kein Image-Problem, keinen berühmten Sonnenuntergang der Welt und keine einzige überteuerte Boutique-Bar auf einer Klippe. Was es hat: die längsten Strände der Kykladen, die höchsten Berge, die besten Käse, das älteste Marmorhandwerk und Dörfer, die noch wirklich Dörfer sind. Wer eine Woche bleibt, versteht warum Naxos-Liebhaber nie woanders hinfahren wollen.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>

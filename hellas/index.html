@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="css/islands/mykonos.css">
   <link rel="stylesheet" href="css/islands/kos.css">
   <link rel="stylesheet" href="css/islands/rhodos.css">
+  <link rel="stylesheet" href="css/islands/paros.css">
+  <link rel="stylesheet" href="css/islands/naxos.css">
 
   <!-- Rezept-Styles -->
   <link rel="stylesheet" href="css/food/tzatziki.css">
@@ -185,7 +187,7 @@
         </div>
       </div>
 
-      <div class="island-card kyk-card">
+      <div class="island-card kyk-card" onclick="openNaxos()" style="cursor:pointer;">
         <div class="island-bg isle-naxos"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -196,7 +198,7 @@
         </div>
       </div>
 
-      <div class="island-card kyk-card">
+      <div class="island-card kyk-card" onclick="openParos()" style="cursor:pointer;">
         <div class="island-bg isle-paros"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -910,6 +912,8 @@
 <!-- ═══════════════════════════════════════ -->
 <div id="santorini-page"  style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="mykonos-page"    style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="naxos-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="paros-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="kos-page"        style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="rhodos-page"     style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 
@@ -964,6 +968,30 @@
   }
   function closeMykonos() {
     document.getElementById('mykonos-page').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function openNaxos() {
+    loadPage('naxos-page', 'islands/naxos.html').then(() => {
+      const p = document.getElementById('naxos-page');
+      p.style.display = 'block'; p.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  function closeNaxos() {
+    document.getElementById('naxos-page').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function openParos() {
+    loadPage('paros-page', 'islands/paros.html').then(() => {
+      const p = document.getElementById('paros-page');
+      p.style.display = 'block'; p.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  function closeParos() {
+    document.getElementById('paros-page').style.display = 'none';
     document.body.style.overflow = '';
   }
 
