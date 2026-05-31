@@ -954,15 +954,35 @@
   /* Insel-HTML dynamisch laden (benötigt Live Server in VSCode) */
   async function loadPage(id, file) {
     const container = document.getElementById(id);
-    if (container.innerHTML.trim() !== '') return; /* schon geladen */
+    if (container.innerHTML.trim() === '') {
     const res = await fetch('pages/' + file);
     const text = await res.text();
-    const bodyMatch = text.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
-    let content = bodyMatch ? bodyMatch[1] : text;
-    const wrapperMatch = content.match(/^\s*<div\s+id=["']([^"']+)["'][^>]*>([\s\S]*)<\/div>\s*$/i);
-    container.innerHTML = wrapperMatch ? wrapperMatch[2] : content;
-  }
+   if (id === 'athens-page' && !document.getElementById('athens-inline-styles')) {
+        const styleMatch = text.match(/<style[^>]*>([\s\S]*?)<\/style>/i);
+        if (styleMatch) {
+          const styleElement = document.createElement('style');
+          styleElement.id = 'athens-inline-styles';
+          styleElement.textContent = styleMatch[1];
+          document.head.appendChild(styleElement);
+        }
+      }
+      const bodyMatch = text.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+      let content = bodyMatch ? bodyMatch[1] : text;
+      const wrapperMatch = content.match(/^\s*<div\s+id=["']([^"']+)["'][^>]*>([\s\S]*)<\/div>\s*$/i);
+      container.innerHTML = wrapperMatch ? wrapperMatch[2] : content;
+    }
 
+    if (id === 'athens-page') {
+      container.querySelectorAll('[class]').forEach((element) => {
+        Array.from(element.classList).forEach((className) => {
+          if (className.startsWith('at-')) {
+            element.classList.add(`ath-${className.slice(3)}`);
+          }
+        });
+      });
+    }
+  }
+  
   function openSantorini() {
     loadPage('santorini-page', 'islands/santorini.html').then(() => {
       const p = document.getElementById('santorini-page');
