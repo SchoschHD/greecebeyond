@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sifnos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="sifnos.css" />
+</head>
+<body>
+<div id="sifnos-page">
+
+<div class="sf-back-bar">
+  <button class="sf-back-btn" type="button" onclick="closeSifnos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="sf-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Sifnos</span></p>
+</div>
+
+<div class="sf-hero">
+  <div class="sf-hero-bg"></div>
+  <div class="sf-hero-dots"></div>
+  <!-- Kastro + Chrysopigi chapel silhouette -->
+  <svg class="sf-hero-silhouette" viewBox="0 0 840 175" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sea baseline -->
+    <path d="M0,168 Q210,156 420,163 Q630,170 840,158 L840,175 L0,175Z" opacity="0.28"/>
+    <!-- Kastro hill (left-center) -->
+    <path d="M180,175 Q260,110 320,90 Q370,75 400,175Z" opacity="0.32"/>
+    <!-- Kastro walls on hill -->
+    <rect x="262" y="72" width="110" height="30"/>
+    <rect x="258" y="60" width="118" height="14"/>
+    <rect x="261" y="46" width="14" height="16"/>
+    <rect x="283" y="46" width="14" height="16"/>
+    <rect x="355" y="46" width="14" height="16"/>
+    <rect x="333" y="46" width="14" height="16"/>
+    <!-- Tower on kastro -->
+    <rect x="296" y="32" width="38" height="42"/>
+    <rect x="291" y="20" width="48" height="14"/>
+    <rect x="294" y="6"  width="14" height="16"/>
+    <rect x="318" y="6"  width="14" height="16"/>
+    <!-- Chrysopigi chapel on sea rock (right) -->
+    <ellipse cx="640" cy="148" rx="68" ry="20"/>
+    <rect x="606" y="100" width="68" height="48"/>
+    <!-- Chapel dome -->
+    <rect x="618" y="82" width="44" height="20"/>
+    <ellipse cx="640" cy="82" rx="24" ry="14"/>
+    <!-- Bell tower -->
+    <rect x="664" y="86" width="16" height="62"/>
+    <ellipse cx="672" cy="86" rx="10" ry="7"/>
+    <!-- Small arch bridge to rock -->
+    <path d="M574,155 Q607,130 606,148" fill="none" stroke="white" stroke-width="5"/>
+    <!-- Windmills row (far right) -->
+    <rect x="740" y="110" width="22" height="46"/>
+    <ellipse cx="751" cy="110" rx="14" ry="8"/>
+    <line x1="751" y1="102" x2="751" y2="72" stroke="white" stroke-width="3"/>
+    <line x1="751" y1="102" x2="776" y2="90" stroke="white" stroke-width="3"/>
+    <line x1="751" y1="102" x2="768" y2="122" stroke="white" stroke-width="3"/>
+    <line x1="751" y1="102" x2="726" y2="122" stroke="white" stroke-width="3"/>
+    <line x1="751" y1="102" x2="726" y2="90" stroke="white" stroke-width="3"/>
+    <!-- Pottery jug shape (subtle, bottom left) -->
+    <ellipse cx="80" cy="148" rx="30" ry="20" opacity="0.4"/>
+    <rect x="72" y="110" width="16" height="40" opacity="0.4"/>
+    <ellipse cx="80" cy="110" rx="20" ry="10" opacity="0.4"/>
+  </svg>
+  <div class="sf-hero-overlay"></div>
+  <div class="sf-hero-content">
+    <p class="sf-hero-tag">Kykladen · Westägäis</p>
+    <h1 class="sf-hero-title">Sifnos<em>Σίφνος</em></h1>
+    <p class="sf-hero-sub">Die Gastronomie-Insel der Kykladen — weißes Kastro auf dem Fels, Chrysopigi-Kapelle über dem Meer, 365 Kirchen und eine Küchentradition, die Griechenlands bedeutendsten Kochbuchautor hervorgebracht hat. Sifnos schmeckt man, bevor man es sieht.</p>
+    <div class="sf-hero-pills">
+      <span class="sf-hero-pill">Kulinarik</span>
+      <span class="sf-hero-pill">Kastro</span>
+      <span class="sf-hero-pill">Chrysopigi</span>
+      <span class="sf-hero-pill">Töpferei</span>
+      <span class="sf-hero-pill">Wandern</span>
+    </div>
+  </div>
+  <div class="sf-hero-waves"></div>
+</div>
+
+<div class="sf-stats-bar">
+  <div class="sf-stat-item">
+    <div class="sf-stat-num">2.600</div>
+    <div class="sf-stat-lbl">Einwohner</div>
+  </div>
+  <div class="sf-stat-item">
+    <div class="sf-stat-num">365</div>
+    <div class="sf-stat-lbl">Kirchen &amp; Kapellen</div>
+  </div>
+  <div class="sf-stat-item">
+    <div class="sf-stat-num">73 km²</div>
+    <div class="sf-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="sf-stat-item">
+    <div class="sf-stat-num">200 km</div>
+    <div class="sf-stat-lbl">Wanderwege</div>
+  </div>
+  <div class="sf-stat-item">
+    <div class="sf-stat-num">#1</div>
+    <div class="sf-stat-lbl">Küche der Kykladen</div>
+  </div>
+</div>
+
+<div class="sf-content">
+
+  <!-- 1. GESCHICHTE -->
+  <section class="sf-section">
+    <div class="sf-section-head">
+      <p class="sf-section-label">01 — Geschichte</p>
+      <h2 class="sf-section-title">Gold, Töpfe<br><em>und 365 Kirchen</em></h2>
+      <div class="sf-divider"></div>
+    </div>
+    <div class="sf-history-grid">
+      <div class="sf-history-text">
+        <p>Sifnos war in der Antike eine der reichsten Inseln der Ägäis — Gold- und Silberminen machten die Insel so wohlhabend, dass sie das Delphi-Orakel mit einem goldenen Stier beschenkte. Doch der Reichtum währte nicht ewig: Die Minen versanken im Meer oder erschöpften sich, und Sifnos wandte sich dem zu, was die Insel bis heute definiert — der Kunst des Kochens und der Töpferei.</p>
+        <p>Nikolaos Tselementes, geboren 1878 auf Sifnos, wurde der einflussreichste Kochbuchautor Griechenlands. Sein Name wurde zum Gattungsbegriff: In Griechenland heißt jedes Kochbuch noch heute schlicht „Tselementes". Die Sifnioten-Küche ist berühmt für ihre langsam gegarten Gerichte im Tontopf — Revithosoupa (Kichererbsensuppe), Mastelo (Lamm im Tontopf) und Loukoumades gehören zum kulinarischen Kanon der Insel.</p>
+        <p>Das mittelalterliche Kastro — ein kompaktes Dorf auf einem Felsensporn über dem Meer — ist eine der besterhaltenen mittelalterlichen Siedlungen der Kykladen. Die Häuser bilden selbst die Außenmauer, kein einziger Eingang zeigt zur Seeseite. Darunter, auf einem Felsen im Meer, steht die Chrysopigi-Kapelle — das spirituelle Herz der Insel, durch eine schmale Brücke verbunden.</p>
+      </div>
+      <div class="sf-timeline">
+        <div class="sf-tl-item">
+          <div class="sf-tl-dot"></div>
+          <div class="sf-tl-year">3000 v. Chr.</div>
+          <div class="sf-tl-event">Frühe Kykladenbesiedlung. Erste Töpferwerkstätten entstehen — die Tonvorkommen der Insel begründen eine Handwerkstradition, die bis heute lebt.</div>
+        </div>
+        <div class="sf-tl-item">
+          <div class="sf-tl-dot"></div>
+          <div class="sf-tl-year">6. Jh. v. Chr.</div>
+          <div class="sf-tl-event">Goldene Ära: Die Silber- und Goldminen machen Sifnos zur reichsten Insel der Kykladen. Das Schatzhaus in Delphi — eines der schönsten — wird von den Sifnioten gestiftet.</div>
+        </div>
+        <div class="sf-tl-item">
+          <div class="sf-tl-dot"></div>
+          <div class="sf-tl-year">524 v. Chr.</div>
+          <div class="sf-tl-event">Die Samier plündern den Reichtum von Sifnos. Kurz danach versinken die Minen im Meer — das Orakel hatte gewarnt: „Wenn das Prytaneion von Sifnos weiß wird und der Marktplatz weiß..." Die Sifnioten hatten zu spät gehört.</div>
+        </div>
+        <div class="sf-tl-item">
+          <div class="sf-tl-dot"></div>
+          <div class="sf-tl-year">13. Jh.</div>
+          <div class="sf-tl-event">Venezianische Herrschaft. Das Kastro entsteht — ein Dorf als Festung, dessen Häuser selbst die Mauer bilden. Kein Fenster zeigt zur Seeseite, kein Piratenblick kann hineinschauen.</div>
+        </div>
+        <div class="sf-tl-item">
+          <div class="sf-tl-dot"></div>
+          <div class="sf-tl-year">1878</div>
+          <div class="sf-tl-event">Geburt von Nikolaos Tselementes auf Sifnos — später der bedeutendste Kochbuchautor Griechenlands. Sein Name wird zum Synonym für Kochbuch: „Tselementes" bedeutet auf Griechisch bis heute Rezeptbuch.</div>
+        </div>
+        <div class="sf-tl-item">
+          <div class="sf-tl-dot"></div>
+          <div class="sf-tl-year">Heute</div>
+          <div class="sf-tl-event">Sifnos gilt als die Gastronomie-Insel der Kykladen — mit dem dichtesten Netz an guten Tavernen pro Einwohner in ganz Griechenland und einer lebendigen Töpfertradition in Kamares und Artemonas.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SEHENSWÜRDIGKEITEN -->
+  <section class="sf-section">
+    <div class="sf-section-head">
+      <p class="sf-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="sf-section-title">Kastro, Chrysopigi<br><em>und der Weg dazwischen</em></h2>
+      <div class="sf-divider"></div>
+    </div>
+    <div class="sf-sights-grid">
+
+      <div class="sf-sight-card">
+        <div class="sf-sight-visual sv-sf-kastro"></div>
+        <div class="sf-sight-body">
+          <p class="sf-sight-cat">Mittelalter · Wahrzeichen</p>
+          <h3 class="sf-sight-name">Kastro</h3>
+          <p class="sf-sight-desc">Das mittelalterliche Dorf auf dem Fels — die Häuser bilden selbst die Festungsmauer, venezianische Wappen zieren die Türen, schmale Gassen führen zu einer der ältesten Kirchen der Kykladen. Kein Touristenladen, echte Bewohner, lebendige Stille.</p>
+        </div>
+      </div>
+
+      <div class="sf-sight-card">
+        <div class="sf-sight-visual sv-sf-chrysopigi"></div>
+        <div class="sf-sight-body">
+          <p class="sf-sight-cat">Kapelle · Ikone</p>
+          <h3 class="sf-sight-name">Chrysopigi</h3>
+          <p class="sf-sight-desc">Die „Goldene Quelle" — eine weiße Kapelle auf einem Felsen im Meer, mit einer schmalen Brücke verbunden. Das am meisten fotografierte Motiv der Insel und das spirituelle Herz von Sifnos. Beim Fest im Juni pilgert die gesamte Insel hierher.</p>
+        </div>
+      </div>
+
+      <div class="sf-sight-card">
+        <div class="sf-sight-visual sv-sf-apollonia"></div>
+        <div class="sf-sight-body">
+          <p class="sf-sight-cat">Hauptstadt · Chora</p>
+          <h3 class="sf-sight-name">Apollonia</h3>
+          <p class="sf-sight-desc">Die Hauptstadt von Sifnos — kein einzelner Ort, sondern ein Netz verbundener Dörfer auf dem Inselrücken: Apollonia, Artemonas, Ano Petali. Weiße Gassen, Bougainvillea, Keramikläden und die lebhafteste Kaffeehauskultur der Insel.</p>
+        </div>
+      </div>
+
+      <div class="sf-sight-card">
+        <div class="sf-sight-visual sv-sf-pottery"></div>
+        <div class="sf-sight-body">
+          <p class="sf-sight-cat">Handwerk · Tradition</p>
+          <h3 class="sf-sight-name">Töpferwerkstätten</h3>
+          <p class="sf-sight-desc">Sifnos ist die Töpferinsel der Kykladen — in Kamares und Artemonas arbeiten noch aktive Töpfer nach jahrtausendealter Tradition. Der charakteristische rote Ton der Insel macht die Sifnos-Keramik unverwechselbar. Direktkauf in den Werkstätten möglich.</p>
+        </div>
+      </div>
+
+      <div class="sf-sight-card">
+        <div class="sf-sight-visual sv-sf-trail"></div>
+        <div class="sf-sight-body">
+          <p class="sf-sight-cat">Wandern · Natur</p>
+          <h3 class="sf-sight-name">Byzantinischer Pfad</h3>
+          <p class="sf-sight-desc">Das 200 km lange Wanderwegenetz von Sifnos ist eines der schönsten der griechischen Inseln — gepflasterte Kalderimia-Pfade verbinden alle Dörfer, Kapellen und Buchten. Der Klassiker: Kastro nach Chrysopigi, 2 Stunden entlang der Küste.</p>
+        </div>
+      </div>
+
+      <div class="sf-sight-card">
+        <div class="sf-sight-visual sv-sf-beach"></div>
+        <div class="sf-sight-body">
+          <p class="sf-sight-cat">Strände</p>
+          <h3 class="sf-sight-name">Platys Gialos &amp; Vathi</h3>
+          <p class="sf-sight-desc">Platys Gialos ist der längste und bekannteste Strand der Insel — breiter Sand, türkisblaues Wasser, Tavernen direkt am Meer. Vathi im Südwesten ist das Gegenteil: eine fast kreisrunde Bucht, nur zu Fuß oder per Boot erreichbar, mit einem einzigen Restaurant.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. ESSEN & TAVERNEN -->
+  <section class="sf-section">
+    <div class="sf-section-head">
+      <p class="sf-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="sf-section-title">Die Insel<br><em>des Tselementes</em></h2>
+      <div class="sf-divider"></div>
+    </div>
+    <div class="sf-tav-grid">
+
+      <div class="sf-tav-card">
+        <div class="sf-tav-top">
+          <div>
+            <h3 class="sf-tav-name">Liotrividi</h3>
+            <div class="sf-tav-loc">📍 Artemonas</div>
+          </div>
+          <div class="sf-tav-stars">★★★★★</div>
+        </div>
+        <p class="sf-tav-desc">Das beste Restaurant der Insel — in einer alten Ölmühle in Artemonas, mit einer Terrasse unter alten Olivenbäumen. Die Küche von Sifnos in ihrer reinsten Form: langsam gegarte Gerichte im Tontopf, saisonale Produkte, kein Kompromiss.</p>
+        <div class="sf-tav-dishes">
+          <span class="sf-tav-dish">Revithosoupa</span>
+          <span class="sf-tav-dish">Mastelo (Lamm im Tontopf)</span>
+          <span class="sf-tav-dish">Sifniotischer Käse</span>
+        </div>
+        <p class="sf-tav-price">Preisklasse: <span>€€€ · Abendessen · Reservierung</span></p>
+      </div>
+
+      <div class="sf-tav-card">
+        <div class="sf-tav-top">
+          <div>
+            <h3 class="sf-tav-name">To Steki tou Petrou</h3>
+            <div class="sf-tav-loc">📍 Apollonia, Hauptgasse</div>
+          </div>
+          <div class="sf-tav-stars">★★★★★</div>
+        </div>
+        <p class="sf-tav-desc">Das Lokal der Einheimischen in Apollonia — kein Touristenlokal, keine Dachterrasse mit Aussicht, nur gutes Essen. Die Revithosoupa (Kichererbsensuppe) gilt als die beste der Insel, die Loukoumades als die besten der Kykladen. Mittags immer voll.</p>
+        <div class="sf-tav-dishes">
+          <span class="sf-tav-dish">Revithosoupa</span>
+          <span class="sf-tav-dish">Loukoumades mit Honig</span>
+          <span class="sf-tav-dish">Melomakarona</span>
+        </div>
+        <p class="sf-tav-price">Preisklasse: <span>€ · Mittag · Einheimische</span></p>
+      </div>
+
+      <div class="sf-tav-card">
+        <div class="sf-tav-top">
+          <div>
+            <h3 class="sf-tav-name">Omega3</h3>
+            <div class="sf-tav-loc">📍 Kamares, Hafen</div>
+          </div>
+          <div class="sf-tav-stars">★★★★☆</div>
+        </div>
+        <p class="sf-tav-desc">Direkt am Hafenkai von Kamares — Fischerboote auf der einen Seite, die Inselberge auf der anderen. Tagesfrischer Fisch, einfach zubereitet, ohne Tamtam. Das erste und letzte Essen auf Sifnos, wenn die Fähre kommt und geht.</p>
+        <div class="sf-tav-dishes">
+          <span class="sf-tav-dish">Gegrillter Labrax</span>
+          <span class="sf-tav-dish">Tintenfisch-Risotto</span>
+          <span class="sf-tav-dish">Lokaler Weißwein</span>
+        </div>
+        <p class="sf-tav-price">Preisklasse: <span>€€ · Hafen-Taverne</span></p>
+      </div>
+
+      <div class="sf-tav-card">
+        <div class="sf-tav-top">
+          <div>
+            <h3 class="sf-tav-name">Mamounia</h3>
+            <div class="sf-tav-loc">📍 Platys Gialos, Strandtaverne</div>
+          </div>
+          <div class="sf-tav-stars">★★★★★</div>
+        </div>
+        <p class="sf-tav-desc">Die beste Strandtaverne der Insel — Tische im Sand, Füße im Wasser, Tontöpfe aus dem Holzkohleofen. Das Mastelo — Lamm oder Zicklein, tagelang im Sifniotischen Tontopf geschmort — ist hier das Gericht, für das man Sifnos bereist.</p>
+        <div class="sf-tav-dishes">
+          <span class="sf-tav-dish">Mastelo</span>
+          <span class="sf-tav-dish">Gegrillte Oktopustentakel</span>
+          <span class="sf-tav-dish">Tomatokeftedes</span>
+        </div>
+        <p class="sf-tav-price">Preisklasse: <span>€€ · Strand-Mittagessen</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. ORTE & CHARAKTER -->
+  <section class="sf-section">
+    <div class="sf-section-head">
+      <p class="sf-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="sf-section-title">Eine Insel<br><em>für alle Sinne</em></h2>
+      <div class="sf-divider"></div>
+    </div>
+    <div class="sf-viertel-grid">
+
+      <div class="sf-viertel-card">
+        <div class="sf-viertel-emoji">🏰</div>
+        <h3 class="sf-viertel-name">Kastro</h3>
+        <p class="sf-viertel-desc">Das mittelalterliche Felsdorf über dem Meer — die kompakteste und besterhaltene venezianische Siedlung der Kykladen. Die Häuser selbst sind die Mauer. Kein Auto, kein Lärm, nur Gassen und Meerblick.</p>
+      </div>
+
+      <div class="sf-viertel-card">
+        <div class="sf-viertel-emoji">🏙️</div>
+        <h3 class="sf-viertel-name">Apollonia &amp; Artemonas</h3>
+        <p class="sf-viertel-desc">Die Doppelhauptstadt im Inselzentrum — Apollonia für Cafés, Tavernen und Nachtleben, Artemonas für Keramik, herrschaftliche Kapitänshäuser und die beste Ölmühle der Insel.</p>
+      </div>
+
+      <div class="sf-viertel-card">
+        <div class="sf-viertel-emoji">⚓</div>
+        <h3 class="sf-viertel-name">Kamares</h3>
+        <p class="sf-viertel-desc">Der Hafen von Sifnos — wo die Fähre anlegt, die Töpferwerkstätten ihre Ware auslegen und die ersten Tavernen die Ankommenden empfangen. Ruhig, authentisch, der richtige Anfang.</p>
+      </div>
+
+      <div class="sf-viertel-card">
+        <div class="sf-viertel-emoji">🏖️</div>
+        <h3 class="sf-viertel-name">Vathi</h3>
+        <p class="sf-viertel-desc">Die abgelegenste Bucht der Insel — fast kreisförmig, windgeschützt, türkisblau. Nur zu Fuß über den Bergpfad oder per Wassertaxi erreichbar. Ein einziges Restaurant, ein paar Boote, vollkommene Stille.</p>
+      </div>
+
+      <div class="sf-viertel-card">
+        <div class="sf-viertel-emoji">🫙</div>
+        <h3 class="sf-viertel-name">Töpfereien</h3>
+        <p class="sf-viertel-desc">Sifnos ist Griechenlands Töpferinsel — in Kamares und Artemonas arbeiten Familienwerkstätten nach jahrtausendealter Tradition. Der rote Ton der Insel ist unverwechselbar, die Tontöpfe sind die besten Mitbringsel.</p>
+      </div>
+
+      <div class="sf-viertel-card">
+        <div class="sf-viertel-emoji">🚶</div>
+        <h3 class="sf-viertel-name">Kalderimia-Pfade</h3>
+        <p class="sf-viertel-desc">Das gepflasterte Wanderwegenetz verbindet alle Dörfer und Buchten — der bekannteste Pfad führt von Kastro nach Chrysopigi entlang der Küste. 200 km Wege, kein Trailrunner hat sie alle gesehen.</p>
+      </div>
+
+    </div>
+
+    <div class="sf-tip-banner">
+      <div class="sf-tip-emoji">🍲</div>
+      <div class="sf-tip-text">
+        <h3>Sonntagmorgen in Apollonia: der Duft des Tontopfs</h3>
+        <p>Auf Sifnos gibt es eine Tradition, die nirgendwo sonst in Griechenland so lebt: Sonntagmorgens trägt jede Familie ihren Tontopf mit der Revithosoupa zum Bäcker, der ihn über Nacht im Holzofen langsam gart. Wer früh genug aufsteht, sieht die Menschen mit ihren Töpfen durch die Gassen laufen — und riecht schon von weitem, was der Sonntag verspricht. Das ist Sifnos: eine Insel, die ihre Traditionen nicht für Touristen inszeniert, sondern einfach lebt.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>

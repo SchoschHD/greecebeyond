@@ -24,6 +24,9 @@
   <link rel="stylesheet" href="css/islands/rhodos.css">
   <link rel="stylesheet" href="css/islands/paros.css">
   <link rel="stylesheet" href="css/islands/naxos.css">
+  <link rel="stylesheet" href="css/islands/sifnos.css">
+  <link rel="stylesheet" href="css/islands/milos.css">
+  <link rel="stylesheet" href="css/islands/siros.css">
 
   <!-- Rezept-Styles -->
   <link rel="stylesheet" href="css/food/tzatziki.css">
@@ -209,7 +212,7 @@
         </div>
       </div>
 
-      <div class="island-card kyk-card">
+      <div class="island-card kyk-card" onclick="openSifnos()" style="cursor:pointer;">
         <div class="island-bg isle-sifnos"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -220,7 +223,7 @@
         </div>
       </div>
 
-      <div class="island-card kyk-card">
+      <div class="island-card kyk-card" onclick="openMilos()" style="cursor:pointer;">
         <div class="island-bg isle-milos"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -231,8 +234,8 @@
         </div>
       </div>
 
-      <div class="island-card kyk-card">
-        <div class="island-bg isle-syros"></div>
+      <div class="island-card kyk-card" onclick="openSiros()" style="cursor:pointer;">
+        <div class="island-bg isle-siros"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
           <p class="island-region">Kykladen</p>
@@ -914,8 +917,17 @@
 <div id="mykonos-page"    style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="naxos-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="paros-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="sifnos-page"     style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="milos-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="siros-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="kos-page"        style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="rhodos-page"     style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="kefalonia-page"  style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div> 
+<div id="corfu-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="zakynthos-page"  style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div> 
+<div id="lefkada-page"    style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>  
+<div id="amorgos-page"    style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="anafi-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 
 <!-- ═══════════════════════════════════════ -->
 <!--  STÄDTE-DETAIL-SEITEN (per fetch geladen) -->
@@ -942,11 +954,35 @@
   /* Insel-HTML dynamisch laden (benötigt Live Server in VSCode) */
   async function loadPage(id, file) {
     const container = document.getElementById(id);
-    if (container.innerHTML.trim() !== '') return; /* schon geladen */
+    if (container.innerHTML.trim() === '') {
     const res = await fetch('pages/' + file);
-    container.innerHTML = await res.text();
-  }
+    const text = await res.text();
+   if (id === 'athens-page' && !document.getElementById('athens-inline-styles')) {
+        const styleMatch = text.match(/<style[^>]*>([\s\S]*?)<\/style>/i);
+        if (styleMatch) {
+          const styleElement = document.createElement('style');
+          styleElement.id = 'athens-inline-styles';
+          styleElement.textContent = styleMatch[1];
+          document.head.appendChild(styleElement);
+        }
+      }
+      const bodyMatch = text.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+      let content = bodyMatch ? bodyMatch[1] : text;
+      const wrapperMatch = content.match(/^\s*<div\s+id=["']([^"']+)["'][^>]*>([\s\S]*)<\/div>\s*$/i);
+      container.innerHTML = wrapperMatch ? wrapperMatch[2] : content;
+    }
 
+    if (id === 'athens-page') {
+      container.querySelectorAll('[class]').forEach((element) => {
+        Array.from(element.classList).forEach((className) => {
+          if (className.startsWith('at-')) {
+            element.classList.add(`ath-${className.slice(3)}`);
+          }
+        });
+      });
+    }
+  }
+  
   function openSantorini() {
     loadPage('santorini-page', 'islands/santorini.html').then(() => {
       const p = document.getElementById('santorini-page');
@@ -995,6 +1031,18 @@
     document.body.style.overflow = '';
   }
 
+  function openSifnos() {
+    loadPage('sifnos-page', 'islands/sifnos.html').then(() => {
+      const p = document.getElementById('sifnos-page');
+      p.style.display = 'block'; p.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  function closeSifnos() {
+    document.getElementById('sifnos-page').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
   function openKos() {
     loadPage('kos-page', 'islands/kos.html').then(() => {
       const p = document.getElementById('kos-page');
@@ -1016,6 +1064,30 @@
   }
   function closeRhodos() {
     document.getElementById('rhodos-page').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function openMilos() {
+    loadPage('milos-page', 'islands/milos.html').then(() => {
+      const p = document.getElementById('milos-page');
+      p.style.display = 'block'; p.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  function closeMilos() {
+    document.getElementById('milos-page').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function openSiros() {
+    loadPage('siros-page', 'islands/siros.html').then(() => {
+      const p = document.getElementById('siros-page');
+      p.style.display = 'block'; p.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  function closeSiros() {
+    document.getElementById('siros-page').style.display = 'none';
     document.body.style.overflow = '';
   }
 

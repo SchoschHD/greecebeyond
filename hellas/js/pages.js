@@ -40,3 +40,18 @@ function closeNaxos() { closePage('naxos-page'); }
 
 function openParos() { openPage('paros-page'); }
 function closeParos() { closePage('paros-page'); }
+
+function openSifnos() { openPage('sifnos-page'); }
+function closeSifnos() { closePage('sifnos-page'); }
+
+function openKos() { openPage('kos-page'); }
+function closeKos() { closePage('kos-page'); }
+
+function openRhodos() { openPage('rhodos-page'); }
+function closeRhodos() { closePage('rhodos-page'); }
+
+function openMilos() { openPage('milos-page'); }
+function closeMilos() { closePage('milos-page'); }
+
+function openSiros() { openPage('siros-page'); }
+function closeSiros() { closePage('siros-page'); }
