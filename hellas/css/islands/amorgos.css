@@ -1,0 +1,257 @@
+/* =============================================
+   AMORGOS — Insel-Unterseite
+   Akzentfarbe: Klippen-Indigo / Tiefes Ägäis-Blau
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#amorgos-page {
+  font-family: 'Outfit', sans-serif;
+  color: #101420;
+  background: #f2f4f8;
+}
+
+/* ── BACK BAR ── */
+.am-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(242,244,248,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(30,70,150,0.2);
+}
+.am-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(30,70,150,0.35);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #103880; transition: all 0.2s;
+}
+.am-back-btn:hover { background: #e4ebf8; border-color: #103880; }
+.am-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.am-breadcrumb { font-size: 0.8rem; color: #6878a0; letter-spacing: 0.05em; }
+.am-breadcrumb span { color: #103880; }
+
+/* ── HERO ── */
+.am-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.am-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, #040810 0%, #081830 22%, #102050 48%, #1a4090 70%, #5888d0 100%);
+}
+.am-hero-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(ellipse 65% 55% at 50% 65%, rgba(16,64,144,0.28) 0%, transparent 70%),
+    radial-gradient(ellipse 42% 32% at 80% 15%, rgba(8,24,64,0.38) 0%, transparent 65%);
+}
+.am-hero-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+.am-hero-silhouette {
+  position: absolute; bottom: 108px; left: 50%; transform: translateX(-50%);
+  width: 860px; height: 180px;
+  opacity: 0.10;
+}
+.am-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(2,6,18,0.55);
+}
+.am-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23f2f4f8' fill-opacity='1' d='M0,64L60,58.7C120,53,240,43,360,48C480,53,600,75,720,80C840,85,960,75,1080,64C1200,53,1320,43,1380,37.3L1440,32L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.am-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.am-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: rgba(255,255,255,0.46);
+  margin-bottom: 1.2rem;
+}
+.am-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 300; line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+.am-hero-title em { font-style: italic; display: block; color: #a0c8f8; }
+.am-hero-sub {
+  max-width: 575px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(255,255,255,0.66); line-height: 1.75; font-weight: 300;
+}
+.am-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.am-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.80);
+}
+
+/* ── STATS BAR ── */
+.am-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(30,70,150,0.13);
+}
+.am-stat-item {
+  flex: 1; max-width: 200px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(30,70,150,0.09);
+}
+.am-stat-item:last-child { border-right: none; }
+.am-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: #103880; line-height: 1;
+}
+.am-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #6878a0; margin-top: 0.3rem;
+}
+
+/* ── CONTENT ── */
+.am-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.am-section { padding: 4rem 0 2rem; }
+.am-section-head { margin-bottom: 2.5rem; }
+.am-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #103880; margin-bottom: 0.8rem;
+}
+.am-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300; color: #080e28; line-height: 1.15;
+}
+.am-section-title em { font-style: italic; color: #103880; }
+.am-divider { width: 40px; height: 2px; background: #103880; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.am-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.am-history-text p {
+  font-size: 1rem; line-height: 1.9; color: #202840;
+  font-weight: 300; margin-bottom: 1.2rem;
+}
+.am-timeline { position: relative; padding-left: 2rem; }
+.am-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(16,56,128,0.2);
+}
+.am-tl-item { position: relative; margin-bottom: 1.8rem; }
+.am-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: white; border: 2px solid #103880;
+}
+.am-tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 600; color: #103880; margin-bottom: 0.25rem;
+}
+.am-tl-event { font-size: 0.88rem; color: #202840; line-height: 1.6; font-weight: 300; }
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.am-sights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.am-sight-card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid rgba(30,70,150,0.15);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.am-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(8,14,40,0.1); }
+.am-sight-visual { height: 140px; }
+.am-sight-body { padding: 1.2rem; }
+.am-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #103880; margin-bottom: 0.35rem;
+}
+.am-sight-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 300; color: #080e28; margin-bottom: 0.4rem;
+}
+.am-sight-desc { font-size: 0.83rem; color: #405068; line-height: 1.65; font-weight: 300; }
+
+.sv-am-chozoviotissa { background: linear-gradient(160deg, #181818 0%, #505050 55%, #e8e8e8 100%); }
+.sv-am-chora         { background: linear-gradient(160deg, #100c18 0%, #302858 55%, #9888d0 100%); }
+.sv-am-aegiali       { background: linear-gradient(160deg, #081018 0%, #103868 55%, #58a8e0 100%); }
+.sv-am-katapoliani   { background: linear-gradient(160deg, #080c18 0%, #182858 55%, #7898d8 100%); }
+.sv-am-trail         { background: linear-gradient(160deg, #101808 0%, #304028 55%, #88b068 100%); }
+.sv-am-sea           { background: linear-gradient(160deg, #040c18 0%, #0c3060 55%, #2878c8 100%); }
+
+/* ── TAVERNEN ── */
+.am-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.am-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(30,70,150,0.15);
+  border-radius: 4px; border-left: 3px solid #103880;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.am-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(8,14,40,0.08); }
+.am-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.am-tav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300; color: #080e28;
+}
+.am-tav-loc { font-size: 0.75rem; color: #6878a0; margin-top: 0.2rem; }
+.am-tav-stars { color: #103880; font-size: 0.85rem; letter-spacing: 2px; }
+.am-tav-desc { font-size: 0.88rem; color: #202840; line-height: 1.75; font-weight: 300; margin-bottom: 1rem; }
+.am-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.am-tav-dish {
+  padding: 3px 10px; background: #e4ebf8; color: #081840;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+}
+.am-tav-price { font-size: 0.8rem; color: #6878a0; }
+.am-tav-price span { color: #103880; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.am-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.am-viertel-card {
+  padding: 1.8rem; background: #e8eef8;
+  border-radius: 4px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.am-viertel-card:hover { background: #d0ddf4; transform: translateY(-4px); }
+.am-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.am-viertel-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300; color: #080e28; margin-bottom: 0.5rem;
+}
+.am-viertel-desc { font-size: 0.82rem; color: #405068; line-height: 1.65; font-weight: 300; }
+
+/* ── TIP BANNER ── */
+.am-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #040810 0%, #0c1e48 40%, #103880 100%);
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.am-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.am-tip-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300; color: white; margin-bottom: 0.6rem;
+}
+.am-tip-text p {
+  font-size: 0.92rem; color: rgba(255,255,255,0.70); line-height: 1.75; font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .am-back-bar { padding: 0.8rem 1.2rem; }
+  .am-content { padding: 2rem 1.2rem 4rem; }
+  .am-history-grid { grid-template-columns: 1fr; }
+  .am-sights-grid { grid-template-columns: 1fr 1fr; }
+  .am-tav-grid { grid-template-columns: 1fr; }
+  .am-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .am-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+}

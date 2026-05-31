@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amorgos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="amorgos.css" />
+</head>
+<body>
+<div id="amorgos-page">
+
+<div class="am-back-bar">
+  <button class="am-back-btn" onclick="history.back()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="am-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Amorgos</span></p>
+</div>
+
+<div class="am-hero">
+  <div class="am-hero-bg"></div>
+  <div class="am-hero-dots"></div>
+  <!-- Chozoviotissa monastery clinging to cliff + Chora windmills + steep coast -->
+  <svg class="am-hero-silhouette" viewBox="0 0 860 180" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Deep sea -->
+    <path d="M0,172 Q215,160 430,167 Q645,174 860,162 L860,180 L0,180Z" opacity="0.25"/>
+    <!-- Massive cliff face (center-right) — the defining feature of Amorgos -->
+    <path d="M420,180 L440,60 L480,40 L530,50 L560,35 L600,45 L640,30 L680,42 L720,38 L760,52 L800,45 L860,60 L860,180Z" opacity="0.32"/>
+    <!-- Chozoviotissa monastery — white rectangle plastered to cliff -->
+    <rect x="530" y="72" width="58" height="30" rx="1"/>
+    <rect x="534" y="62" width="50" height="12"/>
+    <!-- Monastery windows -->
+    <rect x="537" y="76" width="8" height="10"/>
+    <rect x="552" y="76" width="8" height="10"/>
+    <rect x="567" y="76" width="8" height="10"/>
+    <rect x="537" y="90" width="8" height="8"/>
+    <rect x="552" y="90" width="8" height="8"/>
+    <rect x="567" y="90" width="8" height="8"/>
+    <!-- Monastery bell tower -->
+    <rect x="576" y="50" width="14" height="24"/>
+    <ellipse cx="583" cy="50" rx="8" ry="5"/>
+    <!-- Chora on hilltop (left) -->
+    <path d="M120,180 Q180,100 230,72 Q265,55 300,60 L320,180Z" opacity="0.28"/>
+    <!-- Windmills on Chora hill -->
+    <rect x="222" y="56" width="18" height="38"/>
+    <ellipse cx="231" cy="56" rx="12" ry="7"/>
+    <line x1="231" y1="49" x2="231" y2="24" stroke="white" stroke-width="2.5"/>
+    <line x1="231" y1="49" x2="250" y2="38" stroke="white" stroke-width="2.5"/>
+    <line x1="231" y1="49" x2="244" y2="64" stroke="white" stroke-width="2.5"/>
+    <line x1="231" y1="49" x2="218" y2="64" stroke="white" stroke-width="2.5"/>
+    <line x1="231" y1="49" x2="212" y2="38" stroke="white" stroke-width="2.5"/>
+    <!-- Second windmill -->
+    <rect x="248" y="62" width="16" height="32"/>
+    <ellipse cx="256" cy="62" rx="10" ry="6"/>
+    <line x1="256" y1="56" x2="256" y2="36" stroke="white" stroke-width="2"/>
+    <line x1="256" y1="56" x2="270" y2="47" stroke="white" stroke-width="2"/>
+    <line x1="256" y1="56" x2="266" y2="68" stroke="white" stroke-width="2"/>
+    <line x1="256" y1="56" x2="246" y2="68" stroke="white" stroke-width="2"/>
+    <!-- Chora church dome -->
+    <rect x="270" y="66" width="28" height="24"/>
+    <ellipse cx="284" cy="66" rx="16" ry="10"/>
+    <!-- Aegiali bay (far left, gentle) -->
+    <path d="M0,180 Q40,140 80,130 Q110,124 130,130 L130,180Z" opacity="0.22"/>
+    <!-- Diver silhouette (subtle, Le Grand Bleu homage) -->
+    <ellipse cx="400" cy="158" rx="6" ry="10" opacity="0.5"/>
+    <path d="M394,165 Q400,172 406,165" opacity="0.5"/>
+  </svg>
+  <div class="am-hero-overlay"></div>
+  <div class="am-hero-content">
+    <p class="am-hero-tag">Kykladen · Östliche Ägäis · Kleine Kykladen</p>
+    <h1 class="am-hero-title">Amorgos<em>Αμοργός</em></h1>
+    <p class="am-hero-sub">Die wildeste Seele der Kykladen — ein Kloster, das senkrecht in einen 300 Meter hohen Fels eingebettet ist, eine Chora aus purer weißer Stille, das tiefste Blau der Ägäis und die Insel, die Luc Besson für „Le Grand Bleu" gewählt hat. Amorgos ist kein Reiseziel. Es ist eine Erfahrung.</p>
+    <div class="am-hero-pills">
+      <span class="am-hero-pill">Chozoviotissa</span>
+      <span class="am-hero-pill">Le Grand Bleu</span>
+      <span class="am-hero-pill">Wildnis</span>
+      <span class="am-hero-pill">Wandern</span>
+      <span class="am-hero-pill">Tauchen</span>
+    </div>
+  </div>
+  <div class="am-hero-waves"></div>
+</div>
+
+<div class="am-stats-bar">
+  <div class="am-stat-item">
+    <div class="am-stat-num">1.900</div>
+    <div class="am-stat-lbl">Einwohner</div>
+  </div>
+  <div class="am-stat-item">
+    <div class="am-stat-num">121 km²</div>
+    <div class="am-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="am-stat-item">
+    <div class="am-stat-num">300 m</div>
+    <div class="am-stat-lbl">Klosterfels Chozoviotissa</div>
+  </div>
+  <div class="am-stat-item">
+    <div class="am-stat-num">1988</div>
+    <div class="am-stat-lbl">Le Grand Bleu gedreht</div>
+  </div>
+  <div class="am-stat-item">
+    <div class="am-stat-num">#1</div>
+    <div class="am-stat-lbl">Tauchen Kykladen</div>
+  </div>
+</div>
+
+<div class="am-content">
+
+  <!-- 1. GESCHICHTE -->
+  <section class="am-section">
+    <div class="am-section-head">
+      <p class="am-section-label">01 — Geschichte</p>
+      <h2 class="am-section-title">Am Ende der Kykladen,<br><em>am Anfang von allem</em></h2>
+      <div class="am-divider"></div>
+    </div>
+    <div class="am-history-grid">
+      <div class="am-history-text">
+        <p>Amorgos liegt am östlichen Ende der Kykladen, fast schon zwischen den Inseln der Dodekanes — weit genug weg von allem, um seine Eigenheit zu bewahren. Die Insel wurde bereits in der frühen Bronzezeit besiedelt, und die antiken Städte Minoa, Arkesine und Aegiali blühten als unabhängige Stadtstaaten. Der Dichter Simonides — einer der bedeutendsten Lyriker des 7. Jahrhunderts v. Chr. — soll auf Amorgos geboren worden sein.</p>
+        <p>Das Chozoviotissa-Kloster, in den 11. Jahrhundert von Kaiser Alexios I. Komnenos gegründet, ist das Herzstück der Insel und eines der eindrucksvollsten Bauwerke Griechenlands: eine weiß getünchte Festung, die senkrecht in einen 300 Meter hohen Steilklippen-Fels eingebaut wurde. Es beherbergt eine wundertätige Ikone der Muttergottes und wird von einer Handvoll Mönche gelebt — Besucher werden in strenger Kleidungsordnung empfangen und mit Ouzo und Loukoumades bewirtet.</p>
+        <p>1988 drehte Luc Besson hier seinen Film „Le Grand Bleu" — die Unterwasserszenen im kristallklaren Tiefblau der Amorgos-Küste machten die Insel weltberühmt. Und trotzdem ist Amorgos geblieben, was es war: rau, steil, dünn besiedelt, mit einer Stille, die schwer zu finden und schwer zu vergessen ist.</p>
+      </div>
+      <div class="am-timeline">
+        <div class="am-tl-item">
+          <div class="am-tl-dot"></div>
+          <div class="am-tl-year">3000 v. Chr.</div>
+          <div class="am-tl-event">Frühe Kykladenbesiedlung. Amorgos gehört zum kykladischen Kulturraum der Bronzezeit — erste antike Städte entstehen an den drei Hauptsiedlungsplätzen Minoa, Arkesine und Aegiali.</div>
+        </div>
+        <div class="am-tl-item">
+          <div class="am-tl-dot"></div>
+          <div class="am-tl-year">650 v. Chr.</div>
+          <div class="am-tl-event">Der Dichter Simonides von Amorgos — einer der Begründer der griechischen Lyrik — schreibt seine berühmten Iamben auf der Insel. Amorgos ist geistiges Zentrum, lange bevor der Tourismus es entdeckt.</div>
+        </div>
+        <div class="am-tl-item">
+          <div class="am-tl-dot"></div>
+          <div class="am-tl-year">11. Jh.</div>
+          <div class="am-tl-event">Kaiser Alexios I. Komnenos gründet das Kloster Chozoviotissa — eine Festung in der Klippe, die eine wundertätige Ikone der Muttergottes beherbergt. Bis heute von Mönchen bewohnt.</div>
+        </div>
+        <div class="am-tl-item">
+          <div class="am-tl-dot"></div>
+          <div class="am-tl-year">1207</div>
+          <div class="am-tl-event">Venezianische Herrschaft unter den Ghisi. Amorgos wird Teil des Herzogtums der Ägäis — die Chora entsteht als befestigte Siedlung auf dem Bergrücken, unerreichbar für Piraten.</div>
+        </div>
+        <div class="am-tl-item">
+          <div class="am-tl-dot"></div>
+          <div class="am-tl-year">1988</div>
+          <div class="am-tl-event">Luc Besson dreht „Le Grand Bleu" auf Amorgos. Die Unterwasserszenen im türkisblauen Tiefwasser der Insel machen Amorgos und das Tauchen in der Ägäis weltberühmt.</div>
+        </div>
+        <div class="am-tl-item">
+          <div class="am-tl-dot"></div>
+          <div class="am-tl-year">Heute</div>
+          <div class="am-tl-event">Amorgos bleibt eine der am wenigsten überlaufenen Kykladen — kein Flughafen, keine Kreuzfahrtschiffe, ein einziger Hafen. Die Insel schützt sich durch ihre Lage und ihre Stille selbst.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SEHENSWÜRDIGKEITEN -->
+  <section class="am-section">
+    <div class="am-section-head">
+      <p class="am-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="am-section-title">Kloster, Chora<br><em>und das tiefste Blau</em></h2>
+      <div class="am-divider"></div>
+    </div>
+    <div class="am-sights-grid">
+
+      <div class="am-sight-card">
+        <div class="am-sight-visual sv-am-chozoviotissa"></div>
+        <div class="am-sight-body">
+          <p class="am-sight-cat">Kloster · Weltwunder</p>
+          <h3 class="am-sight-name">Chozoviotissa</h3>
+          <p class="am-sight-desc">Das eindrucksvollste Kloster Griechenlands — eine weiße, acht Stockwerke hohe Festung, die senkrecht in eine 300 Meter hohe Steilklippe eingebaut ist. Gegründet im 11. Jahrhundert, bewohnt bis heute. Besucher werden mit Ouzo und Loukoumades empfangen.</p>
+        </div>
+      </div>
+
+      <div class="am-sight-card">
+        <div class="am-sight-visual sv-am-chora"></div>
+        <div class="am-sight-body">
+          <p class="am-sight-cat">Hauptstadt · Chora</p>
+          <h3 class="am-sight-name">Chora</h3>
+          <p class="am-sight-desc">Die weiße Hauptstadt auf dem Bergrücken — eine der schönsten und einsamsten Choras der Kykladen. Windmühlen, eine venezianische Burg, Gassen so eng dass zwei Menschen sich kaum begegnen können und eine Stille, die einen hält.</p>
+        </div>
+      </div>
+
+      <div class="am-sight-card">
+        <div class="am-sight-visual sv-am-aegiali"></div>
+        <div class="am-sight-body">
+          <p class="am-sight-cat">Bucht · Dorf</p>
+          <h3 class="am-sight-name">Aegiali</h3>
+          <p class="am-sight-desc">Das Dorf im Norden der Insel — mit dem schönsten Sandstrand von Amorgos, einigen der besten Tavernen und einem Hafen, an dem die kleine Fähre aus Naxos anlegt. Ruhiger und grüner als der Süden der Insel.</p>
+        </div>
+      </div>
+
+      <div class="am-sight-card">
+        <div class="am-sight-visual sv-am-katapoliani"></div>
+        <div class="am-sight-body">
+          <p class="am-sight-cat">Haupthafen · Antike</p>
+          <h3 class="am-sight-name">Katapola &amp; Minoa</h3>
+          <p class="am-sight-desc">Der Haupthafen von Amorgos — in einer weiten Bucht, umgeben von drei Dörfern. Über Katapola thront die antike Stadt Minoa mit Resten von Gymnasium, Tempel und Stadtmauern aus dem 5. Jahrhundert v. Chr.</p>
+        </div>
+      </div>
+
+      <div class="am-sight-card">
+        <div class="am-sight-visual sv-am-trail"></div>
+        <div class="am-sight-body">
+          <p class="am-sight-cat">Wandern · Natur</p>
+          <h3 class="am-sight-name">Kalamidia-Pfad</h3>
+          <p class="am-sight-desc">Der Hauptwanderweg der Insel führt von Chora nach Aegiali — vier Stunden durch die wildeste Landschaft der Kykladen: Steilklippen, Schluchten, verlassene Dörfer, Kapellen auf unmöglichen Felsen. Keine Menschenseele auf dem Weg.</p>
+        </div>
+      </div>
+
+      <div class="am-sight-card">
+        <div class="am-sight-visual sv-am-sea"></div>
+        <div class="am-sight-body">
+          <p class="am-sight-cat">Tauchen · Le Grand Bleu</p>
+          <h3 class="am-sight-name">Tauchen &amp; Schnorcheln</h3>
+          <p class="am-sight-desc">Das Wasser von Amorgos ist das klarste der Kykladen — Sichtweiten von 40 Metern und mehr sind keine Seltenheit. Die Felswände fallen senkrecht in die Tiefe, Höhlen öffnen sich unter Wasser. Luc Besson wusste, warum er hierher kam.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. ESSEN & TAVERNEN -->
+  <section class="am-section">
+    <div class="am-section-head">
+      <p class="am-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="am-section-title">Einfach, frisch,<br><em>unvergesslich</em></h2>
+      <div class="am-divider"></div>
+    </div>
+    <div class="am-tav-grid">
+
+      <div class="am-tav-card">
+        <div class="am-tav-top">
+          <div>
+            <h3 class="am-tav-name">Liotrivi</h3>
+            <div class="am-tav-loc">📍 Chora, Hauptgasse</div>
+          </div>
+          <div class="am-tav-stars">★★★★★</div>
+        </div>
+        <p class="am-tav-desc">In der ältesten Ölmühle der Chora — gewölbte Decken aus dem 18. Jahrhundert, Kerzen auf groben Holztischen, eine Küche die keine Kompromisse macht. Das Geheimnis von Liotrivi: alles kommt von der Insel. Kalogeros-Käse, lokale Wurst, Honig aus dem Wildkräuter-Berg.</p>
+        <div class="am-tav-dishes">
+          <span class="am-tav-dish">Kalogeros-Käse gegrillt</span>
+          <span class="am-tav-dish">Amorgiano (lokale Wurst)</span>
+          <span class="am-tav-dish">Wildkräuter-Omelette</span>
+        </div>
+        <p class="am-tav-price">Preisklasse: <span>€€ · Abendessen · Chora</span></p>
+      </div>
+
+      <div class="am-tav-card">
+        <div class="am-tav-top">
+          <div>
+            <h3 class="am-tav-name">To Limani tou Aegiali</h3>
+            <div class="am-tav-loc">📍 Aegiali, Hafen</div>
+          </div>
+          <div class="am-tav-stars">★★★★★</div>
+        </div>
+        <p class="am-tav-desc">Direkt am kleinen Hafen von Aegiali — Fischerboote auf einer Seite, der Sandstrand auf der anderen. Täglicher Fischfang direkt aus dem Netz auf den Grill, ohne Zwischenstopp. Kein Restaurant in Griechenland serviert frischeren Fisch.</p>
+        <div class="am-tav-dishes">
+          <span class="am-tav-dish">Tagesfang gegrillt</span>
+          <span class="am-tav-dish">Tintenfisch in Wein</span>
+          <span class="am-tav-dish">Kakavia (Fischsuppe)</span>
+        </div>
+        <p class="am-tav-price">Preisklasse: <span>€€ · Mittag &amp; Abend · Hafen</span></p>
+      </div>
+
+      <div class="am-tav-card">
+        <div class="am-tav-top">
+          <div>
+            <h3 class="am-tav-name">Nektarios (Kloster-Café)</h3>
+            <div class="am-tav-loc">📍 Chozoviotissa, Klosterterasse</div>
+          </div>
+          <div class="am-tav-stars">★★★★★</div>
+        </div>
+        <p class="am-tav-desc">Kein Restaurant, sondern eine Tradition: Nach dem Klosterbesuch werden alle Besucher von den Mönchen auf der Terrasse mit einem Glas Ouzo, Loukoumades und Rakomelo bewirtet — kostenlos, herzlich, in 300 Metern Höhe über dem Meer. Das unvergesslichste Frühstück der Kykladen.</p>
+        <div class="am-tav-dishes">
+          <span class="am-tav-dish">Kloster-Ouzo</span>
+          <span class="am-tav-dish">Loukoumades</span>
+          <span class="am-tav-dish">Rakomelo</span>
+        </div>
+        <p class="am-tav-price">Preisklasse: <span>kostenlos · Nach Klosterbesuch</span></p>
+      </div>
+
+      <div class="am-tav-card">
+        <div class="am-tav-top">
+          <div>
+            <h3 class="am-tav-name">Vitsentzos</h3>
+            <div class="am-tav-loc">📍 Katapola, Hafen</div>
+          </div>
+          <div class="am-tav-stars">★★★★☆</div>
+        </div>
+        <p class="am-tav-desc">Das älteste Lokal am Hafen von Katapola — seit Generationen der erste und letzte Stopp auf Amorgos. Wenn die Fähre anlegt, ist Vitsentzos das erste Licht. Einfache Mezedes, Hauswein, die Hafenruhe des Abends. Ein perfekter Anfang.</p>
+        <div class="am-tav-dishes">
+          <span class="am-tav-dish">Taramosalata</span>
+          <span class="am-tav-dish">Tirokafteri</span>
+          <span class="am-tav-dish">Hauswein aus dem Fass</span>
+        </div>
+        <p class="am-tav-price">Preisklasse: <span>€ · Hafentaverne · Ganztags</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. ORTE & CHARAKTER -->
+  <section class="am-section">
+    <div class="am-section-head">
+      <p class="am-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="am-section-title">Steilklippen, Stille<br><em>und das Große Blaue</em></h2>
+      <div class="am-divider"></div>
+    </div>
+    <div class="am-viertel-grid">
+
+      <div class="am-viertel-card">
+        <div class="am-viertel-emoji">⛪</div>
+        <h3 class="am-viertel-name">Chozoviotissa</h3>
+        <p class="am-viertel-desc">Das Kloster in der Klippe — das Wahrzeichen der Insel, das kein Foto gerecht werden kann. Der Aufstieg zu Fuß dauert 20 Minuten und ist steil. Oben wartet einer der merkwürdigsten und schönsten Orte Griechenlands.</p>
+      </div>
+
+      <div class="am-viertel-card">
+        <div class="am-viertel-emoji">🏘️</div>
+        <h3 class="am-viertel-name">Chora</h3>
+        <p class="am-viertel-desc">Die Berghauptstadt — eine der stillsten und schönsten Choras der Kykladen. Windmühlen auf dem Kamm, eine venezianische Festung, Gassen ohne Autos. Abends gehört die Chora den Katzen und den Sternen.</p>
+      </div>
+
+      <div class="am-viertel-card">
+        <div class="am-viertel-emoji">⚓</div>
+        <h3 class="am-viertel-name">Katapola</h3>
+        <p class="am-viertel-desc">Der Haupthafen — drei Dörfer um eine weite Bucht, die antiken Ruinen von Minoa darüber. Der ruhigste Hafen der Kykladen, wo Fähren selten und Abende lang sind.</p>
+      </div>
+
+      <div class="am-viertel-card">
+        <div class="am-viertel-emoji">🏖️</div>
+        <h3 class="am-viertel-name">Aegiali</h3>
+        <p class="am-viertel-desc">Das grüne Nordende — mit dem besten Sandstrand der Insel, kleinen Bergdörfern dahinter (Tholaria, Langada) und einem Mikroklima das milder ist als der windgepeitschte Süden.</p>
+      </div>
+
+      <div class="am-viertel-card">
+        <div class="am-viertel-emoji">🤿</div>
+        <h3 class="am-viertel-name">Le Grand Bleu</h3>
+        <p class="am-viertel-desc">Das Wasser von Amorgos — das klarste der Kykladen, mit Sichtweiten bis 40 Meter. Unterwasserhöhlen, senkrechte Felswände, Delfinbegegnungen. Tauchbasis in Aegiali, Schnorcheln überall möglich.</p>
+      </div>
+
+      <div class="am-viertel-card">
+        <div class="am-viertel-emoji">🥾</div>
+        <h3 class="am-viertel-name">Wanderwege</h3>
+        <p class="am-viertel-desc">Amorgos hat das wildeste Wanderwegenetz der Kykladen — von Chora nach Aegiali, zum Kloster, zu verlassenen Dörfern. Keine Massen, keine Beschilderung für Gruppen, nur Pfade und die Insel.</p>
+      </div>
+
+    </div>
+
+    <div class="am-tip-banner">
+      <div class="am-tip-emoji">🌊</div>
+      <div class="am-tip-text">
+        <h3>Die Insel, die man nicht verlassen will</h3>
+        <p>Amorgos hat ein Problem: Wer einmal da war, findet keine andere Kykladeninsel mehr gut genug. Die Kombination aus Abgeschiedenheit, Wildheit, dem Kloster in der Klippe und dem klarsten Wasser der Ägäis ist schwer zu toppen. Die Insel hat keinen Flughafen — die Fähre von Piräus braucht acht Stunden. Dieser Aufwand hält die Massen fern und macht Amorgos zu dem, was es ist: das bestgehütete Geheimnis der Kykladen, das kein Geheimnis mehr ist, aber immer noch so klingt.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>
