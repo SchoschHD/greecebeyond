@@ -55,3 +55,24 @@ function closeMilos() { closePage('milos-page'); }
 
 function openSiros() { openPage('siros-page'); }
 function closeSiros() { closePage('siros-page'); }
+
+function openTinos() { openPage('tinos-page'); }
+function closeTinos() { closePage('tinos-page'); }
+
+function openAnafi() { openPage('anafi-page'); }
+function closeAnafi() { closePage('anafi-page'); }
+
+function openAmorgos() { openPage('amorgos-page'); }
+function closeAmorgos() { closePage('amorgos-page'); }
+
+function openFolegandros() { openPage('folegandros-page'); }
+function closeFolegandros() { closePage('folegandros-page'); }
+
+function openAndros() { openPage('andros-page'); }
+function closeAndros() { closePage('andros-page'); }
+
+function openSerifos() { openPage('serifos-page'); }
+function closeSerifos() { closePage('serifos-page'); }
+
+function openKoufonisia() { openPage('koufonisia-page'); }
+function closeKoufonisia() { closePage('koufonisia-page'); }
