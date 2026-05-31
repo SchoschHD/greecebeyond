@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Milos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="milos.css" />
+</head>
+<body>
+<div id="milos-page">
+
+<div class="ml-back-bar">
+  <button class="ml-back-btn" onclick="closeMilos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ml-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Milos</span></p>
+</div>
+
+<div class="ml-hero">
+  <div class="ml-hero-bg"></div>
+  <div class="ml-hero-dots"></div>
+  <!-- Sarakiniko moonscape + Klima fishermen's houses + volcano crater silhouette -->
+  <svg class="ml-hero-silhouette" viewBox="0 0 840 175" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sarakiniko white rock formations (left) -->
+    <ellipse cx="120" cy="138" rx="100" ry="30"/>
+    <ellipse cx="80"  cy="112" rx="52"  ry="28"/>
+    <ellipse cx="150" cy="108" rx="44"  ry="24"/>
+    <ellipse cx="60"  cy="94"  rx="32"  ry="18"/>
+    <ellipse cx="130" cy="90"  rx="36"  ry="16"/>
+    <ellipse cx="100" cy="78"  rx="28"  ry="14"/>
+    <!-- Sea baseline -->
+    <path d="M0,168 Q210,156 420,163 Q630,170 840,158 L840,175 L0,175Z" opacity="0.28"/>
+    <!-- Klima colourful boat-house facades (center) -->
+    <rect x="330" y="128" width="32" height="40"/>
+    <rect x="368" y="122" width="32" height="46"/>
+    <rect x="406" y="130" width="32" height="38"/>
+    <rect x="444" y="118" width="32" height="50"/>
+    <rect x="482" y="126" width="32" height="42"/>
+    <!-- Windows/doors on boat houses -->
+    <rect x="339" y="138" width="14" height="16"/>
+    <rect x="377" y="132" width="14" height="16"/>
+    <rect x="415" y="140" width="14" height="16"/>
+    <rect x="453" y="128" width="14" height="16"/>
+    <rect x="491" y="136" width="14" height="16"/>
+    <!-- Volcanic crater / hill (right) -->
+    <path d="M640,175 Q700,100 740,80 Q770,65 800,70 Q830,76 840,90 L840,175Z" opacity="0.30"/>
+    <!-- Crater opening -->
+    <path d="M720,80 Q740,65 760,68 Q755,58 740,54 Q725,58 720,80Z" opacity="0.5"/>
+    <!-- Sulphur steam wisps -->
+    <path d="M738,52 Q730,38 736,24" fill="none" stroke="white" stroke-width="2" opacity="0.4"/>
+    <path d="M748,50 Q754,34 750,20" fill="none" stroke="white" stroke-width="2" opacity="0.4"/>
+  </svg>
+  <div class="ml-hero-overlay"></div>
+  <div class="ml-hero-content">
+    <p class="ml-hero-tag">Kykladen · Westägäis · Vulkaninsel</p>
+    <h1 class="ml-hero-title">Milos<em>Μήλος</em></h1>
+    <p class="ml-hero-sub">Die Insel der Venus — Mondlandschaften aus weißem Vulkangestein, buntbemalte Bootshäuser im Wasser, 70 Strände in allen Farben und die Fundstelle der berühmtesten Statue der Welt. Milos ist die wildeste, fremdartigste Schönheit der Kykladen.</p>
+    <div class="ml-hero-pills">
+      <span class="ml-hero-pill">Venus de Milo</span>
+      <span class="ml-hero-pill">Sarakiniko</span>
+      <span class="ml-hero-pill">Vulkanisch</span>
+      <span class="ml-hero-pill">Klima</span>
+      <span class="ml-hero-pill">70 Strände</span>
+    </div>
+  </div>
+  <div class="ml-hero-waves"></div>
+</div>
+
+<div class="ml-stats-bar">
+  <div class="ml-stat-item">
+    <div class="ml-stat-num">4.800</div>
+    <div class="ml-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ml-stat-item">
+    <div class="ml-stat-num">70+</div>
+    <div class="ml-stat-lbl">Strände</div>
+  </div>
+  <div class="ml-stat-item">
+    <div class="ml-stat-num">160 km²</div>
+    <div class="ml-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="ml-stat-item">
+    <div class="ml-stat-num">100 v. Chr.</div>
+    <div class="ml-stat-lbl">Venus de Milo gefunden</div>
+  </div>
+  <div class="ml-stat-item">
+    <div class="ml-stat-num">#1</div>
+    <div class="ml-stat-lbl">Geologische Vielfalt GR</div>
+  </div>
+</div>
+
+<div class="ml-content">
+
+  <section class="ml-section">
+    <div class="ml-section-head">
+      <p class="ml-section-label">01 — Geschichte</p>
+      <h2 class="ml-section-title">Vom Obsidian der Steinzeit<br><em>zur Venus der Welt</em></h2>
+      <div class="ml-divider"></div>
+    </div>
+    <div class="ml-history-grid">
+      <div class="ml-history-text">
+        <p>Milos war in der Steinzeit die wichtigste Insel der Ägäis — nicht wegen Gold oder Marmor, sondern wegen Obsidian. Das schwarze Vulkanglas von Milos war das härteste Werkzeugmaterial der Vorzeit und wurde von Händlern über das gesamte östliche Mittelmeer verteilt. Obsidian-Klingen von Milos wurden in Anatolien, Ägypten und auf dem griechischen Festland gefunden — eine der ersten Handelsrouten der Menschheit führte hierher.</p>
+        <p>1820 fanden Bauern bei Erdarbeiten in einem Feld nahe Klima eine zerbrochene Marmorstatue. Es war die Venus von Milos — heute im Louvre, das bekannteste Kunstwerk der Antike und das Symbol eines ganzen Museums. Milos bekam sie nie zurück. Aber die Insel trägt noch immer den Namen: Venus de Milo, Aphrodite von Milos.</p>
+        <p>Was die Jahrhunderte dazwischen füllten — mykenische Siedler, athenische Massaker (416 v. Chr. ließ Athen alle Männer von Milos töten und die Frauen und Kinder versklaven), byzantinische Fischer, venezianische Händler — hat die Insel geformt, ohne sie zu bändigen. Das Vulkangestein, die weißen Mondlandschaften, die 70 Strände in 70 Farben: Milos ist älter als jede Geschichte, die man darüber erzählen kann.</p>
+      </div>
+      <div class="ml-timeline">
+        <div class="ml-tl-item">
+          <div class="ml-tl-dot"></div>
+          <div class="ml-tl-year">11.000 v. Chr.</div>
+          <div class="ml-tl-event">Erste Besiedlung von Milos. Der Obsidian der Insel — das härteste natürliche Schneidmaterial — wird zur wichtigsten Handelsware der Steinzeit im gesamten Mittelmeer.</div>
+        </div>
+        <div class="ml-tl-item">
+          <div class="ml-tl-dot"></div>
+          <div class="ml-tl-year">416 v. Chr.</div>
+          <div class="ml-tl-event">Das Melische Massaker — Athen straft die neutrale Insel mit vernichtender Grausamkeit: alle Männer werden getötet, Frauen und Kinder versklavt. Thukydides beschreibt es als Symbol der athenischen Hybris.</div>
+        </div>
+        <div class="ml-tl-item">
+          <div class="ml-tl-dot"></div>
+          <div class="ml-tl-year">100 v. Chr.</div>
+          <div class="ml-tl-event">Entstehung der Venus de Milo — eine der vollkommensten Skulpturen der Antike, im hellenistischen Stil aus parischem Marmor. Sie bleibt vergessen in der Erde bis 1820.</div>
+        </div>
+        <div class="ml-tl-item">
+          <div class="ml-tl-dot"></div>
+          <div class="ml-tl-year">1820</div>
+          <div class="ml-tl-event">Bauer Yorgos Kentrotas findet beim Pflügen die zerbrochene Marmorstatue. Die französische Marine kauft sie für 400 Francs und bringt sie nach Paris — ins Louvre, wo sie noch heute steht.</div>
+        </div>
+        <div class="ml-tl-item">
+          <div class="ml-tl-dot"></div>
+          <div class="ml-tl-year">1876</div>
+          <div class="ml-tl-event">Entdeckung der frühchristlichen Katakomben von Milos — die bedeutendsten außerhalb Roms, mit über 2000 Begräbnissen in kilometerlangen unterirdischen Gängen aus dem 1.–5. Jahrhundert n. Chr.</div>
+        </div>
+        <div class="ml-tl-item">
+          <div class="ml-tl-dot"></div>
+          <div class="ml-tl-year">Heute</div>
+          <div class="ml-tl-event">Milos gilt als die geologisch vielfältigste Insel Griechenlands — Vulkanformationen, Thermalquellen, über 70 Strände in Weiß, Schwarz, Rot und Grün. Die fremdeste und schönste Insel der Kykladen.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ml-section">
+    <div class="ml-section-head">
+      <p class="ml-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ml-section-title">Mondlandschaft,<br><em>bunte Bootshäuser und Katakomben</em></h2>
+      <div class="ml-divider"></div>
+    </div>
+    <div class="ml-sights-grid">
+
+      <div class="ml-sight-card">
+        <div class="ml-sight-visual sv-ml-sarakiniko"></div>
+        <div class="ml-sight-body">
+          <p class="ml-sight-cat">Naturwunder · Ikone</p>
+          <h3 class="ml-sight-name">Sarakiniko</h3>
+          <p class="ml-sight-desc">Die Mondlandschaft von Milos — weiße Vulkantuff-Formationen, glattgeschliffen von Wind und Meer, direkt am türkisblauen Wasser. Kein anderer Ort in Griechenland sieht so aus. Bei Sonnenaufgang leuchtet das Weiß rosé, bei Vollmond silber.</p>
+        </div>
+      </div>
+
+      <div class="ml-sight-card">
+        <div class="ml-sight-visual sv-ml-klima"></div>
+        <div class="ml-sight-body">
+          <p class="ml-sight-cat">Fischerort · Ikone</p>
+          <h3 class="ml-sight-name">Klima</h3>
+          <p class="ml-sight-desc">Das pittoreske Fischerdorf mit den bunten Syrmata — zweistöckige Bootshäuser direkt aus dem Wasser gebaut, unten das Boot, oben die Wohnung. Die pastellfarbenen Fassaden spiegeln sich im stillen Wasser der Bucht. Das meistabrefogeierte Dorf Griechenlands.</p>
+        </div>
+      </div>
+
+      <div class="ml-sight-card">
+        <div class="ml-sight-visual sv-ml-venus"></div>
+        <div class="ml-sight-body">
+          <p class="ml-sight-cat">Antike · Museum</p>
+          <h3 class="ml-sight-name">Venus-Fundstelle &amp; Museum</h3>
+          <p class="ml-sight-desc">Im Dorf Trypiti steht eine Kopie der Venus de Milo an dem Feld, wo sie 1820 gefunden wurde. Das Archäologische Museum in Plaka zeigt Originale aus der Steinzeit bis zur Antike — und eine bittere Notiz, dass die Venus in Paris ist.</p>
+        </div>
+      </div>
+
+      <div class="ml-sight-card">
+        <div class="ml-sight-visual sv-ml-catacombs"></div>
+        <div class="ml-sight-body">
+          <p class="ml-sight-cat">Frühchristlich · Katakomben</p>
+          <h3 class="ml-sight-name">Katakomben</h3>
+          <p class="ml-sight-desc">Die bedeutendsten frühchristlichen Katakomben außerhalb Roms — kilometerlange unterirdische Gänge mit über 2000 Begräbnissen aus dem 1.–5. Jahrhundert. Kühl, still, erschütternd. Geführte Touren täglich.</p>
+        </div>
+      </div>
+
+      <div class="ml-sight-card">
+        <div class="ml-sight-visual sv-ml-firopotamos"></div>
+        <div class="ml-sight-body">
+          <p class="ml-sight-cat">Dorf · Hafen</p>
+          <h3 class="ml-sight-name">Firopotamos &amp; Mandrakia</h3>
+          <p class="ml-sight-desc">Zwei weitere Syrmata-Dörfer wie Klima — Firopotamos an der Nordküste mit einer kleinen weißen Kirche direkt am Wasser, Mandrakia mit den dichtesten Bootshäusern der Insel. Fast unberührt vom Tourismus.</p>
+        </div>
+      </div>
+
+      <div class="ml-sight-card">
+        <div class="ml-sight-visual sv-ml-volcano"></div>
+        <div class="ml-sight-body">
+          <p class="ml-sight-cat">Geologie · Natur</p>
+          <h3 class="ml-sight-name">Vulkanische Strände</h3>
+          <p class="ml-sight-desc">Milos hat 70 Strände — jeder anders: Tsigrado mit schwarzem Vulkansand und Kletterabstieg, Paliochori mit heißen Thermalquellen direkt unter dem Sand, Gerakas aus rotem Gestein, Papafragas in einer Meereshöhle.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ml-section">
+    <div class="ml-section-head">
+      <p class="ml-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="ml-section-title">Fisch, Pitarakia<br><em>und Vulkanwärme</em></h2>
+      <div class="ml-divider"></div>
+    </div>
+    <div class="ml-tav-grid">
+
+      <div class="ml-tav-card">
+        <div class="ml-tav-top">
+          <div>
+            <h3 class="ml-tav-name">Ergina</h3>
+            <div class="ml-tav-loc">📍 Plaka, Hauptstadt</div>
+          </div>
+          <div class="ml-tav-stars">★★★★★</div>
+        </div>
+        <p class="ml-tav-desc">Das beste Restaurant der Insel — in einer alten Steinterrasse in Plaka, mit Blick über die gesamte Bucht von Milos bis zur Caldera. Lokale Küche auf Spitzenniveau: Pitarakia (Käsepastetchen aus Milos), frischer Fisch, milesischer Wein.</p>
+        <div class="ml-tav-dishes">
+          <span class="ml-tav-dish">Pitarakia</span>
+          <span class="ml-tav-dish">Revithosoupa milesisch</span>
+          <span class="ml-tav-dish">Lavraki vom Grill</span>
+        </div>
+        <p class="ml-tav-price">Preisklasse: <span>€€€ · Abendessen · Panorama</span></p>
+      </div>
+
+      <div class="ml-tav-card">
+        <div class="ml-tav-top">
+          <div>
+            <h3 class="ml-tav-name">Sirocco</h3>
+            <div class="ml-tav-loc">📍 Adamas, Hafen</div>
+          </div>
+          <div class="ml-tav-stars">★★★★★</div>
+        </div>
+        <p class="ml-tav-desc">Direkt am Hafenkai von Adamas — die beste Fischadresse im Hafenviertel. Was die lokalen Boote morgens bringen, steht abends auf dem Teller. Einfach, ehrlich, von einer Familie geführt die seit drei Generationen hier fischt und kocht.</p>
+        <div class="ml-tav-dishes">
+          <span class="ml-tav-dish">Gegrillter Tintenfisch</span>
+          <span class="ml-tav-dish">Bourbourelia (lokale Garnelen)</span>
+          <span class="ml-tav-dish">Weißwein aus Milos</span>
+        </div>
+        <p class="ml-tav-price">Preisklasse: <span>€€ · Mittag &amp; Abend</span></p>
+      </div>
+
+      <div class="ml-tav-card">
+        <div class="ml-tav-top">
+          <div>
+            <h3 class="ml-tav-name">Paliochori Beach Bar</h3>
+            <div class="ml-tav-loc">📍 Paliochori Strand, Südküste</div>
+          </div>
+          <div class="ml-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ml-tav-desc">Am einzigartigen Thermalstrand von Paliochori — heiße Quellen brodeln unter dem Sandstrand, das Meeresrauschen ist Soundtrack. Die Strandtaverne kocht direkt über den Thermalquellen: geothermisch gegrillter Fisch, ein Erlebnis das es nur hier gibt.</p>
+        <div class="ml-tav-dishes">
+          <span class="ml-tav-dish">Geothermisch gegrillter Fisch</span>
+          <span class="ml-tav-dish">Meeresfrüchte-Saganaki</span>
+          <span class="ml-tav-dish">Lokales Bier</span>
+        </div>
+        <p class="ml-tav-price">Preisklasse: <span>€€ · Mittagessen am Vulkanstrand</span></p>
+      </div>
+
+      <div class="ml-tav-card">
+        <div class="ml-tav-top">
+          <div>
+            <h3 class="ml-tav-name">Hamos</h3>
+            <div class="ml-tav-loc">📍 Plaka, Altstadt</div>
+          </div>
+          <div class="ml-tav-stars">★★★★★</div>
+        </div>
+        <p class="ml-tav-desc">„Hamos" bedeutet auf Griechisch Chaos — und der Name ist Programm: ein chaotisch-fröhliches, lautes, lebendiges Lokal in Plaka, das die Einheimischen lieben und Touristen kaum finden. Mezedes, Wein aus dem Fass, Musik bis in die Nacht.</p>
+        <div class="ml-tav-dishes">
+          <span class="ml-tav-dish">Tirokafteri (Käsedip)</span>
+          <span class="ml-tav-dish">Loukaniko vom Grill</span>
+          <span class="ml-tav-dish">Barrel-Wein</span>
+        </div>
+        <p class="ml-tav-price">Preisklasse: <span>€ · Abend · Einheimische</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ml-section">
+    <div class="ml-section-head">
+      <p class="ml-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="ml-section-title">70 Strände,<br><em>eine Insel wie kein anderer Ort</em></h2>
+      <div class="ml-divider"></div>
+    </div>
+    <div class="ml-viertel-grid">
+
+      <div class="ml-viertel-card">
+        <div class="ml-viertel-emoji">🌕</div>
+        <h3 class="ml-viertel-name">Sarakiniko</h3>
+        <p class="ml-viertel-desc">Die Mondlandschaft — weiße Vulkanklippen, türkisblaues Wasser, keine Vegetation. Bei Vollmond und bei Sonnenaufgang am schönsten. Wer früh kommt, hat sie für sich allein.</p>
+      </div>
+
+      <div class="ml-viertel-card">
+        <div class="ml-viertel-emoji">🎨</div>
+        <h3 class="ml-viertel-name">Klima &amp; Syrmata</h3>
+        <p class="ml-viertel-desc">Die bunten Bootshäuser-Dörfer — Klima, Firopotamos, Mandrakia. Jedes Syrmata hat seine eigene Farbe, jede Bucht ihren eigenen Charakter. Am schönsten am frühen Morgen, wenn die Fischer auslaufen.</p>
+      </div>
+
+      <div class="ml-viertel-card">
+        <div class="ml-viertel-emoji">🏛️</div>
+        <h3 class="ml-viertel-name">Plaka</h3>
+        <p class="ml-viertel-desc">Die Hauptstadt auf dem Hügel — weiße Gassen, die Kastro-Ruine, das Archäologische Museum und ein Panorama über die gesamte Caldera-Bucht. Abends gehört die Uferpromenade den Einheimischen.</p>
+      </div>
+
+      <div class="ml-viertel-card">
+        <div class="ml-viertel-emoji">♨️</div>
+        <h3 class="ml-viertel-name">Paliochori</h3>
+        <p class="ml-viertel-desc">Der Thermalstrand — heiße vulkanische Quellen brodeln unter dem Sand, das Wasser wärmt sich auf 40 Grad. Ein Strand, der nirgendwo sonst in Europa so existiert.</p>
+      </div>
+
+      <div class="ml-viertel-card">
+        <div class="ml-viertel-emoji">⛵</div>
+        <h3 class="ml-viertel-name">Bootstouren</h3>
+        <p class="ml-viertel-desc">Viele Strände von Milos sind nur per Boot erreichbar — Papafragas (Meereshöhle), Kleftiko (Piratenhöhle, schönster Ankerplatz der Ägäis), Sikia (geschlossene Meereshöhle). Tagestouren ab Adamas täglich.</p>
+      </div>
+
+      <div class="ml-viertel-card">
+        <div class="ml-viertel-emoji">🪨</div>
+        <h3 class="ml-viertel-name">Geologische Vielfalt</h3>
+        <p class="ml-viertel-desc">Schwarzer Obsidiansand, weißer Tuff, roter Sandstein, grüne Malachit-Klippen — Milos hat mehr geologische Formationen auf kleinstem Raum als jede andere griechische Insel. Ein Lehrbuch in Landschaft.</p>
+      </div>
+
+    </div>
+
+    <div class="ml-tip-banner">
+      <div class="ml-tip-emoji">🌋</div>
+      <div class="ml-tip-text">
+        <h3>Sarakiniko um 6 Uhr morgens</h3>
+        <p>Milos hat eine Eigenheit: Es ist gleichzeitig eines der beliebtesten und eines der unberührtesten Reiseziele der Kykladen. Das liegt an der Größe — 70 Strände für 4800 Einwohner — und an der Logistik: Viele Orte sind nur per Boot oder Vierradantrieb erreichbar. Wer früh aufsteht und nach Sarakiniko fährt, bevor die ersten Tagesausflügler ankommen, steht allein in einer Mondlandschaft über dem blauen Meer. Das ist das Versprechen von Milos: Es hält, was es zeigt.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>

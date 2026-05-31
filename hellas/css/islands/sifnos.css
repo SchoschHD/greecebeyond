@@ -1,0 +1,257 @@
+/* =============================================
+   SIFNOS — Insel-Unterseite
+   Akzentfarbe: Töpferton / Keramik-Terrakotta
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#sifnos-page {
+  font-family: 'Outfit', sans-serif;
+  color: #1c1410;
+  background: #faf6f2;
+}
+
+/* ── BACK BAR ── */
+.sf-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(250,246,242,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(190,90,40,0.2);
+}
+.sf-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(190,90,40,0.38);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #b05020; transition: all 0.2s;
+}
+.sf-back-btn:hover { background: #fdeee4; border-color: #b05020; }
+.sf-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.sf-breadcrumb { font-size: 0.8rem; color: #8a8078; letter-spacing: 0.05em; }
+.sf-breadcrumb span { color: #b05020; }
+
+/* ── HERO ── */
+.sf-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.sf-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, #120804 0%, #301408 22%, #782810 48%, #c05018 70%, #e8a060 100%);
+}
+.sf-hero-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(ellipse 65% 55% at 50% 65%, rgba(192,80,24,0.22) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 76% 18%, rgba(120,40,16,0.32) 0%, transparent 65%);
+}
+.sf-hero-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+.sf-hero-silhouette {
+  position: absolute; bottom: 108px; left: 50%; transform: translateX(-50%);
+  width: 840px; height: 175px;
+  opacity: 0.10;
+}
+.sf-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(14,6,2,0.52);
+}
+.sf-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23faf6f2' fill-opacity='1' d='M0,64L60,58.7C120,53,240,43,360,48C480,53,600,75,720,80C840,85,960,75,1080,64C1200,53,1320,43,1380,37.3L1440,32L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.sf-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.sf-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: rgba(255,255,255,0.48);
+  margin-bottom: 1.2rem;
+}
+.sf-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 300; line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+.sf-hero-title em { font-style: italic; display: block; color: #f8d0a0; }
+.sf-hero-sub {
+  max-width: 570px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(255,255,255,0.68); line-height: 1.75; font-weight: 300;
+}
+.sf-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.sf-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.80);
+}
+
+/* ── STATS BAR ── */
+.sf-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(190,90,40,0.14);
+}
+.sf-stat-item {
+  flex: 1; max-width: 200px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(190,90,40,0.1);
+}
+.sf-stat-item:last-child { border-right: none; }
+.sf-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: #b05020; line-height: 1;
+}
+.sf-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #8a8078; margin-top: 0.3rem;
+}
+
+/* ── CONTENT ── */
+.sf-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.sf-section { padding: 4rem 0 2rem; }
+.sf-section-head { margin-bottom: 2.5rem; }
+.sf-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #b05020; margin-bottom: 0.8rem;
+}
+.sf-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300; color: #201008; line-height: 1.15;
+}
+.sf-section-title em { font-style: italic; color: #b05020; }
+.sf-divider { width: 40px; height: 2px; background: #b05020; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.sf-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.sf-history-text p {
+  font-size: 1rem; line-height: 1.9; color: #3a2818;
+  font-weight: 300; margin-bottom: 1.2rem;
+}
+.sf-timeline { position: relative; padding-left: 2rem; }
+.sf-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(176,80,32,0.22);
+}
+.sf-tl-item { position: relative; margin-bottom: 1.8rem; }
+.sf-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: white; border: 2px solid #b05020;
+}
+.sf-tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 600; color: #b05020; margin-bottom: 0.25rem;
+}
+.sf-tl-event { font-size: 0.88rem; color: #3a2818; line-height: 1.6; font-weight: 300; }
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.sf-sights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.sf-sight-card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid rgba(190,90,40,0.18);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.sf-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(32,16,8,0.1); }
+.sf-sight-visual { height: 140px; }
+.sf-sight-body { padding: 1.2rem; }
+.sf-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #b05020; margin-bottom: 0.35rem;
+}
+.sf-sight-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 300; color: #201008; margin-bottom: 0.4rem;
+}
+.sf-sight-desc { font-size: 0.83rem; color: #5a4838; line-height: 1.65; font-weight: 300; }
+
+.sv-sf-kastro      { background: linear-gradient(160deg, #181008 0%, #504020 55%, #d0a860 100%); }
+.sv-sf-chrysopigi  { background: linear-gradient(160deg, #081018 0%, #104878 55%, #60b0e8 100%); }
+.sv-sf-apollonia   { background: linear-gradient(160deg, #181410 0%, #584838 55%, #e8c8a0 100%); }
+.sv-sf-pottery     { background: linear-gradient(160deg, #1a0c06 0%, #6a3010 55%, #d07840 100%); }
+.sv-sf-trail       { background: linear-gradient(160deg, #101808 0%, #304828 55%, #88b870 100%); }
+.sv-sf-beach       { background: linear-gradient(160deg, #081018 0%, #0c5070 55%, #50c0d8 100%); }
+
+/* ── TAVERNEN ── */
+.sf-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.sf-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(190,90,40,0.18);
+  border-radius: 4px; border-left: 3px solid #b05020;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.sf-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(32,16,8,0.08); }
+.sf-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.sf-tav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300; color: #201008;
+}
+.sf-tav-loc { font-size: 0.75rem; color: #8a8078; margin-top: 0.2rem; }
+.sf-tav-stars { color: #b05020; font-size: 0.85rem; letter-spacing: 2px; }
+.sf-tav-desc { font-size: 0.88rem; color: #3a2818; line-height: 1.75; font-weight: 300; margin-bottom: 1rem; }
+.sf-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.sf-tav-dish {
+  padding: 3px 10px; background: #fdeee4; color: #3a1808;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+}
+.sf-tav-price { font-size: 0.8rem; color: #8a8078; }
+.sf-tav-price span { color: #b05020; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.sf-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.sf-viertel-card {
+  padding: 1.8rem; background: #fdf0e8;
+  border-radius: 4px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.sf-viertel-card:hover { background: #fae0cc; transform: translateY(-4px); }
+.sf-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.sf-viertel-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300; color: #201008; margin-bottom: 0.5rem;
+}
+.sf-viertel-desc { font-size: 0.82rem; color: #5a4838; line-height: 1.65; font-weight: 300; }
+
+/* ── TIP BANNER ── */
+.sf-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #120804 0%, #401808 40%, #b05020 100%);
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.sf-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.sf-tip-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300; color: white; margin-bottom: 0.6rem;
+}
+.sf-tip-text p {
+  font-size: 0.92rem; color: rgba(255,255,255,0.70); line-height: 1.75; font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .sf-back-bar { padding: 0.8rem 1.2rem; }
+  .sf-content { padding: 2rem 1.2rem 4rem; }
+  .sf-history-grid { grid-template-columns: 1fr; }
+  .sf-sights-grid { grid-template-columns: 1fr 1fr; }
+  .sf-tav-grid { grid-template-columns: 1fr; }
+  .sf-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .sf-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+}

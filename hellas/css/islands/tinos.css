@@ -1,0 +1,257 @@
+/* =============================================
+   TINOS — Insel-Unterseite
+   Akzentfarbe: Pilgerblau / Silbergrau Marmor
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#tinos-page {
+  font-family: 'Outfit', sans-serif;
+  color: #121820;
+  background: #f4f7fa;
+}
+
+/* ── BACK BAR ── */
+.tn-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(244,247,250,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(50,100,170,0.2);
+}
+.tn-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(50,100,170,0.35);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #1a5090; transition: all 0.2s;
+}
+.tn-back-btn:hover { background: #e8f0fc; border-color: #1a5090; }
+.tn-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.tn-breadcrumb { font-size: 0.8rem; color: #708090; letter-spacing: 0.05em; }
+.tn-breadcrumb span { color: #1a5090; }
+
+/* ── HERO ── */
+.tn-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.tn-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, #060c18 0%, #0e2040 22%, #1a4888 48%, #3878c0 70%, #90b8e8 100%);
+}
+.tn-hero-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(ellipse 70% 55% at 50% 68%, rgba(26,72,136,0.25) 0%, transparent 70%),
+    radial-gradient(ellipse 38% 28% at 78% 18%, rgba(16,40,88,0.35) 0%, transparent 65%);
+}
+.tn-hero-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+.tn-hero-silhouette {
+  position: absolute; bottom: 108px; left: 50%; transform: translateX(-50%);
+  width: 860px; height: 180px;
+  opacity: 0.10;
+}
+.tn-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(4,10,24,0.52);
+}
+.tn-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23f4f7fa' fill-opacity='1' d='M0,64L60,58.7C120,53,240,43,360,48C480,53,600,75,720,80C840,85,960,75,1080,64C1200,53,1320,43,1380,37.3L1440,32L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.tn-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.tn-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: rgba(255,255,255,0.48);
+  margin-bottom: 1.2rem;
+}
+.tn-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 300; line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+.tn-hero-title em { font-style: italic; display: block; color: #b8d8f8; }
+.tn-hero-sub {
+  max-width: 575px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(255,255,255,0.68); line-height: 1.75; font-weight: 300;
+}
+.tn-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.tn-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.80);
+}
+
+/* ── STATS BAR ── */
+.tn-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(50,100,170,0.14);
+}
+.tn-stat-item {
+  flex: 1; max-width: 200px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(50,100,170,0.1);
+}
+.tn-stat-item:last-child { border-right: none; }
+.tn-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: #1a5090; line-height: 1;
+}
+.tn-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #708090; margin-top: 0.3rem;
+}
+
+/* ── CONTENT ── */
+.tn-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.tn-section { padding: 4rem 0 2rem; }
+.tn-section-head { margin-bottom: 2.5rem; }
+.tn-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #1a5090; margin-bottom: 0.8rem;
+}
+.tn-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300; color: #081428; line-height: 1.15;
+}
+.tn-section-title em { font-style: italic; color: #1a5090; }
+.tn-divider { width: 40px; height: 2px; background: #1a5090; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.tn-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.tn-history-text p {
+  font-size: 1rem; line-height: 1.9; color: #283848;
+  font-weight: 300; margin-bottom: 1.2rem;
+}
+.tn-timeline { position: relative; padding-left: 2rem; }
+.tn-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(26,80,144,0.2);
+}
+.tn-tl-item { position: relative; margin-bottom: 1.8rem; }
+.tn-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: white; border: 2px solid #1a5090;
+}
+.tn-tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 600; color: #1a5090; margin-bottom: 0.25rem;
+}
+.tn-tl-event { font-size: 0.88rem; color: #283848; line-height: 1.6; font-weight: 300; }
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.tn-sights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.tn-sight-card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid rgba(50,100,170,0.16);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.tn-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(8,20,40,0.1); }
+.tn-sight-visual { height: 140px; }
+.tn-sight-body { padding: 1.2rem; }
+.tn-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #1a5090; margin-bottom: 0.35rem;
+}
+.tn-sight-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 300; color: #081428; margin-bottom: 0.4rem;
+}
+.tn-sight-desc { font-size: 0.83rem; color: #485870; line-height: 1.65; font-weight: 300; }
+
+.sv-tn-panagia    { background: linear-gradient(160deg, #101828 0%, #284878 55%, #90b8e8 100%); }
+.sv-tn-marble     { background: linear-gradient(160deg, #181818 0%, #585858 55%, #e0e0e0 100%); }
+.sv-tn-pigeon     { background: linear-gradient(160deg, #101808 0%, #384828 55%, #98b878 100%); }
+.sv-tn-pyrgos     { background: linear-gradient(160deg, #181010 0%, #504838 55%, #d8c0a8 100%); }
+.sv-tn-exo-meria  { background: linear-gradient(160deg, #081018 0%, #183858 55%, #68a8d0 100%); }
+.sv-tn-beach      { background: linear-gradient(160deg, #081018 0%, #104870 55%, #50c0e0 100%); }
+
+/* ── TAVERNEN ── */
+.tn-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.tn-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(50,100,170,0.16);
+  border-radius: 4px; border-left: 3px solid #1a5090;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.tn-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(8,20,40,0.08); }
+.tn-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.tn-tav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300; color: #081428;
+}
+.tn-tav-loc { font-size: 0.75rem; color: #708090; margin-top: 0.2rem; }
+.tn-tav-stars { color: #1a5090; font-size: 0.85rem; letter-spacing: 2px; }
+.tn-tav-desc { font-size: 0.88rem; color: #283848; line-height: 1.75; font-weight: 300; margin-bottom: 1rem; }
+.tn-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.tn-tav-dish {
+  padding: 3px 10px; background: #e8f0fc; color: #082040;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+}
+.tn-tav-price { font-size: 0.8rem; color: #708090; }
+.tn-tav-price span { color: #1a5090; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.tn-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.tn-viertel-card {
+  padding: 1.8rem; background: #eaf0f8;
+  border-radius: 4px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.tn-viertel-card:hover { background: #d4e4f4; transform: translateY(-4px); }
+.tn-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.tn-viertel-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300; color: #081428; margin-bottom: 0.5rem;
+}
+.tn-viertel-desc { font-size: 0.82rem; color: #485870; line-height: 1.65; font-weight: 300; }
+
+/* ── TIP BANNER ── */
+.tn-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #060c18 0%, #122040 40%, #1a5090 100%);
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.tn-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.tn-tip-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300; color: white; margin-bottom: 0.6rem;
+}
+.tn-tip-text p {
+  font-size: 0.92rem; color: rgba(255,255,255,0.70); line-height: 1.75; font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .tn-back-bar { padding: 0.8rem 1.2rem; }
+  .tn-content { padding: 2rem 1.2rem 4rem; }
+  .tn-history-grid { grid-template-columns: 1fr; }
+  .tn-sights-grid { grid-template-columns: 1fr 1fr; }
+  .tn-tav-grid { grid-template-columns: 1fr; }
+  .tn-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .tn-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+}

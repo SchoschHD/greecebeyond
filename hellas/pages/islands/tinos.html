@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tinos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="tinos.css" />
+</head>
+<body>
+<div id="tinos-page">
+
+<div class="tn-back-bar">
+  <button class="tn-back-btn" onclick="history.back()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="tn-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Tinos</span></p>
+</div>
+
+<div class="tn-hero">
+  <div class="tn-hero-bg"></div>
+  <div class="tn-hero-dots"></div>
+  <!-- Panagia Evangelistria church + marble dove tower + Pyrgos village silhouette -->
+  <svg class="tn-hero-silhouette" viewBox="0 0 860 180" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sea -->
+    <path d="M0,172 Q215,160 430,167 Q645,174 860,162 L860,180 L0,180Z" opacity="0.26"/>
+    <!-- Panagia Evangelistria church (center, dominant) -->
+    <!-- Hill -->
+    <path d="M280,175 Q360,120 400,90 Q430,72 460,78 Q490,85 510,175Z" opacity="0.28"/>
+    <!-- Church main body -->
+    <rect x="348" y="68" width="100" height="80"/>
+    <!-- Bell towers flanking -->
+    <rect x="330" y="52" width="24" height="96"/>
+    <rect x="442" y="52" width="24" height="96"/>
+    <!-- Tower caps -->
+    <ellipse cx="342" cy="52" rx="14" ry="9"/>
+    <ellipse cx="454" cy="52" rx="14" ry="9"/>
+    <!-- Crosses -->
+    <rect x="339" y="38" width="6" height="16"/>
+    <rect x="334" y="44" width="16" height="5"/>
+    <rect x="451" y="38" width="6" height="16"/>
+    <rect x="446" y="44" width="16" height="5"/>
+    <!-- Main dome -->
+    <rect x="374" y="44" width="48" height="26"/>
+    <ellipse cx="398" cy="44" rx="28" ry="16"/>
+    <rect x="391" y="28" width="14" height="18"/>
+    <ellipse cx="398" cy="28" rx="10" ry="7"/>
+    <!-- Entrance steps -->
+    <rect x="336" y="148" width="124" height="8"/>
+    <rect x="328" y="154" width="140" height="7"/>
+    <rect x="318" y="160" width="160" height="6"/>
+    <!-- Pigeon tower / dovecote (left) — characteristic Tinos element -->
+    <rect x="110" y="90" width="60" height="80"/>
+    <!-- Decorative niches on tower -->
+    <rect x="118" y="98"  width="10" height="12"/>
+    <rect x="136" y="98"  width="10" height="12"/>
+    <rect x="154" y="98"  width="10" height="12"/>
+    <rect x="118" y="118" width="10" height="12"/>
+    <rect x="136" y="118" width="10" height="12"/>
+    <rect x="154" y="118" width="10" height="12"/>
+    <rect x="118" y="138" width="10" height="12"/>
+    <rect x="136" y="138" width="10" height="12"/>
+    <rect x="154" y="138" width="10" height="12"/>
+    <!-- Tower pyramid cap -->
+    <polygon points="104,90 176,90 140,62"/>
+    <!-- Pyrgos marble village (right) -->
+    <path d="M600,175 Q660,108 710,88 Q748,72 790,78 Q830,84 860,100 L860,175Z" opacity="0.26"/>
+    <!-- Marble carving workshop outline -->
+    <rect x="660" y="88" width="70" height="50"/>
+    <rect x="655" y="76" width="80" height="14"/>
+    <polygon points="650,76 740,76 695,56"/>
+    <!-- Small chapel Pyrgos -->
+    <rect x="752" y="86" width="36" height="40"/>
+    <ellipse cx="770" cy="86" rx="20" ry="12"/>
+    <rect x="764" y="74" width="12" height="14"/>
+    <!-- Doves flying (simple) -->
+    <path d="M200,55 Q210,48 220,55" fill="none" stroke="white" stroke-width="2"/>
+    <path d="M230,42 Q240,35 250,42" fill="none" stroke="white" stroke-width="2"/>
+    <path d="M560,50 Q570,43 580,50" fill="none" stroke="white" stroke-width="2"/>
+  </svg>
+  <div class="tn-hero-overlay"></div>
+  <div class="tn-hero-content">
+    <p class="tn-hero-tag">Kykladen · Nördliche Ägäis</p>
+    <h1 class="tn-hero-title">Tinos<em>Τήνος</em></h1>
+    <p class="tn-hero-sub">Die heilige Insel Griechenlands — Wallfahrtsort der Panagia Evangelistria, Insel der 1000 Taubentürme, der feinsten Marmorschnitzerei der Kykladen und einer Küche, die Köche aus aller Welt nach Tinos zieht. Die verborgenste Kostbarkeit der Kykladen.</p>
+    <div class="tn-hero-pills">
+      <span class="tn-hero-pill">Panagia</span>
+      <span class="tn-hero-pill">Wallfahrt</span>
+      <span class="tn-hero-pill">Marmor</span>
+      <span class="tn-hero-pill">Taubentürme</span>
+      <span class="tn-hero-pill">Kulinarik</span>
+    </div>
+  </div>
+  <div class="tn-hero-waves"></div>
+</div>
+
+<div class="tn-stats-bar">
+  <div class="tn-stat-item">
+    <div class="tn-stat-num">8.600</div>
+    <div class="tn-stat-lbl">Einwohner</div>
+  </div>
+  <div class="tn-stat-item">
+    <div class="tn-stat-num">1000+</div>
+    <div class="tn-stat-lbl">Taubentürme</div>
+  </div>
+  <div class="tn-stat-item">
+    <div class="tn-stat-num">60+</div>
+    <div class="tn-stat-lbl">Dörfer</div>
+  </div>
+  <div class="tn-stat-item">
+    <div class="tn-stat-num">15. Aug.</div>
+    <div class="tn-stat-lbl">Größte Wallfahrt GR</div>
+  </div>
+  <div class="tn-stat-item">
+    <div class="tn-stat-num">#1</div>
+    <div class="tn-stat-lbl">Marmorschnitzkunst</div>
+  </div>
+</div>
+
+<div class="tn-content">
+
+  <!-- 1. GESCHICHTE -->
+  <section class="tn-section">
+    <div class="tn-section-head">
+      <p class="tn-section-label">01 — Geschichte</p>
+      <h2 class="tn-section-title">Die Ikone, die ein Schiff<br><em>und eine Insel rettete</em></h2>
+      <div class="tn-divider"></div>
+    </div>
+    <div class="tn-history-grid">
+      <div class="tn-history-text">
+        <p>Tinos wäre vielleicht eine von vielen schönen Kykladen — wenn nicht im Jahr 1823 die Nonne Pelagia eine Vision gehabt hätte. Sie träumte dreimal, dass die Muttergottes ihr den Ort zeigte, wo eine heilige Ikone vergraben lag. Man grub — und fand sie: die Ikone der Panagia Evangelistria, der „Gottesmutter der guten Nachricht". Seit diesem Tag ist Tinos der bedeutendste Wallfahrtsort der orthodoxen Christenheit außerhalb Athos.</p>
+        <p>Am 15. August, dem Fest Mariä Himmelfahrt, pilgern jedes Jahr Zehntausende nach Tinos. Viele legen den Weg vom Hafen hinauf zur Kirche auf den Knien zurück — ein roter Teppich schützt dabei die Knie auf dem steilen Kopfsteinpflasterpfad. Das griechische Kriegsschiff Elli wurde auf diesen Tag hin am 15. August 1940 von einem italienischen U-Boot vor dem Hafen von Tinos versenkt — ein Akt, der Griechenland in den Zweiten Weltkrieg trieb.</p>
+        <p>Aber Tinos ist mehr als seine Ikone. Die Insel hat über 60 Dörfer, mehr als tausend venezianische Taubentürme — kunstvolle Steingebäude, die als Schutztürme für Tauben dienten — und in Pyrgos das bedeutendste Zentrum der griechischen Marmorschnitzkunst. Die Schule von Pyrgos hat Künstler ausgebildet, deren Werke auf dem Piräus-Hafen, in Athener Kirchen und in internationalen Sammlungen stehen.</p>
+      </div>
+      <div class="tn-timeline">
+        <div class="tn-tl-item">
+          <div class="tn-tl-dot"></div>
+          <div class="tn-tl-year">3000 v. Chr.</div>
+          <div class="tn-tl-event">Frühe Kykladenbesiedlung. Tinos ist Teil des kykladischen Kulturraums — erste Marmorverarbeitung auf der Insel, Vorläufer einer jahrtausendealten Tradition.</div>
+        </div>
+        <div class="tn-tl-item">
+          <div class="tn-tl-dot"></div>
+          <div class="tn-tl-year">1207</div>
+          <div class="tn-tl-event">Venezianische Herrschaft. Die Ghisi-Familie regiert Tinos als Teil der venezianischen Kykladen-Herrschaft. Die charakteristischen Taubentürme entstehen in dieser Epoche — venezianisches Erbe in kykladischem Stein.</div>
+        </div>
+        <div class="tn-tl-item">
+          <div class="tn-tl-dot"></div>
+          <div class="tn-tl-year">1715</div>
+          <div class="tn-tl-event">Osmanische Herrschaft — als letzte Kykladeninsel. Tinos widerstand den Osmanen 500 Jahre lang, länger als jede andere Insel der Kykladen. Die Festung Exobourgo hielt bis zuletzt.</div>
+        </div>
+        <div class="tn-tl-item">
+          <div class="tn-tl-dot"></div>
+          <div class="tn-tl-year">1823</div>
+          <div class="tn-tl-event">Nonne Pelagia hat die Vision der heiligen Ikone. Die Panagia Evangelistria wird gefunden und in der neu erbauten Kirche aufbewahrt. Tinos wird über Nacht zum bedeutendsten Wallfahrtsort Griechenlands.</div>
+        </div>
+        <div class="tn-tl-item">
+          <div class="tn-tl-dot"></div>
+          <div class="tn-tl-year">1940</div>
+          <div class="tn-tl-event">Versenkung der Elli. Am 15. August — dem heiligsten Tag der Insel — torpediert ein italienisches U-Boot das griechische Kriegsschiff Elli vor dem Hafen von Tinos. Griechenland tritt in den Weltkrieg ein.</div>
+        </div>
+        <div class="tn-tl-item">
+          <div class="tn-tl-dot"></div>
+          <div class="tn-tl-year">Heute</div>
+          <div class="tn-tl-event">Tinos gilt als die aufregendste Gastronomie-Entdeckung der Kykladen — Köche aus Athen und dem Ausland kommen wegen der lokalen Produkte: Artischocken, Louza, Tinos-Käse und den besten Capers Griechenlands.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SEHENSWÜRDIGKEITEN -->
+  <section class="tn-section">
+    <div class="tn-section-head">
+      <p class="tn-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="tn-section-title">Taubentürme, Marmor<br><em>und die heilige Ikone</em></h2>
+      <div class="tn-divider"></div>
+    </div>
+    <div class="tn-sights-grid">
+
+      <div class="tn-sight-card">
+        <div class="tn-sight-visual sv-tn-panagia"></div>
+        <div class="tn-sight-body">
+          <p class="tn-sight-cat">Wallfahrt · Ikone</p>
+          <h3 class="tn-sight-name">Panagia Evangelistria</h3>
+          <p class="tn-sight-desc">Die heiligste Kirche Griechenlands — die Ikone der Gottesmutter, reich mit Ex-Votos aus Gold und Silber behangen, zieht jährlich Hunderttausende an. Die Kirche ist ganzjährig offen, am 15. August pilgert ganz Griechenland hierher.</p>
+        </div>
+      </div>
+
+      <div class="tn-sight-card">
+        <div class="tn-sight-visual sv-tn-marble"></div>
+        <div class="tn-sight-body">
+          <p class="tn-sight-cat">Handwerk · Kunst</p>
+          <h3 class="tn-sight-name">Pyrgos — Marmorschnitzerei</h3>
+          <p class="tn-sight-desc">Das Dorf der Marmorbildhauer — Pyrgos im Norden der Insel beherbergt die bedeutendste Marmorschnitzschule Griechenlands. Werkstätten, in denen noch nach jahrhundertealter Technik gearbeitet wird, sind für Besucher offen.</p>
+        </div>
+      </div>
+
+      <div class="tn-sight-card">
+        <div class="tn-sight-visual sv-tn-pigeon"></div>
+        <div class="tn-sight-body">
+          <p class="tn-sight-cat">Architektur · Einzigartig</p>
+          <h3 class="tn-sight-name">Taubentürme (Peristereones)</h3>
+          <p class="tn-sight-desc">Das unverwechselbare Wahrzeichen von Tinos — über tausend venezianische Taubentürme stehen im ganzen Inselinneren. Kunstvolle Steintürme mit geometrischen Mustern, jeder einzigartig. Kein anderer Ort auf der Welt hat so viele.</p>
+        </div>
+      </div>
+
+      <div class="tn-sight-card">
+        <div class="tn-sight-visual sv-tn-pyrgos"></div>
+        <div class="tn-sight-body">
+          <p class="tn-sight-cat">Museum · Pyrgos</p>
+          <h3 class="tn-sight-name">Museum Yannoulis Chalepas</h3>
+          <p class="tn-sight-desc">Das Haus und Museum des bedeutendsten griechischen Bildhauers des 19. Jahrhunderts — Yannoulis Chalepas aus Pyrgos, Schöpfer des berühmten „Schlafenden Mädchens" auf dem Athener Ersten Friedhof. Ein stilles, berührendes Museum.</p>
+        </div>
+      </div>
+
+      <div class="tn-sight-card">
+        <div class="tn-sight-visual sv-tn-exo-meria"></div>
+        <div class="tn-sight-body">
+          <p class="tn-sight-cat">Dörfer · Wandern</p>
+          <h3 class="tn-sight-name">Exo Meria — Dörfer im Norden</h3>
+          <p class="tn-sight-desc">Der Norden von Tinos ist ein Netz aus 60 Dörfern, verbunden durch alte Steinpfade — Volax mit seinen runden Granitfelsen, Dio Choria, Falatados. Jedes Dorf eine Kirche, ein Kafeneion, ein eigenes Gesicht. Kein einziger Tourist.</p>
+        </div>
+      </div>
+
+      <div class="tn-sight-card">
+        <div class="tn-sight-visual sv-tn-beach"></div>
+        <div class="tn-sight-body">
+          <p class="tn-sight-cat">Strände</p>
+          <h3 class="tn-sight-name">Kolymbithra &amp; Agios Fokas</h3>
+          <p class="tn-sight-desc">Kolymbithra im Norden — ein doppelter Strand mit zwei Buchten, umgeben von Granitfelsen, einer der schönsten der Kykladen. Agios Fokas südlich der Stadt, ruhig und mit Blick auf Mykonos. Porto an der Ostküste für Familien.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. ESSEN & TAVERNEN -->
+  <section class="tn-section">
+    <div class="tn-section-head">
+      <p class="tn-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="tn-section-title">Artischocken, Louza<br><em>und die neue Tinos-Küche</em></h2>
+      <div class="tn-divider"></div>
+    </div>
+    <div class="tn-tav-grid">
+
+      <div class="tn-tav-card">
+        <div class="tn-tav-top">
+          <div>
+            <h3 class="tn-tav-name">Thalassaki</h3>
+            <div class="tn-tav-loc">📍 Tinos-Stadt, Hafen</div>
+          </div>
+          <div class="tn-tav-stars">★★★★★</div>
+        </div>
+        <p class="tn-tav-desc">Das Restaurant das Tinos als Gastronomieziel auf die Karte gesetzt hat — Küchenchef Antonis Drougkas kocht ausschließlich mit Produkten der Insel: Artischocken, lokale Louza-Wurst, Tinos-Käse, frischer Fisch. Für ein Restaurant auf einer kleinen Kykladeninsel außergewöhnlich mutig und außergewöhnlich gut.</p>
+        <div class="tn-tav-dishes">
+          <span class="tn-tav-dish">Artischocken-Ragout</span>
+          <span class="tn-tav-dish">Louza von Tinos</span>
+          <span class="tn-tav-dish">Gegrillter Lavraki</span>
+        </div>
+        <p class="tn-tav-price">Preisklasse: <span>€€€ · Abendessen · Reservierung</span></p>
+      </div>
+
+      <div class="tn-tav-card">
+        <div class="tn-tav-top">
+          <div>
+            <h3 class="tn-tav-name">To Koutouki tis Elenis</h3>
+            <div class="tn-tav-loc">📍 Tinos-Stadt, Gasse hinter dem Markt</div>
+          </div>
+          <div class="tn-tav-stars">★★★★★</div>
+        </div>
+        <p class="tn-tav-desc">Das Lokal ohne Schild, ohne Karte, ohne Reservierung — Eleni kocht seit 30 Jahren täglich frisch, was der Markt hergibt. Sechs Tische, eine handgeschriebene Liste, volles Haus von Mittag bis der Topf leer ist. Das authentischste Mittagessen der Insel.</p>
+        <div class="tn-tav-dishes">
+          <span class="tn-tav-dish">Tagesmenü</span>
+          <span class="tn-tav-dish">Gefüllte Weinblätter</span>
+          <span class="tn-tav-dish">Tinos-Graviera</span>
+        </div>
+        <p class="tn-tav-price">Preisklasse: <span>€ · Mittag · Kein Schild</span></p>
+      </div>
+
+      <div class="tn-tav-card">
+        <div class="tn-tav-top">
+          <div>
+            <h3 class="tn-tav-name">Marathia</h3>
+            <div class="tn-tav-loc">📍 Dorf Ktikados</div>
+          </div>
+          <div class="tn-tav-stars">★★★★★</div>
+        </div>
+        <p class="tn-tav-desc">Im Bergdorf Ktikados, unter einem Maulbeerbaum auf dem Dorfplatz — eine Taverne die so aussieht wie Griechenland immer ausgesehen haben sollte. Eigene Artischocken, eigener Wein, eigene Ziegen. Der Timos von Tinos ist der Höhepunkt jedes Essens.</p>
+        <div class="tn-tav-dishes">
+          <span class="tn-tav-dish">Artischocken mit Erbsen</span>
+          <span class="tn-tav-dish">Ziegenkoteletts</span>
+          <span class="tn-tav-dish">Timos-Käse</span>
+        </div>
+        <p class="tn-tav-price">Preisklasse: <span>€€ · Bergdorf-Erlebnis</span></p>
+      </div>
+
+      <div class="tn-tav-card">
+        <div class="tn-tav-top">
+          <div>
+            <h3 class="tn-tav-name">Symposio (Pyrgos)</h3>
+            <div class="tn-tav-loc">📍 Pyrgos, Marmordorf</div>
+          </div>
+          <div class="tn-tav-stars">★★★★☆</div>
+        </div>
+        <p class="tn-tav-desc">Im Marmordorf Pyrgos, direkt neben den Werkstätten der Bildhauer — ein Café-Restaurant in einem alten Steinhaus mit Gewölbedecke aus lokalem Marmor. Nach der Besichtigung der Werkstätten das natürliche Ende des Tages: Kaffee, Loukoumades, Tinos-Honig.</p>
+        <div class="tn-tav-dishes">
+          <span class="tn-tav-dish">Loukoumades mit Honig</span>
+          <span class="tn-tav-dish">Tinos-Käseplatte</span>
+          <span class="tn-tav-dish">Lokaler Bergkräutertee</span>
+        </div>
+        <p class="tn-tav-price">Preisklasse: <span>€ · Café nach Pyrgos-Besuch</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. ORTE & CHARAKTER -->
+  <section class="tn-section">
+    <div class="tn-section-head">
+      <p class="tn-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="tn-section-title">Pilger, Bildhauer<br><em>und tausend Tauben</em></h2>
+      <div class="tn-divider"></div>
+    </div>
+    <div class="tn-viertel-grid">
+
+      <div class="tn-viertel-card">
+        <div class="tn-viertel-emoji">🕊️</div>
+        <h3 class="tn-viertel-name">Taubentürme</h3>
+        <p class="tn-viertel-desc">Über tausend venezianische Taubentürme stehen im Inselinneren — kunstvoll aus Stein gemeißelt, jeder mit einzigartigem geometrischem Muster. Kein anderer Ort in Griechenland hat diese Dichte. Manche sind jahrhundertealt und noch bewohnt — von Tauben.</p>
+      </div>
+
+      <div class="tn-viertel-card">
+        <div class="tn-viertel-emoji">🗿</div>
+        <h3 class="tn-viertel-name">Pyrgos</h3>
+        <p class="tn-viertel-desc">Das Marmordorf im Norden — Werkstätten, Museum Chalepas, die Schule der Bildhauer und ein Dorfplatz aus poliertem Marmor. Hier lernt man, was griechisches Handwerk bedeutet: Geduld, Stein, Generationen.</p>
+      </div>
+
+      <div class="tn-viertel-card">
+        <div class="tn-viertel-emoji">🙏</div>
+        <h3 class="tn-viertel-name">Panagia-Kirche</h3>
+        <p class="tn-viertel-desc">Die Kirche der Evangelistria thront über der Stadt — der Weg vom Hafen hinauf ist mit einem roten Teppich belegt, auf dem Pilger kniend den Aufstieg vollziehen. Auch ohne religiösen Hintergrund ein bewegender Anblick.</p>
+      </div>
+
+      <div class="tn-viertel-card">
+        <div class="tn-viertel-emoji">🌿</div>
+        <h3 class="tn-viertel-name">Artischocken-Felder</h3>
+        <p class="tn-viertel-desc">Tinos ist Griechenlands Artischocken-Insel — im Frühjahr sind die Terrassen leuchtend grün, die Märkte voller frischer Artischocken. In Kombination mit dem lokalen Olivenöl und Louza-Wurst das Kernstück der Tinos-Küche.</p>
+      </div>
+
+      <div class="tn-viertel-card">
+        <div class="tn-viertel-emoji">🪨</div>
+        <h3 class="tn-viertel-name">Volax</h3>
+        <p class="tn-viertel-desc">Das fremdeste Dorf der Kykladen — inmitten einer Landschaft aus riesigen runden Granitfelsen, als hätte ein Riese seine Murmeln dort vergessen. Ein kleines Freilichttheater, ein Kafeneion, absolute Stille.</p>
+      </div>
+
+      <div class="tn-viertel-card">
+        <div class="tn-viertel-emoji">🏖️</div>
+        <h3 class="tn-viertel-name">Kolymbithra</h3>
+        <p class="tn-viertel-desc">Der schönste Strand der Insel im Norden — zwei Buchten, türkisblaues Wasser, Granitfelsen als Rahmen. Eine Seite windgeschützt, eine Seite für Windsurfer. Eine der schönsten Badebuchen der Kykladen überhaupt.</p>
+      </div>
+
+    </div>
+
+    <div class="tn-tip-banner">
+      <div class="tn-tip-emoji">🕊️</div>
+      <div class="tn-tip-text">
+        <h3>Die Insel, die zwei Seelen hat</h3>
+        <p>Tinos ist gleichzeitig der heiligste und der am meisten unterschätzte Ort der Kykladen. Am 15. August ist die Insel überwältigt von Pilgern — ein kollektives spirituelles Erlebnis, das man einmal gesehen haben sollte. Den Rest des Jahres ist Tinos eine stille, üppige, gastronomisch aufregende Insel mit 60 Dörfern, tausend Taubentürmen und Marmorwerkstätten, in denen Zeit anders vergeht. Wer Mykonos umgeht und nach Tinos fährt, hat das Geheimnis der nördlichen Kykladen entdeckt.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>

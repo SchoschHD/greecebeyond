@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siros — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="siros.css" />
+</head>
+<body>
+<div id="siros-page">
+
+<div class="sy-back-bar">
+  <button class="sy-back-btn" onclick="closeSiros()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="sy-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Siros</span></p>
+</div>
+
+<div class="sy-hero">
+  <div class="sy-hero-bg"></div>
+  <div class="sy-hero-dots"></div>
+  <!-- Ermoupoli neoclassical skyline + Apollo Theatre + Ano Siros catholic hill -->
+  <svg class="sy-hero-silhouette" viewBox="0 0 860 180" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sea -->
+    <path d="M0,170 Q215,158 430,165 Q645,172 860,160 L860,180 L0,180Z" opacity="0.26"/>
+    <!-- Ermoupoli neoclassical facades (center) -->
+    <rect x="260" y="110" width="340" height="60"/>
+    <!-- Columns of main buildings -->
+    <rect x="272" y="88" width="10" height="24"/>
+    <rect x="292" y="88" width="10" height="24"/>
+    <rect x="312" y="88" width="10" height="24"/>
+    <rect x="332" y="88" width="10" height="24"/>
+    <rect x="352" y="88" width="10" height="24"/>
+    <rect x="372" y="82" width="10" height="30"/>
+    <rect x="392" y="82" width="10" height="30"/>
+    <rect x="412" y="82" width="10" height="30"/>
+    <rect x="432" y="82" width="10" height="30"/>
+    <rect x="452" y="82" width="10" height="30"/>
+    <rect x="472" y="88" width="10" height="24"/>
+    <rect x="492" y="88" width="10" height="24"/>
+    <rect x="512" y="88" width="10" height="24"/>
+    <rect x="532" y="88" width="10" height="24"/>
+    <rect x="552" y="88" width="10" height="24"/>
+    <!-- Entablature -->
+    <rect x="258" y="78" width="344" height="12"/>
+    <!-- Apollo Theatre pediment -->
+    <polygon points="350,78 510,78 430,50"/>
+    <!-- Town Hall dome (center) -->
+    <rect x="400" y="20" width="60" height="32"/>
+    <ellipse cx="430" cy="20" rx="35" ry="18"/>
+    <rect x="422" y="2" width="16" height="20"/>
+    <!-- Ano Siros Catholic hill (left) -->
+    <path d="M50,180 Q120,90 180,60 Q220,40 250,50 L250,180Z" opacity="0.30"/>
+    <!-- St George Cathedral on hill -->
+    <rect x="148" y="38" width="50" height="36"/>
+    <rect x="143" y="26" width="60" height="14"/>
+    <polygon points="138,26 208,26 173,8"/>
+    <!-- Bell tower Ano Siros -->
+    <rect x="210" y="28" width="20" height="50"/>
+    <ellipse cx="220" cy="28" rx="12" ry="8"/>
+    <!-- Orthodox hill (right) -->
+    <path d="M610,180 Q660,100 700,72 Q730,55 760,60 L810,180Z" opacity="0.28"/>
+    <!-- Anastasis church on right hill -->
+    <rect x="672" y="50" width="46" height="36"/>
+    <ellipse cx="695" cy="50" rx="26" ry="16"/>
+    <rect x="685" y="34" width="18" height="18"/>
+    <ellipse cx="694" cy="34" rx="12" ry="8"/>
+  </svg>
+  <div class="sy-hero-overlay"></div>
+  <div class="sy-hero-content">
+    <p class="sy-hero-tag">Kykladen · Zentralägäis · Hauptstadt</p>
+    <h1 class="sy-hero-title">Siros<em>Σύρος</em></h1>
+    <p class="sy-hero-sub">Die eleganteste Stadt der Kykladen — Ermoupoli, die Hauptstadt der Kykladeninseln, ist eine neoklassische Pracht aus dem 19. Jahrhundert mit einem echten Opernhaus, Marmortreppen und einer Bürgerkultur, die in keiner anderen Inselstadt Griechenlands ihresgleichen hat.</p>
+    <div class="sy-hero-pills">
+      <span class="sy-hero-pill">Neoklassisch</span>
+      <span class="sy-hero-pill">Apollon Theater</span>
+      <span class="sy-hero-pill">Ermoupoli</span>
+      <span class="sy-hero-pill">Loukoum</span>
+      <span class="sy-hero-pill">Hauptstadt</span>
+    </div>
+  </div>
+  <div class="sy-hero-waves"></div>
+</div>
+
+<div class="sy-stats-bar">
+  <div class="sy-stat-item">
+    <div class="sy-stat-num">21.000</div>
+    <div class="sy-stat-lbl">Einwohner</div>
+  </div>
+  <div class="sy-stat-item">
+    <div class="sy-stat-num">1826</div>
+    <div class="sy-stat-lbl">Ermoupoli gegründet</div>
+  </div>
+  <div class="sy-stat-item">
+    <div class="sy-stat-num">1864</div>
+    <div class="sy-stat-lbl">Apollon Theater erbaut</div>
+  </div>
+  <div class="sy-stat-item">
+    <div class="sy-stat-num">Hauptstadt</div>
+    <div class="sy-stat-lbl">der Kykladen</div>
+  </div>
+  <div class="sy-stat-item">
+    <div class="sy-stat-num">#1</div>
+    <div class="sy-stat-lbl">Neoklassische Architektur</div>
+  </div>
+</div>
+
+<div class="sy-content">
+
+  <section class="sy-section">
+    <div class="sy-section-head">
+      <p class="sy-section-label">01 — Geschichte</p>
+      <h2 class="sy-section-title">Die Hauptstadt<br><em>der Kykladen und ihr goldenes Jahrhundert</em></h2>
+      <div class="sy-divider"></div>
+    </div>
+    <div class="sy-history-grid">
+      <div class="sy-history-text">
+        <p>Siros hat eine Geschichte, die keine andere Kykladeninsel hat. Im frühen 19. Jahrhundert — während der griechischen Unabhängigkeitsbewegung — strömten Flüchtlinge aus Chios, Psara und anderen Inseln nach Siros. Mit ihnen kamen Kapital, Bildung und Ambitionen. In wenigen Jahrzehnten wurde Ermoupoli zur bedeutendsten Handelsstadt Griechenlands — noch vor Athen und Piräus. Der Hafen war der geschäftigste des Landes.</p>
+        <p>Mit dem Reichtum kam die Architektur. Reiche Reeder und Händler beauftragten die besten Architekten Griechenlands und Italiens. Es entstanden neoklassische Paläste, Villenviertel, ein Rathaus nach venezianischem Vorbild und das Apollon Theater — eine verkleinerte Kopie der Mailänder Scala, gebaut 1864, noch heute das älteste Opernhaus Griechenlands.</p>
+        <p>Als Piräus im späten 19. Jahrhundert den Handel übernahm, verlor Ermoupoli seine wirtschaftliche Vormachtstellung — und gewann dadurch seine Seele. Die Stadt blieb eingefroren in ihrer neoklassischen Pracht, ohne die Modernisierungswellen, die andere griechische Städte veränderten. Heute ist Siros eine der am besten erhaltenen Stadtlandschaften des 19. Jahrhunderts in ganz Europa — lebendig, bewohnt, unrestauriert.</p>
+      </div>
+      <div class="sy-timeline">
+        <div class="sy-tl-item">
+          <div class="sy-tl-dot"></div>
+          <div class="sy-tl-year">Medieval</div>
+          <div class="sy-tl-event">Ano Siros, die mittelalterliche katholische Siedlung auf dem Hügel, entsteht unter venezianischer Herrschaft — noch heute intakt mit lateinischer Kathedrale und Kapuzinerkloster.</div>
+        </div>
+        <div class="sy-tl-item">
+          <div class="sy-tl-dot"></div>
+          <div class="sy-tl-year">1821</div>
+          <div class="sy-tl-event">Griechischer Unabhängigkeitskrieg. Siros bleibt neutral unter französischem Schutz — Flüchtlinge aus den verwüsteten Inseln Chios und Psara strömen nach Siros und bringen Kapital und Bildung mit.</div>
+        </div>
+        <div class="sy-tl-item">
+          <div class="sy-tl-dot"></div>
+          <div class="sy-tl-year">1826</div>
+          <div class="sy-tl-event">Gründung von Ermoupoli — benannt nach Hermes, dem Gott des Handels. Die neue Stadt wächst explosiv: innerhalb von 20 Jahren wird sie zur größten und reichsten Stadt Griechenlands.</div>
+        </div>
+        <div class="sy-tl-item">
+          <div class="sy-tl-dot"></div>
+          <div class="sy-tl-year">1864</div>
+          <div class="sy-tl-event">Eröffnung des Apollon Theaters — eine verkleinerte Kopie der Mailänder Scala, mit 800 Plätzen. Das älteste Opernhaus Griechenlands und Symbol des kulturellen Anspruchs der Syrianer.</div>
+        </div>
+        <div class="sy-tl-item">
+          <div class="sy-tl-dot"></div>
+          <div class="sy-tl-year">1880er</div>
+          <div class="sy-tl-event">Piräus übernimmt den Handel. Ermoupoli verliert seine wirtschaftliche Führung — und bewahrt dadurch unbeabsichtigt seine neoklassische Architektur. Kein Abriss, kein Neubau, nur Erhalt.</div>
+        </div>
+        <div class="sy-tl-item">
+          <div class="sy-tl-dot"></div>
+          <div class="sy-tl-year">Heute</div>
+          <div class="sy-tl-event">Siros ist Verwaltungshauptstadt der Kykladen und lebt ganzjährig — keine Saisonstadt, sondern eine echte Stadt mit Schulen, Gerichten, Industrie und einer der lebendigsten Kulturszenen der griechischen Inseln.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sy-section">
+    <div class="sy-section-head">
+      <p class="sy-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="sy-section-title">Marmortreppen,<br><em>Opernhaus und zwei Hügel</em></h2>
+      <div class="sy-divider"></div>
+    </div>
+    <div class="sy-sights-grid">
+
+      <div class="sy-sight-card">
+        <div class="sy-sight-visual sv-sy-apollo"></div>
+        <div class="sy-sight-body">
+          <p class="sy-sight-cat">Theater · Ikone</p>
+          <h3 class="sy-sight-name">Apollon Theater</h3>
+          <p class="sy-sight-desc">Das älteste Opernhaus Griechenlands — 1864 erbaut, mit rotem Samt, Vergoldungen und einer Akustik, die Opernsänger aus ganz Europa anlockt. Noch heute aktiv, mit einer Saison von Oktober bis Mai. Eine Aufführung hier ist ein Erlebnis.</p>
+        </div>
+      </div>
+
+      <div class="sy-sight-card">
+        <div class="sy-sight-visual sv-sy-plateia"></div>
+        <div class="sy-sight-body">
+          <p class="sy-sight-cat">Platz · Herz der Stadt</p>
+          <h3 class="sy-sight-name">Miaouli-Platz</h3>
+          <p class="sy-sight-desc">Der schönste Platz der Kykladen — umgeben von neoklassischen Palästen, dem marmorgepflasterten Rathaus und Kaffeehäusern, die seit dem 19. Jahrhundert existieren. Abends das Wohnzimmer aller Syrianer.</p>
+        </div>
+      </div>
+
+      <div class="sy-sight-card">
+        <div class="sy-sight-visual sv-sy-ano-siros"></div>
+        <div class="sy-sight-body">
+          <p class="sy-sight-cat">Mittelalter · Hügel</p>
+          <h3 class="sy-sight-name">Ano Siros</h3>
+          <p class="sy-sight-desc">Die mittelalterliche katholische Stadt auf dem linken Hügel — venezianische Gassen, die lateinische Kathedrale San Giorgio, ein Kapuzinerkloster und ein Panorama, das die gesamte Insel überblickt. Kein Tourist, echtes Dorfleben.</p>
+        </div>
+      </div>
+
+      <div class="sy-sight-card">
+        <div class="sy-sight-visual sv-sy-vaporia"></div>
+        <div class="sy-sight-body">
+          <p class="sy-sight-cat">Villenviertel · Architektur</p>
+          <h3 class="sy-sight-name">Vaporia</h3>
+          <p class="sy-sight-desc">Das Reeder-Viertel über dem Hafen — neoklassische Villen der Schifffahrtsbarone aus dem 19. Jahrhundert, direkt über dem Meer gebaut. Einige sind heute Hotels, viele noch in Privatbesitz. Die eleganteste Straße der Kykladen.</p>
+        </div>
+      </div>
+
+      <div class="sy-sight-card">
+        <div class="sy-sight-visual sv-sy-casino"></div>
+        <div class="sy-sight-body">
+          <p class="sy-sight-cat">Architektur · Kultur</p>
+          <h3 class="sy-sight-name">Industriemuseum &amp; Rathaus</h3>
+          <p class="sy-sight-desc">Das neoklassische Rathaus am Miaouli-Platz ist eines der schönsten Gebäude Griechenlands. Das Industriemuseum in der alten Fabrik erzählt die Geschichte von Griechenlands erster Industriestadt — Werften, Gerbereien, Seidenweberei.</p>
+        </div>
+      </div>
+
+      <div class="sy-sight-card">
+        <div class="sy-sight-visual sv-sy-beach"></div>
+        <div class="sy-sight-body">
+          <p class="sy-sight-cat">Strände</p>
+          <h3 class="sy-sight-name">Galissas &amp; Kini</h3>
+          <p class="sy-sight-desc">Siros hat auch Strände — Galissas an der Westküste ist der beliebteste, Kini das schönste Fischerdorf mit dem besten Sonnenuntergang. Megas Gialos und Vari an der Südküste für ruhige Familien. Keine Touristenstränder, alle echt.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="sy-section">
+    <div class="sy-section-head">
+      <p class="sy-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="sy-section-title">Loukoum, Halvadopita<br><em>und die Küche der Reeder</em></h2>
+      <div class="sy-divider"></div>
+    </div>
+    <div class="sy-tav-grid">
+
+      <div class="sy-tav-card">
+        <div class="sy-tav-top">
+          <div>
+            <h3 class="sy-tav-name">Meze Meze</h3>
+            <div class="sy-tav-loc">📍 Ermoupoli, Chiou-Str.</div>
+          </div>
+          <div class="sy-tav-stars">★★★★★</div>
+        </div>
+        <p class="sy-tav-desc">Das beste Mezedes-Lokal der Insel — in einem neoklassischen Stadthaus in Ermoupoli, mit einem Innenhof unter Weinreben. Küche der Syrianer mit chiiotischen Einflüssen (die Flüchtlinge von 1821 haben ihre Rezepte mitgebracht) und einer Weinkarte voller Überraschungen.</p>
+        <div class="sy-tav-dishes">
+          <span class="sy-tav-dish">Loukaniko syriotisch</span>
+          <span class="sy-tav-dish">Revithokeftedes</span>
+          <span class="sy-tav-dish">Fava mit Kapern</span>
+        </div>
+        <p class="sy-tav-price">Preisklasse: <span>€€ · Abendessen · Innenhof</span></p>
+      </div>
+
+      <div class="sy-tav-card">
+        <div class="sy-tav-top">
+          <div>
+            <h3 class="sy-tav-name">Taverna Lilis</h3>
+            <div class="sy-tav-loc">📍 Ano Siros, Gasse</div>
+          </div>
+          <div class="sy-tav-stars">★★★★★</div>
+        </div>
+        <p class="sy-tav-desc">Ganz oben in Ano Siros, versteckt in einer Gasse die kein Schild zeigt — ein Familienlokal das seit Generationen die gleiche Küche macht. Blick auf die Kirche San Giorgio, die Gasse, das Meer darunter. Mittags offen, bis der Topf leer ist.</p>
+        <div class="sy-tav-dishes">
+          <span class="sy-tav-dish">Stuffado</span>
+          <span class="sy-tav-dish">Gefüllte Paprika</span>
+          <span class="sy-tav-dish">Eigener Rotwein</span>
+        </div>
+        <p class="sy-tav-price">Preisklasse: <span>€ · Mittag · Kein Schild</span></p>
+      </div>
+
+      <div class="sy-tav-card">
+        <div class="sy-tav-top">
+          <div>
+            <h3 class="sy-tav-name">Aktaion</h3>
+            <div class="sy-tav-loc">📍 Miaouli-Platz</div>
+          </div>
+          <div class="sy-tav-stars">★★★★☆</div>
+        </div>
+        <p class="sy-tav-desc">Das älteste Café am schönsten Platz — seit dem 19. Jahrhundert unter verschiedenen Namen an der gleichen Stelle, mit dem gleichen Blick auf das Rathaus. Ein Kaffee hier ist kein Kaffee, sondern eine Begegnung mit der Geschichte der Stadt.</p>
+        <div class="sy-tav-dishes">
+          <span class="sy-tav-dish">Griechischer Kaffee</span>
+          <span class="sy-tav-dish">Siros-Loukoum</span>
+          <span class="sy-tav-dish">Halvadopita</span>
+        </div>
+        <p class="sy-tav-price">Preisklasse: <span>€ · Café-Kultur · Ganztags</span></p>
+      </div>
+
+      <div class="sy-tav-card">
+        <div class="sy-tav-top">
+          <div>
+            <h3 class="sy-tav-name">To Petrino (Kini)</h3>
+            <div class="sy-tav-loc">📍 Fischerdorf Kini</div>
+          </div>
+          <div class="sy-tav-stars">★★★★★</div>
+        </div>
+        <p class="sy-tav-desc">Im Fischerdorf Kini an der Westküste — Tische direkt am Wasser, die Fischerboote liegen daneben, der Sonnenuntergang hinter der Insel Gyaros färbt alles orange. Frischer Fisch, einfach gegrillt, eine Flasche Weißwein aus dem Kühler. Vollkommen.</p>
+        <div class="sy-tav-dishes">
+          <span class="sy-tav-dish">Tagesfang gegrillt</span>
+          <span class="sy-tav-dish">Muschelsuppe</span>
+          <span class="sy-tav-dish">Weißwein aus Siros</span>
+        </div>
+        <p class="sy-tav-price">Preisklasse: <span>€€ · Sonnenuntergang Pflicht</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="sy-section">
+    <div class="sy-section-head">
+      <p class="sy-section-label">04 — Viertel &amp; Charakter</p>
+      <h2 class="sy-section-title">Die einzige Inselstadt<br><em>die wirklich eine Stadt ist</em></h2>
+      <div class="sy-divider"></div>
+    </div>
+    <div class="sy-viertel-grid">
+
+      <div class="sy-viertel-card">
+        <div class="sy-viertel-emoji">🏛️</div>
+        <h3 class="sy-viertel-name">Ermoupoli</h3>
+        <p class="sy-viertel-desc">Die Hauptstadt — neoklassische Paläste, Marmortreppen, das Apollon Theater, der Miaouli-Platz. Eine echte Stadt mit Gerichten, Schulen, Kinos und einer Kulturszene die das ganze Jahr lebt.</p>
+      </div>
+
+      <div class="sy-viertel-card">
+        <div class="sy-viertel-emoji">⛪</div>
+        <h3 class="sy-viertel-name">Ano Siros</h3>
+        <p class="sy-viertel-desc">Die mittelalterliche katholische Oberstadt — venezianische Gassen, Blick über die gesamte Insel, das Kapuzinerkloster und die Kathedrale San Giorgio. Wenige Touristen, echter Charakter.</p>
+      </div>
+
+      <div class="sy-viertel-card">
+        <div class="sy-viertel-emoji">🏠</div>
+        <h3 class="sy-viertel-name">Vaporia</h3>
+        <p class="sy-viertel-desc">Das Reeder-Villenviertel über dem Hafen — die eleganteste Wohnadresse der Kykladen, mit Bürgerhäusern aus dem 19. Jahrhundert und Blick auf den Hafen. Einige heute als Boutique-Hotels.</p>
+      </div>
+
+      <div class="sy-viertel-card">
+        <div class="sy-viertel-emoji">🎭</div>
+        <h3 class="sy-viertel-name">Apollon Theater</h3>
+        <p class="sy-viertel-desc">Das älteste Opernhaus Griechenlands — noch heute aktiv mit einer Wintersaison. Eine Aufführung hier, in einem Saal der seit 1864 unverändert ist, ist eine der ungewöhnlichsten Kulturerfahrungen Griechenlands.</p>
+      </div>
+
+      <div class="sy-viertel-card">
+        <div class="sy-viertel-emoji">🌅</div>
+        <h3 class="sy-viertel-name">Kini</h3>
+        <p class="sy-viertel-desc">Das schönste Fischerdorf der Insel an der Westküste — mit dem besten Sonnenuntergang von Siros. Keine Boutique, keine Touri-Bar: nur Fischerboote, Tavernen und das Meer.</p>
+      </div>
+
+      <div class="sy-viertel-card">
+        <div class="sy-viertel-emoji">🍬</div>
+        <h3 class="sy-viertel-name">Siros-Loukoum</h3>
+        <p class="sy-viertel-desc">Das berühmteste Mitbringsel der Insel — das Siros-Loukoum (türkischer Honig) und die Halvadopita (Sesamtorte) werden seit dem 19. Jahrhundert nach originalen Rezepten hergestellt. Läden in der ganzen Stadt.</p>
+      </div>
+
+    </div>
+
+    <div class="sy-tip-banner">
+      <div class="sy-tip-emoji">🎼</div>
+      <div class="sy-tip-text">
+        <h3>Die Insel die kein Saisonende kennt</h3>
+        <p>Siros ist das Gegenteil jeder anderen Kykladeninsel: Es lebt im Winter genauso wie im Sommer, weil es eine echte Stadt ist und keine Tourismussiedlung. Das Apollon Theater öffnet im Oktober, die Kaffeehäuser am Miaouli-Platz sind im Januar voll, die Schulen laufen, die Gerichte urteilen. Wer im Herbst oder Winter kommt, erlebt etwas Seltenes: eine griechische Inselstadt im Alltag — ohne Touristengroßbetrieb, ohne Saisongesichter, nur Siros wie es immer ist.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>
