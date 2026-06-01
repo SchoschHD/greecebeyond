@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andros — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="andros.css" />
+</head>
+<body>
+<div id="andros-page">
+
+<div class="ad-back-bar">
+  <button class="ad-back-btn" onclick="closeAndros()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ad-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Andros</span></p>
+</div>
+
+<div class="ad-hero">
+  <div class="ad-hero-bg"></div>
+  <div class="ad-hero-shimmer"></div>
+  <!-- Neoklassizistische Chora-Silhouette -->
+  <svg class="ad-hero-silhouette" viewBox="0 0 900 160" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Lange Uferpromenade -->
+    <rect x="0" y="120" width="900" height="12" rx="1"/>
+    <!-- Tourlitis-Leuchtturm rechts -->
+    <rect x="800" y="40" width="22" height="80"/>
+    <rect x="794" y="32" width="34" height="10"/>
+    <rect x="803" y="22" width="16" height="12"/>
+    <circle cx="811" cy="16" r="8"/>
+    <!-- Neoklassizistisches Herrenhaus Mitte -->
+    <rect x="380" y="55" width="90" height="65"/>
+    <rect x="370" y="46" width="110" height="11"/>
+    <!-- Säulen -->
+    <rect x="388" y="55" width="7" height="65"/>
+    <rect x="404" y="55" width="7" height="65"/>
+    <rect x="420" y="55" width="7" height="65"/>
+    <rect x="436" y="55" width="7" height="65"/>
+    <rect x="452" y="55" width="7" height="65"/>
+    <!-- Giebel -->
+    <polygon points="370,46 425,18 480,46"/>
+    <!-- Kleines Kirchturm links -->
+    <rect x="155" y="60" width="30" height="60"/>
+    <rect x="148" y="52" width="44" height="10"/>
+    <rect x="168" y="35" width="10" height="19"/>
+    <!-- Windmühle -->
+    <rect x="660" y="65" width="20" height="55"/>
+    <line x1="670" y1="65" x2="650" y2="40" stroke="white" stroke-width="3"/>
+    <line x1="670" y1="65" x2="690" y2="40" stroke="white" stroke-width="3"/>
+    <line x1="670" y1="65" x2="660" y2="38" stroke="white" stroke-width="3"/>
+    <line x1="670" y1="65" x2="680" y2="38" stroke="white" stroke-width="3"/>
+    <!-- Kleines Haus links -->
+    <rect x="60" y="80" width="50" height="40"/>
+    <polygon points="55,80 85,62 115,80"/>
+    <!-- Kleines Haus rechts -->
+    <rect x="555" y="82" width="45" height="38"/>
+    <polygon points="550,82 577,66 602,82"/>
+    <!-- Wellen -->
+    <path d="M0,148 Q225,138 450,144 Q675,150 900,140 L900,160 L0,160Z" opacity="0.25"/>
+  </svg>
+  <div class="ad-hero-overlay"></div>
+  <div class="ad-hero-waves"></div>
+  <div class="ad-hero-content">
+    <p class="ad-hero-tag">Kykladen · Nördliche Ägäis</p>
+    <h1 class="ad-hero-title">Andros<em>Άνδρος</em></h1>
+    <p class="ad-hero-sub">Die grüne Ausnahme der Kykladen — Andros ist die Insel der sprudelnden Quellen, der Reeder-Villen und der 300 Kilometer Wanderwege durch Täler, die auch im Hochsommer nach Wasser klingen.</p>
+    <div class="ad-hero-pills">
+      <span class="ad-hero-pill">Grünste Kykladeninsel</span>
+      <span class="ad-hero-pill">Goulandris-Museum</span>
+      <span class="ad-hero-pill">Neoklassizismus</span>
+      <span class="ad-hero-pill">300 km Wanderwege</span>
+      <span class="ad-hero-pill">Reeder-Erbe</span>
+    </div>
+  </div>
+</div>
+
+<div class="ad-reeder-strip">
+  <div class="ad-reeder-item">Zweitgrößte Kykladeninsel</div>
+  <div class="ad-reeder-item">374 km² · 997 m Höhe</div>
+  <div class="ad-reeder-item">2h Fähre ab Rafina/Athen</div>
+  <div class="ad-reeder-item">Heimat der größten Reeder-Dynastien Griechenlands</div>
+  <div class="ad-reeder-item">Kein Massentourismus</div>
+</div>
+
+<div class="ad-stats-bar">
+  <div class="ad-stat-item">
+    <div class="ad-stat-num">9.200</div>
+    <div class="ad-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ad-stat-item">
+    <div class="ad-stat-num">374 km²</div>
+    <div class="ad-stat-lbl">Fläche</div>
+  </div>
+  <div class="ad-stat-item">
+    <div class="ad-stat-num">997 m</div>
+    <div class="ad-stat-lbl">Höchster Gipfel</div>
+  </div>
+  <div class="ad-stat-item">
+    <div class="ad-stat-num">300 km</div>
+    <div class="ad-stat-lbl">Wanderwege</div>
+  </div>
+  <div class="ad-stat-item">
+    <div class="ad-stat-num">4.500 v. Chr.</div>
+    <div class="ad-stat-lbl">Erste Besiedlung</div>
+  </div>
+</div>
+
+<div class="ad-content">
+
+  <section class="ad-section">
+    <div class="ad-section-head">
+      <p class="ad-section-label">01 — Geschichte</p>
+      <h2 class="ad-section-title">Von den Argonauten<br><em>zu den großen Reedern</em></h2>
+      <div class="ad-divider"></div>
+    </div>
+    <div class="ad-history-grid">
+      <div class="ad-history-text">
+        <p>Ausgrabungen an der Landzunge Strofila haben eine prähistorische Siedlung aus dem späten Neolithikum freigelegt — rund 4.500 bis 3.200 vor Christus. Felsritzungen, Spuren von Häusern, Hinweise auf frühen Seehandel. Andros war immer ein Knotenpunkt: die nördlichste Kykladeninsel, nur wenige Kilometer von Euböa entfernt, strategisch unverzichtbar für jeden, der die Ägäis beherrschte.</p>
+        <p>Im 8. Jahrhundert gründeten Andrioten die Stadt Akanthos in Makedonien — ein Zeichen des frühen kolonialen Selbstbewusstseins. Im Mittelalter gehörte Andros den Venezianern, den Genuesen, dann wieder den Osmanen. Die Venezianer hinterließen etwas Ungewöhnliches für die Kykladen: neoklassizistische Herrenhäuser mit Ziegeldächern, die bis heute das Gesicht der Chora prägen.</p>
+        <p>Im 19. und 20. Jahrhundert wurden die Familien von Andros zu den mächtigsten Reedern Griechenlands — Goulandris, Livanos, Embiricos. Ihr Geld floss zurück in die Insel: in Museen, Schulen, Parks, Stiftungen. Das Ergebnis ist eine Insel, die sich nach einem anderen Maßstab misst als ihre Nachbarn — kultivierter, grüner, stiller, und ein bisschen stolz darauf.</p>
+      </div>
+      <div class="ad-timeline">
+        <div class="ad-tl-item">
+          <div class="ad-tl-dot"></div>
+          <div class="ad-tl-year">4.500 v. Chr.</div>
+          <div class="ad-tl-event">Neolithische Siedlung auf der Landzunge Strofila — Felsritzungen mit Schiffen und Tieren zeugen von frühem Seehandel und einer entwickelten Gemeinschaft.</div>
+        </div>
+        <div class="ad-tl-item">
+          <div class="ad-tl-dot"></div>
+          <div class="ad-tl-year">8. Jh. v. Chr.</div>
+          <div class="ad-tl-event">Andrioten gründen die Kolonie Akanthos in Makedonien — die Insel ist reich genug, um Menschen auszusenden und neue Städte zu bauen.</div>
+        </div>
+        <div class="ad-tl-item">
+          <div class="ad-tl-dot"></div>
+          <div class="ad-tl-year">480 v. Chr.</div>
+          <div class="ad-tl-event">Die Andrioten verweigern Xerxes die Unterstützung — der Perserkönig bestraft sie, indem er die Insel belagert. Themistokles hält eine seiner berühmten Reden auf Andros.</div>
+        </div>
+        <div class="ad-tl-item">
+          <div class="ad-tl-dot"></div>
+          <div class="ad-tl-year">1207–1566</div>
+          <div class="ad-tl-event">Venezianische Herrschaft unter den Dandolo und später den Zeno. Die neoklassizistischen Bauten der Chora tragen ihr Erbe — ungewöhnlich für die Kykladen.</div>
+        </div>
+        <div class="ad-tl-item">
+          <div class="ad-tl-dot"></div>
+          <div class="ad-tl-year">1821</div>
+          <div class="ad-tl-event">Andros erhebt sich früh im griechischen Unabhängigkeitskrieg. Die Insel stellt Schiffe und Kapitäne — der Beginn der großen Reederei-Tradition.</div>
+        </div>
+        <div class="ad-tl-item">
+          <div class="ad-tl-dot"></div>
+          <div class="ad-tl-year">20. Jh.</div>
+          <div class="ad-tl-event">Die Familien Goulandris, Livanos und Embiricos werden zu den größten Reedern der Welt. Ihr Mäzenatentum prägt Andros bis heute: Museen, Parks, Bildungseinrichtungen.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ad-section">
+    <div class="ad-section-head">
+      <p class="ad-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ad-section-title">Chora, Quellen<br><em>und modernes Mäzenatentum</em></h2>
+      <div class="ad-divider"></div>
+    </div>
+    <div class="ad-sights-grid">
+
+      <div class="ad-sight-card">
+        <div class="ad-sight-visual sv-ad-chora"></div>
+        <div class="ad-sight-body">
+          <p class="ad-sight-cat">Hauptstadt · Architektur</p>
+          <h3 class="ad-sight-name">Chora (Andros-Stadt)</h3>
+          <p class="ad-sight-desc">Auf einer schmalen Felshalbinsel thronend — neoklassizistische Herrenhäuser, gepflasterte Gassen, der Platz des unbekannten Seemanns. Die eleganteste Hauptstadt der Kykladen, mit Venedig-Erbe und dem Tourlitis-Leuchtturm am Horizont.</p>
+        </div>
+      </div>
+
+      <div class="ad-sight-card">
+        <div class="ad-sight-visual sv-ad-tourlitis"></div>
+        <div class="ad-sight-body">
+          <p class="ad-sight-cat">Leuchtturm · Wahrzeichen</p>
+          <h3 class="ad-sight-name">Tourlitis-Leuchtturm</h3>
+          <p class="ad-sight-desc">Auf einem Fels mitten im Meer, nur per Brücke erreichbar — der erste moderne Leuchtturm Griechenlands, 1897 errichtet. Von der Uferpromenade der Chora aus ist er das schönste Motiv der Insel, besonders bei Abendlicht.</p>
+        </div>
+      </div>
+
+      <div class="ad-sight-card">
+        <div class="ad-sight-visual sv-ad-menites"></div>
+        <div class="ad-sight-body">
+          <p class="ad-sight-cat">Natur · Quelle</p>
+          <h3 class="ad-sight-name">Quellen von Menites</h3>
+          <p class="ad-sight-desc">Frisches Trinkwasser sprudelt hier aus steinernen Löwenköpfen — das Wunder von Andros. Die Legende sagt, Dionysos habe hier das Wasser in Wein verwandelt. Die Wahrheit ist ähnlich wunderbar: die Quelle versiegt nie, auch im Hochsommer nicht.</p>
+        </div>
+      </div>
+
+      <div class="ad-sight-card">
+        <div class="ad-sight-visual sv-ad-tower"></div>
+        <div class="ad-sight-body">
+          <p class="ad-sight-cat">Antike · Turm</p>
+          <h3 class="ad-sight-name">Turm von Agios Petros</h3>
+          <p class="ad-sight-desc">Der besterhaltene hellenistische Rundturm der Kykladen — über 20 Meter hoch, aus dem 4. oder 3. Jahrhundert vor Christus, nahe Gavrio. Seine Bauweise erinnert an mykenische Tholosgräber. Kein Eintritt, keine Absperrung.</p>
+        </div>
+      </div>
+
+      <div class="ad-sight-card">
+        <div class="ad-sight-visual sv-ad-goulandris"></div>
+        <div class="ad-sight-body">
+          <p class="ad-sight-cat">Kunst · Museum</p>
+          <h3 class="ad-sight-name">Goulandris-Museum für Moderne Kunst</h3>
+          <p class="ad-sight-desc">Eine der bedeutendsten Privatsammlungen moderner Kunst in Griechenland — Picasso, Rodin, Kandinsky, und die wichtigsten griechischen Modernisten. Die Stiftung der Reeder-Familie Goulandris in der Chora, mit Skulpturengarten und Bibliothek.</p>
+        </div>
+      </div>
+
+      <div class="ad-sight-card">
+        <div class="ad-sight-visual sv-ad-beach"></div>
+        <div class="ad-sight-body">
+          <p class="ad-sight-cat">Strand · Natur</p>
+          <h3 class="ad-sight-name">Agios Petros & Achla</h3>
+          <p class="ad-sight-desc">Agios Petros — der weitläufige Goldsandstrand im Norden, mit Tavernen und Schatten. Achla — nur per Wanderweg oder Boot erreichbar, wilder Kieselstrand am Ende eines bewaldeten Tals. Zwei Welten auf einer Insel.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ad-section">
+    <div class="ad-section-head">
+      <p class="ad-section-label">03 — Tavernen & Küche</p>
+      <h2 class="ad-section-title">Kykladische Küche<br><em>mit venezianischer Finesse</em></h2>
+      <div class="ad-divider"></div>
+    </div>
+    <div class="ad-tav-grid">
+
+      <div class="ad-tav-card">
+        <div class="ad-tav-top">
+          <div>
+            <h3 class="ad-tav-name">Sozopoulos</h3>
+            <div class="ad-tav-loc">📍 Chora, nahe dem Platz des Seemanns</div>
+          </div>
+          <div class="ad-tav-stars">★★★★★</div>
+        </div>
+        <p class="ad-tav-desc">Das beste Restaurant der Insel und eines der besten der Kykladen — in einem neoklassizistischen Haus in der Chora, mit Meerblick und einer Küche, die lokale Produkte auf höchstem Niveau verarbeitet. Das Froutalía — das traditionelle Andros-Omelette mit lokaler Wurst — wird hier zur Offenbarung.</p>
+        <div class="ad-tav-dishes">
+          <span class="ad-tav-dish">Froutalía</span>
+          <span class="ad-tav-dish">Gegrillter Lavraki</span>
+          <span class="ad-tav-dish">Lokaler Käse</span>
+        </div>
+        <p class="ad-tav-price">Preisklasse: <span>€€€ · Mittag & Abend · Reservierung</span></p>
+      </div>
+
+      <div class="ad-tav-card">
+        <div class="ad-tav-top">
+          <div>
+            <h3 class="ad-tav-name">Stamatis</h3>
+            <div class="ad-tav-loc">📍 Batsi, am Hafen</div>
+          </div>
+          <div class="ad-tav-stars">★★★★★</div>
+        </div>
+        <p class="ad-tav-desc">Seit Jahrzehnten die Adresse für Meeresfrüchte in Batsi — direkt am kleinen Fischerhafen, mit Tischen auf dem Pier. Täglich frischer Fang, Tintenfisch vom Grill, Ouzo aus dem Bauch. Der Besitzer kennt noch alle Fischer beim Namen.</p>
+        <div class="ad-tav-dishes">
+          <span class="ad-tav-dish">Kalamari frisch</span>
+          <span class="ad-tav-dish">Gegrillter Oktopus</span>
+          <span class="ad-tav-dish">Fischsuppe</span>
+        </div>
+        <p class="ad-tav-price">Preisklasse: <span>€€ · Mittag & Abend</span></p>
+      </div>
+
+      <div class="ad-tav-card">
+        <div class="ad-tav-top">
+          <div>
+            <h3 class="ad-tav-name">To Balkoni</h3>
+            <div class="ad-tav-loc">📍 Stenies, Dorfzentrum</div>
+          </div>
+          <div class="ad-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ad-tav-desc">Im Dorf der Kapitäne, umgeben von Herrenhäusern und alten Taubentürmen — eine kleine Taverne auf einem Balkon mit Blick ins grüne Tal. Hausgemachte Pasteten, lokales Lamm, der beste Thymian-Honig der Insel. Einheimische kommen hierher, keine Reisegruppen.</p>
+        <div class="ad-tav-dishes">
+          <span class="ad-tav-dish">Lammschulter aus dem Ofen</span>
+          <span class="ad-tav-dish">Tyropita hausgemacht</span>
+          <span class="ad-tav-dish">Thymian-Honig</span>
+        </div>
+        <p class="ad-tav-price">Preisklasse: <span>€€ · Mittagessen</span></p>
+      </div>
+
+      <div class="ad-tav-card">
+        <div class="ad-tav-top">
+          <div>
+            <h3 class="ad-tav-name">Café Thalassa</h3>
+            <div class="ad-tav-loc">📍 Chora, Uferpromenade</div>
+          </div>
+          <div class="ad-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ad-tav-desc">Die Promenade der Chora mit Blick auf den Tourlitis-Leuchtturm — morgens Freddo und frische Lauwarme Pita, abends Wein und Loukoumades zum Sonnenuntergang. Das Café, in dem Andros sich selbst am ähnlichsten ist: ruhig, gediegen, ohne Eile.</p>
+        <div class="ad-tav-dishes">
+          <span class="ad-tav-dish">Freddo Espresso</span>
+          <span class="ad-tav-dish">Loukoumades mit Honig</span>
+          <span class="ad-tav-dish">Lokaler Wein</span>
+        </div>
+        <p class="ad-tav-price">Preisklasse: <span>€ · Morgens bis Mitternacht</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ad-section">
+    <div class="ad-section-head">
+      <p class="ad-section-label">04 — Orte & Viertel</p>
+      <h2 class="ad-section-title">Von Gavrio<br><em>bis ans Ende der Halbinsel</em></h2>
+      <div class="ad-divider"></div>
+    </div>
+    <div class="ad-viertel-grid">
+
+      <div class="ad-viertel-card">
+        <div class="ad-viertel-emoji">🏛️</div>
+        <h3 class="ad-viertel-name">Chora</h3>
+        <p class="ad-viertel-desc">Die eleganteste Hauptstadt der Kykladen — auf einer Felsenhalbinsel, mit neoklassizistischen Herrenhäusern, dem Platz des unbekannten Seemanns und dem Tourlitis-Leuchtturm als ewigem Fixpunkt.</p>
+      </div>
+
+      <div class="ad-viertel-card">
+        <div class="ad-viertel-emoji">⚓</div>
+        <h3 class="ad-viertel-name">Batsi</h3>
+        <p class="ad-viertel-desc">Das touristische Zentrum — ein ehemaliges Fischerdorf, das sich wie ein Amphitheater um seine Bucht schmiegt. Abends der belebteste Hafen der Insel, tagsüber Ausgangspunkt für die Westküstenstrände.</p>
+      </div>
+
+      <div class="ad-viertel-card">
+        <div class="ad-viertel-emoji">🏠</div>
+        <h3 class="ad-viertel-name">Stenies</h3>
+        <p class="ad-viertel-desc">Das Dorf der Kapitäne und Reeder — unweit der Chora, mit den prachtvollsten Privathäusern der Insel, alten Taubentürmen und einem Brunnen aus venezianischer Zeit. Grün, still, herrschaftlich.</p>
+      </div>
+
+      <div class="ad-viertel-card">
+        <div class="ad-viertel-emoji">💧</div>
+        <h3 class="ad-viertel-name">Menites & Apikia</h3>
+        <p class="ad-viertel-desc">Die Quellregion im Inselinneren — Wasser fließt das ganze Jahr, Platanen spenden Schatten, kleine Mühlen stehen still am Bach. Apikia ist bekannt für sein Sariza-Mineralwasser, das ganz Griechenland trinkt.</p>
+      </div>
+
+      <div class="ad-viertel-card">
+        <div class="ad-viertel-emoji">🚢</div>
+        <h3 class="ad-viertel-name">Gavrio</h3>
+        <p class="ad-viertel-desc">Der Haupthafen der Insel — der erste und letzte Eindruck für Fährgäste. Rauer, ehrlicher als Batsi, mit dem alten Turm des Agios Petros in der Nähe und dem besten Blick auf die Gavrionissia-Felseninseln.</p>
+      </div>
+
+      <div class="ad-viertel-card">
+        <div class="ad-viertel-emoji">🦋</div>
+        <h3 class="ad-viertel-name">Paleopolis & Zagora</h3>
+        <p class="ad-viertel-desc">Die antiken Stätten der Insel — Paleopolis an der Westküste, wo die alte Hauptstadt versunken scheint; Zagora auf einem Hochplateau mit geometrischem Stadtplan aus dem 8. Jahrhundert vor Christus.</p>
+      </div>
+
+    </div>
+
+    <div class="ad-tip-banner">
+      <div class="ad-tip-emoji">🌊</div>
+      <div class="ad-tip-text">
+        <h3>Die Insel, die nach Wasser klingt</h3>
+        <p>Andros ist die einzige Kykladeninsel, auf der man im Hochsommer hören kann, wie Wasser fließt. In den Tälern zwischen Menites und Apikia rauschen Bäche unter uralten Steinbrücken, Gänse watscheln durch kühle Rinnsale, und die Platanen sind so groß und alt, dass sie Schatten über ganze Dorfplätze werfen. Man wandert durch ein Griechenland, das man so nicht erwartet hat — und versteht dann sofort, warum die Reeder immer wieder zurückgekehrt sind. Nicht wegen des Geldes. Wegen des Wassers.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>
