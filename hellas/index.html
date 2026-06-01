@@ -36,6 +36,9 @@
   <link rel="stylesheet" href="css/islands/antiparos.css">
   <link rel="stylesheet" href="css/islands/donoussa.css">
   <link rel="stylesheet" href="css/islands/thirassia.css">
+  <link rel="stylesheet" href="css/islands/ios.css">
+  <link rel="stylesheet" href="css/islands/kea.css">
+
 
   <!-- Rezept-Styles -->
   <link rel="stylesheet" href="css/food/tzatziki.css">
@@ -342,7 +345,7 @@
         </div>
       </div>
 
-      <div class="island-card kyk-card">
+      <div class="island-card kyk-card" onclick="openIos()" style="cursor:pointer;">
         <div class="island-bg isle-ios"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -353,7 +356,7 @@
         </div>
       </div>
 
-      <div class="island-card kyk-card">
+      <div class="island-card kyk-card" onclick="openKea()" style="cursor:pointer;">
         <div class="island-bg isle-kea"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -945,10 +948,13 @@
 <div id="kythnos-page"    style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="donoussa-page"   style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="schinoussa-page" style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
-<div id="iraklia-page"   style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
-<div id="antiparos-page" style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="iraklia-page"    style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="antiparos-page"  style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="donoussa-page"   style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
-<div id="thirassia-page" style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="thirassia-page"  style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="ios-page"        style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="kea-page"        style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+
 
 
 <!-- ═══════════════════════════════════════ -->
@@ -1220,6 +1226,30 @@
   }
   function closeThirassia() {
     document.getElementById('thirassia-page').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+    function openIos() {
+    loadPage('ios-page', 'islands/ios.html').then(() => {
+      const p = document.getElementById('ios-page');
+      p.style.display = 'block'; p.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  function closeIos() {
+    document.getElementById('ios-page').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+    function openKea() {
+    loadPage('kea-page', 'islands/kea.html').then(() => {
+      const p = document.getElementById('kea-page');
+      p.style.display = 'block'; p.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  function closeKea() {
+    document.getElementById('kea-page').style.display = 'none';
     document.body.style.overflow = '';
   }
 
