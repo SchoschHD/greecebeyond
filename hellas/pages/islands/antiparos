@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antiparos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="antiparos.css" />
+</head>
+<body>
+<div id="antiparos-page">
+
+<div class="ap-back-bar">
+  <button class="ap-back-btn" onclick="closeAntiparos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ap-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Antiparos</span></p>
+</div>
+
+<div class="ap-hero">
+  <div class="ap-hero-bg"></div>
+  <!-- Kykladische Dorfsilhouette mit Burg, Windmühlen, Kapellen -->
+  <svg class="ap-hero-silhouette" viewBox="0 0 880 155" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Dorfmauer (Kastro) -->
+    <rect x="320" y="85" width="240" height="50" rx="1"/>
+    <!-- Zinnenkranz -->
+    <rect x="326" y="74" width="14" height="13"/>
+    <rect x="348" y="74" width="14" height="13"/>
+    <rect x="370" y="74" width="14" height="13"/>
+    <rect x="420" y="74" width="14" height="13"/>
+    <rect x="442" y="74" width="14" height="13"/>
+    <rect x="490" y="74" width="14" height="13"/>
+    <rect x="512" y="74" width="14" height="13"/>
+    <rect x="534" y="74" width="14" height="13"/>
+    <!-- Burgturm Mitte -->
+    <rect x="415" y="42" width="50" height="44"/>
+    <rect x="410" y="32" width="60" height="12"/>
+    <rect x="413" y="20" width="14" height="14"/>
+    <rect x="433" y="20" width="14" height="14"/>
+    <rect x="453" y="20" width="14" height="14"/>
+    <!-- Gotisches Tor -->
+    <path d="M430,135 L430,110 Q440,100 450,110 L450,135Z"/>
+    <!-- Kapelle links -->
+    <rect x="120" y="98" width="34" height="37"/>
+    <polygon points="112,98 137,76 162,98"/>
+    <rect x="132" y="60" width="10" height="18"/>
+    <!-- Kapellenkuppel -->
+    <ellipse cx="137" cy="58" rx="10" ry="6"/>
+    <!-- Windmühle rechts -->
+    <rect x="700" y="80" width="22" height="50" rx="2"/>
+    <ellipse cx="711" cy="78" rx="12" ry="6"/>
+    <!-- Flügel -->
+    <line x1="711" y1="72" x2="695" y2="45" stroke="white" stroke-width="3.5"/>
+    <line x1="711" y1="72" x2="727" y2="45" stroke="white" stroke-width="3.5"/>
+    <line x1="711" y1="72" x2="688" y2="62" stroke="white" stroke-width="3.5"/>
+    <line x1="711" y1="72" x2="734" y2="62" stroke="white" stroke-width="3.5"/>
+    <!-- Kleine Windmühle -->
+    <rect x="755" y="92" width="16" height="38" rx="1"/>
+    <line x1="763" y1="90" x2="750" y2="70" stroke="white" stroke-width="2.5"/>
+    <line x1="763" y1="90" x2="776" y2="70" stroke="white" stroke-width="2.5"/>
+    <line x1="763" y1="90" x2="746" y2="83" stroke="white" stroke-width="2.5"/>
+    <line x1="763" y1="90" x2="780" y2="83" stroke="white" stroke-width="2.5"/>
+    <!-- Kleines Haus links -->
+    <rect x="60" y="108" width="40" height="27"/>
+    <polygon points="56,108 80,92 104,108"/>
+    <!-- Kleines Haus rechts -->
+    <rect x="820" y="108" width="36" height="27"/>
+    <polygon points="816,108 838,94 858,108"/>
+    <!-- Meer -->
+    <path d="M0,145 Q220,135 440,141 Q660,148 880,138 L880,155 L0,155Z" opacity="0.28"/>
+  </svg>
+  <div class="ap-hero-overlay"></div>
+  <div class="ap-hero-waves"></div>
+  <div class="ap-hero-content">
+    <p class="ap-hero-tag">Kykladen · Herzstück der Ägäis</p>
+    <h1 class="ap-hero-title">Antiparos<em>Αντίπαρος</em></h1>
+    <p class="ap-hero-sub">Die weiße Schwester von Paros — mit einer venezianischen Burg als Dorfkern, der ältesten Höhle der Kykladen und dem entspanntesten Vibe der Ägäis. Diskret, sonnig, echt.</p>
+    <div class="ap-hero-pills">
+      <span class="ap-hero-pill">Venezianisches Kastro</span>
+      <span class="ap-hero-pill">Tropfsteinhöhle</span>
+      <span class="ap-hero-pill">Despotiko</span>
+      <span class="ap-hero-pill">Saliagos 4300 v. Chr.</span>
+      <span class="ap-hero-pill">Kein Massentourismus</span>
+    </div>
+  </div>
+</div>
+
+<div class="ap-vibe-strip">
+  <div class="ap-vibe-item">10 min Fähre ab Paros/Pounda</div>
+  <div class="ap-vibe-item">~1.100 Einwohner ganzjährig</div>
+  <div class="ap-vibe-item">Älteste Tropfsteinhöhle der Kykladen</div>
+  <div class="ap-vibe-item">Keine Autos in der Chora</div>
+  <div class="ap-vibe-item">Tom Hanks hat hier ein Haus</div>
+</div>
+
+<div class="ap-stats-bar">
+  <div class="ap-stat-item">
+    <div class="ap-stat-num">~1.100</div>
+    <div class="ap-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ap-stat-item">
+    <div class="ap-stat-num">45 Mio.</div>
+    <div class="ap-stat-lbl">Jahre — ält. Stalaktit</div>
+  </div>
+  <div class="ap-stat-item">
+    <div class="ap-stat-num">85 m</div>
+    <div class="ap-stat-lbl">Höhlentiefe</div>
+  </div>
+  <div class="ap-stat-item">
+    <div class="ap-stat-num">1440</div>
+    <div class="ap-stat-lbl">Kastro erbaut</div>
+  </div>
+  <div class="ap-stat-item">
+    <div class="ap-stat-num">4.300 v. Chr.</div>
+    <div class="ap-stat-lbl">Saliagos — ält. Kykladen-Siedlung</div>
+  </div>
+</div>
+
+<div class="ap-content">
+
+  <section class="ap-section">
+    <div class="ap-section-head">
+      <p class="ap-section-label">01 — Geschichte</p>
+      <h2 class="ap-section-title">Von Saliagos bis zum<br><em>Marquis in der Höhle</em></h2>
+      <div class="ap-divider"></div>
+    </div>
+    <div class="ap-history-grid">
+      <div class="ap-history-text">
+        <p>Auf dem winzigen Felsinselchen Saliagos — heute nur noch ein Felsbrocken in der Meerenge zwischen Paros und Antiparos — wurde die älteste bekannte Siedlung der Kykladen ausgegraben: rund 4.300 bis 3.900 vor Christus. Die Bewohner dieser jungsteinzeitlichen Gemeinschaft kannten bereits Seefahrt, Handel und kunstvolle Töpferei. Vor Jahrtausenden war Saliagos noch Teil der Küste — das Meer stieg erst später.</p>
+        <p>Die Höhle im Inselinneren war seit der Steinzeit bekannt und genutzt. Einer der seltsamsten Besuche: Im Weihnachten 1673 ließ der französische Botschafter am osmanischen Hof, der Marquis de Nointel, die Weihnachtsmesse in der Höhle feiern — sein Priester nutzte einen Stalagmiten als Altar. Seitdem haben Besucher ihre Namen in die Höhlenwände geritzt: vom Marquis de Samber bis zu König Otto, dem ersten König Griechenlands.</p>
+        <p>Das venezianische Kastro von 1440 ist kein Schloss im üblichen Sinn — es ist das Dorf selbst. Die zweistöckigen Häuser bilden die Burgmauer, das gotische Tor ist der einzige Eingang. Die Venezianer bauten die Bewohner buchstäblich in ihre Festung ein. Heute ist das Kastro bewohnt, belebt und blüht mit Bougainvillea — die beste Festung, in der man je gefangen sein könnte.</p>
+      </div>
+      <div class="ap-timeline">
+        <div class="ap-tl-item">
+          <div class="ap-tl-dot"></div>
+          <div class="ap-tl-year">4.300 v. Chr.</div>
+          <div class="ap-tl-event">Neolithische Siedlung auf Saliagos — der Felsbrocken in der Meerenge zwischen Paros und Antiparos beherbergt die älteste bekannte Siedlung der Kykladen.</div>
+        </div>
+        <div class="ap-tl-item">
+          <div class="ap-tl-dot"></div>
+          <div class="ap-tl-year">680–660 v. Chr.</div>
+          <div class="ap-tl-event">Auf der Nachbarinsel Despotiko entsteht ein Heiligtum — vermutlich Apollo und Artemis geweiht. Eine weibliche Götterstatue aus dieser Zeit gilt als Jahrhundertfund der Kykladen-Archäologie.</div>
+        </div>
+        <div class="ap-tl-item">
+          <div class="ap-tl-dot"></div>
+          <div class="ap-tl-year">1440</div>
+          <div class="ap-tl-event">Die Venezianer errichten das Kastro — die Häuser des Dorfes sind die Burgmauer. Ein gotisches Tor ist der einzige Eingang. Diese Bauweise war typisch für gefährdete Kykladendörfer.</div>
+        </div>
+        <div class="ap-tl-item">
+          <div class="ap-tl-dot"></div>
+          <div class="ap-tl-year">1673</div>
+          <div class="ap-tl-event">Der Marquis de Nointel, französischer Botschafter in Konstantinopel, feiert Weihnachtsmesse in der Tropfsteinhöhle. Ein Stalagmit dient als Altar. 500 Menschen sollen zugegen gewesen sein.</div>
+        </div>
+        <div class="ap-tl-item">
+          <div class="ap-tl-dot"></div>
+          <div class="ap-tl-year">1840</div>
+          <div class="ap-tl-event">König Otto — der erste König des modernen Griechenland — besucht die Höhle und ritzt seinen Namen in die Wände. Eine lange Tradition illustrer Höhlenbesucher.</div>
+        </div>
+        <div class="ap-tl-item">
+          <div class="ap-tl-dot"></div>
+          <div class="ap-tl-year">1997–heute</div>
+          <div class="ap-tl-event">Ausgrabungen auf Despotiko enthüllen ein weitläufiges antikes Heiligtum. Noch immer aktive Grabungsstätte — jeder Sommer bringt neue Funde aus dem 7. Jahrhundert vor Christus.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ap-section">
+    <div class="ap-section-head">
+      <p class="ap-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ap-section-title">Kastro, Höhle<br><em>und das Blau vor Despotiko</em></h2>
+      <div class="ap-divider"></div>
+    </div>
+    <div class="ap-sights-grid">
+
+      <div class="ap-sight-card">
+        <div class="ap-sight-visual sv-ap-chora"></div>
+        <div class="ap-sight-body">
+          <p class="ap-sight-cat">Hauptort · Kykladen</p>
+          <h3 class="ap-sight-name">Chora</h3>
+          <p class="ap-sight-desc">Schneeweiße Zuckerwürfelhäuser, enge gepflasterte Gassen, Bougainvillea in allen Rottönen — die Chora von Antiparos verbindet den Hafen an der Ostküste mit dem Strand Sifneiko im Westen. Autofreie Hauptgasse, Boutiquen, Abendleben ohne Hektik.</p>
+        </div>
+      </div>
+
+      <div class="ap-sight-card">
+        <div class="ap-sight-visual sv-ap-kastro"></div>
+        <div class="ap-sight-body">
+          <p class="ap-sight-cat">Venezianisch · Burg</p>
+          <h3 class="ap-sight-name">Venezianisches Kastro (1440)</h3>
+          <p class="ap-sight-desc">Das Dorf als Festung — die zweistöckigen Häuser bilden die Burgmauer, ein gotisches Tor aus dem 15. Jahrhundert ist der einzige Eingang. Bewohnt, blühend, lebendig. Im Innenraum: die Volkskunst-Sammlung der Gemeinde mit kykladischen Idolen und Ausgrabungsfunden aus Despotiko.</p>
+        </div>
+      </div>
+
+      <div class="ap-sight-card">
+        <div class="ap-sight-visual sv-ap-cave"></div>
+        <div class="ap-sight-body">
+          <p class="ap-sight-cat">Natur · Höhle</p>
+          <h3 class="ap-sight-name">Tropfsteinhöhle</h3>
+          <p class="ap-sight-desc">Die einzige vollständig vertikale Höhle Europas — 85 Meter tief, 400 Stufen hinunter, am Boden eine Kammer voller Stalaktiten und Stalagmiten. Der älteste Stalaktit am Eingang wird auf 45 Millionen Jahre geschätzt. Seit der Steinzeit als Refugium genutzt.</p>
+        </div>
+      </div>
+
+      <div class="ap-sight-card">
+        <div class="ap-sight-visual sv-ap-despotiko"></div>
+        <div class="ap-sight-body">
+          <p class="ap-sight-cat">Antike · Insel</p>
+          <h3 class="ap-sight-name">Despotiko</h3>
+          <p class="ap-sight-desc">Die unbewohnte Felsinsel südwestlich von Antiparos — aktive Ausgrabungsstätte eines archaischen Apollo-Heiligtums aus dem 7. Jahrhundert vor Christus. Glasklare Buchten, zerklüftete Küste, kein einziges Gebäude außer dem Zelt der Archäologen. Per Kaiki erreichbar.</p>
+        </div>
+      </div>
+
+      <div class="ap-sight-card">
+        <div class="ap-sight-visual sv-ap-beach"></div>
+        <div class="ap-sight-body">
+          <p class="ap-sight-cat">Strand</p>
+          <h3 class="ap-sight-name">Agios Georgios & Soros</h3>
+          <p class="ap-sight-desc">Agios Georgios im Südwesten — das zweite Dorf der Insel, mit legendärer Strandtaverne und Bootstouren nach Despotiko. Soros im Inselinneren — ein tiefes türkises Wasser in einer geschützten Bucht, kaum besucht außer von Einheimischen.</p>
+        </div>
+      </div>
+
+      <div class="ap-sight-card">
+        <div class="ap-sight-visual sv-ap-sifneiko"></div>
+        <div class="ap-sight-body">
+          <p class="ap-sight-cat">Strand · Sonnenuntergang</p>
+          <h3 class="ap-sight-name">Sifneiko Beach</h3>
+          <p class="ap-sight-desc">Der Westküstenstrand der Chora — 20 Minuten zu Fuß vom Hafen, mit direktem Blick auf Sifnos und dem besten Sonnenuntergang der Insel. Im Sommer ein kleines Café, sonst: Steine, Wasser, Stille.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ap-section">
+    <div class="ap-section-head">
+      <p class="ap-section-label">03 — Tavernen & Küche</p>
+      <h2 class="ap-section-title">Meeresfrüchte, Fisch<br><em>und kykladische Einfachheit</em></h2>
+      <div class="ap-divider"></div>
+    </div>
+    <div class="ap-tav-grid">
+
+      <div class="ap-tav-card">
+        <div class="ap-tav-top">
+          <div>
+            <h3 class="ap-tav-name">Captain Pipinos</h3>
+            <div class="ap-tav-loc">📍 Agios Georgios, direkt am Strand</div>
+          </div>
+          <div class="ap-tav-stars">★★★★★</div>
+        </div>
+        <p class="ap-tav-desc">Die legendärste Taverne der Insel — direkt am Sandstrand von Agios Georgios, mit Plastikstühlen im Wasser und frischem Fang vom Boot des Kapitäns. Kein Schicki-Micki, keine langen Weinkarten. Nur das Beste, was das Meer heute hergegeben hat — und das ist immer vorzüglich.</p>
+        <div class="ap-tav-dishes">
+          <span class="ap-tav-dish">Hummer direkt vom Boot</span>
+          <span class="ap-tav-dish">Gegrillter Lavraki</span>
+          <span class="ap-tav-dish">Oktopus im Essig</span>
+        </div>
+        <p class="ap-tav-price">Preisklasse: <span>€€€ · Mittag & Abend · Kein Handy-Signal</span></p>
+      </div>
+
+      <div class="ap-tav-card">
+        <div class="ap-tav-top">
+          <div>
+            <h3 class="ap-tav-name">Taberna Kyklades</h3>
+            <div class="ap-tav-loc">📍 Chora, Hauptgasse</div>
+          </div>
+          <div class="ap-tav-stars">★★★★★</div>
+        </div>
+        <p class="ap-tav-desc">Das Lokal von Niko in der Hauptgasse — urig, ohne Schnickschnack, mit echter traditioneller griechischer Küche, die täglich frisch zubereitet wird. Die Einheimischen sitzen hier neben den Reisenden, ohne dass man den Unterschied bemerkt. Das ist selten und kostbar.</p>
+        <div class="ap-tav-dishes">
+          <span class="ap-tav-dish">Moussaka hausgemacht</span>
+          <span class="ap-tav-dish">Gemischte Meze</span>
+          <span class="ap-tav-dish">Lokaler Wein vom Fass</span>
+        </div>
+        <p class="ap-tav-price">Preisklasse: <span>€€ · Mittag & Abend</span></p>
+      </div>
+
+      <div class="ap-tav-card">
+        <div class="ap-tav-top">
+          <div>
+            <h3 class="ap-tav-name">Papagalos</h3>
+            <div class="ap-tav-loc">📍 Chora, Hauptgasse rechts</div>
+          </div>
+          <div class="ap-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ap-tav-desc">Das kreativste Restaurant der Insel — ungewöhnliche Kombinationen wie Hähnchen mit Apfelsoße oder Trüffelrisotto in einer Taverne, die sonst nach Mezedes und Tintenfisch riecht. Für alle, die nach einem langen Strandtag auch mal etwas anderes wollen als gegrillten Fisch.</p>
+        <div class="ap-tav-dishes">
+          <span class="ap-tav-dish">Risotto mit Trüffel</span>
+          <span class="ap-tav-dish">Hähnchen mit Apfelsoße</span>
+          <span class="ap-tav-dish">Hausgemachte Pasta</span>
+        </div>
+        <p class="ap-tav-price">Preisklasse: <span>€€€ · Abendessen</span></p>
+      </div>
+
+      <div class="ap-tav-card">
+        <div class="ap-tav-top">
+          <div>
+            <h3 class="ap-tav-name">The Perigiali</h3>
+            <div class="ap-tav-loc">📍 Panagia Beach, Nordostküste</div>
+          </div>
+          <div class="ap-tav-stars">★★★★★</div>
+        </div>
+        <p class="ap-tav-desc">Am Panagia Beach — die Taverne, nach der man im Navi suchen muss, weil der Strand selbst kaum Hinweisschilder hat. Direkt am Wasser, mit Tischen auf den Steinen. Frühstück bis Abendessen, alles gut, alles ehrlich, Meerblick garantiert. Das Geheimnis der Stammgäste.</p>
+        <div class="ap-tav-dishes">
+          <span class="ap-tav-dish">Frühstück mit Joghurt & Honig</span>
+          <span class="ap-tav-dish">Garnelensouvlaki</span>
+          <span class="ap-tav-dish">Gegrillter Fisch des Tages</span>
+        </div>
+        <p class="ap-tav-price">Preisklasse: <span>€€ · Frühstück bis Abend</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ap-section">
+    <div class="ap-section-head">
+      <p class="ap-section-label">04 — Orte & Strände</p>
+      <h2 class="ap-section-title">Eine Insel,<br><em>von Chora bis Faneromeni</em></h2>
+      <div class="ap-divider"></div>
+    </div>
+    <div class="ap-viertel-grid">
+
+      <div class="ap-viertel-card">
+        <div class="ap-viertel-emoji">🏰</div>
+        <h3 class="ap-viertel-name">Kastro & Chora</h3>
+        <p class="ap-viertel-desc">Das Herzstück der Insel — die venezianische Burg von 1440, deren Häuser die Mauer bilden. Durch das gotische Tor betritt man einen anderen Zeitraum. Außen: Bougainvillea und Boutiquen.</p>
+      </div>
+
+      <div class="ap-viertel-card">
+        <div class="ap-viertel-emoji">⚓</div>
+        <h3 class="ap-viertel-name">Hafen</h3>
+        <p class="ap-viertel-desc">Der kleine Fischerhafen — wo täglich die Fähre von Pounda anlegt und die Fischer ihre Netze flicken. Abends der geselligste Ort der Insel, mit Tavernen direkt am Wasser und Blick auf Paros.</p>
+      </div>
+
+      <div class="ap-viertel-card">
+        <div class="ap-viertel-emoji">🏖️</div>
+        <h3 class="ap-viertel-name">Agios Georgios</h3>
+        <p class="ap-viertel-desc">Das zweite Dorf im Südwesten — ruhiger, ursprünglicher, mit dem besten Strandrestaurant der Insel (Captain Pipinos) und dem Bootssteg nach Despotiko. Hierher kommt man für einen ganzen Tag.</p>
+      </div>
+
+      <div class="ap-viertel-card">
+        <div class="ap-viertel-emoji">🌊</div>
+        <h3 class="ap-viertel-name">Faneromeni-Halbinsel</h3>
+        <p class="ap-viertel-desc">Der wilde Südzipfel der Insel — zerklüftete Küste, Schotterpiste, Badebuchten, die in allen Blautönen schimmern. Kein Strandkorb, kein Eis, kein Netz. Nur Felsen und Wasser.</p>
+      </div>
+
+      <div class="ap-viertel-card">
+        <div class="ap-viertel-emoji">🏺</div>
+        <h3 class="ap-viertel-name">Despotiko</h3>
+        <p class="ap-viertel-desc">Die unbewohnte Ausgrabungsinsel — nur per Boot erreichbar, mit einem aktiven Apollon-Heiligtum aus dem 7. Jahrhundert. Archäologen im Sommer, Schafe im Winter, und immer das klarste Wasser der Umgebung.</p>
+      </div>
+
+      <div class="ap-viertel-card">
+        <div class="ap-viertel-emoji">🌅</div>
+        <h3 class="ap-viertel-name">Sifneiko & Westküste</h3>
+        <p class="ap-viertel-desc">Der Sonnenuntergangsbeach, zu Fuß von der Chora erreichbar. Im Sommer ein kleines Café, der Rest des Jahres: Stille, Sifnos am Horizont, und das Gefühl, am Ende eines langen guten Tages angekommen zu sein.</p>
+      </div>
+
+    </div>
+
+    <div class="ap-tip-banner">
+      <div class="ap-tip-emoji">🌺</div>
+      <div class="ap-tip-text">
+        <h3>Die Insel der Diskretion</h3>
+        <p>Antiparos pflegt die Kunst, berühmt zu sein, ohne es zu zeigen. Tom Hanks hat hier ein Haus — er kauft morgens Brot in der Bäckerei der Chora, und niemand macht ein Foto. Das ist das ungeschriebene Gesetz der Insel: Was hier passiert, bleibt hier. Vielleicht ist das der Grund, warum so viele zurückkommen. Nicht wegen der Tropfsteinhöhle und nicht wegen Despotiko. Sondern weil Antiparos die seltene Gabe hat, jeden so zu empfangen, als ob er schon immer hier gewesen wäre.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>
