@@ -1,0 +1,289 @@
+/* =============================================
+   DONOUSSA — Insel-Unterseite
+   Akzentfarbe: Sandgold / Ägäis-Tiefazur
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#donoussa-page {
+  font-family: 'Karla', sans-serif;
+  color: #14100a;
+  background: #f8f5ee;
+}
+
+/* ── BACK BAR ── */
+.dn-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(248,245,238,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(160,120,40,0.18);
+}
+.dn-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(160,120,40,0.32);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Karla', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #8a6010; transition: all 0.2s;
+}
+.dn-back-btn:hover { background: #f5edda; border-color: #8a6010; }
+.dn-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.dn-breadcrumb { font-size: 0.8rem; color: #9a8868; letter-spacing: 0.05em; }
+.dn-breadcrumb span { color: #8a6010; }
+
+/* ── HERO ── */
+.dn-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.dn-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(172deg,
+    #080604 0%,
+    #1a1408 16%,
+    #3a2808 34%,
+    #6a4810 54%,
+    #1848a0 76%,
+    #0c80c8 100%);
+}
+.dn-hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 55% 40% at 50% 90%, rgba(20,80,180,0.22) 0%, transparent 70%),
+    radial-gradient(ellipse 45% 30% at 70% 20%, rgba(90,60,10,0.30) 0%, transparent 60%);
+}
+/* Hügelsilhouette mit Dorf -->*/
+.dn-hero-silhouette {
+  position: absolute; bottom: 105px; left: 50%;
+  transform: translateX(-50%);
+  width: 920px; height: 170px;
+  opacity: 0.10;
+}
+/* Trockener Phrygana-Punkt-Muster */
+.dn-hero-grain {
+  position: absolute; inset: 0; opacity: 0.028;
+  background-image: radial-gradient(circle, rgba(255,220,120,0.9) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.dn-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(6,4,2,0.46);
+}
+.dn-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 115px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 115'%3E%3Cpath fill='%23f8f5ee' fill-opacity='1' d='M0,58L90,50C180,42,360,26,540,32C720,38,900,66,1080,72C1260,78,1350,60,1440,52L1440,115L0,115Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.dn-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.dn-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.45em;
+  text-transform: uppercase; color: rgba(220,180,80,0.55);
+  margin-bottom: 1.2rem;
+}
+.dn-hero-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(3.8rem, 9vw, 8rem);
+  font-weight: 300; line-height: 0.88;
+  margin-bottom: 1.5rem;
+}
+.dn-hero-title em {
+  font-style: italic; display: block;
+  color: #f0c860; font-size: 0.50em;
+  letter-spacing: 0.05em; margin-top: 0.38rem;
+  font-weight: 300;
+}
+.dn-hero-sub {
+  max-width: 560px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(240,220,170,0.68); line-height: 1.82; font-weight: 300;
+}
+.dn-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.dn-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(220,180,80,0.25);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(240,215,140,0.78);
+}
+
+/* ── MIKRO STRIP ── */
+.dn-mikro-strip {
+  background: #12100a;
+  padding: 1.15rem 3rem;
+  display: flex; align-items: center; justify-content: center; gap: 3rem;
+  flex-wrap: wrap;
+}
+.dn-mikro-item {
+  display: flex; align-items: center; gap: 0.7rem;
+  color: rgba(220,180,80,0.62); font-size: 0.8rem; letter-spacing: 0.08em;
+}
+.dn-mikro-item::before { content: '—'; color: #8a6010; }
+
+/* ── STATS BAR ── */
+.dn-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(160,120,40,0.11);
+}
+.dn-stat-item {
+  flex: 1; max-width: 200px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(160,120,40,0.09);
+}
+.dn-stat-item:last-child { border-right: none; }
+.dn-stat-num {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem; font-weight: 300; color: #8a6010; line-height: 1;
+}
+.dn-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #9a8868; margin-top: 0.3rem;
+}
+
+/* ── CONTENT ── */
+.dn-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.dn-section { padding: 4rem 0 2rem; }
+.dn-section-head { margin-bottom: 2.5rem; }
+.dn-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #8a6010; margin-bottom: 0.8rem;
+}
+.dn-section-title {
+  font-family: 'Fraunces', serif;
+  font-size: 2.8rem; font-weight: 300; color: #14100a; line-height: 1.15;
+}
+.dn-section-title em { font-style: italic; color: #8a6010; }
+.dn-divider { width: 40px; height: 2px; background: #8a6010; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.dn-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.dn-history-text p {
+  font-size: 0.98rem; line-height: 1.95; color: #2c2010;
+  font-weight: 400; margin-bottom: 1.2rem;
+}
+.dn-timeline { position: relative; padding-left: 2rem; }
+.dn-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(138,96,16,0.18);
+}
+.dn-tl-item { position: relative; margin-bottom: 1.8rem; }
+.dn-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: #f8f5ee; border: 2px solid #8a6010;
+}
+.dn-tl-year {
+  font-family: 'Fraunces', serif;
+  font-size: 1.25rem; font-weight: 300; color: #8a6010; margin-bottom: 0.25rem;
+}
+.dn-tl-event {
+  font-size: 0.87rem; color: #2c2010; line-height: 1.65; font-weight: 400;
+}
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.dn-sights-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem;
+}
+.dn-sight-card {
+  border-radius: 3px; overflow: hidden;
+  border: 1px solid rgba(160,120,40,0.16);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.dn-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(20,14,4,0.10); }
+.dn-sight-visual { height: 140px; }
+.dn-sight-body { padding: 1.2rem; }
+.dn-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #8a6010; margin-bottom: 0.35rem;
+}
+.dn-sight-name {
+  font-family: 'Fraunces', serif;
+  font-size: 1.3rem; font-weight: 300; color: #14100a; margin-bottom: 0.4rem;
+}
+.dn-sight-desc { font-size: 0.83rem; color: #4a3820; line-height: 1.65; font-weight: 400; }
+
+.sv-dn-stavros   { background: linear-gradient(160deg, #100c04 0%, #4a3408 55%, #c09030 100%); }
+.sv-dn-kedros    { background: linear-gradient(160deg, #041018 0%, #0c3858 55%, #1898d8 100%); }
+.sv-dn-livadi    { background: linear-gradient(160deg, #040c10 0%, #084058 55%, #10b0c0 100%); }
+.sv-dn-mersini   { background: linear-gradient(160deg, #080c04 0%, #203010 55%, #609040 100%); }
+.sv-dn-fokospilia{ background: linear-gradient(160deg, #040814 0%, #081848 55%, #2040c0 100%); }
+.sv-dn-wrack     { background: linear-gradient(160deg, #040808 0%, #102028 55%, #206880 100%); }
+
+/* ── TAVERNEN ── */
+.dn-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.dn-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(160,120,40,0.14);
+  border-radius: 3px; border-left: 3px solid #8a6010;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.dn-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(20,14,4,0.08); }
+.dn-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.dn-tav-name {
+  font-family: 'Fraunces', serif;
+  font-size: 1.35rem; font-weight: 300; color: #14100a;
+}
+.dn-tav-loc { font-size: 0.75rem; color: #9a8868; margin-top: 0.2rem; }
+.dn-tav-stars { color: #8a6010; font-size: 0.85rem; letter-spacing: 2px; }
+.dn-tav-desc { font-size: 0.87rem; color: #2c2010; line-height: 1.75; font-weight: 400; margin-bottom: 1rem; }
+.dn-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.dn-tav-dish {
+  padding: 3px 10px; background: #f5edda; color: #5a3808;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+}
+.dn-tav-price { font-size: 0.8rem; color: #9a8868; }
+.dn-tav-price span { color: #8a6010; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.dn-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.dn-viertel-card {
+  padding: 1.8rem; background: #f5edda;
+  border-radius: 3px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.dn-viertel-card:hover { background: #eddfc0; transform: translateY(-4px); }
+.dn-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.dn-viertel-name {
+  font-family: 'Fraunces', serif;
+  font-size: 1.25rem; font-weight: 300; color: #14100a; margin-bottom: 0.5rem;
+}
+.dn-viertel-desc { font-size: 0.82rem; color: #4a3820; line-height: 1.65; font-weight: 400; }
+
+/* ── TIP BANNER ── */
+.dn-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #080604 0%, #2c1c04 40%, #8a6010 100%);
+  border-radius: 3px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.dn-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.dn-tip-text h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.75rem; font-weight: 300; color: white; margin-bottom: 0.6rem;
+}
+.dn-tip-text p {
+  font-size: 0.92rem; color: rgba(240,215,140,0.70); line-height: 1.82; font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .dn-back-bar { padding: 0.8rem 1.2rem; }
+  .dn-content { padding: 2rem 1.2rem 4rem; }
+  .dn-history-grid { grid-template-columns: 1fr; }
+  .dn-sights-grid { grid-template-columns: 1fr 1fr; }
+  .dn-tav-grid { grid-template-columns: 1fr; }
+  .dn-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .dn-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+  .dn-mikro-strip { padding: 1.2rem; gap: 1.5rem; }
+}
