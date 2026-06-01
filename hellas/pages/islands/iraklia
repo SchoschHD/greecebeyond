@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iraklia — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="iraklia.css" />
+</head>
+<body>
+<div id="iraklia-page">
+
+<div class="ir-back-bar">
+  <button class="ir-back-btn" onclick="closeIraklia()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ir-breadcrumb">Hellas &nbsp;/&nbsp; Kleine Kykladen &nbsp;/&nbsp; <span>Iraklia</span></p>
+</div>
+
+<div class="ir-hero">
+  <div class="ir-hero-bg"></div>
+  <div class="ir-hero-dots"></div>
+  <!-- Agios Ioannis cave entrance + single village Agios Georgios + wild coastline -->
+  <svg class="ir-hero-silhouette" viewBox="0 0 860 180" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sea -->
+    <path d="M0,172 Q215,160 430,167 Q645,174 860,162 L860,180 L0,180Z" opacity="0.24"/>
+    <!-- Wild rocky coastline — the whole island is essentially one ridge -->
+    <path d="M0,180 Q60,130 120,100 Q180,72 240,68 Q300,64 360,72 Q420,80 480,70 Q540,60 600,55 Q660,50 720,58 Q780,66 840,55 L860,58 L860,180Z" opacity="0.28"/>
+    <!-- Agios Ioannis cave (center-left) — arch opening in the rock -->
+    <path d="M240,102 Q268,75 296,102" fill="none" stroke="white" stroke-width="5"/>
+    <rect x="240" y="100" width="56" height="42"/>
+    <!-- Cave darkness inside -->
+    <ellipse cx="268" cy="108" rx="20" ry="16" opacity="0.5"/>
+    <!-- Rock mass around cave -->
+    <path d="M210,142 Q220,105 240,98 Q255,85 268,82 Q282,85 296,98 Q316,105 325,142Z" opacity="0.35"/>
+    <!-- Small chapel on cave top -->
+    <rect x="258" y="68" width="20" height="16"/>
+    <polygon points="254,68 282,68 268,56"/>
+    <rect x="264" y="52" width="8" height="10"/>
+    <rect x="261" y="55" width="14" height="5"/>
+    <!-- Agios Georgios village (right of center) — tiny, just a handful of cubes -->
+    <rect x="480" y="90" width="22" height="18"/>
+    <rect x="508" y="94" width="18" height="14"/>
+    <rect x="530" y="88" width="20" height="20"/>
+    <rect x="556" y="92" width="16" height="16"/>
+    <!-- Church of Agios Georgios -->
+    <rect x="498" y="74" width="24" height="22"/>
+    <ellipse cx="510" cy="74" rx="14" ry="9"/>
+    <rect x="505" y="62" width="10" height="14"/>
+    <ellipse cx="510" cy="62" rx="7" ry="5"/>
+    <!-- Livadi beach (far right, gentle curve) -->
+    <path d="M700,155 Q740,140 780,145 Q810,148 840,142" fill="none" stroke="white" stroke-width="3" opacity="0.5"/>
+    <!-- Thyme bushes / vegetation dots -->
+    <ellipse cx="380" cy="78" rx="12" ry="7" opacity="0.4"/>
+    <ellipse cx="420" cy="74" rx="10" ry="6" opacity="0.4"/>
+    <ellipse cx="640" cy="65" rx="14" ry="8" opacity="0.4"/>
+    <ellipse cx="680" cy="70" rx="10" ry="6" opacity="0.4"/>
+    <!-- Neighbouring islet (Schoinoussa hint, far left) -->
+    <path d="M0,160 Q30,140 60,145 Q80,148 100,155 L100,180 L0,180Z" opacity="0.18"/>
+  </svg>
+  <div class="ir-hero-overlay"></div>
+  <div class="ir-hero-content">
+    <p class="ir-hero-tag">Kleine Kykladen · Nördliche Ägäis</p>
+    <h1 class="ir-hero-title">Iraklia<em>Ηρακλειά</em></h1>
+    <p class="ir-hero-sub">Die kleinste der Kleinen Kykladen — 150 Einwohner, ein Dorf, eine Taverne, eine Höhle und das klarste Wasser der Ägäis. Iraklia ist nicht das Ende der Welt, aber man kann es von hier aus sehen. Für alle, die wirklich ankommen wollen.</p>
+    <div class="ir-hero-pills">
+      <span class="ir-hero-pill">Kleine Kykladen</span>
+      <span class="ir-hero-pill">Höhle Agios Ioannis</span>
+      <span class="ir-hero-pill">150 Einwohner</span>
+      <span class="ir-hero-pill">Wildnis</span>
+      <span class="ir-hero-pill">Stille</span>
+    </div>
+  </div>
+  <div class="ir-hero-waves"></div>
+</div>
+
+<div class="ir-stats-bar">
+  <div class="ir-stat-item">
+    <div class="ir-stat-num">~150</div>
+    <div class="ir-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ir-stat-item">
+    <div class="ir-stat-num">19 km²</div>
+    <div class="ir-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="ir-stat-item">
+    <div class="ir-stat-num">1</div>
+    <div class="ir-stat-lbl">Dorf</div>
+  </div>
+  <div class="ir-stat-item">
+    <div class="ir-stat-num">1</div>
+    <div class="ir-stat-lbl">Straße (asphaltiert)</div>
+  </div>
+  <div class="ir-stat-item">
+    <div class="ir-stat-num">∞</div>
+    <div class="ir-stat-lbl">Stille</div>
+  </div>
+</div>
+
+<div class="ir-content">
+
+  <!-- 1. GESCHICHTE -->
+  <section class="ir-section">
+    <div class="ir-section-head">
+      <p class="ir-section-label">01 — Geschichte</p>
+      <h2 class="ir-section-title">Herakles, Piraten<br><em>und das Ende der Welt</em></h2>
+      <div class="ir-divider"></div>
+    </div>
+    <div class="ir-history-grid">
+      <div class="ir-history-text">
+        <p>Iraklia — benannt nach Herakles, dem griechischen Halbgott, der der Legende nach auf dieser Insel rastete — ist die westlichste der Kleinen Kykladen, jener Gruppe winziger Inseln zwischen Naxos und Amorgos, die zusammen kaum tausend Einwohner haben. Die Kleine Kykladen umfassen Iraklia, Schoinoussa, Koufonissi und Donoussa — jede ein eigenes Universum, jede anders, alle unberührt.</p>
+        <p>Iraklia war in der Antike besiedelt — Scherben und Fundamentreste zeugen von einer Siedlung auf dem Hügel über dem heutigen Dorf. Im Mittelalter entvölkerten die Piraten die Insel immer wieder; die Bewohner zogen sich in die Höhlen der Küste zurück oder flohen auf die größeren Nachbarinseln. Die Höhle des Agios Ioannis, die größte natürliche Höhle der Kleinen Kykladen, diente damals als Versteck und Schutzraum.</p>
+        <p>Heute lebt Iraklia von etwa 150 Menschen, die in der Sommersaison von ein paar hundert Besuchern ergänzt werden — nie mehr, weil die Fähre nicht mehr hergibt. Es gibt ein Dorf, Agios Georgios, mit einer Handvoll Häuser, zwei Tavernen, einem kleinen Laden und der Stille, die man in keinem anderen Teil der Kykladen mehr findet. Iraklia ist der Ort, an dem man aufhört, nach dem nächsten Ort zu suchen.</p>
+      </div>
+      <div class="ir-timeline">
+        <div class="ir-tl-item">
+          <div class="ir-tl-dot"></div>
+          <div class="ir-tl-year">Antike</div>
+          <div class="ir-tl-event">Erste Besiedlung auf dem Hügel über dem heutigen Dorf. Tonscherben und Fundamentreste belegen eine kleine Gemeinschaft, die vom Fischfang und der Landwirtschaft lebte.</div>
+        </div>
+        <div class="ir-tl-item">
+          <div class="ir-tl-dot"></div>
+          <div class="ir-tl-year">Mittelalter</div>
+          <div class="ir-tl-event">Piratenüberfälle entvölkern die Insel mehrfach. Die Bewohner fliehen in die Höhle des Agios Ioannis oder auf Nachbarinseln — ein Muster, das alle Kleinen Kykladen über Jahrhunderte prägt.</div>
+        </div>
+        <div class="ir-tl-item">
+          <div class="ir-tl-dot"></div>
+          <div class="ir-tl-year">1207</div>
+          <div class="ir-tl-event">Venezianische Herrschaft. Iraklia gehört zum Herzogtum der Ägäis — zu unbedeutend für eigene Befestigungen, zu abgelegen für dauerhaften Schutz. Die Bevölkerung bleibt dünn.</div>
+        </div>
+        <div class="ir-tl-item">
+          <div class="ir-tl-dot"></div>
+          <div class="ir-tl-year">19. Jh.</div>
+          <div class="ir-tl-event">Langsame Wiederbesiedlung nach der griechischen Unabhängigkeit. Fischer aus Naxos und Amorgos lassen sich dauerhaft nieder — das heutige Dorf Agios Georgios entsteht.</div>
+        </div>
+        <div class="ir-tl-item">
+          <div class="ir-tl-dot"></div>
+          <div class="ir-tl-year">1980er</div>
+          <div class="ir-tl-event">Erste Rucksacktouristen entdecken die Kleinen Kykladen. Iraklia bleibt das ruhigste Glied in der Kette — kein Strom rund um die Uhr, kein Asphalt überall, keine Tourismusindustrie.</div>
+        </div>
+        <div class="ir-tl-item">
+          <div class="ir-tl-dot"></div>
+          <div class="ir-tl-year">Heute</div>
+          <div class="ir-tl-event">Iraklia ist der stille Gegenentwurf zu Mykonos und Santorini — dieselbe Ägäis, dasselbe Licht, aber kein einziges Touristenlokal mit Englisch-Schildern. Genau das ist der Grund, warum man kommt.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SEHENSWÜRDIGKEITEN -->
+  <section class="ir-section">
+    <div class="ir-section-head">
+      <p class="ir-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ir-section-title">Eine Höhle,<br><em>ein Strand, eine Welt</em></h2>
+      <div class="ir-divider"></div>
+    </div>
+    <div class="ir-sights-grid">
+
+      <div class="ir-sight-card">
+        <div class="ir-sight-visual sv-ir-cave"></div>
+        <div class="ir-sight-body">
+          <p class="ir-sight-cat">Höhle · Wahrzeichen</p>
+          <h3 class="ir-sight-name">Höhle Agios Ioannis</h3>
+          <p class="ir-sight-desc">Die größte Naturhöhle der Kleinen Kykladen — am Abend des 28. August, dem Fest des Agios Ioannis, strömt die gesamte Inselbevölkerung mit Kerzen zu Fuß hierher. Eine Erfahrung, die man nicht planen, nur erleben kann. Tagsüber frei zugänglich, ohne Führung, ohne Eintritt.</p>
+        </div>
+      </div>
+
+      <div class="ir-sight-card">
+        <div class="ir-sight-visual sv-ir-agkali"></div>
+        <div class="ir-sight-body">
+          <p class="ir-sight-cat">Strand · Wildnis</p>
+          <h3 class="ir-sight-name">Agkali</h3>
+          <p class="ir-sight-desc">Der schönste Strand der Insel — eine kleine, geschützte Bucht mit türkisblauem Wasser und weißem Sand, nur zu Fuß über den Bergpfad erreichbar. Keine Liegen, kein Bar-Service, keine Menschen außer denen, die den Weg kennen.</p>
+        </div>
+      </div>
+
+      <div class="ir-sight-card">
+        <div class="ir-sight-visual sv-ir-chora"></div>
+        <div class="ir-sight-body">
+          <p class="ir-sight-cat">Dorf · Einziges</p>
+          <h3 class="ir-sight-name">Agios Georgios</h3>
+          <p class="ir-sight-desc">Das einzige Dorf der Insel — eine Handvoll weißer Häuser um einen kleinen Hafen, eine Kirche, zwei Tavernen, ein Miniladen. Was hier als Kafeneion gilt, ist gleichzeitig Dorftreffen, Nachrichtenkanal und Wohnzimmer der gesamten Insel.</p>
+        </div>
+      </div>
+
+      <div class="ir-sight-card">
+        <div class="ir-sight-visual sv-ir-livadi"></div>
+        <div class="ir-sight-body">
+          <p class="ir-sight-cat">Strand · Hafen</p>
+          <h3 class="ir-sight-name">Livadi</h3>
+          <p class="ir-sight-desc">Der Strand direkt beim Hafen — sandiger als Agkali, mit einem kleinen Tavernen-Tisch am Rand und dem Blick auf die einlaufenden Fischerboote. Der erste Kontakt mit Iraklia, wenn die Fähre anlegt, und der letzte Abend vor der Abreise.</p>
+        </div>
+      </div>
+
+      <div class="ir-sight-card">
+        <div class="ir-sight-visual sv-ir-trail"></div>
+        <div class="ir-sight-body">
+          <p class="ir-sight-cat">Wandern · Natur</p>
+          <h3 class="ir-sight-name">Inselrunde zu Fuß</h3>
+          <p class="ir-sight-desc">Die gesamte Insel kann in einem halben Tag zu Fuß umrundet werden — Steinpfade durch Thymian- und Oregano-Felder, über Hügel mit Blick auf Schoinoussa und Naxos, vorbei an verlassenen Windmühlen und Kapellen ohne Namen.</p>
+        </div>
+      </div>
+
+      <div class="ir-sight-card">
+        <div class="ir-sight-visual sv-ir-mikres"></div>
+        <div class="ir-sight-body">
+          <p class="ir-sight-cat">Ausflug · Kleine Kykladen</p>
+          <h3 class="ir-sight-name">Schoinoussa &amp; Koufonissi</h3>
+          <p class="ir-sight-desc">Die Nachbarinseln — Schoinoussa mit einer Panagia auf dem Hügel, Koufonissi mit dem beliebtesten Strand der Kleinen Kykladen und einem Nachtleben, das für 300 Einwohner erstaunlich laut ist. Per Fähre in 20–40 Minuten erreichbar.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. ESSEN & TAVERNEN -->
+  <section class="ir-section">
+    <div class="ir-section-head">
+      <p class="ir-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="ir-section-title">Zwei Tavernen,<br><em>hundert Möglichkeiten</em></h2>
+      <div class="ir-divider"></div>
+    </div>
+    <div class="ir-tav-grid">
+
+      <div class="ir-tav-card">
+        <div class="ir-tav-top">
+          <div>
+            <h3 class="ir-tav-name">Taverna Melissa</h3>
+            <div class="ir-tav-loc">📍 Agios Georgios, Hafen</div>
+          </div>
+          <div class="ir-tav-stars">★★★★★</div>
+        </div>
+        <p class="ir-tav-desc">Die älteste Taverne der Insel — seit Generationen in der gleichen Familie, mit Tischen direkt am Wasser und einer Küche, die keine Karte kennt. Jeden Morgen entscheidet das Meer, was es gibt: was die Fischer bringen, landet abends auf dem Tisch. Kein Touristenmenü, kein Englisch, kein Unterschied zwischen Einheimischen und Gästen.</p>
+        <div class="ir-tav-dishes">
+          <span class="ir-tav-dish">Tagesfang gegrillt</span>
+          <span class="ir-tav-dish">Oktopus sonnengetrocknet</span>
+          <span class="ir-tav-dish">Horiatiki mit lokalem Käse</span>
+        </div>
+        <p class="ir-tav-price">Preisklasse: <span>€€ · Mittag &amp; Abend · Kein Schild nötig</span></p>
+      </div>
+
+      <div class="ir-tav-card">
+        <div class="ir-tav-top">
+          <div>
+            <h3 class="ir-tav-name">Kafeneion Agios Georgios</h3>
+            <div class="ir-tav-loc">📍 Agios Georgios, Dorfplatz</div>
+          </div>
+          <div class="ir-tav-stars">★★★★★</div>
+        </div>
+        <p class="ir-tav-desc">Das Kafeneion am Dorfplatz — das einzige auf der Insel und deshalb gleichzeitig Café, Bar, Nachrichtenagentur und sozialer Mittelpunkt. Griechischer Kaffee, selbstgemachtes Limonade aus Zitronen des Gartens, Gebäck der Hausfrau. Abends auch Wein und Mezedes, wenn die Fischer wiederkommen.</p>
+        <div class="ir-tav-dishes">
+          <span class="ir-tav-dish">Griechischer Kaffee</span>
+          <span class="ir-tav-dish">Selbstgemachte Zitronade</span>
+          <span class="ir-tav-dish">Spanakopita hausgemacht</span>
+        </div>
+        <p class="ir-tav-price">Preisklasse: <span>€ · Ganztags · Dorfplatz</span></p>
+      </div>
+
+      <div class="ir-tav-card">
+        <div class="ir-tav-top">
+          <div>
+            <h3 class="ir-tav-name">Strandbarbecue (Agkali)</h3>
+            <div class="ir-tav-loc">📍 Strand Agkali</div>
+          </div>
+          <div class="ir-tav-stars">★★★★★</div>
+        </div>
+        <p class="ir-tav-desc">Kein Restaurant, sondern eine sommerliche Tradition: Im Juli und August grillt ein Bewohner der Insel am Abend am Agkali-Strand — einfache Holzkohle, frischer Fisch, Wein in Plastikbechern, Sterne über der Ägäis. Die ungeplanteste und schönste Mahlzeit der Kykladen.</p>
+        <div class="ir-tav-dishes">
+          <span class="ir-tav-dish">Sardellen vom Grill</span>
+          <span class="ir-tav-dish">Dorade im Salzmantel</span>
+          <span class="ir-tav-dish">Lokaler Wein</span>
+        </div>
+        <p class="ir-tav-price">Preisklasse: <span>€ · Juli–August · Spontan</span></p>
+      </div>
+
+      <div class="ir-tav-card">
+        <div class="ir-tav-top">
+          <div>
+            <h3 class="ir-tav-name">Selbstversorgung vom Marktboot</h3>
+            <div class="ir-tav-loc">📍 Hafen Agios Georgios</div>
+          </div>
+          <div class="ir-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ir-tav-desc">Zweimal pro Woche legt das Versorgungsboot aus Naxos an — mit frischen Zutaten, Käse, Brot und dem, was die Insel selbst nicht produziert. Wer früh am Hafen ist, kauft ein wie die Einheimischen: Tomaten aus Naxos, Feta aus dem Eimer, Oregano getrocknet von der Insel selbst. Kochen ist hier Erlebnis.</p>
+        <div class="ir-tav-dishes">
+          <span class="ir-tav-dish">Naxos-Tomaten</span>
+          <span class="ir-tav-dish">Frischer Feta</span>
+          <span class="ir-tav-dish">Getrockneter Iraklia-Oregano</span>
+        </div>
+        <p class="ir-tav-price">Preisklasse: <span>€ · Di &amp; Fr · Marktboot</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. ORTE & CHARAKTER -->
+  <section class="ir-section">
+    <div class="ir-section-head">
+      <p class="ir-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="ir-section-title">Die Insel<br><em>auf der man landet und bleibt</em></h2>
+      <div class="ir-divider"></div>
+    </div>
+    <div class="ir-viertel-grid">
+
+      <div class="ir-viertel-card">
+        <div class="ir-viertel-emoji">🕯️</div>
+        <h3 class="ir-viertel-name">Höhlenfest 28. August</h3>
+        <p class="ir-viertel-desc">Das Fest des Agios Ioannis — die gesamte Inselbevölkerung wandert am Abend mit Kerzen zur Höhle, singt, betet, feiert bis in den Morgen. Wer zufällig an diesem Tag auf Iraklia ist, erlebt das Herz der Insel.</p>
+      </div>
+
+      <div class="ir-viertel-card">
+        <div class="ir-viertel-emoji">🌿</div>
+        <h3 class="ir-viertel-name">Wildkräuter</h3>
+        <p class="ir-viertel-desc">Iraklia riecht nach Thymian und Oregano — die ganze Insel ist damit bewachsen. Getrocknete Kräuter sind das einzige Mitbringsel, das es gibt, und das einzige, das man braucht. Besser als alles was man kaufen kann.</p>
+      </div>
+
+      <div class="ir-viertel-card">
+        <div class="ir-viertel-emoji">⭐</div>
+        <h3 class="ir-viertel-name">Sternenhimmel</h3>
+        <p class="ir-viertel-desc">Keine Lichtverschmutzung, keine Straßenlaternen, kein Generator nach Mitternacht — der Sternenhimmel über Iraklia ist der dunkelste der Kykladen. Der Milchstraßenstreifen ist mit bloßem Auge zu sehen.</p>
+      </div>
+
+      <div class="ir-viertel-card">
+        <div class="ir-viertel-emoji">🚶</div>
+        <h3 class="ir-viertel-name">Inselrunde</h3>
+        <p class="ir-viertel-desc">Die gesamte Insel in einem halben Tag zu Fuß — Steinpfade, Thymianfelder, verlassene Windmühlen, Kapellen ohne Namen. Man braucht keine Karte. Irgendwann ist man wieder im Dorf.</p>
+      </div>
+
+      <div class="ir-viertel-card">
+        <div class="ir-viertel-emoji">⛵</div>
+        <h3 class="ir-viertel-name">Kleine Kykladen-Route</h3>
+        <p class="ir-viertel-desc">Iraklia ist der erste oder letzte Stopp auf der kleinen Fähre, die alle vier Inseln verbindet: Iraklia — Schoinoussa — Koufonissi — Donoussa. Jede anders, alle ruhig, zusammen das schönste Inselhopping Griechenlands.</p>
+      </div>
+
+      <div class="ir-viertel-card">
+        <div class="ir-viertel-emoji">🐐</div>
+        <h3 class="ir-viertel-name">Ziegen &amp; Stille</h3>
+        <p class="ir-viertel-desc">Auf Iraklia gibt es mehr Ziegen als Menschen. Sie laufen frei über die Hügel, klingeln nachts an den Fenstern, erscheinen auf Wanderpfaden als wären sie Wegweiser. Teil des Lebens hier — und der Küche.</p>
+      </div>
+
+    </div>
+
+    <div class="ir-tip-banner">
+      <div class="ir-tip-emoji">🌿</div>
+      <div class="ir-tip-text">
+        <h3>Die Insel auf der die Zeit aufhört</h3>
+        <p>Iraklia hat kein Programm, keinen Tagesplan, kein einziges Ausflugsbüro. Was es gibt: eine Höhle, zwei Tavernen, einen Strand der zu Fuß erreichbar ist, und eine Stille die nach zwei Tagen anfängt, sich nach Zuhause anzufühlen. Wer mit dem Anspruch anreist, „etwas zu sehen", wird enttäuscht. Wer mit dem Wunsch kommt, nichts zu tun, wird nicht mehr gehen wollen. Das Marktboot kommt zweimal pro Woche. Die nächste Fähre nach Naxos geht morgen. Oder übermorgen. Man schaut nach.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>
