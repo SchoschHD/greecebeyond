@@ -1,0 +1,304 @@
+/* =============================================
+   KEA (TZIA) — Insel-Unterseite
+   Akzentfarbe: Eichengrün / Anthrazit-Bronze
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#kea-page {
+  font-family: 'Spectral', serif;
+  color: #0e1208;
+  background: #f3f5f0;
+}
+
+/* ── BACK BAR ── */
+.ke-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(243,245,240,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(50,90,30,0.16);
+}
+.ke-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(50,90,30,0.30);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #2a5818; transition: all 0.2s;
+}
+.ke-back-btn:hover { background: #e4ecdc; border-color: #2a5818; }
+.ke-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.ke-breadcrumb { font-size: 0.8rem; color: #6a7860; letter-spacing: 0.05em; font-family: 'DM Sans', sans-serif; }
+.ke-breadcrumb span { color: #2a5818; }
+
+/* ── HERO ── */
+.ke-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.ke-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(170deg,
+    #040802 0%,
+    #0a1c06 16%,
+    #183808 34%,
+    #2a6010 54%,
+    #488028 74%,
+    #204858 100%);
+}
+.ke-hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 55% 40% at 50% 85%, rgba(40,120,30,0.20) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 28% at 15% 20%, rgba(8,20,40,0.30) 0%, transparent 60%);
+}
+/* Löwen-Silhouette rechts -->*/
+.ke-hero-lion {
+  position: absolute; bottom: 115px; right: 8%; width: 220px; height: 200px;
+  opacity: 0.09;
+}
+/* Eichenblatt-Muster -->*/
+.ke-hero-shimmer {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(180,230,120,0.025) 1.5px, transparent 1.5px);
+  background-size: 36px 36px;
+}
+.ke-hero-silhouette {
+  position: absolute; bottom: 106px; left: 50%;
+  transform: translateX(-50%);
+  width: 900px; height: 160px;
+  opacity: 0.10;
+}
+.ke-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(4,8,2,0.45);
+}
+.ke-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 115px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 115'%3E%3Cpath fill='%23f3f5f0' fill-opacity='1' d='M0,54L90,46C180,38,360,22,540,28C720,34,900,62,1080,68C1260,74,1350,56,1440,48L1440,115L0,115Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.ke-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.ke-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.45em;
+  text-transform: uppercase; color: rgba(160,220,100,0.52);
+  margin-bottom: 1.2rem; font-family: 'DM Sans', sans-serif;
+}
+.ke-hero-title {
+  font-family: 'Spectral', serif;
+  font-size: clamp(3.8rem, 9vw, 8rem);
+  font-weight: 300; line-height: 0.88;
+  margin-bottom: 1.5rem;
+}
+.ke-hero-title em {
+  font-style: italic; display: block;
+  color: #b8e870; font-size: 0.50em;
+  letter-spacing: 0.04em; margin-top: 0.38rem;
+}
+.ke-hero-sub {
+  max-width: 570px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(200,240,160,0.66); line-height: 1.82; font-weight: 300;
+  font-family: 'DM Sans', sans-serif;
+}
+.ke-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.ke-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(160,220,80,0.22);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(190,240,130,0.76);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── ATHEN STRIP ── */
+.ke-athen-strip {
+  background: #0e1208;
+  padding: 1.15rem 3rem;
+  display: flex; align-items: center; justify-content: center; gap: 3rem;
+  flex-wrap: wrap;
+}
+.ke-athen-item {
+  display: flex; align-items: center; gap: 0.7rem;
+  color: rgba(160,220,100,0.60); font-size: 0.8rem; letter-spacing: 0.08em;
+  font-family: 'DM Sans', sans-serif;
+}
+.ke-athen-item::before { content: '—'; color: #2a5818; }
+
+/* ── STATS BAR ── */
+.ke-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(50,90,30,0.10);
+}
+.ke-stat-item {
+  flex: 1; max-width: 200px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(50,90,30,0.08);
+}
+.ke-stat-item:last-child { border-right: none; }
+.ke-stat-num {
+  font-family: 'Spectral', serif;
+  font-size: 2rem; font-weight: 300; color: #2a5818; line-height: 1;
+}
+.ke-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #6a7860; margin-top: 0.3rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── CONTENT ── */
+.ke-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.ke-section { padding: 4rem 0 2rem; }
+.ke-section-head { margin-bottom: 2.5rem; }
+.ke-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #2a5818; margin-bottom: 0.8rem;
+  font-family: 'DM Sans', sans-serif;
+}
+.ke-section-title {
+  font-family: 'Spectral', serif;
+  font-size: 2.8rem; font-weight: 300; color: #0e1208; line-height: 1.15;
+}
+.ke-section-title em { font-style: italic; color: #2a5818; }
+.ke-divider { width: 40px; height: 2px; background: #2a5818; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.ke-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.ke-history-text p {
+  font-size: 0.98rem; line-height: 1.95; color: #202c14;
+  font-weight: 300; margin-bottom: 1.2rem;
+}
+.ke-timeline { position: relative; padding-left: 2rem; }
+.ke-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(42,88,24,0.18);
+}
+.ke-tl-item { position: relative; margin-bottom: 1.8rem; }
+.ke-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: #f3f5f0; border: 2px solid #2a5818;
+}
+.ke-tl-year {
+  font-family: 'Spectral', serif;
+  font-size: 1.25rem; font-weight: 300; color: #2a5818; margin-bottom: 0.25rem;
+}
+.ke-tl-event {
+  font-size: 0.87rem; color: #202c14; line-height: 1.65; font-weight: 300;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.ke-sights-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem;
+}
+.ke-sight-card {
+  border-radius: 3px; overflow: hidden;
+  border: 1px solid rgba(50,90,30,0.16);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ke-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(8,14,4,0.10); }
+.ke-sight-visual { height: 140px; }
+.ke-sight-body { padding: 1.2rem; }
+.ke-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #2a5818; margin-bottom: 0.35rem;
+  font-family: 'DM Sans', sans-serif;
+}
+.ke-sight-name {
+  font-family: 'Spectral', serif;
+  font-size: 1.3rem; font-weight: 300; color: #0e1208; margin-bottom: 0.4rem;
+}
+.ke-sight-desc {
+  font-size: 0.83rem; color: #304020; line-height: 1.65; font-weight: 300;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.sv-ke-ioulis    { background: linear-gradient(160deg, #080c04 0%, #203010 55%, #589040 100%); }
+.sv-ke-lion      { background: linear-gradient(160deg, #100c04 0%, #503808 55%, #c09030 100%); }
+.sv-ke-britannic { background: linear-gradient(160deg, #040810 0%, #0c2848 55%, #1870c0 100%); }
+.sv-ke-karthaia  { background: linear-gradient(160deg, #080c06 0%, #243818 55%, #50901c 100%); }
+.sv-ke-vourkari  { background: linear-gradient(160deg, #040c14 0%, #103858 55%, #2898d0 100%); }
+.sv-ke-agia      { background: linear-gradient(160deg, #100808 0%, #503018 55%, #b07838 100%); }
+
+/* ── TAVERNEN ── */
+.ke-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.ke-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(50,90,30,0.13);
+  border-radius: 3px; border-left: 3px solid #2a5818;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ke-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(8,14,4,0.08); }
+.ke-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.ke-tav-name {
+  font-family: 'Spectral', serif;
+  font-size: 1.35rem; font-weight: 300; color: #0e1208;
+}
+.ke-tav-loc { font-size: 0.75rem; color: #6a7860; margin-top: 0.2rem; font-family: 'DM Sans', sans-serif; }
+.ke-tav-stars { color: #2a5818; font-size: 0.85rem; letter-spacing: 2px; }
+.ke-tav-desc { font-size: 0.87rem; color: #202c14; line-height: 1.75; font-weight: 300; margin-bottom: 1rem; font-family: 'DM Sans', sans-serif; }
+.ke-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.ke-tav-dish {
+  padding: 3px 10px; background: #e4ecdc; color: #0a2808;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+  font-family: 'DM Sans', sans-serif;
+}
+.ke-tav-price { font-size: 0.8rem; color: #6a7860; font-family: 'DM Sans', sans-serif; }
+.ke-tav-price span { color: #2a5818; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.ke-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.ke-viertel-card {
+  padding: 1.8rem; background: #e8f0e0;
+  border-radius: 3px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.ke-viertel-card:hover { background: #d4e4c4; transform: translateY(-4px); }
+.ke-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.ke-viertel-name {
+  font-family: 'Spectral', serif;
+  font-size: 1.25rem; font-weight: 300; color: #0e1208; margin-bottom: 0.5rem;
+}
+.ke-viertel-desc { font-size: 0.82rem; color: #304020; line-height: 1.65; font-family: 'DM Sans', sans-serif; }
+
+/* ── TIP BANNER ── */
+.ke-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #040802 0%, #102008 40%, #2a5818 100%);
+  border-radius: 3px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.ke-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.ke-tip-text h3 {
+  font-family: 'Spectral', serif;
+  font-size: 1.75rem; font-weight: 300; color: white; margin-bottom: 0.6rem;
+}
+.ke-tip-text p {
+  font-size: 0.92rem; color: rgba(190,240,140,0.70); line-height: 1.82; font-weight: 300;
+  font-family: 'DM Sans', sans-serif;
+}
+
+@media (max-width: 900px) {
+  .ke-back-bar { padding: 0.8rem 1.2rem; }
+  .ke-content { padding: 2rem 1.2rem 4rem; }
+  .ke-history-grid { grid-template-columns: 1fr; }
+  .ke-sights-grid { grid-template-columns: 1fr 1fr; }
+  .ke-tav-grid { grid-template-columns: 1fr; }
+  .ke-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .ke-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+  .ke-athen-strip { padding: 1.2rem; gap: 1.5rem; }
+}

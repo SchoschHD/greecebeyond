@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kea — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="kea.css" />
+</head>
+<body>
+<div id="kea-page">
+
+<div class="ke-back-bar">
+  <button class="ke-back-btn" onclick="closeKea()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ke-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Kea (Tzia)</span></p>
+</div>
+
+<div class="ke-hero">
+  <div class="ke-hero-bg"></div>
+  <div class="ke-hero-shimmer"></div>
+  <!-- Löwen-Profil Silhouette -->
+  <svg class="ke-hero-lion" viewBox="0 0 220 200" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Archaischer Löwe in Felsen gehauen — liegend, nach rechts schauend -->
+    <path d="M20,170 L18,155 L15,140 L20,120 L30,105 L45,95 L65,88 L90,86 L115,88 L138,95 L155,108 L165,122 L168,138 L165,152 L160,162 L155,170Z"/>
+    <!-- Kopf -->
+    <path d="M100,60 Q120,45 145,52 Q168,60 175,78 Q182,96 172,112 Q160,128 140,132 Q120,136 105,122 Q88,108 90,90 Q92,72 100,60Z"/>
+    <!-- Mähne -->
+    <path d="M95,65 Q80,52 70,58 Q58,66 62,80 Q68,95 80,98 L90,92 Q82,78 88,68 Z" opacity="0.7"/>
+    <path d="M148,58 Q162,50 170,60 Q178,72 172,86 L162,90 Q168,76 160,68 Z" opacity="0.7"/>
+    <!-- Auge -->
+    <circle cx="140" cy="85" r="8"/>
+    <circle cx="140" cy="85" r="4" fill="#0e1208" opacity="0.4"/>
+    <!-- Mund — lächelnd wie der echte Löwe von Kea -->
+    <path d="M118,112 Q132,120 148,112" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Vorderpfoten -->
+    <path d="M20,170 L15,180 L30,182 L40,178 L50,182 L62,178 L65,170Z"/>
+    <!-- Schwanz -->
+    <path d="M155,170 Q170,155 185,145 Q195,138 195,128 Q185,140 178,155 L165,170Z" opacity="0.7"/>
+  </svg>
+  <!-- Ioulis Chora Silhouette -->
+  <svg class="ke-hero-silhouette" viewBox="0 0 900 160" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Hügel von Ioulida -->
+    <path d="M150,160 L155,115 Q200,75 270,55 Q330,40 380,48 Q430,56 460,80 Q490,104 500,125 L515,140 L515,160Z"/>
+    <!-- Häuser amphitheatralisch -->
+    <rect x="220" y="100" width="20" height="16" rx="1"/>
+    <rect x="248" y="90" width="20" height="16" rx="1"/>
+    <rect x="276" y="82" width="20" height="16" rx="1"/>
+    <rect x="306" y="75" width="22" height="17" rx="1"/>
+    <rect x="336" y="72" width="22" height="17" rx="1"/>
+    <rect x="365" y="75" width="20" height="17" rx="1"/>
+    <rect x="393" y="82" width="20" height="16" rx="1"/>
+    <rect x="420" y="92" width="20" height="15" rx="1"/>
+    <!-- Venezianische Burg auf Hügelspitze -->
+    <rect x="310" y="46" width="50" height="28"/>
+    <rect x="305" y="38" width="60" height="10"/>
+    <rect x="308" y="28" width="12" height="12"/>
+    <rect x="328" y="28" width="12" height="12"/>
+    <rect x="348" y="28" width="12" height="12"/>
+    <!-- Rathaus Ernst Ziller rechts -->
+    <rect x="560" y="95" width="70" height="45"/>
+    <rect x="554" y="86" width="82" height="11"/>
+    <!-- Säulen -->
+    <rect x="568" y="95" width="6" height="45"/>
+    <rect x="582" y="95" width="6" height="45"/>
+    <rect x="596" y="95" width="6" height="45"/>
+    <rect x="610" y="95" width="6" height="45"/>
+    <polygon points="554,86 595,60 636,86"/>
+    <!-- Apollo-Statuen als Pünktchen -->
+    <circle cx="563" cy="85" r="4"/>
+    <circle cx="627" cy="85" r="4"/>
+    <!-- Linker Hafen Korissia -->
+    <rect x="30" y="128" width="55" height="12" rx="1"/>
+    <rect x="15" y="120" width="22" height="20" rx="1"/>
+    <!-- Kleine Kirche rechts -->
+    <rect x="780" y="102" width="28" height="22" rx="1"/>
+    <polygon points="776,102 794,86 812,102"/>
+    <rect x="791" y="78" width="8" height="10"/>
+    <!-- Eichenbäume als Strichmuster -->
+    <path d="M680,140 Q685,120 690,110 Q698,118 702,140Z" opacity="0.5"/>
+    <path d="M715,138 Q720,116 726,106 Q734,116 737,138Z" opacity="0.5"/>
+    <!-- Meer -->
+    <path d="M0,150 Q225,140 450,146 Q675,152 900,142 L900,160 L0,160Z" opacity="0.25"/>
+  </svg>
+  <div class="ke-hero-overlay"></div>
+  <div class="ke-hero-waves"></div>
+  <div class="ke-hero-content">
+    <p class="ke-hero-tag">Kykladen · Attika · Westlichste Insel</p>
+    <h1 class="ke-hero-title">Kea<em>Τζιά · Κέα</em></h1>
+    <p class="ke-hero-sub">Die grüne Insel der Athener — mit Eichenwäldern, dem lächelnden Löwen aus dem 6. Jahrhundert, dem Schwesterschiff der Titanic in 120 Metern Tiefe und vier antiken Stadtstaaten auf 131 Quadratkilometern.</p>
+    <div class="ke-hero-pills">
+      <span class="ke-hero-pill">Löwe von Ioulis</span>
+      <span class="ke-hero-pill">HMHS Britannic</span>
+      <span class="ke-hero-pill">Vier antike Städte</span>
+      <span class="ke-hero-pill">Eichenwälder</span>
+      <span class="ke-hero-pill">Aristoteles-Gesetz</span>
+    </div>
+  </div>
+</div>
+
+<div class="ke-athen-strip">
+  <div class="ke-athen-item">1 Stunde Fähre ab Lavrio/Athen</div>
+  <div class="ke-athen-item">Nächste Kykladeninsel zum Festland</div>
+  <div class="ke-athen-item">Eichenwälder — einzigartig in den Kykladen</div>
+  <div class="ke-athen-item">Vier antike Stadtstaaten auf einer Insel</div>
+  <div class="ke-athen-item">HMHS Britannic in 120 m Tiefe</div>
+</div>
+
+<div class="ke-stats-bar">
+  <div class="ke-stat-item">
+    <div class="ke-stat-num">2.500</div>
+    <div class="ke-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ke-stat-item">
+    <div class="ke-stat-num">131 km²</div>
+    <div class="ke-stat-lbl">Fläche</div>
+  </div>
+  <div class="ke-stat-item">
+    <div class="ke-stat-num">6 m</div>
+    <div class="ke-stat-lbl">Länge des Löwen</div>
+  </div>
+  <div class="ke-stat-item">
+    <div class="ke-stat-num">120 m</div>
+    <div class="ke-stat-lbl">Britannic-Wracktiefe</div>
+  </div>
+  <div class="ke-stat-item">
+    <div class="ke-stat-num">4</div>
+    <div class="ke-stat-lbl">Antike Stadtstaaten</div>
+  </div>
+</div>
+
+<div class="ke-content">
+
+  <section class="ke-section">
+    <div class="ke-section-head">
+      <p class="ke-section-label">01 — Geschichte</p>
+      <h2 class="ke-section-title">Vier Stadtstaaten, ein Löwe<br><em>und das Gesetz des Sterbens</em></h2>
+      <div class="ke-divider"></div>
+    </div>
+    <div class="ke-history-grid">
+      <div class="ke-history-text">
+        <p>In der Antike war Kea nicht eine Insel, sondern vier — vier unabhängige Stadtstaaten auf 131 Quadratkilometern: Ioulis, Karthaia, Korissos und Poiessa. Alle vier hatten eigene Münzen, eigene Gesetze, eigene Akropolen. Aristoteles beschrieb in seiner „Keion Politeia" die bemerkenswerte gesellschaftliche Ordnung der Insel. Einer ihrer Gesetzgeber, Aristeides, galt als einer der sieben Weisen der Antike — bekannt für das schärfste Gesetz der griechischen Welt: „Keion to nomimon", nach dem jeder Bürger, der seinen Geist und Körper nicht mehr dem Staat nützlich machen konnte, mit einem Gifttrunk sterben sollte.</p>
+        <p>Das Wahrzeichen der Insel steht 1,5 Kilometer nordöstlich von Ioulis, in einen Fels gehauen: der Löwe von Kea. Sechs Meter lang, drei Meter hoch, lächelnd — ein archaisches Meisterwerk eines ionischen Bildhauers aus dem 6. Jahrhundert vor Christus. Der Löwe schaut ins Leere und lächelt seit 2.600 Jahren. Niemand weiß genau, was er bewacht.</p>
+        <p>Im November 1916 sank in der Meerenge zwischen Kea und dem Festland die HMHS Britannic — das Schwesterschiff der Titanic, im Ersten Weltkrieg als Lazarettschiff umgebaut, nach einer deutschen Seemine. 30 Menschen starben. Das Wrack liegt in 120 Metern Tiefe und ist eines der bedeutendsten Schiffswracks des Mittelmeers. 1975 erkundete es Jacques Cousteau.</p>
+      </div>
+      <div class="ke-timeline">
+        <div class="ke-tl-item">
+          <div class="ke-tl-dot"></div>
+          <div class="ke-tl-year">3.000 v. Chr.</div>
+          <div class="ke-tl-event">Prähistorische Siedlung Agia Eirini auf der gleichnamigen Halbinsel — eine der bedeutendsten bronzezeitlichen Stätten der Kykladen, in Blüte bis zum Erdbeben von 1450 v. Chr.</div>
+        </div>
+        <div class="ke-tl-item">
+          <div class="ke-tl-dot"></div>
+          <div class="ke-tl-year">ca. 600 v. Chr.</div>
+          <div class="ke-tl-event">Ein ionischer Bildhauer schlägt den Löwen von Kea in den Fels nördlich von Ioulis — 6 m lang, lächelnd, rätselhaft. Bis heute das Emblem der Insel und eines der bedeutendsten archaischen Reliefs Griechenlands.</div>
+        </div>
+        <div class="ke-tl-item">
+          <div class="ke-tl-dot"></div>
+          <div class="ke-tl-year">5.–3. Jh. v. Chr.</div>
+          <div class="ke-tl-event">Vier Stadtstaaten — Ioulis, Karthaia, Korissos, Poiessa — auf einer einzigen Insel. Aristoteles beschreibt die „Keion Politeia". Das Gesetz des ehrenvollen Sterbens gilt als schärfste Sozialgesetzgebung der Antike.</div>
+        </div>
+        <div class="ke-tl-item">
+          <div class="ke-tl-dot"></div>
+          <div class="ke-tl-year">1207–1566</div>
+          <div class="ke-tl-event">Venezianische Herrschaft der Giustiniani und anderer Dynastien. Der Name Tzia ist venezianischen Ursprungs — er bezeichnet die Insel bis heute, parallel zu Kea. Auf der Akropolis von Ioulis entsteht eine Burg.</div>
+        </div>
+        <div class="ke-tl-item">
+          <div class="ke-tl-dot"></div>
+          <div class="ke-tl-year">1916</div>
+          <div class="ke-tl-event">HMHS Britannic — Schwesterschiff der Titanic, Lazarettschiff im Ersten Weltkrieg — sinkt nach einer deutschen Seemine in der Meerenge bei Kea. 30 Tote. Das Wrack in 120 m Tiefe entdeckt Jacques Cousteau 1975.</div>
+        </div>
+        <div class="ke-tl-item">
+          <div class="ke-tl-dot"></div>
+          <div class="ke-tl-year">Heute</div>
+          <div class="ke-tl-event">Die nächste Kykladeninsel zu Athen — 1 Stunde Fähre ab Lavrio. Beliebt bei Athenern, kaum bekannt bei internationalen Reisenden. Eichenwälder, vier antike Ruinenstätten, der lächelnde Löwe, und das Britannic tief unten.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ke-section">
+    <div class="ke-section-head">
+      <p class="ke-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ke-section-title">Löwe, Britannic<br><em>und vier versunkene Städte</em></h2>
+      <div class="ke-divider"></div>
+    </div>
+    <div class="ke-sights-grid">
+
+      <div class="ke-sight-card">
+        <div class="ke-sight-visual sv-ke-ioulis"></div>
+        <div class="ke-sight-body">
+          <p class="ke-sight-cat">Hauptstadt · Architektur</p>
+          <h3 class="ke-sight-name">Ioulis (Chora)</h3>
+          <p class="ke-sight-desc">Die Hauptstadt auf zwei Hügelkämmen — labyrinthische Gassen, weiße Häuser, das neoklassizistische Rathaus von 1902 (Entwurf Ernst Ziller) mit Apollo- und Hermes-Statuen aus Ton. Das archäologische Museum mit den dreizehn minoischen Tonfiguren aus Agia Eirini. Eine der schönsten Hauptstädte der Kykladen, die kaum jemand kennt.</p>
+        </div>
+      </div>
+
+      <div class="ke-sight-card">
+        <div class="ke-sight-visual sv-ke-lion"></div>
+        <div class="ke-sight-body">
+          <p class="ke-sight-cat">Archaisch · Wahrzeichen</p>
+          <h3 class="ke-sight-name">Der Löwe von Kea</h3>
+          <p class="ke-sight-desc">1,5 km nordöstlich von Ioulis — ein archaisches Löwenrelief, in den lebenden Fels gehauen, 6 Meter lang und 3 Meter hoch. Ionischer Bildhauer, 6. Jahrhundert v. Chr., lächelndes Gesicht. Seit 2.600 Jahren an derselben Stelle, unter demselben Himmel, mit demselben Lächeln.</p>
+        </div>
+      </div>
+
+      <div class="ke-sight-card">
+        <div class="ke-sight-visual sv-ke-britannic"></div>
+        <div class="ke-sight-body">
+          <p class="ke-sight-cat">Geschichte · Wrack</p>
+          <h3 class="ke-sight-name">HMHS Britannic</h3>
+          <p class="ke-sight-desc">Das Schwesterschiff der Titanic — in 120 Metern Tiefe in der Meerenge westlich von Kea. 1916 durch eine Seemine gesunken, 1975 von Cousteau entdeckt. Für technische Tieftaucher das bedeutendste Wrack des Mittelmeers. Von der Oberfläche aus unsichtbar.</p>
+        </div>
+      </div>
+
+      <div class="ke-sight-card">
+        <div class="ke-sight-visual sv-ke-karthaia"></div>
+        <div class="ke-sight-body">
+          <p class="ke-sight-cat">Antike · Ruinen</p>
+          <h3 class="ke-sight-name">Karthaia</h3>
+          <p class="ke-sight-desc">Der schönste und entlegenste der vier antiken Stadtstaaten — nur per Wanderung oder Boot erreichbar, an der Südostküste. Ruinen des Apollo-Tempels, ein hellenistisches Theater, Stadtmauern über dem Meer. Kein einziges Hinweisschild auf der Straße nach Karthaia.</p>
+        </div>
+      </div>
+
+      <div class="ke-sight-card">
+        <div class="ke-sight-visual sv-ke-vourkari"></div>
+        <div class="ke-sight-body">
+          <p class="ke-sight-cat">Hafen · Taverne</p>
+          <h3 class="ke-sight-name">Vourkari</h3>
+          <p class="ke-sight-desc">Der eleganteste Hafen der Insel — ein schmaler Meeresarm, gesäumt von Booten und Tavernen, nur wenige Kilometer nördlich von Korissia. Wochenendziel der Athener, mit dem entsprechend guten Niveau der Restaurants. Abends die geselligste Ecke der Insel.</p>
+        </div>
+      </div>
+
+      <div class="ke-sight-card">
+        <div class="ke-sight-visual sv-ke-agia"></div>
+        <div class="ke-sight-body">
+          <p class="ke-sight-cat">Bronzezeit · Ausgrabung</p>
+          <h3 class="ke-sight-name">Agia Eirini (Bronzezeit)</h3>
+          <p class="ke-sight-desc">Auf der Halbinsel nördlich von Korissia — eine der bedeutendsten bronzezeitlichen Siedlungen der Kykladen, in Blüte 3.000 bis 1450 v. Chr. Ein Erdbeben beendete die Siedlung abrupt. Die dreizehn Tonfiguren, die hier gefunden wurden, sind das Herzstück des Museums in Ioulis.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ke-section">
+    <div class="ke-section-head">
+      <p class="ke-section-label">03 — Tavernen & Küche</p>
+      <h2 class="ke-section-title">Honig, Mandeln<br><em>und frischer Fisch in Vourkari</em></h2>
+      <div class="ke-divider"></div>
+    </div>
+    <div class="ke-tav-grid">
+
+      <div class="ke-tav-card">
+        <div class="ke-tav-top">
+          <div>
+            <h3 class="ke-tav-name">Aristos</h3>
+            <div class="ke-tav-loc">📍 Vourkari, am Hafen</div>
+          </div>
+          <div class="ke-tav-stars">★★★★★</div>
+        </div>
+        <p class="ke-tav-desc">Das beste Fischrestaurant der Insel — direkt am Hafen von Vourkari, mit Tischen am Wasser und Blick auf die Boote der Athener Segler. Täglich frischer Fang, ausgewählte Weine aus der Kykladen-Region, und ein Gastgeber, der jeden Fisch beim Namen kennt.</p>
+        <div class="ke-tav-dishes">
+          <span class="ke-tav-dish">Lavraki am Grill</span>
+          <span class="ke-tav-dish">Hummer-Spaghetti</span>
+          <span class="ke-tav-dish">Taramosalata</span>
+        </div>
+        <p class="ke-tav-price">Preisklasse: <span>€€€ · Mittag & Abend · Reservierung</span></p>
+      </div>
+
+      <div class="ke-tav-card">
+        <div class="ke-tav-top">
+          <div>
+            <h3 class="ke-tav-name">To Steki tou Keou</h3>
+            <div class="ke-tav-loc">📍 Ioulis, Hauptgasse</div>
+          </div>
+          <div class="ke-tav-stars">★★★★★</div>
+        </div>
+        <p class="ke-tav-desc">Die Stammtaverne der Ioulida — in der Hauptgasse der Chora, mit Holztischen und Küche, die sich seit Generationen nicht verändert hat. Paspala — das lokale Gericht aus Schweinefleisch mit Tomaten und Eiern — und der Honig der Insel zum Dessert. Einheimische jeden Alters.</p>
+        <div class="ke-tav-dishes">
+          <span class="ke-tav-dish">Paspala (Lokalgericht)</span>
+          <span class="ke-tav-dish">Lamm aus dem Ofen</span>
+          <span class="ke-tav-dish">Kea-Honig & Mandeln</span>
+        </div>
+        <p class="ke-tav-price">Preisklasse: <span>€€ · Mittag & Abend</span></p>
+      </div>
+
+      <div class="ke-tav-card">
+        <div class="ke-tav-top">
+          <div>
+            <h3 class="ke-tav-name">Rolando's</h3>
+            <div class="ke-tav-loc">📍 Korissia, Hafenpromenade</div>
+          </div>
+          <div class="ke-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ke-tav-desc">Der Hafen von Korissia ist der erste Eindruck von Kea — und Rolando's ist der erste richtige Eindruck nach der Fähre. Frühstück mit frischer Pita und lokalem Honig, mittags Meeresfrüchte, abends gegrillt und unkompliziert. Gut für den ersten und letzten Tag auf der Insel.</p>
+        <div class="ke-tav-dishes">
+          <span class="ke-tav-dish">Frühstückspita</span>
+          <span class="ke-tav-dish">Muscheln saganaki</span>
+          <span class="ke-tav-dish">Lokaler Rosé</span>
+        </div>
+        <p class="ke-tav-price">Preisklasse: <span>€€ · Frühstück bis Abend</span></p>
+      </div>
+
+      <div class="ke-tav-card">
+        <div class="ke-tav-top">
+          <div>
+            <h3 class="ke-tav-name">Karthaia Taverna</h3>
+            <div class="ke-tav-loc">📍 Koundouros, Südküste</div>
+          </div>
+          <div class="ke-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ke-tav-desc">In Koundouros, nahe der renovierten alten Windmühlen — eine entspannte Strandtaverne, die genauso gut ist wie ihr Ausblick auf die Bucht. Frischer Fisch, Meze, lokale Weine. Im Sommer auch Ausgangspunkt für Wanderungen zu den Ruinen von Poiessa, dem vierten antiken Stadtstaat.</p>
+        <div class="ke-tav-dishes">
+          <span class="ke-tav-dish">Fangfrischer Fisch</span>
+          <span class="ke-tav-dish">Gemischte Meze</span>
+          <span class="ke-tav-dish">Tsipouro</span>
+        </div>
+        <p class="ke-tav-price">Preisklasse: <span>€€ · Mittag & Abend</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ke-section">
+    <div class="ke-section-head">
+      <p class="ke-section-label">04 — Orte & Buchten</p>
+      <h2 class="ke-section-title">Von Korissia<br><em>bis zu den Eichenwäldern</em></h2>
+      <div class="ke-divider"></div>
+    </div>
+    <div class="ke-viertel-grid">
+
+      <div class="ke-viertel-card">
+        <div class="ke-viertel-emoji">🏛️</div>
+        <h3 class="ke-viertel-name">Ioulis (Chora)</h3>
+        <p class="ke-viertel-desc">Die Hauptstadt auf zwei Hügeln — neoklassizistisches Rathaus von Ernst Ziller, archäologisches Museum, venezianische Burg. Der Löwe wartet 1,5 km entfernt auf dem Weg nach Otzias.</p>
+      </div>
+
+      <div class="ke-viertel-card">
+        <div class="ke-viertel-emoji">⚓</div>
+        <h3 class="ke-viertel-name">Korissia & Vourkari</h3>
+        <p class="ke-viertel-desc">Der Haupt- und Nebenhafen — Korissia ist der Anlegepunkt der Fähre, Vourkari der elegante Yachthafen mit dem besten Abendleben. Der Meeresarm dazwischen: idyllisch.</p>
+      </div>
+
+      <div class="ke-viertel-card">
+        <div class="ke-viertel-emoji">🌳</div>
+        <h3 class="ke-viertel-name">Eichenwälder</h3>
+        <p class="ke-viertel-desc">Das Einzigartige von Kea — Eichenwälder, die auf keiner anderen Kykladeninsel wachsen. Bis in die 1960er Jahre exportiertes Rohmaterial, heute Naturschutzgebiet und Wanderkulisse.</p>
+      </div>
+
+      <div class="ke-viertel-card">
+        <div class="ke-viertel-emoji">🏖️</div>
+        <h3 class="ke-viertel-name">Otzias & Koundouros</h3>
+        <p class="ke-viertel-desc">Die schönsten Strände der Insel — Otzias im Norden, familiär und weitläufig; Koundouros im Süden, eleganter, mit renovierten Windmühlen und Blick auf das offene Meer.</p>
+      </div>
+
+      <div class="ke-viertel-card">
+        <div class="ke-viertel-emoji">🏺</div>
+        <h3 class="ke-viertel-name">Karthaia (Antike)</h3>
+        <p class="ke-viertel-desc">Das entlegenste der vier antiken Stadtstaaten — nur per Wanderweg oder Boot erreichbar. Apollo-Tempel, Theater, Stadtmauern. Das schönste Ruinenfeld der Insel, fast ohne Besucher.</p>
+      </div>
+
+      <div class="ke-viertel-card">
+        <div class="ke-viertel-emoji">🌊</div>
+        <h3 class="ke-viertel-name">Pisses & Spathi</h3>
+        <p class="ke-viertel-desc">Die wilden Südstrände — Pisses ist der längste Strand der Insel mit feinem Sand, Spathi der entlegenste am Südwestzipfel. Kaum erschlossen, kaum besucht, Blick aufs offene Meer.</p>
+      </div>
+
+    </div>
+
+    <div class="ke-tip-banner">
+      <div class="ke-tip-emoji">🦁</div>
+      <div class="ke-tip-text">
+        <h3>Der lächelnde Löwe</h3>
+        <p>Man geht den Weg von Ioulis zum Löwen morgens früh, bevor die Sonne auf den Felsen brennt. Der Pfad führt durch Macchia, vorbei an alten Steinmauern, und dann liegt er da — ein 6 Meter langer Löwe, in den Fels gehauen von einem Meister, dessen Name niemand kennt, vor 2.600 Jahren. Er lächelt wirklich. Das ist kein Deutungsangebot, das ist eine Tatsache: der Mund ist nach oben gebogen, die Augen schauen ins Nichts, das ganze Gesicht drückt etwas aus, das man bei einem archaischen Steinrelief nicht erwartet. Entspanntheit. Man setzt sich daneben und versteht, dass Kea eine Insel ist, die mit der Zeit anders umgeht als andere.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>

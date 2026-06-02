@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thirassia — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="thirassia.css" />
+</head>
+<body>
+<div id="thirassia-page">
+
+<div class="ts-back-bar">
+  <button class="ts-back-btn" onclick="closeThirassia()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ts-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Thirassia</span></p>
+</div>
+
+<div class="ts-hero">
+  <div class="ts-hero-bg"></div>
+  <div class="ts-hero-dots"></div>
+  <!-- Caldera rim cliffs + Manolas village on top + volcanic Nea Kameni in water -->
+  <svg class="ts-hero-silhouette" viewBox="0 0 860 180" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Caldera water -->
+    <path d="M0,172 Q215,160 430,167 Q645,174 860,162 L860,180 L0,180Z" opacity="0.24"/>
+    <!-- Thirassia caldera cliffs — steep left side, defining the island -->
+    <path d="M0,180 L0,80 Q30,58 70,50 Q110,42 150,48 Q190,54 220,46 Q250,38 270,42 Q300,48 320,40 Q350,32 370,38 L380,180Z" opacity="0.38"/>
+    <!-- Manolas village perched on clifftop -->
+    <!-- Houses on the rim -->
+    <rect x="60"  y="34" width="18" height="16"/>
+    <rect x="84"  y="28" width="16" height="22"/>
+    <rect x="106" y="32" width="20" height="18"/>
+    <rect x="132" y="24" width="18" height="26"/>
+    <rect x="156" y="30" width="16" height="20"/>
+    <rect x="178" y="26" width="20" height="24"/>
+    <rect x="204" y="20" width="18" height="28"/>  <!-- tallest point -->
+    <rect x="228" y="28" width="16" height="20"/>
+    <rect x="250" y="22" width="18" height="26"/>
+    <!-- Church dome Manolas -->
+    <rect x="288" y="22" width="24" height="20"/>
+    <ellipse cx="300" cy="22" rx="14" ry="9"/>
+    <rect x="295" y="10" width="10" height="14"/>
+    <rect x="292" y="14" width="16" height="5"/>
+    <!-- Nea Kameni volcanic island (center, low, dark) -->
+    <ellipse cx="520" cy="158" rx="90" ry="18"/>
+    <path d="M440,158 Q480,128 520,118 Q560,128 600,158Z" opacity="0.45"/>
+    <!-- Smoke wisps from volcano -->
+    <path d="M512,116 Q506,100 510,84" fill="none" stroke="white" stroke-width="2" opacity="0.5"/>
+    <path d="M524,114 Q530,96 526,80" fill="none" stroke="white" stroke-width="2" opacity="0.4"/>
+    <path d="M518,112 Q514,92 520,76" fill="none" stroke="white" stroke-width="2" opacity="0.35"/>
+    <!-- Santorini cliffs opposite (right side, faint) -->
+    <path d="M680,180 L690,80 Q720,55 760,48 Q800,44 840,50 L860,54 L860,180Z" opacity="0.18"/>
+    <!-- Oia hint on Santorini rim (far right) -->
+    <rect x="750" y="36" width="14" height="14"/>
+    <rect x="770" y="30" width="14" height="20"/>
+    <rect x="790" y="34" width="12" height="16"/>
+    <!-- 300 steps path on Thirassia cliff — zigzag line -->
+    <path d="M340,168 L336,152 L348,148 L344,132 L356,128 L352,112 L364,108 L360,92 L372,88 L368,72 L376,68" fill="none" stroke="white" stroke-width="2" opacity="0.5"/>
+  </svg>
+  <div class="ts-hero-overlay"></div>
+  <div class="ts-hero-content">
+    <p class="ts-hero-tag">Kykladen · Santorin-Caldera</p>
+    <h1 class="ts-hero-title">Thirassia<em>Θηρασία</em></h1>
+    <p class="ts-hero-sub">Santorini ohne Santorini — dieselben Caldèra-Klippen, dasselbe Vulkanblau, derselbe Sonnenuntergang, aber kein einziger Kreuzfahrtpassagier, kein Infinity-Pool und keine Warteschlange. Thirassia ist der Beweis, dass das Schöne nicht das Laute braucht.</p>
+    <div class="ts-hero-pills">
+      <span class="ts-hero-pill">Caldera</span>
+      <span class="ts-hero-pill">Vulkanisch</span>
+      <span class="ts-hero-pill">Stille</span>
+      <span class="ts-hero-pill">Manolas</span>
+      <span class="ts-hero-pill">300 Stufen</span>
+    </div>
+  </div>
+  <div class="ts-hero-waves"></div>
+</div>
+
+<div class="ts-stats-bar">
+  <div class="ts-stat-item">
+    <div class="ts-stat-num">~300</div>
+    <div class="ts-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ts-stat-item">
+    <div class="ts-stat-num">9 km²</div>
+    <div class="ts-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="ts-stat-item">
+    <div class="ts-stat-num">300</div>
+    <div class="ts-stat-lbl">Stufen nach Manolas</div>
+  </div>
+  <div class="ts-stat-item">
+    <div class="ts-stat-num">0</div>
+    <div class="ts-stat-lbl">Hotels mit Pool</div>
+  </div>
+  <div class="ts-stat-item">
+    <div class="ts-stat-num">= Santorini</div>
+    <div class="ts-stat-lbl">Blick auf die Caldera</div>
+  </div>
+</div>
+
+<div class="ts-content">
+
+  <!-- 1. GESCHICHTE -->
+  <section class="ts-section">
+    <div class="ts-section-head">
+      <p class="ts-section-label">01 — Geschichte</p>
+      <h2 class="ts-section-title">Was von Santorin übrigblieb,<br><em>als der Vulkan explodierte</em></h2>
+      <div class="ts-divider"></div>
+    </div>
+    <div class="ts-history-grid">
+      <div class="ts-history-text">
+        <p>Thirassia und Santorini waren einmal eine einzige Insel — Thera, das Herz der minoischen Zivilisation in der Ägäis. Um 1600 v. Chr. explodierte der Vulkan in einer der gewaltigsten Eruptionen der Menschheitsgeschichte: Er schleuderte Gestein und Asche über das gesamte östliche Mittelmeer, ließ die Caldera einbrechen und spaltete die Insel in Stücke. Was von Thera übrigblieb, ist Santorini im Osten — und Thirassia im Nordwesten, der vergessene Bruchteil.</p>
+        <p>Während Santorini im 20. Jahrhundert zur meistbesuchten Kykladeninsel der Welt wurde, blieb Thirassia das, was es nach der Eruption geworden war: ein kleines, steiles, dünn besiedeltes Stück Vulkanfels mit Blick auf die Caldera. Heute leben hier rund 300 Menschen, verteilt auf drei kleine Dörfer — Manolas auf der Klippe, Potamos an der Küste und Agia Irini im Süden.</p>
+        <p>Das Bemerkenswerte an Thirassia ist nicht, was es hat — es ist, was es nicht hat. Keine Kreuzfahrtschiffe, keine Infinity-Pools, kein Linienflughafen, keine Boutique-Hotels mit 800-Euro-Nächten, keine Instagram-Warteschlangen vor dem Sonnenuntergang. Den Sonnenuntergang gibt es trotzdem — und er ist derselbe wie in Oia.</p>
+      </div>
+      <div class="ts-timeline">
+        <div class="ts-tl-item">
+          <div class="ts-tl-dot"></div>
+          <div class="ts-tl-year">~1600 v. Chr.</div>
+          <div class="ts-tl-event">Die Minoische Eruption — eine der gewaltigsten Vulkanexplosionen der Geschichte spaltet die Insel Thera. Thirassia entsteht als westliches Bruchstück der ursprünglichen Insel. Die Caldera versinkt im Meer.</div>
+        </div>
+        <div class="ts-tl-item">
+          <div class="ts-tl-dot"></div>
+          <div class="ts-tl-year">1866–1867</div>
+          <div class="ts-tl-event">Beim Abbau von Vulkanasche (Thera-Erde) für den Bau des Suezkanals entdecken Arbeiter auf Thirassia prähistorische Häuser und Keramik aus der minoischen Zeit — erste archäologische Hinweise auf die Vorgeschichte der Caldera.</div>
+        </div>
+        <div class="ts-tl-item">
+          <div class="ts-tl-dot"></div>
+          <div class="ts-tl-year">1956</div>
+          <div class="ts-tl-event">Ein schweres Erdbeben trifft Santorini und Thirassia. Viele Häuser auf Thirassia werden zerstört, ein Teil der ohnehin kleinen Bevölkerung verlässt die Insel für immer.</div>
+        </div>
+        <div class="ts-tl-item">
+          <div class="ts-tl-dot"></div>
+          <div class="ts-tl-year">1970er</div>
+          <div class="ts-tl-event">Santorini entwickelt sich zum Touristenmagneten. Thirassia profitiert nicht — keine Landebahn, kein Hafen für große Schiffe. Die Insel bleibt im Schatten ihrer berühmten Nachbarin.</div>
+        </div>
+        <div class="ts-tl-item">
+          <div class="ts-tl-dot"></div>
+          <div class="ts-tl-year">Heute</div>
+          <div class="ts-tl-event">Thirassia ist nur per kleinem Boot von Santorini erreichbar — 25 Minuten Überfahrt, eine andere Welt. Tagestouristen kommen manchmal mit Caldera-Kreuzfahrten. Wer übernachtet, hat die Insel für sich.</div>
+        </div>
+        <div class="ts-tl-item">
+          <div class="ts-tl-dot"></div>
+          <div class="ts-tl-year">Zukunft</div>
+          <div class="ts-tl-event">Der Nea-Kameni-Vulkan in der Caldera ist noch aktiv — die letzte Eruption war 1950. Thirassia liegt am Rand dieser schlafenden Kraft. Was einmal passierte, kann wieder passieren.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SEHENSWÜRDIGKEITEN -->
+  <section class="ts-section">
+    <div class="ts-section-head">
+      <p class="ts-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ts-section-title">300 Stufen,<br><em>eine Caldera, kein Gedränge</em></h2>
+      <div class="ts-divider"></div>
+    </div>
+    <div class="ts-sights-grid">
+
+      <div class="ts-sight-card">
+        <div class="ts-sight-visual sv-ts-caldera"></div>
+        <div class="ts-sight-body">
+          <p class="ts-sight-cat">Natur · Caldera</p>
+          <h3 class="ts-sight-name">Caldera-Blick von Manolas</h3>
+          <p class="ts-sight-desc">Derselbe Blick wie von Oia in Santorini — der kreisrunde Caldera-Krater, das tiefblaue Wasser, der dampfende Vulkan Nea Kameni in der Mitte, Santorini gegenüber. Nur ohne die Menschenmassen. Von der Terrasse der einzigen Taverne in Manolas, mit einem Glas Assyrtiko in der Hand.</p>
+        </div>
+      </div>
+
+      <div class="ts-sight-card">
+        <div class="ts-sight-visual sv-ts-manolas"></div>
+        <div class="ts-sight-body">
+          <p class="ts-sight-cat">Dorf · Klippe</p>
+          <h3 class="ts-sight-name">Manolas</h3>
+          <p class="ts-sight-desc">Das Hauptdorf auf dem Klippenrand — 300 Stufen über dem Hafen Korfos, oder ein steiler Eselsweg. Oben: eine Handvoll Häuser, eine Kirche, eine Taverne und der weiteste Blick der Caldera. Kein Auto kommt hier herauf.</p>
+        </div>
+      </div>
+
+      <div class="ts-sight-card">
+        <div class="ts-sight-visual sv-ts-korfos"></div>
+        <div class="ts-sight-body">
+          <p class="ts-sight-cat">Hafen · Ankerpunkt</p>
+          <h3 class="ts-sight-name">Korfos</h3>
+          <p class="ts-sight-def">Der kleine Hafen am Fuß der Klippe — wo die Boote aus Santorini anlegen, Fischer ihre Netze flicken und die 300 Stufen nach Manolas beginnen. Die schwarzen Vulkansteine am Ufer, das Blau des Caldera-Wassers dahinter.</p>
+        </div>
+      </div>
+
+      <div class="ts-sight-card">
+        <div class="ts-sight-visual sv-ts-volcano"></div>
+        <div class="ts-sight-body">
+          <p class="ts-sight-cat">Vulkan · Ausflug</p>
+          <h3 class="ts-sight-name">Nea Kameni (per Boot)</h3>
+          <p class="ts-sight-desc">Der aktive Vulkan in der Mitte der Caldera — per kleinem Boot erreichbar, zu Fuß begehbar, mit heißen Schwefelquellen die noch immer brodeln. Die letzte Eruption war 1950. Das Gestein ist schwarz und neu, im geologischen Sinne.</p>
+        </div>
+      </div>
+
+      <div class="ts-sight-card">
+        <div class="ts-sight-visual sv-ts-beach"></div>
+        <div class="ts-sight-body">
+          <p class="ts-sight-cat">Strand · Vulkan</p>
+          <h3 class="ts-sight-name">Vulkanstrände</h3>
+          <p class="ts-sight-desc">Thirassia hat kleine schwarze Vulkanstrände — Agia Irini im Süden ist der ruhigste, mit kaum einer Menschenseele. Das schwarze Gestein speichert die Sonne und heizt das Wasser auf — ein natürlicher Thermalstrand ohne Namen und ohne Eintritt.</p>
+        </div>
+      </div>
+
+      <div class="ts-sight-card">
+        <div class="ts-sight-visual sv-ts-path"></div>
+        <div class="ts-sight-body">
+          <p class="ts-sight-cat">Wandern · Klippenrand</p>
+          <h3 class="ts-sight-name">Klippenrandpfad</h3>
+          <p class="ts-sight-desc">Der Wanderweg entlang des Caldera-Rands von Manolas bis Agia Irini — durch Weingärten mit Assyrtiko-Reben, vorbei an verlassenen Häusern aus dem Erdbeben 1956, mit dem Blick auf die Caldera die nicht aufhört zu beeindrucken.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. ESSEN & TAVERNEN -->
+  <section class="ts-section">
+    <div class="ts-section-head">
+      <p class="ts-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="ts-section-title">Wenige Tische,<br><em>der beste Ausblick der Ägäis</em></h2>
+      <div class="ts-divider"></div>
+    </div>
+    <div class="ts-tav-grid">
+
+      <div class="ts-tav-card">
+        <div class="ts-tav-top">
+          <div>
+            <h3 class="ts-tav-name">Taverna Tonia</h3>
+            <div class="ts-tav-loc">📍 Manolas, Klippenrand</div>
+          </div>
+          <div class="ts-tav-stars">★★★★★</div>
+        </div>
+        <p class="ts-tav-desc">Die einzige Taverne in Manolas — direkt auf dem Caldera-Rand, mit einer Terrasse die über dem Abgrund hängt. Die Aussicht kostet nichts extra. Die Küche ist schlicht und frisch: Fisch vom Morgen, Salate vom Garten, Assyrtiko aus den eigenen Weinbergen der Insel. Das beste Mittagessen mit dem besten Ausblick der Ägäis.</p>
+        <div class="ts-tav-dishes">
+          <span class="ts-tav-dish">Gegrillte Meeräsche</span>
+          <span class="ts-tav-dish">Fava santorineisch</span>
+          <span class="ts-tav-dish">Thirassia-Assyrtiko</span>
+        </div>
+        <p class="ts-tav-price">Preisklasse: <span>€€ · Mittag · Caldera-Terrasse</span></p>
+      </div>
+
+      <div class="ts-tav-card">
+        <div class="ts-tav-top">
+          <div>
+            <h3 class="ts-tav-name">Kafeneion Korfos</h3>
+            <div class="ts-tav-loc">📍 Korfos, Hafen</div>
+          </div>
+          <div class="ts-tav-stars">★★★★★</div>
+        </div>
+        <p class="ts-tav-desc">Das Kafeneion am Hafen — das erste Gesicht von Thirassia wenn die Fähre anlegt. Fischer, Einheimische, gelegentlich ein verlorener Reisender. Griechischer Kaffee, Tsipouro, manchmal frittierter Fisch wenn der Bootsmann gut war. Kein Englisch auf der Karte, kein Unterschied zu 1975.</p>
+        <div class="ts-tav-dishes">
+          <span class="ts-tav-dish">Griechischer Kaffee</span>
+          <span class="ts-tav-dish">Tsipouro</span>
+          <span class="ts-tav-dish">Frittierte Sardellen</span>
+        </div>
+        <p class="ts-tav-price">Preisklasse: <span>€ · Hafen · Ganztags</span></p>
+      </div>
+
+      <div class="ts-tav-card">
+        <div class="ts-tav-top">
+          <div>
+            <h3 class="ts-tav-name">Taverna Potamos</h3>
+            <div class="ts-tav-loc">📍 Potamos, Nordküste</div>
+          </div>
+          <div class="ts-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ts-tav-desc">Im Küstendorf Potamos — kleiner, ruhiger als Manolas, mit einem Blick auf die offene Ägäis statt auf die Caldera. Die Taverne des Dorfes serviert, was das Meer und der Garten geben. Abends manchmal Musik, wenn die Einheimischen Lust haben.</p>
+        <div class="ts-tav-dishes">
+          <span class="ts-tav-dish">Oktopus am Stein</span>
+          <span class="ts-tav-dish">Gemischter Meze-Teller</span>
+          <span class="ts-tav-dish">Hauswein</span>
+        </div>
+        <p class="ts-tav-price">Preisklasse: <span>€€ · Abend · Nordküste</span></p>
+      </div>
+
+      <div class="ts-tav-card">
+        <div class="ts-tav-top">
+          <div>
+            <h3 class="ts-tav-name">Assyrtiko-Weinprobe</h3>
+            <div class="ts-tav-loc">📍 Weinberge Thirassia</div>
+          </div>
+          <div class="ts-tav-stars">★★★★★</div>
+        </div>
+        <p class="ts-tav-desc">Thirassia hat dieselben vulkanischen Böden wie Santorini — und dieselbe Assyrtiko-Traube, die hier in Körben (Kouloures) direkt auf dem Boden gezogen wird, damit der Meltemi sie nicht zerfetzt. Kleine Weingüter auf der Insel laden informell zur Probe — man fragt einfach.</p>
+        <div class="ts-tav-dishes">
+          <span class="ts-tav-dish">Assyrtiko trocken</span>
+          <span class="ts-tav-dish">Nykteri (oxidiert)</span>
+          <span class="ts-tav-dish">Vinsanto (süß)</span>
+        </div>
+        <p class="ts-tav-price">Preisklasse: <span>€€ · Weinprobe auf Anfrage</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. ORTE & CHARAKTER -->
+  <section class="ts-section">
+    <div class="ts-section-head">
+      <p class="ts-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="ts-section-title">Santorini<br><em>wie es einmal war</em></h2>
+      <div class="ts-divider"></div>
+    </div>
+    <div class="ts-viertel-grid">
+
+      <div class="ts-viertel-card">
+        <div class="ts-viertel-emoji">🪜</div>
+        <h3 class="ts-viertel-name">300 Stufen nach Manolas</h3>
+        <p class="ts-viertel-desc">Der Aufstieg vom Hafen Korfos hinauf nach Manolas — 300 Steinstufen in die Klippe gehauen, steil, ohne Schatten, absolut lohnend. Oben wartet die Taverne, der Caldera-Blick und das Gefühl, etwas verdient zu haben.</p>
+      </div>
+
+      <div class="ts-viertel-card">
+        <div class="ts-viertel-emoji">🌋</div>
+        <h3 class="ts-viertel-name">Caldera-Erlebnis</h3>
+        <p class="ts-viertel-desc">Von Thirassia sieht man die gesamte Caldera auf einmal — Santorini gegenüber, Nea Kameni in der Mitte, Palea Kameni daneben, das Blau dazwischen. Dasselbe Bild wie aus Oia, aber ohne einen einzigen anderen Besucher im Sichtfeld.</p>
+      </div>
+
+      <div class="ts-viertel-card">
+        <div class="ts-viertel-emoji">🍇</div>
+        <h3 class="ts-viertel-name">Assyrtiko-Weinberge</h3>
+        <p class="ts-viertel-desc">Derselbe vulkanische Boden wie Santorini, dieselbe Traube, dieselbe Basket-Methode — aber viel weniger bekannt und viel zugänglicher. Ein Spaziergang durch die Weinberge ist ein Spaziergang durch 3600 Jahre Weinbau.</p>
+      </div>
+
+      <div class="ts-viertel-card">
+        <div class="ts-viertel-emoji">⛵</div>
+        <h3 class="ts-viertel-name">Überfahrt aus Santorini</h3>
+        <p class="ts-viertel-desc">25 Minuten per kleinem Caldera-Boot von Fira oder Ammoudi — und man ist in einer anderen Zeit. Die Boote fahren täglich, aber nicht stündlich. Das zwingt zum Bleiben, und das ist gut so.</p>
+      </div>
+
+      <div class="ts-viertel-card">
+        <div class="ts-viertel-emoji">🌅</div>
+        <h3 class="ts-viertel-name">Sonnenuntergang ohne Publikum</h3>
+        <p class="ts-viertel-desc">Santorini hat den berühmtesten Sonnenuntergang der Welt — und Thirassia hat denselben, ohne die Menschenmassen. Wenn in Oia Hunderte drängeln, sitzt man hier allein auf der Klippe mit einem Glas Assyrtiko.</p>
+      </div>
+
+      <div class="ts-viertel-card">
+        <div class="ts-viertel-emoji">🏚️</div>
+        <h3 class="ts-viertel-name">Verlassene Häuser 1956</h3>
+        <p class="ts-viertel-desc">Das Erdbeben von 1956 hat auf Thirassia Spuren hinterlassen, die nie vollständig geheilt wurden. Entlang des Klippenrandpfads stehen noch Ruinen von Häusern, die damals verlassen wurden und seitdem leer stehen.</p>
+      </div>
+
+    </div>
+
+    <div class="ts-tip-banner">
+      <div class="ts-tip-emoji">🌊</div>
+      <div class="ts-tip-text">
+        <h3>Santorini von der richtigen Seite</h3>
+        <p>Thirassia ist die Antwort auf eine Frage, die viele Santorini-Reisende stellen: Wie war das hier, bevor es so wurde wie es ist? Die Antwort ist 25 Bootsminuten entfernt. Gleiche Caldera, gleicher Sonnenuntergang, gleicher Wein — aber kein Gedränge, keine Buchungsplattform, keine Wartezeit. Das einzige Problem mit Thirassia ist, dass man danach Santorini nicht mehr braucht. Und dass man eventuell nicht mehr zurückfährt.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>

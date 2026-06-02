@@ -32,6 +32,14 @@
   <link rel="stylesheet" href="css/islands/anafi.css">
   <link rel="stylesheet" href="css/islands/andros.css">
   <link rel="stylesheet" href="css/islands/folegandros.css">
+  <link rel="stylesheet" href="css/islands/iraklia.css">
+  <link rel="stylesheet" href="css/islands/antiparos.css">
+  <link rel="stylesheet" href="css/islands/donoussa.css">
+  <link rel="stylesheet" href="css/islands/thirassia.css">
+  <link rel="stylesheet" href="css/islands/ios.css">
+  <link rel="stylesheet" href="css/islands/kea.css">
+  <link rel="stylesheet" href="css/islands/kythnos.css">
+  <link rel="stylesheet" href="css/islands/koufonisia.css">
 
   <!-- Rezept-Styles -->
   <link rel="stylesheet" href="css/food/tzatziki.css">
@@ -250,7 +258,7 @@
         </div>
       </div>
 
-      <div class="island-card kyk-card">
+      <div class="island-card kyk-card" onclick="openTinos()" style="cursor:pointer;">
         <div class="island-bg isle-tinos"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -261,7 +269,7 @@
         </div>
       </div>
 
-      <div class="island-card kyk-card">
+      <div class="island-card kyk-card" onclick="openAmorgos()" style="cursor:pointer;">
         <div class="island-bg isle-amorgos"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -272,7 +280,7 @@
         </div>
       </div>
 
-      <div class="island-card kyk-card">
+      <div class="island-card kyk-card" onclick="openAnafi()" style="cursor:pointer;">
         <div class="island-bg isle-anafi"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -283,7 +291,7 @@
         </div>
       </div>
 
-      <div class="island-card kyk-card">
+      <div class="island-card kyk-card" onclick="openAndros()" style="cursor:pointer;">
         <div class="island-bg isle-andros"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -294,7 +302,7 @@
         </div>
       </div>
 
-      <div class="island-card kyk-card">
+      <div class="island-card kyk-card" onclick="openAntiparos()" style="cursor:pointer;">
         <div class="island-bg isle-antiparos"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -305,7 +313,7 @@
         </div>
       </div>
 
-      <div class="island-card kyk-card">
+      <div class="island-card kyk-card" onclick="openDonoussa()" style="cursor:pointer;">
         <div class="island-bg isle-donoussa"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -316,7 +324,7 @@
         </div>
       </div>
 
-      <div class="island-card kyk-card">
+      <div class="island-card kyk-card" onclick="openIraklia()" style="cursor:pointer;">
         <div class="island-bg isle-iraklia"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -327,7 +335,7 @@
         </div>
       </div>
 
-      <div class="island-card kyk-card">
+      <div class="island-card kyk-card" onclick="openThirassia()" style="cursor:pointer;">
         <div class="island-bg isle-thirassia"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -338,7 +346,7 @@
         </div>
       </div>
 
-      <div class="island-card kyk-card">
+      <div class="island-card kyk-card" onclick="openIos()" style="cursor:pointer;">
         <div class="island-bg isle-ios"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -349,7 +357,7 @@
         </div>
       </div>
 
-      <div class="island-card kyk-card">
+      <div class="island-card kyk-card" onclick="openKea()" style="cursor:pointer;">
         <div class="island-bg isle-kea"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -927,6 +935,7 @@
 <div id="siros-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="kos-page"        style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="rhodos-page"     style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="tinos-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="kefalonia-page"  style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div> 
 <div id="corfu-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="zakynthos-page"  style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div> 
@@ -937,6 +946,16 @@
 <div id="andros-page"     style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="serifos-page"    style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="koufonisia-page" style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="kythnos-page"    style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="donoussa-page"   style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="schinoussa-page" style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="iraklia-page"    style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="antiparos-page"  style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="donoussa-page"   style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="thirassia-page"  style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="ios-page"        style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="kea-page"        style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+
 
 
 <!-- ═══════════════════════════════════════ -->
@@ -1163,6 +1182,77 @@
     document.body.style.overflow = '';
   }
 
+  function openAntiparos() {
+    loadPage('antiparos-page', 'islands/antiparos.html').then(() => {
+      const p = document.getElementById('antiparos-page');
+      p.style.display = 'block'; p.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  function closeAntiparos() {
+    document.getElementById('antiparos-page').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function openDonoussa() {
+    loadPage('donoussa-page', 'islands/donoussa.html').then(() => {
+      const p = document.getElementById('donoussa-page');
+      p.style.display = 'block'; p.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  function closeDonoussa() {
+    document.getElementById('donoussa-page').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function openIraklia() {
+    loadPage('iraklia-page', 'islands/iraklia.html').then(() => {
+      const p = document.getElementById('iraklia-page');
+      p.style.display = 'block'; p.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  function closeIraklia() {
+    document.getElementById('iraklia-page').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function openThirassia() {
+    loadPage('thirassia-page', 'islands/thirassia.html').then(() => {
+      const p = document.getElementById('thirassia-page');
+      p.style.display = 'block'; p.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  function closeThirassia() {
+    document.getElementById('thirassia-page').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+    function openIos() {
+    loadPage('ios-page', 'islands/ios.html').then(() => {
+      const p = document.getElementById('ios-page');
+      p.style.display = 'block'; p.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  function closeIos() {
+    document.getElementById('ios-page').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+    function openKea() {
+    loadPage('kea-page', 'islands/kea.html').then(() => {
+      const p = document.getElementById('kea-page');
+      p.style.display = 'block'; p.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  function closeKea() {
+    document.getElementById('kea-page').style.display = 'none';
+    document.body.style.overflow = '';
+  }
 
   function openThessaloniki() {
     loadPage('thessaloniki-page', 'cities/thessaloniki.html').then(() => {

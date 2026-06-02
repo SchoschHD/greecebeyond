@@ -1,0 +1,282 @@
+/* =============================================
+   IOS — Insel-Unterseite
+   Akzentfarbe: Warmes Violett-Magenta / Sonnenuntergangs-Pink
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#ios-page {
+  font-family: 'Nunito', sans-serif;
+  color: #160a18;
+  background: #faf4fb;
+}
+
+/* ── BACK BAR ── */
+.io-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(250,244,251,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(160,40,140,0.16);
+}
+.io-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(160,40,140,0.30);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Nunito', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #901878; transition: all 0.2s;
+}
+.io-back-btn:hover { background: #f8eaf6; border-color: #901878; }
+.io-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.io-breadcrumb { font-size: 0.8rem; color: #9878a0; letter-spacing: 0.05em; }
+.io-breadcrumb span { color: #901878; }
+
+/* ── HERO ── */
+.io-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.io-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(168deg,
+    #060408 0%,
+    #180828 18%,
+    #481060 40%,
+    #9820a0 60%,
+    #e05080 80%,
+    #f89040 100%);
+}
+.io-hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 80%, rgba(200,60,140,0.22) 0%, transparent 70%),
+    radial-gradient(ellipse 35% 25% at 80% 15%, rgba(50,10,80,0.32) 0%, transparent 60%);
+}
+/* Windmühlen-Silhouette -->*/
+.io-hero-silhouette {
+  position: absolute; bottom: 106px; left: 50%;
+  transform: translateX(-50%);
+  width: 900px; height: 165px;
+  opacity: 0.10;
+}
+.io-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(6,2,10,0.44);
+}
+.io-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 115px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 115'%3E%3Cpath fill='%23faf4fb' fill-opacity='1' d='M0,56L90,48C180,40,360,24,540,30C720,36,900,64,1080,70C1260,76,1350,58,1440,50L1440,115L0,115Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.io-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.io-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.45em;
+  text-transform: uppercase; color: rgba(255,200,230,0.52);
+  margin-bottom: 1.2rem;
+}
+.io-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4.5rem, 10vw, 9rem);
+  font-weight: 300; line-height: 0.86;
+  margin-bottom: 1.5rem; letter-spacing: -0.01em;
+}
+.io-hero-title em {
+  font-style: italic; display: block;
+  color: #ffb8d8; font-size: 0.50em;
+  letter-spacing: 0.04em; margin-top: 0.38rem;
+}
+.io-hero-sub {
+  max-width: 560px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(255,220,240,0.68); line-height: 1.82; font-weight: 300;
+}
+.io-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.io-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(255,160,210,0.22);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(255,200,230,0.78);
+}
+
+/* ── DUALITY STRIP ── */
+.io-duality-strip {
+  background: #120818;
+  padding: 1.15rem 3rem;
+  display: flex; align-items: center; justify-content: center; gap: 3rem;
+  flex-wrap: wrap;
+}
+.io-duality-item {
+  display: flex; align-items: center; gap: 0.7rem;
+  color: rgba(240,160,210,0.62); font-size: 0.8rem; letter-spacing: 0.08em;
+}
+.io-duality-item::before { content: '—'; color: #901878; }
+
+/* ── STATS BAR ── */
+.io-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(160,40,140,0.10);
+}
+.io-stat-item {
+  flex: 1; max-width: 200px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(160,40,140,0.08);
+}
+.io-stat-item:last-child { border-right: none; }
+.io-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: #901878; line-height: 1;
+}
+.io-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #9878a0; margin-top: 0.3rem;
+}
+
+/* ── CONTENT ── */
+.io-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.io-section { padding: 4rem 0 2rem; }
+.io-section-head { margin-bottom: 2.5rem; }
+.io-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #901878; margin-bottom: 0.8rem;
+}
+.io-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300; color: #160a18; line-height: 1.15;
+}
+.io-section-title em { font-style: italic; color: #901878; }
+.io-divider { width: 40px; height: 2px; background: #901878; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.io-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.io-history-text p {
+  font-size: 0.98rem; line-height: 1.95; color: #2c1430;
+  font-weight: 400; margin-bottom: 1.2rem;
+}
+.io-timeline { position: relative; padding-left: 2rem; }
+.io-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(144,24,120,0.18);
+}
+.io-tl-item { position: relative; margin-bottom: 1.8rem; }
+.io-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: #faf4fb; border: 2px solid #901878;
+}
+.io-tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 600; color: #901878; margin-bottom: 0.25rem;
+}
+.io-tl-event {
+  font-size: 0.87rem; color: #2c1430; line-height: 1.65; font-weight: 400;
+}
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.io-sights-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem;
+}
+.io-sight-card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid rgba(160,40,140,0.14);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.io-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(22,10,24,0.10); }
+.io-sight-visual { height: 140px; }
+.io-sight-body { padding: 1.2rem; }
+.io-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #901878; margin-bottom: 0.35rem;
+}
+.io-sight-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 300; color: #160a18; margin-bottom: 0.4rem;
+}
+.io-sight-desc { font-size: 0.83rem; color: #503050; line-height: 1.65; font-weight: 400; }
+
+.sv-io-chora      { background: linear-gradient(160deg, #0c0410 0%, #481060 55%, #b040c0 100%); }
+.sv-io-homer      { background: linear-gradient(160deg, #100804 0%, #503010 55%, #c07830 100%); }
+.sv-io-manganari  { background: linear-gradient(160deg, #040c14 0%, #10407a 55%, #1898e0 100%); }
+.sv-io-windmill   { background: linear-gradient(160deg, #100c04 0%, #484018 55%, #b0a040 100%); }
+.sv-io-mylopotas  { background: linear-gradient(160deg, #04100c 0%, #104838 55%, #28c098 100%); }
+.sv-io-paleokastro{ background: linear-gradient(160deg, #100808 0%, #502818 55%, #c06040 100%); }
+
+/* ── TAVERNEN ── */
+.io-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.io-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(160,40,140,0.12);
+  border-radius: 4px; border-left: 3px solid #901878;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.io-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(22,10,24,0.08); }
+.io-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.io-tav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300; color: #160a18;
+}
+.io-tav-loc { font-size: 0.75rem; color: #9878a0; margin-top: 0.2rem; }
+.io-tav-stars { color: #901878; font-size: 0.85rem; letter-spacing: 2px; }
+.io-tav-desc { font-size: 0.87rem; color: #2c1430; line-height: 1.75; font-weight: 400; margin-bottom: 1rem; }
+.io-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.io-tav-dish {
+  padding: 3px 10px; background: #f8eaf6; color: #5a0840;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+}
+.io-tav-price { font-size: 0.8rem; color: #9878a0; }
+.io-tav-price span { color: #901878; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.io-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.io-viertel-card {
+  padding: 1.8rem; background: #f8eaf6;
+  border-radius: 4px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.io-viertel-card:hover { background: #f0d4f0; transform: translateY(-4px); }
+.io-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.io-viertel-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300; color: #160a18; margin-bottom: 0.5rem;
+}
+.io-viertel-desc { font-size: 0.82rem; color: #503050; line-height: 1.65; font-weight: 400; }
+
+/* ── TIP BANNER ── */
+.io-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #080410 0%, #381060 40%, #901878 100%);
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.io-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.io-tip-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300; color: white; margin-bottom: 0.6rem;
+}
+.io-tip-text p {
+  font-size: 0.92rem; color: rgba(255,200,230,0.72); line-height: 1.82; font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .io-back-bar { padding: 0.8rem 1.2rem; }
+  .io-content { padding: 2rem 1.2rem 4rem; }
+  .io-history-grid { grid-template-columns: 1fr; }
+  .io-sights-grid { grid-template-columns: 1fr 1fr; }
+  .io-tav-grid { grid-template-columns: 1fr; }
+  .io-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .io-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+  .io-duality-strip { padding: 1.2rem; gap: 1.5rem; }
+}
