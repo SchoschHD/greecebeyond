@@ -210,6 +210,15 @@ function openIos() {
 }
 function closeIos() { closePage('ios-page'); }
 
+function openKimolos() {
+  if (typeof loadPage === 'function') {
+    loadPage('kimolos-page', 'islands/kyklades/kimolos.html').then(() => openPage('kimolos-page'));
+  } else {
+    openPage('kimolos-page');
+  }
+}
+function closeKimolos() { closePage('kimolos-page'); }
+
 // Convenience-Funktionen für konkrete Inseln Dodekanes
 function openKos() {
   if (typeof loadPage === 'function') {
