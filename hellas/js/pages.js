@@ -283,3 +283,13 @@ function openTilos() {
   }   
 }
 function closeTilos() { closePage('tilos-page'); }  
+
+function openChalki() {
+  if (typeof loadPage === 'function') {
+    loadPage('chalki-page', 'islands/dodekanes/chalki.html').then(() => openPage('chalki-page'));
+  } else {
+    openPage('chalki-page');
+  }         
+}
+function closeChalki() { closePage('chalki-page'); }    
+
