@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ios — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Nunito:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="ios.css" />
+</head>
+<body>
+<div id="ios-page">
+
+<div class="io-back-bar">
+  <button class="io-back-btn" onclick="closeIos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="io-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Ios</span></p>
+</div>
+
+<div class="io-hero">
+  <div class="io-hero-bg"></div>
+  <!-- Ios Chora Silhouette: Windmühlen-Reihe, Kuppeln, Chora-Hügel -->
+  <svg class="io-hero-silhouette" viewBox="0 0 900 165" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Chorá-Hügel -->
+    <path d="M200,165 L210,120 Q260,80 330,62 Q390,48 440,55 Q490,62 520,88 Q545,110 555,130 L570,140 L570,165Z"/>
+    <!-- Windmühlen-Reihe auf Hügelkamm -->
+    <!-- Mühle 1 -->
+    <rect x="285" y="84" width="16" height="38" rx="1"/>
+    <ellipse cx="293" cy="82" rx="9" ry="4.5"/>
+    <line x1="293" y1="78" x2="280" y2="55" stroke="white" stroke-width="2.8"/>
+    <line x1="293" y1="78" x2="306" y2="55" stroke="white" stroke-width="2.8"/>
+    <line x1="293" y1="78" x2="276" y2="71" stroke="white" stroke-width="2.8"/>
+    <line x1="293" y1="78" x2="310" y2="71" stroke="white" stroke-width="2.8"/>
+    <!-- Mühle 2 -->
+    <rect x="316" y="74" width="16" height="38" rx="1"/>
+    <ellipse cx="324" cy="72" rx="9" ry="4.5"/>
+    <line x1="324" y1="68" x2="311" y2="45" stroke="white" stroke-width="2.8"/>
+    <line x1="324" y1="68" x2="337" y2="45" stroke="white" stroke-width="2.8"/>
+    <line x1="324" y1="68" x2="307" y2="61" stroke="white" stroke-width="2.8"/>
+    <line x1="324" y1="68" x2="341" y2="61" stroke="white" stroke-width="2.8"/>
+    <!-- Mühle 3 -->
+    <rect x="348" y="66" width="16" height="38" rx="1"/>
+    <ellipse cx="356" cy="64" rx="9" ry="4.5"/>
+    <line x1="356" y1="60" x2="343" y2="37" stroke="white" stroke-width="2.8"/>
+    <line x1="356" y1="60" x2="369" y2="37" stroke="white" stroke-width="2.8"/>
+    <line x1="356" y1="60" x2="339" y2="53" stroke="white" stroke-width="2.8"/>
+    <line x1="356" y1="60" x2="373" y2="53" stroke="white" stroke-width="2.8"/>
+    <!-- Mühle 4 -->
+    <rect x="378" y="60" width="16" height="38" rx="1"/>
+    <ellipse cx="386" cy="58" rx="9" ry="4.5"/>
+    <line x1="386" y1="54" x2="373" y2="31" stroke="white" stroke-width="2.8"/>
+    <line x1="386" y1="54" x2="399" y2="31" stroke="white" stroke-width="2.8"/>
+    <line x1="386" y1="54" x2="369" y2="47" stroke="white" stroke-width="2.8"/>
+    <line x1="386" y1="54" x2="403" y2="47" stroke="white" stroke-width="2.8"/>
+    <!-- Mühle 5 -->
+    <rect x="408" y="62" width="16" height="38" rx="1"/>
+    <ellipse cx="416" cy="60" rx="9" ry="4.5"/>
+    <line x1="416" y1="56" x2="403" y2="33" stroke="white" stroke-width="2.8"/>
+    <line x1="416" y1="56" x2="429" y2="33" stroke="white" stroke-width="2.8"/>
+    <line x1="416" y1="56" x2="399" y2="49" stroke="white" stroke-width="2.8"/>
+    <line x1="416" y1="56" x2="433" y2="49" stroke="white" stroke-width="2.8"/>
+    <!-- Panagia Gremiotissa Kirchturm -->
+    <rect x="445" y="48" width="26" height="42"/>
+    <ellipse cx="458" cy="46" rx="13" ry="6.5"/>
+    <rect x="455" y="28" width="8" height="20"/>
+    <path d="M453,28 Q458,20 463,28Z"/>
+    <!-- Kykladische Häuser -->
+    <rect x="248" y="116" width="22" height="18" rx="1"/>
+    <rect x="476" y="110" width="22" height="20" rx="1"/>
+    <rect x="505" y="115" width="18" height="15" rx="1"/>
+    <!-- Kleiner Hafen links -->
+    <rect x="60" y="130" width="60" height="14" rx="1"/>
+    <rect x="40" y="124" width="20" height="20" rx="1"/>
+    <!-- Meer -->
+    <path d="M0,152 Q225,142 450,148 Q675,154 900,144 L900,165 L0,165Z" opacity="0.25"/>
+  </svg>
+  <div class="io-hero-overlay"></div>
+  <div class="io-hero-waves"></div>
+  <div class="io-hero-content">
+    <p class="io-hero-tag">Kykladen · Südliche Ägäis</p>
+    <h1 class="io-hero-title">Ios<em>Ίος</em></h1>
+    <p class="io-hero-sub">Die Insel der zwölf Windmühlen und des tausend Rätsel — tagsüber Homer, Manganari und Stille, nachts die leuchtendste Chora der Ägäis. Ios ist mehr als sein Ruf, aber sein Ruf ist auch nicht falsch.</p>
+    <div class="io-hero-pills">
+      <span class="io-hero-pill">Homers Grab</span>
+      <span class="io-hero-pill">12 Windmühlen</span>
+      <span class="io-hero-pill">Manganari</span>
+      <span class="io-hero-pill">Skarkos (3. Jt. v. Chr.)</span>
+      <span class="io-hero-pill">Panagia Gremiotissa</span>
+    </div>
+  </div>
+</div>
+
+<div class="io-duality-strip">
+  <div class="io-duality-item">108 km² · 732 m Gipfel Pyrgos</div>
+  <div class="io-duality-item">2.000+ v. Chr. erste Besiedlung bei Manganari</div>
+  <div class="io-duality-item">Tagsüber Homer — nachts Chora</div>
+  <div class="io-duality-item">35 Strände, 12 Windmühlen</div>
+  <div class="io-duality-item">Zwischen Santorin und Naxos</div>
+</div>
+
+<div class="io-stats-bar">
+  <div class="io-stat-item">
+    <div class="io-stat-num">~2.000</div>
+    <div class="io-stat-lbl">Einwohner</div>
+  </div>
+  <div class="io-stat-item">
+    <div class="io-stat-num">732 m</div>
+    <div class="io-stat-lbl">Gipfel Pyrgos</div>
+  </div>
+  <div class="io-stat-item">
+    <div class="io-stat-num">12</div>
+    <div class="io-stat-lbl">Windmühlen</div>
+  </div>
+  <div class="io-stat-item">
+    <div class="io-stat-num">35</div>
+    <div class="io-stat-lbl">Strände</div>
+  </div>
+  <div class="io-stat-item">
+    <div class="io-stat-num">3. Jt. v. Chr.</div>
+    <div class="io-stat-lbl">Erste Besiedlung</div>
+  </div>
+</div>
+
+<div class="io-content">
+
+  <section class="io-section">
+    <div class="io-section-head">
+      <p class="io-section-label">01 — Geschichte</p>
+      <h2 class="io-section-title">Von Homer bis zur<br><em>längsten Nacht der Ägäis</em></h2>
+      <div class="io-divider"></div>
+    </div>
+    <div class="io-history-grid">
+      <div class="io-history-text">
+        <p>Gräberfunde bei Manganari im Süden der Insel belegen Besiedlung bereits im dritten Jahrtausend vor Christus. Auf dem Hügel Skarkos, einen Kilometer nordöstlich des heutigen Hafens Gialos, entstand in der frühen Bronzezeit eine der bedeutendsten prähistorischen Siedlungen der Kykladen — mit Straßen, mehrstöckigen Häusern und einem Entwässerungssystem. Die Ausgrabungen ab 1986 machten Skarkos zu einem der wichtigsten Fundorte der Region.</p>
+        <p>Die Legende, die Ios heute definiert: Homer — der blinde Dichter, Autor der Ilias und der Odyssee, oder vielleicht ein Dutzend verschiedener Sänger, die sein Name versammelt — soll auf Ios gestorben und begraben worden sein. Seine Mutter Klimene stammte angeblich von der Insel. Das vermeintliche Grab bei Plakoto im Norden ist hellenistisch datiert, also Jahrhunderte zu jung. Aber der Mythos ist stärker als die Datierung. 1771 behauptete ein holländischer Abenteurer, das Grab geöffnet zu haben — das Skelett sei zu Staub zerfallen, die Grabsteine seien nach Livorno abreist und dort verschwunden.</p>
+        <p>Seit den 1970er Jahren ist Ios als Partydestination bekannt. Das ist real, aber auch nur ein Kapitel. Außerhalb der Chora ist die Insel still, wild und erstaunlich leer — 35 Strände, viele nur per Boot erreichbar, und eine Landschaft, die von Thymian und Windböen geprägt wird, nicht von Cocktailbars.</p>
+      </div>
+      <div class="io-timeline">
+        <div class="io-tl-item">
+          <div class="io-tl-dot"></div>
+          <div class="io-tl-year">3. Jt. v. Chr.</div>
+          <div class="io-tl-event">Prähistorische Siedlung Skarkos auf einem Hügel bei Gialos — mehrstöckige Häuser, Straßenpflaster, Entwässerung. Einer der wichtigsten Frühbronzezeit-Fundorte der Kykladen.</div>
+        </div>
+        <div class="io-tl-item">
+          <div class="io-tl-dot"></div>
+          <div class="io-tl-year">ca. 800 v. Chr.</div>
+          <div class="io-tl-event">Homer soll auf Ios gestorben sein — der Legende nach starb er am Rätsel der Fischer: „Was wir fingen, haben wir weggeworfen; was wir nicht fingen, tragen wir mit uns." Die Antwort: Läuse. Er verstand es nicht und starb an Kummer.</div>
+        </div>
+        <div class="io-tl-item">
+          <div class="io-tl-dot"></div>
+          <div class="io-tl-year">ca. 1000 v. Chr.</div>
+          <div class="io-tl-event">Ionische Besiedlung. Der Homerkopf erscheint im lokalen Münzbild — Ios war die einzige Insel der Kykladen, die ihren Schutzpatron auf Münzen prägte: den blinden Dichter.</div>
+        </div>
+        <div class="io-tl-item">
+          <div class="io-tl-dot"></div>
+          <div class="io-tl-year">1500–1821</div>
+          <div class="io-tl-event">Venezianische Festung Paleokastro auf dem Chorá-Hügel, dann osmanische Herrschaft, dann griechische Unabhängigkeit. Die 12 Windmühlen entstanden unter venezianischem Einfluss — sie mahlen schon lange nichts mehr, aber sie drehen sich noch.</div>
+        </div>
+        <div class="io-tl-item">
+          <div class="io-tl-dot"></div>
+          <div class="io-tl-year">1771</div>
+          <div class="io-tl-event">Pasch van Krienen, holländischer Abenteurer, behauptet Homers Grab geöffnet zu haben. Skelett zerfällt zu Staub, Grabsteine reisen nach Livorno ab — und verschwinden dort spurlos. Das Grab ist heute wieder eine schlichte Steinplatte auf einem windigen Hügel.</div>
+        </div>
+        <div class="io-tl-item">
+          <div class="io-tl-dot"></div>
+          <div class="io-tl-year">1970er–heute</div>
+          <div class="io-tl-event">Ios wird zur Partydestination Europas. Die Chora leuchtet jede Nacht. Draußen: 35 Strände, Skarkos, Homers Grab und eine Insel, die immer zwei Dinge gleichzeitig war.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="io-section">
+    <div class="io-section-head">
+      <p class="io-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="io-section-title">Windmühlen, Gräber<br><em>und das blaue Manganari</em></h2>
+      <div class="io-divider"></div>
+    </div>
+    <div class="io-sights-grid">
+
+      <div class="io-sight-card">
+        <div class="io-sight-visual sv-io-chora"></div>
+        <div class="io-sight-body">
+          <p class="io-sight-cat">Hauptort · Nachtleben</p>
+          <h3 class="io-sight-name">Chora</h3>
+          <p class="io-sight-desc">Das weiße Labyrinth auf dem Hügel — tagsüber Boutiquen, Tavernen und die Kirche Panagia Gremiotissa mit dem besten Sonnenuntergang der Insel. Nachts die leuchtendste Sammlung von Bars und Clubs der Kykladen, von der Gasse aus besuchbar ohne Autolärm.</p>
+        </div>
+      </div>
+
+      <div class="io-sight-card">
+        <div class="io-sight-visual sv-io-homer"></div>
+        <div class="io-sight-body">
+          <p class="io-sight-cat">Antike · Mythos</p>
+          <h3 class="io-sight-name">Homers Grab & Skarkos</h3>
+          <p class="io-sight-desc">Das vermeintliche Grab bei Plakoto im Norden — ein windiger Hügel, eine Steinplatte, ein Panorama auf Naxos und Iraklia. Daneben: Skarkos, der archäologische Park der frühbronzezeitlichen Siedlung mit mehrstöckigen Strukturen aus dem 3. Jahrtausend v. Chr.</p>
+        </div>
+      </div>
+
+      <div class="io-sight-card">
+        <div class="io-sight-visual sv-io-manganari"></div>
+        <div class="io-sight-body">
+          <p class="io-sight-cat">Strand · Südinsel</p>
+          <h3 class="io-sight-name">Manganari Beach</h3>
+          <p class="io-sight-desc">Der schönste Strand der Insel — weißer Sand, glasklares Wasser, mehrere verbundene Buchten im äußersten Süden. Per Kaiki von Gialos oder mit dem Bus erreichbar. Wegen der abgelegenen Lage immer deutlich ruhiger als Mylopotas. Der Gegenentwurf zur Chora.</p>
+        </div>
+      </div>
+
+      <div class="io-sight-card">
+        <div class="io-sight-visual sv-io-windmill"></div>
+        <div class="io-sight-body">
+          <p class="io-sight-cat">Wahrzeichen · Chora</p>
+          <h3 class="io-sight-name">Die 12 Windmühlen</h3>
+          <p class="io-sight-desc">Auf dem Kamm über der Chora — zwölf weiße Rundtürme in einer Reihe, außer Betrieb seit Jahrzehnten, aber jede Nacht erleuchtet. Der Blick von hier auf Chora, Gialos und das offene Meer Richtung Santorin ist das bekannteste Ios-Bild der Welt.</p>
+        </div>
+      </div>
+
+      <div class="io-sight-card">
+        <div class="io-sight-visual sv-io-mylopotas"></div>
+        <div class="io-sight-body">
+          <p class="io-sight-cat">Strand · Action</p>
+          <h3 class="io-sight-name">Mylopotas Beach</h3>
+          <p class="io-sight-desc">Der Hauptstrand der Insel, 2 km südlich der Chora — goldgelber Sand, Meltemi-Wind, Wasserski und Wellenreiten. Beachbars, Tavernen, das volle Gegenteil von Manganari. Für alle, die nach einem langen Wandertag auch mal Lärm brauchen.</p>
+        </div>
+      </div>
+
+      <div class="io-sight-card">
+        <div class="io-sight-visual sv-io-paleokastro"></div>
+        <div class="io-sight-body">
+          <p class="io-sight-cat">Venezianisch · Festung</p>
+          <h3 class="io-sight-name">Paleokastro</h3>
+          <p class="io-sight-desc">Die venezianische Burg aus dem 15. Jahrhundert auf dem Chora-Hügel — teils in die Häuser der Chora integriert, teils als Ruinen sichtbar. Das Tor mit seinem venezianischen Löwen ist das älteste Bauwerk der Insel. Man stolpert hier beim abendlichen Spaziergang drüber.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="io-section">
+    <div class="io-section-head">
+      <p class="io-section-label">03 — Tavernen & Küche</p>
+      <h2 class="io-section-title">Kalasouna, Revithada<br><em>und der beste Sonnenuntergang</em></h2>
+      <div class="io-divider"></div>
+    </div>
+    <div class="io-tav-grid">
+
+      <div class="io-tav-card">
+        <div class="io-tav-top">
+          <div>
+            <h3 class="io-tav-name">Taverna Nest</h3>
+            <div class="io-tav-loc">📍 Chora, untere Gassen</div>
+          </div>
+          <div class="io-tav-stars">★★★★★</div>
+        </div>
+        <p class="io-tav-desc">Die ehrlichste Taverne der Chora — versteckt in den unteren Gassen, mit Tischen unter einem Weinstock und einer Küche, die auf kykladische Tradition setzt. Die Kalasouna — die lokale Käse-Tarte aus Myzithra — ist hier besser als überall sonst auf der Insel. Kein Ausblick, dafür echte Küche.</p>
+        <div class="io-tav-dishes">
+          <span class="io-tav-dish">Kalasouna</span>
+          <span class="io-tav-dish">Revithada</span>
+          <span class="io-tav-dish">Lokaler Weißwein</span>
+        </div>
+        <p class="io-tav-price">Preisklasse: <span>€€ · Abendessen · Einheimische</span></p>
+      </div>
+
+      <div class="io-tav-card">
+        <div class="io-tav-top">
+          <div>
+            <h3 class="io-tav-name">Pithari</h3>
+            <div class="io-tav-loc">📍 Chora, Hauptgasse</div>
+          </div>
+          <div class="io-tav-stars">★★★★★</div>
+        </div>
+        <p class="io-tav-desc">Seit Jahrzehnten die erste Adresse für griechische Küche auf der Insel — mit Ausblick auf die Chora und die Windmühlen. Die Revithada (langsam gegarte Kichererbsen im Tontopf) und der gegrillte Oktopus sind Pflicht. Abendessen hier ist ein Ios-Ritual, das man einmal gemacht haben muss.</p>
+        <div class="io-tav-dishes">
+          <span class="io-tav-dish">Revithada im Tontopf</span>
+          <span class="io-tav-dish">Gegrillter Oktopus</span>
+          <span class="io-tav-dish">Fried Feta</span>
+        </div>
+        <p class="io-tav-price">Preisklasse: <span>€€ · Abendessen · Reservierung</span></p>
+      </div>
+
+      <div class="io-tav-card">
+        <div class="io-tav-top">
+          <div>
+            <h3 class="io-tav-name">Manganari Taverna</h3>
+            <div class="io-tav-loc">📍 Manganari Bay</div>
+          </div>
+          <div class="io-tav-stars">★★★★★</div>
+        </div>
+        <p class="io-tav-desc">Am Ende der Welt, direkt am Wasser von Manganari — eine Taverne, die nur existiert, weil man nach dem Schwimmen Hunger hat. Täglich frischer Fang, Ouzo, Salat aus dem Garten. Die Tische stehen halb im Sand. Man kommt für den Strand und bleibt wegen des Essens den ganzen Tag.</p>
+        <div class="io-tav-dishes">
+          <span class="io-tav-dish">Fisch des Tages</span>
+          <span class="io-tav-dish">Schrimps am Grill</span>
+          <span class="io-tav-dish">Horta (Wildgemüse)</span>
+        </div>
+        <p class="io-tav-price">Preisklasse: <span>€€ · Mittag · Strandtische</span></p>
+      </div>
+
+      <div class="io-tav-card">
+        <div class="io-tav-top">
+          <div>
+            <h3 class="io-tav-name">Thea Sunset Bar</h3>
+            <div class="io-tav-loc">📍 Chora, Windmühlen-Kamm</div>
+          </div>
+          <div class="io-tav-stars">★★★★☆</div>
+        </div>
+        <p class="io-tav-desc">Auf dem Kamm bei den Windmühlen, mit dem direkten Blick Richtung Santorin — das Lokal für den Sonnenuntergang. Cocktails, Wein, kleine Snacks. Wenn die Sonne zwischen zwei Windmühlen versinkt und die Lichter der Chora aufgehen, versteht man, warum Menschen hier hängen bleiben.</p>
+        <div class="io-tav-dishes">
+          <span class="io-tav-dish">Aperol am Sonnenuntergang</span>
+          <span class="io-tav-dish">Bruschetta</span>
+          <span class="io-tav-dish">Sangria Rosé</span>
+        </div>
+        <p class="io-tav-price">Preisklasse: <span>€€ · Ab 17 Uhr · Beste Aussicht</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="io-section">
+    <div class="io-section-head">
+      <p class="io-section-label">04 — Orte & Viertel</p>
+      <h2 class="io-section-title">Von Gialos<br><em>bis ans südliche Ende</em></h2>
+      <div class="io-divider"></div>
+    </div>
+    <div class="io-viertel-grid">
+
+      <div class="io-viertel-card">
+        <div class="io-viertel-emoji">🌃</div>
+        <h3 class="io-viertel-name">Chora</h3>
+        <p class="io-viertel-desc">Das weiße Herz der Insel — zwölf Windmühlen, die Kirche Panagia Gremiotissa, das Paleokastro, enge Gassen voller Bougainvillea. Tagsüber ruhig. Nachts das Gegenteil.</p>
+      </div>
+
+      <div class="io-viertel-card">
+        <div class="io-viertel-emoji">⚓</div>
+        <h3 class="io-viertel-name">Gialos (Hafen)</h3>
+        <p class="io-viertel-desc">Der Hafen 2 km unter der Chora — kleiner Fischerhafen, Fähranlegestelle, Bootsvermietung. Ruhiger als die Chora, mit einer Handvoll Tavernen direkt am Wasser. Ausgangspunkt für alle Bootstouren zu den Südstranden.</p>
+      </div>
+
+      <div class="io-viertel-card">
+        <div class="io-viertel-emoji">🏖️</div>
+        <h3 class="io-viertel-name">Mylopotas</h3>
+        <p class="io-viertel-desc">Der Partybeach 2 km südlich der Chora — goldener Sand, Bars, Wasserski, Meltemi-Wind. Vollständige touristische Infrastruktur. Für alle, die Action suchen. Wer Stille will, fährt nach Manganari.</p>
+      </div>
+
+      <div class="io-viertel-card">
+        <div class="io-viertel-emoji">🌊</div>
+        <h3 class="io-viertel-name">Manganari Süd</h3>
+        <p class="io-viertel-desc">Der äußerste Süden — mehrere verbundene Buchten, weißer Sand, glasklares Wasser, kaum Schatten, kaum Lärm. Nur per Kaiki oder Taxi zu erreichen. Die andere Seite von Ios.</p>
+      </div>
+
+      <div class="io-viertel-card">
+        <div class="io-viertel-emoji">📜</div>
+        <h3 class="io-viertel-name">Plakoto & Homers Grab</h3>
+        <p class="io-viertel-desc">Der Norden der Insel — windige Hügel, Macchia, das vermeintliche Grab des blinden Dichters. Kein Eintritt, kein Café, kein Ticket. Nur der Wind, die Steinplatte und der Blick auf Naxos.</p>
+      </div>
+
+      <div class="io-viertel-card">
+        <div class="io-viertel-emoji">🏺</div>
+        <h3 class="io-viertel-name">Skarkos (Bronzezeit)</h3>
+        <p class="io-viertel-desc">Der archäologische Park in Kambos — die frühbronzezeitliche Siedlung mit Straßen und Häusern, 3. Jahrtausend vor Christus. Das andere Ios, das die meisten Besucher nie zu sehen bekommen.</p>
+      </div>
+
+    </div>
+
+    <div class="io-tip-banner">
+      <div class="io-tip-emoji">🌅</div>
+      <div class="io-tip-text">
+        <h3>Die Insel der zwei Wahrheiten</h3>
+        <p>Morgens um sieben auf dem Weg nach Plakoto begegnet man niemandem. Die Macchia riecht nach Thymian, die Windmühlen stehen still, der Blick auf Naxos ist vollkommen klar. Das Steinmal, das Homer zugeschrieben wird, liegt auf einem kahlen Hügel — keine Absperrung, kein Hinweisschild außer einem kleinen Pfeil. Man legt die Hand auf den Stein und denkt an die Ilias. Abends um elf in der Chora: vollständiges Gegenteil. Beide Wahrheiten gehören zu Ios. Die meisten Besucher erleben nur eine davon.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>

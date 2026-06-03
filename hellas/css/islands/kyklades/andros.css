@@ -1,0 +1,301 @@
+/* =============================================
+   ANDROS — Insel-Unterseite
+   Akzentfarbe: Smaragdgrün / Ägäisches Tiefblau
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#andros-page {
+  font-family: 'Libre Baskerville', serif;
+  color: #0d1a12;
+  background: #f2f7f4;
+}
+
+/* ── BACK BAR ── */
+.ad-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(242,247,244,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(30,100,70,0.18);
+}
+.ad-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(30,100,70,0.35);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #1a6645; transition: all 0.2s;
+}
+.ad-back-btn:hover { background: #e4f2eb; border-color: #1a6645; }
+.ad-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.ad-breadcrumb { font-size: 0.8rem; color: #6a8878; letter-spacing: 0.05em; font-family: 'DM Sans', sans-serif; }
+.ad-breadcrumb span { color: #1a6645; }
+
+/* ── HERO ── */
+.ad-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.ad-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(170deg,
+    #040e08 0%,
+    #0a2818 18%,
+    #0f4830 38%,
+    #1a7050 58%,
+    #2a9870 78%,
+    #1a6080 100%);
+}
+.ad-hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 45% at 50% 75%, rgba(30,140,90,0.20) 0%, transparent 70%),
+    radial-gradient(ellipse 35% 25% at 80% 20%, rgba(10,80,100,0.28) 0%, transparent 60%);
+}
+/* Water shimmer dots */
+.ad-hero-shimmer {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+/* Neoklassizistische Fassaden-Silhouette */
+.ad-hero-silhouette {
+  position: absolute; bottom: 105px; left: 50%;
+  transform: translateX(-50%);
+  width: 900px; height: 160px;
+  opacity: 0.09;
+}
+.ad-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 115px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 115'%3E%3Cpath fill='%23f2f7f4' fill-opacity='1' d='M0,60L90,52C180,44,360,28,540,34C720,40,900,68,1080,74C1260,80,1350,64,1440,56L1440,115L0,115Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.ad-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(4,14,8,0.44);
+}
+.ad-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.ad-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.45em;
+  text-transform: uppercase; color: rgba(160,230,190,0.55);
+  margin-bottom: 1.2rem; font-family: 'DM Sans', sans-serif;
+}
+.ad-hero-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 400; line-height: 0.88;
+  margin-bottom: 1.5rem;
+}
+.ad-hero-title em {
+  font-style: italic; display: block;
+  color: #90ddb8; font-size: 0.52em;
+  letter-spacing: 0.04em; margin-top: 0.35rem;
+  font-weight: 400;
+}
+.ad-hero-sub {
+  max-width: 570px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(200,240,220,0.68); line-height: 1.80; font-weight: 400;
+  font-family: 'DM Sans', sans-serif;
+}
+.ad-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.ad-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(140,220,180,0.25);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(180,240,210,0.78);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── STATS BAR ── */
+.ad-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(30,100,70,0.12);
+}
+.ad-stat-item {
+  flex: 1; max-width: 200px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(30,100,70,0.09);
+}
+.ad-stat-item:last-child { border-right: none; }
+.ad-stat-num {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2rem; font-weight: 400; color: #1a6645; line-height: 1;
+}
+.ad-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #6a8878; margin-top: 0.3rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── CONTENT ── */
+.ad-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.ad-section { padding: 4rem 0 2rem; }
+.ad-section-head { margin-bottom: 2.5rem; }
+.ad-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #1a6645; margin-bottom: 0.8rem;
+  font-family: 'DM Sans', sans-serif;
+}
+.ad-section-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.8rem; font-weight: 400; color: #0d1a12; line-height: 1.15;
+}
+.ad-section-title em { font-style: italic; color: #1a6645; }
+.ad-divider { width: 40px; height: 2px; background: #1a6645; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.ad-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.ad-history-text p {
+  font-size: 0.98rem; line-height: 1.95; color: #223828;
+  font-weight: 400; margin-bottom: 1.2rem;
+}
+.ad-timeline { position: relative; padding-left: 2rem; }
+.ad-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(26,102,69,0.18);
+}
+.ad-tl-item { position: relative; margin-bottom: 1.8rem; }
+.ad-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: #f2f7f4; border: 2px solid #1a6645;
+}
+.ad-tl-year {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.25rem; font-weight: 400; color: #1a6645; margin-bottom: 0.25rem;
+}
+.ad-tl-event {
+  font-size: 0.87rem; color: #223828; line-height: 1.65; font-weight: 400;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.ad-sights-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem;
+}
+.ad-sight-card {
+  border-radius: 3px; overflow: hidden;
+  border: 1px solid rgba(30,100,70,0.16);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ad-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(4,20,10,0.10); }
+.ad-sight-visual { height: 140px; }
+.ad-sight-body { padding: 1.2rem; }
+.ad-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #1a6645; margin-bottom: 0.35rem;
+  font-family: 'DM Sans', sans-serif;
+}
+.ad-sight-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.3rem; font-weight: 400; color: #0d1a12; margin-bottom: 0.4rem;
+}
+.ad-sight-desc {
+  font-size: 0.83rem; color: #3a5040; line-height: 1.65; font-weight: 400;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.sv-ad-chora      { background: linear-gradient(160deg, #040c08 0%, #103828 55%, #2a8060 100%); }
+.sv-ad-tourlitis  { background: linear-gradient(160deg, #060810 0%, #102840 55%, #2060a0 100%); }
+.sv-ad-menites    { background: linear-gradient(160deg, #041008 0%, #144820 55%, #38a050 100%); }
+.sv-ad-tower      { background: linear-gradient(160deg, #100808 0%, #402818 55%, #906040 100%); }
+.sv-ad-goulandris { background: linear-gradient(160deg, #080408 0%, #301828 55%, #905060 100%); }
+.sv-ad-beach      { background: linear-gradient(160deg, #040c14 0%, #103060 55%, #2888d0 100%); }
+
+/* ── TAVERNEN ── */
+.ad-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.ad-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(30,100,70,0.14);
+  border-radius: 3px; border-left: 3px solid #1a6645;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ad-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(4,20,10,0.08); }
+.ad-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.ad-tav-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.35rem; font-weight: 400; color: #0d1a12;
+}
+.ad-tav-loc { font-size: 0.75rem; color: #6a8878; margin-top: 0.2rem; font-family: 'DM Sans', sans-serif; }
+.ad-tav-stars { color: #1a6645; font-size: 0.85rem; letter-spacing: 2px; }
+.ad-tav-desc { font-size: 0.87rem; color: #223828; line-height: 1.75; font-weight: 400; margin-bottom: 1rem; font-family: 'DM Sans', sans-serif; }
+.ad-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.ad-tav-dish {
+  padding: 3px 10px; background: #e4f2eb; color: #0a3820;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+  font-family: 'DM Sans', sans-serif;
+}
+.ad-tav-price { font-size: 0.8rem; color: #6a8878; font-family: 'DM Sans', sans-serif; }
+.ad-tav-price span { color: #1a6645; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.ad-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.ad-viertel-card {
+  padding: 1.8rem; background: #eaf4ef;
+  border-radius: 3px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.ad-viertel-card:hover { background: #d4ecdf; transform: translateY(-4px); }
+.ad-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.ad-viertel-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.25rem; font-weight: 400; color: #0d1a12; margin-bottom: 0.5rem;
+}
+.ad-viertel-desc { font-size: 0.82rem; color: #3a5040; line-height: 1.65; font-family: 'DM Sans', sans-serif; }
+
+/* ── TIP BANNER ── */
+.ad-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #040e08 0%, #0e3820 40%, #1a6645 100%);
+  border-radius: 3px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.ad-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.ad-tip-text h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.75rem; font-weight: 400; color: white; margin-bottom: 0.6rem;
+}
+.ad-tip-text p {
+  font-size: 0.92rem; color: rgba(180,240,210,0.72); line-height: 1.80;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── REEDER-STRIP ── */
+.ad-reeder-strip {
+  background: #0d1a12;
+  padding: 1.2rem 3rem;
+  display: flex; align-items: center; justify-content: center; gap: 3rem;
+  flex-wrap: wrap;
+}
+.ad-reeder-item {
+  display: flex; align-items: center; gap: 0.7rem;
+  color: rgba(140,220,180,0.68); font-size: 0.8rem; letter-spacing: 0.08em;
+  font-family: 'DM Sans', sans-serif;
+}
+.ad-reeder-item::before { content: '—'; color: #1a6645; }
+
+@media (max-width: 900px) {
+  .ad-back-bar { padding: 0.8rem 1.2rem; }
+  .ad-content { padding: 2rem 1.2rem 4rem; }
+  .ad-history-grid { grid-template-columns: 1fr; }
+  .ad-sights-grid { grid-template-columns: 1fr 1fr; }
+  .ad-tav-grid { grid-template-columns: 1fr; }
+  .ad-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .ad-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+  .ad-reeder-strip { padding: 1.2rem; gap: 1.5rem; }
+}

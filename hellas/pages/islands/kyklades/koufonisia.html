@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Koufonisia — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="koufonisia.css" />
+</head>
+<body>
+<div id="koufonisia-page">
+
+<div class="kf-back-bar">
+  <button class="kf-back-btn" type="button" onclick="closeKoufonisia()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="kf-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Koufonisia</span></p>
+</div>
+
+<div class="kf-hero">
+  <div class="kf-hero-bg"></div>
+  <div class="kf-hero-dots"></div>
+  <!-- Ano Koufonisi Chora + Felsbögen + Fischerboote Silhouette -->
+  <svg class="kf-hero-silhouette" viewBox="0 0 840 175" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Meereslinie wellig -->
+    <path d="M0,158 Q105,148 210,155 Q315,162 420,155 Q525,148 630,156 Q735,164 840,150 L840,175 L0,175Z" opacity="0.22"/>
+    <!-- Flache Insel links — Ano Koufonisi ist sehr flach -->
+    <path d="M0,175 Q80,162 180,158 Q260,155 320,175Z" opacity="0.20"/>
+    <!-- Chora-Häuser reihe auf flacher Kuppe -->
+    <rect x="60" y="130" width="200" height="30"/>
+    <!-- Häusersilhouette gestaffelt -->
+    <rect x="65" y="118" width="18" height="14"/>
+    <rect x="88" y="112" width="22" height="20"/>
+    <rect x="115" y="108" width="18" height="24"/>
+    <rect x="138" y="114" width="20" height="18"/>
+    <rect x="163" y="106" width="24" height="26"/>
+    <rect x="192" y="112" width="18" height="20"/>
+    <rect x="215" y="118" width="16" height="14"/>
+    <rect x="235" y="122" width="14" height="10"/>
+    <!-- Kirchturm Chora -->
+    <rect x="155" y="88" width="14" height="20"/>
+    <ellipse cx="162" cy="88" rx="10" ry="6"/>
+    <!-- Felsbogen rechts — Pori/Italida Felsformation -->
+    <path d="M480,175 Q500,140 530,110 Q560,80 580,110 Q600,140 620,175Z" opacity="0.24"/>
+    <!-- Bogen-Öffnung -->
+    <path d="M510,175 Q520,135 540,118 Q555,108 560,118 Q568,130 575,175Z" fill="#000" opacity="0.55"/>
+    <!-- Zweiter Fels -->
+    <path d="M620,175 Q640,148 660,130 Q675,118 685,130 Q695,148 700,175Z" opacity="0.20"/>
+    <!-- Fischerboote im Hafen -->
+    <ellipse cx="360" cy="162" rx="30" ry="8"/>
+    <rect x="352" y="148" width="16" height="16"/>
+    <line x1="360" y1="148" x2="360" y2="125" stroke="white" stroke-width="2"/>
+    <line x1="360" y1="132" x2="378" y2="138" stroke="white" stroke-width="1.5"/>
+
+    <ellipse cx="410" cy="160" rx="25" ry="7"/>
+    <rect x="403" y="148" width="14" height="14"/>
+    <line x1="410" y1="148" x2="410" y2="128" stroke="white" stroke-width="2"/>
+    <line x1="410" y1="135" x2="425" y2="140" stroke="white" stroke-width="1.5"/>
+
+    <!-- Kato Koufonisi Silhouette rechts (unbewohnt) -->
+    <path d="M700,175 Q760,155 820,148 Q835,146 840,150 L840,175Z" opacity="0.16"/>
+    <!-- Wellen-Detail Mitte -->
+    <path d="M270,162 Q300,155 330,162" fill="none" stroke="white" stroke-width="1.5" opacity="0.28"/>
+    <path d="M275,168 Q305,161 335,168" fill="none" stroke="white" stroke-width="1.5" opacity="0.22"/>
+  </svg>
+  <div class="kf-hero-overlay"></div>
+  <div class="kf-hero-content">
+    <p class="kf-hero-tag">Kleine Kykladen · Naxos-Archipel</p>
+    <h1 class="kf-hero-title">Koufonisia<em>Κουφονήσια</em></h1>
+    <p class="kf-hero-sub">Die karibische Insel der Kykladen — türkisfarbene Lagunen, Felsbögen im Meer, eine winzige Chora ohne Autos. Koufonisia ist das kleinste bewohnte Eiland der Kleinen Kykladen und hat das klarste Wasser der gesamten Ägäis.</p>
+    <div class="kf-hero-pills">
+      <span class="kf-hero-pill">Kristallklares Wasser</span>
+      <span class="kf-hero-pill">Felsbögen</span>
+      <span class="kf-hero-pill">Chora ohne Autos</span>
+      <span class="kf-hero-pill">Fischerinseln</span>
+      <span class="kf-hero-pill">Kleine Kykladen</span>
+    </div>
+  </div>
+  <div class="kf-hero-waves"></div>
+</div>
+
+<div class="kf-stats-bar">
+  <div class="kf-stat-item">
+    <div class="kf-stat-num">400</div>
+    <div class="kf-stat-lbl">Einwohner</div>
+  </div>
+  <div class="kf-stat-item">
+    <div class="kf-stat-num">3,8 km²</div>
+    <div class="kf-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="kf-stat-item">
+    <div class="kf-stat-num">2</div>
+    <div class="kf-stat-lbl">Inseln (Ano &amp; Kato)</div>
+  </div>
+  <div class="kf-stat-item">
+    <div class="kf-stat-num">0</div>
+    <div class="kf-stat-lbl">Autos in der Chora</div>
+  </div>
+  <div class="kf-stat-item">
+    <div class="kf-stat-num">#1</div>
+    <div class="kf-stat-lbl">Klarste Wasserfarbe der Kykladen</div>
+  </div>
+</div>
+
+<div class="kf-content">
+
+  <!-- 1. GESCHICHTE -->
+  <section class="kf-section">
+    <div class="kf-section-head">
+      <p class="kf-section-label">01 — Geschichte</p>
+      <h2 class="kf-section-title">Fischer, Felsbögen<br><em>und das Meer als Lebensraum</em></h2>
+      <div class="kf-divider"></div>
+    </div>
+    <div class="kf-history-grid">
+      <div class="kf-history-text">
+        <p>Koufonisia — wörtlich „hohle Inseln" — ist ein Zwillingspaar: Ano Koufonisi (oben, bewohnt) und Kato Koufonisi (unten, unbewohnt bis auf eine einsame Kapelle und ein Sommer-Taverna). Die Inseln liegen im Herzen der Kleinen Kykladen, zwischen Naxos und Amorgos, und waren jahrhundertelang fast ausschließlich Fischergemeinschaften vorbehalten.</p>
+        <p>Die Chora von Ano Koufonisi ist eines der intaktesten Fischerdörfer der Ägäis — weiße Häuser drängen sich auf einem flachen Hügel über dem Hafen, die Gassen sind für Esel und Menschen gebaut, nicht für Fahrzeuge. Noch heute fahren die Fischer morgens aus, und wer früh genug aufsteht, sieht die Boote heimkehren, die Netze auslegen und den Fang sortieren. Das ist kein Museumsstück — das ist der Tagesablauf.</p>
+        <p>Was Koufonisia in den letzten zwei Jahrzehnten berühmt gemacht hat, ist nicht die Geschichte, sondern die Geologie: Die Erosion hat an der Südküste Felsbögen und Höhlen in den weißen Kalkstein geschnitten, das Wasser dazwischen hat eine Farbe, die Menschen aus dem Mittelmeer-Raum nach Karibik fragen lässt. Die Antwort: Nein, das ist Griechenland. Und es ist real.</p>
+      </div>
+      <div class="kf-timeline">
+        <div class="kf-tl-item">
+          <div class="kf-tl-dot"></div>
+          <div class="kf-tl-year">3000 v. Chr.</div>
+          <div class="kf-tl-event">Frühkykladische Besiedlung — Koufonisia liegt im Zentrum des kykladischen Inselbogens und war von Anfang an eine Zwischenstation für Seefahrer. Erste Fischergemeinschaften nutzen die geschützten Buchten.</div>
+        </div>
+        <div class="kf-tl-item">
+          <div class="kf-tl-dot"></div>
+          <div class="kf-tl-year">Mittelalter</div>
+          <div class="kf-tl-event">Unter venezianischer Herrschaft bleibt Koufonisia unbedeutend — zu flach, zu arm an Ressourcen für ein Kastro. Die Inseln dienen als Fischerbase und gelegentliche Piraten-Zwischenstation.</div>
+        </div>
+        <div class="kf-tl-item">
+          <div class="kf-tl-dot"></div>
+          <div class="kf-tl-year">19. Jh.</div>
+          <div class="kf-tl-event">Koufonisia wird Teil des griechischen Staates. Die Bevölkerung lebt fast ausschließlich von der Fischerei — Oktopus, Seeigel und Labrax aus dem reichen Gewässer zwischen den kleinen Inseln.</div>
+        </div>
+        <div class="kf-tl-item">
+          <div class="kf-tl-dot"></div>
+          <div class="kf-tl-year">1980er</div>
+          <div class="kf-tl-event">Erste Rucksackreisende entdecken Koufonisia als Geheimtipp auf der „kleinen Kykladenroute" zwischen Naxos und Amorgos. Wenige Zimmer, keine Hotels, vollkommene Einfachheit.</div>
+        </div>
+        <div class="kf-tl-item">
+          <div class="kf-tl-dot"></div>
+          <div class="kf-tl-year">2010er</div>
+          <div class="kf-tl-event">Instagram entdeckt die türkisen Lagunen und Felsbögen der Südküste. Koufonisia wird zur meistfotografierten der Kleinen Kykladen — die Insel reagiert darauf mit Besonnenheit: kein Massentourismus, keine Hotelketten.</div>
+        </div>
+        <div class="kf-tl-item">
+          <div class="kf-tl-dot"></div>
+          <div class="kf-tl-year">Heute</div>
+          <div class="kf-tl-event">Koufonisia ist bekannt, aber nicht überlaufen — die Fähren kommen zweimal täglich, die Zimmeranzahl ist begrenzt, die Chora bleibt autofrei. Die Fischer fahren noch immer jeden Morgen aus.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SEHENSWÜRDIGKEITEN -->
+  <section class="kf-section">
+    <div class="kf-section-head">
+      <p class="kf-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="kf-section-title">Lagunen, Bögen<br><em>und das Dorf am Hafen</em></h2>
+      <div class="kf-divider"></div>
+    </div>
+    <div class="kf-sights-grid">
+
+      <div class="kf-sight-card">
+        <div class="kf-sight-visual sv-kf-chora"></div>
+        <div class="kf-sight-body">
+          <p class="kf-sight-cat">Hauptdorf · Hafen</p>
+          <h3 class="kf-sight-name">Chora &amp; Hafen</h3>
+          <p class="kf-sight-desc">Das winzige Fischerdorf auf dem Hügel über dem Hafen — enge Gassen, weiße Häuser, blau-gestrichene Türen, Bougainvillea überall. Keine Autos, kein Lärm außer Möwen und Motorbooten. Der Hafen am Morgen, wenn die Fischer zurückkommen, ist das schönste Bild der Insel.</p>
+        </div>
+      </div>
+
+      <div class="kf-sight-card">
+        <div class="kf-sight-visual sv-kf-pori"></div>
+        <div class="kf-sight-body">
+          <p class="kf-sight-cat">Strand · Türkis</p>
+          <h3 class="kf-sight-name">Pori</h3>
+          <p class="kf-sight-desc">Der längste und schönste Strand der Insel — am östlichen Ende von Ano Koufonisi, zu Fuß in 30 Minuten erreichbar. Feiner weißer Sand, tiefes Türkis, keine Infrastruktur außer einer einzigen Taverne. Der am weitesten entfernte Punkt fühlt sich an wie das Ende der Welt.</p>
+        </div>
+      </div>
+
+      <div class="kf-sight-card">
+        <div class="kf-sight-visual sv-kf-italida"></div>
+        <div class="kf-sight-body">
+          <p class="kf-sight-cat">Felsbögen · Lagune</p>
+          <h3 class="kf-sight-name">Italida &amp; Felsbögen</h3>
+          <p class="kf-sight-desc">Die bekannteste Formation der Insel — Kalksteinfelsen, die das Meer zu einem natürlichen Bogen erodiert hat, dahinter eine türkise Lagune die wie ein Schwimmbecken wirkt. Das Wasser hat hier eine Farbe, für die Photographen von überall herkommen. Nur zu Fuß erreichbar, kein Einritt.</p>
+        </div>
+      </div>
+
+      <div class="kf-sight-card">
+        <div class="kf-sight-visual sv-kf-kato"></div>
+        <div class="kf-sight-body">
+          <p class="kf-sight-cat">Nachbarinsel · Unbewohnt</p>
+          <h3 class="kf-sight-name">Kato Koufonisi</h3>
+          <p class="kf-sight-desc">Die unbewohnte Zwillingsinsel — nur per Boot erreichbar, mit einer einzigen Kapelle und einer Sommer-Taverne. Die Strände von Kato Koufonisi gehören zu den unberührtesten der Kykladen. Das Wassertaxi fährt täglich; wer bleibt bis Sonnenuntergang, hat die Insel für sich allein.</p>
+        </div>
+      </div>
+
+      <div class="kf-sight-card">
+        <div class="kf-sight-visual sv-kf-platia"></div>
+        <div class="kf-sight-body">
+          <p class="kf-sight-cat">Strand · Dorfnah</p>
+          <h3 class="kf-sight-name">Platia Pounta</h3>
+          <p class="kf-sight-desc">Der Strand direkt vor der Chora — zu Fuß in fünf Minuten, flaches klares Wasser, geeignet für Kinder. Tavernen mit Meerblick direkt dahinter. Der Strand für jeden Abend nach dem Sonnenuntergang, wenn das Wasser noch warm und das Licht golden ist.</p>
+        </div>
+      </div>
+
+      <div class="kf-sight-card">
+        <div class="kf-sight-visual sv-kf-trail"></div>
+        <div class="kf-sight-body">
+          <p class="kf-sight-cat">Küstenpfad · Runde</p>
+          <h3 class="kf-sight-name">Südküsten-Rundweg</h3>
+          <p class="kf-sight-desc">Der Pfad entlang der Südküste von Ano Koufonisi verbindet alle Buchten, Bögen und Lagunen — Chora bis Pori und zurück, etwa drei Stunden Fußweg. Die Geologie wechselt mit jedem Kilometer: mal Lagunenbecken, mal Felsbogen, mal offenes Meer. Keine Tour macht ihn überflüssig.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. ESSEN & TAVERNEN -->
+  <section class="kf-section">
+    <div class="kf-section-head">
+      <p class="kf-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="kf-section-title">Fisch vom Morgen<br><em>und Ouzo am Abend</em></h2>
+      <div class="kf-divider"></div>
+    </div>
+    <div class="kf-tav-grid">
+
+      <div class="kf-tav-card">
+        <div class="kf-tav-top">
+          <div>
+            <h3 class="kf-tav-name">Capetan Nikolas</h3>
+            <div class="kf-tav-loc">📍 Hafen, Kaimauer</div>
+          </div>
+          <div class="kf-tav-stars">★★★★★</div>
+        </div>
+        <p class="kf-tav-desc">Das Fischerlokal am Kai — die Spezialität ist Seeigel-Pasta, die es so nur auf Koufonisia gibt. Der Kapitän-Besitzer fährt noch selbst hinaus; was er bringt, kommt auf die Karte. Mittags ist die Terrasse auf der Kaimauer der beste Platz der Insel: Fisch, Ouzo, Bootsblick.</p>
+        <div class="kf-tav-dishes">
+          <span class="kf-tav-dish">Seeigel-Pasta</span>
+          <span class="kf-tav-dish">Gegrillter Labrax</span>
+          <span class="kf-tav-dish">Urchin-Salat</span>
+        </div>
+        <p class="kf-tav-price">Preisklasse: <span>€€ · Mittag · Hafen-Ikone</span></p>
+      </div>
+
+      <div class="kf-tav-card">
+        <div class="kf-tav-top">
+          <div>
+            <h3 class="kf-tav-name">Sorokos</h3>
+            <div class="kf-tav-loc">📍 Chora, Hauptgasse</div>
+          </div>
+          <div class="kf-tav-stars">★★★★★</div>
+        </div>
+        <p class="kf-tav-desc">Die Abend-Taverne der Einheimischen in der Chora — kleine Terrasse, handgeschriebene Tageskarte, Wein aus dem Fass. Gebratener Oktopus mit Kapern, frischer Fisch, hausgemachte Desserts. Wer ohne Reservierung kommt, wartet — und das ist es wert.</p>
+        <div class="kf-tav-dishes">
+          <span class="kf-tav-dish">Oktopus mit Kapern</span>
+          <span class="kf-tav-dish">Saganaki-Garnelen</span>
+          <span class="kf-tav-dish">Loukoumades mit Thymian-Honig</span>
+        </div>
+        <p class="kf-tav-price">Preisklasse: <span>€€ · Abendessen · Reservierung empfohlen</span></p>
+      </div>
+
+      <div class="kf-tav-card">
+        <div class="kf-tav-top">
+          <div>
+            <h3 class="kf-tav-name">Pori Taverna</h3>
+            <div class="kf-tav-loc">📍 Pori-Strand, Ostende</div>
+          </div>
+          <div class="kf-tav-stars">★★★★☆</div>
+        </div>
+        <p class="kf-tav-desc">Die einzige Taverne am schönsten Strand der Insel — ein paar Tische unter einem Schilfrohr-Dach, der Sand ist buchstäblich der Boden. Einfache Speisen: gegrillter Fisch, Salate, gekühltes Bier. Man kommt für den Strand und bleibt wegen des Mittagessens länger als geplant.</p>
+        <div class="kf-tav-dishes">
+          <span class="kf-tav-dish">Tagesfisch vom Grill</span>
+          <span class="kf-tav-dish">Horiatiki mit lokalem Käse</span>
+          <span class="kf-tav-dish">Frisches Brot mit Olivenöl</span>
+        </div>
+        <p class="kf-tav-price">Preisklasse: <span>€ · Strand-Mittag · Einfach &amp; ehrlich</span></p>
+      </div>
+
+      <div class="kf-tav-card">
+        <div class="kf-tav-top">
+          <div>
+            <h3 class="kf-tav-name">Kato Koufonisi Taverna</h3>
+            <div class="kf-tav-loc">📍 Kato Koufonisi (per Boot)</div>
+          </div>
+          <div class="kf-tav-stars">★★★★★</div>
+        </div>
+        <p class="kf-tav-desc">Die einzige Taverne auf der unbewohnten Nachbarinsel — nur im Sommer geöffnet, nur per Wassertaxi erreichbar, nur ein Menü pro Tag. Ein Tisch, ein Koch, ein Fisch, ein Wein. Wer das einmal erlebt hat, versteht, warum Koufonisia süchtig macht.</p>
+        <div class="kf-tav-dishes">
+          <span class="kf-tav-dish">Tagesmenü (variiert)</span>
+          <span class="kf-tav-dish">Gegrillter Oktopus</span>
+          <span class="kf-tav-dish">Lokaler Weißwein</span>
+        </div>
+        <p class="kf-tav-price">Preisklasse: <span>€€ · Nur per Boot · Unvergesslich</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. ORTE & CHARAKTER -->
+  <section class="kf-section">
+    <div class="kf-section-head">
+      <p class="kf-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="kf-section-title">Zwei Inseln<br><em>ein Meer, unzählige Farben</em></h2>
+      <div class="kf-divider"></div>
+    </div>
+    <div class="kf-viertel-grid">
+
+      <div class="kf-viertel-card">
+        <div class="kf-viertel-emoji">🏘️</div>
+        <h3 class="kf-viertel-name">Chora</h3>
+        <p class="kf-viertel-desc">Das dichteste, lebendigste Fischerdorf der Kleinen Kykladen — alles auf einem Hügel, alles zu Fuß, alles weiß mit blau. Abends sitzen alle auf der Hauptgasse, die gleichzeitig Platz und Promenade ist.</p>
+      </div>
+
+      <div class="kf-viertel-card">
+        <div class="kf-viertel-emoji">⚓</div>
+        <h3 class="kf-viertel-name">Hafen</h3>
+        <p class="kf-viertel-desc">Der kleinste Hafen der Kykladen — Fischerboote, Wassertaxis, die Fähre von Naxos. Morgens riecht er nach Salz und Fisch, abends nach gegrilltem Oktopus. Das Herz der Insel schlägt hier.</p>
+      </div>
+
+      <div class="kf-viertel-card">
+        <div class="kf-viertel-emoji">🌊</div>
+        <h3 class="kf-viertel-name">Italida-Lagune</h3>
+        <p class="kf-viertel-desc">Die berühmteste Stelle der Insel — ein natürlicher Felsbogen über einer türkisen Lagune. Das Wasser ist so klar, dass man jeden Stein am Grund sieht. Kein Eintritt, keine Liegen, nur das Meer.</p>
+      </div>
+
+      <div class="kf-viertel-card">
+        <div class="kf-viertel-emoji">🏝️</div>
+        <h3 class="kf-viertel-name">Kato Koufonisi</h3>
+        <p class="kf-viertel-desc">Die unberührte Schwesterinsel — keine Straßen, keine Häuser, nur eine Kapelle und eine Sommer-Taverne. Per Wassertaxi in zehn Minuten, gefühlt in einer anderen Welt. Die ruhigsten Strände der Kleinen Kykladen.</p>
+      </div>
+
+      <div class="kf-viertel-card">
+        <div class="kf-viertel-emoji">🐙</div>
+        <h3 class="kf-viertel-name">Fischerei-Kultur</h3>
+        <p class="kf-viertel-desc">Koufonisia lebt noch von der Fischerei — Seeigel, Oktopus, Labrax aus den reichen Gewässern des Naxos-Archipels. Der Morgenmarkt am Hafen ist kein Touristenevent, sondern tägliche Realität.</p>
+      </div>
+
+      <div class="kf-viertel-card">
+        <div class="kf-viertel-emoji">🚶</div>
+        <h3 class="kf-viertel-name">Südküsten-Pfad</h3>
+        <p class="kf-viertel-desc">Der Küstenpfad entlang der Südseite der Insel ist die schönste Wanderung der Kleinen Kykladen — Buchten, Bögen, Lagunen, Aussichten. Drei Stunden, kein Schatten, unzählige Badehalte.</p>
+      </div>
+
+    </div>
+
+    <div class="kf-tip-banner">
+      <div class="kf-tip-emoji">🐟</div>
+      <div class="kf-tip-text">
+        <h3>Morgen am Hafen: wenn die Fischer heimkommen</h3>
+        <p>Gegen sieben Uhr morgens kommen die Fischerboote in den Hafen von Koufonisia zurück — kleine, bunte Holzboote, vollbeladen mit Seeigeln, Oktopus und Labrax. Die Fischer legen die Netze aus, sortieren den Fang, rufen sich auf Griechisch Witze zu. In einer Stunde wird dieser Fisch auf den Tellern der Taverne liegen. Wer früh genug aufsteht, sieht, wie eine Inselgemeinschaft funktioniert, die sich seit Jahrhunderten nicht grundlegend verändert hat — und das ist, auf seine stille Art, das eindrücklichste Erlebnis von Koufonisia.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>

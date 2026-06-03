@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schinoussa — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="schinoussa.css" />
+</head>
+<body>
+<div id="schinoussa-page">
+
+<div class="sc-back-bar">
+  <button class="sc-back-btn" type="button" onclick="closeSchinoussa()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="sc-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Schinoussa</span></p>
+</div>
+
+<div class="sc-hero">
+  <div class="sc-hero-bg"></div>
+  <div class="sc-hero-dots"></div>
+  <!-- Schinoussa silhouette: low hilly island, windmill, chapel -->
+  <svg class="sc-hero-silhouette" viewBox="0 0 780 160" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Island landmass — low, gentle hills -->
+    <path d="M60,155 Q140,105 220,95 Q290,85 360,88 Q430,91 490,82 Q560,72 620,78 Q680,85 730,100 L740,155Z" opacity="0.45"/>
+    <!-- Second smaller islet left -->
+    <ellipse cx="30" cy="150" rx="55" ry="14" opacity="0.25"/>
+    <!-- Windmill on hill -->
+    <rect x="318" y="58" width="10" height="38"/>
+    <!-- Windmill blades -->
+    <line x1="323" y1="62" x2="303" y2="42" stroke="white" stroke-width="3"/>
+    <line x1="323" y1="62" x2="343" y2="42" stroke="white" stroke-width="3"/>
+    <line x1="323" y1="62" x2="310" y2="82" stroke="white" stroke-width="3"/>
+    <line x1="323" y1="62" x2="336" y2="82" stroke="white" stroke-width="3"/>
+    <!-- Windmill body cap -->
+    <ellipse cx="323" cy="58" rx="8" ry="6"/>
+    <!-- Chapel/church left of windmill -->
+    <rect x="242" y="78" width="20" height="24"/>
+    <polygon points="242,78 252,66 262,78"/>
+    <!-- Small cross on chapel -->
+    <line x1="252" y1="62" x2="252" y2="56" stroke="white" stroke-width="2"/>
+    <line x1="249" y1="59" x2="255" y2="59" stroke="white" stroke-width="2"/>
+    <!-- Fishing boat in water right -->
+    <path d="M580,138 Q600,132 620,134 Q630,136 625,142 L580,142Z" opacity="0.35"/>
+    <rect x="598" y="128" width="2" height="12" opacity="0.35"/>
+    <!-- Sea reflection shimmer -->
+    <path d="M0,152 Q195,145 390,150 Q585,155 780,148 L780,160 L0,160Z" opacity="0.18"/>
+  </svg>
+  <div class="sc-hero-overlay"></div>
+  <div class="sc-hero-content">
+    <p class="sc-hero-tag">Kleine Kykladen · Ägäis</p>
+    <h1 class="sc-hero-title">Schinoussa<em>Σχοινούσσα</em></h1>
+    <p class="sc-hero-sub">Die stille Schwester der Kleinen Kykladen — keine Autos auf den Pfaden, keine Kreuzfahrtschiffe am Horizont, keine Warteschlangen vor den Tavernen. Nur weiße Windmühlen, türkisfarbene Buchten und eine Langsamkeit, die man sich in Athen nicht mehr vorstellen kann.</p>
+    <div class="sc-hero-pills">
+      <span class="sc-hero-pill">Abgeschiedenheit</span>
+      <span class="sc-hero-pill">Windmühlen</span>
+      <span class="sc-hero-pill">Buchten</span>
+      <span class="sc-hero-pill">Wanderpfade</span>
+      <span class="sc-hero-pill">Fischerei</span>
+    </div>
+  </div>
+  <div class="sc-hero-waves"></div>
+</div>
+
+<div class="sc-stats-bar">
+  <div class="sc-stat-item">
+    <div class="sc-stat-num">~280</div>
+    <div class="sc-stat-lbl">Einwohner (ständig)</div>
+  </div>
+  <div class="sc-stat-item">
+    <div class="sc-stat-num">8,1 km²</div>
+    <div class="sc-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="sc-stat-item">
+    <div class="sc-stat-num">16</div>
+    <div class="sc-stat-lbl">Einsame Buchten</div>
+  </div>
+  <div class="sc-stat-item">
+    <div class="sc-stat-num">1 Dorf</div>
+    <div class="sc-stat-lbl">Chora — alles hier</div>
+  </div>
+  <div class="sc-stat-item">
+    <div class="sc-stat-num">0</div>
+    <div class="sc-stat-lbl">Mietautos &amp; Touristenbusse</div>
+  </div>
+</div>
+
+<div class="sc-content">
+
+  <section class="sc-section">
+    <div class="sc-section-head">
+      <p class="sc-section-label">01 — Geschichte</p>
+      <h2 class="sc-section-title">Piraten, Fischer<br><em>und das Ende der Welt</em></h2>
+      <div class="sc-divider"></div>
+    </div>
+    <div class="sc-history-grid">
+      <div class="sc-history-text">
+        <p>Schinoussa liegt mitten in den Kleinen Kykladen — dem vergessenen Archipel zwischen Naxos und Amorgos. Die Insel war in der Antike bewohnt, dann lange verlassen, dann wieder besiedelt von Fischern und Bauern, die von der Außenwelt wenig wollten und wenig brauchten. Das Meer war Weg und Grenze zugleich.</p>
+        <p>Während der osmanischen Zeit und der langen Piratenjahrhunderte — die ganze Ägäis war im 15. und 16. Jahrhundert kaum sicher zu bereisen — lebten die Einwohner von Schinoussa zurückgezogen im Inselinneren. Die Chora liegt nicht am Wasser, sondern auf dem Hügel: ein klassisches Zeichen, dass man vom Meer lieber nicht gesehen werden wollte. Der Hafen Mersini war im Notfall schnell erreichbar, aber die Siedlung selbst blieb unsichtbar.</p>
+        <p>Heute sind die Piraten weg, aber die Haltung geblieben: Schinoussa empfängt keine Kreuzfahrtschiffe, hat keine Hotels mit mehr als zwanzig Zimmern und feiert kein Inselleben für die Kamera. Wer herkommt, kommt bewusst — und wer einmal da war, versteht, warum manche nie mehr woanders Urlaub machen.</p>
+      </div>
+      <div class="sc-timeline">
+        <div class="sc-tl-item">
+          <div class="sc-tl-dot"></div>
+          <div class="sc-tl-year">3000 v. Chr.</div>
+          <div class="sc-tl-event">Erste Besiedlung in der frühen Kykladenkultur — Schinoussa war Teil des dichten Siedlungsnetzes der Kykladen, das über den Seeweg Obsidian, Marmor und Keramik handelte.</div>
+        </div>
+        <div class="sc-tl-item">
+          <div class="sc-tl-dot"></div>
+          <div class="sc-tl-year">~500 v. Chr.</div>
+          <div class="sc-tl-event">Antike Siedlungsspuren auf dem Hügel der heutigen Chora — Keramikreste und Grundmauern belegen dauerhafte Besiedlung in klassischer Zeit.</div>
+        </div>
+        <div class="sc-tl-item">
+          <div class="sc-tl-dot"></div>
+          <div class="sc-tl-year">13.–15. Jh.</div>
+          <div class="sc-tl-event">Venezianischer Einfluss durch das Herzogtum der Ägäis — Schinoussa liegt im Einflussbereich von Naxos. Die Insel bleibt Zwischenstation für Handelsrouten Richtung Amorgos und Ikaria.</div>
+        </div>
+        <div class="sc-tl-item">
+          <div class="sc-tl-dot"></div>
+          <div class="sc-tl-year">15.–17. Jh.</div>
+          <div class="sc-tl-event">Piratenjahrhunderte — die Ägäis ist von nordafrikanischen und türkischen Piraten unsicher gemacht. Die Dorfstruktur der Chora (im Inland, erhöht, vom Meer nicht sichtbar) entsteht aus dieser Zeit.</div>
+        </div>
+        <div class="sc-tl-item">
+          <div class="sc-tl-dot"></div>
+          <div class="sc-tl-year">1830</div>
+          <div class="sc-tl-event">Anschluss an den griechischen Staat. Schinoussa bleibt eine Insel der Fischer und Bauern — Gerste, Gerste, Fisch. Kaum Kontakt zur Außenwelt, keine Straßen, kein Strom bis in die 1970er.</div>
+        </div>
+        <div class="sc-tl-item">
+          <div class="sc-tl-dot"></div>
+          <div class="sc-tl-year">1980er</div>
+          <div class="sc-tl-event">Erste Reisende entdecken Schinoussa auf der Fähre zwischen Naxos und Amorgos — darunter viele Backpacker, die bleiben, weil der Nächste Fährtag erst in drei Tagen ist. Das Schiff aus "Der große blaue Fehler" entfacht die Legende.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sc-section">
+    <div class="sc-section-head">
+      <p class="sc-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="sc-section-title">Buchten, Mühlen<br><em>und das blaue Nichts</em></h2>
+      <div class="sc-divider"></div>
+    </div>
+    <div class="sc-sights-grid">
+
+      <div class="sc-sight-card">
+        <div class="sc-sight-visual sv-sc-chora"></div>
+        <div class="sc-sight-body">
+          <p class="sc-sight-cat">Hauptort · Windmühlen</p>
+          <h3 class="sc-sight-name">Chora &amp; Windmühlen</h3>
+          <p class="sc-sight-desc">Die winzige Hauptsiedlung auf dem Hügel — weiß getüncht, blau bemalt, mit zwei Windmühlen als Silhouette über der Ägäis. Ein Dorfplatz, vier Tavernen, eine Kirche. Alles, was es braucht, in fünf Gehminuten.</p>
+        </div>
+      </div>
+
+      <div class="sc-sight-card">
+        <div class="sc-sight-visual sv-sc-mersini"></div>
+        <div class="sc-sight-body">
+          <p class="sc-sight-cat">Hafen · Fischerei</p>
+          <h3 class="sc-sight-name">Mersini &amp; Tsigouri</h3>
+          <p class="sc-sight-desc">Der kleine Hafen Mersini ist der Ankunftspunkt der Fähren — eine Handvoll Fischerboote, ein Kafeneio, Katzen auf den Mauern. Tsigouri nebenan ist der beliebteste Sandstrand der Insel, in fünfzehn Minuten zu Fuß erreichbar.</p>
+        </div>
+      </div>
+
+      <div class="sc-sight-card">
+        <div class="sc-sight-visual sv-sc-lioliou"></div>
+        <div class="sc-sight-body">
+          <p class="sc-sight-cat">Natur · Wandern</p>
+          <h3 class="sc-sight-name">Lioliou &amp; Almyros</h3>
+          <p class="sc-sight-desc">Die abgelegensten Buchten der Insel — über alte Steinpfade erreichbar, keine Tavernen, kein Schatten außer dem Olivenbaum, der irgendwie dort steht. Lioliou ist so still, dass man das eigene Herz hört.</p>
+        </div>
+      </div>
+
+      <div class="sc-sight-card">
+        <div class="sc-sight-visual sv-sc-sunset"></div>
+        <div class="sc-sight-body">
+          <p class="sc-sight-cat">Aussicht · Abend</p>
+          <h3 class="sc-sight-name">Sonnenuntergang Chora</h3>
+          <p class="sc-sight-desc">Der Westrand der Chora, beim alten Kirchlein Agios Georgios — die Sonne versinkt zwischen Naxos und Iraklia, der Himmel wird in zehn Minuten durch sechs Farben und kein einziger Tourist macht ein Selfie. Einer der ehrlichsten Sonnenuntergänge der Kykladen.</p>
+        </div>
+      </div>
+
+      <div class="sc-sight-card">
+        <div class="sc-sight-visual sv-sc-almyros"></div>
+        <div class="sc-sight-body">
+          <p class="sc-sight-cat">Strand · Schwimmen</p>
+          <h3 class="sc-sight-name">Psili Ammos</h3>
+          <p class="sc-sight-desc">Der schönste Sandstrand der Insel — feiner heller Sand, türkisklares Wasser, von Felsen gerahmt. Zu Fuß erreichbar in dreißig Minuten von der Chora, kein Weg ohne Schatten. Im August manchmal eine Handvoll Menschen.</p>
+        </div>
+      </div>
+
+      <div class="sc-sight-card">
+        <div class="sc-sight-visual sv-sc-paths"></div>
+        <div class="sc-sight-body">
+          <p class="sc-sight-cat">Wandern · Insel</p>
+          <h3 class="sc-sight-name">Kalderimia — alte Steinpfade</h3>
+          <p class="sc-sight-desc">Das Netz der alten gepflasterten Maultierpfade — Kalderimia — durchzieht die ganze Insel. Wer alle läuft, kennt Schinoussa in drei Tagen von jeder Bucht, jedem Hügel, jeder Kapelle. Das ist das Programm. Das reicht vollkommen.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="sc-section">
+    <div class="sc-section-head">
+      <p class="sc-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="sc-section-title">Frischer Fisch<br><em>und keine Karte nötig</em></h2>
+      <div class="sc-divider"></div>
+    </div>
+    <div class="sc-tav-grid">
+
+      <div class="sc-tav-card">
+        <div class="sc-tav-top">
+          <div>
+            <h3 class="sc-tav-name">Taverna Margarita</h3>
+            <div class="sc-tav-loc">📍 Chora, Dorfplatz</div>
+          </div>
+          <div class="sc-tav-stars">★★★★★</div>
+        </div>
+        <p class="sc-tav-desc">Das Herz der Chora — die Taverna am Platz, deren Tische am Abend bis auf den Weg hinauswachsen. Margarita kocht, was der Fischer heute gebracht hat. Keine Karte, kein Englisch nötig — der Blick in die Küche sagt alles. Oktopus hängt am Morgen noch auf der Leine in der Sonne.</p>
+        <div class="sc-tav-dishes">
+          <span class="sc-tav-dish">Gegrillter Oktopus</span>
+          <span class="sc-tav-dish">Frischer Barsch</span>
+          <span class="sc-tav-dish">Horta (Wildkräuter)</span>
+        </div>
+        <p class="sc-tav-price">Preisklasse: <span>€ · Hausmannskost vom Feinsten</span></p>
+      </div>
+
+      <div class="sc-tav-card">
+        <div class="sc-tav-top">
+          <div>
+            <h3 class="sc-tav-name">To Steki tou Stelios</h3>
+            <div class="sc-tav-loc">📍 Chora, hinter der Kirche</div>
+          </div>
+          <div class="sc-tav-stars">★★★★★</div>
+        </div>
+        <p class="sc-tav-desc">Stelios grillt. Jeden Abend. Lamm, Hühnchen, Koteletts vom eigenen Tier, dazu Pita, Tzatziki und Wein aus dem Tank. Der Garten unter dem Feigenbaum hat Platz für achtzehn Personen. Wer zu spät kommt, steht.</p>
+        <div class="sc-tav-dishes">
+          <span class="sc-tav-dish">Souvlaki (Lamm)</span>
+          <span class="sc-tav-dish">Paidakia (Koteletts)</span>
+          <span class="sc-tav-dish">Haus-Tzatziki</span>
+        </div>
+        <p class="sc-tav-price">Preisklasse: <span>€ · Reservierung empfohlen</span></p>
+      </div>
+
+      <div class="sc-tav-card">
+        <div class="sc-tav-top">
+          <div>
+            <h3 class="sc-tav-name">Kafeneio Plateia</h3>
+            <div class="sc-tav-loc">📍 Chora, Dorfplatz</div>
+          </div>
+          <div class="sc-tav-stars">★★★★☆</div>
+        </div>
+        <p class="sc-tav-desc">Das Kafeneio am Platz — morgens griechischer Kaffee, mittags Frappé, abends Ouzo. Die alten Männer spielen Tavli bis Mitternacht. Touristen sind willkommen, solange sie nichts überstürzen. Einfache Mezedes: Fetascheiben, Oliven, Brot.</p>
+        <div class="sc-tav-dishes">
+          <span class="sc-tav-dish">Griechischer Kaffee</span>
+          <span class="sc-tav-dish">Ouzo mit Meze</span>
+          <span class="sc-tav-dish">Frappé</span>
+        </div>
+        <p class="sc-tav-price">Preisklasse: <span>€ · Zeitvertreib im Paradies</span></p>
+      </div>
+
+      <div class="sc-tav-card">
+        <div class="sc-tav-top">
+          <div>
+            <h3 class="sc-tav-name">Taverna Mersini</h3>
+            <div class="sc-tav-loc">📍 Hafen Mersini</div>
+          </div>
+          <div class="sc-tav-stars">★★★★☆</div>
+        </div>
+        <p class="sc-tav-desc">Direkt am Hafenbecken — wenn die Fähre anlegt, sitzt man hier und schaut zu. Fisch kommt direkt von den Booten nebenan: Lavraki, Fagri, Marides. Und wer die Fähre um sieben morgens nehmen muss, bekommt hier als einzigem Ort der Insel schon um halb sieben Kaffee.</p>
+        <div class="sc-tav-dishes">
+          <span class="sc-tav-dish">Lavraki gegrillt</span>
+          <span class="sc-tav-dish">Marides (Sandsmelt)</span>
+          <span class="sc-tav-dish">Bourteto (Fischeintopf)</span>
+        </div>
+        <p class="sc-tav-price">Preisklasse: <span>€€ · Hafenblick inklusive</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="sc-section">
+    <div class="sc-section-head">
+      <p class="sc-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="sc-section-title">Klein, still<br><em>und absolut unvergesslich</em></h2>
+      <div class="sc-divider"></div>
+    </div>
+    <div class="sc-viertel-grid">
+
+      <div class="sc-viertel-card">
+        <div class="sc-viertel-emoji">🏘️</div>
+        <h3 class="sc-viertel-name">Chora</h3>
+        <p class="sc-viertel-desc">Das einzige Dorf der Insel — auf dem Hügel, mit Windmühlen, weißen Gassen und einem Dorfplatz, auf dem die gesamte Gemeinschaft jeden Abend zusammenkommt. Kein Hotel mehr als zwanzig Zimmer. Kein Diskotheek. Kein Lärm nach Mitternacht.</p>
+      </div>
+
+      <div class="sc-viertel-card">
+        <div class="sc-viertel-emoji">⛵</div>
+        <h3 class="sc-viertel-name">Mersini</h3>
+        <p class="sc-viertel-desc">Der Hafen — vier Tavernen, fünfzehn Boote, eine Mole aus Beton. Der tägliche Ankunftspunkt der Schnellfähre von Naxos. Wer morgens am Kai sitzt, sieht die gesamte Logistik der Insel in zwanzig Minuten abgewickelt.</p>
+      </div>
+
+      <div class="sc-viertel-card">
+        <div class="sc-viertel-emoji">🏖️</div>
+        <h3 class="sc-viertel-name">Tsigouri &amp; Psili Ammos</h3>
+        <p class="sc-viertel-desc">Die zwei Hauptstrände — Tsigouri mit Liegestühlen (dreißig Stück, das ist alles), Psili Ammos mit keinem einzigen. Beide mit Wasser, das man in den Kykladen nicht besser findet, und beiden fehlt der Lautsprecher vollständig.</p>
+      </div>
+
+      <div class="sc-viertel-card">
+        <div class="sc-viertel-emoji">🐟</div>
+        <h3 class="sc-viertel-name">Fischerei</h3>
+        <p class="sc-viertel-desc">Schinoussa lebt noch von der Fischerei — die kleinen Boote fahren nachts hinaus und kommen morgens mit Barsch, Brasse und Oktopus zurück. Was gefangen wird, steht mittags auf der Karte. Was nicht gefangen wurde, steht nicht drauf.</p>
+      </div>
+
+      <div class="sc-viertel-card">
+        <div class="sc-viertel-emoji">🦶</div>
+        <h3 class="sc-viertel-name">Wanderpfade</h3>
+        <p class="sc-viertel-desc">Das Netz der alten Kalderimia-Pfade verbindet alle Buchten der Insel zu Fuß. Mit einem selbstgezeichneten Kartenzettel (liegt in der Taverne aus) und drei bis fünf Stunden Zeit hat man die ganze Insel erschlossen.</p>
+      </div>
+
+      <div class="sc-viertel-card">
+        <div class="sc-viertel-emoji">🌊</div>
+        <h3 class="sc-viertel-name">Kleine Kykladen</h3>
+        <p class="sc-viertel-desc">Schinoussa liegt zwischen Iraklia, Koufonisia und Donoussa — den vier Kleinen Kykladen. Mit der Tagesfähre ist man auf einer Nachbarinsel. Jede hat ihren eigenen Charakter, jede ist anders, alle zusammen ergeben den perfekten Inselhüpf der Ägäis.</p>
+      </div>
+
+    </div>
+
+    <div class="sc-tip-banner">
+      <div class="sc-tip-emoji">⚓</div>
+      <div class="sc-tip-text">
+        <h3>Die Insel, auf der die Zeit aufgehört hat zu zählen</h3>
+        <p>Schinoussa hat kein Programm, keinen Veranstaltungskalender und kein einziges Wahrzeichen, das man fotografieren muss. Was es hat: das ruhigste Meer der Kykladen, Tavernen, die kochen was da ist, Buchten ohne Liegestühle und Einwohner, die einen nach drei Tagen beim Namen kennen. Wer mindestens vier Tage bleibt — und das sollte man — kommt in einen Rhythmus, den man in keiner Stadt der Welt wiederfinden wird.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>
