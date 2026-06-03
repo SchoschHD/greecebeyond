@@ -49,6 +49,8 @@
  <link  rel="stylesheet" href="css/islands/dodekanes/symi.css">
 <link  rel="stylesheet" href="css/islands/dodekanes/tilos.css">
 <link  rel="stylesheet" href="css/islands/dodekanes/chalki.css">
+<link  rel="stylesheet" href="css/islands/dodekanes/patmos.css">
+<link rel="stylesheet" href="css/islands/dodekanes/nisyros.css">
 
   <!-- Rezept-Styles -->
   <link rel="stylesheet" href="css/food/tzatziki.css">
@@ -469,7 +471,7 @@
   <div class="islands reveal visible">
     <div class="dodekanes-grid">
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openAgathonisi()" style="cursor:pointer;">
         <div class="island-bg isle-agathonisi"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -480,7 +482,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openAstypalaia()" style="cursor:pointer;">  
         <div class="island-bg isle-astypalaia"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -491,7 +493,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openKalymnos()" style="cursor:pointer;">
         <div class="island-bg isle-kalymnos"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -502,7 +504,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openKarpathos()" style="cursor:pointer;">
         <div class="island-bg isle-karpathos"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -513,7 +515,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openKasos()" style="cursor:pointer;">
         <div class="island-bg isle-kasos"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -524,7 +526,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openKastellorizo()" style="cursor:pointer;">
         <div class="island-bg isle-kastellorizo"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -546,7 +548,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openLipsi()" style="cursor:pointer;">
         <div class="island-bg isle-lipsi"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -557,7 +559,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openLeros()" style="cursor:pointer;">
         <div class="island-bg isle-leros"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -568,7 +570,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openNisyros()" style="cursor:pointer;">
         <div class="island-bg isle-nisyros"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -579,7 +581,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openPatmos()" style="cursor:pointer;">
         <div class="island-bg isle-patmos"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -970,6 +972,10 @@
 <div id="symi-page"       style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="tilos-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="chalki-page"     style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="leipsi-page"     style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="leros-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="nisyros-page"    style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="patmos-page"     style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 
 <!-- ═══════════════════════════════════════ -->
 <!--  STÄDTE-DETAIL-SEITEN (per fetch geladen) -->

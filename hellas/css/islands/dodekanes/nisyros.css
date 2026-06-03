@@ -1,0 +1,258 @@
+/* =============================================
+   NISYROS — Insel-Unterseite
+   Akzentfarbe: Vulkan-Schwarz / Schwefelgelb
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#nisyros-page {
+  font-family: 'Outfit', sans-serif;
+  color: #100c04;
+  background: #f5f4ee;
+}
+
+/* ── BACK BAR ── */
+.ni-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(245,244,238,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(160,120,0,0.20);
+}
+.ni-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(160,120,0,0.38);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #8a6400; transition: all 0.2s;
+}
+.ni-back-btn:hover { background: #f5e8b0; border-color: #8a6400; }
+.ni-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.ni-breadcrumb { font-size: 0.8rem; color: #7a7060; letter-spacing: 0.05em; }
+.ni-breadcrumb span { color: #8a6400; }
+
+/* ── HERO ── */
+.ni-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.ni-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(165deg, #020100 0%, #0e0800 18%, #2c1c00 40%, #6a4800 62%, #c09000 80%, #e8c840 95%, #f5e898 100%);
+}
+.ni-hero-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(ellipse 55% 45% at 50% 60%, rgba(180,130,0,0.28) 0%, transparent 65%),
+    radial-gradient(ellipse 45% 35% at 28% 35%, rgba(100,60,0,0.38) 0%, transparent 60%),
+    radial-gradient(ellipse 30% 25% at 72% 25%, rgba(40,20,0,0.32) 0%, transparent 55%);
+}
+.ni-hero-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.036) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+.ni-hero-silhouette {
+  position: absolute; bottom: 108px; left: 50%; transform: translateX(-50%);
+  width: 860px; height: 185px;
+  opacity: 0.13;
+}
+.ni-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(8,4,0,0.54);
+}
+.ni-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23f5f4ee' fill-opacity='1' d='M0,56L80,64C160,72,320,88,480,86C640,84,800,62,960,54C1120,46,1280,58,1360,64L1440,70L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.ni-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.ni-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: rgba(255,255,255,0.45);
+  margin-bottom: 1.2rem;
+}
+.ni-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 300; line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+.ni-hero-title em { font-style: italic; display: block; color: #f0d860; }
+.ni-hero-sub {
+  max-width: 560px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(255,255,255,0.65); line-height: 1.75; font-weight: 300;
+}
+.ni-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.ni-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(255,255,255,0.20);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.78);
+}
+
+/* ── STATS BAR ── */
+.ni-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(160,120,0,0.14);
+}
+.ni-stat-item {
+  flex: 1; max-width: 200px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(160,120,0,0.10);
+}
+.ni-stat-item:last-child { border-right: none; }
+.ni-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: #8a6400; line-height: 1;
+}
+.ni-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #7a7060; margin-top: 0.3rem;
+}
+
+/* ── CONTENT ── */
+.ni-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.ni-section { padding: 4rem 0 2rem; }
+.ni-section-head { margin-bottom: 2.5rem; }
+.ni-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #8a6400; margin-bottom: 0.8rem;
+}
+.ni-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300; color: #100c04; line-height: 1.15;
+}
+.ni-section-title em { font-style: italic; color: #8a6400; }
+.ni-divider { width: 40px; height: 2px; background: #8a6400; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.ni-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.ni-history-text p {
+  font-size: 1rem; line-height: 1.9; color: #2a2010;
+  font-weight: 300; margin-bottom: 1.2rem;
+}
+.ni-timeline { position: relative; padding-left: 2rem; }
+.ni-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(160,120,0,0.22);
+}
+.ni-tl-item { position: relative; margin-bottom: 1.8rem; }
+.ni-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: white; border: 2px solid #8a6400;
+}
+.ni-tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 600; color: #8a6400; margin-bottom: 0.25rem;
+}
+.ni-tl-event { font-size: 0.88rem; color: #2a2010; line-height: 1.6; font-weight: 300; }
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.ni-sights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.ni-sight-card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid rgba(160,120,0,0.18);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ni-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(20,12,0,0.10); }
+.ni-sight-visual { height: 140px; }
+.ni-sight-body { padding: 1.2rem; }
+.ni-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #8a6400; margin-bottom: 0.35rem;
+}
+.ni-sight-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 300; color: #100c04; margin-bottom: 0.4rem;
+}
+.ni-sight-desc { font-size: 0.83rem; color: #3a3010; line-height: 1.65; font-weight: 300; }
+
+.sv-ni-crater  { background: linear-gradient(160deg, #080400 0%, #301800 45%, #a06000 70%, #e0c000 100%); }
+.sv-ni-mandraki{ background: linear-gradient(160deg, #0a0600 0%, #3a1800 50%, #c07020 80%, #e8a840 100%); }
+.sv-ni-emborios{ background: linear-gradient(160deg, #080410 0%, #201040 55%, #5030a0 80%, #9070d0 100%); }
+.sv-ni-beach   { background: linear-gradient(160deg, #020810 0%, #0a2850 55%, #2870b0 100%); }
+.sv-ni-thermal { background: linear-gradient(160deg, #100800 0%, #483000 50%, #c09800 75%, #f0d840 100%); }
+.sv-ni-nikia   { background: linear-gradient(160deg, #060808 0%, #183020 55%, #507840 80%, #98c868 100%); }
+
+/* ── TAVERNEN ── */
+.ni-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.ni-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(160,120,0,0.18);
+  border-radius: 4px; border-left: 3px solid #8a6400;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ni-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(20,12,0,0.08); }
+.ni-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.ni-tav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300; color: #100c04;
+}
+.ni-tav-loc { font-size: 0.75rem; color: #7a7060; margin-top: 0.2rem; }
+.ni-tav-stars { color: #8a6400; font-size: 0.85rem; letter-spacing: 2px; }
+.ni-tav-desc { font-size: 0.88rem; color: #2a2010; line-height: 1.75; font-weight: 300; margin-bottom: 1rem; }
+.ni-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.ni-tav-dish {
+  padding: 3px 10px; background: #f5e8b0; color: #2a1c00;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+}
+.ni-tav-price { font-size: 0.8rem; color: #7a7060; }
+.ni-tav-price span { color: #8a6400; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.ni-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.ni-viertel-card {
+  padding: 1.8rem; background: #f5edcc;
+  border-radius: 4px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.ni-viertel-card:hover { background: #eedd90; transform: translateY(-4px); }
+.ni-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.ni-viertel-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300; color: #100c04; margin-bottom: 0.5rem;
+}
+.ni-viertel-desc { font-size: 0.82rem; color: #3a3010; line-height: 1.65; font-weight: 300; }
+
+/* ── TIP BANNER ── */
+.ni-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #060200 0%, #2c1800 40%, #8a6000 100%);
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.ni-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.ni-tip-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300; color: white; margin-bottom: 0.6rem;
+}
+.ni-tip-text p {
+  font-size: 0.92rem; color: rgba(255,255,255,0.68); line-height: 1.75; font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .ni-back-bar { padding: 0.8rem 1.2rem; }
+  .ni-content { padding: 2rem 1.2rem 4rem; }
+  .ni-history-grid { grid-template-columns: 1fr; }
+  .ni-sights-grid { grid-template-columns: 1fr 1fr; }
+  .ni-tav-grid { grid-template-columns: 1fr; }
+  .ni-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .ni-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+}

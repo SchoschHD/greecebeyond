@@ -293,3 +293,21 @@ function openChalki() {
 }
 function closeChalki() { closePage('chalki-page'); }    
 
+function openPatmos() {
+  if (typeof loadPage === 'function') {
+    loadPage('patmos-page', 'islands/dodekanes/patmos.html').then(() => openPage('patmos-page')); 
+  } else {
+    openPage('patmos-page');
+  }
+}
+function closePatmos() { closePage('patmos-page'); }    
+
+function openNisyros() {
+  if (typeof loadPage === 'function') {
+    loadPage('nisyros-page', 'islands/dodekanes/nisyros.html').then(() => openPage('nisyros-page')); 
+  } else {
+    openPage('nisyros-page');
+  }   
+}
+function closeNisyros() { closePage('nisyros-page'); }
+
