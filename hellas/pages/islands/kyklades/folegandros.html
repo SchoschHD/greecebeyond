@@ -1,1 +1,367 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Folegandros — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="folegandros.css" />
+</head>
+<body>
+<div id="folegandros-page">
 
+<div class="fg-back-bar">
+  <button class="fg-back-btn" type="button" onclick="closeFolegandros()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="fg-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Folegandros</span></p>
+</div>
+
+<div class="fg-hero">
+  <div class="fg-hero-bg"></div>
+  <div class="fg-hero-dots"></div>
+  <!-- Folegandros Chora-Klippe + Kirche Silhouette -->
+  <svg class="fg-hero-silhouette" viewBox="0 0 840 175" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Meereslinie -->
+    <path d="M0,165 Q210,150 420,158 Q630,166 840,152 L840,175 L0,175Z" opacity="0.22"/>
+    <!-- Steile Klippe links -->
+    <path d="M0,175 Q30,80 100,55 Q160,35 200,175Z" opacity="0.28"/>
+    <!-- Hauptklippe Chora -->
+    <path d="M150,175 Q230,60 310,30 Q370,10 420,175Z" opacity="0.30"/>
+    <!-- Panagia-Kirche auf der Klippe -->
+    <rect x="290" y="5" width="70" height="38"/>
+    <rect x="286" y="2" width="78" height="10"/>
+    <!-- Kuppel -->
+    <ellipse cx="325" cy="2" rx="28" ry="14"/>
+    <!-- Glockenturm -->
+    <rect x="350" y="-5" width="18" height="25"/>
+    <ellipse cx="359" cy="-5" rx="11" ry="7"/>
+    <!-- Kirchenmauer -->
+    <rect x="280" y="38" width="90" height="12"/>
+    <!-- Kastro auf zweiter Kuppe -->
+    <path d="M400,175 Q450,80 510,60 Q560,45 590,175Z" opacity="0.26"/>
+    <rect x="462" y="42" width="85" height="25"/>
+    <rect x="458" y="32" width="93" height="12"/>
+    <rect x="461" y="18" width="12" height="16"/>
+    <rect x="480" y="18" width="12" height="16"/>
+    <rect x="525" y="18" width="12" height="16"/>
+    <rect x="543" y="18" width="12" height="16"/>
+    <!-- Windmühlen rechts -->
+    <rect x="700" y="115" width="20" height="46"/>
+    <ellipse cx="710" cy="115" rx="13" ry="7"/>
+    <line x1="710" y1="108" x2="710" y2="78" stroke="white" stroke-width="3"/>
+    <line x1="710" y1="108" x2="734" y2="96" stroke="white" stroke-width="3"/>
+    <line x1="710" y1="108" x2="726" y2="128" stroke="white" stroke-width="3"/>
+    <line x1="710" y1="108" x2="686" y2="128" stroke="white" stroke-width="3"/>
+    <line x1="710" y1="108" x2="686" y2="96" stroke="white" stroke-width="3"/>
+    <rect x="740" y="125" width="20" height="36"/>
+    <ellipse cx="750" cy="125" rx="13" ry="7"/>
+    <line x1="750" y1="118" x2="750" y2="88" stroke="white" stroke-width="3"/>
+    <line x1="750" y1="118" x2="774" y2="106" stroke="white" stroke-width="3"/>
+    <line x1="750" y1="118" x2="766" y2="138" stroke="white" stroke-width="3"/>
+    <line x1="750" y1="118" x2="726" y2="138" stroke="white" stroke-width="3"/>
+    <line x1="750" y1="118" x2="726" y2="106" stroke="white" stroke-width="3"/>
+    <!-- Fischernetz-Motiv links unten -->
+    <path d="M30,130 Q50,120 70,130 Q90,140 110,130" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+    <path d="M30,140 Q50,130 70,140 Q90,150 110,140" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+    <path d="M50,120 L50,152" stroke="white" stroke-width="1.5" opacity="0.3"/>
+    <path d="M70,118 L70,150" stroke="white" stroke-width="1.5" opacity="0.3"/>
+    <path d="M90,122 L90,150" stroke="white" stroke-width="1.5" opacity="0.3"/>
+  </svg>
+  <div class="fg-hero-overlay"></div>
+  <div class="fg-hero-content">
+    <p class="fg-hero-tag">Kykladen · Westägäis</p>
+    <h1 class="fg-hero-title">Folegandros<em>Φολέγανδρος</em></h1>
+    <p class="fg-hero-sub">Die kargste und stolzeste der Kykladen — eine Chora auf schwindelerregenden Klippen, keine Massenmassen, keine Kompromisse. Folegandros ist das, was die Ägäis war, bevor sie entdeckt wurde.</p>
+    <div class="fg-hero-pills">
+      <span class="fg-hero-pill">Chora auf der Klippe</span>
+      <span class="fg-hero-pill">Panagia</span>
+      <span class="fg-hero-pill">Unberührte Buchten</span>
+      <span class="fg-hero-pill">Wandern</span>
+      <span class="fg-hero-pill">Einsamkeit</span>
+    </div>
+  </div>
+  <div class="fg-hero-waves"></div>
+</div>
+
+<div class="fg-stats-bar">
+  <div class="fg-stat-item">
+    <div class="fg-stat-num">750</div>
+    <div class="fg-stat-lbl">Einwohner</div>
+  </div>
+  <div class="fg-stat-item">
+    <div class="fg-stat-num">32 km²</div>
+    <div class="fg-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="fg-stat-item">
+    <div class="fg-stat-num">300 m</div>
+    <div class="fg-stat-lbl">Klippen-Höhe</div>
+  </div>
+  <div class="fg-stat-item">
+    <div class="fg-stat-num">1 Straße</div>
+    <div class="fg-stat-lbl">Geteert</div>
+  </div>
+  <div class="fg-stat-item">
+    <div class="fg-stat-num">#1</div>
+    <div class="fg-stat-lbl">Authentischste Kykladeninsel</div>
+  </div>
+</div>
+
+<div class="fg-content">
+
+  <!-- 1. GESCHICHTE -->
+  <section class="fg-section">
+    <div class="fg-section-head">
+      <p class="fg-section-label">01 — Geschichte</p>
+      <h2 class="fg-section-title">Verbannte, Piraten<br><em>und die Chora auf dem Abgrund</em></h2>
+      <div class="fg-divider"></div>
+    </div>
+    <div class="fg-history-grid">
+      <div class="fg-history-text">
+        <p>Folegandros war über Jahrhunderte kein Ziel, sondern eine Strafe. Griechische Herrscher verbannten politische Gefangene auf die karge, schwer erreichbare Insel — die zerklüfteten Klippen, die fehlenden Häfen und die dürre Landschaft machten Flucht fast unmöglich. Die Insel trug ihren Namen „Folegandros" womöglich vom phönizischen Wort für felsiges Land.</p>
+        <p>Die Chora, das Hauptdorf, wurde bewusst auf einem 300 Meter hohen Klippenvorsprung gebaut — unsichtbar vom Meer, unzugänglich für Piraten. Die Bewohner trugen ihre Erde in Körben die steilen Hänge hinauf, um kleine Gärten anlegen zu können. Dieses Trotzdem, diese Hartnäckigkeit gegenüber der Kargheit, prägt den Charakter der Insel bis heute.</p>
+        <p>Anders als die meisten Kykladen-Inseln wurde Folegandros vom Massentourismus kaum berührt. Es gibt keine Flugverbindung, der Hafen Karavostasis taugt kaum für größere Schiffe, und die Insel selbst scheint jeden abzuwehren, der Komfort über Erlebnis stellt. Wer hierherkommt, kommt wegen Folegandros — nicht trotz ihm.</p>
+      </div>
+      <div class="fg-timeline">
+        <div class="fg-tl-item">
+          <div class="fg-tl-dot"></div>
+          <div class="fg-tl-year">3000 v. Chr.</div>
+          <div class="fg-tl-event">Erste Besiedlung in der Frühkykladenzeit. Die Insel ist arm an Ressourcen, reich an Felsen — die wenigen Siedler roden mühsam die kargen Hänge für Gerste und Olivenbäume.</div>
+        </div>
+        <div class="fg-tl-item">
+          <div class="fg-tl-dot"></div>
+          <div class="fg-tl-year">5. Jh. v. Chr.</div>
+          <div class="fg-tl-event">Folegandros wird athenisches Verbannungsgebiet. Politische Gefangene werden auf die Insel geschickt — ihre Isolation ist die Strafe. Es gibt kein Entkommen von den Klippen.</div>
+        </div>
+        <div class="fg-tl-item">
+          <div class="fg-tl-dot"></div>
+          <div class="fg-tl-year">13. Jh.</div>
+          <div class="fg-tl-event">Unter venezianischer Herrschaft entsteht die Kastro-Struktur innerhalb der Chora. Die Häuser bilden eine geschlossene Außenmauer — ein Dorf als Bollwerk gegen Piraten, die den Ägäischen Raum heimsuchen.</div>
+        </div>
+        <div class="fg-tl-item">
+          <div class="fg-tl-dot"></div>
+          <div class="fg-tl-year">1830</div>
+          <div class="fg-tl-event">Eingliederung in den griechischen Staat. Folegandros bleibt arm und abgelegen. Viele Inselbewohner emigrieren nach Athen oder in die USA — die Bevölkerung schrumpft auf unter 500.</div>
+        </div>
+        <div class="fg-tl-item">
+          <div class="fg-tl-dot"></div>
+          <div class="fg-tl-year">1970er</div>
+          <div class="fg-tl-event">Erste Reisende — vor allem Franzosen und Skandinavier — entdecken Folegandros als Geheimtipp. Die Insel wird in Reiseführern als „das unberührte Kykladen-Original" bezeichnet. Daran hat sich wenig geändert.</div>
+        </div>
+        <div class="fg-tl-item">
+          <div class="fg-tl-dot"></div>
+          <div class="fg-tl-year">Heute</div>
+          <div class="fg-tl-event">Folegandros bleibt bewusst klein — keine Flugverbindung, wenige große Hotels, kaum Nachtklubs. Die Insel empfängt Gäste, die Stille und Schönheit über Bequemlichkeit stellen. Das Gleichgewicht hält.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SEHENSWÜRDIGKEITEN -->
+  <section class="fg-section">
+    <div class="fg-section-head">
+      <p class="fg-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="fg-section-title">Chora, Panagia<br><em>und das Ende der Welt</em></h2>
+      <div class="fg-divider"></div>
+    </div>
+    <div class="fg-sights-grid">
+
+      <div class="fg-sight-card">
+        <div class="fg-sight-visual sv-fg-chora"></div>
+        <div class="fg-sight-body">
+          <p class="fg-sight-cat">Hauptdorf · Wahrzeichen</p>
+          <h3 class="fg-sight-name">Chora</h3>
+          <p class="fg-sight-desc">Das schönste Dorf der Kykladen — auf einem 300 Meter hohen Klippenvorsprung, umgeben von Abgründen. Die Kastro-Häuser bilden eine geschlossene Mauer, dahinter öffnen sich verschachtelte Plätze mit Jacaranda-Bäumen und Tavernen unter Bougainvillea. Kein Ort ist so lebendig und so einsam zugleich.</p>
+        </div>
+      </div>
+
+      <div class="fg-sight-card">
+        <div class="fg-sight-visual sv-fg-panagia"></div>
+        <div class="fg-sight-body">
+          <p class="fg-sight-cat">Kirche · Prozession</p>
+          <h3 class="fg-sight-name">Panagia-Kirche</h3>
+          <p class="fg-sight-desc">Die ikonische Kirche auf dem höchsten Punkt der Chora-Klippe — zu Ostern trägt die gesamte Inselbevölkerung Kerzen den steilen Pfad hinauf. Das Bild der Lichterkette an der senkrechten Felswand gehört zu den eindrücklichsten Momenten, die die griechischen Inseln bieten.</p>
+        </div>
+      </div>
+
+      <div class="fg-sight-card">
+        <div class="fg-sight-visual sv-fg-kastro"></div>
+        <div class="fg-sight-body">
+          <p class="fg-sight-cat">Venezianisch · Mittelalter</p>
+          <h3 class="fg-sight-name">Kastro</h3>
+          <p class="fg-sight-desc">Der älteste Teil der Chora — ein venezianisches Kastro aus dem 13. Jahrhundert, dessen äußere Häuserreihe selbst die Festungsmauer bildet. Die Durchgänge sind so eng, dass man die Schultern einziehen muss. Venezianische Wappen, byzantinische Details, vollkommene Stille.</p>
+        </div>
+      </div>
+
+      <div class="fg-sight-card">
+        <div class="fg-sight-visual sv-fg-agkali"></div>
+        <div class="fg-sight-body">
+          <p class="fg-sight-cat">Strand · Abgeschiedenheit</p>
+          <h3 class="fg-sight-name">Agkali &amp; Angali</h3>
+          <p class="fg-sight-desc">Der bekannteste Strand der Insel — eine halbrunde Bucht mit türkisblauem Wasser, erreichbar nur zu Fuß (40 Minuten) oder per Wassertaxi. Ein einziges Taverna-Restaurant, grober goldener Sand, keine Liegen zu mieten. Entweder man bringt sein Handtuch mit oder man geht wieder.</p>
+        </div>
+      </div>
+
+      <div class="fg-sight-card">
+        <div class="fg-sight-visual sv-fg-livadaki"></div>
+        <div class="fg-sight-body">
+          <p class="fg-sight-cat">Wandern · Buchten</p>
+          <h3 class="fg-sight-name">Livadaki &amp; Katergo</h3>
+          <p class="fg-sight-desc">Katergo — die spektakulärste Bucht der Insel, nur per Boot erreichbar — gilt als einer der schönsten Strände der Kykladen überhaupt. Doppelte Buchten mit kristallklarem Wasser, senkrechte Felsnadeln, kein einziger Regenschirm. Das ist Folegandros für Entschlossene.</p>
+        </div>
+      </div>
+
+      <div class="fg-sight-card">
+        <div class="fg-sight-visual sv-fg-trail"></div>
+        <div class="fg-sight-body">
+          <p class="fg-sight-cat">Wandern · Aussicht</p>
+          <h3 class="fg-sight-name">Kliffpfade &amp; Terrassen</h3>
+          <p class="fg-sight-desc">Folegandros ist eine Wanderinsel — gepflasterte Maultiersteige führen über Trockensteinmauern und Terrassenfelder zwischen allen Dörfern. Der Weg von der Chora zur Panagia und weiter nach Ano Meria bietet Ausblicke, für die andere Inseln berühmt wären.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. ESSEN & TAVERNEN -->
+  <section class="fg-section">
+    <div class="fg-section-head">
+      <p class="fg-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="fg-section-title">Einfach, ehrlich<br><em>und unvergesslich</em></h2>
+      <div class="fg-divider"></div>
+    </div>
+    <div class="fg-tav-grid">
+
+      <div class="fg-tav-card">
+        <div class="fg-tav-top">
+          <div>
+            <h3 class="fg-tav-name">Pounta</h3>
+            <div class="fg-tav-loc">📍 Chora, Kastro-Rand</div>
+          </div>
+          <div class="fg-tav-stars">★★★★★</div>
+        </div>
+        <p class="fg-tav-desc">Das Restaurant am Abgrund — buchstäblich. Tische auf einer Terrasse am Klippenrand der Chora, 200 Meter über dem Meer. Die Küche ist traditionell und saisonal: Maternde, Soufiko (das lokale Gemüsegericht), gegrillter Fisch vom Tag. Der Sonnenuntergang ist gratis.</p>
+        <div class="fg-tav-dishes">
+          <span class="fg-tav-dish">Soufiko</span>
+          <span class="fg-tav-dish">Maternde (Hammelfleisch)</span>
+          <span class="fg-tav-dish">Lokaler Ziegenkäse</span>
+        </div>
+        <p class="fg-tav-price">Preisklasse: <span>€€ · Abendessen · Aussicht</span></p>
+      </div>
+
+      <div class="fg-tav-card">
+        <div class="fg-tav-top">
+          <div>
+            <h3 class="fg-tav-name">Melissa</h3>
+            <div class="fg-tav-loc">📍 Chora, Platia Pounta</div>
+          </div>
+          <div class="fg-tav-stars">★★★★★</div>
+        </div>
+        <p class="fg-tav-desc">Das Lokal der Inselbewohner im Herzen der Chora — unter einem uralten Maulbeerbaum, mit handgeschriebener Tageskarte. Hausgemachte Pastaspeisen, Fleisch von den eigenen Ziegen, Wein aus dem Fass. Mittags fast ausschließlich griechische Gäste. Das ist das beste Zeichen.</p>
+        <div class="fg-tav-dishes">
+          <span class="fg-tav-dish">Matsata (Handgemachte Nudeln)</span>
+          <span class="fg-tav-dish">Ziegenfleisch mit Kritharaki</span>
+          <span class="fg-tav-dish">Loukoumades</span>
+        </div>
+        <p class="fg-tav-price">Preisklasse: <span>€ · Mittag · Einheimische</span></p>
+      </div>
+
+      <div class="fg-tav-card">
+        <div class="fg-tav-top">
+          <div>
+            <h3 class="fg-tav-name">Taverna Karavostasis</h3>
+            <div class="fg-tav-loc">📍 Hafen Karavostasis</div>
+          </div>
+          <div class="fg-tav-stars">★★★★☆</div>
+        </div>
+        <p class="fg-tav-desc">Direkt am winzigen Hafen — wo die Fähre zweimal täglich anlegt und die Fischer ihre Netze flicken. Tagesfrischer Fang, einfach gegrillt, dazu Tsipuro vom Fass. Das erste und letzte Essen auf Folegandros, wenn man an- oder abreist — es prägt sich ein.</p>
+        <div class="fg-tav-dishes">
+          <span class="fg-tav-dish">Gegrillter Fang des Tages</span>
+          <span class="fg-tav-dish">Oktopus-Salat</span>
+          <span class="fg-tav-dish">Tsipuro</span>
+        </div>
+        <p class="fg-tav-price">Preisklasse: <span>€ · Fischertaverne · Hafen</span></p>
+      </div>
+
+      <div class="fg-tav-card">
+        <div class="fg-tav-top">
+          <div>
+            <h3 class="fg-tav-name">To Goupi</h3>
+            <div class="fg-tav-loc">📍 Ano Meria, Bergdorf</div>
+          </div>
+          <div class="fg-tav-stars">★★★★★</div>
+        </div>
+        <p class="fg-tav-desc">Das einzige Restaurant im Bergdorf Ano Meria — eine offene Küche in einem alten Bauernhaus, Schafe auf der Weide nebenan. Die Küche ist radikal lokal: Was die Familie züchtet, baut an oder fängt, kommt auf den Tisch. Kein Menü, kein Speisekarte — nur die Frage: „Was gibt es heute?"</p>
+        <div class="fg-tav-dishes">
+          <span class="fg-tav-dish">Lamm aus dem Steinofen</span>
+          <span class="fg-tav-dish">Eigene Käsesorten</span>
+          <span class="fg-tav-dish">Wildkräutersalat</span>
+        </div>
+        <p class="fg-tav-price">Preisklasse: <span>€ · Authentischste Erfahrung</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. ORTE & CHARAKTER -->
+  <section class="fg-section">
+    <div class="fg-section-head">
+      <p class="fg-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="fg-section-title">Eine Insel<br><em>für Unerschrockene</em></h2>
+      <div class="fg-divider"></div>
+    </div>
+    <div class="fg-viertel-grid">
+
+      <div class="fg-viertel-card">
+        <div class="fg-viertel-emoji">🏔️</div>
+        <h3 class="fg-viertel-name">Chora</h3>
+        <p class="fg-viertel-desc">Das Herz der Insel auf 300 Metern Höhe — verschachtelte Plätze, Jacaranda-Bäume, weiße Gassen. Wer abends dort sitzt, hört nur den Wind und das Klirren von Gläsern. Keine andere Chora der Kykladen hat diese Stimmung.</p>
+      </div>
+
+      <div class="fg-viertel-card">
+        <div class="fg-viertel-emoji">🏰</div>
+        <h3 class="fg-viertel-name">Kastro</h3>
+        <p class="fg-viertel-desc">Das venezianische Kastro im Kern der Chora — enge Bögen, venezianische Wappen, die äußere Häuserreihe als Festungsmauer. Einer der wenigen echten mittelalterlichen Orte, die keine Museumsatmosphäre verbreiten.</p>
+      </div>
+
+      <div class="fg-viertel-card">
+        <div class="fg-viertel-emoji">⚓</div>
+        <h3 class="fg-viertel-name">Karavostasis</h3>
+        <p class="fg-viertel-desc">Der kleinste Hafen der Kykladen — ein paar Tavernen, ein paar Fischerboote, die Fähre zweimal täglich. Folegandros beginnt und endet hier. Der Bus hoch zur Chora kostet einen Euro und bietet Ausblicke, die man nicht vergisst.</p>
+      </div>
+
+      <div class="fg-viertel-card">
+        <div class="fg-viertel-emoji">🏡</div>
+        <h3 class="fg-viertel-name">Ano Meria</h3>
+        <p class="fg-viertel-desc">Das Bergdorf im Nordwesten — eigentlich eine Kette aus Weilergehöften entlang eines Kammpfades. Terrassenfelder, Ziegenherden, ein Ethnografisches Museum in einem alten Bauernhaus. Das älteste und unberührteste Folegandros.</p>
+      </div>
+
+      <div class="fg-viertel-card">
+        <div class="fg-viertel-emoji">🌊</div>
+        <h3 class="fg-viertel-name">Katergo &amp; Agkali</h3>
+        <p class="fg-viertel-desc">Die Strände der Insel sind keine bequemen Strandbäder — sie erfordern einen Fußmarsch oder ein Boot. Wer trotzdem kommt, findet Buchten wie aus einer anderen Zeit: kristallklar, unverbaut, menschenleer.</p>
+      </div>
+
+      <div class="fg-viertel-card">
+        <div class="fg-viertel-emoji">🐐</div>
+        <h3 class="fg-viertel-name">Terrassenfelder</h3>
+        <p class="fg-viertel-desc">Folegandros ist eine Insel der Trockensteinmauern — über Jahrhunderte wurden Terrassenfelder in die steilen Hänge gemeißelt. Die Pfade zwischen ihnen sind die schönsten Wanderwege der Kykladen, und die Ziegen kennen sie alle besser.</p>
+      </div>
+
+    </div>
+
+    <div class="fg-tip-banner">
+      <div class="fg-tip-emoji">🕯️</div>
+      <div class="fg-tip-text">
+        <h3>Osternacht auf der Klippe: der Aufstieg mit Kerzen</h3>
+        <p>Zu Ostern trägt die gesamte Insel Kerzen den steilen Pfad zur Panagia-Kirche hinauf — eine Lichterkette an einer senkrechten Felswand, hoch über dem dunklen Meer. Es gibt keinen Lautsprecher, keine Choreografie, keine Touristen-Tribüne. Nur die Inselbewohner, ihre Kerzen und ein Weg, der seit Jahrhunderten begangen wird. Wer auf Folegandros ist, wenn das passiert, versteht sofort, warum diese Insel keine Werbung braucht.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>
