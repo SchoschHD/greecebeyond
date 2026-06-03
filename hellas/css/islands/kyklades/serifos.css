@@ -1,0 +1,266 @@
+/* =============================================
+   SERIFOS — Insel-Unterseite
+   Akzentfarbe: Eisenerz-Smaragd / Oxidgrün
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#serifos-page {
+  font-family: 'Outfit', sans-serif;
+  color: #0e1610;
+  background: #f2f5f2;
+}
+
+/* ── BACK BAR ── */
+.sr-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(242,245,242,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(30,100,50,0.18);
+}
+.sr-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(30,100,50,0.35);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #1e6432; transition: all 0.2s;
+}
+.sr-back-btn:hover { background: #e0f0e4; border-color: #1e6432; }
+.sr-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.sr-breadcrumb { font-size: 0.8rem; color: #6a7870; letter-spacing: 0.05em; }
+.sr-breadcrumb span { color: #1e6432; }
+
+/* ── HERO ── */
+.sr-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.sr-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, #04060a 0%, #0a1410 22%, #142818 48%, #1e5028 70%, #3a8848 100%);
+}
+.sr-hero-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(ellipse 60% 50% at 50% 70%, rgba(20,80,32,0.30) 0%, transparent 70%),
+    radial-gradient(ellipse 35% 28% at 80% 20%, rgba(8,30,14,0.45) 0%, transparent 65%);
+}
+/* Subtle noise/grain texture */
+.sr-hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.35;
+}
+.sr-hero-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+.sr-hero-silhouette {
+  position: absolute; bottom: 108px; left: 50%; transform: translateX(-50%);
+  width: 840px; height: 175px;
+  opacity: 0.09;
+}
+.sr-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(4,8,6,0.50);
+}
+.sr-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23f2f5f2' fill-opacity='1' d='M0,64L60,58.7C120,53,240,43,360,48C480,53,600,75,720,80C840,85,960,75,1080,64C1200,53,1320,43,1380,37.3L1440,32L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.sr-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.sr-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: rgba(255,255,255,0.44);
+  margin-bottom: 1.2rem;
+}
+.sr-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 300; line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+.sr-hero-title em { font-style: italic; display: block; color: #88d8a0; }
+.sr-hero-sub {
+  max-width: 560px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(255,255,255,0.64); line-height: 1.75; font-weight: 300;
+}
+.sr-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.sr-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(255,255,255,0.20);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.78);
+}
+
+/* ── STATS BAR ── */
+.sr-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(30,100,50,0.12);
+}
+.sr-stat-item {
+  flex: 1; max-width: 220px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(30,100,50,0.08);
+}
+.sr-stat-item:last-child { border-right: none; }
+.sr-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: #1e6432; line-height: 1;
+}
+.sr-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #6a7870; margin-top: 0.3rem;
+}
+
+/* ── CONTENT ── */
+.sr-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.sr-section { padding: 4rem 0 2rem; }
+.sr-section-head { margin-bottom: 2.5rem; }
+.sr-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #1e6432; margin-bottom: 0.8rem;
+}
+.sr-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300; color: #0e1610; line-height: 1.15;
+}
+.sr-section-title em { font-style: italic; color: #1e6432; }
+.sr-divider { width: 40px; height: 2px; background: #1e6432; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.sr-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.sr-history-text p {
+  font-size: 1rem; line-height: 1.9; color: #1a2e1e;
+  font-weight: 300; margin-bottom: 1.2rem;
+}
+.sr-timeline { position: relative; padding-left: 2rem; }
+.sr-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(30,100,50,0.20);
+}
+.sr-tl-item { position: relative; margin-bottom: 1.8rem; }
+.sr-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: white; border: 2px solid #1e6432;
+}
+.sr-tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 600; color: #1e6432; margin-bottom: 0.25rem;
+}
+.sr-tl-event { font-size: 0.88rem; color: #1a2e1e; line-height: 1.6; font-weight: 300; }
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.sr-sights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.sr-sight-card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid rgba(30,100,50,0.16);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.sr-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(8,20,10,0.10); }
+.sr-sight-visual { height: 140px; }
+.sr-sight-body { padding: 1.2rem; }
+.sr-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #1e6432; margin-bottom: 0.35rem;
+}
+.sr-sight-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 300; color: #0e1610; margin-bottom: 0.4rem;
+}
+.sr-sight-desc,
+.sr-sight-event { font-size: 0.83rem; color: #3a4e3e; line-height: 1.65; font-weight: 300; }
+
+/* Sight visual gradients — Serifos Eisenerz-Palette */
+.sv-sr-chora   { background: linear-gradient(160deg, #060e06 0%, #203828 55%, #70a878 100%); }
+.sv-sr-kastro  { background: linear-gradient(160deg, #0a0c08 0%, #383020 55%, #c0b060 100%); }
+.sv-sr-minen   { background: linear-gradient(160deg, #0e0808 0%, #402010 55%, #906040 100%); }
+.sv-sr-psili   { background: linear-gradient(160deg, #04100e 0%, #0a5040 55%, #40c0b0 100%); }
+.sv-sr-livadi  { background: linear-gradient(160deg, #060810 0%, #183058 55%, #5090d0 100%); }
+.sv-sr-trail   { background: linear-gradient(160deg, #080c06 0%, #2a4018 55%, #80b050 100%); }
+
+/* ── TAVERNEN ── */
+.sr-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.sr-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(30,100,50,0.16);
+  border-radius: 4px; border-left: 3px solid #1e6432;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.sr-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(8,20,10,0.08); }
+.sr-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.sr-tav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300; color: #0e1610;
+}
+.sr-tav-loc { font-size: 0.75rem; color: #6a7870; margin-top: 0.2rem; }
+.sr-tav-stars { color: #1e6432; font-size: 0.85rem; letter-spacing: 2px; }
+.sr-tav-desc { font-size: 0.88rem; color: #1a2e1e; line-height: 1.75; font-weight: 300; margin-bottom: 1rem; }
+.sr-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.sr-tav-dish {
+  padding: 3px 10px; background: #e0f0e4; color: #0e3018;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+}
+.sr-tav-price { font-size: 0.8rem; color: #6a7870; }
+.sr-tav-price span { color: #1e6432; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.sr-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.sr-viertel-card {
+  padding: 1.8rem; background: #e8f0ea;
+  border-radius: 4px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.sr-viertel-card:hover { background: #d4e8d8; transform: translateY(-4px); }
+.sr-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.sr-viertel-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300; color: #0e1610; margin-bottom: 0.5rem;
+}
+.sr-viertel-desc { font-size: 0.82rem; color: #3a4e3e; line-height: 1.65; font-weight: 300; }
+
+/* ── TIP BANNER ── */
+.sr-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #04080a 0%, #0e2818 40%, #1e6432 100%);
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.sr-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.sr-tip-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300; color: white; margin-bottom: 0.6rem;
+}
+.sr-tip-text p {
+  font-size: 0.92rem; color: rgba(255,255,255,0.68); line-height: 1.75; font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .sr-back-bar { padding: 0.8rem 1.2rem; }
+  .sr-content { padding: 2rem 1.2rem 4rem; }
+  .sr-history-grid { grid-template-columns: 1fr; }
+  .sr-sights-grid { grid-template-columns: 1fr 1fr; }
+  .sr-tav-grid { grid-template-columns: 1fr; }
+  .sr-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .sr-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+}

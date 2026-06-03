@@ -1,1 +1,384 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serifos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./.../islands/kyklades/serifos.css" />
+</head>
+<body>
+<div id="serifos-page">
 
+<div class="sr-back-bar">
+  <button class="sr-back-btn" type="button" onclick="closeSerifos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="sr-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Serifos</span></p>
+</div>
+
+<div class="sr-hero">
+  <div class="sr-hero-bg"></div>
+  <div class="sr-hero-dots"></div>
+  <!-- Chora auf Felssporn + Windmühlen + Erzminen-Schacht Silhouette -->
+  <svg class="sr-hero-silhouette" viewBox="0 0 840 175" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Meereslinie -->
+    <path d="M0,162 Q210,152 420,160 Q630,168 840,155 L840,175 L0,175Z" opacity="0.20"/>
+    <!-- Felsiger Untergrund links -->
+    <path d="M0,175 Q60,140 130,120 Q190,105 220,175Z" opacity="0.18"/>
+    <!-- Hauptfelsen Chora -->
+    <path d="M160,175 Q240,85 310,55 Q370,32 400,175Z" opacity="0.26"/>
+    <!-- Chora-Häuser auf Fels -->
+    <rect x="248" y="28" width="100" height="32"/>
+    <rect x="244" y="18" width="108" height="12"/>
+    <!-- Kirchturm -->
+    <rect x="280" y="0" width="20" height="28"/>
+    <rect x="276" y="-2" width="28" height="8"/>
+    <ellipse cx="290" cy="-2" rx="16" ry="8"/>
+    <!-- Häuserreihe gestaffelt -->
+    <rect x="252" y="38" width="14" height="14"/>
+    <rect x="272" y="35" width="14" height="17"/>
+    <rect x="310" y="40" width="14" height="12"/>
+    <rect x="330" y="36" width="14" height="16"/>
+    <!-- Zweiter Hügel -->
+    <path d="M360,175 Q410,105 460,85 Q500,70 520,175Z" opacity="0.22"/>
+    <!-- Windmühlen-Reihe auf Kamm -->
+    <rect x="400" y="68" width="18" height="40"/>
+    <ellipse cx="409" cy="68" rx="11" ry="6"/>
+    <line x1="409" y1="62" x2="409" y2="38" stroke="white" stroke-width="2.5"/>
+    <line x1="409" y1="62" x2="430" y2="52" stroke="white" stroke-width="2.5"/>
+    <line x1="409" y1="62" x2="423" y2="78" stroke="white" stroke-width="2.5"/>
+    <line x1="409" y1="62" x2="389" y2="78" stroke="white" stroke-width="2.5"/>
+    <line x1="409" y1="62" x2="389" y2="52" stroke="white" stroke-width="2.5"/>
+
+    <rect x="435" y="75" width="18" height="36"/>
+    <ellipse cx="444" cy="75" rx="11" ry="6"/>
+    <line x1="444" y1="69" x2="444" y2="45" stroke="white" stroke-width="2.5"/>
+    <line x1="444" y1="69" x2="465" y2="59" stroke="white" stroke-width="2.5"/>
+    <line x1="444" y1="69" x2="458" y2="85" stroke="white" stroke-width="2.5"/>
+    <line x1="444" y1="69" x2="424" y2="85" stroke="white" stroke-width="2.5"/>
+    <line x1="444" y1="69" x2="424" y2="59" stroke="white" stroke-width="2.5"/>
+
+    <rect x="468" y="80" width="18" height="32"/>
+    <ellipse cx="477" cy="80" rx="11" ry="6"/>
+    <line x1="477" y1="74" x2="477" y2="50" stroke="white" stroke-width="2.5"/>
+    <line x1="477" y1="74" x2="498" y2="64" stroke="white" stroke-width="2.5"/>
+    <line x1="477" y1="74" x2="491" y2="90" stroke="white" stroke-width="2.5"/>
+    <line x1="477" y1="74" x2="457" y2="90" stroke="white" stroke-width="2.5"/>
+    <line x1="477" y1="74" x2="457" y2="64" stroke="white" stroke-width="2.5"/>
+
+    <!-- Erzminen-Förderturm rechts -->
+    <line x1="680" y1="175" x2="660" y2="100" stroke="white" stroke-width="3"/>
+    <line x1="720" y1="175" x2="660" y2="100" stroke="white" stroke-width="3"/>
+    <line x1="680" y1="175" x2="720" y2="175" stroke="white" stroke-width="3"/>
+    <rect x="654" y="88" width="16" height="18"/>
+    <line x1="662" y1="88" x2="662" y2="115" stroke="white" stroke-width="2"/>
+    <!-- Förderrad -->
+    <circle cx="662" cy="88" r="12" fill="none" stroke="white" stroke-width="2.5"/>
+    <line x1="662" y1="76" x2="662" y2="100" stroke="white" stroke-width="1.5"/>
+    <line x1="650" y1="88" x2="674" y2="88" stroke="white" stroke-width="1.5"/>
+    <!-- Felsige Küste rechts -->
+    <path d="M740,175 Q770,140 800,125 Q820,115 840,120 L840,175Z" opacity="0.20"/>
+    <!-- Perseus-Schild (Medusa-Motiv, stilisiert) -->
+    <circle cx="78" cy="130" r="28" fill="none" stroke="white" stroke-width="2" opacity="0.25"/>
+    <circle cx="78" cy="130" r="18" fill="none" stroke="white" stroke-width="1.5" opacity="0.20"/>
+    <line x1="78" y1="102" x2="78" y2="158" stroke="white" stroke-width="1.5" opacity="0.18"/>
+    <line x1="50" y1="130" x2="106" y2="130" stroke="white" stroke-width="1.5" opacity="0.18"/>
+  </svg>
+  <div class="sr-hero-overlay"></div>
+  <div class="sr-hero-content">
+    <p class="sr-hero-tag">Kykladen · Westägäis</p>
+    <h1 class="sr-hero-title">Serifos<em>Σέριφος</em></h1>
+    <p class="sr-hero-sub">Die Insel des Perseus und der Medusa — eine Chora hoch auf dem Fels, verrottende Erzminen an der Küste, wilde Berglandschaften ohne Touristen. Serifos ist rau, ehrlich und einer der letzten unberührten Orte der Kykladen.</p>
+    <div class="sr-hero-pills">
+      <span class="sr-hero-pill">Perseus-Mythos</span>
+      <span class="sr-hero-pill">Chora auf dem Fels</span>
+      <span class="sr-hero-pill">Erzminen</span>
+      <span class="sr-hero-pill">Wilde Buchten</span>
+      <span class="sr-hero-pill">Windmühlen</span>
+    </div>
+  </div>
+  <div class="sr-hero-waves"></div>
+</div>
+
+<div class="sr-stats-bar">
+  <div class="sr-stat-item">
+    <div class="sr-stat-num">1.400</div>
+    <div class="sr-stat-lbl">Einwohner</div>
+  </div>
+  <div class="sr-stat-item">
+    <div class="sr-stat-num">75 km²</div>
+    <div class="sr-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="sr-stat-item">
+    <div class="sr-stat-num">485 m</div>
+    <div class="sr-stat-lbl">Höchster Gipfel</div>
+  </div>
+  <div class="sr-stat-item">
+    <div class="sr-stat-num">72</div>
+    <div class="sr-stat-lbl">Strände &amp; Buchten</div>
+  </div>
+  <div class="sr-stat-item">
+    <div class="sr-stat-num">1905</div>
+    <div class="sr-stat-lbl">Erster Bergarbeiterstreik Griechenlands</div>
+  </div>
+</div>
+
+<div class="sr-content">
+
+  <!-- 1. GESCHICHTE -->
+  <section class="sr-section">
+    <div class="sr-section-head">
+      <p class="sr-section-label">01 — Geschichte</p>
+      <h2 class="sr-section-title">Perseus, Erz<br><em>und der erste Streik</em></h2>
+      <div class="sr-divider"></div>
+    </div>
+    <div class="sr-history-grid">
+      <div class="sr-history-text">
+        <p>Serifos ist eine der mythisch aufgeladensten Inseln der Ägäis. Hier landete Perseus mit dem Haupt der Medusa — und versteinerte den bösen König Polydektes mitsamt seinem Hofstaat. Die vielen merkwürdigen Felsformationen der Insel galten den Alten als der versteinerter Beweis: das ist kein Mythos, das ist Geologie als Erinnerung.</p>
+        <p>Die Erzlager von Serifos machten die Insel zu einem der bedeutendsten Bergbauzentren des antiken Mittelmeerraumes — Eisen, Kupfer und Blei wurden hier abgebaut, verschifft, gehandelt. Im frühen 20. Jahrhundert erlebte die Insel einen industriellen Boom: Griechische und französische Bergbaugesellschaften ließen tausende Arbeiter in die Minen. 1916 streikten diese Bergarbeiter als Erste in der griechischen Geschichte — ein Ereignis, das bis heute auf der Insel mit Stolz erinnert wird.</p>
+        <p>Nach dem Zweiten Weltkrieg schlossen die Minen. Das Erz war erschöpft, die Arbeiter gingen, die Insel schrumpfte. Die verwitterten Förderanlagen, Lagerhallen und Erzrutschen an der Küste sind geblieben — eine rostende Industriekulisse, die der Insel etwas Unverwechselbares gibt, das keine andere Kykladennachbarinsel hat.</p>
+      </div>
+      <div class="sr-timeline">
+        <div class="sr-tl-item">
+          <div class="sr-tl-dot"></div>
+          <div class="sr-tl-year">Mythische Zeit</div>
+          <div class="sr-tl-event">Perseus landet auf Serifos mit dem Haupt der Medusa. Er versteinert König Polydektes — die unzähligen Felsblöcke der Insel gelten als seine versteinerter Hofstaat. Der Mythos ist in die Landschaft eingeschrieben.</div>
+        </div>
+        <div class="sr-tl-item">
+          <div class="sr-tl-dot"></div>
+          <div class="sr-tl-year">8. Jh. v. Chr.</div>
+          <div class="sr-tl-event">Serifos wird durch seine Erzlager bekannt. Eisen und Kupfer machen die Insel zum Zentrum des ägäischen Bergbaus. Die Chora entsteht auf dem uneinnehmbar wirkenden Felsgipfel.</div>
+        </div>
+        <div class="sr-tl-item">
+          <div class="sr-tl-dot"></div>
+          <div class="sr-tl-year">13. Jh.</div>
+          <div class="sr-tl-event">Venezianische Herrschaft. Die Chora wird befestigt, das Kastro in die Häuserstruktur integriert. Piratenangriffe zwingen die Bewohner zur permanenten Wachsamkeit — die Insel verteidigt sich durch ihre Topografie.</div>
+        </div>
+        <div class="sr-tl-item">
+          <div class="sr-tl-dot"></div>
+          <div class="sr-tl-year">1880–1930</div>
+          <div class="sr-tl-event">Industrieller Bergbau-Boom. Französische und griechische Gesellschaften fördern Eisenerz in großem Maßstab. Tausende Arbeiter kommen auf die Insel, Kaimauern entstehen, Erzrutschen führen direkt ins Meer.</div>
+        </div>
+        <div class="sr-tl-item">
+          <div class="sr-tl-dot"></div>
+          <div class="sr-tl-year">1916</div>
+          <div class="sr-tl-event">Der erste Bergarbeiterstreik Griechenlands auf Serifos — Arbeiter fordern bessere Löhne und Bedingungen. Der Streik wird niedergeschlagen, die Anführer erschossen. Ein Denkmal in Livadi erinnert an die Toten.</div>
+        </div>
+        <div class="sr-tl-item">
+          <div class="sr-tl-dot"></div>
+          <div class="sr-tl-year">Heute</div>
+          <div class="sr-tl-event">Serifos lebt vom sanften Tourismus und der Landwirtschaft. Die Minen-Ruinen sind kein Museum — sie stehen einfach da, zwischen Buchten und Ziegen. Diese Unberührtheit ist das wertvollste Kapital der Insel.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SEHENSWÜRDIGKEITEN -->
+  <section class="sr-section">
+    <div class="sr-section-head">
+      <p class="sr-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="sr-section-title">Chora, Minen<br><em>und Buchten ohne Namen</em></h2>
+      <div class="sr-divider"></div>
+    </div>
+    <div class="sr-sights-grid">
+
+      <div class="sr-sight-card">
+        <div class="sr-sight-visual sv-sr-chora"></div>
+        <div class="sr-sight-body">
+          <p class="sr-sight-cat">Hauptdorf · Wahrzeichen</p>
+          <h3 class="sr-sight-name">Chora</h3>
+          <p class="sr-sight-desc">Die Hauptstadt von Serifos thront auf einem 230 Meter hohen Felsgipfel — eine der dramatischsten Lagen aller Kykladen-Chorai. Die Gassen sind so steil, dass manche Treppenstufen haben. Oben: ein venezianisches Kastro, sieben Windmühlen, und ein Blick auf die halbe Ägäis.</p>
+        </div>
+      </div>
+
+      <div class="sr-sight-card">
+        <div class="sr-sight-visual sv-sr-kastro"></div>
+        <div class="sr-sight-body">
+          <p class="sr-sight-cat">Venezianisch · Mittelalter</p>
+          <h3 class="sr-sight-name">Kastro &amp; Windmühlen</h3>
+          <p class="sr-sight-desc">Das venezianische Kastro auf dem Gipfel der Chora ist eines der besterhaltenen der Kykladen — die Häuser bilden die Mauer, die Gassen sind dunkel und kühl. Daneben stehen sieben Windmühlen in einer Reihe wie Wachposten. Zusammen ergeben sie eine Silhouette, die kein Fotograf vergisst.</p>
+        </div>
+      </div>
+
+      <div class="sr-sight-card">
+        <div class="sr-sight-visual sv-sr-minen"></div>
+        <div class="sr-sight-body">
+          <p class="sr-sight-cat">Industriegeschichte · Ruinen</p>
+          <h3 class="sr-sight-name">Erzminen-Ruinen</h3>
+          <p class="sr-sight-desc">An der Küste bei Mega Livadi stehen die rostenden Überreste des Bergbau-Booms: Fördergerüste, Lagerhallen, Erzrutschen, die direkt ins Meer führen. Eine Industriekulisse von eigentümlicher Schönheit, die an kein anderes Kykladen-Erlebnis erinnert. Die Natur holt sich alles langsam zurück.</p>
+        </div>
+      </div>
+
+      <div class="sr-sight-card">
+        <div class="sr-sight-visual sv-sr-psili"></div>
+        <div class="sr-sight-body">
+          <p class="sr-sight-cat">Strand · Abgeschiedenheit</p>
+          <h3 class="sr-sight-name">Psili Ammos</h3>
+          <p class="sr-sight-desc">Der feinste Strand der Insel — grob übersetzt „feiner Sand" — eine enge Bucht mit türkisblauem Wasser und steil abfallenden Hängen. Keine Straße führt hin, nur ein Fußweg oder das Wassertaxi. Eine Taverne, viele Katzen, vollkommene Stille.</p>
+        </div>
+      </div>
+
+      <div class="sr-sight-card">
+        <div class="sr-sight-visual sv-sr-livadi"></div>
+        <div class="sr-sight-body">
+          <p class="sr-sight-cat">Hafen · Strandbucht</p>
+          <h3 class="sr-sight-name">Livadi</h3>
+          <p class="sr-sight-event">Der Hafen und die größte Bucht der Insel — breiter Sandstrand, Tavernen am Kai, Fischerboote und Wassertaxis. Das Denkmal der Bergarbeiter von 1916 steht direkt am Hafen. Abends sitzen alle hier — Einheimische und Gäste, Schiffe und Fahrräder.</p>
+        </div>
+      </div>
+
+      <div class="sr-sight-card">
+        <div class="sr-sight-visual sv-sr-trail"></div>
+        <div class="sr-sight-body">
+          <p class="sr-sight-cat">Wandern · Wildnis</p>
+          <h3 class="sr-sight-name">Bergpfade &amp; Megalithen</h3>
+          <p class="sr-sight-desc">Das Innere von Serifos ist eine andere Welt — trockene Hügel, Trockensteinmauern, verlassene Kapellen und vereinzelt verstreute Megalithblöcke, die der Perseus-Mythos verursacht haben soll. Der Weg von Livadi zur Chora zu Fuß: eine Stunde, 230 Höhenmeter, unvergesslich.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. ESSEN & TAVERNEN -->
+  <section class="sr-section">
+    <div class="sr-section-head">
+      <p class="sr-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="sr-section-title">Rau, ehrlich<br><em>und aus dem Meer</em></h2>
+      <div class="sr-divider"></div>
+    </div>
+    <div class="sr-tav-grid">
+
+      <div class="sr-tav-card">
+        <div class="sr-tav-top">
+          <div>
+            <h3 class="sr-tav-name">Takis</h3>
+            <div class="sr-tav-loc">📍 Chora, oberer Platz</div>
+          </div>
+          <div class="sr-tav-stars">★★★★★</div>
+        </div>
+        <p class="sr-tav-desc">Das beste Lokal der Chora — auf dem oberen Platz, mit direktem Blick auf das Kastro und die sieben Windmühlen. Die Küche ist griechisch ohne Schnörkel: Ziegenfleisch aus dem Ofen, Salate mit lokalem Käse, Wein aus dem Plastikkanister. Abends immer voll.</p>
+        <div class="sr-tav-dishes">
+          <span class="sr-tav-dish">Ziegenfleisch aus dem Ofen</span>
+          <span class="sr-tav-dish">Rote Bohneneintopf</span>
+          <span class="sr-tav-dish">Lokaler Hartkäse</span>
+        </div>
+        <p class="sr-tav-price">Preisklasse: <span>€ · Abendessen · Einheimische</span></p>
+      </div>
+
+      <div class="sr-tav-card">
+        <div class="sr-tav-top">
+          <div>
+            <h3 class="sr-tav-name">Margarita</h3>
+            <div class="sr-tav-loc">📍 Livadi, Hafen</div>
+          </div>
+          <div class="sr-tav-stars">★★★★★</div>
+        </div>
+        <p class="sr-tav-desc">Das älteste Restaurant am Hafen von Livadi — seit drei Generationen in derselben Familie, die Tische stehen direkt am Wasser. Tagesfrischer Fisch, Meeresfrüchte, Oktopus vom Grill. Der Serifos-Hummer — falls verfügbar — ist legendär auf der Insel.</p>
+        <div class="sr-tav-dishes">
+          <span class="sr-tav-dish">Serifos-Hummer (saisonal)</span>
+          <span class="sr-tav-dish">Gegrillter Seebarsch</span>
+          <span class="sr-tav-dish">Taramosalata</span>
+        </div>
+        <p class="sr-tav-price">Preisklasse: <span>€€ · Hafen · Fisch &amp; Meeresfrüchte</span></p>
+      </div>
+
+      <div class="sr-tav-card">
+        <div class="sr-tav-top">
+          <div>
+            <h3 class="sr-tav-name">Stamatis</h3>
+            <div class="sr-tav-loc">📍 Livadi, Strandpromenade</div>
+          </div>
+          <div class="sr-tav-stars">★★★★☆</div>
+        </div>
+        <p class="sr-tav-desc">Die Strandtaverne für den langen Mittag — Tische im Schatten, Blick auf die Bucht, die Bestellung kommt wann sie kommt. Das ist kein Fehler, das ist Serifos. Einfache Mezes, gegrilltes Fleisch, frische Tsatziki. Der lokale Wein ist besser als sein Preis vermuten lässt.</p>
+        <div class="sr-tav-dishes">
+          <span class="sr-tav-dish">Mezes-Auswahl</span>
+          <span class="sr-tav-dish">Gegrillte Lammkoteletts</span>
+          <span class="sr-tav-dish">Tzatziki &amp; Brot</span>
+        </div>
+        <p class="sr-tav-price">Preisklasse: <span>€ · Mittag · Strand</span></p>
+      </div>
+
+      <div class="sr-tav-card">
+        <div class="sr-tav-top">
+          <div>
+            <h3 class="sr-tav-name">Psili Ammos Taverna</h3>
+            <div class="sr-tav-loc">📍 Psili Ammos, Sandstrand</div>
+          </div>
+          <div class="sr-tav-stars">★★★★★</div>
+        </div>
+        <p class="sr-tav-desc">Die einzige Taverne an der abgelegensten Bucht der Insel — erreichbar nur zu Fuß oder per Boot. Ein einfacher Tisch, ein paar Stühle, ein Fischer der kocht was er gefangen hat. Keine Karte, kein Menü, keine Möglichkeit, enttäuscht zu werden. Das ist das reinste Serifos.</p>
+        <div class="sr-tav-dishes">
+          <span class="sr-tav-dish">Fang des Tages</span>
+          <span class="sr-tav-dish">Gegrillter Oktopus</span>
+          <span class="sr-tav-dish">Horiatiki</span>
+        </div>
+        <p class="sr-tav-price">Preisklasse: <span>€ · Nur per Boot · Legendär</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. ORTE & CHARAKTER -->
+  <section class="sr-section">
+    <div class="sr-section-head">
+      <p class="sr-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="sr-section-title">Eine Insel<br><em>die sich nichts gefallen lässt</em></h2>
+      <div class="sr-divider"></div>
+    </div>
+    <div class="sr-viertel-grid">
+
+      <div class="sr-viertel-card">
+        <div class="sr-viertel-emoji">🏔️</div>
+        <h3 class="sr-viertel-name">Chora</h3>
+        <p class="sr-viertel-desc">Die höchstgelegene Hauptstadt der westlichen Kykladen — Treppen statt Gassen, Kastro-Wände aus weißem Marmor, sieben Windmühlen gegen den Horizont. Abends glüht die Chora im Licht der untergehenden Sonne wie ein Edelstein.</p>
+      </div>
+
+      <div class="sr-viertel-card">
+        <div class="sr-viertel-emoji">⚓</div>
+        <h3 class="sr-viertel-name">Livadi</h3>
+        <p class="sr-viertel-desc">Der Hafen und Lebensmittelpunkt der Insel — breit, flach, entspannt. Das Denkmal der Bergarbeiter von 1916 steht direkt am Kai. Tavernen, Bootsvermietungen, der Bus zur Chora. Alles beginnt und endet in Livadi.</p>
+      </div>
+
+      <div class="sr-viertel-card">
+        <div class="sr-viertel-emoji">⚙️</div>
+        <h3 class="sr-viertel-name">Mega Livadi</h3>
+        <p class="sr-viertel-desc">Die verlassene Bergbausiedlung im Südwesten — leerstehende Arbeiterhäuser, verrostete Förderanlagen, Erzrutschen ins Meer. Stille, die schwer wiegt. Das industrielle Erbe von Serifos ist kein Touristenort, aber einer der eindrücklichsten Plätze der Insel.</p>
+      </div>
+
+      <div class="sr-viertel-card">
+        <div class="sr-viertel-emoji">🌊</div>
+        <h3 class="sr-viertel-name">Buchten &amp; Strände</h3>
+        <p class="sr-viertel-desc">72 Buchten — die meisten ohne Straße, ohne Liegen, ohne Namen auf Tourismuskarten. Psili Ammos, Agios Sostis, Platis Gialos: jede anders, jede unverbaut. Wassertaxis verbinden die Unzugänglichen.</p>
+      </div>
+
+      <div class="sr-viertel-card">
+        <div class="sr-viertel-emoji">🐐</div>
+        <h3 class="sr-viertel-name">Innenland</h3>
+        <p class="sr-viertel-desc">Das Innere von Serifos ist fast menschenleer — Ziegenherden, Trockensteinmauern, verlassene Kapellen, vereinzelte Bauernhöfe. Die Felsblöcke wirken wie hingeworfen — der Mythos vom Haupt der Medusa fühlt sich hier wahr an.</p>
+      </div>
+
+      <div class="sr-viertel-card">
+        <div class="sr-viertel-emoji">🌿</div>
+        <h3 class="sr-viertel-name">Klostertal</h3>
+        <p class="sr-viertel-desc">Das Taxiarchis-Kloster im Norden der Insel — eines der ältesten der Kykladen, in einem grünen Tal versteckt das seinesgleichen sucht. Zypressenwälder, Wasserquellen, byzantinische Fresken. Ein anderes Serifos.</p>
+      </div>
+
+    </div>
+
+    <div class="sr-tip-banner">
+      <div class="sr-tip-emoji">⚒️</div>
+      <div class="sr-tip-text">
+        <h3>Mega Livadi: wo der Rost zur Schönheit wird</h3>
+        <p>Am südwestlichen Ende der Insel stehen die Ruinen des Bergbau-Booms — Fördergerüste, die aussehen wie Gerippe, Erzrutschen die direkt ins türkisblaue Meer tauchen, Arbeiterhäuser deren Dächer längst eingestürzt sind. Hier fand 1916 der erste Streik der griechischen Arbeitergeschichte statt, hier wurden Männer erschossen. Kein Museumsschild erklärt das, keine Touristengruppe kommt. Die Geschichte liegt einfach da, unter dem Rost und dem Meer, und wartet auf jeden, der sie sehen will.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>

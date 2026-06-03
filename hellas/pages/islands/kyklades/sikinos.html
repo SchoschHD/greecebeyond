@@ -1,1 +1,373 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sikinos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="sikinos.css" />
+</head>
+<body>
+<div id="sikinos-page">
 
+<div class="sk-back-bar">
+  <button class="sk-back-btn" type="button" onclick="closeSikinos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="sk-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Sikinos</span></p>
+</div>
+
+<div class="sk-hero">
+  <div class="sk-hero-bg"></div>
+  <div class="sk-hero-dots"></div>
+  <!-- Kastro/Chora auf Fels + Hephaistia-Tempel + Terrassenfelder Silhouette -->
+  <svg class="sk-hero-silhouette" viewBox="0 0 840 175" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Meereslinie -->
+    <path d="M0,164 Q210,153 420,161 Q630,169 840,156 L840,175 L0,175Z" opacity="0.20"/>
+    <!-- Terrassenhügel links -->
+    <path d="M0,175 Q50,155 100,145 Q140,137 160,175Z" opacity="0.16"/>
+    <!-- Terrassenlinien -->
+    <line x1="20" y1="168" x2="80" y2="160" stroke="white" stroke-width="1.5" opacity="0.20"/>
+    <line x1="30" y1="162" x2="100" y2="152" stroke="white" stroke-width="1.5" opacity="0.18"/>
+    <line x1="45" y1="156" x2="120" y2="146" stroke="white" stroke-width="1.5" opacity="0.16"/>
+    <!-- Hauptberg Kastro -->
+    <path d="M140,175 Q210,95 280,65 Q330,45 360,175Z" opacity="0.25"/>
+    <!-- Kastro-Dorf auf Gipfel -->
+    <rect x="234" y="38" width="96" height="32"/>
+    <rect x="230" y="28" width="104" height="12"/>
+    <!-- Häuserreihe -->
+    <rect x="238" y="20" width="16" height="12"/>
+    <rect x="260" y="16" width="18" height="16"/>
+    <rect x="284" y="14" width="16" height="18"/>
+    <rect x="306" y="18" width="16" height="14"/>
+    <!-- Klosterturm links im Kastro -->
+    <rect x="238" y="2" width="14" height="22"/>
+    <ellipse cx="245" cy="2" rx="10" ry="6"/>
+    <!-- Zweiter Hügel — Hephaistia-Tempel -->
+    <path d="M480,175 Q530,105 580,78 Q610,62 625,175Z" opacity="0.22"/>
+    <!-- Antiker Tempel auf Hügel (Hephaistia / Episkopi) -->
+    <!-- Tempel-Podium -->
+    <rect x="537" y="68" width="76" height="14"/>
+    <rect x="533" y="78" width="84" height="6"/>
+    <!-- Säulen -->
+    <rect x="540" y="34" width="6" height="34"/>
+    <rect x="554" y="34" width="6" height="34"/>
+    <rect x="568" y="34" width="6" height="34"/>
+    <rect x="582" y="34" width="6" height="34"/>
+    <rect x="596" y="34" width="6" height="34"/>
+    <!-- Tempel-Giebel -->
+    <polygon points="533,34 575,8 617,34"/>
+    <!-- Giebel-Füllung -->
+    <rect x="543" y="18" width="64" height="16" opacity="0.6"/>
+    <!-- Olivenbäume Silhouette -->
+    <ellipse cx="700" cy="140" rx="22" ry="16"/>
+    <rect x="698" y="140" width="4" height="25"/>
+    <ellipse cx="730" cy="145" rx="18" ry="13"/>
+    <rect x="728" y="145" width="4" height="22"/>
+    <ellipse cx="756" cy="138" rx="20" ry="15"/>
+    <rect x="754" y="138" width="4" height="24"/>
+    <ellipse cx="780" cy="143" rx="16" ry="12"/>
+    <rect x="778" y="143" width="4" height="20"/>
+    <!-- Weinreben-Motiv rechts -->
+    <path d="M800,155 Q810,145 820,155 Q830,145 840,150" fill="none" stroke="white" stroke-width="2" opacity="0.25"/>
+    <circle cx="808" cy="150" r="4" opacity="0.22"/>
+    <circle cx="820" cy="148" r="3" opacity="0.20"/>
+    <circle cx="832" cy="152" r="4" opacity="0.22"/>
+  </svg>
+  <div class="sk-hero-overlay"></div>
+  <div class="sk-hero-content">
+    <p class="sk-hero-tag">Kykladen · Westägäis</p>
+    <h1 class="sk-hero-title">Sikinos<em>Σίκινος</em></h1>
+    <p class="sk-hero-sub">Die vergessene Kykladeninsel — ein antiker Tempel mitten im Bergland, ein Kastro-Dorf das kaum jemand kennt, Weinberge und Olivenhaine auf Terrassenfeldern. Sikinos ist das, was Santorini einmal war, bevor es jemand entdeckte.</p>
+    <div class="sk-hero-pills">
+      <span class="sk-hero-pill">Episkopi-Tempel</span>
+      <span class="sk-hero-pill">Kastro &amp; Chora</span>
+      <span class="sk-hero-pill">Terrassenfelder</span>
+      <span class="sk-hero-pill">Eigener Wein</span>
+      <span class="sk-hero-pill">Absolute Stille</span>
+    </div>
+  </div>
+  <div class="sk-hero-waves"></div>
+</div>
+
+<div class="sk-stats-bar">
+  <div class="sk-stat-item">
+    <div class="sk-stat-num">250</div>
+    <div class="sk-stat-lbl">Einwohner</div>
+  </div>
+  <div class="sk-stat-item">
+    <div class="sk-stat-num">41 km²</div>
+    <div class="sk-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="sk-stat-item">
+    <div class="sk-stat-num">3. Jh.</div>
+    <div class="sk-stat-lbl">Episkopi-Tempel</div>
+  </div>
+  <div class="sk-stat-item">
+    <div class="sk-stat-num">1 Bus</div>
+    <div class="sk-stat-lbl">Auf der ganzen Insel</div>
+  </div>
+  <div class="sk-stat-item">
+    <div class="sk-stat-num">#1</div>
+    <div class="sk-stat-lbl">Ruhigste Kykladeninsel</div>
+  </div>
+</div>
+
+<div class="sk-content">
+
+  <!-- 1. GESCHICHTE -->
+  <section class="sk-section">
+    <div class="sk-section-head">
+      <p class="sk-section-label">01 — Geschichte</p>
+      <h2 class="sk-section-title">Wein, Marmor<br><em>und tausend Jahre Schweigen</em></h2>
+      <div class="sk-divider"></div>
+    </div>
+    <div class="sk-history-grid">
+      <div class="sk-history-text">
+        <p>Sikinos hat die meiste Zeit seiner Geschichte damit verbracht, vergessen zu werden — und das ist vielleicht das Beste, was ihr passieren konnte. Während die Nachbarinseln von Venezianern, Türken und schließlich Touristen umgestaltet wurden, blieb Sikinos fast unverändert: eine Insel der Bauern, Fischer und Winzer, die ihre eigene Zeitrechnung pflegten.</p>
+        <p>Das wichtigste Erbe der Insel steht auf einem Berghügel im Süden: der Episkopi-Tempel, ein antikes Heiligtum aus dem 3. Jahrhundert n. Chr., das später zur byzantinischen Kirche umgebaut wurde und heute als eine der seltsamsten architektonischen Schichten der Kykladen gilt — antike Säulen tragen byzantinische Bögen, venezianische Mauerteile schließen das Ganze ab. Die Geschichte der Insel in einem Gebäude.</p>
+        <p>Das Kastro-Dorf Sikinos — eigentlich zwei verbundene Siedlungen, Kastro und Chora — sitzt auf einem Felsrücken und wurde nie von Piraten eingenommen. Nicht wegen seiner Mauern, sondern wegen seiner Lage: Wer Sikinos nicht kannte, fand es nicht. Diese Unsichtbarkeit schützte die Insel durch Jahrhunderte — und schützt sie, in gewissem Sinne, noch heute.</p>
+      </div>
+      <div class="sk-timeline">
+        <div class="sk-tl-item">
+          <div class="sk-tl-dot"></div>
+          <div class="sk-tl-year">3000 v. Chr.</div>
+          <div class="sk-tl-event">Erste Besiedlung in der Frühkykladenzeit. Die Insel heißt damals Oenoe — „Weininsel". Die Weinproduktion auf terrassierten Hängen beginnt eine Tradition, die bis heute andauert.</div>
+        </div>
+        <div class="sk-tl-item">
+          <div class="sk-tl-dot"></div>
+          <div class="sk-tl-year">3. Jh. n. Chr.</div>
+          <div class="sk-tl-event">Bau des Hephaistia-Tempels auf dem Hügel Episkopi — ein römisch-antikes Heiligtum, möglicherweise dem Gott Hephaistos geweiht. Der Tempel ist eines der besterhaltenen antiken Bauwerke der Kykladen.</div>
+        </div>
+        <div class="sk-tl-item">
+          <div class="sk-tl-dot"></div>
+          <div class="sk-tl-year">7.–9. Jh.</div>
+          <div class="sk-tl-event">Der antike Tempel wird zur byzantinischen Kirche umgebaut — die Säulen bleiben, die Apsis wird eingefügt, die Funktion wechselt. Das Ergebnis ist eine der merkwürdigsten Mischarchitekturen der gesamten Ägäis.</div>
+        </div>
+        <div class="sk-tl-item">
+          <div class="sk-tl-dot"></div>
+          <div class="sk-tl-year">13. Jh.</div>
+          <div class="sk-tl-event">Venezianische Herrschaft. Das Kastro entsteht auf dem Felsgipfel — kompakt, selbst als Mauer gedacht, mit kaum erkennbaren Eingängen von außen. Piratenschiffen bleibt Sikinos aufgrund seiner Abgelegenheit weitgehend verborgen.</div>
+        </div>
+        <div class="sk-tl-item">
+          <div class="sk-tl-dot"></div>
+          <div class="sk-tl-year">19. Jh.</div>
+          <div class="sk-tl-event">Sikinos bleibt nach der griechischen Unabhängigkeit arm und isoliert. Kaum Auswanderung, kaum Zuzug. Die Bevölkerung pflegt ihre Terrassenfelder, ihren Wein und ihre Kirchen — und wird von der Außenwelt kaum bemerkt.</div>
+        </div>
+        <div class="sk-tl-item">
+          <div class="sk-tl-dot"></div>
+          <div class="sk-tl-year">Heute</div>
+          <div class="sk-tl-event">Sikinos empfängt wenige hundert Gäste pro Sommer — hauptsächlich Griechen, die Ruhe suchen, und Reisende, die alle anderen Kykladen bereits kennen. Die Insel verändert sich kaum. Das ist keine Klage, das ist ein Versprechen.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SEHENSWÜRDIGKEITEN -->
+  <section class="sk-section">
+    <div class="sk-section-head">
+      <p class="sk-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="sk-section-title">Tempel, Kastro<br><em>und der Weg durch die Stille</em></h2>
+      <div class="sk-divider"></div>
+    </div>
+    <div class="sk-sights-grid">
+
+      <div class="sk-sight-card">
+        <div class="sk-sight-visual sv-sk-episkopi"></div>
+        <div class="sk-sight-body">
+          <p class="sk-sight-cat">Antike · Einzigartig</p>
+          <h3 class="sk-sight-name">Episkopi-Tempel</h3>
+          <p class="sk-sight-desc">Das Juwel der Insel — ein antiker Tempel aus dem 3. Jahrhundert, der im Mittelalter zur byzantinischen Kirche umgebaut wurde. Säulen tragen Bögen, römische Architektur trägt christliche Fresken. Auf einem einsamen Hügel gelegen, ohne Eintrittsgeld, ohne Aufsichtspersonal, ohne Touristen. Einfach da.</p>
+        </div>
+      </div>
+
+      <div class="sk-sight-card">
+        <div class="sk-sight-visual sv-sk-kastro"></div>
+        <div class="sk-sight-body">
+          <p class="sk-sight-cat">Mittelalter · Kastro-Dorf</p>
+          <h3 class="sk-sight-name">Kastro &amp; Chora</h3>
+          <p class="sk-sight-desc">Die Doppelsiedlung auf dem Felsgipfel — Kastro (das ältere, befestigte Dorf) und Chora (die neuere Erweiterung) fließen nahtlos ineinander. Weiße Häuser, blau getünchte Kapellen, eine Haupt-Platia unter einem alten Maulbeerbaum. Kein Souvenirladen, kaum ein Touristengesicht.</p>
+        </div>
+      </div>
+
+      <div class="sk-sight-card">
+        <div class="sk-sight-visual sv-sk-moni"></div>
+        <div class="sk-sight-body">
+          <p class="sk-sight-cat">Kloster · Aussicht</p>
+          <h3 class="sk-sight-name">Kloster Zoodochos Pigi</h3>
+          <p class="sk-sight-desc">Das Kloster an der Westseite des Kastro — in die Felswand gebaut, mit einer Terrasse die über die gesamte westliche Ägäis blickt. Sonnenuntergänge von hier sind legendär auf der Insel. Das Kloster ist aktiv bewohnt und empfängt Besucher in angemessener Kleidung.</p>
+        </div>
+      </div>
+
+      <div class="sk-sight-card">
+        <div class="sk-sight-visual sv-sk-alopronia"></div>
+        <div class="sk-sight-body">
+          <p class="sk-sight-cat">Hafen · Bucht</p>
+          <h3 class="sk-sight-name">Alopronia</h3>
+          <p class="sk-sight-desc">Der einzige Hafen der Insel — ein paar Tavernen am Kai, ein breiter Sandstrand, das Fährschiff zweimal pro Woche. Alopronia ist kein Ziel, sondern ein Anfang und ein Ende: Hier beginnt Sikinos, und hier verabschiedet man sich — meistens schwerer als erwartet.</p>
+        </div>
+      </div>
+
+      <div class="sk-sight-card">
+        <div class="sk-sight-visual sv-sk-weinberge"></div>
+        <div class="sk-sight-body">
+          <p class="sk-sight-cat">Landschaft · Tradition</p>
+          <h3 class="sk-sight-name">Terrassenfelder &amp; Weinberge</h3>
+          <p class="sk-sight-desc">Das Innere von Sikinos ist eine Landschaft aus Trockensteinmauern, Terrassenfeldern und jahrhundertealten Olivenhainen. Der lokale Wein — Sikinos trägt seit der Antike den Beinamen „Oenoe", Weininsel — wird noch in kleinen Familienweingütern produziert und kaum exportiert.</p>
+        </div>
+      </div>
+
+      <div class="sk-sight-card">
+        <div class="sk-sight-visual sv-sk-strand"></div>
+        <div class="sk-sight-body">
+          <p class="sk-sight-cat">Strände · Einsamkeit</p>
+          <h3 class="sk-sight-name">Agios Georgios &amp; Dialiskari</h3>
+          <p class="sk-sight-desc">Die ruhigsten Strände der westlichen Kykladen — keine Infrastruktur, keine Touristen, kaum erreichbar ohne Boot oder langen Fußweg. Dialiskari im Norden ist fast kreisförmig und so abgelegen, dass man tagelang der einzige Besucher sein kann. Das ist kein Versprechen, das ist Statistik.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. ESSEN & TAVERNEN -->
+  <section class="sk-section">
+    <div class="sk-section-head">
+      <p class="sk-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="sk-section-title">Lokaler Wein<br><em>und die Küche der Stille</em></h2>
+      <div class="sk-divider"></div>
+    </div>
+    <div class="sk-tav-grid">
+
+      <div class="sk-tav-card">
+        <div class="sk-tav-top">
+          <div>
+            <h3 class="sk-tav-name">To Kastro</h3>
+            <div class="sk-tav-loc">📍 Kastro, Hauptplatz</div>
+          </div>
+          <div class="sk-tav-stars">★★★★★</div>
+        </div>
+        <p class="sk-tav-desc">Die Taverne auf dem zentralen Platz des Kastro — unter dem ältesten Platanen der Insel, mit Blick auf die abendbeleuchteten Kirchenfassaden. Die Küche ist das, was griechische Hausmannskost im besten Sinne bedeutet: langsam geschmortes Lamm, frische Horiatiki, selbst eingelegte Oliven vom eigenen Baum.</p>
+        <div class="sk-tav-dishes">
+          <span class="sk-tav-dish">Geschmortes Lamm</span>
+          <span class="sk-tav-dish">Eigene eingelegte Oliven</span>
+          <span class="sk-tav-dish">Sikinos-Hauswein</span>
+        </div>
+        <p class="sk-tav-price">Preisklasse: <span>€ · Abendessen · Kastro-Platz</span></p>
+      </div>
+
+      <div class="sk-tav-card">
+        <div class="sk-tav-top">
+          <div>
+            <h3 class="sk-tav-name">Meltemi</h3>
+            <div class="sk-tav-loc">📍 Alopronia, Hafen</div>
+          </div>
+          <div class="sk-tav-stars">★★★★★</div>
+        </div>
+        <p class="sk-tav-desc">Die Hafentaverne von Alopronia — Tische direkt am Wasser, Blick auf die ankommenden Fähren, tagesfrischer Fisch. Das Meltemi ist die erste Adresse für Meeresfrüchte auf der Insel: Oktopus vom Holzkohlegrill, Garnelen mit Feta im Tontopf, lokale Weißweine die nirgendwo sonst zu finden sind.</p>
+        <div class="sk-tav-dishes">
+          <span class="sk-tav-dish">Oktopus vom Holzkohlegrill</span>
+          <span class="sk-tav-dish">Garnelen Saganaki</span>
+          <span class="sk-tav-dish">Lokaler Weißwein</span>
+        </div>
+        <p class="sk-tav-price">Preisklasse: <span>€€ · Hafen · Fisch &amp; Wein</span></p>
+      </div>
+
+      <div class="sk-tav-card">
+        <div class="sk-tav-top">
+          <div>
+            <h3 class="sk-tav-name">Klimataria</h3>
+            <div class="sk-tav-loc">📍 Chora, Nebengasse</div>
+          </div>
+          <div class="sk-tav-stars">★★★★★</div>
+        </div>
+        <p class="sk-tav-desc">Das versteckteste Restaurant der Insel — in einer Nebengasse der Chora, mit einer kleinen Terrasse unter Weinranken. Keine Speisekarte, nur was die Wirtin heute gekocht hat. Gefüllte Zucchiniblüten, Ziegenragout mit Rosmarin, Tiropita aus dem Ofen. Wer es findet, kommt jeden Abend wieder.</p>
+        <div class="sk-tav-dishes">
+          <span class="sk-tav-dish">Gefüllte Zucchiniblüten</span>
+          <span class="sk-tav-dish">Ziegenragout mit Rosmarin</span>
+          <span class="sk-tav-dish">Hausgemachte Tiropita</span>
+        </div>
+        <p class="sk-tav-price">Preisklasse: <span>€ · Abendessen · Kein Menü</span></p>
+      </div>
+
+      <div class="sk-tav-card">
+        <div class="sk-tav-top">
+          <div>
+            <h3 class="sk-tav-name">Kafeneion tis Platias</h3>
+            <div class="sk-tav-loc">📍 Kastro-Platz, ganztags</div>
+          </div>
+          <div class="sk-tav-stars">★★★★☆</div>
+        </div>
+        <p class="sk-tav-desc">Das Kaffehaus auf dem Hauptplatz des Kastro — kein Restaurant, kein Touristencafé, sondern der Ort wo die Inselbewohner den Tag beginnen und beenden. Griechischer Mokka, Tsipuro, einfache Mezedakia. Wer sich hier eine Stunde hinsetzt und zuhört, lernt mehr über Sikinos als jeder Reiseführer verrät.</p>
+        <div class="sk-tav-dishes">
+          <span class="sk-tav-dish">Griechischer Mokka</span>
+          <span class="sk-tav-dish">Tsipuro mit Mezedakia</span>
+          <span class="sk-tav-dish">Loukoumades</span>
+        </div>
+        <p class="sk-tav-price">Preisklasse: <span>€ · Ganztags · Einheimische</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. ORTE & CHARAKTER -->
+  <section class="sk-section">
+    <div class="sk-section-head">
+      <p class="sk-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="sk-section-title">Eine Insel<br><em>die die Zeit vergessen hat</em></h2>
+      <div class="sk-divider"></div>
+    </div>
+    <div class="sk-viertel-grid">
+
+      <div class="sk-viertel-card">
+        <div class="sk-viertel-emoji">🏰</div>
+        <h3 class="sk-viertel-name">Kastro &amp; Chora</h3>
+        <p class="sk-viertel-desc">Die Doppelhauptstadt auf dem Felsrücken — zwei Dörfer, die so organisch zusammengewachsen sind, dass niemand mehr sagen kann, wo das eine endet und das andere beginnt. Kein Tourismusbüro, kein Informationsschild, nur Gassen und Katzen und Glockentürme.</p>
+      </div>
+
+      <div class="sk-viertel-card">
+        <div class="sk-viertel-emoji">🏛️</div>
+        <h3 class="sk-viertel-name">Episkopi</h3>
+        <p class="sk-viertel-desc">Der antike Tempel auf dem Bergplateau — einer der wenigen Orte der Kykladen, an dem man ein Monument aus dem 3. Jahrhundert ohne Eintrittspreis, Absperrung oder andere Besucher erleben kann. Die Geschichte liegt offen da, ohne Erklärung.</p>
+      </div>
+
+      <div class="sk-viertel-card">
+        <div class="sk-viertel-emoji">⚓</div>
+        <h3 class="sk-viertel-name">Alopronia</h3>
+        <p class="sk-viertel-desc">Der Hafen am Fuß der Insel — ein paar Häuser, ein paar Tavernen, die Fähre zweimal pro Woche. Alopronia ist das Nadelöhr zwischen Sikinos und dem Rest der Welt. Wer ankert, atmet auf. Wer abreist, schaut lange zurück.</p>
+      </div>
+
+      <div class="sk-viertel-card">
+        <div class="sk-viertel-emoji">🍇</div>
+        <h3 class="sk-viertel-name">Weingüter</h3>
+        <p class="sk-viertel-desc">Sikinos ist seit der Antike eine Weininsel — der lokale Wein aus Asyrtiko- und Mandilaria-Trauben wird in kleinen Familienbetrieben produziert, fast nie exportiert, selten beschriftet. Man trinkt ihn aus dem Fass, direkt beim Winzer, für einen Preis der sich falsch anfühlt.</p>
+      </div>
+
+      <div class="sk-viertel-card">
+        <div class="sk-viertel-emoji">🌿</div>
+        <h3 class="sk-viertel-name">Terrassenlandschaft</h3>
+        <p class="sk-viertel-desc">Das Innere der Insel ist eine der schönsten Kulturlandschaften der Kykladen — Trockensteinmauern, Olivenhaine, Gersten- und Gemüsefelder auf terrassierten Hängen. Die Pfade zwischen den Feldern sind die ältesten Wege der Insel.</p>
+      </div>
+
+      <div class="sk-viertel-card">
+        <div class="sk-viertel-emoji">🌅</div>
+        <h3 class="sk-viertel-name">Kloster &amp; Aussicht</h3>
+        <p class="sk-viertel-desc">Das Kloster Zoodochos Pigi am Westrand des Kastro — die Terrasse bietet den schönsten Sonnenuntergang der Insel. Die Mönche sind freundlich und ruhig. Nichts hier drängt, nichts hier wartet. Man kommt, wenn man kommt.</p>
+      </div>
+
+    </div>
+
+    <div class="sk-tip-banner">
+      <div class="sk-tip-emoji">🍷</div>
+      <div class="sk-tip-text">
+        <h3>Wein vom Fass und ein Tempel ohne Eintrittskarte</h3>
+        <p>Auf Sikinos gibt es zwei Dinge, die man nirgendwo sonst in den Kykladen so erlebt: Erstens den Episkopi-Tempel — ein antikes Bauwerk aus dem 3. Jahrhundert, das niemand abgesperrt hat, das keine Öffnungszeiten kennt und das man bei Sonnenaufgang ganz allein besuchen kann, während die Ziegen um einen herum grasen. Zweitens den Wein — angeboten in Kannen, direkt vom Winzer, ohne Etikett, ohne Preisliste. Man fragt, man bekommt, man bezahlt was fair ist. Das ist Sikinos: eine Insel die noch nicht gelernt hat, sich zu verkaufen, und genau deshalb unbezahlbar ist.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>
