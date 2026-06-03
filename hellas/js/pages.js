@@ -264,3 +264,12 @@ function openSchinoussa() {
   }
 }
 function closeSchinoussa() { closePage('schinoussa-page'); }
+
+function openSymi() {
+  if (typeof loadPage === 'function') {
+    loadPage('symi-page', 'islands/dodekanes/symi.html').then(() => openPage('symi-page'));
+  } else {
+    openPage('symi-page');
+  }
+}
+function closeSymi() { closePage('symi-page'); }    
