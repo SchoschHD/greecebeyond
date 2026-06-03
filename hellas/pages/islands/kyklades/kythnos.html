@@ -1,1 +1,384 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kythnos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="kythnos.css" />
+</head>
+<body>
+<div id="kythnos-page">
 
+<div class="kt-back-bar">
+  <button class="kt-back-btn" onclick="closeKythnos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="kt-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Kythnos</span></p>
+</div>
+
+<div class="kt-hero">
+  <div class="kt-hero-bg"></div>
+  <div class="kt-hero-steam"></div>
+  <!-- Kythnos Silhouette: Dryopida mit Ziegeldächern, Chora-Hügel, Thermalbad Loutra, Kolona-Sandbank -->
+  <svg class="kt-hero-silhouette" viewBox="0 0 920 168" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Hügel Chora Mitte -->
+    <path d="M280,168 L288,125 Q330,85 390,66 Q440,52 480,58 Q520,65 545,90 Q565,112 572,135 L580,148 L580,168Z"/>
+    <!-- Häuser Chora — ZIEGELDÄCHER (Dreieck-Giebel statt flach) -->
+    <rect x="312" y="118" width="22" height="18"/>
+    <polygon points="308,118 323,104 338,118"/>
+    <rect x="342" y="108" width="22" height="28"/>
+    <polygon points="338,108 353,93 368,108"/>
+    <rect x="372" y="100" width="24" height="36"/>
+    <polygon points="368,100 384,84 400,100"/>
+    <rect x="402" y="96" width="24" height="40"/>
+    <polygon points="398,96 414,80 430,96"/>
+    <rect x="432" y="98" width="22" height="38"/>
+    <polygon points="428,98 443,83 458,98"/>
+    <rect x="460" y="104" width="20" height="32"/>
+    <polygon points="456,104 470,90 484,104"/>
+    <rect x="487" y="112" width="20" height="24"/>
+    <polygon points="483,112 497,98 511,112"/>
+    <!-- Kirchturm Chora -->
+    <rect x="506" y="72" width="28" height="40"/>
+    <ellipse cx="520" cy="70" rx="14" ry="7"/>
+    <rect x="517" y="52" width="8" height="20"/>
+    <path d="M515,52 Q520,44 525,52Z"/>
+    <!-- Hügel links Dryopida -->
+    <path d="M0,168 L0,130 Q40,95 90,78 Q130,65 165,70 Q200,76 220,100 Q235,118 240,140 L250,155 L250,168Z"/>
+    <!-- Dryopida Häuser mit Ziegeldächern -->
+    <rect x="60" y="118" width="18" height="22"/>
+    <polygon points="56,118 69,105 82,118"/>
+    <rect x="85" y="108" width="18" height="32"/>
+    <polygon points="81,108 94,94 107,108"/>
+    <rect x="110" y="102" width="20" height="38"/>
+    <polygon points="106,102 120,87 134,102"/>
+    <rect x="138" y="106" width="18" height="34"/>
+    <polygon points="134,106 147,92 160,106"/>
+    <!-- Thermalbad Loutra rechts: neoklassizistisches Gebäude mit Säulen -->
+    <rect x="680" y="108" width="80" height="48"/>
+    <rect x="674" y="99" width="92" height="11"/>
+    <!-- Säulen -->
+    <rect x="688" y="108" width="7" height="48"/>
+    <rect x="703" y="108" width="7" height="48"/>
+    <rect x="718" y="108" width="7" height="48"/>
+    <rect x="733" y="108" width="7" height="48"/>
+    <rect x="748" y="108" width="7" height="48"/>
+    <polygon points="674,99 720,74 766,99"/>
+    <!-- Dampfwölkchen über Loutra -->
+    <ellipse cx="700" cy="65" rx="10" ry="6" opacity="0.4"/>
+    <ellipse cx="720" cy="58" rx="8" ry="5" opacity="0.35"/>
+    <ellipse cx="740" cy="63" rx="9" ry="5" opacity="0.38"/>
+    <!-- Kolona Sandbank ganz rechts -->
+    <path d="M840,155 Q860,148 880,152 Q900,156 920,150 L920,168 L840,168Z" opacity="0.5"/>
+    <path d="M836,160 Q858,152 880,157 Q902,162 920,155 L920,168 L836,168Z" opacity="0.3"/>
+    <!-- Kastro Oria Felsfragment links oben -->
+    <rect x="30" y="55" width="40" height="25" rx="1" opacity="0.6"/>
+    <rect x="24" y="48" width="52" height="9"/>
+    <rect x="27" y="38" width="10" height="12"/>
+    <rect x="44" y="38" width="10" height="12"/>
+    <rect x="58" y="38" width="10" height="12"/>
+    <!-- Meer -->
+    <path d="M0,156 Q230,146 460,152 Q690,158 920,148 L920,168 L0,168Z" opacity="0.24"/>
+  </svg>
+  <div class="kt-hero-overlay"></div>
+  <div class="kt-hero-waves"></div>
+  <div class="kt-hero-content">
+    <p class="kt-hero-tag">Westkykladen · Thermia</p>
+    <h1 class="kt-hero-title">Kythnos<em>Κύθνος · Θερμιά</em></h1>
+    <p class="kt-hero-sub">Die Insel mit zwei Namen und einer heißen Quelle, die seit neuntausend Jahren Menschen anzieht — Kythnos ist die Westkykladeninsel, die mit Ziegeldächern, Thermalwasser und der ältesten Siedlung des Archipels bezaubert.</p>
+    <div class="kt-hero-pills">
+      <span class="kt-hero-pill">Thermalquellen Loutra</span>
+      <span class="kt-hero-pill">Maroulas 9000 v. Chr.</span>
+      <span class="kt-hero-pill">Kolona-Doppelstrand</span>
+      <span class="kt-hero-pill">Höhle Katafyki</span>
+      <span class="kt-hero-pill">Königin Amalia zur Kur</span>
+    </div>
+  </div>
+</div>
+
+<div class="kt-thermia-strip">
+  <div class="kt-thermia-item">Offizieller Zweitname: Thermia</div>
+  <div class="kt-thermia-item">1,5 h Fähre ab Lavrion / 2,5 h ab Piräus</div>
+  <div class="kt-thermia-item">Älteste Siedlung der Kykladen: 9000 v. Chr.</div>
+  <div class="kt-thermia-item">Ziegeldächer — einzigartig in den Kykladen</div>
+  <div class="kt-thermia-item">52°C heißes Thermalwasser in Loutra</div>
+</div>
+
+<div class="kt-stats-bar">
+  <div class="kt-stat-item">
+    <div class="kt-stat-num">~1.500</div>
+    <div class="kt-stat-lbl">Einwohner</div>
+  </div>
+  <div class="kt-stat-item">
+    <div class="kt-stat-num">99 km²</div>
+    <div class="kt-stat-lbl">Fläche</div>
+  </div>
+  <div class="kt-stat-item">
+    <div class="kt-stat-num">52 °C</div>
+    <div class="kt-stat-lbl">Thermalquelle Kakavos</div>
+  </div>
+  <div class="kt-stat-item">
+    <div class="kt-stat-num">9.000 v. Chr.</div>
+    <div class="kt-stat-lbl">Maroulas — ält. Kykladen-Siedlung</div>
+  </div>
+  <div class="kt-stat-item">
+    <div class="kt-stat-num">10 km</div>
+    <div class="kt-stat-lbl">Höhle Katafyki</div>
+  </div>
+</div>
+
+<div class="kt-content">
+
+  <section class="kt-section">
+    <div class="kt-section-head">
+      <p class="kt-section-label">01 — Geschichte</p>
+      <h2 class="kt-section-title">Von der ältesten Siedlung<br><em>zur Insel der Königinnen</em></h2>
+      <div class="kt-divider"></div>
+    </div>
+    <div class="kt-history-grid">
+      <div class="kt-history-text">
+        <p>Bei Maroulas im Nordosten der Insel gruben Archäologen eine mesolithische Siedlung aus dem neunten Jahrtausend vor Christus frei — die älteste bekannte Siedlung der gesamten Kykladen, möglicherweise die älteste Griechenlands. Runde Häuser, Steingräber, Obsidianwerkzeug. Die Menschen kamen wegen des Wassers. Sie fanden die heiße Quelle. Sie blieben.</p>
+        <p>Kythnos spielte in der Bronzezeit und Antike eine bedeutende Rolle in der frühen Metallurgie des Ägäisraums — Kupfer- und Eisenerzvorkommen wurden hier abgebaut und verschifft. Im Mittelalter hieß die Insel Thermia, „die Warme", nach ihren Heilquellen, die 1782 durch Nikolaos Mavrogenis, Dolmetscher der osmanischen Flotte, erstmals offiziell erschlossen wurden. Das erste Kurhaus entstand 1857 nach Plänen von Christian Hansen — dem dänischen Architekten, der auch das Athener Observatorium entwarf. Den Anbau zeichnete Ernst Ziller.</p>
+        <p>In den 1830er Jahren reiste Amalia, die Gemahlin König Ottos — des ersten Königs des modernen Griechenland — regelmäßig zur Kur nach Loutra. Die königliche Präsenz verlieh der Insel einen Glanz, der sie aus den anderen Westkykladen heraushob. Heute kommen die Griechen noch immer — für das Thermalwasser, die Ruhe, die Ziegeldächer von Dryopida und die Sandbank von Kolona.</p>
+      </div>
+      <div class="kt-timeline">
+        <div class="kt-tl-item">
+          <div class="kt-tl-dot"></div>
+          <div class="kt-tl-year">ca. 9.000 v. Chr.</div>
+          <div class="kt-tl-event">Mesolithische Siedlung bei Maroulas — runde Häuser, Steingräber, Obsidianwerkzeug. Die älteste bekannte Siedlung der Kykladen und eine der ältesten Griechenlands überhaupt.</div>
+        </div>
+        <div class="kt-tl-item">
+          <div class="kt-tl-dot"></div>
+          <div class="kt-tl-year">Bronzezeit</div>
+          <div class="kt-tl-event">Kythnos wird zu einem Zentrum früher Metallurgie — Kupfer- und Eisenerz werden abgebaut und über den Hafen exportiert. Die Insel ist reich, vernetzt, strategisch wichtig.</div>
+        </div>
+        <div class="kt-tl-item">
+          <div class="kt-tl-dot"></div>
+          <div class="kt-tl-year">Antike</div>
+          <div class="kt-tl-event">Vryokastro im Norden wird zur Hauptstadt — eine antike Stadt mit Stadtmauern, Häusern und zwei Kirchen, die erst im 16. Jahrhundert von den Osmanen zerstört wird. Die Thermalquellen sind seit der Antike in Gebrauch.</div>
+        </div>
+        <div class="kt-tl-item">
+          <div class="kt-tl-dot"></div>
+          <div class="kt-tl-year">Mittelalter</div>
+          <div class="kt-tl-event">Die Insel erhält den Namen Thermia — „die Warme". Venezianer errichten das Kastro Orias im Norden als Schutzfestung. Dryopida, mit seinen ungewöhnlichen Ziegeldächern, wird zur alten Hauptstadt.</div>
+        </div>
+        <div class="kt-tl-item">
+          <div class="kt-tl-dot"></div>
+          <div class="kt-tl-year">1782–1857</div>
+          <div class="kt-tl-event">Mavrogenis erschließt die Thermalquellen offiziell. 1857: Christian Hansen entwirft das Kurhaus. Ernst Ziller ergänzt den neoklassizistischen Anbau. Königin Amalia kommt zur Kur — Loutra wird zur königlichen Adresse.</div>
+        </div>
+        <div class="kt-tl-item">
+          <div class="kt-tl-dot"></div>
+          <div class="kt-tl-year">Heute</div>
+          <div class="kt-tl-event">~1.500 Einwohner, keine Massentourismus. Beliebtes Wochenendziel für Athener und Griechen. Thermalquellen, Ziegeldächer, Kolona-Sandbank und die tiefste Höhle der Kykladen warten ohne Eintritt und ohne Warteschlange.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kt-section">
+    <div class="kt-section-head">
+      <p class="kt-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="kt-section-title">Quellen, Sandbank<br><em>und eine Höhle ohne Ende</em></h2>
+      <div class="kt-divider"></div>
+    </div>
+    <div class="kt-sights-grid">
+
+      <div class="kt-sight-card">
+        <div class="kt-sight-visual sv-kt-loutra"></div>
+        <div class="kt-sight-body">
+          <p class="kt-sight-cat">Thermalquellen · Kurort</p>
+          <h3 class="kt-sight-name">Loutra & die Thermalquellen</h3>
+          <p class="kt-sight-desc">Im Nordosten der Insel, in einer geschlossenen Bucht — zwei Thermalquellen vulkanischen Ursprungs, seit der Antike genutzt. Agioi Anargyroi fließt ins Hydrotherapiezentrum, Kakavos mit 52 °C direkt ins Meer. Das neoklassizistische Kurhaus von Christian Hansen (1857) steht noch — und erinnert daran, dass Königin Amalia hier ihr Bad nahm.</p>
+        </div>
+      </div>
+
+      <div class="kt-sight-card">
+        <div class="kt-sight-visual sv-kt-kolona"></div>
+        <div class="kt-sight-body">
+          <p class="kt-sight-cat">Strand · Wahrzeichen</p>
+          <h3 class="kt-sight-name">Kolona Beach</h3>
+          <p class="kt-sight-desc">Der berühmteste Strand der Insel — eine 200 Meter lange Sandbank verbindet das Festland mit einer vorgelagerten Felsinsel und schafft zwei Buchten gleichzeitig: links azurblau und windgeschützt, rechts offen und wellenbewegt. Einer der schönsten Doppelstrände der Ägäis.</p>
+        </div>
+      </div>
+
+      <div class="kt-sight-card">
+        <div class="kt-sight-visual sv-kt-dryopida"></div>
+        <div class="kt-sight-body">
+          <p class="kt-sight-cat">Dorf · Ziegeldächer</p>
+          <h3 class="kt-sight-name">Dryopida</h3>
+          <p class="kt-sight-desc">Die alte Hauptstadt — versteckt in einem grünen Tal, mit Ziegeldächern statt der üblichen flachen Kykladendächer. Das ist kein Zufall: Dryopida wurde von Menschen aus der Peloponnes besiedelt, die ihre Bautradition mitbrachten. Das Folklore-Museum und die enge Schlucht dahinter sind der schönste Teil.</p>
+        </div>
+      </div>
+
+      <div class="kt-sight-card">
+        <div class="kt-sight-visual sv-kt-katafyki"></div>
+        <div class="kt-sight-body">
+          <p class="kt-sight-cat">Höhle · Natur</p>
+          <h3 class="kt-sight-name">Höhle Katafyki</h3>
+          <p class="kt-sight-desc">„Die Zuflucht" — nahe Dryopida, eine der größten Höhlen Griechenlands mit etwa 10 Kilometern Länge und Stalaktiten und Stalagmiten, die über Jahrhunderte gewachsen sind. Im Mittelalter nutzten die Einwohner sie als Schutz vor Piratenüberfällen. Kein Massentourismus, kein Kassenhäuschen.</p>
+        </div>
+      </div>
+
+      <div class="kt-sight-card">
+        <div class="kt-sight-visual sv-kt-oria"></div>
+        <div class="kt-sight-body">
+          <p class="kt-sight-cat">Venezianisch · Ruine</p>
+          <h3 class="kt-sight-name">Kastro Orias</h3>
+          <p class="kt-sight-desc">Im Norden der Insel, auf einem Kap — die Ruinen der mittelalterlichen Hauptstadt und venezianischen Festung, auch Kastro Katakefalo genannt. Mauerteile, Häuserreste, zwei Kirchenfundamente. Die Stadt wurde im 16. Jahrhundert von den Osmanen zerstört. Der Wanderweg von Loutra dorthin ist der schönste der Insel.</p>
+        </div>
+      </div>
+
+      <div class="kt-sight-card">
+        <div class="kt-sight-visual sv-kt-maroulas"></div>
+        <div class="kt-sight-body">
+          <p class="kt-sight-cat">Mesolithikum · Archäologie</p>
+          <h3 class="kt-sight-name">Maroulas (9000 v. Chr.)</h3>
+          <p class="kt-sight-desc">Die älteste Siedlung der Kykladen — im Nordosten der Insel, nahe Loutra. Runde Steinhäuser, Gräber, Obsidianwerkzeuge aus der Mittelsteinzeit. Die Ausgrabungen zeigten eine Gemeinschaft, die Jagd, Fischerei und erste Landwirtschaft verband. Das archäologische Museum in Chora zeigt die Funde.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="kt-section">
+    <div class="kt-section-head">
+      <p class="kt-section-label">03 — Tavernen & Küche</p>
+      <h2 class="kt-section-title">Savor, Sfougkata<br><em>und Amygdalota aus Loutra</em></h2>
+      <div class="kt-divider"></div>
+    </div>
+    <div class="kt-tav-grid">
+
+      <div class="kt-tav-card">
+        <div class="kt-tav-top">
+          <div>
+            <h3 class="kt-tav-name">To Kandouni</h3>
+            <div class="kt-tav-loc">📍 Chora (Messaria), Hauptgasse</div>
+          </div>
+          <div class="kt-tav-stars">★★★★★</div>
+        </div>
+        <p class="kt-tav-desc">Die Stammtaverne von Chora — unter einem Weinstock, mit Holztischen und einer Küche, die auf lokale Spezialitäten setzt, die man sonst kaum findet. Das Savor — marinierter Fisch in Essig, Knoblauch und Rosmarin — ist das Signature-Gericht der Insel, und hier wird es am besten gemacht. Die Sfougkata, kykladische Käsekroketten, kommen frisch aus der Pfanne.</p>
+        <div class="kt-tav-dishes">
+          <span class="kt-tav-dish">Savor (marinierter Fisch)</span>
+          <span class="kt-tav-dish">Sfougkata</span>
+          <span class="kt-tav-dish">Lokaler Wein</span>
+        </div>
+        <p class="kt-tav-price">Preisklasse: <span>€€ · Mittag & Abend · Einheimische</span></p>
+      </div>
+
+      <div class="kt-tav-card">
+        <div class="kt-tav-top">
+          <div>
+            <h3 class="kt-tav-name">Ostria</h3>
+            <div class="kt-tav-loc">📍 Loutra, direkt am Meer</div>
+          </div>
+          <div class="kt-tav-stars">★★★★★</div>
+        </div>
+        <p class="kt-tav-desc">In Loutra, wo das Thermalwasser auf das Meer trifft — eine Taverne mit Tischen auf dem Steg, täglich frischem Fang und der besten Aussicht der Bucht. Nach dem Thermalbad, hungrig und entspannt, ist ein Tisch bei Ostria das Beste, was der Tag noch bieten kann. Hummer nach Saison, Muscheln aus der Bucht.</p>
+        <div class="kt-tav-dishes">
+          <span class="kt-tav-dish">Hummer nach Saison</span>
+          <span class="kt-tav-dish">Muscheln saganaki</span>
+          <span class="kt-tav-dish">Gegrillter Fisch</span>
+        </div>
+        <p class="kt-tav-price">Preisklasse: <span>€€€ · Mittag & Abend · Am Steg</span></p>
+      </div>
+
+      <div class="kt-tav-card">
+        <div class="kt-tav-top">
+          <div>
+            <h3 class="kt-tav-name">Taverna Dryopida</h3>
+            <div class="kt-tav-loc">📍 Dryopida, Dorfplatz</div>
+          </div>
+          <div class="kt-tav-stars">★★★★☆</div>
+        </div>
+        <p class="kt-tav-desc">Auf dem Platz unter dem Ziegeldach — die einzige Taverne von Dryopida, die dafür alles richtig macht. Kalopia, die lokale Pastete mit Reis, Wildgemüse und Kräutern, ist das Gericht, das man nirgendwo sonst auf der Insel findet. Lamm aus dem Lehmofen, Käse vom Nachbarschaf. Kein Touristenmenü.</p>
+        <div class="kt-tav-dishes">
+          <span class="kt-tav-dish">Kalopia (Kräuterpastete)</span>
+          <span class="kt-tav-dish">Arnaki im Lehmofen</span>
+          <span class="kt-tav-dish">Pitaro (Käsepastete)</span>
+        </div>
+        <p class="kt-tav-price">Preisklasse: <span>€€ · Mittagessen</span></p>
+      </div>
+
+      <div class="kt-tav-card">
+        <div class="kt-tav-top">
+          <div>
+            <h3 class="kt-tav-name">Kolona Beach Taverne</h3>
+            <div class="kt-tav-loc">📍 Kolona, Sandbank</div>
+          </div>
+          <div class="kt-tav-stars">★★★★☆</div>
+        </div>
+        <p class="kt-tav-desc">Direkt an der Sandbank von Kolona — man schwimmt auf einer Seite, isst auf der anderen. Einfache Küche, frischer Fisch, Salat, Ouzo. Die Tische stehen halb im Sand, die Sandbank ist 50 Meter entfernt, und niemand stört. Das Beste: die Amygdalota zum Dessert — Mandelgebäck aus Loutra, das man sich als Souvenir einsteckt.</p>
+        <div class="kt-tav-dishes">
+          <span class="kt-tav-dish">Fisch des Tages</span>
+          <span class="kt-tav-dish">Choriatiki</span>
+          <span class="kt-tav-dish">Amygdalota</span>
+        </div>
+        <p class="kt-tav-price">Preisklasse: <span>€€ · Mittags am Strand</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="kt-section">
+    <div class="kt-section-head">
+      <p class="kt-section-label">04 — Orte & Buchten</p>
+      <h2 class="kt-section-title">Von Merichas<br><em>bis zur heißen Quelle im Meer</em></h2>
+      <div class="kt-divider"></div>
+    </div>
+    <div class="kt-viertel-grid">
+
+      <div class="kt-viertel-card">
+        <div class="kt-viertel-emoji">🏘️</div>
+        <h3 class="kt-viertel-name">Chora (Messaria)</h3>
+        <p class="kt-viertel-desc">Die Hauptstadt auf einem Hügel — weiße Häuser, mehrere Kirchen, malerische Hauptgasse mit Tavernen. 7 km vom Hafen. Abends gehört die Gasse den Einheimischen und Reisenden gemeinsam.</p>
+      </div>
+
+      <div class="kt-viertel-card">
+        <div class="kt-viertel-emoji">⚓</div>
+        <h3 class="kt-viertel-name">Merichas (Hafen)</h3>
+        <p class="kt-viertel-desc">Der Haupthafen der Insel — kleiner Fischerhafen, Fähranlegepunkt, Taverne am Pier. Ausgangspunkt für Bootstouren zu den Weststranden. Abends angenehm ruhig.</p>
+      </div>
+
+      <div class="kt-viertel-card">
+        <div class="kt-viertel-emoji">♨️</div>
+        <h3 class="kt-viertel-name">Loutra</h3>
+        <p class="kt-viertel-eco">Der Kurort — seit der Antike bewohnt, seit 1857 mit Kurhaus. Die Quelle Kakavos fließt mit 52 °C direkt ins Meer. Das neoklassizistische Gebäude von Hansen und Ziller steht am Ufer. Gratis Baden im Thermalwasser.</p>
+      </div>
+
+      <div class="kt-viertel-card">
+        <div class="kt-viertel-emoji">🏠</div>
+        <h3 class="kt-viertel-name">Dryopida</h3>
+        <p class="kt-viertel-desc">Die alte Hauptstadt mit Ziegeldächern — das unkykladischste Dorf der Kykladen, in einem grünen Tal versteckt. Die Höhle Katafyki beginnt am Dorfrand. Das Folklore-Museum lohnt eine Stunde.</p>
+      </div>
+
+      <div class="kt-viertel-card">
+        <div class="kt-viertel-emoji">🏖️</div>
+        <h3 class="kt-viertel-name">Episkopi & Apokrousi</h3>
+        <p class="kt-viertel-desc">Die Ostküstenstrände — Episkopi nahe Chora mit feinem Sand, Apokrousi im Norden mit Tamarisken-Schatten. Ruhiger als Kolona, kaum Liegestühle, kaum Lärm. Die Strände für einen ganzen ruhigen Tag.</p>
+      </div>
+
+      <div class="kt-viertel-card">
+        <div class="kt-viertel-emoji">⛵</div>
+        <h3 class="kt-viertel-name">Kanala & Südspitze</h3>
+        <p class="kt-viertel-desc">Im Süden: die Kapelle Panagia Kanala auf einer bewaldeten Halbinsel — Wallfahrtsort, mit dem schönsten Kiefernwald der Insel. Kalo Livadi nebenan: naturbelassener Sandstrand unter Tamarisken.</p>
+      </div>
+
+    </div>
+
+    <div class="kt-tip-banner">
+      <div class="kt-tip-emoji">♨️</div>
+      <div class="kt-tip-text">
+        <h3>Die Quelle, die ins Meer fließt</h3>
+        <p>In Loutra gibt es eine Stelle, die man kennen muss: Am Nordende des Strandes fließt die Thermalquelle Kakavos direkt ins Meer — 52 Grad Celsius, eisenhaltig, dunkel. Man steht am Ufer und sieht, wie das heiße Wasser ins kühle Meerwasser strömt, eine sichtbare Grenze aus zwei Temperaturen. Man watet hinein und findet den Punkt, wo beides zusammenkommt — warm auf einer Körperseite, kühl auf der anderen. Die Stelle ist kostenlos, immer zugänglich, und jeder auf der Insel weiß, wo sie ist. Königin Amalia wusste es auch.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>
