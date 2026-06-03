@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agathonissi — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="agathonissi.css" />
+</head>
+<body>
+<div id="agathonissi-page">
+
+<div class="ag-back-bar">
+  <button class="ag-back-btn" onclick="closeAgathonissi()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ag-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Agathonissi</span></p>
+</div>
+
+<div class="ag-hero">
+  <div class="ag-hero-bg"></div>
+  <div class="ag-hero-stars"></div>
+  <!-- Agathonissi Silhouette: hügelige Insel, Megalo Chorio unsichtbar vom Meer (hinter Hügel),
+       Hafen Agios Georgios, Mikro Chorio, türkische Küste in der Ferne, Patrouillenschiff -->
+  <svg class="ag-hero-silhouette" viewBox="0 0 920 165" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Haupthügel Megalo Chorio — vom Meer aus UNSICHTBAR, dahinter -->
+    <path d="M280,165 L285,128 Q320,90 375,70 Q420,55 460,60 Q500,66 525,88 Q545,108 550,132 L558,148 L558,165Z"/>
+    <!-- Megalo Chorio hinter dem Hügel — nur Dächer sichtbar -->
+    <rect x="360" y="92" width="16" height="12" opacity="0.5"/>
+    <rect x="382" y="86" width="16" height="12" opacity="0.5"/>
+    <rect x="404" y="82" width="16" height="12" opacity="0.5"/>
+    <rect x="426" y="84" width="16" height="12" opacity="0.5"/>
+    <!-- Steinmauer rund um Megalo Chorio (Piratenschutz) -->
+    <path d="M345,105 Q400,80 455,88 Q480,94 495,105" stroke="white" stroke-width="3" fill="none" opacity="0.4"/>
+    <!-- Hafen Agios Georgios links unten -->
+    <path d="M80,165 L85,138 Q110,115 140,108 Q165,103 185,110 Q205,118 212,135 L218,152 L218,165Z"/>
+    <!-- Häuser Agios Georgios am Hafen -->
+    <rect x="108" y="125" width="16" height="18" rx="1"/>
+    <rect x="130" y="120" width="16" height="23" rx="1"/>
+    <rect x="152" y="118" width="14" height="25" rx="1"/>
+    <rect x="172" y="122" width="14" height="21" rx="1"/>
+    <!-- Hafen-Kai -->
+    <rect x="75" y="148" width="80" height="6" rx="1"/>
+    <!-- Kleines Fischerboot -->
+    <path d="M88,148 L88,142 L108,140 L108,148Z" opacity="0.6"/>
+    <!-- Patrouillenschiff rechts -->
+    <path d="M750,138 L750,130 Q780,124 820,126 Q850,128 870,133 L870,138Z"/>
+    <rect x="790" y="118" width="10" height="14"/>
+    <path d="M788,118 Q795,110 802,118Z"/>
+    <!-- Mikro Chorio — kleiner Hügel Mitte -->
+    <path d="M218,165 L222,140 Q245,115 268,108 Q285,103 298,108 Q312,114 318,132 L320,148 L320,165Z"/>
+    <!-- Mikro Chorio Häuser (wenige, teils leer) -->
+    <rect x="248" y="122" width="14" height="14" rx="1" opacity="0.6"/>
+    <rect x="267" y="117" width="14" height="19" rx="1" opacity="0.6"/>
+    <rect x="286" y="120" width="12" height="16" rx="1" opacity="0.4"/>
+    <!-- Kapelle Agios Panteleimon auf Hügel -->
+    <rect x="270" y="100" width="18" height="14" rx="1"/>
+    <polygon points="267,100 279,88 291,100"/>
+    <rect x="277" y="84" width="6" height="8"/>
+    <!-- Kastraki Hügel rechts mit antiken Resten -->
+    <path d="M630,165 L635,132 Q660,100 698,85 Q725,75 748,80 Q768,87 775,108 L778,130 L780,165Z"/>
+    <!-- Antike Mauerreste Kastraki -->
+    <rect x="668" y="95" width="36" height="8" rx="1" opacity="0.5"/>
+    <rect x="662" y="88" width="44" height="9" rx="0"/>
+    <rect x="664" y="80" width="10" height="10" opacity="0.4"/>
+    <rect x="684" y="78" width="10" height="11" opacity="0.4"/>
+    <rect x="704" y="80" width="10" height="10" opacity="0.4"/>
+    <!-- Türkische Küste in Ferne — ganz rechts, flach -->
+    <path d="M820,128 Q860,118 920,122 L920,165 L820,165Z" opacity="0.18"/>
+    <!-- Meer -->
+    <path d="M0,155 Q230,145 460,151 Q690,157 920,147 L920,165 L0,165Z" opacity="0.22"/>
+  </svg>
+  <div class="ag-hero-overlay"></div>
+  <div class="ag-hero-waves"></div>
+  <div class="ag-hero-content">
+    <p class="ag-hero-tag">Dodekanes · Nördlichste Spitze · Zwischen Samos und Patmos</p>
+    <h1 class="ag-hero-title">Agathonissi<em>Αγαθονήσι</em></h1>
+    <p class="ag-hero-sub">Die Insel der Guten — benannt nach dem Charakter ihrer Bewohner, 15 Kilometer von der türkischen Küste, mit drei Orten, einer Handvoll Tavernen und Dörfern, die vom Meer aus unsichtbar gebaut wurden, um die Piraten zu täuschen.</p>
+    <div class="ag-hero-pills">
+      <span class="ag-hero-pill">„Agatho" — die Guten</span>
+      <span class="ag-hero-pill">Seeschlacht 1824</span>
+      <span class="ag-hero-pill">Megalo & Mikro Chorio</span>
+      <span class="ag-hero-pill">15 km zur Türkei</span>
+      <span class="ag-hero-pill">Antike Kastraki</span>
+    </div>
+  </div>
+</div>
+
+<div class="ag-agatho-strip">
+  <div class="ag-agatho-item">~110 Einwohner ganzjährig</div>
+  <div class="ag-agatho-item">14,5 km² Fläche</div>
+  <div class="ag-agatho-item">3 Orte · 3 Tavernen am Hafen</div>
+  <div class="ag-agatho-item">Nördlichste Insel des Dodekanes</div>
+  <div class="ag-agatho-item">Kein Autoverleih · kein Geldautomat</div>
+</div>
+
+<div class="ag-stats-bar">
+  <div class="ag-stat-item">
+    <div class="ag-stat-num">~110</div>
+    <div class="ag-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ag-stat-item">
+    <div class="ag-stat-num">14,5 km²</div>
+    <div class="ag-stat-lbl">Fläche</div>
+  </div>
+  <div class="ag-stat-item">
+    <div class="ag-stat-num">15 km</div>
+    <div class="ag-stat-lbl">Entfernung zur Türkei</div>
+  </div>
+  <div class="ag-stat-item">
+    <div class="ag-stat-num">1824</div>
+    <div class="ag-stat-lbl">Seeschlacht von Gerontas</div>
+  </div>
+  <div class="ag-stat-item">
+    <div class="ag-stat-num">494 v. Chr.</div>
+    <div class="ag-stat-lbl">Erste historische Erwähnung</div>
+  </div>
+</div>
+
+<div class="ag-content">
+
+  <section class="ag-section">
+    <div class="ag-section-head">
+      <p class="ag-section-label">01 — Geschichte</p>
+      <h2 class="ag-section-title">Die unsichtbaren Dörfer<br><em>und die Seeschlacht vor der Küste</em></h2>
+      <div class="ag-divider"></div>
+    </div>
+    <div class="ag-history-grid">
+      <div class="ag-history-text">
+        <p>Der Name ist ein Versprechen: Agathonissi leitet sich von „agathos" — gut, gütig — ab und wurde der Insel von einem Lehrer und Priester namens Gianni Panagiotou gegeben, der in den 1920er Jahren von der Insel Fourni hierher kam und die außergewöhnliche Gastfreundschaft der Bewohner verewigen wollte. Davor hieß die Insel Gaidouronisi — Esels-Insel. Das klingt weniger einladend, war aber ehrlicher in Bezug auf die Topografie.</p>
+        <p>Die Dörfer Megalo Chorio und Mikro Chorio wurden nicht aus Bequemlichkeit auf den Hügeln gebaut, sondern aus strategischer Notwendigkeit: Sie sind vom Meer aus unsichtbar. Jahrhundertelang machten Piraten die Dodekanes-Gewässer unsicher — die Bewohner hatten gelernt, dass Sichtbarkeit gefährlich ist. Die Steinmauern rund um Megalo Chorio mit ihren wenigen großen Toren dienten als letzte Verteidigungslinie.</p>
+        <p>Am 29. August 1824 fand im Osten der Insel, bei der Meerenge Gerontas, eine der bedeutendsten Seeschlachten des griechischen Unabhängigkeitskriegs statt. Die griechische Flotte unter Georgios Sachtouris besiegte eine osmanische Flotte, die auf dem Weg war, Samos zu zerstören. Die Insel selbst stand dabei als stiller Zeuge am Rand — zu klein für Truppen, aber nah genug, um den Kanonendonner zu hören.</p>
+      </div>
+      <div class="ag-timeline">
+        <div class="ag-tl-item">
+          <div class="ag-tl-dot"></div>
+          <div class="ag-tl-year">494 v. Chr.</div>
+          <div class="ag-tl-event">Erste historische Erwähnung — Agathonissi taucht im Zusammenhang mit der ionischen Revolte gegen Persien auf. Die Insel war Doriern bekannt und diente als Ankerplatz in der nördlichen Dodekanes-Route.</div>
+        </div>
+        <div class="ag-tl-item">
+          <div class="ag-tl-dot"></div>
+          <div class="ag-tl-year">Antike</div>
+          <div class="ag-tl-event">Antike Siedlung Tragaia bei Kastraki im Norden — Mauerteile und ein kleines Museum belegen kontinuierliche Besiedlung. Byzantinische Ruinen in Tholi aus dem 11. Jahrhundert ergänzen die Schichtung.</div>
+        </div>
+        <div class="ag-tl-item">
+          <div class="ag-tl-dot"></div>
+          <div class="ag-tl-year">1294</div>
+          <div class="ag-tl-event">Erste dokumentierte mittelalterliche Erwähnung. Die Insel wechselt zwischen byzantinischem Einfluss und venetianisch-genuesischer Kontrolle. Megalo Chorio wird als Piraten-Schutzarchitektur angelegt.</div>
+        </div>
+        <div class="ag-tl-item">
+          <div class="ag-tl-dot"></div>
+          <div class="ag-tl-year">1522–1912</div>
+          <div class="ag-tl-event">Osmanische Herrschaft — zusammen mit dem Dodekanes. Die Insel bleibt peripherer Außenposten, zu klein für Garnisonen, zu abgelegen für Steuereintreiber. Die Bewohner leben von Fischfang und Subsistenzlandwirtschaft.</div>
+        </div>
+        <div class="ag-tl-item">
+          <div class="ag-tl-dot"></div>
+          <div class="ag-tl-year">29. August 1824</div>
+          <div class="ag-tl-event">Seeschlacht von Gerontas — die griechische Flotte unter Sachtouris schlägt die osmanische Armada vor der Ostküste der Insel. Eine der entscheidenden Seeschlachten des Unabhängigkeitskriegs, kaum bekannt außerhalb Griechenlands.</div>
+        </div>
+        <div class="ag-tl-item">
+          <div class="ag-tl-dot"></div>
+          <div class="ag-tl-year">1912–1948</div>
+          <div class="ag-tl-event">Italienische Besatzung (1912), deutsche Besatzung (1943–1944). Am 7. März 1948 wird Agathonissi zusammen mit dem gesamten Dodekanes offiziell Teil Griechenlands. Die Kaserne am Hafen erinnert an die strategische Grenzlage.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ag-section">
+    <div class="ag-section-head">
+      <p class="ag-section-label">02 — Orte & Buchten</p>
+      <h2 class="ag-section-title">Drei Dörfer, acht Buchten<br><em>und ein Mosaik auf dem Dorfplatz</em></h2>
+      <div class="ag-divider"></div>
+    </div>
+    <div class="ag-sights-grid">
+
+      <div class="ag-sight-card">
+        <div class="ag-sight-visual sv-ag-megalo"></div>
+        <div class="ag-sight-body">
+          <p class="ag-sight-cat">Hauptdorf · Piratenschutz</p>
+          <h3 class="ag-sight-name">Megalo Chorio</h3>
+          <p class="ag-sight-desc">Das größte und älteste Dorf der Insel — am Hang gebaut, vom Meer aus unsichtbar, von einer Steinmauer mit wenigen großen Toren umgeben. Der kleine gepflasterte Dorfplatz trägt ein Mosaikbild, das Agathonissi und die umliegenden Felseninseln zeigt. 10–15 Minuten Fußweg vom Hafen. Ein Laden, kein Kafenion.</p>
+        </div>
+      </div>
+
+      <div class="ag-sight-card">
+        <div class="ag-sight-visual sv-ag-georgios"></div>
+        <div class="ag-sight-body">
+          <p class="ag-sight-cat">Hafen · Hauptort</p>
+          <h3 class="ag-sight-name">Agios Georgios</h3>
+          <p class="ag-sight-desc">Der Hafen und de-facto-Hauptort — drei Tavernen, ein Kafenion, ein Minimarkt, die wenigen Pensionen der Insel. Der Kai schützt nach Süden, der Meltemi bläst aus dem Norden. Wenn die Fähre anlegt, ist die ganze Insel da. Eine Kaserne erinnert an die Grenzlage 15 km zur Türkei.</p>
+        </div>
+      </div>
+
+      <div class="ag-sight-card">
+        <div class="ag-sight-visual sv-ag-kastraki"></div>
+        <div class="ag-sight-body">
+          <p class="ag-sight-cat">Antike · Ruinen</p>
+          <h3 class="ag-sight-name">Kastraki & Tragaia</h3>
+          <p class="ag-sight-desc">Im Norden der Insel — Überreste einer antiken Siedlung auf einem Hügel, dazu ein kleines lokales Museum. Byzantinische Ruinen aus dem 11. Jahrhundert in Tholi ergänzen die Schichten. Der Weg dorthin führt durch Macchia, vorbei an alten Regenauffangbecken — die Insel hat kaum eigenes Süßwasser.</p>
+        </div>
+      </div>
+
+      <div class="ag-sight-card">
+        <div class="ag-sight-visual sv-ag-tholi"></div>
+        <div class="ag-sight-body">
+          <p class="ag-sight-cat">Mikrodorf · Stille</p>
+          <h3 class="ag-sight-name">Mikro Chorio</h3>
+          <p class="ag-sight-desc">Das kleine Dorf gegenüber von Megalo Chorio — rund 20 Einwohner, teils leerstehende Häuser, keine Taverne, kein Laden. Auf dem Hügel darüber: die Kapelle Agios Panteleimon, die am 27. Juli das Inselfest versammelt. An diesem Tag kommt jeder. Den Rest des Jahres ist Mikro Chorio die ruhigste Stelle der ohnehin ruhigen Insel.</p>
+        </div>
+      </div>
+
+      <div class="ag-sight-card">
+        <div class="ag-sight-visual sv-ag-poros"></div>
+        <div class="ag-sight-body">
+          <p class="ag-sight-cat">Strand · Osten</p>
+          <h3 class="ag-sight-name">Poros & Vathi Pigadi</h3>
+          <p class="ag-sight-desc">Im Osten der Insel — Poros, ein kleiner Kieselstrand mit außergewöhnlich klarem Wasser, und Vathi Pigadi darunter, nahe der Kapelle Agios Nikolaos. Beide nur per schmalen Pfad oder Boot erreichbar. Die Stille hier hat eine andere Qualität als am Hafen — tiefer, weiter, fast türkisch.</p>
+        </div>
+      </div>
+
+      <div class="ag-sight-card">
+        <div class="ag-sight-visual sv-ag-ammoudaki"></div>
+        <div class="ag-sight-body">
+          <p class="ag-sight-cat">Strand · Geheimtipp</p>
+          <h3 class="ag-sight-name">Ammoudaki Mikro & Megalo</h3>
+          <p class="ag-sight-desc">Im Südosten von Megalo Chorio — zwei kleine Sandbuchten, erreichbar über einen unmarkierten Pfad ab dem Ende der Dorfstraße. Mikro Ammoudaki bedeutet „Kleiner Sandstrand" — und er ist tatsächlich klein, wild und vollständig unerschlossen. Wasser mitnehmen, Schatten mitdenken.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ag-section">
+    <div class="ag-section-head">
+      <p class="ag-section-label">03 — Tavernen & Küche</p>
+      <h2 class="ag-section-title">Drei Tavernen am Kai,<br><em>alle mit dem gleichen Blick aufs Meer</em></h2>
+      <div class="ag-divider"></div>
+    </div>
+    <div class="ag-tav-grid">
+
+      <div class="ag-tav-card">
+        <div class="ag-tav-top">
+          <div>
+            <h3 class="ag-tav-name">Glaros (Seagull)</h3>
+            <div class="ag-tav-loc">📍 Agios Georgios, Kai</div>
+          </div>
+          <div class="ag-tav-stars">★★★★★</div>
+        </div>
+        <p class="ag-tav-desc">Die bekannteste Taverne der Insel — direkt neben dem Hafensteg, mit Tischen, die fast im Wasser stehen, und einem Wirt, der jeden Fischer kennt, der heute Morgen rausgefahren ist. Frischer Tintenfisch, gegrillter Fisch des Tages, Ouzo aus der Karaffe. Kein Menü auf Englisch, kein Problem — man zeigt auf das, was am Nachbartisch steht.</p>
+        <div class="ag-tav-dishes">
+          <span class="ag-tav-dish">Gegrillter Tintenfisch</span>
+          <span class="ag-tav-dish">Fisch des Tages</span>
+          <span class="ag-tav-dish">Choriatiki</span>
+        </div>
+        <p class="ag-tav-price">Preisklasse: <span>€€ · Mittag & Abend · Am Steg</span></p>
+      </div>
+
+      <div class="ag-tav-card">
+        <div class="ag-tav-top">
+          <div>
+            <h3 class="ag-tav-name">Taverne Giorgios</h3>
+            <div class="ag-tav-loc">📍 Agios Georgios, Hafenpromenade</div>
+          </div>
+          <div class="ag-tav-stars">★★★★★</div>
+        </div>
+        <p class="ag-tav-desc">Giorgios führt die Taverne seit Jahrzehnten — er ist mit einer Schwäbin verheiratet, was bedeutet, dass die Kommunikation manchmal auf Deutsch weitergeht, wenn das Griechisch nicht reicht. Frischer Fisch, hausgemachte Mezedes, Lamm nach Bestellung. Die Taverne, in der man aufhört, Tourist zu sein und anfängt, Gast zu sein.</p>
+        <div class="ag-tav-dishes">
+          <span class="ag-tav-dish">Mezedes hausgemacht</span>
+          <span class="ag-tav-dish">Oktopus mariniert</span>
+          <span class="ag-tav-dish">Lamm auf Bestellung</span>
+        </div>
+        <p class="ag-tav-price">Preisklasse: <span>€€ · Abendessen · Persönlich</span></p>
+      </div>
+
+      <div class="ag-tav-card">
+        <div class="ag-tav-top">
+          <div>
+            <h3 class="ag-tav-name">To Kafenion</h3>
+            <div class="ag-tav-loc">📍 Agios Georgios, Hafenplatz</div>
+          </div>
+          <div class="ag-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ag-tav-desc">Das Kafenion am Hafenplatz — morgens griechischer Kaffee, mittags Tsipouro mit Mezedes, abends der Ort, an dem Einheimische und Segler zusammenkommen. Keine Küche im klassischen Sinn, aber Oliven, Käse, getrockneter Fisch und das beste Gespräch der Insel. Man sitzt hier und schaut, wie die Patrouillenboote ablegen.</p>
+        <div class="ag-tav-dishes">
+          <span class="ag-tav-dish">Griechischer Kaffee</span>
+          <span class="ag-tav-dish">Tsipouro & Oliven</span>
+          <span class="ag-tav-dish">Lokaler Käse</span>
+        </div>
+        <p class="ag-tav-price">Preisklasse: <span>€ · Morgens bis Mitternacht</span></p>
+      </div>
+
+      <div class="ag-tav-card">
+        <div class="ag-tav-top">
+          <div>
+            <h3 class="ag-tav-name">Snackbar Agios Georgios</h3>
+            <div class="ag-tav-loc">📍 Strand Agios Georgios</div>
+          </div>
+          <div class="ag-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ag-tav-desc">Am Kieselstrand im Süden der Insel, unter Tamarisken-Schatten — ein kleiner Imbiss mit Blick auf die windgeschützte Bucht. Sandwiches, kalte Getränke, frischer Fisch nach Verfügbarkeit. Ideal nach dem Schwimmen, wenn der Hunger überraschend kommt und die nächste Taverne im Hafen zehn Minuten entfernt ist.</p>
+        <div class="ag-tav-dishes">
+          <span class="ag-tav-dish">Gegrillter Fisch</span>
+          <span class="ag-tav-dish">Toasts & Sandwiches</span>
+          <span class="ag-tav-dish">Kalte Getränke</span>
+        </div>
+        <p class="ag-tav-price">Preisklasse: <span>€ · Mittags am Strand</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ag-section">
+    <div class="ag-section-head">
+      <p class="ag-section-label">04 — Leben auf der Insel</p>
+      <h2 class="ag-section-title">Zwischen Samos<br><em>und dem Ende der Fährroute</em></h2>
+      <div class="ag-divider"></div>
+    </div>
+    <div class="ag-viertel-grid">
+
+      <div class="ag-viertel-card">
+        <div class="ag-viertel-emoji">⚓</div>
+        <h3 class="ag-viertel-name">Agios Georgios</h3>
+        <p class="ag-viertel-desc">Hafen, Hauptort, Lebenszentrum — drei Tavernen, ein Kafenion, ein Minimarkt, ein paar Pensionen. Wenn die Fähre anlegt, ist das Ereignis des Tages. Wenn sie wieder ablegt, kehrt die Stille zurück.</p>
+      </div>
+
+      <div class="ag-viertel-card">
+        <div class="ag-viertel-emoji">🏘️</div>
+        <h3 class="ag-viertel-name">Megalo Chorio</h3>
+        <p class="ag-viertel-desc">Zehn Minuten zu Fuß vom Hafen — die älteste Siedlung, hinter dem Hügel, vom Meer unsichtbar. Steinmauer, großes Tor, Mosaikplatz. Der Laden öffnet unregelmäßig. Der Besitzer schenkt Saft.</p>
+      </div>
+
+      <div class="ag-viertel-card">
+        <div class="ag-viertel-emoji">🤫</div>
+        <h3 class="ag-viertel-name">Mikro Chorio</h3>
+        <p class="ag-viertel-desc">Zwanzig Einwohner, teils leerstehende Häuser, keine Taverne. Die Kapelle Agios Panteleimon oben auf dem Hügel. Am 27. Juli Inselfest — der einzige Tag, an dem Mikro Chorio laut wird.</p>
+      </div>
+
+      <div class="ag-viertel-card">
+        <div class="ag-viertel-emoji">💧</div>
+        <h3 class="ag-viertel-name">Wasser & Versorgung</h3>
+        <p class="ag-viertel-desc">Die Insel hat kaum eigenes Süßwasser — überall sieht man betonierte Regenauffangbecken. Wasser wird angeliefert. Der Bäcker öffnet jeden zweiten Tag. Kein Geldautomat. Bargeld mitbringen.</p>
+      </div>
+
+      <div class="ag-viertel-card">
+        <div class="ag-viertel-emoji">🚢</div>
+        <h3 class="ag-viertel-name">Fähre & Erreichbarkeit</h3>
+        <p class="ag-viertel-desc">Agathonissi ist das letzte oder erste Ziel auf der Dodekanes-Fährroute — je nach Richtung. Verbindungen nach Samos, Patmos, Lipsi, Arki. Im Sommer häufiger, im Winter: Geduld mitbringen.</p>
+      </div>
+
+      <div class="ag-viertel-card">
+        <div class="ag-viertel-emoji">🪖</div>
+        <h3 class="ag-viertel-name">Militärpräsenz</h3>
+        <p class="ag-viertel-desc">15 km zur türkischen Küste — Agathonissi ist Grenzinsel. Die kleine Kaserne am Hafen ist bewohnt, die Soldaten winken den Schiffen nach. Eine stille Erinnerung daran, wo man sich befindet.</p>
+      </div>
+
+    </div>
+
+    <div class="ag-tip-banner">
+      <div class="ag-tip-emoji">🌟</div>
+      <div class="ag-tip-text">
+        <h3>Die Insel der Guten</h3>
+        <p>Der Ladenbesitzer in Megalo Chorio schenkt Saft, wenn er merkt, dass man zum ersten Mal da ist. Giorgios in der Taverne fragt, woher man kommt, und wechselt ins Deutsche, sobald er hört, woher man kommt. Der Fischer am Kai erklärt, welcher Strand heute am besten ist — nicht weil er muss, sondern weil er es für selbstverständlich hält. Ein Lehrer und Priester hat diese Insel vor hundert Jahren „Agathonissi" genannt — die Insel der Guten. Zwanzig Minuten hier, und man versteht, warum der Name geblieben ist.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>

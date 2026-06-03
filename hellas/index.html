@@ -45,6 +45,7 @@
 
 
   <!-- Insel-Detail-Styles Dodekanes -->
+  <link rel="stylesheet" href="css/islands/dodekanes/agathonissi.css">
   <link rel="stylesheet" href="css/islands/dodekanes/kos.css">
   <link rel="stylesheet" href="css/islands/dodekanes/rhodos.css">
 
@@ -469,8 +470,8 @@
   <div class="islands reveal visible">
     <div class="dodekanes-grid">
 
-      <div class="island-card dod-card">
-        <div class="island-bg isle-agathonisi"></div>
+      <div class="island-card dod-card" onclick="openAgathonissi()" style="cursor:pointer;">
+        <div class="island-bg isle-agathonissi"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
           <p class="island-region">Dodekanes · Nördlich</p>
@@ -480,7 +481,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openAstypalaia()" style="cursor:pointer;">
         <div class="island-bg isle-astypalaia"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -491,7 +492,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openKalymnos()" style="cursor:pointer;">
         <div class="island-bg isle-kalymnos"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -502,7 +503,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openKarpathos()" style="cursor:pointer;">
         <div class="island-bg isle-karpathos"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -513,7 +514,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openKasos()" style="cursor:pointer;">
         <div class="island-bg isle-kasos"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -524,7 +525,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openKastellorizo()" style="cursor:pointer;">
         <div class="island-bg isle-kastellorizo"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -546,7 +547,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openLipsi()" style="cursor:pointer;">
         <div class="island-bg isle-lipsi"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -557,7 +558,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openLeros()" style="cursor:pointer;">
         <div class="island-bg isle-leros"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -568,7 +569,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openNisyros()" style="cursor:pointer;">
         <div class="island-bg isle-nisyros"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -579,7 +580,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openPatmos()" style="cursor:pointer;">
         <div class="island-bg isle-patmos"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -601,7 +602,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openSymi()" style="cursor:pointer;">
         <div class="island-bg isle-symi"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -612,7 +613,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openTilos()" style="cursor:pointer;">
         <div class="island-bg isle-tilos"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -623,7 +624,7 @@
         </div>
       </div>
 
-      <div class="island-card dod-card">
+      <div class="island-card dod-card" onclick="openChalki()" style="cursor:pointer;">
         <div class="island-bg isle-chalki"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -934,7 +935,7 @@
 
 
 <!-- ═══════════════════════════════════════ -->
-<!--  INSEL-DETAIL-SEITEN (per fetch geladen) -->
+<!--  INSEL-DETAIL-SEITEN-KYKLADES (per fetch geladen) -->
 <!-- ═══════════════════════════════════════ -->
 <div id="santorini-page"  style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="mykonos-page"    style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
@@ -968,19 +969,24 @@
 <div id="kea-page"        style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="sikinos-page"    style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 
+<!-- ══════════════════════════════════════════════════ -->
+<!--  INSEL-DETAIL-SEITEN-DODEKANES (per fetch geladen) -->
+<!-- ══════════════════════════════════════════════════ -->
+<div id="agathonissi-page" style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 
-<!-- ═══════════════════════════════════════ -->
+
+<!-- ═════════════════════════════════════════ -->
 <!--  STÄDTE-DETAIL-SEITEN (per fetch geladen) -->
-<!-- ═══════════════════════════════════════ -->
+<!-- ═════════════════════════════════════════ -->
 <div id="thessaloniki-page" style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="athens-page" style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="nafplio-page" style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="delphi-page" style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 
 
-<!-- ═══════════════════════════════════════ -->
+<!-- ════════════════════════════════════════ -->
 <!--  ESSEN-DETAIL-SEITEN (per fetch geladen) -->
-<!-- ═══════════════════════════════════════ -->
+<!-- ════════════════════════════════════════ -->
 <div id="moussaka-page"   style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="choriatiki-page" style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="tzatziki-page"   style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>

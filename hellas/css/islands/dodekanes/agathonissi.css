@@ -1,0 +1,305 @@
+/* =============================================
+   AGATHONISSI — Insel-Unterseite
+   Akzentfarbe: Dodekanes-Indigo / Kalkweiß-Tiefblau
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#agathonissi-page {
+  font-family: 'Inter', sans-serif;
+  color: #080e1a;
+  background: #f2f4f8;
+}
+
+/* ── BACK BAR ── */
+.ag-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(242,244,248,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(30,60,160,0.14);
+}
+.ag-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(30,60,160,0.28);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Inter', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.08em;
+  color: #1a3898; transition: all 0.2s;
+}
+.ag-back-btn:hover { background: #e8edf8; border-color: #1a3898; }
+.ag-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.ag-breadcrumb { font-size: 0.8rem; color: #6878a0; letter-spacing: 0.05em; }
+.ag-breadcrumb span { color: #1a3898; }
+
+/* ── HERO ── */
+.ag-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.ag-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(170deg,
+    #020408 0%,
+    #060c20 16%,
+    #0c1e50 34%,
+    #163080 56%,
+    #0c5898 76%,
+    #0898c8 100%);
+}
+.ag-hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 58% 45% at 50% 85%, rgba(20,60,160,0.22) 0%, transparent 70%),
+    radial-gradient(ellipse 38% 25% at 80% 18%, rgba(4,12,40,0.35) 0%, transparent 60%);
+}
+/* Sternenhimmel Punkte -->*/
+.ag-hero-stars {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.55) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.35) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px);
+  background-size: 120px 120px, 80px 80px, 50px 50px;
+  background-position: 0 0, 40px 30px, 20px 15px;
+  opacity: 0.4;
+}
+/* Insel-Silhouette -->*/
+.ag-hero-silhouette {
+  position: absolute; bottom: 106px; left: 50%;
+  transform: translateX(-50%);
+  width: 920px; height: 165px;
+  opacity: 0.10;
+}
+.ag-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(2,4,14,0.48);
+}
+.ag-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 115px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 115'%3E%3Cpath fill='%23f2f4f8' fill-opacity='1' d='M0,54L90,46C180,38,360,22,540,30C720,38,900,66,1080,72C1260,78,1350,60,1440,52L1440,115L0,115Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.ag-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.ag-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.45em;
+  text-transform: uppercase; color: rgba(160,200,255,0.50);
+  margin-bottom: 1.2rem;
+}
+.ag-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.2rem, 8vw, 7.5rem);
+  font-weight: 300; line-height: 0.88;
+  margin-bottom: 1.5rem;
+}
+.ag-hero-title em {
+  font-style: italic; display: block;
+  color: #90c8f8; font-size: 0.50em;
+  letter-spacing: 0.04em; margin-top: 0.4rem;
+}
+.ag-hero-sub {
+  max-width: 560px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(190,220,255,0.65); line-height: 1.82; font-weight: 300;
+  font-family: 'Inter', sans-serif;
+}
+.ag-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.ag-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(140,190,255,0.22);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.10em;
+  color: rgba(180,215,255,0.76);
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── AGATHO STRIP ── */
+.ag-agatho-strip {
+  background: #060c20;
+  padding: 1.15rem 3rem;
+  display: flex; align-items: center; justify-content: center; gap: 3rem;
+  flex-wrap: wrap;
+}
+.ag-agatho-item {
+  display: flex; align-items: center; gap: 0.7rem;
+  color: rgba(140,190,255,0.58); font-size: 0.8rem; letter-spacing: 0.08em;
+  font-family: 'Inter', sans-serif;
+}
+.ag-agatho-item::before { content: '—'; color: #1a3898; }
+
+/* ── STATS BAR ── */
+.ag-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(30,60,160,0.09);
+}
+.ag-stat-item {
+  flex: 1; max-width: 200px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(30,60,160,0.07);
+}
+.ag-stat-item:last-child { border-right: none; }
+.ag-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: #1a3898; line-height: 1;
+}
+.ag-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #6878a0; margin-top: 0.3rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── CONTENT ── */
+.ag-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.ag-section { padding: 4rem 0 2rem; }
+.ag-section-head { margin-bottom: 2.5rem; }
+.ag-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #1a3898; margin-bottom: 0.8rem;
+  font-family: 'Inter', sans-serif;
+}
+.ag-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300; color: #080e1a; line-height: 1.15;
+}
+.ag-section-title em { font-style: italic; color: #1a3898; }
+.ag-divider { width: 40px; height: 2px; background: #1a3898; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.ag-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.ag-history-text p {
+  font-size: 0.97rem; line-height: 1.95; color: #18243c;
+  font-weight: 400; margin-bottom: 1.2rem;
+}
+.ag-timeline { position: relative; padding-left: 2rem; }
+.ag-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(26,56,152,0.16);
+}
+.ag-tl-item { position: relative; margin-bottom: 1.8rem; }
+.ag-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: #f2f4f8; border: 2px solid #1a3898;
+}
+.ag-tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem; font-weight: 600; color: #1a3898; margin-bottom: 0.25rem;
+}
+.ag-tl-event {
+  font-size: 0.87rem; color: #18243c; line-height: 1.65; font-weight: 400;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.ag-sights-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem;
+}
+.ag-sight-card {
+  border-radius: 3px; overflow: hidden;
+  border: 1px solid rgba(30,60,160,0.14);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ag-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(6,12,30,0.10); }
+.ag-sight-visual { height: 140px; }
+.ag-sight-body { padding: 1.2rem; }
+.ag-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #1a3898; margin-bottom: 0.35rem;
+  font-family: 'Inter', sans-serif;
+}
+.ag-sight-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300; color: #080e1a; margin-bottom: 0.4rem;
+}
+.ag-sight-desc {
+  font-size: 0.83rem; color: #304060; line-height: 1.65; font-weight: 400;
+  font-family: 'Inter', sans-serif;
+}
+
+.sv-ag-megalo    { background: linear-gradient(160deg, #080c18 0%, #182848 55%, #3868b0 100%); }
+.sv-ag-georgios  { background: linear-gradient(160deg, #040c18 0%, #0c3868 55%, #1880d0 100%); }
+.sv-ag-kastraki  { background: linear-gradient(160deg, #100c06 0%, #402c10 55%, #a07838 100%); }
+.sv-ag-tholi     { background: linear-gradient(160deg, #080818 0%, #182048 55%, #4858b8 100%); }
+.sv-ag-poros     { background: linear-gradient(160deg, #041018 0%, #0c4060 55%, #1298c8 100%); }
+.sv-ag-ammoudaki { background: linear-gradient(160deg, #040c14 0%, #104858 55%, #20b0c8 100%); }
+
+/* ── TAVERNEN ── */
+.ag-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.ag-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(30,60,160,0.12);
+  border-radius: 3px; border-left: 3px solid #1a3898;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ag-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(6,12,30,0.08); }
+.ag-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.ag-tav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 300; color: #080e1a;
+}
+.ag-tav-loc { font-size: 0.75rem; color: #6878a0; margin-top: 0.2rem; font-family: 'Inter', sans-serif; }
+.ag-tav-stars { color: #1a3898; font-size: 0.85rem; letter-spacing: 2px; }
+.ag-tav-desc { font-size: 0.87rem; color: #18243c; line-height: 1.75; font-weight: 400; margin-bottom: 1rem; font-family: 'Inter', sans-serif; }
+.ag-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.ag-tav-dish {
+  padding: 3px 10px; background: #e8edf8; color: #0a1840;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+  font-family: 'Inter', sans-serif;
+}
+.ag-tav-price { font-size: 0.8rem; color: #6878a0; font-family: 'Inter', sans-serif; }
+.ag-tav-price span { color: #1a3898; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.ag-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.ag-viertel-card {
+  padding: 1.8rem; background: #e8edf8;
+  border-radius: 3px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.ag-viertel-card:hover { background: #d4ddf5; transform: translateY(-4px); }
+.ag-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.ag-viertel-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem; font-weight: 300; color: #080e1a; margin-bottom: 0.5rem;
+}
+.ag-viertel-desc { font-size: 0.82rem; color: #304060; line-height: 1.65; font-family: 'Inter', sans-serif; }
+
+/* ── TIP BANNER ── */
+.ag-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #020408 0%, #0c1e50 40%, #1a3898 100%);
+  border-radius: 3px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.ag-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.ag-tip-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.75rem; font-weight: 300; color: white; margin-bottom: 0.6rem;
+}
+.ag-tip-text p {
+  font-size: 0.92rem; color: rgba(180,215,255,0.70); line-height: 1.82; font-weight: 400;
+  font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 900px) {
+  .ag-back-bar { padding: 0.8rem 1.2rem; }
+  .ag-content { padding: 2rem 1.2rem 4rem; }
+  .ag-history-grid { grid-template-columns: 1fr; }
+  .ag-sights-grid { grid-template-columns: 1fr 1fr; }
+  .ag-tav-grid { grid-template-columns: 1fr; }
+  .ag-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .ag-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+  .ag-agatho-strip { padding: 1.2rem; gap: 1.5rem; }
+}

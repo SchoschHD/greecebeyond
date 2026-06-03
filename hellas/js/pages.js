@@ -228,7 +228,35 @@ function openSikinos() {
 }
 function closeSikinos() { closePage('sikinos-page'); }  
 
+function openKythnos() {
+  if (typeof loadPage === 'function') {
+    loadPage('kythnos-page', 'islands/kyklades/kythnos.html').then(() => openPage('kythnos-page'));
+  } else {
+    openPage('kythnos-page');
+  }
+}
+function closeKythnos() { closePage('kythnos-page'); }
+
+function openSchinoussa() {
+  if (typeof loadPage === 'function') {
+    loadPage('schinoussa-page', 'islands/kyklades/schinoussa.html').then(() => openPage('schinoussa-page'));
+  } else {
+    openPage('schinoussa-page');
+  }
+}
+function closeSchinoussa() { closePage('schinoussa-page'); }
+
+
 // Convenience-Funktionen für konkrete Inseln Dodekanes
+function openAgathonissi() {
+  if (typeof loadPage === 'function') {
+    loadPage('agathonissi-page', 'islands/dodekanes/agathonissi.html').then(() => openPage('agathonissi-page'));
+  } else {
+    openPage('agathonissi-page');
+  }
+}
+function closeAgathonissi() { closePage('agathonissi-page'); }
+
 function openKos() {
   if (typeof loadPage === 'function') {
     loadPage('kos-page', 'islands/dodekanes/kos.html').then(() => openPage('kos-page'));
@@ -247,20 +275,3 @@ function openRhodos() {
 }
 function closeRhodos() { closePage('rhodos-page'); }
 
-function openKythnos() {
-  if (typeof loadPage === 'function') {
-    loadPage('kythnos-page', 'islands/kyklades/kythnos.html').then(() => openPage('kythnos-page'));
-  } else {
-    openPage('kythnos-page');
-  }
-}
-function closeKythnos() { closePage('kythnos-page'); }
-
-function openSchinoussa() {
-  if (typeof loadPage === 'function') {
-    loadPage('schinoussa-page', 'islands/kyklades/schinoussa.html').then(() => openPage('schinoussa-page'));
-  } else {
-    openPage('schinoussa-page');
-  }
-}
-function closeSchinoussa() { closePage('schinoussa-page'); }
