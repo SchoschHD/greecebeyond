@@ -1,0 +1,271 @@
+/* =============================================
+   KOUFONISIA — Insel-Unterseite
+   Akzentfarbe: Lagunen-Türkis / Karibikblau
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#koufonisia-page {
+  font-family: 'Outfit', sans-serif;
+  color: #071416;
+  background: #f0f8f8;
+}
+
+/* ── BACK BAR ── */
+.kf-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(240,248,248,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,148,148,0.18);
+}
+.kf-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(0,148,148,0.35);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #007878; transition: all 0.2s;
+}
+.kf-back-btn:hover { background: #d8f4f4; border-color: #007878; }
+.kf-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.kf-breadcrumb { font-size: 0.8rem; color: #607878; letter-spacing: 0.05em; }
+.kf-breadcrumb span { color: #007878; }
+
+/* ── HERO ── */
+.kf-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.kf-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, #010e10 0%, #042028 22%, #064858 48%, #0a8888 70%, #28c8c0 100%);
+}
+.kf-hero-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(ellipse 70% 60% at 50% 72%, rgba(0,140,140,0.32) 0%, transparent 68%),
+    radial-gradient(ellipse 38% 26% at 18% 22%, rgba(2,30,40,0.50) 0%, transparent 60%);
+}
+/* Licht-Wellenmuster — Wasser-Effekt */
+.kf-hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    repeating-linear-gradient(
+      -8deg,
+      transparent,
+      transparent 38px,
+      rgba(255,255,255,0.018) 38px,
+      rgba(255,255,255,0.018) 40px
+    );
+}
+.kf-hero-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+.kf-hero-silhouette {
+  position: absolute; bottom: 108px; left: 50%; transform: translateX(-50%);
+  width: 840px; height: 175px;
+  opacity: 0.10;
+}
+.kf-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(1,12,16,0.46);
+}
+.kf-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23f0f8f8' fill-opacity='1' d='M0,64L60,58.7C120,53,240,43,360,48C480,53,600,75,720,80C840,85,960,75,1080,64C1200,53,1320,43,1380,37.3L1440,32L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.kf-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.kf-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: rgba(255,255,255,0.44);
+  margin-bottom: 1.2rem;
+}
+.kf-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 7.5vw, 7rem);
+  font-weight: 300; line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+.kf-hero-title em { font-style: italic; display: block; color: #80ece8; }
+.kf-hero-sub {
+  max-width: 560px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(255,255,255,0.65); line-height: 1.75; font-weight: 300;
+}
+.kf-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.kf-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(255,255,255,0.20);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.80);
+}
+
+/* ── STATS BAR ── */
+.kf-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(0,148,148,0.12);
+}
+.kf-stat-item {
+  flex: 1; max-width: 220px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(0,148,148,0.08);
+}
+.kf-stat-item:last-child { border-right: none; }
+.kf-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: #007878; line-height: 1;
+}
+.kf-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #607878; margin-top: 0.3rem;
+}
+
+/* ── CONTENT ── */
+.kf-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.kf-section { padding: 4rem 0 2rem; }
+.kf-section-head { margin-bottom: 2.5rem; }
+.kf-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #007878; margin-bottom: 0.8rem;
+}
+.kf-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300; color: #071416; line-height: 1.15;
+}
+.kf-section-title em { font-style: italic; color: #007878; }
+.kf-divider { width: 40px; height: 2px; background: #007878; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.kf-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.kf-history-text p {
+  font-size: 1rem; line-height: 1.9; color: #122028;
+  font-weight: 300; margin-bottom: 1.2rem;
+}
+.kf-timeline { position: relative; padding-left: 2rem; }
+.kf-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(0,120,120,0.20);
+}
+.kf-tl-item { position: relative; margin-bottom: 1.8rem; }
+.kf-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: white; border: 2px solid #007878;
+}
+.kf-tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 600; color: #007878; margin-bottom: 0.25rem;
+}
+.kf-tl-event { font-size: 0.88rem; color: #122028; line-height: 1.6; font-weight: 300; }
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.kf-sights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.kf-sight-card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid rgba(0,148,148,0.16);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.kf-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(0,60,70,0.10); }
+.kf-sight-visual { height: 140px; }
+.kf-sight-body { padding: 1.2rem; }
+.kf-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #007878; margin-bottom: 0.35rem;
+}
+.kf-sight-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 300; color: #071416; margin-bottom: 0.4rem;
+}
+.kf-sight-desc { font-size: 0.83rem; color: #284048; line-height: 1.65; font-weight: 300; }
+
+/* Sight visual gradients — Koufonisia Lagunenpalette */
+.sv-kf-chora   { background: linear-gradient(160deg, #040e10 0%, #185868 55%, #60c0c8 100%); }
+.sv-kf-pori    { background: linear-gradient(160deg, #020c10 0%, #0a4858 55%, #28b8c8 100%); }
+.sv-kf-italida { background: linear-gradient(160deg, #020e0c 0%, #045848 55%, #30d8c0 100%); }
+.sv-kf-kato    { background: linear-gradient(160deg, #040c0e 0%, #103848 55%, #48a8c0 100%); }
+.sv-kf-platia  { background: linear-gradient(160deg, #020a0e 0%, #0c6878 55%, #50d0e0 100%); }
+.sv-kf-trail   { background: linear-gradient(160deg, #041008 0%, #1a5828 55%, #68c888 100%); }
+
+/* ── TAVERNEN ── */
+.kf-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.kf-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(0,148,148,0.16);
+  border-radius: 4px; border-left: 3px solid #007878;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.kf-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(0,60,70,0.08); }
+.kf-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.kf-tav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300; color: #071416;
+}
+.kf-tav-loc { font-size: 0.75rem; color: #607878; margin-top: 0.2rem; }
+.kf-tav-stars { color: #007878; font-size: 0.85rem; letter-spacing: 2px; }
+.kf-tav-desc { font-size: 0.88rem; color: #122028; line-height: 1.75; font-weight: 300; margin-bottom: 1rem; }
+.kf-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.kf-tav-dish {
+  padding: 3px 10px; background: #d8f4f2; color: #023838;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+}
+.kf-tav-price { font-size: 0.8rem; color: #607878; }
+.kf-tav-price span { color: #007878; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.kf-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.kf-viertel-card {
+  padding: 1.8rem; background: #e4f6f6;
+  border-radius: 4px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.kf-viertel-card:hover { background: #c8eeed; transform: translateY(-4px); }
+.kf-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.kf-viertel-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300; color: #071416; margin-bottom: 0.5rem;
+}
+.kf-viertel-desc { font-size: 0.82rem; color: #284048; line-height: 1.65; font-weight: 300; }
+
+/* ── TIP BANNER ── */
+.kf-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #010e10 0%, #044858 40%, #007878 100%);
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.kf-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.kf-tip-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300; color: white; margin-bottom: 0.6rem;
+}
+.kf-tip-text p {
+  font-size: 0.92rem; color: rgba(255,255,255,0.68); line-height: 1.75; font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .kf-back-bar { padding: 0.8rem 1.2rem; }
+  .kf-content { padding: 2rem 1.2rem 4rem; }
+  .kf-history-grid { grid-template-columns: 1fr; }
+  .kf-sights-grid { grid-template-columns: 1fr 1fr; }
+  .kf-tav-grid { grid-template-columns: 1fr; }
+  .kf-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .kf-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+}
