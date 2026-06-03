@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tilos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="tilos.css" />
+</head>
+<body>
+<div id="tilos-page">
+
+<div class="ti-back-bar">
+  <button class="ti-back-btn" type="button" onclick="closeTilos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ti-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Tilos</span></p>
+</div>
+
+<div class="ti-hero">
+  <div class="ti-hero-bg"></div>
+  <div class="ti-hero-dots"></div>
+  <svg class="ti-hero-silhouette" viewBox="0 0 840 175" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Meereslinie -->
+    <path d="M0,160 Q210,149 420,157 Q630,165 840,152 L840,175 L0,175Z" opacity="0.18"/>
+    <!-- Bergige Landschaft — Tilos hat üppige Vegetation für Dodekanes -->
+    <!-- Hauptberg links (Kastro Agios Stefanos) -->
+    <path d="M80,175 Q150,95 220,65 Q265,48 290,175Z" opacity="0.24"/>
+    <!-- Kastro auf Bergkuppe -->
+    <rect x="192" y="38" width="72" height="30"/>
+    <rect x="188" y="28" width="80" height="12"/>
+    <rect x="191" y="14" width="12" height="16"/>
+    <rect x="208" y="14" width="12" height="16"/>
+    <rect x="247" y="14" width="12" height="16"/>
+    <rect x="264" y="14" width="12" height="16"/>
+    <!-- Kirchturm im Kastro -->
+    <rect x="224" y="0" width="16" height="30"/>
+    <ellipse cx="232" cy="0" rx="12" ry="7"/>
+    <!-- Mittlerer Hügel grün (Elefanten-Höhle Berg) -->
+    <path d="M310,175 Q370,118 420,98 Q460,84 480,175Z" opacity="0.20"/>
+    <!-- Elefantenmotiv (Tilos = Fossile Zwergelefanten) -->
+    <!-- Stilisierter kleiner Elefant -->
+    <ellipse cx="390" cy="118" rx="20" ry="14"/>
+    <ellipse cx="408" cy="114" rx="14" ry="10"/>
+    <!-- Rüssel -->
+    <path d="M420,114 Q428,118 426,126" fill="none" stroke="white" stroke-width="2.5"/>
+    <!-- Beine -->
+    <rect x="380" y="130" width="6" height="14"/>
+    <rect x="390" y="130" width="6" height="14"/>
+    <rect x="400" y="130" width="6" height="14"/>
+    <rect x="410" y="130" width="6" height="14"/>
+    <!-- Zweiter Hügel Megalo Chorio -->
+    <path d="M490,175 Q540,108 590,85 Q625,70 642,175Z" opacity="0.22"/>
+    <!-- Dorf Megalo Chorio -->
+    <rect x="548" y="68" width="62" height="22"/>
+    <rect x="552" y="58" width="16" height="12"/>
+    <rect x="574" y="54" width="18" height="16"/>
+    <rect x="596" y="58" width="14" height="12"/>
+    <!-- Windkraftanlage (Tilos = 100% Erneuerbare Energie) -->
+    <rect x="720" y="110" width="8" height="56"/>
+    <line x1="724" y1="110" x2="724" y2="72" stroke="white" stroke-width="2"/>
+    <line x1="724" y1="110" x2="750" y2="95" stroke="white" stroke-width="2"/>
+    <line x1="724" y1="110" x2="698" y2="95" stroke="white" stroke-width="2"/>
+    <circle cx="724" cy="110" r="5"/>
+    <!-- Zweite Windkraftanlage -->
+    <rect x="760" y="118" width="8" height="48"/>
+    <line x1="764" y1="118" x2="764" y2="82" stroke="white" stroke-width="2"/>
+    <line x1="764" y1="118" x2="788" y2="104" stroke="white" stroke-width="2"/>
+    <line x1="764" y1="118" x2="740" y2="104" stroke="white" stroke-width="2"/>
+    <circle cx="764" cy="118" r="5"/>
+    <!-- Vogel-Motiv (Tilos = Vogelschutz) -->
+    <path d="M50,80 Q65,68 80,78" fill="none" stroke="white" stroke-width="2" opacity="0.28"/>
+    <path d="M55,85 Q70,73 85,83" fill="none" stroke="white" stroke-width="2" opacity="0.22"/>
+    <path d="M45,90 Q60,78 75,88" fill="none" stroke="white" stroke-width="2" opacity="0.18"/>
+  </svg>
+  <div class="ti-hero-overlay"></div>
+  <div class="ti-hero-content">
+    <p class="ti-hero-tag">Dodekanes · Südägäis</p>
+    <h1 class="ti-hero-title">Tilos<em>Τήλος</em></h1>
+    <p class="ti-hero-sub">Die grünste Insel des Dodekanes — Europas erstes energieautarkes Eiland, Lebensraum der letzten Zwergelefanten der Ägäis und ein Paradies für Vogelbeobachter. Tilos wählt die Zukunft, ohne die Vergangenheit zu vergessen.</p>
+    <div class="ti-hero-pills">
+      <span class="ti-hero-pill">100% Erneuerbare Energie</span>
+      <span class="ti-hero-pill">Fossile Zwergelefanten</span>
+      <span class="ti-hero-pill">Vogelparadies</span>
+      <span class="ti-hero-pill">Kastro</span>
+      <span class="ti-hero-pill">Naturschutz</span>
+    </div>
+  </div>
+  <div class="ti-hero-waves"></div>
+</div>
+
+<div class="ti-stats-bar">
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">780</div>
+    <div class="ti-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">64 km²</div>
+    <div class="ti-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">100%</div>
+    <div class="ti-stat-lbl">Erneuerbare Energie</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">4000 v. Chr.</div>
+    <div class="ti-stat-lbl">Zwergelefanten ausgestorben</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">160+</div>
+    <div class="ti-stat-lbl">Vogelarten</div>
+  </div>
+</div>
+
+<div class="ti-content">
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">01 — Geschichte</p>
+      <h2 class="ti-section-title">Zwergelefanten, Windräder<br><em>und eine Insel die Nein sagt</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-history-grid">
+      <div class="ti-history-text">
+        <p>Tilos hat zwei Dinge, die keine andere Insel der Ägäis hat: die Fossilien von Zwergelefanten — Elefas tiliensis — die bis vor etwa 4.000 Jahren auf der Insel lebten, eine insulare Zwergform des asiatischen Elefanten, kleiner als ein Shetlandpony; und den Status als erstes energieautarkes Eiland Europas. Diese Kombination sagt alles über den Charakter der Insel.</p>
+        <p>Die Elefantenhöhle (Charkadio Grotto) im Norden der Insel wurde 1971 entdeckt — ein Fund, der die Wissenschaft verblüffte. Die Skelette waren vollständig, die Umstände des Aussterbens unklar. Heute sind die wichtigsten Funde im kleinen Naturkundemuseum von Megalo Chorio ausgestellt, das zu den faszinierendsten kleinen Museen Griechenlands gehört.</p>
+        <p>2015 wurde Tilos zur ersten energieautarken Insel Europas — ein Hybrid-Speichersystem aus Wind- und Solarenergie versorgt die gesamte Insel, überschüssige Energie wird gespeichert. Das Projekt wurde europaweit beachtet und ist bis heute das Modell für Insel-Energieautarkie. Die Windräder auf dem Kamm sind kein Makel — sie sind die Identität der Insel.</p>
+      </div>
+      <div class="ti-timeline">
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">~4000 v. Chr.</div>
+          <div class="ti-tl-event">Die Zwergelefanten von Tilos sterben aus — wahrscheinlich durch die frühe menschliche Besiedlung. Die Charkadio-Höhle bewahrt ihre Skelette vollständig: ein Zeitkapsel, die jahrtausendlang niemand öffnet.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">Antike</div>
+          <div class="ti-tl-event">Tilos wird besiedelt und gilt als wichtige Station auf der Seeroute zwischen Rhodos und Kos. Die Insel exportiert Farbpigmente und Kräuter — besonders Thymian, der bis heute auf den Hängen wächst.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">13.–15. Jh.</div>
+          <div class="ti-tl-event">Die Johanniterritter bauen die Kastros auf den Hügeln aus — Agios Stefanos und Messenagros. Die Bevölkerung zieht sich bei Piratenangriffen in die befestigten Hochsiedlungen zurück und lebt dort über Generationen.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">1971</div>
+          <div class="ti-tl-event">Entdeckung der Charkadio-Höhle mit vollständigen Skeletten der Zwergelefanten — ein wissenschaftlicher Sensationsfund, der die Paläontologie der Ägäis neu schreibt. Tilos wird über Nacht zu einem Ort von weltweiter Bedeutung.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">1986</div>
+          <div class="ti-tl-event">Tilos wird zur ersten griechischen Insel, die die Vogeljagd vollständig verbietet. Der Schritt ist mutig und umstritten — heute beherbergt die Insel über 160 Vogelarten und gilt als eines der besten Vogelbeobachtungsgebiete des Mittelmeerraumes.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">2015</div>
+          <div class="ti-tl-event">Tilos wird Europas erste energieautarke Insel. Wind- und Solarenergie, kombiniert mit einem Batteriespeichersystem, machen die Insel unabhängig vom Festlandsnetz. Das Projekt wird EU-weit als Modell gefeiert.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ti-section-title">Höhlen, Kastros<br><em>und das grünste Tal des Dodekanes</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-sights-grid">
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-ti-charkadio"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Paläontologie · Einzigartig</p>
+          <h3 class="ti-sight-name">Charkadio-Höhle</h3>
+          <p class="ti-sight-desc">Die Fundstätte der Zwergelefanten — eine Karsthöhle im Norden der Insel, in der 1971 vollständige Skelette von Elefas tiliensis entdeckt wurden. Die Höhle ist zugänglich, die Atmosphäre unvergesslich. Ein Ort, der das Staunen zurückbringt.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-ti-museum"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Museum · Naturkunde</p>
+          <h3 class="ti-sight-name">Naturkundemuseum Megalo Chorio</h3>
+          <p class="ti-sight-desc">Eines der faszinierendsten kleinen Museen Griechenlands — Elefantenskelette, geologische Geschichte der Insel, Vogelkunde. In einem alten Haus in Megalo Chorio untergebracht, kompakt und klar. Zwei Stunden die sich lohnen.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-ti-kastro"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Mittelalter · Johanniter</p>
+          <h3 class="ti-sight-name">Kastro Agios Stefanos</h3>
+          <p class="ti-sight-desc">Das Johanniter-Kastro über dem Hauptdorf Megalo Chorio — mittelalterliche Mauern, byzantinische Kapellen, ein Blick über die ganze Insel bis zur türkischen Küste. Der Weg hinauf dauert 20 Minuten und ist von Thymiansträuchern gesäumt.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-ti-voegel"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Natur · Vogelbeobachtung</p>
+          <h3 class="ti-sight-name">Vogelschutzgebiet</h3>
+          <p class="ti-sight-desc">Tilos ist Griechenlands bedeutendstes Vogelschutzgebiet im Dodekanes — über 160 Arten, darunter seltene Zugvögel und der Eleonorenfalke. Der Feuchtbiotop bei Eristos ist der beste Beobachtungsort. Im Frühjahr und Herbst kommen Ornithologen aus ganz Europa.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-ti-eristos"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Strand · Natur</p>
+          <h3 class="ti-sight-name">Eristos</h3>
+          <p class="ti-sight-desc">Der schönste Strand der Insel — langer dunkler Sand, kristallklares Wasser, dahinter ein grünes Tal mit Eukalyptusbäumen und einem kleinen Feuchtbiotop. Eine Taverne, wenige Sonnenschirme, kein Lärm. Das natürlichste Stranderlebnis des Dodekanes.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-ti-livadia"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Hafen · Chora</p>
+          <h3 class="ti-sight-name">Livadia</h3>
+          <p class="ti-sight-desc">Das Hafendorf von Tilos — entspannt, farbig, mit einer langen Promenade unter Tamarisken. Wenige Tavernen, ein Kafeneion, Katzen überall. Livadia ist der ruhigste Haupthafen des Dodekanes und damit der richtige Einstieg in eine Insel, die Entschleunigung als Programm versteht.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="ti-section-title">Kräuter vom Hang<br><em>und Fisch aus dem Schutzgebiet</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-tav-grid">
+
+      <div class="ti-tav-card">
+        <div class="ti-tav-top">
+          <div>
+            <h3 class="ti-tav-name">Armenon</h3>
+            <div class="ti-tav-loc">📍 Livadia, Hafen</div>
+          </div>
+          <div class="ti-tav-stars">★★★★★</div>
+        </div>
+        <p class="ti-tav-desc">Das beste Restaurant der Insel — direkt am Hafen von Livadia, mit einer Speisekarte die so kurz ist wie sie ehrlich ist. Der Koch kocht, was die Insel hergibt: lokale Kräuter von den Hängen, Fisch aus der Bucht, Gemüse aus dem eigenen Garten. Keine Experimente, keine Enttäuschungen.</p>
+        <div class="ti-tav-dishes">
+          <span class="ti-tav-dish">Fisch mit Thymiankräutern</span>
+          <span class="ti-tav-dish">Gemischte Mezedes</span>
+          <span class="ti-tav-dish">Ziegenkäse aus Tilos</span>
+        </div>
+        <p class="ti-tav-price">Preisklasse: <span>€€ · Abendessen · Hafen</span></p>
+      </div>
+
+      <div class="ti-tav-card">
+        <div class="ti-tav-top">
+          <div>
+            <h3 class="ti-tav-name">Sofia</h3>
+            <div class="ti-tav-loc">📍 Megalo Chorio, Dorfplatz</div>
+          </div>
+          <div class="ti-tav-stars">★★★★★</div>
+        </div>
+        <p class="ti-tav-desc">Die Dorftaverne in Megalo Chorio — unter einem alten Maulbeerbaum auf dem zentralen Platz. Sofia kocht seit Jahrzehnten dieselben Gerichte: Koteletts vom eigenen Ziegen, Stifado aus dem Holzofen, Honig vom Tilo-Berg. Das ist der Geschmack der Insel, ungekünstelt.</p>
+        <div class="ti-tav-dishes">
+          <span class="ti-tav-dish">Ziegenkotelett vom Holzkohlegrill</span>
+          <span class="ti-tav-dish">Stifado aus dem Ofen</span>
+          <span class="ti-tav-dish">Lokaler Thymian-Honig</span>
+        </div>
+        <p class="ti-tav-price">Preisklasse: <span>€ · Mittagessen · Dorfplatz</span></p>
+      </div>
+
+      <div class="ti-tav-card">
+        <div class="ti-tav-top">
+          <div>
+            <h3 class="ti-tav-name">Blue Sky</h3>
+            <div class="ti-tav-loc">📍 Livadia, Strandpromenade</div>
+          </div>
+          <div class="ti-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ti-tav-desc">Das Café-Restaurant an der Promenade — Frühstück mit Blick auf die Bucht, mittags Salate und Sandwiches, abends einfache Grillgerichte. Der beste Ort der Insel für einen langen Morgenkaffee mit dem Tilos-Spezialgebäck Pitaroudia — frittierte Kichererbsenpuffer mit frischen Kräutern.</p>
+        <div class="ti-tav-dishes">
+          <span class="ti-tav-dish">Pitaroudia (Kichererbsenpuffer)</span>
+          <span class="ti-tav-dish">Griechischer Kaffee</span>
+          <span class="ti-tav-dish">Wildkräutersalat</span>
+        </div>
+        <p class="ti-tav-price">Preisklasse: <span>€ · Ganztags · Promenade</span></p>
+      </div>
+
+      <div class="ti-tav-card">
+        <div class="ti-tav-top">
+          <div>
+            <h3 class="ti-tav-name">Eristos Beach Taverna</h3>
+            <div class="ti-tav-loc">📍 Eristos-Strand</div>
+          </div>
+          <div class="ti-tav-stars">★★★★★</div>
+        </div>
+        <p class="ti-tav-desc">Die einzige Taverne am schönsten Strand der Insel — Tische im Schatten eines Eukalyptuswaldes, Sand unter den Füßen, Vogelstimmen aus dem Feuchtbiotop dahinter. Tagesfrischer Fisch, Oktopus vom Grill, Tilos-Rosé. Der perfekte Grund, am Eristos einen ganzen Tag zu verbringen.</p>
+        <div class="ti-tav-dishes">
+          <span class="ti-tav-dish">Tagesfisch vom Grill</span>
+          <span class="ti-tav-dish">Oktopus mit Kapern</span>
+          <span class="ti-tav-dish">Tilos-Rosé</span>
+        </div>
+        <p class="ti-tav-price">Preisklasse: <span>€€ · Strand · Eristos</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="ti-section-title">Die grünste Insel<br><em>des Dodekanes</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-viertel-grid">
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">⚓</div>
+        <h3 class="ti-viertel-name">Livadia</h3>
+        <p class="ti-viertel-desc">Das Hafendorf — der ruhigste Haupthafen des Dodekanes. Eine Promenade unter Tamarisken, wenige Tavernen, viele Katzen. Hier beginnt Tilos, und hier hört man auf zu eilen.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🏘️</div>
+        <h3 class="ti-viertel-name">Megalo Chorio</h3>
+        <p class="ti-viertel-desc">Das Hauptdorf im Inselinneren — weißgetüncht, steil, mit dem Kastro dahinter. Hier wohnen die meisten Inselbewohner, hier steht das Naturkundemuseum, hier ist der Dorfplatz unter dem Maulbeerbaum.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🐘</div>
+        <h3 class="ti-viertel-name">Charkadio-Höhle</h3>
+        <p class="ti-viertel-desc">Die Fundstätte der Zwergelefanten — der unwahrscheinlichste Ort der Ägäis. Kleine Elefanten lebten hier bis vor 4.000 Jahren. Die Höhle ist offen, die Funde teilweise noch in situ.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🌿</div>
+        <h3 class="ti-viertel-name">Eristos-Tal</h3>
+        <p class="ti-viertel-desc">Das grünste Tal des Dodekanes — Eukalyptus, Schilf, ein Feuchtbiotop und der schönste Strand der Insel am Ende. Im Frühjahr leuchtet das Tal, als gehöre es nicht zur Ägäis.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">💨</div>
+        <h3 class="ti-viertel-name">Erneuerbare Energie</h3>
+        <p class="ti-viertel-desc">Die Windräder auf dem Inselkamm sind kein Kompromiss — sie sind die Entscheidung einer Gemeinschaft für ihre Zukunft. Europas erstes energieautarkes Eiland, seit 2015. Die Insel exportiert heute überschüssigen Strom.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🦅</div>
+        <h3 class="ti-viertel-name">Vogelparadies</h3>
+        <p class="ti-viertel-desc">Seit 1986 gilt auf Tilos absolutes Jagdverbot für Vögel — die Folge ist ein Artenreichtum, den keine andere Dodekanesinsel erreicht. 160+ Arten, darunter der Eleonorenfalke, machen Tilos zur Pflichtstation für Ornithologen.</p>
+      </div>
+
+    </div>
+
+    <div class="ti-tip-banner">
+      <div class="ti-tip-emoji">🐘</div>
+      <div class="ti-tip-text">
+        <h3>Kleine Elefanten und große Entscheidungen</h3>
+        <p>Tilos ist eine Insel, die zweimal Nein gesagt hat — einmal zur Jagd (1986), einmal zu fossilen Brennstoffen (2015). Beides war mutig, beides hat die Insel verändert. Heute grasen Eleonorenfalken über den Hügeln, wo früher Schüsse fielen, und die Windräder drehen sich dort, wo früher Dieselgeneratoren lärmten. Das Naturkundemuseum zeigt die Skelette der kleinen Elefanten, die 4.000 Jahre auf ihre Entdeckung gewartet haben. Tilos ist eine Insel, die aus ihren Fehlern gelernt hat — und dafür eine der lebendigen Inseln des Dodekanes geblieben ist.</p>
+      </div>
+    </div>
+
+  </section>
+</div>
+</div>
+</body>
+</html>

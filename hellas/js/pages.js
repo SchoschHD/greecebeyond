@@ -291,13 +291,51 @@ function openKalymnos() {
     openPage('kalymnos-page');
   }
 }
-function closeKalymnos() { closePage('kalymnos-page'); }
+function closeSchinoussa() { closePage('schinoussa-page'); }
 
-function openKarpathos() {
+function openSymi() {
   if (typeof loadPage === 'function') {
-    loadPage('karpathos-page', 'islands/dodekanes/karpathos.html').then(() => openPage('karpathos-page'));
+    loadPage('symi-page', 'islands/dodekanes/symi.html').then(() => openPage('symi-page'));
   } else {
-    openPage('karpathos-page');
+    openPage('symi-page');
   }
 }
-function closeKarpathos() { closePage('karpathos-page'); }
+function closeSymi() { closePage('symi-page'); }    
+
+
+function openTilos() {
+  if (typeof loadPage === 'function') {
+    loadPage('tilos-page', 'islands/dodekanes/tilos.html').then(() => openPage('tilos-page'));
+  } else {
+    openPage('tilos-page');
+  }   
+}
+function closeTilos() { closePage('tilos-page'); }  
+
+function openChalki() {
+  if (typeof loadPage === 'function') {
+    loadPage('chalki-page', 'islands/dodekanes/chalki.html').then(() => openPage('chalki-page'));
+  } else {
+    openPage('chalki-page');
+  }         
+}
+function closeChalki() { closePage('chalki-page'); }    
+
+function openPatmos() {
+  if (typeof loadPage === 'function') {
+    loadPage('patmos-page', 'islands/dodekanes/patmos.html').then(() => openPage('patmos-page')); 
+  } else {
+    openPage('patmos-page');
+  }
+}
+function closePatmos() { closePage('patmos-page'); }    
+
+function openNisyros() {
+  if (typeof loadPage === 'function') {
+    loadPage('nisyros-page', 'islands/dodekanes/nisyros.html').then(() => openPage('nisyros-page')); 
+  } else {
+    openPage('nisyros-page');
+  }   
+}
+function closeNisyros() { closePage('nisyros-page'); }
+

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Symi — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="symi.css" />
+</head>
+<body>
+<div id="symi-page">
+
+<div class="sy-back-bar">
+  <button class="sy-back-btn" type="button" onclick="closeSymi()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="sy-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Symi</span></p>
+</div>
+
+<div class="sy-hero">
+  <div class="sy-hero-bg"></div>
+  <div class="sy-hero-dots"></div>
+  <svg class="sy-hero-silhouette" viewBox="0 0 840 175" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Meereslinie -->
+    <path d="M0,162 Q210,150 420,158 Q630,166 840,153 L840,175 L0,175Z" opacity="0.20"/>
+    <!-- Gialos Hafen Amphitheater-Hügel links -->
+    <path d="M60,175 Q130,105 200,72 Q250,52 280,175Z" opacity="0.24"/>
+    <!-- Neoklassische Häuserreihe gestaffelt (Symi ist berühmt für bunte Fassaden) -->
+    <!-- Reihe 1 unten -->
+    <rect x="80" y="140" width="16" height="22"/>
+    <rect x="100" y="136" width="18" height="26"/>
+    <rect x="122" y="130" width="16" height="32"/>
+    <rect x="142" y="125" width="18" height="37"/>
+    <rect x="164" y="120" width="16" height="42"/>
+    <rect x="184" y="115" width="18" height="47"/>
+    <rect x="206" y="112" width="16" height="50"/>
+    <!-- Reihe 2 oben -->
+    <rect x="92" y="118" width="14" height="16"/>
+    <rect x="112" y="110" width="14" height="16"/>
+    <rect x="132" y="104" width="14" height="18"/>
+    <rect x="152" y="98" width="14" height="20"/>
+    <rect x="172" y="92" width="14" height="22"/>
+    <rect x="192" y="86" width="14" height="24"/>
+    <!-- Giebeldreiecke auf Häuser -->
+    <polygon points="92,118 99,108 106,118"/>
+    <polygon points="112,110 119,100 126,110"/>
+    <polygon points="132,104 139,92 146,104"/>
+    <polygon points="152,98 159,86 166,98"/>
+    <polygon points="172,92 179,78 186,92"/>
+    <!-- Uhrenturm auf Hügel -->
+    <rect x="210" y="72" width="16" height="42"/>
+    <rect x="206" y="68" width="24" height="8"/>
+    <ellipse cx="218" cy="68" rx="14" ry="7"/>
+    <circle cx="218" cy="58" r="8" fill="none" stroke="white" stroke-width="2"/>
+    <!-- Panormitis Kloster rechts -->
+    <path d="M540,175 Q580,130 610,108 Q635,92 650,175Z" opacity="0.22"/>
+    <rect x="572" y="90" width="68" height="46"/>
+    <rect x="568" y="82" width="76" height="10"/>
+    <!-- Kloster-Türme -->
+    <rect x="572" y="58" width="16" height="34"/>
+    <ellipse cx="580" cy="58" rx="10" ry="6"/>
+    <rect x="624" y="58" width="16" height="34"/>
+    <ellipse cx="632" cy="58" rx="10" ry="6"/>
+    <!-- Klosterhof -->
+    <rect x="588" y="100" width="44" height="36"/>
+    <!-- Brunnen im Hof -->
+    <circle cx="610" cy="118" r="8" fill="none" stroke="white" stroke-width="2"/>
+    <!-- Fischerboote Hafen -->
+    <ellipse cx="380" cy="162" rx="28" ry="7"/>
+    <rect x="373" y="150" width="14" height="14"/>
+    <line x1="380" y1="150" x2="380" y2="128" stroke="white" stroke-width="2"/>
+    <ellipse cx="430" cy="165" rx="22" ry="6"/>
+    <rect x="424" y="154" width="12" height="13"/>
+    <line x1="430" y1="154" x2="430" y2="135" stroke="white" stroke-width="2"/>
+    <!-- Schwamm-Motiv (Symi = Schwamm-Fischer) -->
+    <circle cx="760" cy="140" r="14" fill="none" stroke="white" stroke-width="2" opacity="0.22"/>
+    <circle cx="760" cy="140" r="8" fill="none" stroke="white" stroke-width="1.5" opacity="0.18"/>
+    <circle cx="754" cy="134" r="4" fill="none" stroke="white" stroke-width="1" opacity="0.16"/>
+    <circle cx="767" cy="134" r="3" fill="none" stroke="white" stroke-width="1" opacity="0.16"/>
+    <circle cx="760" cy="148" r="4" fill="none" stroke="white" stroke-width="1" opacity="0.16"/>
+  </svg>
+  <div class="sy-hero-overlay"></div>
+  <div class="sy-hero-content">
+    <p class="sy-hero-tag">Dodekanes · Südägäis</p>
+    <h1 class="sy-hero-title">Symi<em>Σύμη</em></h1>
+    <p class="sy-hero-sub">Die neoklassische Perle des Dodekanes — pastellfarbene Kapitänshäuser steigen amphitheatralisch vom Hafen auf, das Kloster Panormitis zieht Pilger aus ganz Griechenland, und die Schwammtaucher-Tradition färbt noch immer den Charakter der Insel. Symi ist schön, und es weiß es.</p>
+    <div class="sy-hero-pills">
+      <span class="sy-hero-pill">Neoklassische Häuser</span>
+      <span class="sy-hero-pill">Panormitis-Kloster</span>
+      <span class="sy-hero-pill">Schwammtaucher</span>
+      <span class="sy-hero-pill">Gialos Hafen</span>
+      <span class="sy-hero-pill">Wandern</span>
+    </div>
+  </div>
+  <div class="sy-hero-waves"></div>
+</div>
+
+<div class="sy-stats-bar">
+  <div class="sy-stat-item">
+    <div class="sy-stat-num">2.500</div>
+    <div class="sy-stat-lbl">Einwohner</div>
+  </div>
+  <div class="sy-stat-item">
+    <div class="sy-stat-num">58 km²</div>
+    <div class="sy-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="sy-stat-item">
+    <div class="sy-stat-num">500+</div>
+    <div class="sy-stat-lbl">Neoklassische Häuser</div>
+  </div>
+  <div class="sy-stat-item">
+    <div class="sy-stat-num">375</div>
+    <div class="sy-stat-lbl">Stufen — Kali Strata</div>
+  </div>
+  <div class="sy-stat-item">
+    <div class="sy-stat-num">1945</div>
+    <div class="sy-stat-lbl">Kapitulationsvertrag Dodekanes</div>
+  </div>
+</div>
+
+<div class="sy-content">
+
+  <section class="sy-section">
+    <div class="sy-section-head">
+      <p class="sy-section-label">01 — Geschichte</p>
+      <h2 class="sy-section-title">Schwämme, Kapitäne<br><em>und der schönste Hafen des Dodekanes</em></h2>
+      <div class="sy-divider"></div>
+    </div>
+    <div class="sy-history-grid">
+      <div class="sy-history-text">
+        <p>Symi verdankt seinen Reichtum dem Meer — nicht dem Fischfang, sondern dem Schwammtauchen. Im 19. Jahrhundert waren symiotische Schwammtaucher im gesamten östlichen Mittelmeer bekannt; die Männer tauchten bis zu 70 Meter tief, ohne Ausrüstung, mit bloßem Atem. Der Reichtum der Taucher baute die neoklassischen Kapitänshäuser, die heute die Insel berühmt machen.</p>
+        <p>Gialos, der Haupthafen, ist ein Meisterwerk der Inseltopografie: Pastellgelbe, ocker- und rosafarbene Häuserreihen steigen amphitheatralisch den Hügel hinauf, jede Fassade mit Giebel, Pilastern und Fensterläden verziert. Die Architektur ist neoklassisch, die Farben sind süditalienisch, das Gefühl ist unverwechselbar ägäisch. Kein anderer Hafen der griechischen Inseln sieht so aus.</p>
+        <p>Symi hat eine historische Besonderheit: Hier, im Hauptquartier auf der Insel, unterzeichneten die deutschen Streitkräfte im Mai 1945 die Kapitulation im Dodekanes — das letzte deutsche Territorium in Europa, das sich ergab. Eine Gedenktafel am Hafen erinnert daran, fast unbeachtet zwischen Taverna-Terrassen.</p>
+      </div>
+      <div class="sy-timeline">
+        <div class="sy-tl-item">
+          <div class="sy-tl-dot"></div>
+          <div class="sy-tl-year">Antike</div>
+          <div class="sy-tl-event">Symi wird in der Ilias erwähnt — drei Schiffe schickte die Insel nach Troja. Die Bewohner gelten als die besten Schiffbauer und Taucher der Ägäis, eine Reputation, die Jahrhunderte anhält.</div>
+        </div>
+        <div class="sy-tl-item">
+          <div class="sy-tl-dot"></div>
+          <div class="sy-tl-year">18. Jh.</div>
+          <div class="sy-tl-event">Blütezeit des Schwammhandels. Symiotische Taucher operieren vom Mittelmeer bis zum Atlantik. Der Reichtum fließt zurück in die Insel: neoklassische Häuser, gepflasterte Gassen, das Kloster Panormitis wird ausgebaut.</div>
+        </div>
+        <div class="sy-tl-item">
+          <div class="sy-tl-dot"></div>
+          <div class="sy-tl-year">1912</div>
+          <div class="sy-tl-event">Symi wird — wie der gesamte Dodekanes — von Italien besetzt. Die faschistische Periode hinterlässt kaum sichtbare Spuren auf der Insel; die symiotische Kultur überlebt weitgehend unbeschädigt.</div>
+        </div>
+        <div class="sy-tl-item">
+          <div class="sy-tl-dot"></div>
+          <div class="sy-tl-year">8. Mai 1945</div>
+          <div class="sy-tl-event">Die deutsche Besatzung des Dodekanes kapituliert auf Symi — das letzte deutsche Territorium in Europa. Ein historischer Moment, der bis heute kaum bekannt ist. Die Gedenktafel am Hafen ist unscheinbar und unbeschildert.</div>
+        </div>
+        <div class="sy-tl-item">
+          <div class="sy-tl-dot"></div>
+          <div class="sy-tl-year">1947</div>
+          <div class="sy-tl-event">Symi wird griechisch — der Dodekanes wird offiziell Teil Griechenlands. Die Insel erlebt zunächst einen wirtschaftlichen Niedergang: die Schwammindustrie kollabiert, viele Symiotiker emigrieren nach Australien und Amerika.</div>
+        </div>
+        <div class="sy-tl-item">
+          <div class="sy-tl-dot"></div>
+          <div class="sy-tl-year">Heute</div>
+          <div class="sy-tl-event">Symi lebt vom Tagestourismus aus Rhodos und von Segelboottouristen, die in Gialos ankern. Der Hafen ist belebt, die obere Stadt Chorio fast verlassen. Die Spannung zwischen Schaufenster und Substanz ist das eigentliche Symi.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sy-section">
+    <div class="sy-section-head">
+      <p class="sy-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="sy-section-title">Gialos, Panormitis<br><em>und 375 Stufen nach oben</em></h2>
+      <div class="sy-divider"></div>
+    </div>
+    <div class="sy-sights-grid">
+
+      <div class="sy-sight-card">
+        <div class="sy-sight-visual sv-sy-gialos"></div>
+        <div class="sy-sight-body">
+          <p class="sy-sight-cat">Hafen · Ikone</p>
+          <h3 class="sy-sight-name">Gialos</h3>
+          <p class="sy-sight-desc">Der schönste Hafen des Dodekanes — pastellfarbene neoklassische Häuser steigen vom Wasser amphitheatralisch den Hügel hinauf. Jede Fassade ein Kunstwerk aus Giebeln, Pilastern und Fensterläden. Am frühen Morgen, bevor die Tagesboote aus Rhodos kommen, ist Gialos fast unwirklich schön.</p>
+        </div>
+      </div>
+
+      <div class="sy-sight-card">
+        <div class="sy-sight-visual sv-sy-kalistrata"></div>
+        <div class="sy-sight-body">
+          <p class="sy-sight-cat">Treppe · Wahrzeichen</p>
+          <h3 class="sy-sight-name">Kali Strata</h3>
+          <p class="sy-sight-desc">Die „Schöne Treppe" — 375 Stufen aus gepflastertem Marmor führen von Gialos hinauf nach Chorio, dem oberen Dorf. Die Stufen sind steil, die Aussicht mit jeder Etappe atemberaubender. Wer oben ankommt, versteht, warum die Symiotiker so robust waren.</p>
+        </div>
+      </div>
+
+      <div class="sy-sight-card">
+        <div class="sy-sight-visual sv-sy-chorio"></div>
+        <div class="sy-sight-body">
+          <p class="sy-sight-cat">Oberes Dorf · Stille</p>
+          <h3 class="sy-sight-name">Chorio</h3>
+          <p class="sy-sight-desc">Das obere Dorf über Gialos — viele Häuser stehen leer, manche verfallen, aber die Stimmung ist von eigentümlicher Schönheit. Enge Gassen, byzantinische Kapellen, ein kleines archäologisches Museum. Hier lebt das alte Symi, unrestauriert und ehrlich.</p>
+        </div>
+      </div>
+
+      <div class="sy-sight-card">
+        <div class="sy-sight-visual sv-sy-panormitis"></div>
+        <div class="sy-sight-body">
+          <p class="sy-sight-cat">Kloster · Wallfahrt</p>
+          <h3 class="sy-sight-name">Kloster Panormitis</h3>
+          <p class="sy-sight-desc">Das bedeutendste Kloster des Dodekanes — im Südwesten der Insel, nur per Boot oder über einen langen Bergpfad erreichbar. Das barocke Glockenturm-Ensemble spiegelt sich in der stillen Bucht. Pilger aus ganz Griechenland kommen für den Erzengel Michael. Der Hof riecht nach Weihrauch und Meer.</p>
+        </div>
+      </div>
+
+      <div class="sy-sight-card">
+        <div class="sy-sight-visual sv-sy-buchten"></div>
+        <div class="sy-sight-body">
+          <p class="sy-sight-cat">Buchten · Wandern</p>
+          <h3 class="sy-sight-name">Nanou &amp; Agios Vassilios</h3>
+          <p class="sy-sight-desc">Die abgelegenen Buchten von Symi — Nanou im Westen, erreichbar nur per Boot oder über einen zweistündigen Bergpfad, mit kristallklarem Wasser und einer einzigen Taverne unter Zypressen. Das Symi das kein Tagesbesucher aus Rhodos je sieht.</p>
+        </div>
+      </div>
+
+      <div class="sy-sight-card">
+        <div class="sy-sight-visual sv-sy-schwamm"></div>
+        <div class="sy-sight-body">
+          <p class="sy-sight-cat">Handwerk · Geschichte</p>
+          <h3 class="sy-sight-name">Schwammtaucher-Erbe</h3>
+          <p class="sy-sight-desc">Am Hafen von Gialos hängen getrocknete Schwämme vor jedem zweiten Laden — das Erbe der Schwammtaucher-Tradition ist allgegenwärtig. Das kleine Schwammtaucher-Museum in Gialos zeigt die Tauchausrüstung von einst und die Narben, die das Handwerk hinterließ.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="sy-section">
+    <div class="sy-section-head">
+      <p class="sy-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="sy-section-title">Hafenluft<br><em>und die Küche der Kapitäne</em></h2>
+      <div class="sy-divider"></div>
+    </div>
+    <div class="sy-tav-grid">
+
+      <div class="sy-tav-card">
+        <div class="sy-tav-top">
+          <div>
+            <h3 class="sy-tav-name">Tholos</h3>
+            <div class="sy-tav-loc">📍 Gialos, Kaimauer</div>
+          </div>
+          <div class="sy-tav-stars">★★★★★</div>
+        </div>
+        <p class="sy-tav-desc">Das beste Restaurant am Hafen — Tische auf einem Holzsteg direkt über dem Wasser, mit Blick auf die pastellfarbenen Häuserfronten. Die Küche verbindet dodekanese Tradition mit modernen Akzenten: Symiotische Garnelen mit Ouzo, frischer Labrax mit Kapernbutter, hausgemachte Pasta.</p>
+        <div class="sy-tav-dishes">
+          <span class="sy-tav-dish">Symiotische Garnelen</span>
+          <span class="sy-tav-dish">Labrax mit Kapernbutter</span>
+          <span class="sy-tav-dish">Hausgemachte Pasta</span>
+        </div>
+        <p class="sy-tav-price">Preisklasse: <span>€€€ · Abendessen · Reservierung</span></p>
+      </div>
+
+      <div class="sy-tav-card">
+        <div class="sy-tav-top">
+          <div>
+            <h3 class="sy-tav-name">Giorgos &amp; Maria</h3>
+            <div class="sy-tav-loc">📍 Chorio, oberes Dorf</div>
+          </div>
+          <div class="sy-tav-stars">★★★★★</div>
+        </div>
+        <p class="sy-tav-desc">Die Taverne im fast verlassenen Chorio — geöffnet für jene, die die Kali Strata hochgestiegen sind und oben ankommen. Eine einzige Familie, ein einziger Raum, ein Menü das täglich wechselt. Hier essen keine Tagesbesucher. Nur wer die Treppe bezwungen hat, findet diesen Ort.</p>
+        <div class="sy-tav-dishes">
+          <span class="sy-tav-dish">Tagesmenü (wechselnd)</span>
+          <span class="sy-tav-dish">Moussaka aus dem Ofen</span>
+          <span class="sy-tav-dish">Galaktoboureko</span>
+        </div>
+        <p class="sy-tav-price">Preisklasse: <span>€ · Mittagessen · Versteckt</span></p>
+      </div>
+
+      <div class="sy-tav-card">
+        <div class="sy-tav-top">
+          <div>
+            <h3 class="sy-tav-name">Mythos</h3>
+            <div class="sy-tav-loc">📍 Gialos, Nebenkai</div>
+          </div>
+          <div class="sy-tav-stars">★★★★☆</div>
+        </div>
+        <p class="sy-tav-desc">Die Mezedes-Taverne am ruhigeren Nebenkai — weg vom Tagestrubel, mit Tischen unter Tamarisken. Hier bestellt man viele kleine Gerichte: Tirokafteri, Dolmades, Stifado, eingelegte Schwämme. Dazu lokaler Wein aus dem Fass und das Gefühl, ein Einheimischer zu sein.</p>
+        <div class="sy-tav-dishes">
+          <span class="sy-tav-dish">Mezedes-Auswahl</span>
+          <span class="sy-tav-dish">Stifado (Schmorfleisch)</span>
+          <span class="sy-tav-dish">Tirokafteri</span>
+        </div>
+        <p class="sy-tav-price">Preisklasse: <span>€€ · Mezedes · Nebenkai</span></p>
+      </div>
+
+      <div class="sy-tav-card">
+        <div class="sy-tav-top">
+          <div>
+            <h3 class="sy-tav-name">Panormitis Kloster-Café</h3>
+            <div class="sy-tav-loc">📍 Bucht Panormitis (per Boot)</div>
+          </div>
+          <div class="sy-tav-stars">★★★★★</div>
+        </div>
+        <p class="sy-tav-desc">Das kleine Café im Klosterhof von Panormitis — Kaffee und einfache Snacks unter dem Glockenturm, mit Blick auf die perfekt spiegelnde Bucht. Kein Fünf-Sterne-Erlebnis, aber eines der unvergesslichsten Orte zum Sitzen in ganz Griechenland. Stille, Weihrauch, Meeresluft.</p>
+        <div class="sy-tav-dishes">
+          <span class="sy-tav-dish">Griechischer Kaffee</span>
+          <span class="sy-tav-dish">Kloster-Honig</span>
+          <span class="sy-tav-dish">Loukoumades</span>
+        </div>
+        <p class="sy-tav-price">Preisklasse: <span>€ · Klosterhof · Unvergesslich</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="sy-section">
+    <div class="sy-section-head">
+      <p class="sy-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="sy-section-title">Zwei Dörfer<br><em>ein Hafen, tausend Farben</em></h2>
+      <div class="sy-divider"></div>
+    </div>
+    <div class="sy-viertel-grid">
+
+      <div class="sy-viertel-card">
+        <div class="sy-viertel-emoji">🏘️</div>
+        <h3 class="sy-viertel-name">Gialos</h3>
+        <p class="sy-viertel-desc">Der Hafen und das Herz der Insel — pastellfarbene Häuserfronten, Tavernen auf Holzstegen, Segelboote und Fähren. Morgens traumhaft, mittags belebt, abends golden. Das schönste Hafenpanorama Griechenlands.</p>
+      </div>
+
+      <div class="sy-viertel-card">
+        <div class="sy-viertel-emoji">🏚️</div>
+        <h3 class="sy-viertel-name">Chorio</h3>
+        <p class="sy-viertel-desc">Das obere Dorf — halb verlassen, halb bewohnt, vollständig faszinierend. Byzantinische Kapellen, verfallende Häuser, gelegentlich eine Katze. 375 Stufen von der Realität entfernt und doch mitten in ihr.</p>
+      </div>
+
+      <div class="sy-viertel-card">
+        <div class="sy-viertel-emoji">⛵</div>
+        <h3 class="sy-viertel-name">Panormitis</h3>
+        <p class="sy-viertel-desc">Das Kloster im Süden — barocke Türme, stille Bucht, Pilger aus ganz Griechenland. Per Boot in 45 Minuten erreichbar. Ein Ort der echten Andacht, kein Tourismus-Kloster.</p>
+      </div>
+
+      <div class="sy-viertel-card">
+        <div class="sy-viertel-emoji">🧽</div>
+        <h3 class="sy-viertel-name">Schwamm-Tradition</h3>
+        <p class="sy-viertel-desc">Das kulturelle Erbe von Symi — die Schwammtaucher bauten diese Insel buchstäblich. Ihre Häuser, ihre Kirchen, ihr Reichtum. Am Hafen hängen noch immer Schwämme an jedem zweiten Laden.</p>
+      </div>
+
+      <div class="sy-viertel-card">
+        <div class="sy-viertel-emoji">🚶</div>
+        <h3 class="sy-viertel-name">Bergpfade</h3>
+        <p class="sy-viertel-desc">Symi hat außerhalb des Hafens ein ausgedehntes Wanderwegenetz — Pfade zu abgelegenen Buchten, Klöstern und verlassenen Dörfern. Das wahre Symi liegt hinter den Hügeln, nicht am Kai.</p>
+      </div>
+
+      <div class="sy-viertel-card">
+        <div class="sy-viertel-emoji">🕊️</div>
+        <h3 class="sy-viertel-name">Historisches Erbe</h3>
+        <p class="sy-viertel-desc">8. Mai 1945 — auf Symi unterzeichnete die letzte deutsche Besatzung Europas die Kapitulation. Eine unscheinbare Tafel am Hafen erinnert daran. Geschichte kann so still sein.</p>
+      </div>
+
+    </div>
+
+    <div class="sy-tip-banner">
+      <div class="sy-tip-emoji">🌅</div>
+      <div class="sy-tip-text">
+        <h3>Gialos um 6 Uhr morgens: bevor Rhodos aufwacht</h3>
+        <p>Die Tagesboote aus Rhodos kommen gegen 10 Uhr. Wer auf Symi übernachtet, hat bis dahin den Hafen für sich — und Gialos am frühen Morgen ist ein anderer Ort. Das Licht fällt weich auf die pastellfarbenen Fassaden, die Fischer sortieren den Fang, der Kaffee dampft im einzigen offenen Kafeneion. Kein Lärm, kein Gedränge, nur das leise Knarzen der Boote. Um 10 Uhr verändert sich alles. Deshalb lohnt es sich, hier zu schlafen.</p>
+      </div>
+    </div>
+
+  </section>
+</div>
+</div>
+</body>
+</html>

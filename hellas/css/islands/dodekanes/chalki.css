@@ -1,0 +1,257 @@
+/* =============================================
+   CHALKI — Insel-Unterseite
+   Akzentfarbe: Terrakotta / Venezianisches Rosé
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#chalki-page {
+  font-family: 'Outfit', sans-serif;
+  color: #1a0e0a;
+  background: #faf5f2;
+}
+
+/* ── BACK BAR ── */
+.ch-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(250,245,242,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(178,72,48,0.18);
+}
+.ch-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(178,72,48,0.35);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #b24830; transition: all 0.2s;
+}
+.ch-back-btn:hover { background: #fae8e0; border-color: #b24830; }
+.ch-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.ch-breadcrumb { font-size: 0.8rem; color: #8a7870; letter-spacing: 0.05em; }
+.ch-breadcrumb span { color: #b24830; }
+
+/* ── HERO ── */
+.ch-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.ch-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(165deg, #0a0402 0%, #2a1008 20%, #7a2818 45%, #c85830 68%, #e8a888 88%, #f8d8c8 100%);
+}
+.ch-hero-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(ellipse 65% 50% at 50% 65%, rgba(200,88,48,0.22) 0%, transparent 70%),
+    radial-gradient(ellipse 38% 28% at 80% 20%, rgba(90,28,12,0.35) 0%, transparent 60%);
+}
+.ch-hero-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.042) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+.ch-hero-silhouette {
+  position: absolute; bottom: 108px; left: 50%; transform: translateX(-50%);
+  width: 820px; height: 170px;
+  opacity: 0.11;
+}
+.ch-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(12,5,2,0.50);
+}
+.ch-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23faf5f2' fill-opacity='1' d='M0,60L80,68C160,76,320,92,480,88C640,84,800,60,960,52C1120,44,1280,56,1360,62L1440,68L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.ch-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.ch-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: rgba(255,255,255,0.45);
+  margin-bottom: 1.2rem;
+}
+.ch-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 300; line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+.ch-hero-title em { font-style: italic; display: block; color: #f8c8a8; }
+.ch-hero-sub {
+  max-width: 560px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(255,255,255,0.65); line-height: 1.75; font-weight: 300;
+}
+.ch-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.ch-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(255,255,255,0.20);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.78);
+}
+
+/* ── STATS BAR ── */
+.ch-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(178,72,48,0.12);
+}
+.ch-stat-item {
+  flex: 1; max-width: 200px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(178,72,48,0.09);
+}
+.ch-stat-item:last-child { border-right: none; }
+.ch-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: #b24830; line-height: 1;
+}
+.ch-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #8a7870; margin-top: 0.3rem;
+}
+
+/* ── CONTENT ── */
+.ch-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.ch-section { padding: 4rem 0 2rem; }
+.ch-section-head { margin-bottom: 2.5rem; }
+.ch-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #b24830; margin-bottom: 0.8rem;
+}
+.ch-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300; color: #1a0e0a; line-height: 1.15;
+}
+.ch-section-title em { font-style: italic; color: #b24830; }
+.ch-divider { width: 40px; height: 2px; background: #b24830; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.ch-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.ch-history-text p {
+  font-size: 1rem; line-height: 1.9; color: #2e1810;
+  font-weight: 300; margin-bottom: 1.2rem;
+}
+.ch-timeline { position: relative; padding-left: 2rem; }
+.ch-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(178,72,48,0.20);
+}
+.ch-tl-item { position: relative; margin-bottom: 1.8rem; }
+.ch-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: white; border: 2px solid #b24830;
+}
+.ch-tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 600; color: #b24830; margin-bottom: 0.25rem;
+}
+.ch-tl-event { font-size: 0.88rem; color: #2e1810; line-height: 1.6; font-weight: 300; }
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.ch-sights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.ch-sight-card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid rgba(178,72,48,0.15);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ch-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(40,12,4,0.10); }
+.ch-sight-visual { height: 140px; }
+.ch-sight-body { padding: 1.2rem; }
+.ch-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #b24830; margin-bottom: 0.35rem;
+}
+.ch-sight-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 300; color: #1a0e0a; margin-bottom: 0.4rem;
+}
+.ch-sight-desc { font-size: 0.83rem; color: #4a3028; line-height: 1.65; font-weight: 300; }
+
+.sv-ch-emborio  { background: linear-gradient(160deg, #120402 0%, #502010 55%, #d07858 100%); }
+.sv-ch-kastro   { background: linear-gradient(160deg, #0a0604 0%, #382010 55%, #b05830 100%); }
+.sv-ch-agios    { background: linear-gradient(160deg, #020810 0%, #103058 55%, #5898c8 100%); }
+.sv-ch-beach    { background: linear-gradient(160deg, #020810 0%, #104870 55%, #40b8d8 100%); }
+.sv-ch-clock    { background: linear-gradient(160deg, #100c04 0%, #483818 55%, #c8a860 100%); }
+.sv-ch-nimporio { background: linear-gradient(160deg, #100408 0%, #501828 55%, #d86880 100%); }
+
+/* ── TAVERNEN ── */
+.ch-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.ch-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(178,72,48,0.15);
+  border-radius: 4px; border-left: 3px solid #b24830;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ch-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(40,12,4,0.08); }
+.ch-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.ch-tav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300; color: #1a0e0a;
+}
+.ch-tav-loc { font-size: 0.75rem; color: #8a7870; margin-top: 0.2rem; }
+.ch-tav-stars { color: #b24830; font-size: 0.85rem; letter-spacing: 2px; }
+.ch-tav-desc { font-size: 0.88rem; color: #2e1810; line-height: 1.75; font-weight: 300; margin-bottom: 1rem; }
+.ch-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.ch-tav-dish {
+  padding: 3px 10px; background: #fae8e0; color: #3a1008;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+}
+.ch-tav-price { font-size: 0.8rem; color: #8a7870; }
+.ch-tav-price span { color: #b24830; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.ch-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.ch-viertel-card {
+  padding: 1.8rem; background: #faeae0;
+  border-radius: 4px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.ch-viertel-card:hover { background: #f8d0b8; transform: translateY(-4px); }
+.ch-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.ch-viertel-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300; color: #1a0e0a; margin-bottom: 0.5rem;
+}
+.ch-viertel-desc { font-size: 0.82rem; color: #4a3028; line-height: 1.65; font-weight: 300; }
+
+/* ── TIP BANNER ── */
+.ch-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #0a0402 0%, #3a1008 40%, #b24830 100%);
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.ch-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.ch-tip-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300; color: white; margin-bottom: 0.6rem;
+}
+.ch-tip-text p {
+  font-size: 0.92rem; color: rgba(255,255,255,0.68); line-height: 1.75; font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .ch-back-bar { padding: 0.8rem 1.2rem; }
+  .ch-content { padding: 2rem 1.2rem 4rem; }
+  .ch-history-grid { grid-template-columns: 1fr; }
+  .ch-sights-grid { grid-template-columns: 1fr 1fr; }
+  .ch-tav-grid { grid-template-columns: 1fr; }
+  .ch-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .ch-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+}

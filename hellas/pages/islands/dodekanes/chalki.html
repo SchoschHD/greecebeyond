@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chalki — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="chalki.css" />
+</head>
+<body>
+<div id="chalki-page">
+
+<div class="ch-back-bar">
+  <button class="ch-back-btn" type="button" onclick="closeChalki()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ch-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Chalki</span></p>
+</div>
+
+<div class="ch-hero">
+  <div class="ch-hero-bg"></div>
+  <div class="ch-hero-dots"></div>
+  <!-- Chalki silhouette: neoclassical harbour facades, clock tower, hillside kastro -->
+  <svg class="ch-hero-silhouette" viewBox="0 0 820 170" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sea/harbour base -->
+    <rect x="0" y="148" width="820" height="22" opacity="0.18"/>
+    <!-- Row of neoclassical harbour mansions -->
+    <!-- Mansion 1 -->
+    <rect x="30" y="90" width="70" height="58"/>
+    <polygon points="30,90 65,68 100,90"/>
+    <rect x="48" y="108" width="16" height="28"/>
+    <rect x="74" y="108" width="16" height="28"/>
+    <rect x="55" y="94" width="10" height="10"/>
+    <!-- Mansion 2 with arched windows -->
+    <rect x="108" y="82" width="80" height="66"/>
+    <polygon points="108,82 148,60 188,82"/>
+    <rect x="122" y="102" width="18" height="30"/>
+    <rect x="152" y="102" width="18" height="30"/>
+    <rect x="140" y="86" width="12" height="12"/>
+    <!-- Clock tower centre -->
+    <rect x="198" y="50" width="34" height="98"/>
+    <rect x="193" y="42" width="44" height="14"/>
+    <rect x="196" y="28" width="38" height="16"/>
+    <polygon points="196,28 215,10 234,28"/>
+    <circle cx="215" cy="82" r="10" fill="none" stroke="white" stroke-width="2"/>
+    <!-- Mansion 3 -->
+    <rect x="242" y="78" width="72" height="70"/>
+    <polygon points="242,78 278,56 314,78"/>
+    <rect x="256" y="100" width="16" height="28"/>
+    <rect x="284" y="100" width="16" height="28"/>
+    <!-- Mansion 4 smaller -->
+    <rect x="322" y="95" width="55" height="53"/>
+    <polygon points="322,95 349,78 376,95"/>
+    <rect x="336" y="112" width="12" height="24"/>
+    <rect x="356" y="112" width="12" height="24"/>
+    <!-- Kastro hill right side -->
+    <path d="M430,148 Q480,100 540,78 Q590,60 640,64 Q700,70 760,90 Q800,105 820,120 L820,148Z" opacity="0.30"/>
+    <!-- Kastro walls -->
+    <rect x="560" y="50" width="50" height="40"/>
+    <rect x="555" y="42" width="10" height="12"/>
+    <rect x="572" y="42" width="10" height="12"/>
+    <rect x="589" y="42" width="10" height="12"/>
+    <rect x="606" y="42" width="10" height="12"/>
+    <!-- Chapel on hill -->
+    <rect x="650" y="60" width="22" height="28"/>
+    <polygon points="650,60 661,46 672,60"/>
+    <!-- Sea shimmer -->
+    <path d="M0,152 Q205,145 410,149 Q615,153 820,146 L820,160 L0,160Z" opacity="0.15"/>
+  </svg>
+  <div class="ch-hero-overlay"></div>
+  <div class="ch-hero-content">
+    <p class="ch-hero-tag">Dodekanes · Ägäis</p>
+    <h1 class="ch-hero-title">Chalki<em>Χάλκη</em></h1>
+    <p class="ch-hero-sub">Die kleine Schwester von Rhodos — bunt verputzte Neoklassik-Herrenhäuser direkt am Wasser, ein venezianischer Uhrenturm, kaum Autos und eine Hafenpromenade, die aussieht, als hätte sie ein Maler erfunden. Chalki ist das schönste kleine Hafenbild der Dodekanes.</p>
+    <div class="ch-hero-pills">
+      <span class="ch-hero-pill">Neoklassik-Hafen</span>
+      <span class="ch-hero-pill">Uhrenturm</span>
+      <span class="ch-hero-pill">Kastro</span>
+      <span class="ch-hero-pill">Autofrei</span>
+      <span class="ch-hero-pill">Tauchen</span>
+    </div>
+  </div>
+  <div class="ch-hero-waves"></div>
+</div>
+
+<div class="ch-stats-bar">
+  <div class="ch-stat-item">
+    <div class="ch-stat-num">~300</div>
+    <div class="ch-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ch-stat-item">
+    <div class="ch-stat-num">28 km²</div>
+    <div class="ch-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="ch-stat-item">
+    <div class="ch-stat-num">1</div>
+    <div class="ch-stat-lbl">Hauptort: Nimporio</div>
+  </div>
+  <div class="ch-stat-item">
+    <div class="ch-stat-num">~1900</div>
+    <div class="ch-stat-lbl">Uhrenturm erbaut</div>
+  </div>
+  <div class="ch-stat-item">
+    <div class="ch-stat-num">0</div>
+    <div class="ch-stat-lbl">Motorfahrzeuge erlaubt</div>
+  </div>
+</div>
+
+<div class="ch-content">
+
+  <section class="ch-section">
+    <div class="ch-section-head">
+      <p class="ch-section-label">01 — Geschichte</p>
+      <h2 class="ch-section-title">Schwamm, Seefahrt<br><em>und vergessene Pracht</em></h2>
+      <div class="ch-divider"></div>
+    </div>
+    <div class="ch-history-grid">
+      <div class="ch-history-text">
+        <p>Chalki war einmal reich. Im 19. Jahrhundert lebten hier über 3.000 Menschen — Schwammtaucher, Reeder und Kaufleute, die ihr Geld in die prächtigen neoklassizistischen Herrenhäuser des Hafens Nimporio investierten. Die Fassaden aus Ocker, Rosé und Terrakotta, die heute das Postkartenbild der Insel sind, stammen aus dieser Blütezeit.</p>
+        <p>Dann brach der Schwammhandel zusammen, die jungen Männer wanderten aus — nach Rhodos, nach Tarpon Springs in Florida, nach Australien. Innerhalb weniger Jahrzehnte schrumpfte die Bevölkerung auf ein Zehntel. Die Herrenhäuser verfielen, die Gassen leerten sich. Was blieb, war die Architektur und die Stille.</p>
+        <p>Heute ist diese Stille das größte Kapital der Insel. Chalki hat keine Straße, die für Autos geeignet wäre — und keinen Willen, das zu ändern. Die Restaurierung der Herrenhäuser schreitet langsam voran. Wer heute durch Nimporio geht, sieht die Schichten: strahlend renoviert neben still verfallend, Nebeneinanderbestehen als ästhetisches Prinzip.</p>
+      </div>
+      <div class="ch-timeline">
+        <div class="ch-tl-item">
+          <div class="ch-tl-dot"></div>
+          <div class="ch-tl-year">Antike</div>
+          <div class="ch-tl-event">Chalki ist seit der Antike besiedelt — der Name geht möglicherweise auf Chalkos (Kupfer) zurück, das auf der Insel abgebaut wurde. Antike Überreste auf dem Kastro-Hügel belegen frühe griechische Präsenz.</div>
+        </div>
+        <div class="ch-tl-item">
+          <div class="ch-tl-dot"></div>
+          <div class="ch-tl-year">1309</div>
+          <div class="ch-tl-event">Die Johanniter-Ritter übernehmen Chalki zusammen mit Rhodos als Teil des Dodekanes. Das Kastro auf dem Hügel über Nimporio wird ausgebaut und dient als Refugium bei Piratenüberfällen.</div>
+        </div>
+        <div class="ch-tl-item">
+          <div class="ch-tl-dot"></div>
+          <div class="ch-tl-year">1522</div>
+          <div class="ch-tl-event">Osmanische Herrschaft nach der Einnahme von Rhodos. Chalki bleibt eine Fischerinsel, der Schwammhandel beginnt sich zu entwickeln. Die Insel erhält relative Autonomie unter osmanischer Oberhoheit.</div>
+        </div>
+        <div class="ch-tl-item">
+          <div class="ch-tl-dot"></div>
+          <div class="ch-tl-year">1800–1900</div>
+          <div class="ch-tl-event">Goldenes Zeitalter des Schwammtauchens — Chalkioten fahren bis nach Nordafrika und in die Adria. Der Reichtum fließt zurück als Architektur: neoklassizistische Herrenhäuser mit Stuckverzierungen und Marmorböden.</div>
+        </div>
+        <div class="ch-tl-item">
+          <div class="ch-tl-dot"></div>
+          <div class="ch-tl-year">1947</div>
+          <div class="ch-tl-event">Anschluss an Griechenland zusammen mit dem gesamten Dodekanes. Die Entvölkerung schreitet fort — bis in die 1970er verlassen die meisten Bewohner die Insel. Die Häuser bleiben, die Menschen gehen.</div>
+        </div>
+        <div class="ch-tl-item">
+          <div class="ch-tl-dot"></div>
+          <div class="ch-tl-year">1983</div>
+          <div class="ch-tl-event">UNESCO-Initiative erklärt Chalki zur "Insel des Friedens und der Freundschaft der Jugend" — internationales Aufmerksamkeit, erste Restaurierungsprojekte. Die bunte Hafenfront wird langsam wieder zum Leben erweckt.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ch-section">
+    <div class="ch-section-head">
+      <p class="ch-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ch-section-title">Farbige Fassaden<br><em>und ein Kastro über dem Meer</em></h2>
+      <div class="ch-divider"></div>
+    </div>
+    <div class="ch-sights-grid">
+
+      <div class="ch-sight-card">
+        <div class="ch-sight-visual sv-ch-emborio"></div>
+        <div class="ch-sight-body">
+          <p class="ch-sight-cat">Hafen · Architektur</p>
+          <h3 class="ch-sight-name">Nimporio — der Hafen</h3>
+          <p class="ch-sight-desc">Die Hafenfront von Nimporio ist eine der schönsten im Dodekanes — neoklassizistische Herrenhäuser in Ocker, Rosé, Hellblau und Terrakotta, direkt am Wasser. Keine Straße, keine Autos, nur der Weg entlang der Boote und diese unmögliche Fassadenreihe.</p>
+        </div>
+      </div>
+
+      <div class="ch-sight-card">
+        <div class="ch-sight-visual sv-ch-kastro"></div>
+        <div class="ch-sight-body">
+          <p class="ch-sight-cat">Burg · Aussicht</p>
+          <h3 class="ch-sight-name">Kastro der Johanniter</h3>
+          <p class="ch-sight-desc">Das mittelalterliche Kastro der Johanniter-Ritter auf dem Hügel über dem Hafen — dreißig Minuten Aufstieg über gepflasterte Pfade, Blick auf Rhodos, Alimia und im Klaren bis zur türkischen Küste. Die Kapelle Agios Nikolaos im Inneren ist noch intakt.</p>
+        </div>
+      </div>
+
+      <div class="ch-sight-card">
+        <div class="ch-sight-visual sv-ch-agios"></div>
+        <div class="ch-sight-body">
+          <p class="ch-sight-cat">Kirche · Mosaik</p>
+          <h3 class="ch-sight-name">Agios Nikolaos</h3>
+          <p class="ch-sight-desc">Die Hauptkirche des Hafens mit einem außergewöhnlichen Chochlakia-Mosaikboden — ein traditionelles Muster aus schwarzen und weißen Kieselsteinen, handverlegt. Die Kirchenglocke ist die einzige Uhr, die die Inselbewohner brauchen.</p>
+        </div>
+      </div>
+
+      <div class="ch-sight-card">
+        <div class="ch-sight-visual sv-ch-beach"></div>
+        <div class="ch-sight-body">
+          <p class="ch-sight-cat">Strände · Tauchen</p>
+          <h3 class="ch-sight-name">Pondamos &amp; Areta</h3>
+          <p class="ch-sight-desc">Pondamos ist der nächste Strand vom Hafen — zehn Minuten zu Fuß, Kiesel, klares Wasser, eine Taverne. Areta ist nur per Boot erreichbar und für Taucher: kristallklares Wasser, Posidonia-Seegraswiesen und Unterwasserfelsen voller Leben.</p>
+        </div>
+      </div>
+
+      <div class="ch-sight-card">
+        <div class="ch-sight-visual sv-ch-clock"></div>
+        <div class="ch-sight-body">
+          <p class="ch-sight-cat">Wahrzeichen · Belle Époque</p>
+          <h3 class="ch-sight-name">Uhrenturm</h3>
+          <p class="ch-sight-desc">Der Uhrenturm über dem Hafen ist das Wahrzeichen von Chalki — ein venezianisch beeinflusster Turm aus der Hochzeit der Schwammfahrer, um 1900 erbaut. Abends beleuchtet und vom Wasser aus zu sehen: das erste Bild, das alle Besucher fotografieren.</p>
+        </div>
+      </div>
+
+      <div class="ch-sight-card">
+        <div class="ch-sight-visual sv-ch-nimporio"></div>
+        <div class="ch-sight-body">
+          <p class="ch-sight-cat">Dorf · Architektur</p>
+          <h3 class="ch-sight-name">Chorio — das Geisterdorf</h3>
+          <p class="ch-sight-desc">Das alte Bergdorf Chorio, einst Hauptsiedlung der Insel, ist weitgehend verlassen — leere Herrenhäuser, offene Türen, wild wachsende Feigen in den Innenhöfen. Ein stiller, melancholischer Spaziergang durch eine halbe Aufgabe.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ch-section">
+    <div class="ch-section-head">
+      <p class="ch-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="ch-section-title">Fisch vom Morgen<br><em>am schönsten Hafen</em></h2>
+      <div class="ch-divider"></div>
+    </div>
+    <div class="ch-tav-grid">
+
+      <div class="ch-tav-card">
+        <div class="ch-tav-top">
+          <div>
+            <h3 class="ch-tav-name">Remezzo</h3>
+            <div class="ch-tav-loc">📍 Nimporio, Hafenpromenade</div>
+          </div>
+          <div class="ch-tav-stars">★★★★★</div>
+        </div>
+        <p class="ch-tav-desc">Das bekannteste Restaurant der Insel — direkt am Wasser, mit Blick auf die bunten Fassaden und die Fischerboote. Frischer Fisch täglich, ausgewählte Meeresfrüchte, Oktopus vom Holzkohlegrill. Abends füllt sich die Terrasse mit allen Nationen, die Chalki besuchen.</p>
+        <div class="ch-tav-dishes">
+          <span class="ch-tav-dish">Fagri am Stück gegrillt</span>
+          <span class="ch-tav-dish">Garnelen saganaki</span>
+          <span class="ch-tav-dish">Oktopus-Carpaccio</span>
+        </div>
+        <p class="ch-tav-price">Preisklasse: <span>€€ · Abendessen mit Hafenblick</span></p>
+      </div>
+
+      <div class="ch-tav-card">
+        <div class="ch-tav-top">
+          <div>
+            <h3 class="ch-tav-name">Taverna Omonia</h3>
+            <div class="ch-tav-loc">📍 Nimporio, Dorfplatz</div>
+          </div>
+          <div class="ch-tav-stars">★★★★★</div>
+        </div>
+        <p class="ch-tav-desc">Familienbetrieb seit drei Generationen — auf dem Dorfplatz hinter dem Hafen, unter einem mächtigen Tamariskenbaum. Hausmannskost auf höchstem Niveau: Moussaka aus dem Holzofen, gefüllte Paprika mit Reis und Kräutern, selbstgemachtes Baklava zum Abschluss.</p>
+        <div class="ch-tav-dishes">
+          <span class="ch-tav-dish">Moussaka vom Blech</span>
+          <span class="ch-tav-dish">Gemista (gefüllte Paprika)</span>
+          <span class="ch-tav-dish">Baklava hausgemacht</span>
+        </div>
+        <p class="ch-tav-price">Preisklasse: <span>€ · Familiäre Wärme garantiert</span></p>
+      </div>
+
+      <div class="ch-tav-card">
+        <div class="ch-tav-top">
+          <div>
+            <h3 class="ch-tav-name">Kafeneio Chalki</h3>
+            <div class="ch-tav-loc">📍 Nimporio, Hafenplatz</div>
+          </div>
+          <div class="ch-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ch-tav-desc">Das Stammkafé der Fischer und Einwohner — morgens um sieben schon geöffnet, wenn die Fähre von Rhodos kommt. Griechischer Kaffee, ein Zwieback, die Tageszeitung von gestern. Das Gespräch am Nebentisch dreht sich ums Wetter und die Fische. Man ist willkommen zuzuhören.</p>
+        <div class="ch-tav-dishes">
+          <span class="ch-tav-dish">Ellinikos Kafes</span>
+          <span class="ch-tav-dish">Loukoumades (Honigbällchen)</span>
+          <span class="ch-tav-dish">Ouzo mit Meze</span>
+        </div>
+        <p class="ch-tav-price">Preisklasse: <span>€ · Morgenstimmung Pflicht</span></p>
+      </div>
+
+      <div class="ch-tav-card">
+        <div class="ch-tav-top">
+          <div>
+            <h3 class="ch-tav-name">To Steki</h3>
+            <div class="ch-tav-loc">📍 Pondamos-Strand</div>
+          </div>
+          <div class="ch-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ch-tav-desc">Am einzigen zu Fuß erreichbaren Strand der Insel — Pondamos — steht diese kleine Taverne direkt am Wasser. Mittags nach dem Schwimmen: Kalamarakia, Feta, Salat und ein kaltes Bier unter dem Sonnenschirm. Das Einfachste ist hier das Beste.</p>
+        <div class="ch-tav-dishes">
+          <span class="ch-tav-dish">Kalamarakia tiganita</span>
+          <span class="ch-tav-dish">Choriatiki (Bauernsalat)</span>
+          <span class="ch-tav-dish">Mythen Bier kalt</span>
+        </div>
+        <p class="ch-tav-price">Preisklasse: <span>€ · Strandpause nach dem Bad</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ch-section">
+    <div class="ch-section-head">
+      <p class="ch-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="ch-section-title">Bunt, still<br><em>und ein bisschen aus der Zeit</em></h2>
+      <div class="ch-divider"></div>
+    </div>
+    <div class="ch-viertel-grid">
+
+      <div class="ch-viertel-card">
+        <div class="ch-viertel-emoji">🎨</div>
+        <h3 class="ch-viertel-name">Nimporio</h3>
+        <p class="ch-viertel-desc">Der einzige bewohnte Ort der Insel — eine Hafenfront wie gemalt, mit neoklassizistischen Herrenhäusern in allen Pastelltönen. Keine Autos, keine lauten Mopeds. Nur die Geräusche von Wasser, Glocken und Gesprächen.</p>
+      </div>
+
+      <div class="ch-viertel-card">
+        <div class="ch-viertel-emoji">🏚️</div>
+        <h3 class="ch-viertel-name">Chorio</h3>
+        <p class="ch-viertel-desc">Das verlassene Bergdorf, zwanzig Minuten zu Fuß oberhalb des Hafens — ein stilles Ensemble aus halbverfallenen Herrenhäusern, überwachsenen Kirchen und dem Kastro der Johanniter. Einer der melancholischsten schönen Orte Griechenlands.</p>
+      </div>
+
+      <div class="ch-viertel-card">
+        <div class="ch-viertel-emoji">🐠</div>
+        <h3 class="ch-viertel-name">Tauchen</h3>
+        <p class="ch-viertel-desc">Das Wasser um Chalki zählt zu den klarsten der Dodekanes — kaum Motorboote, kaum Tourismus, kaum Trübung. Die Tauchschule am Hafen bietet Ausfahrten zu Unterwasserhöhlen, versunkenen Ankern und Posidonia-Wiesen.</p>
+      </div>
+
+      <div class="ch-viertel-card">
+        <div class="ch-viertel-emoji">🦐</div>
+        <h3 class="ch-viertel-name">Schwammtaucher-Erbe</h3>
+        <p class="ch-viertel-desc">Die Geschichte der Schwammtaucher ist überall auf der Insel präsent — in den Herrenhäusern, die ihr Geld finanzierte, in den Geschichten der alten Männer am Kafeneio, in den Schwämmen, die im kleinen Laden am Hafen noch immer verkauft werden.</p>
+      </div>
+
+      <div class="ch-viertel-card">
+        <div class="ch-viertel-emoji">🚶</div>
+        <h3 class="ch-viertel-name">Wandern</h3>
+        <p class="ch-viertel-desc">Chalki ist klein genug, um an einem Tag zu Fuß vollständig erkundbar zu sein — Kastro, Chorio, Pondamos-Strand, Kapellen, verlassene Windmühlen. Das Wegenetz aus alten Mauleselpfaden führt durch Macchia und trockene Hänge mit Weitblick.</p>
+      </div>
+
+      <div class="ch-viertel-card">
+        <div class="ch-viertel-emoji">🌅</div>
+        <h3 class="ch-viertel-name">Rhodos-Nähe</h3>
+        <p class="ch-viertel-desc">Chalki liegt nur 17 km westlich von Rhodos — Tagesausflüge sind mit der Fähre problemlos möglich. Viele Gäste nutzen Chalki als ruhige Basis und fahren für einen Tag auf die große Insel, kehren aber abends in die Stille zurück.</p>
+      </div>
+
+    </div>
+
+    <div class="ch-tip-banner">
+      <div class="ch-tip-emoji">🎨</div>
+      <div class="ch-tip-text">
+        <h3>Das schönste Hafenbild, das kaum jemand kennt</h3>
+        <p>Chalki ist was übrig bleibt, wenn Tourismus irgendwann aufgehört hat, das Wichtigste zu sein. Die Herrenhäuser stehen noch, der Uhrenturm schlägt noch, der Fischer bringt noch den Fisch — aber ohne Reiseleiterfähnchen, ohne Preisliste für den Sonnenuntergang, ohne die Infrastruktur des Massengeschmacks. Wer sich das leisten kann (eine Fähre ab Rhodos, zwei Nächte), findet hier ein Griechenland, das anderswo ausgestorben ist.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>
