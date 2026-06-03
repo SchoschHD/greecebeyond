@@ -273,3 +273,13 @@ function openSymi() {
   }
 }
 function closeSymi() { closePage('symi-page'); }    
+
+
+function openTilos() {
+  if (typeof loadPage === 'function') {
+    loadPage('tilos-page', 'islands/dodekanes/tilos.html').then(() => openPage('tilos-page'));
+  } else {
+    openPage('tilos-page');
+  }   
+}
+function closeTilos() { closePage('tilos-page'); }  
