@@ -219,6 +219,15 @@ function openKimolos() {
 }
 function closeKimolos() { closePage('kimolos-page'); }
 
+function openSikinos() {
+  if (typeof loadPage === 'function') {
+    loadPage('sikinos-page', 'islands/kyklades/sikinos.html').then(() => openPage('sikinos-page')); 
+  } else {
+    openPage('sikinos-page');
+  }
+}
+function closeSikinos() { closePage('sikinos-page'); }  
+
 // Convenience-Funktionen für konkrete Inseln Dodekanes
 function openKos() {
   if (typeof loadPage === 'function') {
