@@ -1,1 +1,354 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kimolos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="kimolos.css" />
+</head>
+<body>
+<div id="kimolos-page">
 
+<div class="km-back-bar">
+  <button class="km-back-btn" onclick="closeKimolos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="km-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Kimolos</span></p>
+</div>
+
+<div class="km-hero">
+  <div class="km-hero-bg"></div>
+  <div class="km-hero-dots"></div>
+  <!-- Chora kastro + white chalk cliffs + Prassa beach + Polyaigos islet -->
+  <svg class="km-hero-silhouette" viewBox="0 0 860 180" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sea -->
+    <path d="M0,172 Q215,160 430,167 Q645,174 860,162 L860,180 L0,180Z" opacity="0.24"/>
+    <!-- White chalk / pumice cliffs (left, characteristic of Kimolos) -->
+    <path d="M0,180 Q30,140 70,110 Q110,82 150,78 Q180,75 200,82 Q220,90 240,80 Q265,68 290,75 Q310,82 320,180Z" opacity="0.32"/>
+    <!-- Chalk texture on cliffs — jagged top -->
+    <path d="M70,110 Q85,98 100,105 Q115,92 130,100 Q145,85 160,92 Q175,80 190,88 Q205,76 220,84 Q235,70 250,78 Q265,68 278,76" fill="none" stroke="white" stroke-width="2" opacity="0.6"/>
+    <!-- Chora kastro (center) — compact medieval village -->
+    <path d="M340,180 Q370,120 400,95 Q425,78 450,82 Q470,88 480,180Z" opacity="0.28"/>
+    <!-- Kastro outer wall -->
+    <rect x="372" y="78" width="88" height="50"/>
+    <rect x="368" y="66" width="96" height="14"/>
+    <!-- Kastro battlements -->
+    <rect x="371" y="52" width="12" height="16"/>
+    <rect x="391" y="52" width="12" height="16"/>
+    <rect x="411" y="52" width="12" height="16"/>
+    <rect x="431" y="52" width="12" height="16"/>
+    <rect x="451" y="52" width="12" height="16"/>
+    <!-- Church inside kastro -->
+    <rect x="396" y="36" width="26" height="32"/>
+    <ellipse cx="409" cy="36" rx="15" ry="10"/>
+    <rect x="404" y="24" width="10" height="14"/>
+    <rect x="401" y="28" width="16" height="5"/>
+    <!-- Houses spilling down from kastro -->
+    <rect x="356" y="100" width="20" height="22"/>
+    <rect x="470" y="96" width="22" height="26"/>
+    <rect x="492" y="102" width="18" height="20"/>
+    <!-- Polyaigos uninhabited island (right) -->
+    <path d="M620,180 Q660,118 700,96 Q730,80 760,86 Q790,92 820,80 Q845,70 860,78 L860,180Z" opacity="0.22"/>
+    <!-- Prassa thermal beach (far right cove) -->
+    <path d="M780,148 Q810,138 840,143 Q855,146 860,142" fill="none" stroke="white" stroke-width="3" opacity="0.5"/>
+    <!-- Milos (neighbour) hint far left -->
+    <path d="M0,155 Q25,142 55,147 Q75,150 90,158 L90,180 L0,180Z" opacity="0.16"/>
+  </svg>
+  <div class="km-hero-overlay"></div>
+  <div class="km-hero-content">
+    <p class="km-hero-tag">Kykladen · Westägäis · Neben Milos</p>
+    <h1 class="km-hero-title">Kimolos<em>Κίμωλος</em></h1>
+    <p class="km-hero-sub">Die Kreide-Insel der Kykladen — benannt nach dem weißen Gestein, das einst als Schreibkreide in die ganze Welt exportiert wurde. Eine mittelalterliche Chora, die schönsten Warmwasserquellen der Ägäis, ein unbewohntes Nachbarparadies und eine Stille, die man sich nicht vorstellen kann, bis man dort ist.</p>
+    <div class="km-hero-pills">
+      <span class="km-hero-pill">Kreide-Insel</span>
+      <span class="km-hero-pill">Kastro-Chora</span>
+      <span class="km-hero-pill">Prassa-Thermalquellen</span>
+      <span class="km-hero-pill">Polyaigos</span>
+      <span class="km-hero-pill">Stille</span>
+    </div>
+  </div>
+  <div class="km-hero-waves"></div>
+</div>
+
+<div class="km-stats-bar">
+  <div class="km-stat-item">
+    <div class="km-stat-num">~900</div>
+    <div class="km-stat-lbl">Einwohner</div>
+  </div>
+  <div class="km-stat-item">
+    <div class="km-stat-num">36 km²</div>
+    <div class="km-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="km-stat-item">
+    <div class="km-stat-num">40°C</div>
+    <div class="km-stat-lbl">Thermalquellen Prassa</div>
+  </div>
+  <div class="km-stat-item">
+    <div class="km-stat-num">25 min</div>
+    <div class="km-stat-lbl">Fähre von Milos</div>
+  </div>
+  <div class="km-stat-item">
+    <div class="km-stat-num">0</div>
+    <div class="km-stat-lbl">Autos in der Chora</div>
+  </div>
+</div>
+
+<div class="km-content">
+
+  <!-- 1. GESCHICHTE -->
+  <section class="km-section">
+    <div class="km-section-head">
+      <p class="km-section-label">01 — Geschichte</p>
+      <h2 class="km-section-title">Die Insel der Kreide<br><em>und der verborgenen Chora</em></h2>
+      <div class="km-divider"></div>
+    </div>
+    <div class="km-history-grid">
+      <div class="km-history-text">
+        <p>Kimolos verdankt seinen Namen dem weißen Gestein, das die Insel seit der Antike prägt — Kimolos bedeutet auf Griechisch Kreide. Das weiche, weiße Mineral, das hier abgebaut wurde, diente als Schreibkreide, Waschmittel und Kosmetikpuder und wurde über Jahrhunderte in die gesamte bekannte Welt exportiert. Die Römer nannten es Terra Kimolia und schätzten es als Reinigungsmittel. Heute sind die alten Kreidebrüche still, aber die weißen Felsen der Insel erzählen noch von dieser Geschichte.</p>
+        <p>Das Herz von Kimolos ist die Chora — eine der besterhaltenen mittelalterlichen Kastro-Siedlungen der Kykladen. Im Inneren des venezianischen Kastros bilden die Häuser selbst die Außenmauer, ohne eine einzige Öffnung nach außen. Gassen so eng, dass man die Arme ausstrecken und beide Wände berühren kann. Kein Auto hat hier je Platz gefunden. Im Kastro-Innenhof steht die Kirche Christodoulos, umgeben von weißgekalkten Häusern, die seit dem 13. Jahrhundert bewohnt sind.</p>
+        <p>Neben Kimolos liegt Polyaigos — eine unbewohnte Insel, fast so groß wie Kimolos selbst, mit den unberührtesten Stränden der westlichen Kykladen. Kein Bewohner, keine Taverne, keine Infrastruktur. Per Boot in 20 Minuten erreichbar, für einen Tag Wildnis die nirgendwo sonst so nah ist.</p>
+      </div>
+      <div class="km-timeline">
+        <div class="km-tl-item">
+          <div class="km-tl-dot"></div>
+          <div class="km-tl-year">3000 v. Chr.</div>
+          <div class="km-tl-event">Frühe Besiedlung der Insel. Der Kreideabbau beginnt — Terra Kimolia wird zum wertvollen Handelsgut. Kimolos liegt auf der antiken Handelsroute zwischen Athen und den westlichen Kykladen.</div>
+        </div>
+        <div class="km-tl-item">
+          <div class="km-tl-dot"></div>
+          <div class="km-tl-year">Römerzeit</div>
+          <div class="km-tl-event">Terra Kimolia — das weiche weiße Gestein der Insel — ist in der gesamten römischen Welt als Reinigungsmittel, Kosmetikum und Schreibmaterial begehrt. Plinius der Ältere erwähnt es in seiner Naturalis Historia.</div>
+        </div>
+        <div class="km-tl-item">
+          <div class="km-tl-dot"></div>
+          <div class="km-tl-year">13. Jh.</div>
+          <div class="km-tl-event">Venezianische Herrschaft. Das Kastro der Chora wird errichtet — eine vollständig geschlossene Siedlung, deren Häuser die Außenmauer bilden. Schutz vor Piraten ohne eine einzige angreifbare Öffnung.</div>
+        </div>
+        <div class="km-tl-item">
+          <div class="km-tl-dot"></div>
+          <div class="km-tl-year">1677</div>
+          <div class="km-tl-event">Der englische Botaniker Joseph Pitton de Tournefort besucht Kimolos und beschreibt die Kreidebrüche, die Thermalquellen von Prassa und die merkwürdige Chora in seinen Reiseberichten als eines der seltensten Naturphänomene der Ägäis.</div>
+        </div>
+        <div class="km-tl-item">
+          <div class="km-tl-dot"></div>
+          <div class="km-tl-year">19. Jh.</div>
+          <div class="km-tl-event">Der Kreideexport erreicht seinen Höhepunkt — Kimolos-Kreide wird nach Nordafrika, Kleinasien und Europa verschifft. Mit dem Aufkommen synthetischer Alternativen versiegt die Industrie langsam.</div>
+        </div>
+        <div class="km-tl-item">
+          <div class="km-tl-dot"></div>
+          <div class="km-tl-year">Heute</div>
+          <div class="km-tl-event">Kimolos ist das stille Gegenstück zu Milos — 25 Minuten per Fähre entfernt, eine andere Welt. Wanderer, Naturliebhaber und alle, die Santorini zu laut und Milos zu bekannt ist, landen hier und bleiben länger als geplant.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SEHENSWÜRDIGKEITEN -->
+  <section class="km-section">
+    <div class="km-section-head">
+      <p class="km-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="km-section-title">Kastro, Thermalquellen<br><em>und das unbewohnte Paradies</em></h2>
+      <div class="km-divider"></div>
+    </div>
+    <div class="km-sights-grid">
+
+      <div class="km-sight-card">
+        <div class="km-sight-visual sv-km-chora"></div>
+        <div class="km-sight-body">
+          <p class="km-sight-cat">Kastro · Mittelalter</p>
+          <h3 class="km-sight-name">Chora &amp; Kastro</h3>
+          <p class="km-sight-desc">Das venezianische Kastro der Chora gehört zu den besterhaltenen mittelalterlichen Dörfern der Kykladen — die Häuser bilden die Außenmauer, keine Öffnung zeigt nach außen, die Gassen innen sind fingerschmal. Im Zentrum die Kirche Christodoulos aus dem 13. Jahrhundert, noch immer aktiv.</p>
+        </div>
+      </div>
+
+      <div class="km-sight-card">
+        <div class="km-sight-visual sv-km-prassa"></div>
+        <div class="km-sight-body">
+          <p class="km-sight-cat">Thermalquellen · Einzigartig</p>
+          <h3 class="km-sight-name">Prassa — Thermalquellen</h3>
+          <p class="km-sight-desc">Die bekannteste Attraktion der Insel — natürliche Thermalquellen, die direkt am Meeresufer aus dem Felsen sprudeln und das Wasser auf bis zu 40 Grad erwärmen. Keine Anlage, keine Eintrittsgebühr, keine Umkleiden. Einfach ins warme Wasser setzen und die Ägäis anschauen.</p>
+        </div>
+      </div>
+
+      <div class="km-sight-card">
+        <div class="km-sight-visual sv-km-cave"></div>
+        <div class="km-sight-body">
+          <p class="km-sight-cat">Archäologie · Höhle</p>
+          <h3 class="km-sight-name">Charkadio-Höhle</h3>
+          <p class="km-sight-desc">Eine der bedeutendsten prähistorischen Fundstellen der Kykladen — in der Höhle wurden Knochen von Zwergelefanten und Flusspferden gefunden, die vor Tausenden von Jahren auf der Insel lebten, als die Kykladen noch mit dem Festland verbunden waren. Ein Fenster in eine unvorstellbar alte Welt.</p>
+        </div>
+      </div>
+
+      <div class="km-sight-card">
+        <div class="km-sight-visual sv-km-psathi"></div>
+        <div class="km-sight-body">
+          <p class="km-sight-cat">Hafen · Dorf</p>
+          <h3 class="km-sight-name">Psathi</h3>
+          <p class="km-sight-desc">Der Hafen von Kimolos — ein kleines Dorf am Wasser mit einer Handvoll Häuser, einem Café und dem Anleger für die Fähre aus Milos. Ruhiger als jeder andere Hafen der Kykladen, mit Fischerbooten die noch wirklich fischen.</p>
+        </div>
+      </div>
+
+      <div class="km-sight-card">
+        <div class="km-sight-visual sv-km-polyaigos"></div>
+        <div class="km-sight-body">
+          <p class="km-sight-cat">Unbewohnte Insel · Wildnis</p>
+          <h3 class="km-sight-name">Polyaigos</h3>
+          <p class="km-sight-desc">Die größte unbewohnte Insel der Kykladen, direkt neben Kimolos — keine Bewohner, keine Tavernen, keine Wege. Nur Strände in Farben die man nicht benennen kann, Ziegen, Möwen und das Meer. Per Boot in 20 Minuten. Der unberührteste Ort der westlichen Kykladen.</p>
+        </div>
+      </div>
+
+      <div class="km-sight-card">
+        <div class="km-sight-visual sv-km-kalamitsi"></div>
+        <div class="km-sight-body">
+          <p class="km-sight-cat">Strand · Wildküste</p>
+          <h3 class="km-sight-name">Kalamitsi &amp; Aliki</h3>
+          <p class="km-sight-desc">Die Strände der Westküste — Kalamitsi mit weißem Kreidegestein im Wasser, Aliki mit einer türkisfarbenen Lagune hinter einer Sandbank. Kein Liegen-Service, keine Strandbar, kein Parkplatz. Man muss zu Fuß hin, und das ist der Schutz.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. ESSEN & TAVERNEN -->
+  <section class="km-section">
+    <div class="km-section-head">
+      <p class="km-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="km-section-title">Wenige Tische,<br><em>alles frisch, nichts inszeniert</em></h2>
+      <div class="km-divider"></div>
+    </div>
+    <div class="km-tav-grid">
+
+      <div class="km-tav-card">
+        <div class="km-tav-top">
+          <div>
+            <h3 class="km-tav-name">Bohoris</h3>
+            <div class="km-tav-loc">📍 Chora, Kastro-Rand</div>
+          </div>
+          <div class="km-tav-stars">★★★★★</div>
+        </div>
+        <p class="km-tav-desc">Das beste und einzige Restaurant am Rand des Kastros — eine Terrasse mit Blick über die Insel und das Meer, eine Küche die täglich wechselt je nachdem was der Markt hergibt. Kimolos-Ladenia (lokale Focaccia mit Tomaten und Zwiebeln), frischer Fisch, selbstgemachter Wein. Das Abendbrot der Insel.</p>
+        <div class="km-tav-dishes">
+          <span class="km-tav-dish">Ladenia Kimolos</span>
+          <span class="km-tav-dish">Gegrillter Fisch</span>
+          <span class="km-tav-dish">Revithosoupa</span>
+        </div>
+        <p class="km-tav-price">Preisklasse: <span>€€ · Abendessen · Kastro-Terrasse</span></p>
+      </div>
+
+      <div class="km-tav-card">
+        <div class="km-tav-top">
+          <div>
+            <h3 class="km-tav-name">Taverna Psathi</h3>
+            <div class="km-tav-loc">📍 Psathi, Hafen</div>
+          </div>
+          <div class="km-tav-stars">★★★★★</div>
+        </div>
+        <p class="km-tav-desc">Die Hafentaverne — Tische direkt am Wasser, Fährankunft als Taktgeber des Tages. Was die Fischer morgens bringen, wird mittags serviert. Keine Karte, keine Reservierung, kein Englisch nötig. Man zeigt auf das, was der Nachbar hat, und nickt.</p>
+        <div class="km-tav-dishes">
+          <span class="km-tav-dish">Tagesfang</span>
+          <span class="km-tav-dish">Oktopus sonnengetrocknet</span>
+          <span class="km-tav-dish">Weißwein aus dem Fass</span>
+        </div>
+        <p class="km-tav-price">Preisklasse: <span>€€ · Mittag · Hafen</span></p>
+      </div>
+
+      <div class="km-tav-card">
+        <div class="km-tav-top">
+          <div>
+            <h3 class="km-tav-name">Kafeneion Chora</h3>
+            <div class="km-tav-loc">📍 Chora, Dorfplatz</div>
+          </div>
+          <div class="km-tav-stars">★★★★★</div>
+        </div>
+        <p class="km-tav-desc">Das Kafeneion auf dem Dorfplatz der Chora — das soziale Zentrum der Insel, wo Einheimische Nachrichten austauschen, Domino spielen und Fremde höflich gemustert werden. Griechischer Kaffee, selbstgemachtes Gebäck, das Tagesgeräusch der Insel als Soundtrack.</p>
+        <div class="km-tav-dishes">
+          <span class="km-tav-dish">Griechischer Kaffee</span>
+          <span class="km-tav-dish">Bougatsa</span>
+          <span class="km-tav-dish">Kimolos-Honig</span>
+        </div>
+        <p class="km-tav-price">Preisklasse: <span>€ · Kafeneion · Morgens &amp; Abends</span></p>
+      </div>
+
+      <div class="km-tav-card">
+        <div class="km-tav-top">
+          <div>
+            <h3 class="km-tav-name">Ladenia — Das Inselbrot</h3>
+            <div class="km-tav-loc">📍 Bäckerei Chora</div>
+          </div>
+          <div class="km-tav-stars">★★★★★</div>
+        </div>
+        <p class="km-tav-desc">Kimolos ist berühmt für seine Ladenia — eine Art Focaccia aus Olivenöl-Teig, belegt mit frischen Tomaten, Zwiebeln und reichlich lokalem Olivenöl, im Holzofen gebacken. Die Bäckerei in der Chora macht sie täglich frisch. Das einzige Mitbringsel, das man wirklich essen sollte bevor man die Fähre besteigt.</p>
+        <div class="km-tav-dishes">
+          <span class="km-tav-dish">Ladenia klassisch</span>
+          <span class="km-tav-dish">Ladenia mit Kapern</span>
+          <span class="km-tav-dish">Loukoumades</span>
+        </div>
+        <p class="km-tav-price">Preisklasse: <span>€ · Bäckerei · Morgens</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. ORTE & CHARAKTER -->
+  <section class="km-section">
+    <div class="km-section-head">
+      <p class="km-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="km-section-title">Kreide, Stille<br><em>und das unbewohnte Nachbarparadies</em></h2>
+      <div class="km-divider"></div>
+    </div>
+    <div class="km-viertel-grid">
+
+      <div class="km-viertel-card">
+        <div class="km-viertel-emoji">🏰</div>
+        <h3 class="km-viertel-name">Kastro-Chora</h3>
+        <p class="km-viertel-desc">Das mittelalterliche Kastro ohne ein einziges Auto — Gassen so eng, dass man die Hände ausstrecken und beide Wände berühren kann. Noch von echten Familien bewohnt, noch nicht zum Museum geworden.</p>
+      </div>
+
+      <div class="km-viertel-card">
+        <div class="km-viertel-emoji">♨️</div>
+        <h3 class="km-viertel-name">Prassa</h3>
+        <p class="km-viertel-desc">Die natürlichen Thermalquellen direkt am Meer — 40 Grad warmes Wasser, das aus dem Felsen strömt und sich mit der Ägäis vermischt. Kein Eintritt, kein Betrieb, nur Natur und Wärme.</p>
+      </div>
+
+      <div class="km-viertel-card">
+        <div class="km-viertel-emoji">🏝️</div>
+        <h3 class="km-viertel-name">Polyaigos</h3>
+        <p class="km-viertel-desc">Die unbewohnte Schwesterinsel — größer als Kimolos, mit den unberührtesten Stränden der westlichen Kykladen. Per Boot erreichbar, für Tagesausflüge. Kein Mensch, nur Ziegen, Möwen und das Meer.</p>
+      </div>
+
+      <div class="km-viertel-card">
+        <div class="km-viertel-emoji">🦴</div>
+        <h3 class="km-viertel-name">Charkadio-Höhle</h3>
+        <p class="km-viertel-desc">Zwergelefanten und Flusspferde auf den Kykladen — die prähistorischen Knochenfunde der Charkadio-Höhle erzählen von einer Zeit, als diese Inselgruppe noch Festland war. Das älteste Kapitel der Inselgeschichte.</p>
+      </div>
+
+      <div class="km-viertel-card">
+        <div class="km-viertel-emoji">⛴️</div>
+        <h3 class="km-viertel-name">Milos &amp; Fähre</h3>
+        <p class="km-viertel-desc">Kimolos und Milos sind durch eine kurze Fährverbindung verbunden — 25 Minuten, mehrmals täglich. Man kann beide Inseln kombinieren: Milos für Sarakiniko und Klima, Kimolos für alles, was danach kommt.</p>
+      </div>
+
+      <div class="km-viertel-card">
+        <div class="km-viertel-emoji">🪨</div>
+        <h3 class="km-viertel-name">Kreideküste</h3>
+        <p class="km-viertel-desc">Die weißen Kreidefelsen der Nordküste sind das geologische Alleinstellungsmerkmal der Insel — weiches, helles Gestein das ins türkisblaue Wasser fällt und dem Meer eine Farbe gibt, die man nirgendwo sonst findet.</p>
+      </div>
+
+    </div>
+
+    <div class="km-tip-banner">
+      <div class="km-tip-emoji">🪨</div>
+      <div class="km-tip-text">
+        <h3>Die Insel die Milos nicht braucht — und trotzdem davon profitiert</h3>
+        <p>Kimolos liegt 25 Minuten per Fähre von Milos entfernt und ist damit die einzige Insel der Kykladen, die man als Tagesausflug von einer anderen Insel machen kann — und trotzdem übernachten will. Wer auf Milos ist und nach Kimolos fährt, versteht sofort, warum die meisten die Rückfahrt verpassen. Die Thermalquellen bei Prassa, das Kastro ohne Touristen, Ladenia frisch aus dem Ofen — Kimolos ist klein genug, um es an einem Tag zu sehen, und reich genug, um eine Woche zu bleiben.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>
