@@ -1,0 +1,258 @@
+/* =============================================
+   SIKINOS — Insel-Unterseite
+   Akzentfarbe: Olivenholz-Gold / Antikgold
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#sikinos-page {
+  font-family: 'Outfit', sans-serif;
+  color: #16120a;
+  background: #f8f5ee;
+}
+
+/* ── BACK BAR ── */
+.sk-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(248,245,238,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(160,120,30,0.18);
+}
+.sk-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(160,120,30,0.36);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #8a6010; transition: all 0.2s;
+}
+.sk-back-btn:hover { background: #f4ead0; border-color: #8a6010; }
+.sk-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.sk-breadcrumb { font-size: 0.8rem; color: #887860; letter-spacing: 0.05em; }
+.sk-breadcrumb span { color: #8a6010; }
+
+/* ── HERO ── */
+.sk-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.sk-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, #0c0a04 0%, #201808 22%, #4a3008 48%, #906018 70%, #c89838 100%);
+}
+.sk-hero-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(ellipse 65% 55% at 50% 68%, rgba(140,90,10,0.28) 0%, transparent 70%),
+    radial-gradient(ellipse 42% 32% at 78% 16%, rgba(60,40,6,0.40) 0%, transparent 62%);
+}
+.sk-hero-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.038) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+.sk-hero-silhouette {
+  position: absolute; bottom: 108px; left: 50%; transform: translateX(-50%);
+  width: 840px; height: 175px;
+  opacity: 0.10;
+}
+.sk-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(10,8,2,0.50);
+}
+.sk-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23f8f5ee' fill-opacity='1' d='M0,64L60,58.7C120,53,240,43,360,48C480,53,600,75,720,80C840,85,960,75,1080,64C1200,53,1320,43,1380,37.3L1440,32L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.sk-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.sk-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: rgba(255,255,255,0.44);
+  margin-bottom: 1.2rem;
+}
+.sk-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 300; line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+.sk-hero-title em { font-style: italic; display: block; color: #f0d080; }
+.sk-hero-sub {
+  max-width: 565px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(255,255,255,0.64); line-height: 1.75; font-weight: 300;
+}
+.sk-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.sk-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(255,255,255,0.20);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.80);
+}
+
+/* ── STATS BAR ── */
+.sk-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(160,120,30,0.12);
+}
+.sk-stat-item {
+  flex: 1; max-width: 220px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(160,120,30,0.08);
+}
+.sk-stat-item:last-child { border-right: none; }
+.sk-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: #8a6010; line-height: 1;
+}
+.sk-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #887860; margin-top: 0.3rem;
+}
+
+/* ── CONTENT ── */
+.sk-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.sk-section { padding: 4rem 0 2rem; }
+.sk-section-head { margin-bottom: 2.5rem; }
+.sk-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #8a6010; margin-bottom: 0.8rem;
+}
+.sk-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300; color: #16120a; line-height: 1.15;
+}
+.sk-section-title em { font-style: italic; color: #8a6010; }
+.sk-divider { width: 40px; height: 2px; background: #8a6010; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.sk-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.sk-history-text p {
+  font-size: 1rem; line-height: 1.9; color: #2c2010;
+  font-weight: 300; margin-bottom: 1.2rem;
+}
+.sk-timeline { position: relative; padding-left: 2rem; }
+.sk-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(138,96,16,0.22);
+}
+.sk-tl-item { position: relative; margin-bottom: 1.8rem; }
+.sk-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: white; border: 2px solid #8a6010;
+}
+.sk-tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 600; color: #8a6010; margin-bottom: 0.25rem;
+}
+.sk-tl-event { font-size: 0.88rem; color: #2c2010; line-height: 1.6; font-weight: 300; }
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.sk-sights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.sk-sight-card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid rgba(160,120,30,0.18);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.sk-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(30,20,4,0.10); }
+.sk-sight-visual { height: 140px; }
+.sk-sight-body { padding: 1.2rem; }
+.sk-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #8a6010; margin-bottom: 0.35rem;
+}
+.sk-sight-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 300; color: #16120a; margin-bottom: 0.4rem;
+}
+.sk-sight-desc { font-size: 0.83rem; color: #4a3820; line-height: 1.65; font-weight: 300; }
+
+/* Sight visual gradients — Sikinos Goldpalette */
+.sv-sk-episkopi  { background: linear-gradient(160deg, #100c04 0%, #504010 55%, #c09830 100%); }
+.sv-sk-kastro    { background: linear-gradient(160deg, #0e0c08 0%, #403820 55%, #d0b878 100%); }
+.sv-sk-moni      { background: linear-gradient(160deg, #080410 0%, #302050 55%, #c0a0e0 100%); }
+.sv-sk-alopronia { background: linear-gradient(160deg, #040c10 0%, #0c4868 55%, #50a8d8 100%); }
+.sv-sk-weinberge { background: linear-gradient(160deg, #080c04 0%, #304018 55%, #98c060 100%); }
+.sv-sk-strand    { background: linear-gradient(160deg, #04100c 0%, #0c5848 55%, #48c8b0 100%); }
+
+/* ── TAVERNEN ── */
+.sk-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.sk-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(160,120,30,0.16);
+  border-radius: 4px; border-left: 3px solid #8a6010;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.sk-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(30,20,4,0.08); }
+.sk-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.sk-tav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300; color: #16120a;
+}
+.sk-tav-loc { font-size: 0.75rem; color: #887860; margin-top: 0.2rem; }
+.sk-tav-stars { color: #8a6010; font-size: 0.85rem; letter-spacing: 2px; }
+.sk-tav-desc { font-size: 0.88rem; color: #2c2010; line-height: 1.75; font-weight: 300; margin-bottom: 1rem; }
+.sk-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.sk-tav-dish {
+  padding: 3px 10px; background: #f4ead0; color: #3a2808;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+}
+.sk-tav-price { font-size: 0.8rem; color: #887860; }
+.sk-tav-price span { color: #8a6010; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.sk-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.sk-viertel-card {
+  padding: 1.8rem; background: #f4ead0;
+  border-radius: 4px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.sk-viertel-card:hover { background: #ecddb0; transform: translateY(-4px); }
+.sk-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.sk-viertel-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300; color: #16120a; margin-bottom: 0.5rem;
+}
+.sk-viertel-desc { font-size: 0.82rem; color: #4a3820; line-height: 1.65; font-weight: 300; }
+
+/* ── TIP BANNER ── */
+.sk-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #0c0a02 0%, #302008 40%, #8a6010 100%);
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.sk-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.sk-tip-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300; color: white; margin-bottom: 0.6rem;
+}
+.sk-tip-text p {
+  font-size: 0.92rem; color: rgba(255,255,255,0.68); line-height: 1.75; font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .sk-back-bar { padding: 0.8rem 1.2rem; }
+  .sk-content { padding: 2rem 1.2rem 4rem; }
+  .sk-history-grid { grid-template-columns: 1fr; }
+  .sk-sights-grid { grid-template-columns: 1fr 1fr; }
+  .sk-tav-grid { grid-template-columns: 1fr; }
+  .sk-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .sk-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+}
