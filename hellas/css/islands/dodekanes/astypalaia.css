@@ -1,0 +1,301 @@
+/* =============================================
+   ASTYPALAIA — Insel-Unterseite
+   Akzentfarbe: Tief-Blauviolett / Kalkweiß-Ägäis
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#astypalaia-page {
+  font-family: 'EB Garamond', serif;
+  color: #0e0c18;
+  background: #f6f5fb;
+}
+
+/* ── BACK BAR ── */
+.as-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(246,245,251,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(70,40,160,0.14);
+}
+.as-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(70,40,160,0.28);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #3c20a0; transition: all 0.2s;
+}
+.as-back-btn:hover { background: #ece8f8; border-color: #3c20a0; }
+.as-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.as-breadcrumb { font-size: 0.8rem; color: #8878b0; letter-spacing: 0.05em; font-family: 'DM Sans', sans-serif; }
+.as-breadcrumb span { color: #3c20a0; }
+
+/* ── HERO ── */
+.as-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.as-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(168deg,
+    #060410 0%,
+    #100830 18%,
+    #281060 38%,
+    #502898 60%,
+    #8850c8 80%,
+    #1870c8 100%);
+}
+.as-hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 62% 48% at 50% 82%, rgba(80,40,160,0.22) 0%, transparent 70%),
+    radial-gradient(ellipse 35% 22% at 78% 16%, rgba(14,8,40,0.35) 0%, transparent 60%);
+}
+/* Schmetterlings-Shimmer -->*/
+.as-hero-shimmer {
+  position: absolute; inset: 0; opacity: 0.025;
+  background-image: radial-gradient(circle, rgba(220,200,255,0.8) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+/* Kastro + Schmetterling Silhouette -->*/
+.as-hero-silhouette {
+  position: absolute; bottom: 106px; left: 50%;
+  transform: translateX(-50%);
+  width: 940px; height: 172px;
+  opacity: 0.10;
+}
+.as-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(4,2,14,0.45);
+}
+.as-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 115px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 115'%3E%3Cpath fill='%23f6f5fb' fill-opacity='1' d='M0,55L90,47C180,39,360,23,540,29C720,35,900,63,1080,69C1260,75,1350,57,1440,49L1440,115L0,115Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.as-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.as-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.45em;
+  text-transform: uppercase; color: rgba(200,170,255,0.52);
+  margin-bottom: 1.2rem; font-family: 'DM Sans', sans-serif;
+}
+.as-hero-title {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(3.2rem, 8vw, 7.5rem);
+  font-weight: 400; line-height: 0.88;
+  margin-bottom: 1.5rem;
+}
+.as-hero-title em {
+  font-style: italic; display: block;
+  color: #c8a8ff; font-size: 0.50em;
+  letter-spacing: 0.04em; margin-top: 0.40rem;
+  font-weight: 400;
+}
+.as-hero-sub {
+  max-width: 570px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(210,190,255,0.66); line-height: 1.82; font-weight: 400;
+  font-family: 'DM Sans', sans-serif;
+}
+.as-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.as-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(190,160,255,0.22);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(210,185,255,0.76);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── BUTTERFLY STRIP ── */
+.as-butterfly-strip {
+  background: #0e0820;
+  padding: 1.15rem 3rem;
+  display: flex; align-items: center; justify-content: center; gap: 3rem;
+  flex-wrap: wrap;
+}
+.as-butterfly-item {
+  display: flex; align-items: center; gap: 0.7rem;
+  color: rgba(190,160,255,0.58); font-size: 0.8rem; letter-spacing: 0.08em;
+  font-family: 'DM Sans', sans-serif;
+}
+.as-butterfly-item::before { content: '—'; color: #3c20a0; }
+
+/* ── STATS BAR ── */
+.as-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(70,40,160,0.09);
+}
+.as-stat-item {
+  flex: 1; max-width: 200px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(70,40,160,0.07);
+}
+.as-stat-item:last-child { border-right: none; }
+.as-stat-num {
+  font-family: 'EB Garamond', serif;
+  font-size: 2rem; font-weight: 400; color: #3c20a0; line-height: 1;
+}
+.as-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #8878b0; margin-top: 0.3rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── CONTENT ── */
+.as-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.as-section { padding: 4rem 0 2rem; }
+.as-section-head { margin-bottom: 2.5rem; }
+.as-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #3c20a0; margin-bottom: 0.8rem;
+  font-family: 'DM Sans', sans-serif;
+}
+.as-section-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 2.8rem; font-weight: 400; color: #0e0c18; line-height: 1.15;
+}
+.as-section-title em { font-style: italic; color: #3c20a0; }
+.as-divider { width: 40px; height: 2px; background: #3c20a0; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.as-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.as-history-text p {
+  font-size: 0.98rem; line-height: 1.95; color: #201830;
+  font-weight: 400; margin-bottom: 1.2rem;
+}
+.as-timeline { position: relative; padding-left: 2rem; }
+.as-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(60,32,160,0.18);
+}
+.as-tl-item { position: relative; margin-bottom: 1.8rem; }
+.as-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: #f6f5fb; border: 2px solid #3c20a0;
+}
+.as-tl-year {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.3rem; font-weight: 400; color: #3c20a0; margin-bottom: 0.25rem;
+}
+.as-tl-event {
+  font-size: 0.87rem; color: #201830; line-height: 1.65; font-weight: 400;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.as-sights-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem;
+}
+.as-sight-card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid rgba(70,40,160,0.14);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.as-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(10,6,30,0.10); }
+.as-sight-visual { height: 140px; }
+.as-sight-body { padding: 1.2rem; }
+.as-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #3c20a0; margin-bottom: 0.35rem;
+  font-family: 'DM Sans', sans-serif;
+}
+.as-sight-name {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.35rem; font-weight: 400; color: #0e0c18; margin-bottom: 0.4rem;
+}
+.as-sight-desc {
+  font-size: 0.83rem; color: #40306c; line-height: 1.65; font-weight: 400;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.sv-as-kastro   { background: linear-gradient(160deg, #0a0618 0%, #301858 55%, #7840c0 100%); }
+.sv-as-chora    { background: linear-gradient(160deg, #080618 0%, #201048 55%, #5830a0 100%); }
+.sv-as-vathy    { background: linear-gradient(160deg, #04100c 0%, #103840 55%, #209080 100%); }
+.sv-as-steno    { background: linear-gradient(160deg, #040c18 0%, #103060 55%, #2080c8 100%); }
+.sv-as-maltezana{ background: linear-gradient(160deg, #100808 0%, #402818 55%, #a06838 100%); }
+.sv-as-drakos   { background: linear-gradient(160deg, #060408 0%, #201028 55%, #6828a0 100%); }
+
+/* ── TAVERNEN ── */
+.as-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.as-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(70,40,160,0.12);
+  border-radius: 4px; border-left: 3px solid #3c20a0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.as-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(10,6,30,0.08); }
+.as-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.as-tav-name {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.4rem; font-weight: 400; color: #0e0c18;
+}
+.as-tav-loc { font-size: 0.75rem; color: #8878b0; margin-top: 0.2rem; font-family: 'DM Sans', sans-serif; }
+.as-tav-stars { color: #3c20a0; font-size: 0.85rem; letter-spacing: 2px; }
+.as-tav-desc { font-size: 0.87rem; color: #201830; line-height: 1.75; font-weight: 400; margin-bottom: 1rem; font-family: 'DM Sans', sans-serif; }
+.as-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.as-tav-dish {
+  padding: 3px 10px; background: #ece8f8; color: #240c68;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+  font-family: 'DM Sans', sans-serif;
+}
+.as-tav-price { font-size: 0.8rem; color: #8878b0; font-family: 'DM Sans', sans-serif; }
+.as-tav-price span { color: #3c20a0; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.as-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.as-viertel-card {
+  padding: 1.8rem; background: #ece8f8;
+  border-radius: 4px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.as-viertel-card:hover { background: #dcd4f5; transform: translateY(-4px); }
+.as-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.as-viertel-name {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.3rem; font-weight: 400; color: #0e0c18; margin-bottom: 0.5rem;
+}
+.as-viertel-desc { font-size: 0.82rem; color: #40306c; line-height: 1.65; font-family: 'DM Sans', sans-serif; }
+
+/* ── TIP BANNER ── */
+.as-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #060410 0%, #1e1048 40%, #3c20a0 100%);
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.as-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.as-tip-text h3 {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.8rem; font-weight: 400; color: white; margin-bottom: 0.6rem;
+}
+.as-tip-text p {
+  font-size: 0.92rem; color: rgba(210,185,255,0.70); line-height: 1.82; font-weight: 400;
+  font-family: 'DM Sans', sans-serif;
+}
+
+@media (max-width: 900px) {
+  .as-back-bar { padding: 0.8rem 1.2rem; }
+  .as-content { padding: 2rem 1.2rem 4rem; }
+  .as-history-grid { grid-template-columns: 1fr; }
+  .as-sights-grid { grid-template-columns: 1fr 1fr; }
+  .as-tav-grid { grid-template-columns: 1fr; }
+  .as-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .as-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+  .as-butterfly-strip { padding: 1.2rem; gap: 1.5rem; }
+}
