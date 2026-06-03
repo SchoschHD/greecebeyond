@@ -275,3 +275,20 @@ function openRhodos() {
 }
 function closeRhodos() { closePage('rhodos-page'); }
 
+function openAstypalaia() {
+  if (typeof loadPage === 'function') {
+    loadPage('astypalea-page', 'islands/dodekanes/astypalaia.html').then(() => openPage('astypalea-page'));
+  } else {
+    openPage('astypalea-page');
+  }
+}
+function closeAstypalaia() { closePage('astypalea-page'); }
+
+function openKalymnos() {
+  if (typeof loadPage === 'function') {
+    loadPage('kalymnos-page', 'islands/dodekanes/kalymnos.html').then(() => openPage('kalymnos-page'));
+  } else {
+    openPage('kalymnos-page');
+  }
+}
+function closeKalymnos() { closePage('kalymnos-page'); }
