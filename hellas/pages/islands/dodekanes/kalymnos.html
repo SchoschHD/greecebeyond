@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalymnos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="kalymnos.css" />
+</head>
+<body>
+<div id="kalymnos-page">
+
+<div class="ky-back-bar">
+  <button class="ky-back-btn" onclick="closeKalymnos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ky-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Kalymnos</span></p>
+</div>
+
+<div class="ky-hero">
+  <div class="ky-hero-bg"></div>
+  <div class="ky-hero-dots"></div>
+  <!-- Kalkfelsen Kletterwände + Pothia Hafen + Telendos Insel + Taucher -->
+  <svg class="ky-hero-silhouette" viewBox="0 0 860 180" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sea -->
+    <path d="M0,172 Q215,160 430,167 Q645,174 860,162 L860,180 L0,180Z" opacity="0.24"/>
+    <!-- Massive limestone climbing cliffs (right, dramatic vertical) -->
+    <path d="M560,180 L570,50 Q580,28 600,22 Q622,16 640,24 Q660,32 670,20 Q685,10 700,18 Q718,28 720,40 L730,180Z" opacity="0.35"/>
+    <!-- Cliff texture — vertical crack lines -->
+    <line x1="590" y1="40" x2="585" y2="120" stroke="white" stroke-width="1.5" opacity="0.5"/>
+    <line x1="615" y1="28" x2="610" y2="110" stroke="white" stroke-width="1.5" opacity="0.5"/>
+    <line x1="650" y1="26" x2="645" y2="108" stroke="white" stroke-width="1.5" opacity="0.5"/>
+    <line x1="690" y1="22" x2="686" y2="105" stroke="white" stroke-width="1.5" opacity="0.5"/>
+    <!-- Climber silhouette on wall -->
+    <circle cx="630" cy="80" r="5"/>
+    <line x1="630" y1="85" x2="628" y2="100" stroke="white" stroke-width="2"/>
+    <line x1="628" y1="100" x2="622" y2="112" stroke="white" stroke-width="2"/>
+    <line x1="628" y1="100" x2="634" y2="114" stroke="white" stroke-width="2"/>
+    <line x1="630" y1="90" x2="620" y2="96" stroke="white" stroke-width="2"/>
+    <line x1="630" y1="90" x2="640" y2="94" stroke="white" stroke-width="2"/>
+    <!-- Rope line from climber -->
+    <path d="M630,75 Q635,60 632,48 Q630,38 628,28" fill="none" stroke="white" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.6"/>
+    <!-- Pothia harbour (center-left) -->
+    <path d="M160,180 Q200,120 250,95 Q290,76 330,82 Q360,88 380,180Z" opacity="0.28"/>
+    <!-- Pothia colourful houses on hillside -->
+    <rect x="200" y="96" width="18" height="16"/>
+    <rect x="224" y="88" width="18" height="24"/>
+    <rect x="248" y="82" width="20" height="30"/>
+    <rect x="274" y="78" width="18" height="34"/>
+    <rect x="298" y="84" width="18" height="28"/>
+    <rect x="320" y="90" width="16" height="22"/>
+    <!-- Kastelli fortress above Pothia -->
+    <rect x="268" y="56" width="36" height="24"/>
+    <rect x="263" y="44" width="46" height="14"/>
+    <rect x="266" y="30" width="12" height="16"/>
+    <rect x="284" y="30" width="12" height="16"/>
+    <rect x="302" y="30" width="12" height="16"/>
+    <!-- Telendos island (left, distinctive profile) -->
+    <path d="M0,180 Q30,130 65,100 Q95,75 120,78 Q145,82 155,100 L165,180Z" opacity="0.30"/>
+    <!-- Telendos profile — flat top, steep sides -->
+    <path d="M55,98 Q80,68 105,72 Q125,76 140,96" fill="none" stroke="white" stroke-width="2" opacity="0.6"/>
+    <!-- Vathi valley (far right, green hint) -->
+    <path d="M760,180 Q790,140 820,128 Q840,120 860,126 L860,180Z" opacity="0.20"/>
+    <!-- Sponge diver (underwater, subtle) -->
+    <ellipse cx="450" cy="162" rx="7" ry="11" opacity="0.4"/>
+    <path d="M443,170 Q450,178 457,170" opacity="0.4"/>
+    <!-- Sponge shapes floating -->
+    <ellipse cx="420" cy="158" rx="8" ry="5" opacity="0.3"/>
+    <ellipse cx="478" cy="165" rx="7" ry="4" opacity="0.3"/>
+  </svg>
+  <div class="ky-hero-overlay"></div>
+  <div class="ky-hero-content">
+    <p class="ky-hero-tag">Dodekanes · Südliche Ägäis</p>
+    <h1 class="ky-hero-title">Kalymnos<em>Κάλυμνος</em></h1>
+    <p class="ky-hero-sub">Die Insel der Schwammtaucher und der senkrechten Kalkfelsen — Kalymnos ist gleichzeitig das Weltzentrum des Freikletterns und die Heimat einer der kühnsten Seefahrertradition Griechenlands. Hier tauchten Männer ohne Ausrüstung auf 60 Meter Tiefe. Heute klettern Athleten aus aller Welt an denselben Felsen.</p>
+    <div class="ky-hero-pills">
+      <span class="ky-hero-pill">Klettern</span>
+      <span class="ky-hero-pill">Schwammtaucher</span>
+      <span class="ky-hero-pill">Telendos</span>
+      <span class="ky-hero-pill">Vathi</span>
+      <span class="ky-hero-pill">Dodekanes</span>
+    </div>
+  </div>
+  <div class="ky-hero-waves"></div>
+</div>
+
+<div class="ky-stats-bar">
+  <div class="ky-stat-item">
+    <div class="ky-stat-num">16.000</div>
+    <div class="ky-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ky-stat-item">
+    <div class="ky-stat-num">109 km²</div>
+    <div class="ky-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="ky-stat-item">
+    <div class="ky-stat-num">700+</div>
+    <div class="ky-stat-lbl">Kletterrouten</div>
+  </div>
+  <div class="ky-stat-item">
+    <div class="ky-stat-num">60 m</div>
+    <div class="ky-stat-lbl">Tauchtiefe (historisch)</div>
+  </div>
+  <div class="ky-stat-item">
+    <div class="ky-stat-num">#1</div>
+    <div class="ky-stat-lbl">Kletterinsel Europas</div>
+  </div>
+</div>
+
+<div class="ky-content">
+
+  <!-- 1. GESCHICHTE -->
+  <section class="ky-section">
+    <div class="ky-section-head">
+      <p class="ky-section-label">01 — Geschichte</p>
+      <h2 class="ky-section-title">Vom Meeresgrund<br><em>zur Felswand der Welt</em></h2>
+      <div class="ky-divider"></div>
+    </div>
+    <div class="ky-history-grid">
+      <div class="ky-history-text">
+        <p>Kalymnos war über Jahrhunderte das Zentrum der griechischen Schwammtaucherei — ein Beruf, der Mut und Lunge verlangte wie kein anderer. Die Männer der Insel fuhren jeden Frühling in hölzernen Booten nach Nordafrika, Tunesien und Libyen und tauchten ohne jede Ausrüstung auf 30, 40, manchmal 60 Meter Tiefe, um Schwämme vom Meeresgrund zu holen. Der Abschied im April — die Kali Strata, das Fest der Abreise — war jedes Jahr derselbe bittere Abschied, denn nicht alle kamen zurück. Die Taucherkrankheit, Dekompressionssyndrom, forderte jährlich Opfer.</p>
+        <p>Mit der Erfindung synthetischer Schwämme in den 1950er Jahren brach diese Industrie ein. Kalymnos verlor seine wirtschaftliche Grundlage — und entdeckte in den 1990er Jahren eine neue: die Kalksteinfelsen des Inneren. Die senkrechten, überhängenden Wände des Massivs Kastelli und Grande Grotta wurden von Kletterern aus Europa entdeckt und erschlossen. Heute gilt Kalymnos als eine der weltbesten Kletterinseln überhaupt — mit über 700 eingerichteten Routen in allen Schwierigkeitsgraden und einer Infrastruktur die jährlich Tausende von Kletterern anzieht.</p>
+        <p>Das Paradoxe an Kalymnos: Die Insel hat zwei vollständig verschiedene Seelen. Die Hafenstadt Pothia mit ihren bunten Häusern und dem Schwammmuseum erinnert an die alte Tauchergeschichte. Die Kalkfelsen über dem Dorf Massouri sind ein internationaler Treffpunkt für Athleten aus aller Welt. Beide Welten koexistieren, ohne sich zu stören.</p>
+      </div>
+      <div class="ky-timeline">
+        <div class="ky-tl-item">
+          <div class="ky-tl-dot"></div>
+          <div class="ky-tl-year">Antike</div>
+          <div class="ky-tl-event">Erste Schwammtaucherei auf Kalymnos — die Insel ist seit der Antike für ihre Taucher bekannt. Homer erwähnt das Handwerk, Aristoteles beschreibt die Techniken. Kalymnos liefert Schwämme an die gesamte antike Welt.</div>
+        </div>
+        <div class="ky-tl-item">
+          <div class="ky-tl-dot"></div>
+          <div class="ky-tl-year">19. Jh.</div>
+          <div class="ky-tl-event">Blütezeit der Schwammtaucherei. Hunderte Boote fahren jeden April aus — nach Nordafrika, in die Levante, bis nach Kuba. Kalymnos wird reich, baut Villen, schickt Kinder auf Universitäten. Der Preis: Hunderte Tote durch Taucherkrankheit.</div>
+        </div>
+        <div class="ky-tl-item">
+          <div class="ky-tl-dot"></div>
+          <div class="ky-tl-year">1950er</div>
+          <div class="ky-tl-event">Der synthetische Schwamm verdrängt den Naturschwamm. Die Industrie von Kalymnos bricht zusammen. Die Boote bleiben im Hafen, die Männer suchen neue Berufe. Eine Epoche endet.</div>
+        </div>
+        <div class="ky-tl-item">
+          <div class="ky-tl-dot"></div>
+          <div class="ky-tl-year">1990er</div>
+          <div class="ky-tl-event">Europäische Kletterer entdecken die Kalksteinwände von Kalymnos. Die ersten Routen werden eingebohrt. Mund-zu-Mund-Propaganda in der Kletterszene macht die Insel innerhalb weniger Jahre weltberühmt.</div>
+        </div>
+        <div class="ky-tl-item">
+          <div class="ky-tl-dot"></div>
+          <div class="ky-tl-year">2001</div>
+          <div class="ky-tl-event">Kalymnos Climbing Festival — das erste internationale Kletterfestival der Insel. Heute eines der bedeutendsten Outdoor-Sportevents Griechenlands, mit Teilnehmern aus über 40 Ländern.</div>
+        </div>
+        <div class="ky-tl-item">
+          <div class="ky-tl-dot"></div>
+          <div class="ky-tl-year">Heute</div>
+          <div class="ky-tl-event">Über 700 eingerichtete Kletterrouten in 30 Sektoren. Kalymnos gilt als eine der weltbesten Kletterinseln — neben Mallorca und dem Verdon-Canyon. Die Saison läuft von Oktober bis Mai, wenn die Temperaturen zum Klettern ideal sind.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SEHENSWÜRDIGKEITEN -->
+  <section class="ky-section">
+    <div class="ky-section-head">
+      <p class="ky-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ky-section-title">Felswände, Fjorde<br><em>und das Tal der Mandarinenblüte</em></h2>
+      <div class="ky-divider"></div>
+    </div>
+    <div class="ky-sights-grid">
+
+      <div class="ky-sight-card">
+        <div class="ky-sight-visual sv-ky-climbing"></div>
+        <div class="ky-sight-body">
+          <p class="ky-sight-cat">Klettern · Weltzentrum</p>
+          <h3 class="ky-sight-name">Kletterfelsen</h3>
+          <p class="ky-sight-desc">Über 700 eingerichtete Routen in 30 Sektoren — Grande Grotta mit dem berühmtesten Überhang Europas, Kastelli für Einsteiger, Odyssey für Experten. Die Kalkfelsen bieten Routen in allen Graden von 4 bis 9a. Von Oktober bis Mai das Mekka der europäischen Kletterszene.</p>
+        </div>
+      </div>
+
+      <div class="ky-sight-card">
+        <div class="ky-sight-visual sv-ky-vathi"></div>
+        <div class="ky-sight-body">
+          <p class="ky-sight-cat">Fjord · Naturwunder</p>
+          <h3 class="ky-sight-name">Vathi — Das Fjordtal</h3>
+          <p class="ky-sight-desc">Das grüne Geheimnis von Kalymnos — ein schmaler Fjord im Süden der Insel, gesäumt von Mandarinen- und Zitronenbäumen, die das ganze Jahr über blühen. Das Tal riecht im Winter nach Mandarinen, im Frühling nach Blüte. Ein kleines Dorf, eine Taverne, absoluter Frieden.</p>
+        </div>
+      </div>
+
+      <div class="ky-sight-card">
+        <div class="ky-sight-visual sv-ky-pothia"></div>
+        <div class="ky-sight-body">
+          <p class="ky-sight-cat">Hauptstadt · Hafen</p>
+          <h3 class="ky-sight-name">Pothia</h3>
+          <p class="ky-sight-desc">Die farbenfrohe Hauptstadt — bunte Häuser auf dem Hang über dem geschäftigen Hafen, eine der lebendigsten Städte des Dodekanes. Das Schwammmuseum erzählt die Geschichte der Taucher, die Werft baut noch heute Holzboote nach alter Methode.</p>
+        </div>
+      </div>
+
+      <div class="ky-sight-card">
+        <div class="ky-sight-visual sv-ky-sponge"></div>
+        <div class="ky-sight-body">
+          <p class="ky-sight-cat">Museum · Tradition</p>
+          <h3 class="ky-sight-name">Schwammtaucher-Museum</h3>
+          <p class="ky-sight-desc">Das bewegendste Museum des Dodekanes — Ausrüstung, Boote, Fotos und Geschichten der Männer, die ohne Ausrüstung auf 60 Meter tauchten. Die Statistiken der Toten, die Briefe der Zurückgebliebenen, die alten Boote. Ein Denkmal für Mut und Verlust zugleich.</p>
+        </div>
+      </div>
+
+      <div class="ky-sight-card">
+        <div class="ky-sight-visual sv-ky-telendos"></div>
+        <div class="ky-sight-body">
+          <p class="ky-sight-cat">Insel · Ausflug</p>
+          <h3 class="ky-sight-name">Telendos</h3>
+          <p class="ky-sight-desc">Die kleine Insel gegenüber Massouri — per kleinem Boot in 5 Minuten erreichbar, autofreie Ruhe, ein Strand, zwei Tavernen und der schönste Blick auf die Kalkfelsen von Kalymnos. Einst mit Kalymnos verbunden, bis ein Erdbeben 554 n. Chr. den Kanal öffnete.</p>
+        </div>
+      </div>
+
+      <div class="ky-sight-card">
+        <div class="ky-sight-visual sv-ky-beach"></div>
+        <div class="ky-sight-body">
+          <p class="ky-sight-cat">Strände</p>
+          <h3 class="ky-sight-name">Myrties, Emporios &amp; Kantouni</h3>
+          <p class="ky-sight-desc">Die Westküste von Kalymnos hat eine Reihe schöner Buchten — Myrties das Kletterdorf mit Strand, Emporios im Norden fast menschenleer, Kantouni familienfreundlich mit türkisblauem Wasser. Alle ohne Massentourismus, alle mit Blick auf Telendos.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. ESSEN & TAVERNEN -->
+  <section class="ky-section">
+    <div class="ky-section-head">
+      <p class="ky-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="ky-section-title">Meeresfrüchte, Oktopus<br><em>und Mandarinen aus dem Fjord</em></h2>
+      <div class="ky-divider"></div>
+    </div>
+    <div class="ky-tav-grid">
+
+      <div class="ky-tav-card">
+        <div class="ky-tav-top">
+          <div>
+            <h3 class="ky-tav-name">Barbalias</h3>
+            <div class="ky-tav-loc">📍 Pothia, Hafen</div>
+          </div>
+          <div class="ky-tav-stars">★★★★★</div>
+        </div>
+        <p class="ky-tav-desc">Die beste Fischadresse in Pothia — seit Generationen am Hafen, mit täglich frischer Ware direkt von den Booten. Meeresfrüchte wie Seeigel, Venusmuscheln und Garnelen, die auf keiner anderen Insel so frisch sind. Die Einheimischen essen hier — kein besseres Zeichen.</p>
+        <div class="ky-tav-dishes">
+          <span class="ky-tav-dish">Seeigel (Achinos)</span>
+          <span class="ky-tav-dish">Venusmuscheln</span>
+          <span class="ky-tav-dish">Gegrillter Oktopus</span>
+        </div>
+        <p class="ky-tav-price">Preisklasse: <span>€€ · Mittag &amp; Abend · Hafen</span></p>
+      </div>
+
+      <div class="ky-tav-card">
+        <div class="ky-tav-top">
+          <div>
+            <h3 class="ky-tav-name">Taverna Vathi</h3>
+            <div class="ky-tav-loc">📍 Vathi-Fjord</div>
+          </div>
+          <div class="ky-tav-stars">★★★★★</div>
+        </div>
+        <p class="ky-tav-desc">Die einzige Taverne im Fjordtal von Vathi — unter Mandarienbäumen, am Ufer des schmalen Meeresarms, mit dem Duft der Blüten im Frühling und der Früchte im Winter. Einfachste Küche aus eigenem Garten: Gemüse, Fisch, Oliven vom Hang, Mandarinen zum Abschluss.</p>
+        <div class="ky-tav-dishes">
+          <span class="ky-tav-dish">Gemüse aus dem Fjord-Garten</span>
+          <span class="ky-tav-dish">Lavraki gegrillt</span>
+          <span class="ky-tav-dish">Frische Mandarinen</span>
+        </div>
+        <p class="ky-tav-price">Preisklasse: <span>€€ · Mittag · Fjord-Idylle</span></p>
+      </div>
+
+      <div class="ky-tav-card">
+        <div class="ky-tav-top">
+          <div>
+            <h3 class="ky-tav-name">Aegean Taverna (Telendos)</h3>
+            <div class="ky-tav-loc">📍 Telendos, Hauptstrand</div>
+          </div>
+          <div class="ky-tav-stars">★★★★★</div>
+        </div>
+        <p class="ky-tav-desc">Auf der autofreien Insel Telendos — 5 Minuten per Boot von Massouri, und eine völlig andere Welt. Die Taverne direkt am Strand mit Blick auf die Kalkfelsen von Kalymnos. Abends, wenn die Kletterer vom Felsen kommen, das lebendigste Lokal der westlichen Küste.</p>
+        <div class="ky-tav-dishes">
+          <span class="ky-tav-dish">Fischsuppe Kakavia</span>
+          <span class="ky-tav-dish">Garnelen saganaki</span>
+          <span class="ky-tav-dish">Hauswein Telendos</span>
+        </div>
+        <p class="ky-tav-price">Preisklasse: <span>€€ · Abendessen · Telendos</span></p>
+      </div>
+
+      <div class="ky-tav-card">
+        <div class="ky-tav-top">
+          <div>
+            <h3 class="ky-tav-name">Kletterer-Kafeneion (Massouri)</h3>
+            <div class="ky-tav-loc">📍 Massouri, Hauptstraße</div>
+          </div>
+          <div class="ky-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ky-tav-desc">Das informelle Treffpunkt aller Kletterer — Massouri ist das Basisdorf der Kletterszene, und das Kafeneion hier ist sein Herzschlag. Morgens Briefing vor dem Fels, abends Nachbesprechung mit Bier und Mezedes. Mehrsprachig, offen, immer voll von Oktober bis Mai.</p>
+        <div class="ky-tav-dishes">
+          <span class="ky-tav-dish">Tirokafteri</span>
+          <span class="ky-tav-dish">Loukaniko vom Grill</span>
+          <span class="ky-tav-dish">Lokales Bier</span>
+        </div>
+        <p class="ky-tav-price">Preisklasse: <span>€ · Kletterertreff · Ganzjährig</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. ORTE & CHARAKTER -->
+  <section class="ky-section">
+    <div class="ky-section-head">
+      <p class="ky-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="ky-section-title">Taucher, Kletterer<br><em>und das grüne Fjordtal</em></h2>
+      <div class="ky-divider"></div>
+    </div>
+    <div class="ky-viertel-grid">
+
+      <div class="ky-viertel-card">
+        <div class="ky-viertel-emoji">🧗</div>
+        <h3 class="ky-viertel-name">Massouri &amp; Felsen</h3>
+        <p class="ky-viertel-desc">Das Kletterdorf — Basislager für 700 Routen, mit Kletterausrüstungsläden, Guides und einem Kafeneion das mehrsprachig Bestellungen aufnimmt. Die beste Klettersaison: Oktober bis Mai.</p>
+      </div>
+
+      <div class="ky-viertel-card">
+        <div class="ky-viertel-emoji">🌊</div>
+        <h3 class="ky-viertel-name">Pothia</h3>
+        <p class="ky-viertel-desc">Die bunte Hauptstadt am Hang — Schwammmuseum, Werft, Fischerhafen und die lebhafteste Kaffeehaus-Kultur des Dodekanes. Das Herz der Insel vor der Kletterzeit und danach.</p>
+      </div>
+
+      <div class="ky-viertel-card">
+        <div class="ky-viertel-emoji">🍊</div>
+        <h3 class="ky-viertel-name">Vathi-Fjord</h3>
+        <p class="ky-viertel-desc">Das grüne Geheimnis — ein schmaler Meeresarm umgeben von Mandarinenbäumen. Im Winter orangefarben, im Frühling weiß vor Blüten. Die ruhigste Ecke der Insel, eine Taverne, ein Strand, kein Lärm.</p>
+      </div>
+
+      <div class="ky-viertel-card">
+        <div class="ky-viertel-emoji">⛵</div>
+        <h3 class="ky-viertel-name">Telendos</h3>
+        <p class="ky-viertel-cmd">5 Minuten per Boot — die autofreie Schwesterinsel mit dem schönsten Blick auf die Kalkfelsen. Zwei Tavernen, ein Strand, einige Katzen und die vollständige Abwesenheit von Hektik.</p>
+      </div>
+
+      <div class="ky-viertel-card">
+        <div class="ky-viertel-emoji">🤿</div>
+        <h3 class="ky-viertel-name">Schwammtaucher-Erbe</h3>
+        <p class="ky-viertel-desc">Das Museum in Pothia erzählt die Geschichte der Männer, die ohne Sauerstoff auf 60 Meter tauchten. Das Schwammfest im August erinnert mit Tänzen und Prozessionen an die alljährliche Abreise der Flotte.</p>
+      </div>
+
+      <div class="ky-viertel-card">
+        <div class="ky-viertel-emoji">🏖️</div>
+        <h3 class="ky-viertel-name">Westküste</h3>
+        <p class="ky-viertel-desc">Myrties, Kantouni, Emporios — eine Perlenkette ruhiger Buchten mit türkisblauem Wasser, ohne Massentourismus. Emporios im Norden ist das Ruhigste, fast menschenleer außer in den Hochsommerwochen.</p>
+      </div>
+
+    </div>
+
+    <div class="ky-tip-banner">
+      <div class="ky-tip-emoji">🧗</div>
+      <div class="ky-tip-text">
+        <h3>Die zwei Leben der Insel</h3>
+        <p>Kalymnos führt gleichzeitig zwei Leben, die nichts miteinander zu tun haben — und beide vollkommen sind. Im Hafen von Pothia hängen noch die alten Taucherglocken, stehen die Holzboote der Großväter, riecht es nach Schwamm und Salz. Drei Kilometer weiter hängen Kletterer in Überhängen aus dem 19. Jahrhundert, sprechen Spanisch, Englisch und Französisch und schlagen Kalymnos in ihren Guidebooks als eines der zehn besten Klettergebiete der Welt nach. Beide haben recht. Beide machen die Insel zu dem, was sie ist: zu einem Ort, an dem Mut eine Tradition ist.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>

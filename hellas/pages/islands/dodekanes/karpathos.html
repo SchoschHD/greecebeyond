@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karpathos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="karpathos.css" />
+</head>
+<body>
+<div id="karpathos-page">
+
+<div class="kp-back-bar">
+  <button class="kp-back-btn" onclick="closeKarpathos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="kp-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Karpathos</span></p>
+</div>
+
+<div class="kp-hero">
+  <div class="kp-hero-bg"></div>
+  <div class="kp-hero-dots"></div>
+  <!-- Olympos village on mountain ridge + Apella beach + wild north coast -->
+  <svg class="kp-hero-silhouette" viewBox="0 0 860 180" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sea -->
+    <path d="M0,172 Q215,160 430,167 Q645,174 860,162 L860,180 L0,180Z" opacity="0.24"/>
+    <!-- Wild mountain ridge — Karpathos is very mountainous -->
+    <path d="M0,180 Q50,150 100,120 Q150,92 200,78 Q250,65 300,70 Q340,76 370,62 Q400,50 430,56 Q460,64 490,52 Q520,40 550,48 Q580,57 600,44 Q625,32 650,40 Q675,50 700,42 Q730,34 760,46 Q790,58 820,50 L860,54 L860,180Z" opacity="0.26"/>
+    <!-- Olympos village — on the very ridge top (center-left) -->
+    <!-- Ridge peak where Olympos sits -->
+    <path d="M320,180 Q360,100 400,68 Q430,48 460,52 L480,180Z" opacity="0.32"/>
+    <!-- Olympos houses cascading down the ridge -->
+    <rect x="370" y="50" width="16" height="14"/>
+    <rect x="390" y="44" width="18" height="20"/>
+    <rect x="412" y="38" width="16" height="26"/>
+    <rect x="432" y="42" width="18" height="22"/>
+    <rect x="452" y="48" width="14" height="16"/>
+    <!-- Olympos windmills on ridge (iconic) -->
+    <rect x="396" y="20" width="14" height="20"/>
+    <ellipse cx="403" cy="20" rx="9" ry="6"/>
+    <line x1="403" y1="14" x2="403" y2="0"  stroke="white" stroke-width="2.5"/>
+    <line x1="403" y1="14" x2="416" y2="6"  stroke="white" stroke-width="2.5"/>
+    <line x1="403" y1="14" x2="413" y2="22" stroke="white" stroke-width="2.5"/>
+    <line x1="403" y1="14" x2="393" y2="22" stroke="white" stroke-width="2.5"/>
+    <line x1="403" y1="14" x2="390" y2="6"  stroke="white" stroke-width="2.5"/>
+    <!-- Second windmill -->
+    <rect x="426" y="24" width="12" height="18"/>
+    <ellipse cx="432" cy="24" rx="8" ry="5"/>
+    <line x1="432" y1="19" x2="432" y2="6"  stroke="white" stroke-width="2"/>
+    <line x1="432" y1="19" x2="443" y2="12" stroke="white" stroke-width="2"/>
+    <line x1="432" y1="19" x2="440" y2="27" stroke="white" stroke-width="2"/>
+    <line x1="432" y1="19" x2="424" y2="27" stroke="white" stroke-width="2"/>
+    <!-- Church on Olympos top -->
+    <rect x="354" y="42" width="20" height="18"/>
+    <ellipse cx="364" cy="42" rx="12" ry="8"/>
+    <rect x="360" y="30" width="8" height="14"/>
+    <rect x="357" y="34" width="14" height="5"/>
+    <!-- Apella beach (right) — beautiful cove -->
+    <path d="M650,180 Q680,148 710,138 Q735,130 760,135 Q785,140 800,130 L820,180Z" opacity="0.24"/>
+    <!-- Apella bay curve -->
+    <path d="M660,168 Q700,150 740,148 Q770,148 800,158" fill="none" stroke="white" stroke-width="3" opacity="0.5"/>
+    <!-- Pigadia harbour (far left) -->
+    <path d="M0,180 Q30,145 65,130 Q95,118 125,124 L140,180Z" opacity="0.22"/>
+    <!-- Traditional dress pattern hint (decorative, far right) -->
+    <path d="M800,80 Q820,70 840,80 Q850,86 840,94 Q820,104 800,94 Q788,88 800,80Z" opacity="0.25"/>
+  </svg>
+  <div class="kp-hero-overlay"></div>
+  <div class="kp-hero-content">
+    <p class="kp-hero-tag">Dodekanes · Zwischen Rhodos und Kreta</p>
+    <h1 class="kp-hero-title">Karpathos<em>Κάρπαθος</em></h1>
+    <p class="kp-hero-sub">Die Insel die die Zeit vergessen hat — das Bergdorf Olympos trägt noch heute die byzantinische Tracht, mahlt Mehl in antiken Windmühlen und feiert Feste wie vor tausend Jahren. Dazu der wildeste Norden des Dodekanes, die schönste Bucht Griechenlands und ein Stolz, der sich nie verbiegen ließ.</p>
+    <div class="kp-hero-pills">
+      <span class="kp-hero-pill">Olympos</span>
+      <span class="kp-hero-pill">Tracht</span>
+      <span class="kp-hero-pill">Apella</span>
+      <span class="kp-hero-pill">Windmühlen</span>
+      <span class="kp-hero-pill">Tradition</span>
+    </div>
+  </div>
+  <div class="kp-hero-waves"></div>
+</div>
+
+<div class="kp-stats-bar">
+  <div class="kp-stat-item">
+    <div class="kp-stat-num">7.400</div>
+    <div class="kp-stat-lbl">Einwohner</div>
+  </div>
+  <div class="kp-stat-item">
+    <div class="kp-stat-num">301 km²</div>
+    <div class="kp-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="kp-stat-item">
+    <div class="kp-stat-num">1215 m</div>
+    <div class="kp-stat-lbl">Höchster Berg (Kali Limni)</div>
+  </div>
+  <div class="kp-stat-item">
+    <div class="kp-stat-num">1000+</div>
+    <div class="kp-stat-lbl">Jahre Olympos-Tradition</div>
+  </div>
+  <div class="kp-stat-item">
+    <div class="kp-stat-num">#1</div>
+    <div class="kp-stat-lbl">Lebendige Tracht GR</div>
+  </div>
+</div>
+
+<div class="kp-content">
+
+  <!-- 1. GESCHICHTE -->
+  <section class="kp-section">
+    <div class="kp-section-head">
+      <p class="kp-section-label">01 — Geschichte</p>
+      <h2 class="kp-section-title">Das Dorf das<br><em>tausend Jahre übersprang</em></h2>
+      <div class="kp-divider"></div>
+    </div>
+    <div class="kp-history-grid">
+      <div class="kp-history-text">
+        <p>Karpathos liegt zwischen Rhodos und Kreta, fast so groß wie Kos, aber weit abseits der großen Tourismusströme. Die Insel hat eine Geschichte, die in fast allen Epochen durch Abgelegenheit und Sturheit geschrieben wurde — zwei Eigenschaften, die die Karpathioten bis heute mit Stolz tragen. Nirgendwo ist das sichtbarer als in Olympos, dem Bergdorf im Norden der Insel.</p>
+        <p>Olympos wurde im Mittelalter auf einem Bergkamm gebaut — so hoch und unzugänglich, dass keine Invasoren, keine Osmanen und keine Moderne vollständig hinaufkamen. Noch heute tragen die Frauen des Dorfes täglich die traditionelle Tracht: aufwendige, handgestickte Kleider in Violett, Rot und Gold, deren Muster seit Generationen von Müttern an Töchter weitergegeben werden. Die Windmühlen auf dem Kamm mahlen noch immer Getreide. Die Sprache von Olympos enthält Archaismen, die im übrigen Griechenland seit dem Mittelalter verschwunden sind.</p>
+        <p>Der Rest von Karpathos ist genauso außergewöhnlich, nur weniger bekannt: Apella gilt als eine der schönsten Buchten Griechenlands — ein perfekter Halbkreis aus türkisblauem Wasser, umgeben von Pinienwäldern und roten Klippen. Der Norden der Insel ist zu Teilen nur per Boot erreichbar. Und der Wind — der konstante, starke Nordwind des Dodekanes — hat aus Karpathos eine der weltweit besten Kitesurfadressen gemacht.</p>
+      </div>
+      <div class="kp-timeline">
+        <div class="kp-tl-item">
+          <div class="kp-tl-dot"></div>
+          <div class="kp-tl-year">3000 v. Chr.</div>
+          <div class="kp-tl-event">Frühe Besiedlung. Karpathos liegt auf der Seeroute zwischen Kreta und Rhodos — minoische und mykenische Siedler hinterlassen Spuren. Die Insel wird in antiken Quellen als Krapathos erwähnt.</div>
+        </div>
+        <div class="kp-tl-item">
+          <div class="kp-tl-dot"></div>
+          <div class="kp-tl-year">1204</div>
+          <div class="kp-tl-event">Venezianische Herrschaft nach dem Vierten Kreuzzug. Karpathos wechselt zwischen venezianischen Adelsfamilien — die Cornaro, dann die Morisco. Die Bergdörfer bleiben weitgehend unberührt.</div>
+        </div>
+        <div class="kp-tl-item">
+          <div class="kp-tl-dot"></div>
+          <div class="kp-tl-year">1537</div>
+          <div class="kp-tl-event">Osmanische Herrschaft. Olympos auf dem Bergrücken bleibt durch seine Unzugänglichkeit weitgehend autonom — der osmanische Einfluss ist minimal. Die Tracht, die Sprache, die Sitten bleiben unverändert.</div>
+        </div>
+        <div class="kp-tl-item">
+          <div class="kp-tl-dot"></div>
+          <div class="kp-tl-year">1912</div>
+          <div class="kp-tl-event">Italienische Herrschaft über den Dodekanes. Karpathos bekommt eine Straße — zum ersten Mal verbindet eine fahrbare Route Pigadia im Süden mit dem Norden. Olympos bleibt noch jahrzehntelang nur zu Fuß erreichbar.</div>
+        </div>
+        <div class="kp-tl-item">
+          <div class="kp-tl-dot"></div>
+          <div class="kp-tl-year">1947</div>
+          <div class="kp-tl-event">Anschluss an Griechenland. Viele Karpathioten wandern nach Australien, in die USA und nach Deutschland aus — und kehren im Alter reich zurück. Ihre Häuser mit Marmorterrassen sind noch heute in jedem Dorf zu sehen.</div>
+        </div>
+        <div class="kp-tl-item">
+          <div class="kp-tl-dot"></div>
+          <div class="kp-tl-year">Heute</div>
+          <div class="kp-tl-event">Olympos gilt als das lebendigste Traditionsdorf Griechenlands — kein Freilichtmuseum, kein Touristendorf, sondern ein echtes Dorf, das seine Eigenart einfach weiterlebt. Die Frauen tragen die Tracht täglich, nicht für Touristen.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SEHENSWÜRDIGKEITEN -->
+  <section class="kp-section">
+    <div class="kp-section-head">
+      <p class="kp-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="kp-section-title">Windmühlen auf dem Kamm,<br><em>Türkisblau in der Bucht</em></h2>
+      <div class="kp-divider"></div>
+    </div>
+    <div class="kp-sights-grid">
+
+      <div class="kp-sight-card">
+        <div class="kp-sight-visual sv-kp-olympos"></div>
+        <div class="kp-sight-body">
+          <p class="kp-sight-cat">Dorf · Lebendes Erbe</p>
+          <h3 class="kp-sight-name">Olympos</h3>
+          <p class="kp-sight-desc">Das außergewöhnlichste Dorf Griechenlands — auf einem Bergkamm, mit Windmühlen die noch mahlen, Frauen die täglich die byzantinische Tracht tragen und einer Sprache die mittelalterliche Archaismen bewahrt. Kein Freilichtmuseum. Ein lebendiges Dorf, das die Moderne nie vollständig angenommen hat.</p>
+        </div>
+      </div>
+
+      <div class="kp-sight-card">
+        <div class="kp-sight-visual sv-kp-apella"></div>
+        <div class="kp-sight-body">
+          <p class="kp-sight-cat">Strand · Ikone</p>
+          <h3 class="kp-sight-name">Apella</h3>
+          <p class="kp-sight-desc">Regelmäßig als schönste Bucht Griechenlands gelistet — ein fast perfekter Halbkreis aus türkisblauem Wasser, eingefasst von roten Klippen und Pinienwäldern. Nur zu Fuß über einen kurzen Pfad erreichbar. Keine Liegestühle, kein Bar-Service, nur das Meer.</p>
+        </div>
+      </div>
+
+      <div class="kp-sight-card">
+        <div class="kp-sight-visual sv-kp-pigadia"></div>
+        <div class="kp-sight-body">
+          <p class="kp-sight-cat">Hauptstadt · Hafen</p>
+          <h3 class="kp-sight-name">Pigadia</h3>
+          <p class="kp-sight-desc">Die Hauptstadt in einer weiten Bucht im Süden — lebendig, authentisch, mit einem langen Sandstrand direkt am Stadtzentrum. Keine Hochglanztouristik, aber die beste Taverna-Dichte der Insel und ein Nachtleben, das bis in den Morgen geht.</p>
+        </div>
+      </div>
+
+      <div class="kp-sight-card">
+        <div class="kp-sight-visual sv-kp-diafani"></div>
+        <div class="kp-sight-body">
+          <p class="kp-sight-cat">Norden · Hafendorf</p>
+          <h3 class="kp-sight-name">Diafani</h3>
+          <p class="kp-sight-desc">Das Hafendorf des Nordens — der Ausgangspunkt für Olympos, für Bootsausflüge zu den unberührten Buchten der Nordküste und für die Wanderung nach Vroukounda, wo jedes Jahr das älteste Panegyri Griechenlands gefeiert wird.</p>
+        </div>
+      </div>
+
+      <div class="kp-sight-card">
+        <div class="kp-sight-visual sv-kp-north"></div>
+        <div class="kp-sight-body">
+          <p class="kp-sight-cat">Wildnis · Norden</p>
+          <h3 class="kp-sight-name">Wilder Norden</h3>
+          <p class="kp-sight-desc">Der Norden von Karpathos ist eines der wildesten Gebiete des Dodekanes — kaum Straßen, viele Buchten nur per Boot erreichbar, Pinienwälder bis ans Meer. Achata, Vananda, Tristomo — Namen die die meisten Karpathioten nicht alle kennen.</p>
+        </div>
+      </div>
+
+      <div class="kp-sight-card">
+        <div class="kp-sight-visual sv-kp-tradition"></div>
+        <div class="kp-sight-body">
+          <p class="kp-sight-cat">Folklore · Panegyri</p>
+          <h3 class="kp-sight-name">Panegyria &amp; Tracht</h3>
+          <p class="kp-sight-desc">Die Feste von Karpathos sind die lebendigsten Griechenlands — das Panegyri in Olympos zu Mariä Himmelfahrt, das Fest in Vroukounda im August, die Ostern in Olymbos mit Tracht, Lyra-Musik und Tanz bis zum Sonnenaufgang. Keine Inszenierung für Touristen.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. ESSEN & TAVERNEN -->
+  <section class="kp-section">
+    <div class="kp-section-head">
+      <p class="kp-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="kp-section-title">Makarounes, Ziege<br><em>und der Wein des Südens</em></h2>
+      <div class="kp-divider"></div>
+    </div>
+    <div class="kp-tav-grid">
+
+      <div class="kp-tav-card">
+        <div class="kp-tav-top">
+          <div>
+            <h3 class="kp-tav-name">Taverna Olympos</h3>
+            <div class="kp-tav-loc">📍 Olympos, Dorfgasse</div>
+          </div>
+          <div class="kp-tav-stars">★★★★★</div>
+        </div>
+        <p class="kp-tav-desc">In Olympos gibt es eine Handvoll Tavernen — alle servieren dasselbe und alle gut: Makarounes (die handgemachten lokalen Nudeln mit Zwiebeln und Käse), Ziege aus dem Holzofen und lokalen Wein. Die Besitzerin trägt die Tracht, die Küche kommt aus dem Holzfeuer. Das echteste Essen der Insel.</p>
+        <div class="kp-tav-dishes">
+          <span class="kp-tav-dish">Makarounes</span>
+          <span class="kp-tav-dish">Ziege im Ofen</span>
+          <span class="kp-tav-dish">Lokaler Mischwein</span>
+        </div>
+        <p class="kp-tav-price">Preisklasse: <span>€€ · Mittag &amp; Abend · Olympos</span></p>
+      </div>
+
+      <div class="kp-tav-card">
+        <div class="kp-tav-top">
+          <div>
+            <h3 class="kp-tav-name">To Elliniko</h3>
+            <div class="kp-tav-loc">📍 Pigadia, Altstadt</div>
+          </div>
+          <div class="kp-tav-stars">★★★★★</div>
+        </div>
+        <p class="kp-tav-desc">Das beste Restaurant in Pigadia — in einem alten Stadthaus mit offener Küche, karpathiotischer Hausmannskost und einer Weinkarte voller lokaler Überraschungen. Die Revithokeftedes (Kichererbsenbällchen) und der Fisch aus der Bucht vor der Stadt sind das Herzstück jedes Menüs.</p>
+        <div class="kp-tav-dishes">
+          <span class="kp-tav-dish">Revithokeftedes</span>
+          <span class="kp-tav-dish">Gegrillte Dorade</span>
+          <span class="kp-tav-dish">Karpathiotischer Käse</span>
+        </div>
+        <p class="kp-tav-price">Preisklasse: <span>€€ · Abendessen · Pigadia</span></p>
+      </div>
+
+      <div class="kp-tav-card">
+        <div class="kp-tav-top">
+          <div>
+            <h3 class="kp-tav-name">Diafani Hafen-Taverne</h3>
+            <div class="kp-tav-loc">📍 Diafani, Nördlicher Hafen</div>
+          </div>
+          <div class="kp-tav-stars">★★★★☆</div>
+        </div>
+        <p class="kp-tav-desc">Der Hafen von Diafani ist der Ausgangspunkt für Olympos und die Nordküste — und die Taverne direkt am Wasser ist der natürliche Treffpunkt aller Ankömmlinge. Frischer Fisch, Meeresfrüchte, der beste Oktopus des Nordens und ein Blick aufs offene Meer.</p>
+        <div class="kp-tav-dishes">
+          <span class="kp-tav-dish">Oktopus getrocknet &amp; gegrillt</span>
+          <span class="kp-tav-dish">Meeresfrüchte-Meze</span>
+          <span class="kp-tav-dish">Weißwein aus Rhodos</span>
+        </div>
+        <p class="kp-tav-price">Preisklasse: <span>€€ · Hafen · Mittag</span></p>
+      </div>
+
+      <div class="kp-tav-card">
+        <div class="kp-tav-top">
+          <div>
+            <h3 class="kp-tav-name">Apella-Strand-Taverne</h3>
+            <div class="kp-tav-loc">📍 Apella Bucht</div>
+          </div>
+          <div class="kp-tav-stars">★★★★★</div>
+        </div>
+        <p class="kp-tav-desc">Die einzige Taverne an der schönsten Bucht Griechenlands — einfachste Küche, beste Lage. Tische im Sand, die roten Klippen ringsum, das türkisblaue Wasser vor einem. Gegrillter Fisch, Bier aus dem Kühlbox, ein Salat. Das Mittagessen, das man nie vergisst.</p>
+        <div class="kp-tav-dishes">
+          <span class="kp-tav-dish">Tagesfang vom Grill</span>
+          <span class="kp-tav-dish">Horiatiki</span>
+          <span class="kp-tav-dish">Eiskaltes Mythos</span>
+        </div>
+        <p class="kp-tav-price">Preisklasse: <span>€€ · Apella · Mittagessen am Strand</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. ORTE & CHARAKTER -->
+  <section class="kp-section">
+    <div class="kp-section-head">
+      <p class="kp-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="kp-section-title">Nord und Süd,<br><em>zwei Inseln in einer</em></h2>
+      <div class="kp-divider"></div>
+    </div>
+    <div class="kp-viertel-grid">
+
+      <div class="kp-viertel-card">
+        <div class="kp-viertel-emoji">🏔️</div>
+        <h3 class="kp-viertel-name">Olympos</h3>
+        <p class="kp-viertel-desc">Das Bergdorf auf dem Kamm — Windmühlen, Tracht, mittelalterliche Archaismen in der Sprache. Kein Museum, kein Touristendorf. Ein echtes Dorf, das die Zeit anders misst.</p>
+      </div>
+
+      <div class="kp-viertel-card">
+        <div class="kp-viertel-emoji">🏖️</div>
+        <h3 class="kp-viertel-name">Apella</h3>
+        <p class="kp-viertel-desc">Die schönste Bucht des Dodekanes — türkisblau, halbkreisförmig, von roten Klippen und Pinien eingerahmt. Nur zu Fuß erreichbar. Eine der schönsten Buchten Griechenlands überhaupt.</p>
+      </div>
+
+      <div class="kp-viertel-card">
+        <div class="kp-viertel-emoji">🎉</div>
+        <h3 class="kp-viertel-name">Panegyria</h3>
+        <p class="kp-viertel-desc">Die Volksfeste von Karpathos — Olympos zu Mariä Himmelfahrt, Vroukounda im August. Tracht, Lyra-Musik, Tanz bis Sonnenaufgang. Das echteste Griechenland, das man noch erleben kann.</p>
+      </div>
+
+      <div class="kp-viertel-card">
+        <div class="kp-viertel-emoji">🌊</div>
+        <h3 class="kp-viertel-name">Kitesurf-Paradies</h3>
+        <p class="kp-viertel-desc">Der konstante Nordwind macht die Bucht von Pigadia und die Ostküste zu einem der weltbesten Kitesurfreviere. Von Juni bis September bläst der Meltemi täglich — perfekte Bedingungen für Fortgeschrittene.</p>
+      </div>
+
+      <div class="kp-viertel-card">
+        <div class="kp-viertel-emoji">⛵</div>
+        <h3 class="kp-viertel-name">Wilder Norden</h3>
+        <p class="kp-viertel-desc">Buchten die nur per Boot erreichbar sind, Pinienwälder bis ans Meer, verlassene Dörfer auf den Hügeln. Der Norden von Karpathos ist das Unberührteste des Dodekanes — für alle, die weitersuchen.</p>
+      </div>
+
+      <div class="kp-viertel-card">
+        <div class="kp-viertel-emoji">🌺</div>
+        <h3 class="kp-viertel-name">Tracht &amp; Handwerk</h3>
+        <p class="kp-viertel-desc">Die Tracht von Olympos ist die lebendigste Griechenlands — kein Folkloreverein, keine Kostümierung, sondern tägliche Kleidung. Die Stickereien werden von Müttern an Töchter weitergegeben, seit Generationen ohne Unterbrechung.</p>
+      </div>
+
+    </div>
+
+    <div class="kp-tip-banner">
+      <div class="kp-tip-emoji">🪡</div>
+      <div class="kp-tip-text">
+        <h3>Olympos zu Ostern — das einmalige Erlebnis</h3>
+        <p>Wer Karpathos wirklich verstehen will, kommt zu Ostern nach Olympos. Die Frauen des Dorfes tragen ihre vollständige Feiertagstracht — handgestickt, von Generation zu Generation weitergegeben, nie verkauft, nie in einem Museum. Die Lyra-Musik beginnt nach der Mitternachtsmesse und hört erst auf, wenn der Morgen graut. Kein Theaterstück, kein Tourismusevent — das Ostern von Olympos ist das echte Ostern, wie es seit tausend Jahren gefeiert wird. Man braucht nur eine Unterkunft in Diafani, den Weg nach oben und die Bereitschaft, die Nacht durchzumachen.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>
