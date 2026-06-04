@@ -302,6 +302,15 @@ function openKarpathos() {
 }
 function closeKarpathos() { closePage('karpathos-page'); }
 
+function openKasos() {
+  if (typeof loadPage === 'function') {
+    loadPage('kasos-page', 'islands/dodekanes/kasos.html').then(() => openPage('kasos-page'));
+  } else {
+    openPage('kasos-page');
+  }
+}
+function closeKasos() { closePage('kasos-page'); }
+
 function openSymi() {
   if (typeof loadPage === 'function') {
     loadPage('symi-page', 'islands/dodekanes/symi.html').then(() => openPage('symi-page'));
