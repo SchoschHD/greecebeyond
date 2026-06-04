@@ -291,7 +291,25 @@ function openKalymnos() {
     openPage('kalymnos-page');
   }
 }
-function closeSchinoussa() { closePage('schinoussa-page'); }
+function closeKalymnos() { closePage('kalymnos-page'); }
+
+function openKarpathos() {
+  if (typeof loadPage === 'function') {
+    loadPage('karpathos-page', 'islands/dodekanes/karpathos.html').then(() => openPage('karpathos-page'));
+  } else {
+    openPage('karpathos-page');
+  }
+}
+function closeKarpathos() { closePage('karpathos-page'); }
+
+function openKasos() {
+  if (typeof loadPage === 'function') {
+    loadPage('kasos-page', 'islands/dodekanes/kasos.html').then(() => openPage('kasos-page'));
+  } else {
+    openPage('kasos-page');
+  }
+}
+function closeKasos() { closePage('kasos-page'); }
 
 function openSymi() {
   if (typeof loadPage === 'function') {

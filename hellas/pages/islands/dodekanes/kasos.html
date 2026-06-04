@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kasos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="kasos.css" />
+</head>
+<body>
+<div id="kasos-page">
+
+<div class="ks-back-bar">
+  <button class="ks-back-btn" onclick="closeKasos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ks-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Kasos</span></p>
+</div>
+
+<div class="ks-hero">
+  <div class="ks-hero-bg"></div>
+  <div class="ks-hero-dots"></div>
+  <!-- Kasos Silhouette: Church, Boat, Captain's Mansion -->
+  <svg class="ks-hero-silhouette" viewBox="0 0 820 170" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Traditional Church with Dome (Left) -->
+    <rect x="80" y="100" width="50" height="50"/>
+    <path d="M80,100 C80,70 130,70 130,100 Z"/>
+    <rect x="98" y="125" width="14" height="25"/>
+    <rect x="140" y="115" width="20" height="35"/>
+    <path d="M140,115 L150,100 L160,115 Z"/>
+    
+    <!-- Traditional Kaik Fishing Boat (Center on waves) -->
+    <path d="M340,140 L460,140 L430,160 L370,160 Z"/>
+    <rect x="395" y="80" width="6" height="60"/>
+    <path d="M395,80 L440,130 L395,130 Z" opacity="0.8"/>
+    <path d="M395,85 L360,125 L395,125 Z" opacity="0.5"/>
+
+    <!-- Captain's Mansion (Right) -->
+    <rect x="620" y="90" width="90" height="60"/>
+    <polygon points="610,90 665,60 720,90"/>
+    <rect x="635" y="105" width="15" height="20"/>
+    <rect x="680" y="105" width="15" height="20"/>
+    <rect x="655" y="120" width="20" height="30"/>
+
+    <!-- Sea gentle waves -->
+    <path d="M0,155 Q205,143 410,150 Q615,157 820,145 L820,170 L0,170Z" opacity="0.3"/>
+  </svg>
+  <div class="ks-hero-overlay"></div>
+  <div class="ks-hero-content">
+    <p class="ks-hero-tag">Dodekanes · Karpathisches Meer</p>
+    <h1 class="ks-hero-title">Kasos<em>Κάσος</em></h1>
+    <p class="ks-hero-sub">Rau, authentisch und ungezähmt — Kasos ist die südlichste Insel des Dodekanes. Eine stolze Seefahrernation mit einer tragischen Heldengeschichte, wilden Landschaften und einer der faszinierendsten Küchentraditionen der gesamten Ägäis.</p>
+    <div class="ks-hero-pills">
+      <span class="ks-hero-pill">Seefahrer</span>
+      <span class="ks-hero-pill">Authentisch</span>
+      <span class="ks-hero-pill">Makarounes</span>
+      <span class="ks-hero-pill">Panigiria</span>
+      <span class="ks-hero-pill">Bouka</span>
+    </div>
+  </div>
+  <div class="ks-hero-waves"></div>
+</div>
+
+<div class="ks-stats-bar">
+  <div class="ks-stat-item">
+    <div class="ks-stat-num">1.200</div>
+    <div class="ks-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ks-stat-item">
+    <div class="ks-stat-num">1824</div>
+    <div class="ks-stat-lbl">Jahr des Holocaust</div>
+  </div>
+  <div class="ks-stat-item">
+    <div class="ks-stat-num">66 km²</div>
+    <div class="ks-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="ks-stat-item">
+    <div class="ks-stat-num">5</div>
+    <div class="ks-stat-lbl">Traditionelle Dörfer</div>
+  </div>
+  <div class="ks-stat-item">
+    <div class="ks-stat-num">#1</div>
+    <div class="ks-stat-lbl">Panigiria-Erlebnis</div>
+  </div>
+</div>
+
+<div class="ks-content">
+
+  <section class="ks-section">
+    <div class="ks-section-head">
+      <p class="ks-section-label">01 — Geschichte</p>
+      <h2 class="ks-section-title">Stolze Seefahrer,<br><em>tragische Helden</em></h2>
+      <div class="ks-divider"></div>
+    </div>
+    <div class="ks-history-grid">
+      <div class="ks-history-text">
+        <p>Kasos ist eine Insel, die vom Meer geformt und von der Seefahrt definiert wurde. Bereits Homer erwähnt die Insel in seinem Schiffskatalog der Ilias, da sie Schiffe für den Trojanischen Krieg entsandte. Die strategische Lage zwischen Kreta und Karpathos machte sie schon früh zu einem wichtigen maritimen Knotenpunkt.</p>
+        <p>Den absoluten Höhepunkt erlebte Kasos im 18. und frühen 19. Jahrhundert. Die Insel besaß eine gigantische Handelsflotte und enormen Wohlstand. Während der griechischen Revolution ab 1821 setzten die Kasioten ihre gesamte Flotte im Unabhängigkeitskampf ein. Dieser Mut hatte jedoch einen fatalen Preis: 1824 landete die vereinte osmanisch-ägyptische Flotte und richtete den sogenannten "Holocaust von Kasos" an, bei dem die Insel fast vollständig zerstört und entvölkert wurde.</p>
+        <p>Doch die Kasioten gaben nie auf. Sie bauten ihre Flotte neu auf, viele emigrierten nach Ägypten, um am Sueskanal zu arbeiten, oder in die USA. Ihre Verbundenheit zur Heimatinsel blieb jedoch eisern – was sich bis heute in den prachtvollen Kapitänshäusern und den stolzen Traditionen widerspiegelt.</p>
+      </div>
+      <div class="ks-timeline">
+        <div class="ks-tl-item">
+          <div class="ks-tl-dot"></div>
+          <div class="ks-tl-year">15. Jh. v. Chr.</div>
+          <div class="ks-tl-event">Minoische und mykenische Seefahrer nutzen Kasos als sicheren Hafen. Die antiken Siedlungen florieren durch den Handel im südlichen Ägäischen Meer.</div>
+        </div>
+        <div class="ks-tl-item">
+          <div class="ks-tl-dot"></div>
+          <div class="ks-tl-year">18. Jahrhundert</div>
+          <div class="ks-tl-event">Das "Goldene Zeitalter" von Kasos. Die Insel baut eine der größten Handelsflotten Griechenlands auf, die bis ins Schwarze Meer und nach Alexandria segelt.</div>
+        </div>
+        <div class="ks-tl-item">
+          <div class="ks-tl-dot"></div>
+          <div class="ks-tl-year">1824</div>
+          <div class="ks-tl-event">Der Holocaust von Kasos. Als Rache für ihre Unterstützung der griechischen Revolution wird die Insel von osmanisch-ägyptischen Truppen in Schutt und Asche gelegt.</div>
+        </div>
+        <div class="ks-tl-item">
+          <div class="ks-tl-dot"></div>
+          <div class="ks-tl-year">1859-1869</div>
+          <div class="ks-tl-event">Tausende Kasioten wandern nach Ägypten aus und beteiligen sich maßgeblich am Bau des Sueskanals. Ein beträchtlicher Teil des Reichtums fließt zurück in die Heimat.</div>
+        </div>
+        <div class="ks-tl-item">
+          <div class="ks-tl-dot"></div>
+          <div class="ks-tl-year">1948</div>
+          <div class="ks-tl-event">Nach der Herrschaft der Osmanen und Italiener wird Kasos, zusammen mit dem restlichen Dodekanes, offiziell wieder mit Griechenland vereint.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ks-section">
+    <div class="ks-section-head">
+      <p class="ks-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ks-section-title">Vom Bouka-Hafen<br><em>bis zum Strand von Armathia</em></h2>
+      <div class="ks-divider"></div>
+    </div>
+    <div class="ks-sights-grid">
+
+      <div class="ks-sight-card">
+        <div class="ks-sight-visual sv-ks-bouka"></div>
+        <div class="ks-sight-body">
+          <p class="ks-sight-cat">Hafen · Wahrzeichen</p>
+          <h3 class="ks-sight-name">Bouka-Hafen (Fri)</h3>
+          <p class="ks-sight-desc">Der kleine, malerische Piratenhafen in der Hauptstadt Fri ist das schlagende Herz von Kasos. Umrahmt von traditionellen Häusern und Fischerbooten, wacht die Kirche Agios Spyridon über die Seeleute.</p>
+        </div>
+      </div>
+
+      <div class="ks-sight-card">
+        <div class="ks-sight-visual sv-ks-armathia"></div>
+        <div class="ks-sight-body">
+          <p class="ks-sight-cat">Natur · Karibikflair</p>
+          <h3 class="ks-sight-name">Insel Armathia</h3>
+          <p class="ks-sight-desc">Eine winzige, unbewohnte Nachbarinsel, erreichbar per Boot. Der Strand "Marmara" gilt mit seinem puderfeinen, weißen Sand und dem türkisblauen Wasser als einer der schönsten im gesamten Mittelmeer.</p>
+        </div>
+      </div>
+
+      <div class="ks-sight-card">
+        <div class="ks-sight-visual sv-ks-cave"></div>
+        <div class="ks-sight-body">
+          <p class="ks-sight-cat">Antike · Mystik</p>
+          <h3 class="ks-sight-name">Ellinokamara-Höhle</h3>
+          <p class="ks-sight-desc">Eine beeindruckende Höhle, deren Eingang mit antiken, kyklopischen Mauern befestigt ist. Sie diente den Inselbewohnern in mykenischer und hellenistischer Zeit als Zufluchtsort und Kultstätte.</p>
+        </div>
+      </div>
+
+      <div class="ks-sight-card">
+        <div class="ks-sight-visual sv-ks-monastery"></div>
+        <div class="ks-sight-body">
+          <p class="ks-sight-cat">Religion · Ausblick</p>
+          <h3 class="ks-sight-name">Agios Georgios Hadies</h3>
+          <p class="ks-sight-desc">Ein historisches Kloster in einer rauen, beeindruckenden Landschaft im Westen der Insel. Es ist ein tief verehrter Wallfahrtsort für die Kasioten und bietet spektakuläre Ausblicke über das offene Meer.</p>
+        </div>
+      </div>
+
+      <div class="ks-sight-card">
+        <div class="ks-sight-visual sv-ks-churches"></div>
+        <div class="ks-sight-body">
+          <p class="ks-sight-cat">Dorf · Architektur</p>
+          <h3 class="ks-sight-name">Panagia & die 6 Kirchen</h3>
+          <p class="ks-sight-desc">Im pittoresken Dorf Panagia steht ein einzigartiger Komplex aus sechs kleinen, aneinandergebauten Kirchen. Der Legende nach wurden sie gebaut, um sechs Feen zu bändigen, die in der Gegend spukten.</p>
+        </div>
+      </div>
+
+      <div class="ks-sight-card">
+        <div class="ks-sight-visual sv-ks-sunset"></div>
+        <div class="ks-sight-body">
+          <p class="ks-sight-cat">Romantik · Geschichte</p>
+          <h3 class="ks-sight-name">Agia Marina & Windmühlen</h3>
+          <p class="ks-sight-desc">Das größte Dorf der Insel mit prächtigen Kapitänsvillen, die vom einstigen Reichtum zeugen. Die nahegelegenen, alten Windmühlen bieten zudem den perfekten Aussichtspunkt für den Sonnenuntergang.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ks-section">
+    <div class="ks-section-head">
+      <p class="ks-section-label">03 — Tavernen & Küche</p>
+      <h2 class="ks-section-title">Makarounes<br><em>und das Erbe der See</em></h2>
+      <div class="ks-divider"></div>
+    </div>
+    <div class="ks-tav-grid">
+
+      <div class="ks-tav-card">
+        <div class="ks-tav-top">
+          <div>
+            <h3 class="ks-tav-name">Taverna Milos</h3>
+            <div class="ks-tav-loc">📍 Fri (Nähe Hafen)</div>
+          </div>
+          <div class="ks-tav-stars">★★★★★</div>
+        </div>
+        <p class="ks-tav-desc">Eine Institution auf Kasos. Berühmt für die absolut authentische Zubereitung des kasiotischen Nationalgerichts Makarounes – handgemachte Pasta mit karamellisierten Zwiebeln und dem lokalen Weichkäse "Sitaka".</p>
+        <div class="ks-tav-dishes">
+          <span class="ks-tav-dish">Makarounes</span>
+          <span class="ks-tav-dish">Kasiotische Dolmadakia</span>
+          <span class="ks-tav-dish">Lamm aus dem Ofen</span>
+        </div>
+        <p class="ks-tav-price">Preisklasse: <span>€€ · Mittags & Abends</span></p>
+      </div>
+
+      <div class="ks-tav-card">
+        <div class="ks-tav-top">
+          <div>
+            <h3 class="ks-tav-name">I Oraia Bouka</h3>
+            <div class="ks-tav-loc">📍 Direkt am Bouka-Hafen, Fri</div>
+          </div>
+          <div class="ks-tav-stars">★★★★★</div>
+        </div>
+        <p class="ks-tav-desc">Mit Blick auf die schwankenden Fischerboote im Piratenhafen. Hier kommt auf den Tisch, was die Fischer am Morgen gebracht haben. Dazu serviert man "Roikio", ein schmackhaftes lokales Wildkraut, das sauer eingelegt wird.</p>
+        <div class="ks-tav-dishes">
+          <span class="ks-tav-dish">Frischer Fisch</span>
+          <span class="ks-tav-dish">Roikio-Salat</span>
+          <span class="ks-tav-dish">Ouzo am Hafen</span>
+        </div>
+        <p class="ks-tav-price">Preisklasse: <span>€€ · Perfekt bei Sonnenuntergang</span></p>
+      </div>
+
+      <div class="ks-tav-card">
+        <div class="ks-tav-top">
+          <div>
+            <h3 class="ks-tav-name">Kafeneio Marouklas</h3>
+            <div class="ks-tav-loc">📍 Arvanitochori</div>
+          </div>
+          <div class="ks-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ks-tav-desc">Ein echtes, traditionelles Kafenio im üppig grünen Dorf Arvanitochori. Hier trifft sich das Dorf zum Plausch. Zu einem starken griechischen Kaffee gibt es "Moschopougia", mandelgefüllte Teigtaschen mit Orangenblütenwasser.</p>
+        <div class="ks-tav-dishes">
+          <span class="ks-tav-dish">Griechischer Kaffee</span>
+          <span class="ks-tav-dish">Moschopougia</span>
+          <span class="ks-tav-dish">Lokaler Käse (Mitzithra)</span>
+        </div>
+        <p class="ks-tav-price">Preisklasse: <span>€ · Kaffee & Süßes</span></p>
+      </div>
+
+      <div class="ks-tav-card">
+        <div class="ks-tav-top">
+          <div>
+            <h3 class="ks-tav-name">Taverna Emporios</h3>
+            <div class="ks-tav-loc">📍 Emporios (Alter Hafen)</div>
+          </div>
+          <div class="ks-tav-stars">★★★★★</div>
+        </div>
+        <p class="ks-tav-desc">Direkt am Strand von Emporios gelegen, wo früher die großen Schiffe gebaut wurden. Unbedingt das Soupiopilafo (Pilaf mit Tintenfisch in seiner eigenen Tinte) probieren – ein intensiver Geschmack nach Meer.</p>
+        <div class="ks-tav-dishes">
+          <span class="ks-tav-dish">Soupiopilafo</span>
+          <span class="ks-tav-dish">Garnelen</span>
+          <span class="ks-tav-dish">Kaltes Fix Hellas Bier</span>
+        </div>
+        <p class="ks-tav-price">Preisklasse: <span>€€ · Mit den Füßen fast im Wasser</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ks-section">
+    <div class="ks-section-head">
+      <p class="ks-section-label">04 — Orte & Charakter</p>
+      <h2 class="ks-section-title">Die Seele der Ägäis<br><em>hautnah spüren</em></h2>
+      <div class="ks-divider"></div>
+    </div>
+    <div class="ks-viertel-grid">
+
+      <div class="ks-viertel-card">
+        <div class="ks-viertel-emoji">⚓</div>
+        <h3 class="ks-viertel-name">Fri & Bouka</h3>
+        <p class="ks-viertel-desc">Die charmante Inselhauptstadt. Die steinernen Herrenhäuser und das alte Rathaus erzählen von einer reichen Vergangenheit. Der kleine Bouka-Hafen ist das Zentrum des abendlichen Lebens.</p>
+      </div>
+
+      <div class="ks-viertel-card">
+        <div class="ks-viertel-emoji">🎶</div>
+        <h3 class="ks-viertel-name">Panigiria (Inselfeste)</h3>
+        <p class="ks-viertel-desc">Kasos ist berühmt für die wildesten und längsten Panigiria Griechenlands. Wenn die einheimische Lyra und das Laouto erklingen, wird getanzt, gesungen und traditionelles Pilafi für alle gekocht.</p>
+      </div>
+
+      <div class="ks-viertel-card">
+        <div class="ks-viertel-emoji">🌳</div>
+        <h3 class="ks-viertel-name">Arvanitochori</h3>
+        <p class="ks-viertel-desc">Das einzige nicht an der Küste oder direkt am Hang liegende Dorf. Es liegt in einem fruchtbaren Tal, umgeben von Granatapfelbäumen und Feigen, und besticht durch absolute Stille.</p>
+      </div>
+
+      <div class="ks-viertel-card">
+        <div class="ks-viertel-emoji">🏛️</div>
+        <h3 class="ks-viertel-name">Poli</h3>
+        <p class="ks-viertel-desc">Die älteste Siedlung der Insel. Auf dem Hügel darüber befinden sich die Überreste der antiken Akropolis. Die Aussicht von hier oben über die umliegenden Täler bis zum Meer ist unvergleichlich.</p>
+      </div>
+
+      <div class="ks-viertel-card">
+        <div class="ks-viertel-emoji">🛥️</div>
+        <h3 class="ks-viertel-name">Armathia (Bootstrip)</h3>
+        <p class="ks-viertel-desc">Eine Tagesfahrt nach Armathia ist Pflicht. Früher gab es hier Gipswerke und einige Familien, heute gehören die unglaublichen Karibik-Strände den Vögeln und den Besuchern der kleinen Fischerboote.</p>
+      </div>
+
+      <div class="ks-viertel-card">
+        <div class="ks-viertel-emoji">🌊</div>
+        <h3 class="ks-viertel-name">Karpathos-Nähe</h3>
+        <p class="ks-viertel-desc">Kasos und Karpathos sind Schwesterinseln. Die Meerenge zwischen ihnen ist berüchtigt bei Seefahrern, aber im Sommer verkehren täglich kleine Boote für Ausflüge in die raue Bergwelt der Nachbarinsel.</p>
+      </div>
+
+    </div>
+
+    <div class="ks-tip-banner">
+      <div class="ks-tip-emoji">🤝</div>
+      <div class="ks-tip-text">
+        <h3>Philoxenia — Die wahre Gastfreundschaft</h3>
+        <p>Auf Kasos ist der Massentourismus ein Fremdwort. Hier bist du kein anonymer Besucher, sondern ein Freund. Die Insel offenbart ihre Schönheit nicht durch luxuriöse Resorts, sondern durch echte Begegnungen. Wenn du zu einem Panigiri eingeladen wirst oder jemand dir im Kafenio ein Stück "Sitaka" anbietet — nimm es an! Zu den Klängen traditioneller Mantinades (Reimgesänge) erlebst du hier eine Authentizität, die in der modernen Welt selten geworden ist.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>
