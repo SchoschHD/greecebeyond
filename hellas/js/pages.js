@@ -382,4 +382,68 @@ function openLeipsi() {
     openPage('leipsi-page');
   }   
 }
-function closeLeipsi() { closePage('leipsi-page'); }  
+function closeLeipsi() { closePage('leipsi-page'); }
+
+// Convenience-Funktionen für Ionische Inseln
+function openCorfu() {
+  if (typeof loadPage === 'function') {
+    loadPage('corfu-page', 'islands/ionische/corfu.html').then(() => openPage('corfu-page'));
+  } else {
+    openPage('corfu-page');
+  }
+}
+function closeCorfu() { closePage('corfu-page'); }
+
+function openKefalonia() {
+  if (typeof loadPage === 'function') {
+    loadPage('kefalonia-page', 'islands/ionische/kefalonia.html').then(() => openPage('kefalonia-page'));
+  } else {
+    openPage('kefalonia-page');
+  }
+}
+function closeKefalonia() { closePage('kefalonia-page'); }
+
+function openLefkada() {
+  if (typeof loadPage === 'function') {
+    loadPage('lefkada-page', 'islands/ionische/lefkada.html').then(() => openPage('lefkada-page'));
+  } else {
+    openPage('lefkada-page');
+  }
+}
+function closeLefkada() { closePage('lefkada-page'); }
+
+function openZakynthos() {
+  if (typeof loadPage === 'function') {
+    loadPage('zakynthos-page', 'islands/ionische/zakynthos.html').then(() => openPage('zakynthos-page'));
+  } else {
+    openPage('zakynthos-page');
+  }
+}
+function closeZakynthos() { closePage('zakynthos-page'); }
+
+function openIthaki() {
+  if (typeof loadPage === 'function') {
+    loadPage('ithaki-page', 'islands/ionische/ithaki.html').then(() => openPage('ithaki-page'));
+  } else {
+    openPage('ithaki-page');
+  }
+}
+function closeIthaki() { closePage('ithaki-page'); }
+
+function openPaxoi() {
+  if (typeof loadPage === 'function') {
+    loadPage('paxoi-page', 'islands/ionische/paxoi.html').then(() => openPage('paxoi-page'));
+  } else {
+    openPage('paxoi-page');
+  }
+}
+function closePaxoi() { closePage('paxoi-page'); }
+
+function openKythira() {
+  if (typeof loadPage === 'function') {
+    loadPage('kythira-page', 'islands/ionische/kythira.html').then(() => openPage('kythira-page'));
+  } else {
+    openPage('kythira-page');
+  }
+}
+function closeKythira() { closePage('kythira-page'); }

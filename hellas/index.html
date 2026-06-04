@@ -45,22 +45,30 @@
 
 
   <!-- Insel-Detail-Styles Dodekanes -->
-  <link rel="stylesheet" href="css/islands/dodekanes/agathonissi.css">
-  <link rel="stylesheet" href="css/islands/dodekanes/kos.css">
-  <link rel="stylesheet" href="css/islands/dodekanes/rhodos.css">
+  <link rel="stylesheet"  href="css/islands/dodekanes/agathonissi.css">
+  <link rel="stylesheet"  href="css/islands/dodekanes/kos.css">
+  <link rel="stylesheet"  href="css/islands/dodekanes/rhodos.css">
   <link  rel="stylesheet" href="css/islands/dodekanes/symi.css">
   <link  rel="stylesheet" href="css/islands/dodekanes/tilos.css">
   <link  rel="stylesheet" href="css/islands/dodekanes/chalki.css">
   <link  rel="stylesheet" href="css/islands/dodekanes/patmos.css">
-  <link rel="stylesheet" href="css/islands/dodekanes/nisyros.css">
-  <link rel="stylesheet" href="css/islands/dodekanes/astypalaia.css">
-  <link rel="stylesheet" href="css/islands/dodekanes/kalymnos.css">
-  <link rel="stylesheet" href="css/islands/dodekanes/karpathos.css">
-  <link rel="stylesheet" href="css/islands/dodekanes/leros.css">
-  <link rel="stylesheet" href="css/islands/dodekanes/leipsi.css">
-  <link rel="stylesheet" href="css/islands/dodekanes/kastellorizo.css">
-  <link rel="stylesheet" href="css/islands/dodekanes/kasos.css"> 
+  <link rel="stylesheet"  href="css/islands/dodekanes/nisyros.css">
+  <link rel="stylesheet"  href="css/islands/dodekanes/astypalaia.css">
+  <link rel="stylesheet"  href="css/islands/dodekanes/kalymnos.css">
+  <link rel="stylesheet"  href="css/islands/dodekanes/karpathos.css">
+  <link rel="stylesheet"  href="css/islands/dodekanes/leros.css">
+  <link rel="stylesheet"  href="css/islands/dodekanes/leipsi.css">
+  <link rel="stylesheet"  href="css/islands/dodekanes/kastellorizo.css">
+  <link rel="stylesheet"  href="css/islands/dodekanes/kasos.css"> 
 
+
+  <!-- Insel-Detail-Styles Ionische -->
+  <link rel="stylesheet" href="css/islands/ionische/korfu.css">
+  <link rel="stylesheet" href="css/islands/ionische/kefalonia.css">
+  <link rel="stylesheet" href="css/islands/ionische/ithaki.css">
+  <link rel="stylesheet" href="css/islands/ionische/paxoi.css">
+  <link rel="stylesheet" href="css/islands/ionische/kythira.css">
+  
 
 
   <!-- Rezept-Styles -->
@@ -661,7 +669,7 @@
   <div class="islands reveal visible">
     <div class="ionian-grid">
 
-      <div class="island-card ion-card large">
+      <div class="island-card ion-card" onclick="openCorfu()" style="cursor:pointer;">
         <div class="island-bg isle-corfu"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -672,7 +680,7 @@
         </div>
       </div>
 
-      <div class="island-card ion-card">
+      <div class="island-card ion-card" onclick="openKefalonia()" style="cursor:pointer;">
         <div class="island-bg isle-kefalonia"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -683,7 +691,7 @@
         </div>
       </div>
 
-      <div class="island-card ion-card">
+      <div class="island-card ion-card" onclick="openLefkada()" style="cursor:pointer;">
         <div class="island-bg isle-lefkada"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -694,7 +702,7 @@
         </div>
       </div>
 
-      <div class="island-card ion-card">
+      <div class="island-card ion-card" onclick="openZakynthos()" style="cursor:pointer;">
         <div class="island-bg isle-zakynthos"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -705,7 +713,7 @@
         </div>
       </div>
 
-      <div class="island-card ion-card">
+      <div class="island-card ion-card" onclick="openIthaki()" style="cursor:pointer;">
         <div class="island-bg isle-ithaki"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -716,7 +724,7 @@
         </div>
       </div>
 
-      <div class="island-card ion-card">
+      <div class="island-card ion-card" onclick="openPaxoi()" style="cursor:pointer;">
         <div class="island-bg isle-paxoi"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -727,7 +735,7 @@
         </div>
       </div>
 
-      <div class="island-card ion-card">
+      <div class="island-card ion-card" onclick="openKythira()" style="cursor:pointer;">
         <div class="island-bg isle-kythira"></div>
         <div class="island-overlay"></div>
         <div class="island-info">
@@ -1055,6 +1063,9 @@
 <div id="corfu-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="zakynthos-page"  style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div> 
 <div id="lefkada-page"    style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>  
+<div id="ithaki-page"    style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="paxoi-page"     style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="kythira-page"   style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="amorgos-page"    style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="anafi-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="folegandros-page" style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
@@ -1093,6 +1104,10 @@
 <div id="leros-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="nisyros-page"    style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="patmos-page"     style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+
+<!-- ═════════════════════════════════════════════════ -->
+<!--  INSEL-DETAIL-SEITEN-ionische (per fetch geladen) -->
+<!-- ═════════════════════════════════════════════════ -->
 
 
 <!-- ═════════════════════════════════════════ -->
