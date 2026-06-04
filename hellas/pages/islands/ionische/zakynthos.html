@@ -1,15 +1,336 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="de">
 <head>
-  <meta charset="utf-8">
-  <title>Zakynthos — Hellas Inseln</title>
-  <link rel="stylesheet" href="../../css/islands/ionische/zakynthos.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zakynthos — Ionische Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="zakynthos.css" />
 </head>
 <body>
-  <p class="zk-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Zakynthos</span></p>
-  <div class="zk-hero">
-    <p class="zk-hero-tag">Ionische Inseln · Ionisches Meer</p>
-    <p class="zk-hero-sub">Smaragdgrüne Buchten, Meeresschildkröten und die berühmte Shipwreck Bay.</p>
+<div id="zakynthos-page">
+
+<div class="ti-back-bar">
+  <button class="ti-back-btn" type="button" onclick="closeZakynthos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ti-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Zakynthos</span></p>
+</div>
+
+<div class="ti-hero">
+  <div class="ti-hero-bg"></div>
+  <div class="ti-hero-dots"></div>
+  <svg class="ti-hero-silhouette" viewBox="0 0 840 175" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,160 Q210,154 420,158 Q630,162 840,155 L840,175 L0,175Z" opacity="0.18"/>
+    <path d="M0,175 Q60,60 140,40 Q190,30 220,175Z" opacity="0.24"/>
+    <path d="M135,155 L165,152 L175,158 L130,158 Z" opacity="0.4"/>
+    <line x1="150" y1="153" x2="150" y2="135" stroke="white" stroke-width="1.5" opacity="0.5"/>
+    <line x1="162" y1="152" x2="162" y2="138" stroke="white" stroke-width="1.5" opacity="0.5"/>
+    
+    <ellipse cx="320" cy="145" rx="16" ry="11" opacity="0.25"/>
+    <ellipse cx="338" cy="145" rx="6" ry="4" opacity="0.25"/>
+    <path d="M315,134 Q325,124 332,135" fill="none" stroke="white" stroke-width="2" opacity="0.25"/>
+    <path d="M315,156 Q325,166 332,155" fill="none" stroke="white" stroke-width="2" opacity="0.25"/>
+
+    <path d="M450,175 Q520,90 600,75 Q660,65 710,175Z" opacity="0.20"/>
+    <rect x="560" y="65" width="50" height="20" opacity="0.3"/>
+    <rect x="555" y="58" width="60" height="7" opacity="0.3"/>
+    
+    <rect x="645" y="65" width="14" height="95"/>
+    <rect x="642" y="60" width="20" height="6"/>
+    <rect x="646" y="42" width="12" height="18"/>
+    <polygon points="646,42 652,24 658,42"/>
+    
+    <rect x="675" y="115" width="30" height="40"/>
+    <path d="M675,115 Q690,95 705,115"/>
+
+    <path d="M260,70 Q270,60 280,68" fill="none" stroke="white" stroke-width="1.8" opacity="0.25"/>
+    <path d="M272,75 Q282,65 292,73" fill="none" stroke="white" stroke-width="1.8" opacity="0.20"/>
+  </svg>
+  <div class="ti-hero-overlay"></div>
+  <div class="ti-hero-content">
+    <p class="ti-hero-tag">Ionische Inseln · Westgriechenland</p>
+    <h1 class="ti-hero-title">Zakynthos<em>Ζάκυνθος</em></h1>
+    <p class="ti-hero-sub">Die „Blume des Ostens“ — ein von den Venezianern geprägtes Paradies aus dramatischen weißen Kalksteinklippen, neonblau leuchtenden Grotten und den geschützten Sandstränden der Caretta-Caretta-Meeresschildkröte. Wo raue Natur auf italienische Eleganz trifft.</p>
+    <div class="ti-hero-pills">
+      <span class="ti-hero-pill">Navagio Beach</span>
+      <span class="ti-hero-pill">Caretta-Caretta Schutzgebiet</span>
+      <span class="ti-hero-pill">Blaue Grotten</span>
+      <span class="ti-hero-pill">Fiore di Levante</span>
+      <span class="ti-hero-pill">Venezianische Chora</span>
+    </div>
   </div>
+  <div class="ti-hero-waves"></div>
+</div>
+
+<div class="ti-stats-bar">
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">41.000</div>
+    <div class="ti-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">408 km²</div>
+    <div class="ti-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">1999</div>
+    <div class="ti-stat-lbl">Nationaler Meerespark gegründet</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">1953</div>
+    <div class="ti-stat-lbl">Das große Erdbeben</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">123 km</div>
+    <div class="ti-stat-lbl">Küstenlinie</div>
+  </div>
+</div>
+
+<div class="ti-content">
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">01 — Geschichte &amp; Kultur</p>
+      <h2 class="ti-section-title">Das Erbe Venedigs,<br><em>ein Schmugglerschiff und die Natur</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-history-grid">
+      <div class="ti-history-text">
+        <p>Zakynthos unterscheidet sich historisch fundamental von den Inseln der Ägäis. Sie war fast 300 Jahre lang Teil der Republik Venedig. Diese Ära prägte die Architektur, die Musik und die Sprache nachhaltig – die Venezianer tauften die grüne, fruchtbare Insel liebevoll <em>„Fiore di Levante“</em> (Blume des Ostens). Bis heute spiegelt sich diese Eleganz in den Arkaden der Inselhauptstadt wider.</p>
+        <p>Ein dramatischer Einschnitt war das schwere Erdbeben von 1953, das fast die gesamte historische Chora zerstörte. Doch die Zakynthier bauten ihre Stadt originalgetreu nach venezianischem Vorbild wieder auf. Nur wenige Jahrzehnte später, im Jahr 1980, schrieb ein kleiner Küstenfrachter namens <em>Panagiotis</em> unabsichtlich die moderne Tourismusgeschichte der Insel neu, als er voller Schmuggelware in einer unzugänglichen Bucht strandete.</p>
+        <p>Heute steht die Insel vor der großen Aufgabe, den weltweiten Ruhm ihrer landschaftlichen Ikonen mit dem strengen Naturschutz in Einklang zu bringen. Der 1999 gegründete Nationale Meerespark im Süden schützt die empfindlichen Ökosysteme der Bucht von Laganas, wo seit Jahrtausenden eine der ältesten Reptilienarten der Erde ihre Eier ablegt.</p>
+      </div>
+      <div class="ti-timeline">
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">1484–1797</div>
+          <div class="ti-tl-event">Herrschaft der Republik Venedig. Zakynthos blüht kulturell auf, wird zum Zentrum der Ionischen Malerschule und entwickelt eine eigenständige Architektur sowie die berühmten Kantades-Gesänge.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">1864</div>
+          <div class="ti-tl-event">Nach französischer und britischer Protektoratszeit wird Zakynthos zusammen mit den anderen Ionischen Inseln offiziell in den neu gegründeten griechischen Staat eingegliedert.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">1953</div>
+          <div class="ti-tl-event">Ein verheerendes Erdbeben der Stärke 7,2 erschüttert die ionische Region. Die prachtvolle Hauptstadt wird fast vollständig dem Erdboden gleichgemacht, gefolgt von einem tagelangen Brand.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">1980</div>
+          <div class="ti-tl-event">Das Schmugglerschiff „Panagiotis“ strandet bei stürmischer See in der „Agios Georgios“-Bucht. Der weiße Sand lagert sich um das Wrack an, und der berühmteste Strand der Welt – Navagio Beach – entsteht.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">1999</div>
+          <div class="ti-tl-event">Gründung des Nationalen Meeresparks von Zakynthos (NMPZ). Es ist das erste Schutzgebiet dieser Art in Griechenland, geschaffen zur Erhaltung der gefährdeten Unechten Karettschildkröte.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ti-section-title">Kalksteinklippen, Grotten<br><em>und venezianische Plätze</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-sights-grid">
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-za-navagio"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Landschaft · Weltberühmt</p>
+          <h3 class="ti-sight-name">Navagio (Schmugglerbucht)</h3>
+          <p class="ti-sight-desc">Das unbestrittene Wahrzeichen Griechenlands. Das verrostete Wrack der Panagiotis liegt auf feinstem, weißen Kies, umschlossen von monumentalen, 200 Meter senkrecht abfallenden Klippen im elektrisch-blauen Meer.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-za-caves"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Naturwunder · Küste</p>
+          <h3 class="ti-sight-name">Die Blauen Grotten</h3>
+          <p class="ti-sight-desc">Ein bizarres System aus Wellen und Bögen am Kap Skinari. Durch die Lichtbrechung spiegelt sich das Weiß der Felsen im Wasser wider und taucht alles – auch Schwimmer – in ein tiefes, magisches Neonblau.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-za-bohali"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Historie · Aussichtspunkt</p>
+          <h3 class="ti-sight-name">Bohali &amp; das Kastro</h3>
+          <p class="ti-sight-desc">Das historische Viertel oberhalb der Hauptstadt. Zwischen den Ruinen der alten venezianischen Festung wandert man unter Pinien und genießt den legendärsten Blick auf die Chora und das Ionische Meer.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-za-marathonisi"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Insel · Naturschutz</p>
+          <h3 class="ti-sight-name">Marathonisi (Schildkröteninsel)</h3>
+          <p class="ti-sight-desc">Eine unbewohnte, üppig grüne Insel in der Bucht von Laganas, deren Form ironischerweise einer Schildkröte gleicht. Sie dient den Caretta-Caretta-Schildkröten als streng geschützter Brutstrand.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-za-keri"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Natur · Sonnenuntergang</p>
+          <h3 class="ti-sight-name">Die Klippen von Keri</h3>
+          <p class="ti-sight-desc">Der wilde Südwesten der Insel. Die gewaltigen Mizithres-Felsen ragen wie zwei weiße Pyramiden aus dem Meer. Keri bietet die spektakulärsten und dramatischsten Sonnenuntergänge der gesamten Ionischen Region.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-za-chora"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Architektur · Kultur</p>
+          <h3 class="ti-sight-name">Solomos-Platz &amp; Chora</h3>
+          <p class="ti-sight-desc">Das pulsierende Herz der Hauptstadt. Geprägt von prachtvollen Gebäuden im venezianischen Stil, der traditionsreichen St.-Dionysios-Kirche und einer lebendigen Hafenpromenade, die zum abendlichen Volta einlädt.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">03 — Tavernen &amp; Kulinarik</p>
+      <h2 class="ti-section-title">Einflüsse aus Italien<br><em>und das Gold der ionischen Oliven</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-tav-grid">
+
+      <div class="ti-tav-card">
+        <div class="ti-tav-top">
+          <div>
+            <h3 class="ti-tav-name">Melia Fine Dining</h3>
+            <div class="ti-tav-loc">📍 Agios Nikolaos, Norden</div>
+          </div>
+          <div class="ti-tav-stars">★★★★★</div>
+        </div>
+        <p class="ti-tav-desc">Exzellente, gehobene ionische Küche mit grandiosem Blick auf das Meer. Der Küchenchef kombiniert alte Rezepte der Insel mit modernen Techniken. Besonders spektakulär schmecken die fangfrischen Meeresfrüchte und der mit inseltypischen Kräutern verfeinerte Oktopus.</p>
+        <div class="ti-tav-dishes">
+          <span class="ti-tav-dish">Verfeinertes „Sartsa“-Rindfleisch</span>
+          <span class="ti-tav-dish">Gegrillter Oktopus mit Fava</span>
+          <span class="ti-tav-dish">Hausgemachtes Olivenöleis</span>
+        </div>
+        <p class="ti-tav-price">Preisklasse: <span>€€€ · Abendessen · Meerblick</span></p>
+      </div>
+
+      <div class="ti-tav-card">
+        <div class="ti-tav-top">
+          <div>
+            <h3 class="ti-tav-name">Varkarola Taverna</h3>
+            <div class="ti-tav-loc">📍 Zakynthos-Stadt, Hafen</div>
+          </div>
+          <div class="ti-tav-stars">★★★★★</div>
+        </div>
+        <p class="ti-tav-desc">Eine traditionelle Taverne, wie sie im Buche steht. Während man hervorragenden lokalen Wein trinkt und geschmortes Kaninchen genießt, singen Musiker live die traditionellen zakynthischen „Kantades“ – mehrstimmige, venezianisch angehauchte Serenaden.</p>
+        <div class="ti-tav-dishes">
+          <span class="ti-tav-dish">Kouneli Stifado (Kanincheneintopf)</span>
+          <span class="ti-tav-dish">Ladotyri (Insel-Käse in Öl)</span>
+          <span class="ti-tav-dish">Frische Ladofrygania</span>
+        </div>
+        <p class="ti-tav-price">Preisklasse: <span>€€ · Abendessen · Live-Musik</span></p>
+      </div>
+
+      <div class="ti-tav-card">
+        <div class="ti-tav-top">
+          <div>
+            <h3 class="ti-tav-name">Lofos Restaurant</h3>
+            <div class="ti-tav-loc">📍 Exo Chora, Bergdorf</div>
+          </div>
+          <div class="ti-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ti-tav-desc">Gelegen im ruhigen Hinterland nahe dem ältesten Olivenbaum der Insel. Hier schmeckt die Küche deftig und ehrlich: hausgemachtes Brot, frische Salate mit kühlem Feta und traditionell im Tontopf geschmortes Fleisch mit lokalem Olivenöl.</p>
+        <div class="ti-tav-dishes">
+          <span class="ti-tav-dish">Im Ofen gebackenes Lamm</span>
+          <span class="ti-tav-dish">Zakynthischer Bauernsalat</span>
+          <span class="ti-tav-dish">Frittierte Polenta-Ecken</span>
+        </div>
+        <p class="ti-tav-price">Preisklasse: <span>€ · Mittagessen · Bergpanorama</span></p>
+      </div>
+
+      <div class="ti-tav-card">
+        <div class="ti-tav-top">
+          <div>
+            <h3 class="ti-tav-name">Sunset Taverna Keri</h3>
+            <div class="ti-tav-loc">📍 Keri, Südwesten</div>
+          </div>
+          <div class="ti-tav-stars">★★★★★</div>
+        </div>
+        <p class="ti-tav-desc">Tische direkt an der Klippenkante. Man speist, während die Sonne glutrot hinter den weißen Mizithres-Felsen versinkt. Serviert werden exzellente Meze-Platten, frittierte Calamari und kühler, weißer Verdea-Wein, die historische Rebsorte der Insel.</p>
+        <div class="ti-tav-dishes">
+          <span class="ti-tav-dish">Frittierte Calamari</span>
+          <span class="ti-tav-dish">Verdea Weißwein (Inselrebe)</span>
+          <span class="ti-tav-dish">Mizithra-Käse mit Honig</span>
+        </div>
+        <p class="ti-tav-price">Preisklasse: <span>€€ · Abendessen · Klippenrand</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">04 — Regionen &amp; Charakter</p>
+      <h2 class="ti-section-title">Die Kontraste einer<br><em>vielseitigen ionischen Schönheit</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-viertel-grid">
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🏛️</div>
+        <h3 class="ti-viertel-name">Die Chora</h3>
+        <p class="ti-viertel-desc">Die Inselhauptstadt besticht durch weitläufige, gepflasterte Plätze, imposante Kirchenbauten und von Arkaden gesäumte Einkaufsstraßen im italienischen Stil.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🐢</div>
+        <h3 class="ti-viertel-name">Bucht von Laganas</h3>
+        <p class="ti-viertel-desc">Der flache Sandstrand im Süden ist das Epizentrum des Naturschutzes. Hier gilt nachts ein Betretungsverbot, um den Nachwuchs der Riesenschildkröten zu sichern.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">⛵</div>
+        <h3 class="ti-viertel-name">Die Westküste</h3>
+        <p class="ti-viertel-desc">Wild, schroff und unbezähmbar. Ein kilometerlanger Abgrund aus weißem Fels, der spektakuläre Ausblicke auf das Wrack und einsame, nur vom Boot aus erreichbare Buchten freigibt.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🌳</div>
+        <h3 class="ti-viertel-name">Das grüne Herz</h3>
+        <p class="ti-viertel-desc">Das bergige Inselinnere mit verschlafenen Dörfern wie Exo Chora. Hier stehen Jahrhunderte alte Olivenbäume, Pinienwälder und weitläufige Weingüter abseits des Trubels.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🌊</div>
+        <h3 class="ti-viertel-name">Kap Skinari</h3>
+        <p class="ti-viertel-desc">Der äußerste Norden der Insel, von dem aus man mit kleinen Booten direkt in die geheimnisvoll leuchtenden Herzkammern der Blauen Grotten hineinfahren kann.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🏰</div>
+        <h3 class="ti-viertel-name">Bohali-Hügel</h3>
+        <p class="ti-viertel-desc">Die Wiege des alten Zakynthos. Ein aristokratisches Viertel mit eleganten Cafés, den steinernen Überresten des venezianischen Kastro und dem Duft von Jasmin.</p>
+      </div>
+
+    </div>
+
+    <div class="ti-tip-banner">
+      <div class="ti-tip-emoji">🐢</div>
+      <div class="ti-tip-text">
+        <h3>Vom Schützen der Ikonen und Oasen</h3>
+        <p>Zakynthos balanciert täglich auf dem schmalen Grat zwischen globalem Postkarten-Ruhm und fragilem Ökosystem. Während die Westküste mit dem Navagio Beach den Massentourismus anzieht, fordert die Bucht von Laganas absolute Demut vor der Natur. Es ist die Heimat der Unechten Karettschildkröte (Caretta caretta). Die Insel hat gelernt, dass ihr wahrer Luxus nicht in Luxusresorts liegt, sondern in der Erhaltung dieser Jahrmillionen alten Balance. Wer Zakynthos jenseits der Fotospots im ruhigen, von Musik erfüllten Hinterland oder den Bergdörfern sucht, versteht, warum die Venezianer sie einst als Blume des Ostens unsterblich machten.</p>
+      </div>
+    </div>
+
+  </section>
+</div>
+</div>
 </body>
 </html>
