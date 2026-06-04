@@ -1,9 +1,270 @@
-<section class="island-page">
-  <header class="island-hero isle-thassos">
-    <h1>Thassos</h1>
-    <p>Platzhalterseite für Thassos — Inhalte hier ergänzen.</p>
-  </header>
-  <article class="island-content">
-    <p>Mehr Infos, Bilder und Sehenswürdigkeiten folgen.</p>
-  </article>
-</section>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thassos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="thassos.css" />
+</head>
+<body>
+<div id="thassos-page">
+
+<div class="ti-back-bar">
+  <button class="ti-back-btn" type="button" onclick="closeThassos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ti-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Thassos</span></p>
+</div>
+
+<div class="ti-hero">
+  <div class="ti-hero-bg"></div>
+  <div class="ti-hero-dots"></div>
+  <svg class="ti-hero-silhouette" viewBox="0 0 840 175" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sanfte, waldreiche Hügelketten -->
+    <path d="M0,145 Q180,135 390,148 Q600,160 840,140 L840,175 L0,175Z" opacity="0.15"/>
+    
+    <!-- Das Ipsario-Bergmassiv im Hintergrund -->
+    <path d="M120,175 L260,65 L390,80 L490,40 L650,120 L780,175 Z" opacity="0.12"/>
+    <path d="M200,175 L320,85 L440,55 L580,130 L690,175 Z" opacity="0.18"/>
+    
+    <!-- Silhouette der antiken Säulen von Aliki (Rechts) -->
+    <path d="M680,155 L680,95 L688,95 L688,155 Z" opacity="0.25"/>
+    <path d="M695,155 L695,90 L703,90 L703,155 Z" opacity="0.25"/>
+    <path d="M710,155 L710,92 L718,92 L718,155 Z" opacity="0.25"/>
+    <path d="M675,92 L723,92 L723,87 L675,87 Z" opacity="0.22"/>
+
+    <!-- Die kreisrunde Felsenlagune Giola (Links) -->
+    <path d="M70,160 C50,140 110,120 130,140 C140,150 90,170 70,160 Z" fill="none" stroke="white" stroke-width="2" opacity="0.2"/>
+    <ellipse cx="100" cy="148" rx="20" ry="8" opacity="0.15"/>
+  </svg>
+  <div class="ti-hero-overlay"></div>
+  <div class="ti-hero-content">
+    <p class="ti-hero-tag">Nordägäische Inseln · Die grüne Smaragd-Insel</p>
+    <h1 class="ti-hero-title">Thassos<em>Θάσος</em></h1>
+    <p class="ti-hero-sub">Wo dichte, duftende Pinienerwälder sanft ins kristallklare, smaragdgrüne Meer übergehen — eine geschichtsträchtige Oase, berühmt für ihren schneeweißen Marmor, antike Schätze und versteckte Naturschauspiele.</p>
+    <div class="ti-hero-pills">
+      <span class="ti-hero-pill">Schneeweißer Thassos-Marmor</span>
+      <span class="ti-hero-pill">Giola Naturlagune</span>
+      <span class="ti-hero-pill">Antikes Aliki</span>
+      <span class="ti-hero-pill">Ipsario-Gebirge (1.204 m)</span>
+      <span class="ti-hero-pill">Golden Beach</span>
+    </div>
+  </div>
+  <div class="ti-hero-waves"></div>
+</div>
+
+<div class="ti-stats-bar">
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">13.000</div>
+    <div class="ti-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">380 km²</div>
+    <div class="ti-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">1.204 m</div>
+    <div class="ti-stat-lbl">Höhe des Ipsario</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">Top 3</div>
+    <div class="ti-stat-lbl">Waldreichste Inseln</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">Antike</div>
+    <div class="ti-stat-lbl">Bergbau seit dem 7. Jh. v.Chr.</div>
+  </div>
+</div>
+
+<div class="ti-content">
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">01 — Geschichte &amp; Natur</p>
+      <h2 class="ti-section-title">Das schwimmende Smaragdjuwel<br><em>und das weiße Gold der Antike</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-history-grid">
+      <div class="ti-history-text">
+        <p>Thassos, die nördlichste bewohnte Insel der Ägäis, fasziniert durch einen dramatischen Kontrast aus tiefgrüner Vegetation und blendend weißem Gestein. Im Gegensatz zu den kargen, windgepeitschten Kykladen ist Thassos von dichten Kiefern-, Pinien- und jahrhundertealten Olivenwäldern überzogen, die oft bis unmittelbar an die Brandung reichen. Die Luft ist erfüllt vom Duft von Harz, wildem Thymian und salziger Gischt.</p>
+        <p>Seit Jahrtausenden ist der Name der Insel untrennbar mit einem ganz besonderen Schatz verbunden: dem Thassos-Marmor. Dieser reinweiße, feinkörnige Metamorphit wurde bereits in der Antike hoch geschätzt und per Schiff im gesamten Römischen Reich verteilt. Noch heute prägen die schneeweißen Brüche und die im Meer versunkenen antiken Tagebaue das Gesicht der Küstenlinien.</p>
+        <p>Gegründet von phönizischen Kolonisten, die von den reichen Gold- und Erzvorkommen angelockt wurden, entwickelte sich Thassos schnell zu einer mächtigen antiken Polis mit eigener Münzprägung und einer dominierenden Handelsflotte. Wer heute die Insel bereist, wandelt auf den Spuren mächtiger Tempelanlagen, antiker Theater und geheimnisvoller Steinbrüche, die sanft vom türkisfarbenen Wasser umspült werden.</p>
+      </div>
+      <div class="ti-timeline">
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">7. Jh. v. Chr.</div>
+          <div class="ti-tl-event">Parische Kolonisten besiedeln die Insel unter der Führung des Dichters Archilochos und gründen die antike Stadt Thasos (das heutige Limenas).</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">Antike Blütezeit</div>
+          <div class="ti-tl-event">Thassos wird durch den Export von Wein (dem berühmten Thasios-Wein) und den Abbau des makellos weißen Marmors in Aliki steinreich.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">Römische Epoche</div>
+          <div class="ti-tl-event">Der Kaiserpalast in Rom und prachtvolle Statuen im gesamten Mittelmeerraum werden exklusiv mit dem edlen Marmor von der Insel verkleidet.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">Mittelalter</div>
+          <div class="ti-tl-event">Wegen schwerer Piratenüberfälle ziehen sich die Bewohner komplett ins Inselinnere zurück und gründen versteckte Bergdörfer wie Theologos und Panagia.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ti-section-title">Versunkene Steinbrüche, Traumstrände<br><em>und ein natürliches Auge im Fels</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-sights-grid">
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-th-giola"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Naturwunder · Lagune</p>
+          <h3 class="ti-sight-name">Giola (Das Auge des Zeus)</h3>
+          <p class="ti-sight-desc">Ein perfekt kreisrunder, natürlicher Felsenpool im Süden. Getrennt durch eine schmale Felsbarriere, füllt sich die Lagune ständig mit warmem, smaragdgrünem Meerwasser.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-th-aliki"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Archäologie · Küste</p>
+          <h3 class="ti-sight-name">Halbinsel Aliki</h3>
+          <p class="ti-sight-desc">Ein Freiluftmuseum direkt am Meer. Hier befinden sich die Überreste zweier frühchristlicher Basiliken, antike Tempel und die im Wasser versunkenen römischen Marmorbrüche.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-th-panagia"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Bergdorf · Tradition</p>
+          <h3 class="ti-sight-name">Das Bergdorf Panagia</h3>
+          <p class="ti-sight-desc">Die alte Hauptstadt der Insel. Ein malerischer Ort mit traditionellen Steinhäusern, wasserbetriebenen Mühlen, kalten Bergquellen und engen, schattigen Gassen.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-th-marble"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Strand · Karibik-Flair</p>
+          <h3 class="ti-sight-name">Marble Beach (Saliara)</h3>
+          <p class="ti-sight-desc">Ein einzigartiger Strand, der komplett aus winzigen, runden Thassos-Marmorkieseln besteht. Das Weiß des Steins lässt das Wasser unnatürlich intensiv türkis leuchten.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-th-limenas"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Antike · Kultur</p>
+          <h3 class="ti-sight-name">Antikes Theater &amp; Agora</h3>
+          <p class="ti-sight-desc">In Limenas gelegen. Das antike Theater schmiegt sich in den bewaldeten Hang und bietet einen majestätischen Ausblick über die Stadt und das thrakische Meer.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-th-archangelos"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Kloster · Panorama</p>
+          <h3 class="ti-sight-name">Kloster Erzengel Michael</h3>
+          <p class="ti-sight-desc">Spektakulär an die senkrechten Klippen im Süden gebaut. Das orthodoxe Nonnenkloster hütet eine wertvolle Reliquie (einen Nagel vom Kreuz Christi) und bietet eine endlose Fernsicht.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">03 — Tavernen &amp; Kulinarik</p>
+      <h2 class="ti-section-title">Zarte Lamm-Spezialitäten und<br><em>würziger Pinien-Waldhonig</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-tav-grid">
+
+      <div class="ti-tav-card">
+        <div class="ti-tav-top">
+          <div>
+            <h3 class="ti-tav-name">Iatrou</h3>
+            <div class="ti-tav-loc">📍 Theologos, Altes Bergdorf</div>
+          </div>
+          <div class="ti-tav-stars">★★★★★</div>
+        </div>
+        <p class="ti-tav-desc">Weit über die Grenzen der Insel bekannt für das beste Fleisch der Nordägäis. In der historischen Berg-Gemeinde Theologos gelegen, dreht sich hier ab dem Nachmittag alles um perfekt zubereitetes Grillfleisch über offenem Feuer.</p>
+        <div class="ti-tav-dishes">
+          <span class="ti-tav-dish">Knuspriges Milchlamm am Spieß</span>
+          <span class="ti-tav-dish">Kokoretsi (Traditionell)</span>
+          <span class="ti-tav-dish">Gegrillter Feta mit Olivenöl</span>
+        </div>
+        <p class="ti-tav-price">Price range: <span>€€ · Abendessen · Fleisch-Spezialitäten</span></p>
+      </div>
+
+      <div class="ti-tav-card">
+        <div class="ti-tav-top">
+          <div>
+            <h3 class="ti-tav-name">Taverna Agorastos</h3>
+            <div class="ti-tav-loc">📍 Kinira, Klippen-Taverne</div>
+          </div>
+          <div class="ti-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ti-tav-desc">Mit einem atemberaubenden Blick auf das Meer und die kleine vorgelagerte Insel Kinira. Hier verschmelzen fangfrischer Fisch und traditionelle thasische Spezialitäten in Perfektion.</p>
+        <div class="ti-tav-dishes">
+          <span class="ti-tav-dish">In der Sonne getrockneter Oktopus</span>
+          <span class="ti-tav-dish">Thasische Pitaroudia (Kräuterpuffer)</span>
+          <span class="ti-tav-dish">Hausgemachter Weißwein</span>
+        </div>
+        <p class="ti-tav-price">Price range: <span>€€ · Mittag- &amp; Abendessen · Fisch &amp; Panorama</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">04 — Regionen &amp; Charakter</p>
+      <h2 class="ti-section-title">Von weiten Sandbuchten zu<br><em>schneeweißen Marmorküsten</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-viertel-grid">
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🏛️</div>
+        <h3 class="ti-viertel-name">Der Norden (Limenas)</h3>
+        <p class="ti-viertel-desc">Das lebendige Zentrum. Antike Ruinen treffen auf moderne Cafés, schattige Pinienhaine und Fährverbindungen zum Festland.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🏖️</div>
+        <h3 class="ti-viertel-name">Der Osten (Golden Beach)</h3>
+        <p class="ti-viertel-desc">Das Badeparadies. Kilometerlange Sandstrände vor der gewaltigen Kulisse des dschungelartig bewaldeten Ipsario-Bergmassivs.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🌊</div>
+        <h3 class="ti-viertel-name">Der raue Süden</h3>
+        <p class="ti-viertel-desc">Felsig, dramatisch und voller Entdeckungen. Die Heimat von Giola, Aliki und majestätischen Klippenklöstern.</p>
+      </div>
+
+    </div>
+
+    <div class="ti-tip-banner">
+      <div class="ti-tip-emoji">🍯</div>
+      <div class="ti-tip-text">
+        <h3>Das süße Erbe: Thasios Honig &amp; Oliven</h3>
+        <p>Thassos ist berühmt für seine Jahrtausende alte Imkerei-Tradition. Da die Insel so dicht bewaldet ist, produzieren die lokalen Bienen hier keinen klassischen Blütenhonig, sondern den extrem mineralstoffreichen, dunklen Pinien- und Kiefernhonig (Pefkomelo). Er schmeckt herb-würzig und wird oft mit frischen Walnüssen oder als Beilage zum cremigen griechischen Joghurt gereicht. Zusammen mit den runzeligen „Throumba“-Oliven (die direkt am Baum reifen und ohne Lake genießbar sind) bildet er das kulinarische Fundament der Insel.</p>
+      </div>
+    </div>
+
+  </section>
+</div>
+</div>
+</body>
+</html>

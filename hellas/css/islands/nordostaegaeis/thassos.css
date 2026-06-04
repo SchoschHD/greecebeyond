@@ -1,1 +1,206 @@
-.island-hero.isle-thassos { background-size: cover; background-position: center; }
+/* =============================================
+   THASSOS — Insel-Unterseite
+   Akzentfarbe: Leuchtendes Smaragd- & Piniengrün
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#thassos-page {
+  font-family: 'Outfit', sans-serif;
+  color: #0b1410;
+  background: #f2f6f4;
+}
+
+.ti-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(242,246,244,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(22,122,83,0.15);
+}
+.ti-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(22,122,83,0.35);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #167a53; transition: all 0.2s;
+}
+.ti-back-btn:hover { background: #dcefe7; border-color: #167a53; }
+.ti-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.ti-breadcrumb { font-size: 0.8rem; color: #55635c; letter-spacing: 0.05em; }
+.ti-breadcrumb span { color: #167a53; }
+
+.ti-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.ti-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, #020d08 0%, #082116 25%, #0f442e 50%, #167a53 75%, #4fa380 100%);
+}
+.ti-hero-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(ellipse 70% 60% at 50% 75%, rgba(79,163,128,0.25) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 80% 20%, rgba(2,13,8,0.45) 0%, transparent 60%);
+}
+.ti-hero-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.ti-hero-silhouette {
+  position: absolute; bottom: 108px; left: 50%; transform: translateX(-50%);
+  width: 840px; height: 175px; opacity: 0.18;
+}
+.ti-hero-overlay { position: absolute; inset: 0; background: rgba(2,13,8,0.40); }
+.ti-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23f2f6f4' fill-opacity='1' d='M0,32L48,37.3C96,43,192,53,288,64C384,75,480,85,576,80C672,75,768,53,864,48C960,43,1056,53,1152,58.7L1200,64L1440,53L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.ti-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.ti-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: rgba(255,255,255,0.48); margin-bottom: 1.2rem;
+}
+.ti-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4.5rem, 10vw, 9rem);
+  font-weight: 300; line-height: 0.9; margin-bottom: 1.5rem;
+}
+.ti-hero-title em { font-style: italic; display: block; color: #4fa380; }
+.ti-hero-sub {
+  max-width: 580px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(255,255,255,0.72); line-height: 1.75; font-weight: 300;
+}
+.ti-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.ti-hero-pill {
+  padding: 5px 16px; border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 30px; font-size: 0.72rem; letter-spacing: 0.12em; color: rgba(255,255,255,0.90);
+}
+
+.ti-stats-bar {
+  display: flex; justify-content: center;
+  background: white; border-bottom: 1px solid rgba(22,122,83,0.10);
+}
+.ti-stat-item {
+  flex: 1; max-width: 220px; text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(22,122,83,0.06);
+}
+.ti-stat-item:last-child { border-right: none; }
+.ti-stats-bar .ti-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: #167a53; line-height: 1;
+}
+.ti-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #55635c; margin-top: 0.3rem;
+}
+
+.ti-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.ti-section { padding: 4rem 0 2rem; }
+.ti-section-head { margin-bottom: 2.5rem; }
+.ti-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #167a53; margin-bottom: 0.8rem;
+}
+.ti-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300; color: #0b1410; line-height: 1.15;
+}
+.ti-section-title em { font-style: italic; color: #167a53; }
+.ti-divider { width: 40px; height: 2px; background: #167a53; margin-top: 1.2rem; }
+
+.ti-history-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.ti-history-text p { font-size: 1rem; line-height: 1.9; color: #1c2621; font-weight: 300; margin-bottom: 1.2rem; }
+.ti-timeline { position: relative; padding-left: 2rem; }
+.ti-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(22,122,83,0.18);
+}
+.ti-tl-item { position: relative; margin-bottom: 1.8rem; }
+.ti-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: white; border: 2px solid #167a53;
+}
+.ti-tl-year { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: #167a53; margin-bottom: 0.25rem; }
+.ti-tl-event { font-size: 0.88rem; color: #1c2621; line-height: 1.6; font-weight: 300; }
+
+.ti-sights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.ti-sight-card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid rgba(22,122,83,0.12); background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ti-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(10,30,20,0.08); }
+.ti-sight-visual { height: 140px; }
+.ti-sight-body { padding: 1.2rem; }
+.ti-sight-cat { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: #167a53; margin-bottom: 0.35rem; }
+.ti-sight-name { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 300; color: #0b1410; margin-bottom: 0.4rem; }
+.ti-sight-desc { font-size: 0.83rem; color: #32443b; line-height: 1.65; font-weight: 300; }
+
+/* Placeholder Gradients für Thassos */
+.sv-th-giola       { background: linear-gradient(160deg, #051c24 0%, #1c4e5c 55%, #5698a8 100%); }
+.sv-th-aliki       { background: linear-gradient(160deg, #10241c 0%, #2c5443 55%, #6ba38b 100%); }
+.sv-th-panagia     { background: linear-gradient(160deg, #242018 0%, #544a38 60%, #9c8e75 100%); }
+.sv-th-marble      { background: linear-gradient(135deg, #182c28 0%, #4a7a72 55%, #bce0db 100%); }
+.sv-th-limenas     { background: linear-gradient(160deg, #1c1c1c 0%, #4f4f4f 60%, #a3a3a3 100%); }
+.sv-th-archangelos { background: linear-gradient(160deg, #2c1010 0%, #633333 55%, #a87070 100%); }
+
+.ti-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.ti-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(22,122,83,0.12); border-radius: 4px; border-left: 3px solid #167a53;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ti-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(10,30,20,0.06); }
+.ti-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.ti-tav-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; color: #0b1410; }
+.ti-tav-loc { font-size: 0.75rem; color: #55635c; margin-top: 0.2rem; }
+.ti-tav-stars { color: #167a53; font-size: 0.85rem; letter-spacing: 2px; }
+.ti-tav-desc { font-size: 0.88rem; color: #1c2621; line-height: 1.75; font-weight: 300; margin-bottom: 1rem; }
+.ti-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.ti-tav-dish { padding: 3px 10px; background: #dcefe7; color: #0d3d28; border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em; }
+.ti-tav-price { font-size: 0.8rem; color: #55635c; }
+.ti-tav-price span { color: #167a53; font-weight: 500; }
+
+.ti-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.ti-viertel-card {
+  padding: 1.8rem; background: #cfe2da; border-radius: 4px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.ti-viertel-card:hover { background: #b0ccbf; transform: translateY(-4px); }
+.ti-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.ti-viertel-name { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 300; color: #0b1410; margin-bottom: 0.5rem; }
+.ti-viertel-desc { font-size: 0.82rem; color: #32443b; line-height: 1.65; font-weight: 300; }
+
+.ti-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #020d08 0%, #0d3826 40%, #167a53 100%);
+  border-radius: 4px; padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.ti-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.ti-tip-text h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: white; margin-bottom: 0.6rem; }
+.ti-tip-text p { font-size: 0.92rem; color: rgba(255,255,255,0.75); line-height: 1.75; font-weight: 300; }
+
+@media (max-width: 900px) {
+  .ti-back-bar { padding: 0.8rem 1.2rem; }
+  .ti-content { padding: 2rem 1.2rem 4rem; }
+  .ti-history-grid { grid-template-columns: 1fr; }
+  .ti-sights-grid { grid-template-columns: 1fr 1fr; }
+  .ti-tav-grid { grid-template-columns: 1fr; }
+  .ti-viertel-grid { grid-template-columns: 1fr; }
+  .ti-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+}

@@ -1,9 +1,270 @@
-<section class="island-page">
-  <header class="island-hero isle-samothraki">
-    <h1>Samothráki</h1>
-    <p>Platzhalterseite für Samothráki — Inhalte hier ergänzen.</p>
-  </header>
-  <article class="island-content">
-    <p>Mehr Infos, Bilder und Sehenswürdigkeiten folgen.</p>
-  </article>
-</section>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samothraki — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="samothraki.css" />
+</head>
+<body>
+<div id="samothraki-page">
+
+<div class="ti-back-bar">
+  <button class="ti-back-btn" type="button" onclick="closeSamothraki()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ti-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Samothraki</span></p>
+</div>
+
+<div class="ti-hero">
+  <div class="ti-hero-bg"></div>
+  <div class="ti-hero-dots"></div>
+  <svg class="ti-hero-silhouette" viewBox="0 0 840 175" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Wilde, felsige Küstenlinie -->
+    <path d="M0,155 Q200,148 420,154 Q640,160 840,153 L840,175 L0,175Z" opacity="0.15"/>
+    
+    <!-- Das monumentale Saos-Massiv (Zentral im Hintergrund) -->
+    <path d="M150,175 L280,45 L380,65 L480,20 L620,110 L720,175 Z" opacity="0.12"/>
+    <path d="M220,175 L360,55 L450,35 L580,115 L660,175 Z" opacity="0.18"/>
+    
+    <!-- Silhouette der geflügelten Nike von Samothrake (Rechts) -->
+    <path d="M690,155 Q685,120 692,105 Q690,95 700,85 Q710,75 705,65 Q718,68 722,80 Q735,70 745,85 Q730,95 725,115 Q730,135 722,155 Z" opacity="0.25"/>
+    <!-- Angedeutete Flügel der Nike -->
+    <path d="M692,105 Q660,90 655,70 Q675,85 695,95 Z" opacity="0.22"/>
+    <path d="M710,100 Q740,85 750,65 Q735,80 715,92 Z" opacity="0.22"/>
+
+    <!-- Ein Wasserfall/Vathre-Becken (Links) -->
+    <path d="M80,155 Q75,130 82,110 Q95,112 105,125 Q100,140 115,155" fill="none" stroke="white" stroke-width="2" opacity="0.2"/>
+    <ellipse cx="95" cy="153" rx="25" ry="6" opacity="0.15"/>
+  </svg>
+  <div class="ti-hero-overlay"></div>
+  <div class="ti-hero-content">
+    <p class="ti-hero-tag">Nordägäische Inseln · Insel der großen Götter</p>
+    <h1 class="ti-hero-title">Samothraki<em>Σαμοθράκη</em></h1>
+    <p class="ti-hero-sub">Das ungezähmte Heiligtum der Ägäis — ein mystischer Mikrokosmos aus senkrecht aufragenden Urzeit-Bergen, dichten Platanenwäldern und geheimen, smaragdgrünen Felsenpools, über denen einst die geflügelte Nike thronte.</p>
+    <div class="ti-hero-pills">
+      <span class="ti-hero-pill">Heiligtum der Großen Götter</span>
+      <span class="ti-hero-pill">Die Vathres (Felsenpools)</span>
+      <span class="ti-hero-pill">Fonias-Schlucht</span>
+      <span class="ti-hero-pill">Berg Fengari (1.611 m)</span>
+      <span class="ti-hero-pill">Chora-Festung</span>
+    </div>
+  </div>
+  <div class="ti-hero-waves"></div>
+</div>
+
+<div class="ti-stats-bar">
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">2.800</div>
+    <div class="ti-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">178 km²</div>
+    <div class="ti-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">1.611 m</div>
+    <div class="ti-stat-lbl">Höhe des Fengari (Saos)</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">&gt; 100</div>
+    <div class="ti-stat-lbl">Natürliche Felsenpools</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">190 v.Chr.</div>
+    <div class="ti-stat-lbl">Entstehung der weltberühmten Nike</div>
+  </div>
+</div>
+
+<div class="ti-content">
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">01 — Mysterien &amp; Urgewalt</p>
+      <h2 class="ti-section-title">Die Wiege der Kabiren und<br><em>der Berg des Mondes</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-history-grid">
+      <div class="ti-history-text">
+        <p>Samothraki gleicht keinem anderen Ort in Griechenland. Massiv, wild und unnahbar ragt das Saos-Gebirge direkt aus dem thrakischen Meer empor. Der höchste Gipfel, der Fengari („Mondberg“), ist so hoch, dass laut Homers Ilias der Meeresgott Poseidon von dort oben den Trojanischen Krieg beobachtete. Die Insel strahlt eine fast greifbare, archaische Energie aus.</p>
+        <p>In der Antike war die Insel Schauplatz eines der geheimnisvollsten Kulte der Menschheit: den Mysterien der Kabiren (den „Großen Göttern“). Könige, Feldherren und Bettler reisten gleichermaßen hierher, um sich im tiefen Wald initiieren zu lassen. Im Gegensatz zu den bekannteren Mysterien von Eleusis durften hier auch Sklaven und Fremde teilnehmen – es war eine spirituelle Zuflucht des absoluten Gleichgewichts.</p>
+        <p>Die Natur von Samothraki ist von unbändiger Vitalität geprägt. Während der Süden trocken ist, gleicht der Norden einem subtropischen Dschungel. Jahrhundertalte, knorrige Platanen, Farne und reißende Bäche dominieren die Landschaft. Das Wasser schuf die berühmten „Vathres“ – natürliche, in den Granit geschliffene Pools, die sich wie Treppenstufen die Schluchten hinaufziehen.</p>
+      </div>
+      <div class="ti-timeline">
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">Antike</div>
+          <div class="ti-tl-event">Das Heiligtum der Großen Götter floriert. Berühmtheiten wie Philipp II. von Makedonien und Olympias (die Eltern Alexanders des Großen) begegnen sich hier während der Mysterienkulte zum ersten Mal.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">190 v. Chr.</div>
+          <div class="ti-tl-event">Zum Dank für einen Seesieg stiften die Rhodier die monumentale Skulptur der geflügelten Siegesgöttin Nike, die auf einem steinernen Schiffsvorschiff über dem Heiligtum thront.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">1863</div>
+          <div class="ti-tl-event">Der französische Vizekonsul Charles Champoiseau entdeckt die Fragmente der Nike. Heute ist sie als „Nike von Samothrake“ eines der unschätzbaren Hauptwerke im Pariser Louvre.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">1430</div>
+          <div class="ti-tl-event">Die genuesische Adelsfamilie Gattilusi beherrscht die Insel und errichtet monumentale Wehrtürme in der Chora und an den Küsten, um die Piraterie abzuwehren.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ti-section-title">Magische Ruinen, Wasserfälle<br><em>und verborgene Granitpools</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-sights-grid">
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-st-sanctuary"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Archäologie · Mystik</p>
+          <h3 class="ti-sight-name">Heiligtum der Großen Götter</h3>
+          <p class="ti-sight-desc">Die tief mystische Ausgrabungsstätte in Paleopoli. Eingebettet in eine dichte, wilde Schlucht stehen hier die Überreste des Hieron und des kreisförmigen Arsinoeions.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-st-fonias"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Schlucht · Abenteuer</p>
+          <h3 class="ti-sight-name">Die Fonias-Schlucht</h3>
+          <p class="ti-sight-desc">Der „Mörderbach“. Eine atemberaubende, dschungelartige Wanderung führt entlang des Flusses zum ersten gigantischen Wasserfall (Klidos) und seiner tiefen, eiskalten Vathre.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-st-gria"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Natur · Felsenpools</p>
+          <h3 class="ti-sight-name">Gria Vathra</h3>
+          <p class="ti-sight-desc">Ein magisches System aus Dutzenden übereinanderliegenden Felsenpools nahe Therma. Umgeben von jahrhundertealten Platanen klettert man von einer Badeoase zur nächsten.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-st-chora"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Hauptort · Festung</p>
+          <h3 class="ti-sight-name">Die Berg-Chora</h3>
+          <p class="ti-sight-desc">Unsichtbar vom Meer in einer natürlichen Felsmulde versteckt. Ein verträumtes Amphitheater aus Steinhäusern, engen Gassen und der alles überragenden Gattilusi-Festung.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-st-pachia"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Strand · Entspannung</p>
+          <h3 class="ti-sight-name">Pachia Ammos</h3>
+          <p class="ti-sight-desc">Der einzige echte, feine Sandstrand der sonst extrem felsigen Insel. Er liegt im isolierten, windgeschützten Süden und wird von dramatischen Klippen eingerahmt.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-st-vatos"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Naturwunder · Klippen</p>
+          <h3 class="ti-sight-name">Kremastos &amp; Vatos Strand</h3>
+          <p class="ti-sight-desc">Nur per Boot erreichbar. Hier stürzt der Kremastos-Wasserfall aus schwindelerregender Höhe direkt ins offene Meer. Daneben liegt der wilde, einsame Strand Vatos.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">03 — Tavernen &amp; Kulinarik</p>
+      <h2 class="ti-section-title">Wilder Ziegenbraten am Spieß<br><em>und süße Waldfrucht-Präsente</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-tav-grid">
+
+      <div class="ti-tav-card">
+        <div class="ti-tav-top">
+          <div>
+            <h3 class="ti-tav-name">Karydies</h3>
+            <div class="ti-tav-loc">📍 Profitis Ilias, Bergdorf</div>
+          </div>
+          <div class="ti-tav-stars">★★★★★</div>
+        </div>
+        <p class="ti-tav-desc">Die unangefochtene kulinarische Institution der Insel. Unter riesigen Walnussbäumen serviert diese urige Taverne die absolute Spezialität von Samothraki: Ziegenfleisch in Perfektion, langsam gegart auf unzähligen Arten.</p>
+        <div class="ti-tav-dishes">
+          <span class="ti-tav-dish">Gebackene Ziege in Alufolie</span>
+          <span class="ti-tav-dish">Ziege mit Honig &amp; Quitten</span>
+          <span class="ti-tav-dish">Hausgemachter Tsipouro</span>
+        </div>
+        <p class="ti-tav-price">Price range: <span>€€ · Abendessen · Fleisch-Himmel</span></p>
+      </div>
+
+      <div class="ti-tav-card">
+        <div class="ti-tav-top">
+          <div>
+            <h3 class="ti-tav-name">Ta Vathra</h3>
+            <div class="ti-tav-loc">📍 Therma, Nahe den Quellen</div>
+          </div>
+          <div class="ti-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ti-tav-desc">Ein entspannter Treffpunkt im schattigen Wald von Therma. Perfekt nach einem anstrengenden Aufstieg zu den Felsenpools. Hier gibt es exzellente Mezedes, frische Salate und traditionelle Pfannengerichte.</p>
+        <div class="ti-tav-dishes">
+          <span class="ti-tav-dish">Gefüllte Zucchiniblüten</span>
+          <span class="ti-tav-dish">Lokaler Schafskäse (Giroshiri)</span>
+          <span class="ti-tav-dish">Eisgekühltes Bier</span>
+        </div>
+        <p class="ti-tav-price">Price range: <span>€ · Mittagessen · Alternativ &amp; Locker</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">04 — Regionen &amp; Charakter</p>
+      <h2 class="ti-section-title">Vom dschungelartigen Norden<br><em>zu den windigen Olivenhainen</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-viertel-grid">
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🌿</div>
+        <h3 class="ti-viertel-name">Der grüne Norden</h3>
+        <p class="ti-viertel-desc">Rund um Therma und Paleopoli. Ein feuchtes, waldreiches Paradies voller Riesenbäume, Quellen, heißen Thermalbädern und Camping-Kultur.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🏔️</div>
+        <h3 class="ti-viertel-name">Das Saos-Bergland</h3>
+        <p class="ti-viertel-desc">Die alpine Kernzone der Insel. Schroffe Granitwände, tiefe Schluchten und anspruchsvolle Trekkingrouten für Alpinisten und Abenteurer.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🐐</div>
+        <h3 class="ti-viertel-name">Der karge Süden</h3>
+        <p class="ti-viertel-desc">Ein landschaftlicher Schock: raue Klippen, weite Olivenhaine und Tausende frei herumlaufende Wildziegen, die den salzigen Wind genießen.</p>
+      </div>
+
+    </div>
+
+    <div class="ti-tip-banner">
+      <div class="ti-tip-emoji">⛰️</div>
+      <div class="ti-tip-text">
+        <h3>Das Phänomen der Wilden Ziegen</h3>
+        <p>Es ist kein Mythos: Auf Samothraki leben schätzungsweise über 40.000 Wildziegen – das sind fast 15 Ziegen pro Einwohner! Sie klettern furchtlos an den senkrechtesten Klippen direkt über dem stürmischen Meer herum. Da sie sich fast ausschließlich von salzhaltigen Wildkräutern, Eichenblättern und Meeresgischt ernähren, hat ihr Fleisch einen weltweit absolut einzigartigen, hocharomatischen Eigengeschmack. Die Zubereitung der Ziege am Spieß oder im Tontopf gehört auf Samothraki zum gelebten Kulturgut. Wer hier speist, schmeckt die pure, ungezähmte Wildnis dieser Insel.</p>
+      </div>
+    </div>
+
+  </section>
+</div>
+</div>
+</body>
+</html>
