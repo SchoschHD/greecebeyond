@@ -339,3 +339,29 @@ function openNisyros() {
 }
 function closeNisyros() { closePage('nisyros-page'); }
 
+function openLeros() {
+  if (typeof loadPage === 'function') {
+    loadPage('leros-page', 'islands/dodekanes/leros.html').then(() => openPage('leros-page')); 
+  } else {
+    openPage('leros-page');
+  } 
+}
+function closeLeros() { closePage('leros-page'); }  
+
+function openKastellorizo() {
+  if (typeof loadPage === 'function') {
+    loadPage('kastellorizo-page', 'islands/dodekanes/kastellorizo.html').then(() => openPage('kastellorizo-page')); 
+  } else {
+    openPage('kastellorizo-page');
+  }   
+}
+function closeKastellorizo() { closePage('kastellorizo-page'); }    
+
+function openLeipsi() {
+  if (typeof loadPage === 'function') {
+    loadPage('leipsi-page', 'islands/dodekanes/leipsi.html').then(() => openPage('leipsi-page')); 
+  } else {
+    openPage('leipsi-page');
+  }   
+}
+function closeLeipsi() { closePage('leipsi-page'); }  

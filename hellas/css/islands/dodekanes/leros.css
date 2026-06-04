@@ -1,0 +1,257 @@
+/* =============================================
+   LEROS — Insel-Unterseite
+   Akzentfarbe: Italienisches Art-Déco-Blaugrün / Militärblau
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#leros-page {
+  font-family: 'Outfit', sans-serif;
+  color: #081418;
+  background: #f2f7f6;
+}
+
+/* ── BACK BAR ── */
+.le-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(242,247,246,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,110,108,0.18);
+}
+.le-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(0,110,108,0.35);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #00706c; transition: all 0.2s;
+}
+.le-back-btn:hover { background: #d8f0ee; border-color: #00706c; }
+.le-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.le-breadcrumb { font-size: 0.8rem; color: #6a8080; letter-spacing: 0.05em; }
+.le-breadcrumb span { color: #00706c; }
+
+/* ── HERO ── */
+.le-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.le-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(168deg, #020a08 0%, #041e1c 18%, #0a4840 40%, #007870 62%, #00b8a8 82%, #60e0d0 96%, #b0f0e8 100%);
+}
+.le-hero-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(ellipse 65% 50% at 50% 65%, rgba(0,160,148,0.24) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 80% 20%, rgba(4,30,28,0.40) 0%, transparent 60%);
+}
+.le-hero-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.038) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+.le-hero-silhouette {
+  position: absolute; bottom: 108px; left: 50%; transform: translateX(-50%);
+  width: 860px; height: 180px;
+  opacity: 0.11;
+}
+.le-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(2,8,8,0.50);
+}
+.le-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23f2f7f6' fill-opacity='1' d='M0,68L80,60C160,52,320,36,480,38C640,40,800,62,960,70C1120,78,1280,66,1360,60L1440,54L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.le-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.le-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: rgba(255,255,255,0.45);
+  margin-bottom: 1.2rem;
+}
+.le-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 300; line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+.le-hero-title em { font-style: italic; display: block; color: #80f0e0; }
+.le-hero-sub {
+  max-width: 570px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(255,255,255,0.65); line-height: 1.75; font-weight: 300;
+}
+.le-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.le-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(255,255,255,0.20);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.78);
+}
+
+/* ── STATS BAR ── */
+.le-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(0,110,108,0.12);
+}
+.le-stat-item {
+  flex: 1; max-width: 200px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(0,110,108,0.09);
+}
+.le-stat-item:last-child { border-right: none; }
+.le-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: #00706c; line-height: 1;
+}
+.le-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #6a8080; margin-top: 0.3rem;
+}
+
+/* ── CONTENT ── */
+.le-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.le-section { padding: 4rem 0 2rem; }
+.le-section-head { margin-bottom: 2.5rem; }
+.le-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #00706c; margin-bottom: 0.8rem;
+}
+.le-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300; color: #081418; line-height: 1.15;
+}
+.le-section-title em { font-style: italic; color: #00706c; }
+.le-divider { width: 40px; height: 2px; background: #00706c; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.le-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.le-history-text p {
+  font-size: 1rem; line-height: 1.9; color: #102028;
+  font-weight: 300; margin-bottom: 1.2rem;
+}
+.le-timeline { position: relative; padding-left: 2rem; }
+.le-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(0,110,108,0.20);
+}
+.le-tl-item { position: relative; margin-bottom: 1.8rem; }
+.le-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: white; border: 2px solid #00706c;
+}
+.le-tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 600; color: #00706c; margin-bottom: 0.25rem;
+}
+.le-tl-event { font-size: 0.88rem; color: #102028; line-height: 1.6; font-weight: 300; }
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.le-sights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.le-sight-card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid rgba(0,110,108,0.15);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.le-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(4,20,20,0.10); }
+.le-sight-visual { height: 140px; }
+.le-sight-body { padding: 1.2rem; }
+.le-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #00706c; margin-bottom: 0.35rem;
+}
+.le-sight-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 300; color: #081418; margin-bottom: 0.4rem;
+}
+.le-sight-desc { font-size: 0.83rem; color: #204040; line-height: 1.65; font-weight: 300; }
+
+.sv-le-kastro   { background: linear-gradient(160deg, #020808 0%, #0c2828 50%, #00807a 80%, #30c0b8 100%); }
+.sv-le-lakki    { background: linear-gradient(160deg, #040810 0%, #102040 50%, #2860a0 80%, #60a8d8 100%); }
+.sv-le-agia     { background: linear-gradient(160deg, #080410 0%, #281040 55%, #6030a0 80%, #a070d8 100%); }
+.sv-le-panteli  { background: linear-gradient(160deg, #020c08 0%, #083828 55%, #1890 70%, #30b888 100%); }
+.sv-le-beach    { background: linear-gradient(160deg, #020810 0%, #083060 55%, #2080c0 80%, #50b8e8 100%); }
+.sv-le-merika   { background: linear-gradient(160deg, #080c02 0%, #283010 55%, #708030 80%, #b0c060 100%); }
+
+/* ── TAVERNEN ── */
+.le-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.le-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(0,110,108,0.15);
+  border-radius: 4px; border-left: 3px solid #00706c;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.le-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(4,20,20,0.08); }
+.le-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.le-tav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300; color: #081418;
+}
+.le-tav-loc { font-size: 0.75rem; color: #6a8080; margin-top: 0.2rem; }
+.le-tav-stars { color: #00706c; font-size: 0.85rem; letter-spacing: 2px; }
+.le-tav-desc { font-size: 0.88rem; color: #102028; line-height: 1.75; font-weight: 300; margin-bottom: 1rem; }
+.le-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.le-tav-dish {
+  padding: 3px 10px; background: #d8f0ee; color: #082820;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+}
+.le-tav-price { font-size: 0.8rem; color: #6a8080; }
+.le-tav-price span { color: #00706c; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.le-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.le-viertel-card {
+  padding: 1.8rem; background: #d8f0ee;
+  border-radius: 4px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.le-viertel-card:hover { background: #b0e0d8; transform: translateY(-4px); }
+.le-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.le-viertel-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300; color: #081418; margin-bottom: 0.5rem;
+}
+.le-viertel-desc { font-size: 0.82rem; color: #204040; line-height: 1.65; font-weight: 300; }
+
+/* ── TIP BANNER ── */
+.le-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #020a08 0%, #044840 40%, #00706c 100%);
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.le-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.le-tip-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300; color: white; margin-bottom: 0.6rem;
+}
+.le-tip-text p {
+  font-size: 0.92rem; color: rgba(255,255,255,0.68); line-height: 1.75; font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .le-back-bar { padding: 0.8rem 1.2rem; }
+  .le-content { padding: 2rem 1.2rem 4rem; }
+  .le-history-grid { grid-template-columns: 1fr; }
+  .le-sights-grid { grid-template-columns: 1fr 1fr; }
+  .le-tav-grid { grid-template-columns: 1fr; }
+  .le-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .le-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+}
