@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kefalonia — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="kefalonia.css" />
+</head>
+<body>
+<div id="kefalonia-page">
+
+<div class="kf-back-bar">
+  <button class="kf-back-btn" onclick="closeKefalonia()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="kf-breadcrumb">Hellas &nbsp;/&nbsp; Ionische Inseln &nbsp;/&nbsp; <span>Kefalonia</span></p>
+</div>
+
+<div class="kf-hero">
+  <div class="kf-hero-bg"></div>
+  <div class="kf-hero-dots"></div>
+  <!-- Kefalonia Silhouette: Berg Ainos, Assos Halbinsel, Caretta-Schildkröte -->
+  <svg class="kf-hero-silhouette" viewBox="0 0 820 170" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Berg Ainos (Hintergrund Mitte) -->
+    <path d="M250,150 L400,30 L550,150 Z" opacity="0.3"/>
+    <path d="M350,150 L480,50 L620,150 Z" opacity="0.2"/>
+    
+    <!-- Assos Halbinsel & Burg (Links) -->
+    <path d="M50,150 L100,140 L120,70 L150,60 L200,150 Z" opacity="0.8"/>
+    <rect x="130" y="50" width="15" height="15"/>
+    <polygon points="128,50 137,40 147,50"/>
+    <path d="M100,140 Q150,130 200,150" fill="none" stroke="white" stroke-width="2"/>
+
+    <!-- Klippen von Myrtos (Rechts) -->
+    <path d="M600,150 L630,80 L680,90 L700,60 L780,150 Z" opacity="0.7"/>
+
+    <!-- Segelboot -->
+    <polygon points="500,135 520,95 520,135" opacity="0.9"/>
+    <polygon points="522,135 522,110 535,135" opacity="0.9"/>
+    <path d="M490,135 L545,135 L535,145 L500,145 Z" opacity="0.9"/>
+
+    <!-- Caretta-Caretta Schildkröte im Wasser -->
+    <ellipse cx="300" cy="140" rx="15" ry="8" opacity="0.8"/>
+    <circle cx="318" cy="140" r="4" opacity="0.8"/>
+    <path d="M290,135 L280,130 M290,145 L280,150" stroke="white" stroke-width="2" opacity="0.8"/>
+    <path d="M310,135 L320,130 M310,145 L320,150" stroke="white" stroke-width="2" opacity="0.8"/>
+
+    <!-- Sanfte Meereswellen -->
+    <path d="M0,155 Q205,143 410,150 Q615,157 820,145 L820,170 L0,170Z" opacity="0.3"/>
+  </svg>
+  <div class="kf-hero-overlay"></div>
+  <div class="kf-hero-content">
+    <p class="kf-hero-tag">Ionische Inseln · Die Größte</p>
+    <h1 class="kf-hero-title">Kefalonia<em>Κεφαλονιά</em></h1>
+    <p class="kf-hero-sub">Die wilde Schöne des Ionischen Meeres — Kefalonia fasziniert mit dramatischen Küstenlinien, der unterirdischen Melissani-Höhle, geheimnisvollen schwarzen Tannen und einer unverwüstlichen Lebensfreude.</p>
+    <div class="kf-hero-pills">
+      <span class="kf-hero-pill">Myrtos Beach</span>
+      <span class="kf-hero-pill">Melissani Höhle</span>
+      <span class="kf-hero-pill">Robola Wein</span>
+      <span class="kf-hero-pill">Meeresschildkröten</span>
+      <span class="kf-hero-pill">Berg Ainos</span>
+    </div>
+  </div>
+  <div class="kf-hero-waves"></div>
+</div>
+
+<div class="kf-stats-bar">
+  <div class="kf-stat-item">
+    <div class="kf-stat-num">36.000</div>
+    <div class="kf-stat-lbl">Einwohner</div>
+  </div>
+  <div class="kf-stat-item">
+    <div class="kf-stat-num">781 km²</div>
+    <div class="kf-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="kf-stat-item">
+    <div class="kf-stat-num">1.628 m</div>
+    <div class="kf-stat-lbl">Berg Ainos</div>
+  </div>
+  <div class="kf-stat-item">
+    <div class="kf-stat-num">1953</div>
+    <div class="kf-stat-lbl">Großes Erdbeben</div>
+  </div>
+  <div class="kf-stat-item">
+    <div class="kf-stat-num">300+</div>
+    <div class="kf-stat-lbl">Sonnenhöhlen</div>
+  </div>
+</div>
+
+<div class="kf-content">
+
+  <section class="kf-section">
+    <div class="kf-section-head">
+      <p class="kf-section-label">01 — Geschichte</p>
+      <h2 class="kf-section-title">Antike Mythen,<br><em>venezianische Festungen & Resilienz</em></h2>
+      <div class="kf-divider"></div>
+    </div>
+    <div class="kf-history-grid">
+      <div class="kf-history-text">
+        <p>Kefalonia blickt auf eine stolze, aber auch tragische Geschichte zurück. Bereits in der Antike war die Insel von immenser strategischer Bedeutung, was durch den Fund mykenischer Kuppelgräber belegt ist. Einige Gelehrte argumentieren gar, dass das wahre homerische Ithaka in Wirklichkeit das heutige Kefalonia sei.</p>
+        <p>Wie auf den Nachbarinseln prägte die fast 300-jährige Herrschaft der Venezianer die Kultur, die Architektur und den Dialekt tiefgreifend. Mächtige Burgen wie Agios Georgios und Assos zeugen von dieser Epoche. Im Zweiten Weltkrieg erlebte die Insel dunkle Stunden, als deutsche Truppen die italienische Division Acqui niedermetzelten – ein Ereignis, das durch den Bestseller und Hollywood-Film "Corellis Mandoline" weltbekannt wurde.</p>
+        <p>Der wohl einschneidendste Moment der modernen Geschichte war jedoch der 12. August 1953. Ein massives Erdbeben zerstörte fast 90% der Insel. Doch die Kefaloniten bauten ihre Heimat mit unermüdlichem Lebensmut wieder auf und bewahrten dabei ihre reiche musikalische und kulinarische Tradition.</p>
+      </div>
+      <div class="kf-timeline">
+        <div class="kf-tl-item">
+          <div class="kf-tl-dot"></div>
+          <div class="kf-tl-year">15. Jhd. v. Chr.</div>
+          <div class="kf-tl-event">Blütezeit der mykenischen Zivilisation auf der Insel, belegt durch beeindruckende Kuppelgräber bei Tzanata.</div>
+        </div>
+        <div class="kf-tl-item">
+          <div class="kf-tl-dot"></div>
+          <div class="kf-tl-year">1500 - 1797</div>
+          <div class="kf-tl-event">Venezianische Herrschaft. Kefalonia wird zu einem wichtigen Flottenstützpunkt. Bau der uneinnehmbaren Burg von Assos.</div>
+        </div>
+        <div class="kf-tl-item">
+          <div class="kf-tl-dot"></div>
+          <div class="kf-tl-year">1943</div>
+          <div class="kf-tl-event">Massaker auf Kefalonia. Tausende italienische Soldaten der Division Acqui werden nach dem Frontenwechsel Italiens von der Wehrmacht erschossen.</div>
+        </div>
+        <div class="kf-tl-item">
+          <div class="kf-tl-dot"></div>
+          <div class="kf-tl-year">1953</div>
+          <div class="kf-tl-event">Das große Ionische Erdbeben (Stärke 7,2) hebt die gesamte Insel um 60 cm an und legt fast alle Dörfer in Schutt und Asche. Nur Fiskardo im Norden bleibt verschont.</div>
+        </div>
+        <div class="kf-tl-item">
+          <div class="kf-tl-dot"></div>
+          <div class="kf-tl-year">2001</div>
+          <div class="kf-tl-event">Der Film "Captain Corellis Mandoline" (mit Nicolas Cage und Penélope Cruz) wird hier gedreht und löst einen touristischen Boom aus.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kf-section">
+    <div class="kf-section-head">
+      <p class="kf-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="kf-section-title">Magische Höhlen<br><em>und ikonische Strände</em></h2>
+      <div class="kf-divider"></div>
+    </div>
+    <div class="kf-sights-grid">
+
+      <div class="kf-sight-card">
+        <div class="kf-sight-visual sv-kf-myrtos"></div>
+        <div class="kf-sight-body">
+          <p class="kf-sight-cat">Natur · Ikonenstrand</p>
+          <h3 class="kf-sight-name">Myrtos Beach</h3>
+          <p class="kf-sight-desc">Einer der spektakulärsten Strände der Welt. Schneeweiße Kieselsteine treffen auf elektrisierendes, fast künstlich wirkendes türkisfarbenes Wasser, umrahmt von dramatisch steilen Kalksteinklippen.</p>
+        </div>
+      </div>
+
+      <div class="kf-sight-card">
+        <div class="kf-sight-visual sv-kf-meliss"></div>
+        <div class="kf-sight-body">
+          <p class="kf-sight-cat">Geologie · Mythologie</p>
+          <h3 class="kf-sight-name">Melissani Höhle</h3>
+          <p class="kf-sight-desc">Die "Höhle der Nymphen". Das Dach stürzte vor Jahrtausenden ein. Wenn die Mittagssonne durch die Öffnung scheint, leuchtet das brackige Wasser so intensiv blau, dass die Ruderboote zu schweben scheinen.</p>
+        </div>
+      </div>
+
+      <div class="kf-sight-card">
+        <div class="kf-sight-visual sv-kf-fiskardo"></div>
+        <div class="kf-sight-body">
+          <p class="kf-sight-cat">Historie · Hafen</p>
+          <h3 class="kf-sight-name">Fiskardo</h3>
+          <p class="kf-sight-desc">Das einzige Dorf, das vom Erdbeben 1953 weitgehend verschont blieb. Die venezianischen Herrenhäuser, verwinkelten Gassen und der noble Yachthafen verströmen den Charme vergangener Jahrhunderte.</p>
+        </div>
+      </div>
+
+      <div class="kf-sight-card">
+        <div class="kf-sight-visual sv-kf-assos"></div>
+        <div class="kf-sight-body">
+          <p class="kf-sight-cat">Dorf · Burg</p>
+          <h3 class="kf-sight-name">Assos</h3>
+          <p class="kf-sight-desc">Ein winziges, pastellfarbenes Fischerdorf, erbaut auf einem schmalen Isthmus. Der Aufstieg durch Pinienwälder zur verfallenen venezianischen Festung belohnt mit einem atemberaubenden Panorama.</p>
+        </div>
+      </div>
+
+      <div class="kf-sight-card">
+        <div class="kf-sight-visual sv-kf-ainos"></div>
+        <div class="kf-sight-body">
+          <p class="kf-sight-cat">Nationalpark · Berge</p>
+          <h3 class="kf-sight-name">Berg Ainos</h3>
+          <p class="kf-sight-desc">Der höchste Berg der Ionischen Inseln. Er ist bedeckt von der endemischen "Kefalonischen Tanne" (die so dunkelgrün ist, dass sie schwarz wirkt) und beheimatet eine Herde scheuer Wildpferde.</p>
+        </div>
+      </div>
+
+      <div class="kf-sight-card">
+        <div class="kf-sight-visual sv-kf-argo"></div>
+        <div class="kf-sight-body">
+          <p class="kf-sight-cat">Hauptstadt · Fauna</p>
+          <h3 class="kf-sight-name">Argostoli & De Bosset</h3>
+          <p class="kf-sight-desc">Die lebhafte Hauptstadt an der Koutavos-Lagune. Die Steinbrücke von De Bosset ist die längste Meeresbrücke der Welt. Am Hafen kann man morgens riesige Caretta-Caretta Schildkröten beobachten.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="kf-section">
+    <div class="kf-section-head">
+      <p class="kf-section-label">03 — Tavernen & Küche</p>
+      <h2 class="kf-section-title">Kreatopita, Robola<br><em>und der Geschmack des Meeres</em></h2>
+      <div class="kf-divider"></div>
+    </div>
+    <div class="kf-tav-grid">
+
+      <div class="kf-tav-card">
+        <div class="kf-tav-top">
+          <div>
+            <h3 class="kf-tav-name">Tassia Restaurant</h3>
+            <div class="kf-tav-loc">📍 Fiskardo (Am Hafen)</div>
+          </div>
+          <div class="kf-tav-stars">★★★★★</div>
+        </div>
+        <p class="kf-tav-desc">Eine absolute Institution, die von Berühmtheiten aus aller Welt besucht wird. Tassia Dendrinou serviert seit 1972 meisterhafte Meeresfrüchte-Gerichte und hat die Küche Kefalonias weit über Griechenland hinaus bekannt gemacht.</p>
+        <div class="kf-tav-dishes">
+          <span class="kf-tav-dish">Pasta mit Hummer</span>
+          <span class="kf-tav-dish">Garnelen Saganaki</span>
+          <span class="kf-tav-dish">Fiskardo-Charme</span>
+        </div>
+        <p class="kf-tav-price">Preisklasse: <span>€€€€ · Luxuriöser Klassiker</span></p>
+      </div>
+
+      <div class="kf-tav-card">
+        <div class="kf-tav-top">
+          <div>
+            <h3 class="kf-tav-name">Captain Nikolas (Spiros)</h3>
+            <div class="kf-tav-loc">📍 Vatsa Bay (Halbinsel Paliki)</div>
+          </div>
+          <div class="kf-tav-stars">★★★★☆</div>
+        </div>
+        <p class="kf-tav-desc">Urig, rustikal und unverfälscht. Das Restaurant liegt direkt am Strand (die Tische stehen im Sand), der Boden besteht aus gestampfter Erde und das Dach aus Schilf. Fantastischer, direkt von Spiros gefangener Fisch.</p>
+        <div class="kf-tav-dishes">
+          <span class="kf-tav-dish">Tagesfang-Fisch</span>
+          <span class="kf-tav-dish">Hausgemachter Wein</span>
+          <span class="kf-tav-dish">Echter Sandboden</span>
+        </div>
+        <p class="kf-tav-price">Preisklasse: <span>€€ · Authentisches Abenteuer</span></p>
+      </div>
+
+      <div class="kf-tav-card">
+        <div class="kf-tav-top">
+          <div>
+            <h3 class="kf-tav-name">Avithos Preview</h3>
+            <div class="kf-tav-loc">📍 Avithos Beach (Svoronata)</div>
+          </div>
+          <div class="kf-tav-stars">★★★★★</div>
+        </div>
+        <p class="kf-tav-desc">Eine wunderschöne Taverne, die traditionelle kefalonische Rezepte mit einem modernen, raffinierten Touch verbindet. Der Ort ist berühmt für seine exzellente Kreatopita, die lokale und sehr aufwändige Fleischpastete.</p>
+        <div class="kf-tav-dishes">
+          <span class="kf-tav-dish">Kreatopita (Fleischpastete)</span>
+          <span class="kf-tav-dish">Lammkleftiko</span>
+          <span class="kf-tav-dish">Sonnenuntergangs-Blick</span>
+        </div>
+        <p class="kf-tav-price">Preisklasse: <span>€€€ · Gehobene Tradition</span></p>
+      </div>
+
+      <div class="kf-tav-card">
+        <div class="kf-tav-top">
+          <div>
+            <h3 class="kf-tav-name">Oenops Wine Bar</h3>
+            <div class="kf-tav-loc">📍 Argostoli (Zentrum)</div>
+          </div>
+          <div class="kf-tav-stars">★★★★☆</div>
+        </div>
+        <p class="kf-tav-desc">Der perfekte Ort, um das flüssige Gold der Insel zu verkosten. Hier liegt der Fokus auf erstklassigem Robola, begleitet von feinen griechischen Käse- und Wurstplatten (Meze) in einer sehr eleganten, urbanen Atmosphäre.</p>
+        <div class="kf-tav-dishes">
+          <span class="kf-tav-dish">Robola Weinprobe</span>
+          <span class="kf-tav-dish">Gourmet Meze</span>
+          <span class="kf-tav-dish">Lokale Käsesorten</span>
+        </div>
+        <p class="kf-tav-price">Preisklasse: <span>€€€ · Für Weinliebhaber</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="kf-section">
+    <div class="kf-section-head">
+      <p class="kf-section-label">04 — Orte & Charakter</p>
+      <h2 class="kf-section-title">Die Seele<br><em>der wilden Insel</em></h2>
+      <div class="kf-divider"></div>
+    </div>
+    <div class="kf-viertel-grid">
+
+      <div class="kf-viertel-card">
+        <div class="kf-viertel-emoji">🐢</div>
+        <h3 class="kf-viertel-name">Die Caretta-Caretta</h3>
+        <p class="kf-viertel-desc">Kefalonia ist einer der wichtigsten Nistplätze der Unechten Karettschildkröte. An der Koutavos-Lagune und im Hafenbecken von Argostoli warten sie morgens auf die Abfälle der Fischerboote.</p>
+      </div>
+
+      <div class="kf-viertel-card">
+        <div class="kf-viertel-emoji">🥂</div>
+        <h3 class="kf-viertel-name">Robola de Céphalonie</h3>
+        <p class="kf-viertel-desc">Die Hänge des Berges Ainos (die "Robola-Zone") bringen eine der edelsten Rebsorten Griechenlands hervor. Der Weißwein ist trocken, erfrischend mineralisch und hat feine Zitrusnoten.</p>
+      </div>
+
+      <div class="kf-viertel-card">
+        <div class="kf-viertel-emoji">🎶</div>
+        <h3 class="kf-viertel-name">Kantades-Gesänge</h3>
+        <p class="kf-viertel-desc">In lauen Sommernächten hört man oft Männerchöre in den Tavernen. Diese mehrstimmigen "Kantades", begleitet von Mandolinen und Gitarren, sind ein direktes musikalisches Erbe aus Venedig.</p>
+      </div>
+
+      <div class="kf-viertel-card">
+        <div class="kf-viertel-emoji">🥧</div>
+        <h3 class="kf-viertel-name">Die Kreatopita</h3>
+        <p class="kf-viertel-desc">Die echte kefalonische Fleischpastete enthält nicht nur eine, sondern meist drei Sorten Fleisch (Rind, Schwein, Lamm), gebacken in einem dicken Teig mit Reis, Wein, Zimt und Tomaten.</p>
+      </div>
+
+      <div class="kf-viertel-card">
+        <div class="kf-viertel-emoji">🌲</div>
+        <h3 class="kf-viertel-name">Abies Cephalonica</h3>
+        <p class="kf-viertel-desc">Die Kefalonische Tanne kommt weltweit nur auf dieser Insel (und in Teilen Festland-Griechenlands) vor. Ihre Nadeln sind so dicht und dunkel, dass die Venezianer den Ainos "Monte Nero" (Schwarzer Berg) nannten.</p>
+      </div>
+
+      <div class="kf-viertel-card">
+        <div class="kf-viertel-emoji">🌊</div>
+        <h3 class="kf-viertel-name">Katavothres</h3>
+        <p class="kf-viertel-desc">Ein bizarres geologisches Phänomen nahe Argostoli: Meerwasser fließt hier stetig in Erdspalten *hinein*. Erst in den 60er Jahren wurde mit Farbe bewiesen, dass das Wasser unter der ganzen Insel zur Melissani-Höhle fließt.</p>
+      </div>
+
+    </div>
+
+    <div class="kf-tip-banner">
+      <div class="kf-tip-emoji">🚤</div>
+      <div class="kf-tip-text">
+        <h3>Das Meer von unten entdecken</h3>
+        <p>Während Myrtos Beach weltbekannt ist, liegen die wahren Schätze Kefalonias oft versteckt, nur erreichbar über das Wasser. Mieten Sie sich in Fiskardo oder Agia Efimia ein kleines Motorboot (in Griechenland bis 30 PS führerscheinfrei!). Fahren Sie an der weißen Kreideküste im Norden entlang und werfen Sie den Anker in Buchten wie Fteri oder Dafnoudi. Dort finden Sie kein Handynetz, keine Tavernen – nur das Zirpen der Zikaden, waldgrüne Hänge und das unwirklich klare, aquamarine Ionische Meer ganz für sich allein.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>
