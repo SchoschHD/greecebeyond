@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Korfu — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="korfu.css" />
+</head>
+<body>
+<div id="korfu-page">
+
+<div class="ks-back-bar">
+  <button class="ks-back-btn" onclick="closeKorfu()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ks-breadcrumb">Hellas &nbsp;/&nbsp; Ionische Inseln &nbsp;/&nbsp; <span>Korfu</span></p>
+</div>
+
+<div class="ks-hero">
+  <div class="ks-hero-bg"></div>
+  <div class="ks-hero-dots"></div>
+  <!-- Korfu Silhouette: Zypressen, Glockenturm Agios Spyridon, Alte Festung, Mäuseinsel -->
+  <svg class="ks-hero-silhouette" viewBox="0 0 820 170" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Zypressen (Links) -->
+    <polygon points="120,130 130,40 140,130" opacity="0.8"/>
+    <polygon points="100,130 110,60 120,130" opacity="0.6"/>
+    <polygon points="140,130 148,70 156,130" opacity="0.7"/>
+
+    <!-- Agios Spyridon Glockenturm (Mitte-Links) -->
+    <rect x="250" y="40" width="30" height="90"/>
+    <polygon points="245,40 265,10 285,40"/>
+    <rect x="255" y="50" width="20" height="20" rx="10"/>
+    <rect x="262" y="80" width="6" height="20"/>
+
+    <!-- Alte Festung (Rechts) -->
+    <path d="M550,130 L580,60 L620,50 L680,80 L750,130 Z"/>
+    <rect x="590" y="30" width="10" height="20"/>
+    <polygon points="588,30 595,20 602,30"/>
+
+    <!-- Mäuseinsel / Vlacherna Kloster (Mitte-Rechts auf dem Wasser) -->
+    <path d="M400,150 Q430,135 460,150 Z"/>
+    <rect x="420" y="125" width="20" height="15"/>
+    <polygon points="415,125 430,115 445,125"/>
+
+    <!-- Sanfte Meereswellen -->
+    <path d="M0,155 Q205,143 410,150 Q615,157 820,145 L820,170 L0,170Z" opacity="0.3"/>
+  </svg>
+  <div class="ks-hero-overlay"></div>
+  <div class="ks-hero-content">
+    <p class="ks-hero-tag">Ionische Inseln · Heptanes</p>
+    <h1 class="ks-hero-title">Korfu<em>Κέρκυρα</em></h1>
+    <p class="ks-hero-sub">Die smaragdgrüne Insel im Ionischen Meer — Korfu verzaubert mit venezianischer Architektur, endlosen Olivenhainen, majestätischen Palästen und einer aristokratischen Eleganz, die in Griechenland einzigartig ist.</p>
+    <div class="ks-hero-pills">
+      <span class="ks-hero-pill">Venezianisch</span>
+      <span class="ks-hero-pill">Olivenhaine</span>
+      <span class="ks-hero-pill">Achilleion</span>
+      <span class="ks-hero-pill">Kumquat</span>
+      <span class="ks-hero-pill">Kaiserin Sissi</span>
+    </div>
+  </div>
+  <div class="ks-hero-waves"></div>
+</div>
+
+<div class="ks-stats-bar">
+  <div class="ks-stat-item">
+    <div class="ks-stat-num">100.000</div>
+    <div class="ks-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ks-stat-item">
+    <div class="ks-stat-num">3+ Mio.</div>
+    <div class="ks-stat-lbl">Olivenbäume</div>
+  </div>
+  <div class="ks-stat-item">
+    <div class="ks-stat-num">592 km²</div>
+    <div class="ks-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="ks-stat-item">
+    <div class="ks-stat-num">1864</div>
+    <div class="ks-stat-lbl">Beitritt zu Griechenland</div>
+  </div>
+  <div class="ks-stat-item">
+    <div class="ks-stat-num">UNESCO</div>
+    <div class="ks-stat-lbl">Korfu-Altstadt</div>
+  </div>
+</div>
+
+<div class="ks-content">
+
+  <section class="ks-section">
+    <div class="ks-section-head">
+      <p class="ks-section-label">01 — Geschichte</p>
+      <h2 class="ks-section-title">Venezianischer Adel,<br><em>britische Eleganz</em></h2>
+      <div class="ks-divider"></div>
+    </div>
+    <div class="ks-history-grid">
+      <div class="ks-history-text">
+        <p>Im Gegensatz zu den meisten anderen Teilen Griechenlands stand Korfu nie unter osmanischer Herrschaft. Fast 400 Jahre lang wurde die Insel von der Republik Venedig kontrolliert. Die Venezianer hinterließen ein unverwechselbares architektonisches Erbe, förderten den massiven Anbau von Olivenbäumen und prägten die lokale Küche tiefgreifend.</p>
+        <p>Nach einem kurzen französischen Intermezzo unter Napoleon wurde Korfu im 19. Jahrhundert ein britisches Protektorat. Die Briten bauten Straßen, Aquädukte und den berühmten Mon Repos Palast, und führten den Cricket-Sport ein, der bis heute auf dem zentralen Platz (Spianada) gespielt wird.</p>
+        <p>Diese kosmopolitische Mischung zog stets Aristokraten und Intellektuelle an. Kaiserin Sissi von Österreich erbaute hier ihr Traumschloss, das Achilleion, um dem strengen Wiener Hof zu entfliehen. Heute ist Korfu eine faszinierende Melange aus italienischem Flair, britischer Noblesse und tief verwurzelter griechischer Gastfreundschaft.</p>
+      </div>
+      <div class="ks-timeline">
+        <div class="ks-tl-item">
+          <div class="ks-tl-dot"></div>
+          <div class="ks-tl-year">734 v. Chr.</div>
+          <div class="ks-tl-event">Gründung der Stadt Korkyra durch Siedler aus Korinth. Die Insel entwickelt sich schnell zu einer bedeutenden und wohlhabenden Seemacht der Antike.</div>
+        </div>
+        <div class="ks-tl-item">
+          <div class="ks-tl-dot"></div>
+          <div class="ks-tl-year">1386 - 1797</div>
+          <div class="ks-tl-event">Venezianische Ära. Korfu dient als Bollwerk gegen das Osmanische Reich. Bau der Alten und Neuen Festung. Pflanzung von Millionen von Olivenbäumen.</div>
+        </div>
+        <div class="ks-tl-item">
+          <div class="ks-tl-dot"></div>
+          <div class="ks-tl-year">1815 - 1864</div>
+          <div class="ks-tl-event">Britisches Protektorat. Bau des Liston (inspiriert von der Rue de Rivoli) und der Spianada. Die Ionische Akademie, die erste moderne griechische Universität, wird gegründet.</div>
+        </div>
+        <div class="ks-tl-item">
+          <div class="ks-tl-dot"></div>
+          <div class="ks-tl-year">1890</div>
+          <div class="ks-tl-event">Kaiserin Elisabeth von Österreich (Sissi) lässt den Achilleion-Palast im pompejanischen Stil erbauen, gewidmet dem griechischen Helden Achill.</div>
+        </div>
+        <div class="ks-tl-item">
+          <div class="ks-tl-dot"></div>
+          <div class="ks-tl-year">2007</div>
+          <div class="ks-tl-event">Die Altstadt von Korfu wird in die Liste des UNESCO-Weltkulturerbes aufgenommen – als herausragendes Beispiel einer venezianischen Hafenstadt.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ks-section">
+    <div class="ks-section-head">
+      <p class="ks-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ks-section-title">Kaiserliche Paläste<br><em>und Buchten aus Samt</em></h2>
+      <div class="ks-divider"></div>
+    </div>
+    <div class="ks-sights-grid">
+
+      <div class="ks-sight-card">
+        <div class="ks-sight-visual sv-cf-oldtown"></div>
+        <div class="ks-sight-body">
+          <p class="ks-sight-cat">UNESCO · Architektur</p>
+          <h3 class="ks-sight-name">Altstadt & Liston</h3>
+          <p class="ks-sight-desc">Ein Labyrinth aus gepflasterten Gassen (Kantounia), pastellfarbenen Häusern mit grünen Fensterläden und aufgespannten Wäscheleinen. Die Liston-Arkaden laden zum eleganten Kaffeetrinken ein.</p>
+        </div>
+      </div>
+
+      <div class="ks-sight-card">
+        <div class="ks-sight-visual sv-cf-achilleion"></div>
+        <div class="ks-sight-body">
+          <p class="ks-sight-cat">Palast · Mythologie</p>
+          <h3 class="ks-sight-name">Das Achilleion</h3>
+          <p class="ks-sight-desc">Der prunkvolle Sommerpalast der Kaiserin Sissi. Beeindruckende Gärten mit Statuen der griechischen Mythologie, insbesondere dem "Sterbenden Achill", und einem weiten Blick über das Meer.</p>
+        </div>
+      </div>
+
+      <div class="ks-sight-card">
+        <div class="ks-sight-visual sv-cf-mouse"></div>
+        <div class="ks-sight-body">
+          <p class="ks-sight-cat">Wahrzeichen · Kloster</p>
+          <h3 class="ks-sight-name">Vlacherna & Pontikonisi</h3>
+          <p class="ks-sight-desc">Das winzige weiße Kloster Vlacherna auf einer Halbinsel und dahinter die dicht bewaldete "Mäuseinsel" (Pontikonisi) – das meistfotografierte Motiv Korfus, direkt in der Einflugschneise des Flughafens.</p>
+        </div>
+      </div>
+
+      <div class="ks-sight-card">
+        <div class="ks-sight-visual sv-cf-paleo"></div>
+        <div class="ks-sight-body">
+          <p class="ks-sight-cat">Natur · Strände</p>
+          <h3 class="ks-sight-name">Paleokastritsa</h3>
+          <p class="ks-sight-desc">Das wohl schönste Fleckchen Korfus an der Westküste. Sechs von grünen Hügeln umrahmte Buchten mit kristallklarem, eiskaltem Wasser und einem byzantinischen Kloster hoch oben auf den Klippen.</p>
+        </div>
+      </div>
+
+      <div class="ks-sight-card">
+        <div class="ks-sight-visual sv-cf-canal"></div>
+        <div class="ks-sight-body">
+          <p class="ks-sight-cat">Geologie · Mythos</p>
+          <h3 class="ks-sight-name">Canal d'Amour</h3>
+          <p class="ks-sight-desc">Bei Sidari im Norden formten Wind und Wellen spektakuläre Sandsteinformationen. Die Legende besagt: Wer durch den "Kanal der Liebe" schwimmt, wird bald seine große Liebe finden.</p>
+        </div>
+      </div>
+
+      <div class="ks-sight-card">
+        <div class="ks-sight-visual sv-cf-angelo"></div>
+        <div class="ks-sight-body">
+          <p class="ks-sight-cat">Festung · Aussicht</p>
+          <h3 class="ks-sight-name">Angelokastro</h3>
+          <p class="ks-sight-desc">Die byzantinische "Engelsburg" thront auf einer steilen Klippe 300 Meter über dem Ionischen Meer. Sie war einst die wichtigste Verteidigungsanlage im Nordwesten und bietet dramatische Sonnenuntergänge.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ks-section">
+    <div class="ks-section-head">
+      <p class="ks-section-label">03 — Tavernen & Küche</p>
+      <h2 class="ks-section-title">Sofrito, Pastitsada<br><em>und venezianische Töpfe</em></h2>
+      <div class="ks-divider"></div>
+    </div>
+    <div class="ks-tav-grid">
+
+      <div class="ks-tav-card">
+        <div class="ks-tav-top">
+          <div>
+            <h3 class="ks-tav-name">Rex</h3>
+            <div class="ks-tav-loc">📍 Korfu-Stadt, Kapodistriou-Str.</div>
+          </div>
+          <div class="ks-tav-stars">★★★★★</div>
+        </div>
+        <p class="ks-tav-desc">Seit 1932 eine kulinarische Institution hinter dem Liston. Wer die authentische, leicht aristokratische korfiotische Küche kennenlernen möchte, kommt hierhin. Perfekt für das berühmte Sofrito (Rindfleisch in Essig-Knoblauch-Sauce).</p>
+        <div class="ks-tav-dishes">
+          <span class="ks-tav-dish">Sofrito</span>
+          <span class="ks-tav-dish">Pastitsada</span>
+          <span class="ks-tav-dish">Lokaler Weißwein</span>
+        </div>
+        <p class="ks-tav-price">Preisklasse: <span>€€€ · Klassisch & Elegant</span></p>
+      </div>
+
+      <div class="ks-tav-card">
+        <div class="ks-tav-top">
+          <div>
+            <h3 class="ks-tav-name">O Foros</h3>
+            <div class="ks-tav-loc">📍 Alte Perithia (Bergdorf)</div>
+          </div>
+          <div class="ks-tav-stars">★★★★★</div>
+        </div>
+        <p class="ks-tav-desc">Versteckt im verlassenen, denkmalgeschützten Bergdorf Palea Perithia. Unter Weinranken serviert die Familie traditionelle Berggewichte, langsam geschmort und intensiv gewürzt. Die Zeit scheint hier stehen geblieben zu sein.</p>
+        <div class="ks-tav-dishes">
+          <span class="ks-tav-dish">Hahn-Pastitsada</span>
+          <span class="ks-tav-dish">Wilde Kräuter</span>
+          <span class="ks-tav-dish">Walnusskuchen</span>
+        </div>
+        <p class="ks-tav-price">Preisklasse: <span>€€ · Rustikales Inland-Erlebnis</span></p>
+      </div>
+
+      <div class="ks-tav-card">
+        <div class="ks-tav-top">
+          <div>
+            <h3 class="ks-tav-name">Taverna Agni</h3>
+            <div class="ks-tav-loc">📍 Agni Bucht (Nordostküste)</div>
+          </div>
+          <div class="ks-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ks-tav-desc">Eine malerische Strandtaverne in einer Bucht, die oft nur per Boot erreichbar ist. Hier mischt sich lokaler Charme mit luxuriösem Yacht-Publikum. Spezialisiert auf fangfrischen Fisch und das pikante Fischgericht Bourdeto.</p>
+        <div class="ks-tav-dishes">
+          <span class="ks-tav-dish">Fisch Bourdeto</span>
+          <span class="ks-tav-dish">Gegrillter Oktopus</span>
+          <span class="ks-tav-dish">Tsitsibira (Ginger Beer)</span>
+        </div>
+        <p class="ks-tav-price">Preisklasse: <span>€€€ · Füße im Sand</span></p>
+      </div>
+
+      <div class="ks-tav-card">
+        <div class="ks-tav-top">
+          <div>
+            <h3 class="ks-tav-name">Ampelonas</h3>
+            <div class="ks-tav-loc">📍 Inland (Nähe Karoubatika)</div>
+          </div>
+          <div class="ks-tav-stars">★★★★★</div>
+        </div>
+        <p class="ks-tav-desc">Weingut, Restaurant und Kulturzentrum in einem. Mitten in den Olivenhainen gelegen, werden hier alte korfiotische Rezepte mit einem modernen, ökologischen Ansatz neu interpretiert. Fantastische Weinbegleitung.</p>
+        <div class="ks-tav-dishes">
+          <span class="ks-tav-dish">Weinprobe</span>
+          <span class="ks-tav-dish">Pikante Feigen</span>
+          <span class="ks-tav-dish">Kreative Inselküche</span>
+        </div>
+        <p class="ks-tav-price">Preisklasse: <span>€€€ · Romantik pur unter Olivenbäumen</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ks-section">
+    <div class="ks-section-head">
+      <p class="ks-section-label">04 — Orte & Charakter</p>
+      <h2 class="ks-section-title">Die Symphonie<br><em>der Ionischen Insel</em></h2>
+      <div class="ks-divider"></div>
+    </div>
+    <div class="ks-viertel-grid">
+
+      <div class="ks-viertel-card">
+        <div class="ks-viertel-emoji">🎺</div>
+        <h3 class="ks-viertel-name">Musik & Orchester</h3>
+        <p class="ks-viertel-desc">Korfu ist die musikalischste Insel Griechenlands. Fast jedes Dorf hat ein eigenes Philharmonisches Orchester. Die Umzüge an Ostern (inklusive dem traditionellen Werfen von Tonkrügen) sind landesweit berühmt.</p>
+      </div>
+
+      <div class="ks-viertel-card">
+        <div class="ks-viertel-emoji">🍊</div>
+        <h3 class="ks-viertel-name">Die Kumquat</h3>
+        <p class="ks-viertel-desc">Ursprünglich aus Asien importiert, gedeiht die Zwergorange nirgendwo in Europa so gut wie auf Korfu. Sie wird zu leuchtend orangefarbenem Likör, Marmelade und süßen Früchten (Spoon Sweets) verarbeitet.</p>
+      </div>
+
+      <div class="ks-viertel-card">
+        <div class="ks-viertel-emoji">🌿</div>
+        <h3 class="ks-viertel-name">Das Grüne Herz</h3>
+        <p class="ks-viertel-desc">Über 3 Millionen Olivenbäume (viele noch aus venezianischer Zeit) machen Korfu im Winter wie im Sommer zu einer smaragdgrünen Insel. Zypressen durchschneiden die Landschaft wie Ausrufezeichen.</p>
+      </div>
+
+      <div class="ks-viertel-card">
+        <div class="ks-viertel-emoji">🚤</div>
+        <h3 class="ks-viertel-name">Nordostküste (Kensington-on-Sea)</h3>
+        <p class="ks-viertel-desc">Die bewaldeten Buchten im Nordosten mit ihren kristallklaren Kiesstränden ziehen britische Adlige und internationale Prominenz an. Hier mietet man sich ein kleines Motorboot, um von Bucht zu Bucht zu hoppen.</p>
+      </div>
+
+      <div class="ks-viertel-card">
+        <div class="ks-viertel-emoji">🌅</div>
+        <h3 class="ks-viertel-name">Die Westküste</h3>
+        <p class="ks-viertel-desc">Raue Klippen, lange goldene Sandstrände (wie Glyfada und Agios Gordios) und spektakuläre Aussichtspunkte wie der Kaiser-Thron in Pelekas. Hier versinkt die Sonne rotglühend im offenen Meer.</p>
+      </div>
+
+      <div class="ks-viertel-card">
+        <div class="ks-viertel-emoji">🏏</div>
+        <h3 class="ks-viertel-name">Spianada & Cricket</h3>
+        <p class="ks-viertel-desc">Der größte Platz Griechenlands liegt zwischen der Stadt und der Alten Festung. Ein Erbe der Briten: Auf dem Rasen der Spianada wird tatsächlich bis heute aktiv Cricket gespielt – ein skurriler, wunderbarer Anblick.</p>
+      </div>
+
+    </div>
+
+    <div class="ks-tip-banner">
+      <div class="ks-tip-emoji">🛵</div>
+      <div class="ks-tip-text">
+        <h3>Siga Siga im Olivenhain</h3>
+        <p>Korfu-Stadt im Hochsommer ist pulsierend, elegant und sehr belebt. Um die wahre Seele der Insel zu finden, mieten Sie einen Roller und fahren Sie ins Inselinnere. Sobald Sie die Hauptstraßen verlassen, fahren Sie durch kühle, silbrig flimmernde Olivenhaine. Entdecken Sie halbverlassene Bergdörfer, in denen die alten Männer vor dem Kafenio sitzen und Ihnen bei einem kühlen Glas Tsitsibira (dem traditionellen Ingwerbier) die Geschichte der Insel erzählen.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>
