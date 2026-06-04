@@ -1,9 +1,371 @@
-<section class="island-page">
-  <header class="island-hero isle-lesbos">
-    <h1>Lesbos (Lesvos)</h1>
-    <p>Platzhalterseite für Lesbos — Inhalte hier ergänzen.</p>
-  </header>
-  <article class="island-content">
-    <p>Mehr Infos, Bilder und Sehenswürdigkeiten folgen.</p>
-  </article>
-</section>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesbos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="lesbos.css" />
+</head>
+<body>
+<div id="lesbos-page">
+
+<div class="lv-back-bar">
+  <button class="lv-back-btn" type="button" onclick="closeLesbos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="lv-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Lesbos</span></p>
+</div>
+
+<div class="lv-hero">
+  <div class="lv-hero-bg"></div>
+  <div class="lv-hero-dots"></div>
+  <svg class="lv-hero-silhouette" viewBox="0 0 840 175" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Meereslinie -->
+    <path d="M0,160 Q210,148 420,156 Q630,164 840,150 L840,175 L0,175Z" opacity="0.18"/>
+    <!-- Olivenhain-Hügel links (Lesbos = 11 Mio. Olivenbäume) -->
+    <path d="M0,175 Q60,145 120,130 Q160,120 180,175Z" opacity="0.18"/>
+    <!-- Olivenbäume Silhouette -->
+    <ellipse cx="40" cy="142" rx="18" ry="14"/>
+    <rect x="38" y="142" width="4" height="20"/>
+    <ellipse cx="70" cy="136" rx="16" ry="13"/>
+    <rect x="68" y="136" width="4" height="22"/>
+    <ellipse cx="98" cy="140" rx="18" ry="14"/>
+    <rect x="96" y="140" width="4" height="20"/>
+    <ellipse cx="128" cy="134" rx="15" ry="12"/>
+    <rect x="126" y="134" width="4" height="24"/>
+    <!-- Mytilini Kastro Hauptberg -->
+    <path d="M160,175 Q230,95 300,62 Q348,42 372,175Z" opacity="0.26"/>
+    <!-- Kastro-Mauern Mytilini -->
+    <rect x="222" y="36" width="102" height="32"/>
+    <rect x="218" y="24" width="110" height="14"/>
+    <rect x="221" y="8" width="14" height="18"/>
+    <rect x="242" y="8" width="14" height="18"/>
+    <rect x="296" y="8" width="14" height="18"/>
+    <rect x="316" y="8" width="14" height="18"/>
+    <!-- Byzant. Turm -->
+    <rect x="264" y="0" width="20" height="28"/>
+    <rect x="260" y="-2" width="28" height="8"/>
+    <!-- Steinbrücke Molyvos -->
+    <path d="M430,175 Q470,125 510,100 Q542,82 558,175Z" opacity="0.22"/>
+    <!-- Molyvos (Mithymna) Burg -->
+    <rect x="472" y="72" width="68" height="32"/>
+    <rect x="468" y="62" width="76" height="12"/>
+    <rect x="471" y="48" width="12" height="16"/>
+    <rect x="490" y="48" width="12" height="16"/>
+    <rect x="524" y="48" width="12" height="16"/>
+    <!-- Petrified Forest (versteinerter Wald) — Baumstümpfe rechts -->
+    <rect x="640" y="148" width="12" height="22"/>
+    <ellipse cx="646" cy="148" rx="14" ry="8" opacity="0.60"/>
+    <rect x="665" y="152" width="10" height="18"/>
+    <ellipse cx="670" cy="152" rx="12" ry="7" opacity="0.55"/>
+    <rect x="688" y="145" width="12" height="25"/>
+    <ellipse cx="694" cy="145" rx="14" ry="8" opacity="0.60"/>
+    <rect x="714" y="150" width="10" height="20"/>
+    <ellipse cx="719" cy="150" rx="11" ry="7" opacity="0.55"/>
+    <!-- Sappho-Motiv (Leier) -->
+    <path d="M775,155 L775,115" stroke="white" stroke-width="2.5" opacity="0.25"/>
+    <path d="M790,158 L790,118" stroke="white" stroke-width="2.5" opacity="0.25"/>
+    <path d="M775,115 Q782,108 790,118" fill="none" stroke="white" stroke-width="2.5" opacity="0.25"/>
+    <line x1="775" y1="125" x2="790" y2="127" stroke="white" stroke-width="1.5" opacity="0.22"/>
+    <line x1="775" y1="133" x2="790" y2="135" stroke="white" stroke-width="1.5" opacity="0.22"/>
+    <line x1="775" y1="141" x2="790" y2="143" stroke="white" stroke-width="1.5" opacity="0.22"/>
+    <line x1="775" y1="149" x2="790" y2="151" stroke="white" stroke-width="1.5" opacity="0.22"/>
+    <!-- Ouzo-Flasche Motiv -->
+    <rect x="815" y="138" width="10" height="30"/>
+    <rect x="813" y="133" width="14" height="8"/>
+    <rect x="817" y="125" width="6" height="10"/>
+    <ellipse cx="820" cy="125" rx="5" ry="3"/>
+  </svg>
+  <div class="lv-hero-overlay"></div>
+  <div class="lv-hero-content">
+    <p class="lv-hero-tag">Nordägäis · Östliche Ägäis</p>
+    <h1 class="lv-hero-title">Lesbos<em>Λέσβος</em></h1>
+    <p class="lv-hero-sub">Die drittgrößte griechische Insel — Heimat der Dichterin Sappho, elf Millionen Olivenbäume, ein versteinerter Wald aus dem Miozän, das beste Ouzo der Welt und eine Küche die mit Recht auf sich stolz ist. Lesbos ist eine Insel die man nicht besucht — man taucht in sie ein.</p>
+    <div class="lv-hero-pills">
+      <span class="lv-hero-pill">Sappho &amp; Poesie</span>
+      <span class="lv-hero-pill">11 Mio. Olivenbäume</span>
+      <span class="lv-hero-pill">Versteinerter Wald</span>
+      <span class="lv-hero-pill">Ouzo</span>
+      <span class="lv-hero-pill">Molyvos</span>
+    </div>
+  </div>
+  <div class="lv-hero-waves"></div>
+</div>
+
+<div class="lv-stats-bar">
+  <div class="lv-stat-item">
+    <div class="lv-stat-num">85.000</div>
+    <div class="lv-stat-lbl">Einwohner</div>
+  </div>
+  <div class="lv-stat-item">
+    <div class="lv-stat-num">1.633 km²</div>
+    <div class="lv-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="lv-stat-item">
+    <div class="lv-stat-num">11 Mio.</div>
+    <div class="lv-stat-lbl">Olivenbäume</div>
+  </div>
+  <div class="lv-stat-item">
+    <div class="lv-stat-num">20 Mio. J.</div>
+    <div class="lv-stat-lbl">Versteinerter Wald</div>
+  </div>
+  <div class="lv-stat-item">
+    <div class="lv-stat-num">#1</div>
+    <div class="lv-stat-lbl">Ouzo-Produktion Griechenlands</div>
+  </div>
+</div>
+
+<div class="lv-content">
+
+  <section class="lv-section">
+    <div class="lv-section-head">
+      <p class="lv-section-label">01 — Geschichte</p>
+      <h2 class="lv-section-title">Sappho, Öl<br><em>und zwanzig Millionen Jahre Stille</em></h2>
+      <div class="lv-divider"></div>
+    </div>
+    <div class="lv-history-grid">
+      <div class="lv-history-text">
+        <p>Lesbos hat mehr Geschichte als die meisten Länder. Hier wurde Sappho geboren — die bedeutendste Dichterin der Antike, deren Fragmente über Liebe und Begehren zweieinhalbtausend Jahre überdauert haben und noch immer moderner klingen als fast alles danach Geschriebene. Aristoteles lebte auf der Insel, Pittakos von Mytilene war einer der sieben Weisen Griechenlands. Lesbos war ein intellektuelles Zentrum der antiken Welt.</p>
+        <p>Heute produziert Lesbos 40% des griechischen Ouzo — die Destillerien von Plomari und Mytilini sind Institutionen, die Besucher aus aller Welt anziehen. Das Olivenöl der Insel ist unter den besten Griechenlands. Die Küche von Lesbos ist eine eigene Welt: Sardellen aus dem Golf von Kalloni, Soutzoukakia aus Mytilini, Ladenia (Olivenöl-Fladenbrot) aus den Bergdörfern.</p>
+        <p>Im Nordwesten liegt der Versteinerte Wald von Lesbos — ein UNESCO-Geopark aus dem Miozän, 20 Millionen Jahre alt. Aufrecht stehende versteinerte Baumstümpfe, manche über einen Meter Durchmesser, ragen aus der Erde wie Zeugen einer anderen Welt. Es ist eines der bedeutendsten paläontologischen Gebiete Europas und gleichzeitig eines der am wenigsten besuchten.</p>
+      </div>
+      <div class="lv-timeline">
+        <div class="lv-tl-item">
+          <div class="lv-tl-dot"></div>
+          <div class="lv-tl-year">~630 v. Chr.</div>
+          <div class="lv-tl-event">Geburt der Dichterin Sappho auf Lesbos — ihre Gedichte über Liebe, Begehren und Schönheit begründen die lyrische Dichtung des Abendlands. Nur Fragmente sind erhalten; sie genügen, um sie zur größten Dichterin der Antike zu machen.</div>
+        </div>
+        <div class="lv-tl-item">
+          <div class="lv-tl-dot"></div>
+          <div class="lv-tl-year">345 v. Chr.</div>
+          <div class="lv-tl-event">Aristoteles lebt auf Lesbos und betreibt im Golf von Kalloni seine ersten zoologischen Studien. Die Meeresbiologie der Ägäis ist sein Laboratorium. Lesbos ist zu diesem Zeitpunkt ein Zentrum der griechischen Philosophie.</div>
+        </div>
+        <div class="lv-tl-item">
+          <div class="lv-tl-dot"></div>
+          <div class="lv-tl-year">1355</div>
+          <div class="lv-tl-event">Die Familie Gattilusio aus Genua übernimmt Lesbos — ihre Herrschaft dauert über 100 Jahre und hinterlässt das Kastro von Mytilini und das Kastro von Molyvos, zwei der besterhaltenen mittelalterlichen Festungen der Ägäis.</div>
+        </div>
+        <div class="lv-tl-item">
+          <div class="lv-tl-dot"></div>
+          <div class="lv-tl-year">1462</div>
+          <div class="lv-tl-event">Osmanische Eroberung. Lesbos bleibt vier Jahrhunderte osmanisch — eine Zeit, die die Architektur, die Küche und die Kultur der Insel tief prägt. Viele Dörfer tragen osmanische Namen bis heute.</div>
+        </div>
+        <div class="lv-tl-item">
+          <div class="lv-tl-dot"></div>
+          <div class="lv-tl-year">1912</div>
+          <div class="lv-tl-event">Lesbos wird griechisch — nach dem Ersten Balkankrieg. Die Befreiung wird auf der Insel bis heute gefeiert. Die große Katastrophe von 1922 und der erzwungene Bevölkerungsaustausch bringt tausende griechische Flüchtlinge aus Kleinasien auf die Insel.</div>
+        </div>
+        <div class="lv-tl-item">
+          <div class="lv-tl-dot"></div>
+          <div class="lv-tl-year">Heute</div>
+          <div class="lv-tl-event">Lesbos ist Griechenlands drittgrößte Insel — mit einer vollständigen Infrastruktur, einer lebendigen Hauptstadt und einem kulturellen Reichtum, der für einen Monat Aufenthalt nicht ausgeschöpft werden kann. Eine Insel die man kennt, ohne sie zu kennen.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lv-section">
+    <div class="lv-section-head">
+      <p class="lv-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="lv-section-title">Molyvos, Wald<br><em>und die Spuren der Sappho</em></h2>
+      <div class="lv-divider"></div>
+    </div>
+    <div class="lv-sights-grid">
+
+      <div class="lv-sight-card">
+        <div class="lv-sight-visual sv-lv-molyvos"></div>
+        <div class="lv-sight-body">
+          <p class="lv-sight-cat">Mittelalter · Schönster Ort</p>
+          <h3 class="lv-sight-name">Molyvos (Mithymna)</h3>
+          <p class="lv-sight-desc">Das schönste Dorf der Insel — osmanische Steinhäuser steigen vom Hafen zum byzantinischen Kastro hinauf, jede Gasse überwölbt von Rosen und Bougainvillea. Der Hafen von Molyvos gilt als einer der malerischsten der nordgriechischen Inseln. Im Sommer lebt das Dorf vollständig auf.</p>
+        </div>
+      </div>
+
+      <div class="lv-sight-card">
+        <div class="lv-sight-visual sv-lv-wald"></div>
+        <div class="lv-sight-body">
+          <p class="lv-sight-cat">UNESCO · Geopark</p>
+          <h3 class="lv-sight-name">Versteinerter Wald</h3>
+          <p class="lv-sight-desc">Der Versteinerte Wald von Sigri — 20 Millionen Jahre alte versteinerte Baumstümpfe, aufrecht im Boden stehend, manche über einen Meter Durchmesser. Ein UNESCO-Geopark von europäischer Bedeutung, fast ohne Besucher. Das Naturkundemuseum in Sigri ist dazu das beste seiner Art in Griechenland.</p>
+        </div>
+      </div>
+
+      <div class="lv-sight-card">
+        <div class="lv-sight-visual sv-lv-mytilini"></div>
+        <div class="lv-sight-body">
+          <p class="lv-sight-cat">Hauptstadt · Kastro</p>
+          <h3 class="lv-sight-name">Mytilini</h3>
+          <p class="lv-sight-desc">Die Hauptstadt von Lesbos — eine vollständige griechische Stadt mit antikem Theater, byzantinischem Kastro, osmanischen Moscheen, neoklassischen Handelshäusern und einer lebhaften Hafenpromenade. Mytilini ist kein Touristenort, sondern ein echter Ort, der zufällig auf einer Insel liegt.</p>
+        </div>
+      </div>
+
+      <div class="lv-sight-card">
+        <div class="lv-sight-visual sv-lv-kalloni"></div>
+        <div class="lv-sight-body">
+          <p class="lv-sight-cat">Natur · Vogelparadies</p>
+          <h3 class="lv-sight-name">Golf von Kalloni</h3>
+          <p class="lv-sight-desc">Der fast geschlossene Golf im Inselinneren — Europas bedeutendstes Vogelbeobachtungsgebiet im Mittelmeer mit über 280 Arten. Hier brüten Flamingos, Pelikane und seltene Watvögel. Die berühmten Sardellen von Kalloni wachsen in diesem Wasser — und schmecken wie nirgendwo sonst.</p>
+        </div>
+      </div>
+
+      <div class="lv-sight-card">
+        <div class="lv-sight-visual sv-lv-plomari"></div>
+        <div class="lv-sight-body">
+          <p class="lv-sight-cat">Ouzo · Tradition</p>
+          <h3 class="lv-sight-name">Plomari &amp; Ouzo-Destillerien</h3>
+          <p class="lv-sight-desc">Das Ouzo-Zentrum Griechenlands — Plomari im Südosten der Insel ist die Heimat der bekanntesten Destillerien: Varvayiannis, Barbayannis, Pitsiladi. Führungen durch die Destillerien, Verkostungen, das Verständnis warum Lesbos-Ouzo anders schmeckt als alles andere. Ein Pflichtprogramm.</p>
+        </div>
+      </div>
+
+      <div class="lv-sight-card">
+        <div class="lv-sight-visual sv-lv-thermi"></div>
+        <div class="lv-sight-body">
+          <p class="lv-sight-cat">Thermalbäder · Wellness</p>
+          <h3 class="lv-sight-name">Thermalquellen Thermi</h3>
+          <p class="lv-sight-desc">Die Thermalquellen von Thermi, Polichnitos und Eftalou — Lesbos hat mehr Thermalquellen als jede andere griechische Insel. Die Bäder von Eftalou, direkt am Meer, sind die romantischsten: Dampfendes Wasser, osmanische Kuppelgebäude, Blick auf die türkische Küste.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lv-section">
+    <div class="lv-section-head">
+      <p class="lv-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="lv-section-title">Sardellen, Ouzo<br><em>und die reichste Inselküche Griechenlands</em></h2>
+      <div class="lv-divider"></div>
+    </div>
+    <div class="lv-tav-grid">
+
+      <div class="lv-tav-card">
+        <div class="lv-tav-top">
+          <div>
+            <h3 class="lv-tav-name">The Captain's Table</h3>
+            <div class="lv-tav-loc">📍 Molyvos, Hafen</div>
+          </div>
+          <div class="lv-tav-stars">★★★★★</div>
+        </div>
+        <p class="lv-tav-desc">Das Fischrestaurant am Hafen von Molyvos — Tische auf dem Pier, Boote rechts und links, das Kastro hinter einem. Die Küche konzentriert sich auf lokale Produkte: Sardellen aus Kalloni, Labrax aus der Bucht, Oktopus mit Ouzo. Der Sonnenuntergang über dem Kastro ist im Preis inbegriffen.</p>
+        <div class="lv-tav-dishes">
+          <span class="lv-tav-dish">Sardellen aus Kalloni</span>
+          <span class="lv-tav-dish">Oktopus mit Ouzo</span>
+          <span class="lv-tav-dish">Labrax aus der Bucht</span>
+        </div>
+        <p class="lv-tav-price">Preisklasse: <span>€€ · Abendessen · Molyvos-Hafen</span></p>
+      </div>
+
+      <div class="lv-tav-card">
+        <div class="lv-tav-top">
+          <div>
+            <h3 class="lv-tav-name">Averof</h3>
+            <div class="lv-tav-loc">📍 Mytilini, Hafen</div>
+          </div>
+          <div class="lv-tav-stars">★★★★★</div>
+        </div>
+        <p class="lv-tav-desc">Das älteste Ouzerio von Mytilini — seit 1900 in Betrieb, am Hafen, mit einer Mezedes-Liste die vier Seiten füllt. Hier wird Ouzo so getrunken wie er gemeint ist: mit kleinen Gerichten, langsam, im Gespräch. Soutzoukakia aus dem Ofen, eingelegte Sardellen, geräucherter Oktopus, Tirokafteri. Nicht beeilen.</p>
+        <div class="lv-tav-dishes">
+          <span class="lv-tav-dish">Soutzoukakia Mytilinis</span>
+          <span class="lv-tav-dish">Eingelegte Sardellen</span>
+          <span class="lv-tav-dish">Geräucherter Oktopus</span>
+        </div>
+        <p class="lv-tav-price">Preisklasse: <span>€ · Ouzerio · Seit 1900</span></p>
+      </div>
+
+      <div class="lv-tav-card">
+        <div class="lv-tav-top">
+          <div>
+            <h3 class="lv-tav-name">Varvayiannis Destillerie</h3>
+            <div class="lv-tav-loc">📍 Plomari</div>
+          </div>
+          <div class="lv-tav-stars">★★★★★</div>
+        </div>
+        <p class="lv-tav-desc">Die älteste und bekannteste Ouzo-Destillerie der Insel — seit 1860 in Betrieb, in Familienhand. Führungen durch die Kupferkessel, Erklärungen zur Destillationskunst, Verkostung von vier Sorten. Wer Ouzo nur als Urlaubsgetränk kennt, verlässt Varvayiannis mit einem anderen Verständnis.</p>
+        <div class="lv-tav-dishes">
+          <span class="lv-tav-dish">Ouzo-Verkostung (4 Sorten)</span>
+          <span class="lv-tav-dish">Mezedes zur Verkostung</span>
+          <span class="lv-tav-dish">Destillerie-Führung</span>
+        </div>
+        <p class="lv-tav-price">Preisklasse: <span>€€ · Erlebnis · Plomari</span></p>
+      </div>
+
+      <div class="lv-tav-card">
+        <div class="lv-tav-top">
+          <div>
+            <h3 class="lv-tav-name">Stratos</h3>
+            <div class="lv-tav-loc">📍 Agiasos, Bergdorf</div>
+          </div>
+          <div class="lv-tav-stars">★★★★★</div>
+        </div>
+        <p class="lv-tav-desc">Das Bergdorfrestaurant in Agiasos — einem der schönsten Dörfer der Insel, auf den Hängen des Olympos gelegen. Die Küche ist die der Bergbewohner: Lamm aus dem Steinofen, Ladenia (Olivenöl-Fladenbrot), wilde Pilze im Herbst. Agiasos ist außerdem für seinen Karnevalzu bekannt — den wildesten in ganz Griechenland.</p>
+        <div class="lv-tav-dishes">
+          <span class="lv-tav-dish">Lamm aus dem Steinofen</span>
+          <span class="lv-tav-dish">Ladenia (Olivenöl-Fladenbrot)</span>
+          <span class="lv-tav-dish">Wilde Pilze (Herbst)</span>
+        </div>
+        <p class="lv-tav-price">Preisklasse: <span>€ · Bergküche · Agiasos</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lv-section">
+    <div class="lv-section-head">
+      <p class="lv-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="lv-section-title">Eine Insel<br><em>die eine Welt ist</em></h2>
+      <div class="lv-divider"></div>
+    </div>
+    <div class="lv-viertel-grid">
+
+      <div class="lv-viertel-card">
+        <div class="lv-viertel-emoji">🏰</div>
+        <h3 class="lv-viertel-name">Molyvos</h3>
+        <p class="lv-viertel-desc">Das schönste Dorf der Insel — Steinhäuser, Kastro, Rosen. Der Hafen von Molyvos gehört zu den malerischsten der nördlichen Ägäis. Im Sommer belebt, im Winter still wie ein Gedicht.</p>
+      </div>
+
+      <div class="lv-viertel-card">
+        <div class="lv-viertel-emoji">🏙️</div>
+        <h3 class="lv-viertel-name">Mytilini</h3>
+        <p class="lv-viertel-desc">Die Hauptstadt — eine echte Stadt mit antikem Theater, osmanischer Geschichte, neoklassischer Pracht und der lebendigsten Kafeneia-Kultur der Nordägäis. Mytilini schläft nicht früh.</p>
+      </div>
+
+      <div class="lv-viertel-card">
+        <div class="lv-viertel-emoji">🫒</div>
+        <h3 class="lv-viertel-name">Olivenhaine</h3>
+        <p class="lv-viertel-desc">Elf Millionen Olivenbäume auf einer Insel — manche sind über tausend Jahre alt, silbrig und knorrig. Das Olivenöl von Lesbos gehört zu den besten Griechenlands. Die Landschaft ist ein einziger Hain.</p>
+      </div>
+
+      <div class="lv-viertel-card">
+        <div class="lv-viertel-emoji">🌲</div>
+        <h3 class="lv-viertel-name">Versteinerter Wald</h3>
+        <p class="lv-viertel-desc">20 Millionen Jahre alte Baumstümpfe aus dem Miozän, aufrecht im Boden. Ein UNESCO-Geopark, fast ohne Besucher. Das Naturkundemuseum in Sigri erklärt die Geologie besser als jedes andere Museum der Ägäis.</p>
+      </div>
+
+      <div class="lv-viertel-card">
+        <div class="lv-viertel-emoji">🥃</div>
+        <h3 class="lv-viertel-name">Ouzo-Tradition</h3>
+        <p class="lv-viertel-desc">40% des griechischen Ouzo kommt von Lesbos — Plomari ist die Hauptstadt des besten Anisgetränks der Welt. Destillerie-Besuche, Verkostungen, das Gespräch über Anisspirituosen das kein Ende findet.</p>
+      </div>
+
+      <div class="lv-viertel-card">
+        <div class="lv-viertel-emoji">📜</div>
+        <h3 class="lv-viertel-name">Sappho &amp; Erbe</h3>
+        <p class="lv-viertel-desc">Sappho, Aristoteles, Pittakos — Lesbos hat mehr antike Intellektuelle hervorgebracht als die meisten Stadtstaaten. Die Insel trägt dieses Erbe ohne Aufhebens: als Teil von etwas, das einfach hier begann.</p>
+      </div>
+
+    </div>
+
+    <div class="lv-tip-banner">
+      <div class="lv-tip-emoji">🫒</div>
+      <div class="lv-tip-text">
+        <h3>Ein Olivenbaum der tausend Jahre alt ist und noch Früchte trägt</h3>
+        <p>Im Herbst, wenn die Olivenernte beginnt, breiten die Bauern von Lesbos Netze unter Bäumen aus, die vor der Entstehung der meisten europäischen Städte gepflanzt wurden. Tausend Jahre alte Olivenbäume tragen noch Früchte — knorrig, silbrig, unzerstörbar. Das Öl dieser Bäume ist von einer Güte, die die Sprache nicht ganz beschreiben kann. Wer im Oktober auf Lesbos ist, riecht das frische Olivenöl in jedem Dorf, sieht die Ernte auf den Hügeln und versteht, warum diese Insel für jeden der je hier war, eine andere Bedeutung hat als alle anderen. Lesbos ist alt. Und das fühlt man.</p>
+      </div>
+    </div>
+
+  </section>
+</div>
+</div>
+</body>
+</html>

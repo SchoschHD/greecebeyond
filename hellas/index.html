@@ -70,6 +70,12 @@
   <link rel="stylesheet" href="css/islands/ionische/leukada.css">
   <link rel="stylesheet" href="css/islands/ionische/zakynthos.css">
   
+   <!-- Insel-Detail-Styles Nordostern-->
+  <link rel="stylesheet" href="css/islands/nordostaegaeis/samos.css">
+  <link rel="stylesheet" href="css/islands/nordostaegaeis/chios.css">
+  <link rel="stylesheet" href="css/islands/nordostaegaeis/lesbos.css">
+  <link rel="stylesheet" href="css/islands/nordostaegaeis/limnos.css">
+  <link rel="stylesheet" href="css/islands/nordostaegaeis/ikaria.css">
 
   <!-- Insel-Detail-Styles Nordostaegaeis -->
   <link rel="stylesheet" href="css/islands/nordostaegaeis/lesbos.css">
@@ -1162,7 +1168,6 @@
 <div id="ithaki-page"    style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="paxoi-page"     style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="kythira-page"   style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
-<div id="lesbos-page"     style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="chios-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="samos-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="ikaria-page"     style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
@@ -1186,6 +1191,7 @@
 <div id="kea-page"        style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="sikinos-page"    style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 <div id="kasos-page"      style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
+<div id="lesbos-page"     style="display:none; position:fixed; inset:0; z-index:200; overflow-y:auto; background:#faf8f4;"></div>
 
 
 
@@ -1241,9 +1247,9 @@
   async function loadPage(id, file) {
     const container = document.getElementById(id);
     if (container.innerHTML.trim() === '') {
-    const res = await fetch('pages/' + file);
-    const text = await res.text();
-   if (id === 'athens-page' && !document.getElementById('athens-inline-styles')) {
+      const res = await fetch('pages/' + file);
+      const text = await res.text();
+      if (id === 'athens-page' && !document.getElementById('athens-inline-styles')) {
         const styleMatch = text.match(/<style[^>]*>([\s\S]*?)<\/style>/i);
         if (styleMatch) {
           const styleElement = document.createElement('style');
