@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astypalaia — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="astypalaia.css" />
+</head>
+<body>
+<div id="astypalaia-page">
+
+<div class="as-back-bar">
+  <button class="as-back-btn" onclick="closeAstypalaia()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="as-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Astypalaia</span></p>
+</div>
+
+<div class="as-hero">
+  <div class="as-hero-bg"></div>
+  <div class="as-hero-shimmer"></div>
+  <!-- Astypalaia Silhouette: linker Flügel (Chora + Kastro), Steno-Landenge, rechter Flügel (Maltezana),
+       8 Windmühlen auf dem Kamm, Schwalbennest-Häuser, Vathy-Fjord -->
+  <svg class="as-hero-silhouette" viewBox="0 0 940 172" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- LINKER FLÜGEL: Chora-Hügel -->
+    <path d="M80,172 L88,130 Q120,88 175,62 Q220,42 260,48 Q300,55 330,80 Q352,100 358,128 L362,148 L362,172Z"/>
+    <!-- Kastro auf Hügelspitze -->
+    <rect x="198" y="42" width="56" height="30"/>
+    <rect x="192" y="34" width="68" height="10"/>
+    <rect x="195" y="24" width="12" height="12"/>
+    <rect x="216" y="24" width="12" height="12"/>
+    <rect x="237" y="24" width="12" height="12"/>
+    <rect x="258" y="24" width="12" height="12"/>
+    <!-- Kastro-Türme -->
+    <rect x="188" y="18" width="18" height="26"/>
+    <rect x="246" y="16" width="18" height="28"/>
+    <!-- Schwalbennest-Häuser amphitheatralisch -->
+    <rect x="150" y="108" width="18" height="14" rx="1"/>
+    <rect x="174" y="98" width="18" height="16" rx="1"/>
+    <rect x="198" y="90" width="20" height="18" rx="1"/>
+    <rect x="224" y="86" width="20" height="22" rx="1"/>
+    <rect x="250" y="90" width="18" height="18" rx="1"/>
+    <rect x="274" y="98" width="18" height="16" rx="1"/>
+    <rect x="296" y="108" width="16" height="14" rx="1"/>
+    <!-- 8 Windmühlen auf dem Kamm -->
+    <rect x="118" y="85" width="12" height="30" rx="1"/>
+    <ellipse cx="124" cy="83" rx="7" ry="3.5"/>
+    <line x1="124" y1="80" x2="114" y2="62" stroke="white" stroke-width="2.2"/>
+    <line x1="124" y1="80" x2="134" y2="62" stroke="white" stroke-width="2.2"/>
+    <line x1="124" y1="80" x2="111" y2="75" stroke="white" stroke-width="2.2"/>
+    <line x1="124" y1="80" x2="137" y2="75" stroke="white" stroke-width="2.2"/>
+
+    <rect x="140" y="78" width="12" height="30" rx="1"/>
+    <ellipse cx="146" cy="76" rx="7" ry="3.5"/>
+    <line x1="146" y1="73" x2="136" y2="55" stroke="white" stroke-width="2.2"/>
+    <line x1="146" y1="73" x2="156" y2="55" stroke="white" stroke-width="2.2"/>
+    <line x1="146" y1="73" x2="133" y2="68" stroke="white" stroke-width="2.2"/>
+    <line x1="146" y1="73" x2="159" y2="68" stroke="white" stroke-width="2.2"/>
+
+    <rect x="162" y="72" width="11" height="28" rx="1"/>
+    <ellipse cx="167.5" cy="70" rx="6.5" ry="3.5"/>
+    <line x1="167" y1="67" x2="158" y2="51" stroke="white" stroke-width="2"/>
+    <line x1="167" y1="67" x2="176" y2="51" stroke="white" stroke-width="2"/>
+    <line x1="167" y1="67" x2="155" y2="62" stroke="white" stroke-width="2"/>
+    <line x1="167" y1="67" x2="179" y2="62" stroke="white" stroke-width="2"/>
+
+    <rect x="182" y="68" width="11" height="27" rx="1"/>
+    <ellipse cx="187.5" cy="66" rx="6.5" ry="3.5"/>
+    <line x1="187" y1="63" x2="178" y2="47" stroke="white" stroke-width="2"/>
+    <line x1="187" y1="63" x2="196" y2="47" stroke="white" stroke-width="2"/>
+    <line x1="187" y1="63" x2="175" y2="58" stroke="white" stroke-width="2"/>
+    <line x1="187" y1="63" x2="199" y2="58" stroke="white" stroke-width="2"/>
+
+    <!-- Panagia Portaitissa Kirche -->
+    <rect x="318" y="96" width="22" height="18" rx="1"/>
+    <ellipse cx="329" cy="94" rx="11" ry="5.5"/>
+    <rect x="326" y="80" width="7" height="16"/>
+    <path d="M324,80 Q329,72 334,80Z"/>
+
+    <!-- STENO LANDENGE (105m) — ganz schmal -->
+    <rect x="362" y="148" width="48" height="20" rx="2"/>
+    <rect x="362" y="144" width="48" height="6" rx="1" opacity="0.6"/>
+
+    <!-- RECHTER FLÜGEL: Maltezana / Analipsi -->
+    <path d="M410,172 L412,148 Q430,118 470,92 Q510,68 555,60 Q598,54 635,62 Q668,70 688,95 Q705,116 708,142 L710,158 L712,172Z"/>
+    <!-- Maltezana Häuser -->
+    <rect x="468" y="116" width="16" height="14" rx="1"/>
+    <rect x="490" y="108" width="18" height="18" rx="1"/>
+    <rect x="514" y="102" width="18" height="20" rx="1"/>
+    <rect x="538" y="98" width="18" height="22" rx="1"/>
+    <rect x="562" y="102" width="16" height="18" rx="1"/>
+    <rect x="584" y="110" width="16" height="14" rx="1"/>
+    <!-- Antike Bad-Mosaike Symbol (Maltezana) -->
+    <rect x="500" y="90" width="40" height="12" rx="1" opacity="0.4"/>
+    <rect x="504" y="86" width="32" height="5" rx="0" opacity="0.35"/>
+    <!-- Kloster Panagia Flevariotissa rechts -->
+    <rect x="645" y="78" width="30" height="24" rx="1"/>
+    <polygon points="641,78 660,60 679,78"/>
+    <rect x="657" y="56" width="8" height="10"/>
+    <path d="M655,56 Q661,48 667,56Z"/>
+    <!-- Vathy-Fjord Andeutung -->
+    <path d="M720,130 Q748,118 770,124 Q785,128 790,140 L790,172 L720,172Z" opacity="0.3"/>
+    <!-- Felsen Offisidia -->
+    <ellipse cx="856" cy="158" rx="22" ry="10" opacity="0.35"/>
+    <ellipse cx="898" cy="163" rx="15" ry="8" opacity="0.25"/>
+    <!-- Meer -->
+    <path d="M0,160 Q235,150 470,156 Q705,162 940,152 L940,172 L0,172Z" opacity="0.22"/>
+  </svg>
+  <div class="as-hero-overlay"></div>
+  <div class="as-hero-waves"></div>
+  <div class="as-hero-content">
+    <p class="as-hero-tag">Dodekanes · Seele der Kykladen · Schmetterlingsinsel</p>
+    <h1 class="as-hero-title">Astypalaia<em>Αστυπάλαια · Πεταλούδα</em></h1>
+    <p class="as-hero-sub">Die Schmetterlingsinsel der Ägäis — zwei Flügel, verbunden durch eine 105 Meter schmale Landenge, mit einem venezianischen Kastro über Häusern wie Schwalbennester, acht Windmühlen und einem Fjord, der nach Norwegen aussieht.</p>
+    <div class="as-hero-pills">
+      <span class="as-hero-pill">Querini-Kastro 13. Jh.</span>
+      <span class="as-hero-pill">Petalouda — Schmetterling</span>
+      <span class="as-hero-pill">8 Windmühlen</span>
+      <span class="as-hero-pill">Vathy-Fjord</span>
+      <span class="as-hero-pill">Mosaike von Maltezana</span>
+    </div>
+  </div>
+</div>
+
+<div class="as-butterfly-strip">
+  <div class="as-butterfly-item">Westlichste Insel des Dodekanes</div>
+  <div class="as-butterfly-item">Architektur: Kykladen-Seele, Dodekanes-Verwaltung</div>
+  <div class="as-butterfly-item">105 m schmale Landenge bei Steno</div>
+  <div class="as-butterfly-item">~1.300 Einwohner · 97 km²</div>
+  <div class="as-butterfly-item">Griechischer Name: Petalouda</div>
+</div>
+
+<div class="as-stats-bar">
+  <div class="as-stat-item">
+    <div class="as-stat-num">~1.300</div>
+    <div class="as-stat-lbl">Einwohner</div>
+  </div>
+  <div class="as-stat-item">
+    <div class="as-stat-num">97 km²</div>
+    <div class="as-stat-lbl">Fläche</div>
+  </div>
+  <div class="as-stat-item">
+    <div class="as-stat-num">105 m</div>
+    <div class="as-stat-lbl">Landenge Steno</div>
+  </div>
+  <div class="as-stat-item">
+    <div class="as-stat-num">13. Jh.</div>
+    <div class="as-stat-lbl">Querini-Kastro</div>
+  </div>
+  <div class="as-stat-item">
+    <div class="as-stat-num">8</div>
+    <div class="as-stat-lbl">Windmühlen auf dem Kamm</div>
+  </div>
+</div>
+
+<div class="as-content">
+
+  <section class="as-section">
+    <div class="as-section-head">
+      <p class="as-section-label">01 — Geschichte</p>
+      <h2 class="as-section-title">Von den Guerinis bis<br><em>zum Schmetterling der Ägäis</em></h2>
+      <div class="as-divider"></div>
+    </div>
+    <div class="as-history-grid">
+      <div class="as-history-text">
+        <p>Astypalaia war seit der prähistorischen Zeit bewohnt und spielte in der Antike als Handelsknotenpunkt eine bedeutende Rolle. Der Name — möglicherweise von „asty" (Stadt) und „palaios" (alt) — verweist auf eine sehr frühe Besiedlung. Die Insel wurde in der Antike auch Ichthioessa genannt, „die Fischreiche", für ihren legendären Fischreichtum. Poseidon soll sie so geliebt haben, dass er sie tief ins Meer tauchte und nur die Hügel herausragen ließ — daher die schmale Landenge bei Steno, die kaum breiter als ein langer Wurf ist.</p>
+        <p>Im Jahr 1204, nach dem Fall von Konstantinopel durch den Vierten Kreuzzug, fiel die Insel unter venezianische Herrschaft. Die Familie Querini regierte sie von 1269 bis 1537 — mit einer kurzen byzantinischen Unterbrechung. Unter ihnen entstand das mächtige Kastro auf dem Felsen über der Chora, heute bekannt als Querini-Schloss: eine mehrschichtige Festungsanlage, in deren Innenhof sich noch immer zwei kleine Kirchen befinden. In diese Burgmauern bauten die Bewohner im Laufe der Jahrhunderte ihre Häuser hinein — hundert Familien lebten einst im Kastro selbst.</p>
+        <p>1537 besetzten die Osmanen die Insel unter Barbarossa, der auf seiner verheerenden Ägäisexpedition auch Astypalaia plünderte. Bis 1912 blieb die Insel osmanisch, dann kamen die Italiener, die Deutschen, die Briten — und 1948 schließlich die Griechen. Die kykladische Architektur, das weiße Labyrinth der Gassen, die acht Windmühlen auf dem Kamm: das alles ist venezianisches und kykladisches Erbe auf einem Dodekanes-Felsen. Ein Schmetterling aus zwei Welten.</p>
+      </div>
+      <div class="as-timeline">
+        <div class="as-tl-item">
+          <div class="as-tl-dot"></div>
+          <div class="as-tl-year">Prähistorie</div>
+          <div class="as-tl-event">Frühzeitige Besiedlung seit der Bronzezeit. Die Insel war Handelsstation im östlichen Mittelmeer, bekannt für Fischreichtum — daher der antike Beiname Ichthioessa.</div>
+        </div>
+        <div class="as-tl-item">
+          <div class="as-tl-dot"></div>
+          <div class="as-tl-year">1204</div>
+          <div class="as-tl-event">Nach dem Vierten Kreuzzug und dem Fall Konstantinopels fällt Astypalaia an die Venezianer. Die Familie Querini übernimmt die Herrschaft und errichtet die gleichnamige Burg über der Chora.</div>
+        </div>
+        <div class="as-tl-item">
+          <div class="as-tl-dot"></div>
+          <div class="as-tl-year">13.–15. Jh.</div>
+          <div class="as-tl-event">Blüte unter venezianischer Herrschaft — das Kastro wird ausgebaut, die Chora entsteht mit ihrer charakteristischen Architektur. Hundert Familien wohnen innerhalb der Burgmauern. Die acht Windmühlen entstehen auf dem Hügelkamm.</div>
+        </div>
+        <div class="as-tl-item">
+          <div class="as-tl-dot"></div>
+          <div class="as-tl-year">1537</div>
+          <div class="as-tl-event">Barbarossa plündert und besetzt Astypalaia auf seiner großen Ägäisexpedition. Osmanische Herrschaft bis 1912 — die Insel verliert Bevölkerung durch Piraterie und Deportationen, erholt sich aber langsam.</div>
+        </div>
+        <div class="as-tl-item">
+          <div class="as-tl-dot"></div>
+          <div class="as-tl-year">1912–1948</div>
+          <div class="as-tl-event">Italienische Besatzung, dann deutsche (1943–44), dann britische Verwaltung. Am 7. März 1948 wird Astypalaia mit dem gesamten Dodekanes Teil Griechenlands — obwohl die Insel architektonisch und kulturell immer eher kykladisch war.</div>
+        </div>
+        <div class="as-tl-item">
+          <div class="as-tl-dot"></div>
+          <div class="as-tl-year">Heute</div>
+          <div class="as-tl-event">Petalouda — die Schmetterlingsinsel. Bekannt unter Griechen als eines der schönsten Reiseziele des Landes, international noch wenig überlaufen. Kastro, acht Windmühlen, Vathy-Fjord, Mosaike von Maltezana. Alles echt, alles nah.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="as-section">
+    <div class="as-section-head">
+      <p class="as-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="as-section-title">Kastro, Fjord<br><em>und die Mosaike von Maltezana</em></h2>
+      <div class="as-divider"></div>
+    </div>
+    <div class="as-sights-grid">
+
+      <div class="as-sight-card">
+        <div class="as-sight-visual sv-as-kastro"></div>
+        <div class="as-sight-body">
+          <p class="as-sight-cat">Venezianisch · Burg</p>
+          <h3 class="as-sight-name">Querini-Kastro</h3>
+          <p class="as-sight-desc">Das Herz der Insel — hoch über der Chora, von fast überall auf der Insel sichtbar. Im 13. Jahrhundert von der venezianischen Familie Querini erbaut, mit zwei Kirchen im Innenhof und Häusern, die wie Schwalbennester an den Mauern kleben. Wenn die Sonne untergeht, wird das Kastro gold. Wenn der Mond aufgeht, wird es Silber.</p>
+        </div>
+      </div>
+
+      <div class="as-sight-card">
+        <div class="as-sight-visual sv-as-chora"></div>
+        <div class="as-sight-body">
+          <p class="as-sight-cat">Hauptstadt · Windmühlen</p>
+          <h3 class="as-sight-name">Chora & die 8 Windmühlen</h3>
+          <p class="as-sight-desc">Kykladische Architektur auf einem Dodekanes-Felsen — weiße Gassen, Bougainvillea, die Kirche Panagia Portaitissa unterhalb der Kastro-Mauern. Auf dem Kamm: acht venezianische Windmühlen in einer Reihe, außer Betrieb seit Jahrzehnten, bei Sonnenuntergang gegen den Himmel wie ein Scherenschnitt.</p>
+        </div>
+      </div>
+
+      <div class="as-sight-card">
+        <div class="as-sight-visual sv-as-vathy"></div>
+        <div class="as-sight-body">
+          <p class="as-sight-cat">Bucht · Fjord</p>
+          <h3 class="as-sight-name">Vathy</h3>
+          <p class="as-sight-desc">Im Osten des rechten Flügels — eine Bucht, die wie ein Fjord ins Land einschneidet, von Hügeln umgeben, mit einem kleinen Fischerdorf am Ende. Das Wasser spiegelt die Felsen, das Dorf besteht aus einer Handvoll Häusern und einer Taverne. Einer der unwahrscheinlichsten und schönsten Anblicke der griechischen Inselwelt.</p>
+        </div>
+      </div>
+
+      <div class="as-sight-card">
+        <div class="as-sight-visual sv-as-steno"></div>
+        <div class="as-sight-body">
+          <p class="as-sight-cat">Geografie · Landenge</p>
+          <h3 class="as-sight-name">Steno — die Landenge</h3>
+          <p class="as-sight-desc">Nur 105 Meter breit — die Stelle, wo der Schmetterling seinen Körper hat. Auf beiden Seiten das Meer, so nah, dass man meint, die Insel könnte jeden Moment auseinanderbrechen. Ein kleiner Strand auf jeder Seite, ein schmaler Weg, der beide verbindet. Der Panoramablick von hier auf beide Flügel ist unbezahlbar.</p>
+        </div>
+      </div>
+
+      <div class="as-sight-card">
+        <div class="as-sight-visual sv-as-maltezana"></div>
+        <div class="as-sight-body">
+          <p class="as-sight-cat">Antike · Mosaike</p>
+          <h3 class="as-sight-name">Maltezana & die Bade-Mosaike</h3>
+          <p class="as-sight-desc">Im östlichen Flügel, im Dorf Analipsi — die Ruinen eines antiken Bades aus dem 2.–4. Jahrhundert mit bemerkenswert gut erhaltenen Bodenmosaiken: Tierdarstellungen, geometrische Muster, Wasserwesen. Direkt am Strand. Kein Kassenhäuschen, kein Lärm. Man geht auf den Zehen über die Geschichte.</p>
+        </div>
+      </div>
+
+      <div class="as-sight-card">
+        <div class="as-sight-visual sv-as-drakos"></div>
+        <div class="as-sight-body">
+          <p class="as-sight-cat">Höhle · Legende</p>
+          <h3 class="as-sight-name">Drakos-Höhle</h3>
+          <p class="as-sight-desc">An der Nordküste nahe Vathy — „die Höhle des Drachen", mit gewaltigen Stalaktiten und Stalagmiten. Der Legende nach hauste hier ein Drache, der die Insel bewachte. Per Wanderweg oder Boot erreichbar. Daneben: die Höhle Negros, die nur mit organisierten Bootsausflügen zugänglich ist — tiefes Azurblau im Inneren.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="as-section">
+    <div class="as-section-head">
+      <p class="as-section-label">03 — Tavernen & Küche</p>
+      <h2 class="as-section-title">Astypalaiotiko, Kalogeros<br><em>und der Fisch von Vathy</em></h2>
+      <div class="as-divider"></div>
+    </div>
+    <div class="as-tav-grid">
+
+      <div class="as-tav-card">
+        <div class="as-tav-top">
+          <div>
+            <h3 class="as-tav-name">Astropalia</h3>
+            <div class="as-tav-loc">📍 Pera Gialos, Hafenpromenade</div>
+          </div>
+          <div class="as-tav-stars">★★★★★</div>
+        </div>
+        <p class="as-tav-desc">Das bekannteste Restaurant der Insel — mit Blick auf den Hafen und die sich amphitheatralisch aufbauende Chora mit dem Kastro dahinter. Der Anblick ist allein schon den Tisch wert. Die Küche setzt auf lokale Spezialitäten: Kalogeros — in Rotwein und Oregano marinierter Ziegenkäse — und frischen Fisch vom Morgen. Abends Reservierung empfohlen.</p>
+        <div class="as-tav-dishes">
+          <span class="as-tav-dish">Kalogeros (Käse in Rotwein)</span>
+          <span class="as-tav-dish">Gegrillter Lavraki</span>
+          <span class="as-tav-dish">Lokaler Weißwein</span>
+        </div>
+        <p class="as-tav-price">Preisklasse: <span>€€€ · Abendessen · Kastro-Blick</span></p>
+      </div>
+
+      <div class="as-tav-card">
+        <div class="as-tav-top">
+          <div>
+            <h3 class="as-tav-name">To Akrogiali</h3>
+            <div class="as-tav-loc">📍 Livadi, direkt am Strand</div>
+          </div>
+          <div class="as-tav-stars">★★★★★</div>
+        </div>
+        <p class="as-tav-desc">Am Kiesstrand von Livadi, mit Tischen die ins Wasser ragen — die Taverne, von der aus man den Blick auf Chora und die Windmühlen am besten genießt. Frischer Fisch, kykladische Mezedes, das hausgemachte Astypalaiotiko — Schweinefleisch mit Kreuzkümmel und Tomaten — ist das Nationalgericht der Insel.</p>
+        <div class="as-tav-dishes">
+          <span class="as-tav-dish">Astypalaiotiko (Schwein & Kreuzkümmel)</span>
+          <span class="as-tav-dish">Oktopus-Meze</span>
+          <span class="as-tav-dish">Fisch des Tages</span>
+        </div>
+        <p class="as-tav-price">Preisklasse: <span>€€ · Mittag & Abend · Strandtische</span></p>
+      </div>
+
+      <div class="as-tav-card">
+        <div class="as-tav-top">
+          <div>
+            <h3 class="as-tav-name">Taverna Vathy</h3>
+            <div class="as-tav-loc">📍 Vathy, Ende des Fjords</div>
+          </div>
+          <div class="as-tav-stars">★★★★★</div>
+        </div>
+        <p class="as-tav-desc">Am Ende des Fjords — die einzige Taverne von Vathy, die dafür in einem der schönsten Naturrahmen Griechenlands steht. Man kommt per Boot oder über die Schotterpiste, isst frischen Fisch vor dem Spiegel des Fjordwassers und fährt mit dem Gefühl ab, etwas gefunden zu haben, das nicht jeder kennt.</p>
+        <div class="as-tav-dishes">
+          <span class="as-tav-dish">Fang des Tages direkt vom Boot</span>
+          <span class="as-tav-dish">Kalamari frisch</span>
+          <span class="as-tav-dish">Hausgemachtes Brot</span>
+        </div>
+        <p class="as-tav-price">Preisklasse: <span>€€ · Mittag · Nur per Boot oder Auto</span></p>
+      </div>
+
+      <div class="as-tav-card">
+        <div class="as-tav-top">
+          <div>
+            <h3 class="as-tav-name">Barbarossa</h3>
+            <div class="as-tav-loc">📍 Chora, obere Gassen</div>
+          </div>
+          <div class="as-tav-stars">★★★★☆</div>
+        </div>
+        <p class="as-tav-desc">Der Name ist eine Provokation — Barbarossa plünderte die Insel 1537 und hinterließ Narben. Die Taverne in den oberen Gassen der Chora trägt seinen Namen ohne Scheu und serviert die beste Kalasouna der Insel — die kykladische Käse-Tarte mit Myzithra — neben gegrilltem Fleisch und lokalem Wein unter einem alten Weinstock.</p>
+        <div class="as-tav-dishes">
+          <span class="as-tav-dish">Kalasouna (Käse-Tarte)</span>
+          <span class="as-tav-dish">Gegrilltes Lammkotelett</span>
+          <span class="as-tav-dish">Lokal-Rosé</span>
+        </div>
+        <p class="as-tav-price">Preisklasse: <span>€€ · Abendessen · Chora-Gassen</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="as-section">
+    <div class="as-section-head">
+      <p class="as-section-label">04 — Orte & Strände</p>
+      <h2 class="as-section-title">Zwei Flügel,<br><em>ein Schmetterling</em></h2>
+      <div class="as-divider"></div>
+    </div>
+    <div class="as-viertel-grid">
+
+      <div class="as-viertel-card">
+        <div class="as-viertel-emoji">🏰</div>
+        <h3 class="as-viertel-name">Chora & Kastro</h3>
+        <p class="as-viertel-desc">Das Herz des linken Flügels — das weiße Labyrinth mit Kastro-Krone, acht Windmühlen und der Hafensiedlung Pera Gialos darunter. Die Gassen enden immer mit Meerblick.</p>
+      </div>
+
+      <div class="as-viertel-card">
+        <div class="as-viertel-emoji">⚓</div>
+        <h3 class="as-viertel-name">Pera Gialos</h3>
+        <p class="as-viertel-desc">Die Hafensiedlung direkt unter der Chora — Hotels, Tavernen, Sandstrand, Bootsanlegesteg. Von hier aus beginnen alle Ausflüge und Fähren. Abends das lebhafteste Viertel der Insel.</p>
+      </div>
+
+      <div class="as-viertel-card">
+        <div class="as-viertel-emoji">🪨</div>
+        <h3 class="as-viertel-name">Steno</h3>
+        <p class="as-viertel-desc">Die 105 Meter schmale Landenge — Körper des Schmetterlings, wo beide Welten zusammenkommen. Strand links, Strand rechts, Panorama auf beide Flügel. Das unwahrscheinlichste Stück Geografie der Insel.</p>
+      </div>
+
+      <div class="as-viertel-card">
+        <div class="as-viertel-emoji">🏖️</div>
+        <h3 class="as-viertel-name">Livadi & Tzanakia</h3>
+        <p class="as-viertel-desc">Die besten Strände des linken Flügels — Livadi mit Kiesel und Windmühlen-Blick, Tzanakia mit weißem Sand und türkisem Wasser. Beide 2 km von der Chora, beide ohne Massentourismus.</p>
+      </div>
+
+      <div class="as-viertel-card">
+        <div class="as-viertel-emoji">🏺</div>
+        <h3 class="as-viertel-name">Maltezana (Analipsi)</h3>
+        <p class="as-viertel-desc">Der Hauptort des rechten Flügels — mit den antiken Bade-Mosaiken direkt am Strand, einer Handvoll Tavernen und dem Gefühl, in einem anderen, ruhigeren Astypalaia angekommen zu sein.</p>
+      </div>
+
+      <div class="as-viertel-card">
+        <div class="as-viertel-emoji">🛶</div>
+        <h3 class="as-viertel-name">Vathy & Exo Vathy</h3>
+        <p class="as-viertel-desc">Der Fjord im äußersten Osten — ein kleines Fischerdorf am Ende einer tiefen Bucht, nur per Schotterpiste oder Boot erreichbar. Die Stille hier hat eine andere Dichte als anderswo auf der Insel.</p>
+      </div>
+
+    </div>
+
+    <div class="as-tip-banner">
+      <div class="as-tip-emoji">🦋</div>
+      <div class="as-tip-text">
+        <h3>Wie ein Schmetterling landet</h3>
+        <p>Wenn die Fähre nachts in den Hafen einläuft und man zum ersten Mal Astypalaia sieht — weiße Häuser, die wie Schwalbennester am Fels kleben, das beleuchtete Kastro hoch oben, die Lichter der Chora, die sich im Wasser spiegeln — dann versteht man sofort, warum diese Insel „die schöne Unbekannte" genannt wird. Man fragt sich, wie es möglich ist, dass diese Stelle nicht in jedem Reiseführer steht. Und dann, nach einem Tag hier, ist man froh, dass sie nicht drin steht. Denn Astypalaia gehört denen, die sie suchen — nicht denen, die sie zufällig buchen.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>

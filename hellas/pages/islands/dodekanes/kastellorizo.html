@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kastelorizo — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="kastelorizo.css" />
+</head>
+<body>
+<div id="kastelorizo-page">
+
+<div class="kz-back-bar">
+  <button class="kz-back-btn" type="button" onclick="closeKastellorizo()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="kz-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Kastelorizo</span></p>
+</div>
+
+<div class="kz-hero">
+  <div class="kz-hero-bg"></div>
+  <div class="kz-hero-dots"></div>
+  <!-- Kastelorizo silhouette: colourful neoclassical harbour row, castle, mosque, Turkey coast behind -->
+  <svg class="kz-hero-silhouette" viewBox="0 0 860 180" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Turkish mainland coast in far background — long low ridge -->
+    <path d="M0,90 Q215,72 430,78 Q645,84 860,70 L860,100 Q645,94 430,98 Q215,102 0,110Z" opacity="0.12"/>
+    <!-- Kastelorizo island — small, compact -->
+    <path d="M180,172 Q240,125 310,108 Q360,96 410,98 Q460,100 500,92 Q540,84 570,88 Q610,93 640,108 L660,172Z" opacity="0.38"/>
+    <!-- Colourful neoclassical harbour mansions — the iconic row -->
+    <!-- House 1 – tall with arched windows -->
+    <rect x="195" y="105" width="42" height="65"/>
+    <polygon points="195,105 216,88 237,105"/>
+    <rect x="203" y="118" width="11" height="14"/>
+    <rect x="220" y="118" width="11" height="14"/>
+    <rect x="203" y="138" width="11" height="14"/>
+    <rect x="220" y="138" width="11" height="14"/>
+    <!-- House 2 – wider with balcony detail -->
+    <rect x="242" y="98" width="48" height="72"/>
+    <polygon points="242,98 266,80 290,98"/>
+    <rect x="250" y="112" width="12" height="15"/>
+    <rect x="268" y="112" width="12" height="15"/>
+    <rect x="250" y="133" width="12" height="15"/>
+    <rect x="268" y="133" width="12" height="15"/>
+    <!-- Balcony line -->
+    <rect x="242" y="128" width="48" height="4"/>
+    <!-- House 3 – tall narrow -->
+    <rect x="295" y="108" width="35" height="62"/>
+    <polygon points="295,108 312,93 330,108"/>
+    <rect x="302" y="120" width="10" height="13"/>
+    <rect x="317" y="120" width="10" height="13"/>
+    <rect x="302" y="140" width="10" height="13"/>
+    <rect x="317" y="140" width="10" height="13"/>
+    <!-- House 4 – with round arched door -->
+    <rect x="335" y="103" width="44" height="67"/>
+    <polygon points="335,103 357,86 379,103"/>
+    <path d="M345,140 Q357,130 369,140 L369,170 L345,170Z"/>
+    <rect x="348" y="115" width="11" height="13"/>
+    <rect x="365" y="115" width="11" height="13"/>
+    <!-- Castle on hill above harbour -->
+    <path d="M390,172 Q420,125 455,100 Q490,75 520,80 Q545,85 555,100 L555,172Z" opacity="0.22"/>
+    <rect x="440" y="58" width="58" height="48"/>
+    <rect x="436" y="48" width="12" height="14"/>
+    <rect x="452" y="48" width="12" height="14"/>
+    <rect x="468" y="48" width="12" height="14"/>
+    <rect x="484" y="48" width="12" height="14"/>
+    <!-- Castle tower -->
+    <rect x="450" y="34" width="20" height="26"/>
+    <polygon points="448,34 460,20 472,34"/>
+    <!-- Mosque with minaret (Ottoman heritage) -->
+    <rect x="565" y="100" width="36" height="46"/>
+    <path d="M565,100 Q583,86 601,100" fill="white"/>
+    <!-- Minaret -->
+    <rect x="598" y="80" width="10" height="36"/>
+    <polygon points="596,80 603,68 610,80"/>
+    <!-- Blue Cave opening at water level far left -->
+    <path d="M130,162 Q155,148 180,152 L180,170 Q155,170 130,170Z" opacity="0.40"/>
+    <!-- Sea shimmer -->
+    <path d="M0,168 Q215,160 430,166 Q645,172 860,163 L860,180 L0,180Z" opacity="0.15"/>
+  </svg>
+  <div class="kz-hero-overlay"></div>
+  <div class="kz-hero-content">
+    <p class="kz-hero-tag">Dodekanes · Äußerste Grenze Europas</p>
+    <h1 class="kz-hero-title">Kastelorizo<em>Καστελλόριζο</em></h1>
+    <p class="kz-hero-sub">Die östlichste Insel Griechenlands — 2 km vom türkischen Festland entfernt, 570 km von Athen. Eine winzige Insel mit einer der eindrucksvollsten Hafensilhouetten der Ägäis: neoklassizistische Herrenhäuser in Rot, Ocker und Hellblau, direkt am Wasser, mit dem osmanischen Kastro darüber. Und darunter: die Blaue Grotte.</p>
+    <div class="kz-hero-pills">
+      <span class="kz-hero-pill">Östlichstes Griechenland</span>
+      <span class="kz-hero-pill">Blaue Grotte</span>
+      <span class="kz-hero-pill">Farbiger Hafen</span>
+      <span class="kz-hero-pill">Mediterrano (Film)</span>
+      <span class="kz-hero-pill">Türkei-Blick</span>
+    </div>
+  </div>
+  <div class="kz-hero-waves"></div>
+</div>
+
+<div class="kz-stats-bar">
+  <div class="kz-stat-item">
+    <div class="kz-stat-num">~500</div>
+    <div class="kz-stat-lbl">Einwohner (heute)</div>
+  </div>
+  <div class="kz-stat-item">
+    <div class="kz-stat-num">12 km²</div>
+    <div class="kz-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="kz-stat-item">
+    <div class="kz-stat-num">2 km</div>
+    <div class="kz-stat-lbl">Bis zur Türkei</div>
+  </div>
+  <div class="kz-stat-item">
+    <div class="kz-stat-num">1991</div>
+    <div class="kz-stat-lbl">Film "Mediterrano" — Oscar</div>
+  </div>
+  <div class="kz-stat-item">
+    <div class="kz-stat-num">15.000</div>
+    <div class="kz-stat-lbl">Bewohner im Jahr 1900</div>
+  </div>
+</div>
+
+<div class="kz-content">
+
+  <section class="kz-section">
+    <div class="kz-section-head">
+      <p class="kz-section-label">01 — Geschichte</p>
+      <h2 class="kz-section-title">Reichtum, Exil<br><em>und die Rückkehr des Lichts</em></h2>
+      <div class="kz-divider"></div>
+    </div>
+    <div class="kz-history-grid">
+      <div class="kz-history-text">
+        <p>Kastelorizo war einmal reich. Im 19. Jahrhundert lebten hier 15.000 Menschen — Reeder, Kaufleute, Kapitäne, die auf Segelbooten den östlichen Mittelmeerraum beherrschten. Der Hafen war einer der geschäftigsten des Dodekanes, die neoklassizistischen Herrenhäuser am Wasser zeugten von echtem Wohlstand. Dann kamen das 20. Jahrhundert, der Verbrennungsmotor, und der Niedergang des Segelhandels.</p>
+        <p>Was danach folgte, ist eine der traurigsten Geschichten der griechischen Inseln: Emigration nach Ägypten, Australien (heute gibt es mehr Kasteloizioten in Melbourne als auf der Insel), die dramatische Evakuierung im Zweiten Weltkrieg, ein verheerendes Feuer 1944. Aus 15.000 Einwohnern wurden 500. Die Herrenhäuser verfielen, die Gassen leerten sich, das Meer war das Einzige, das blieb.</p>
+        <p>Dann kam Gabriele Salvatores 1991 mit seiner Filmcrew und drehte "Mediterrano" — ein Film über italienische Soldaten, die auf Kastelorizo den Krieg vergessen. Der Film gewann den Oscar für den besten fremdsprachigen Film. Plötzlich wusste die Welt, wo Kastelorizo liegt. Und die Menschen kamen — nicht Massen, aber genug. Heute ist die Insel halbwegs lebendig, die Häuser werden langsam restauriert, und das Licht ist noch immer das, das Salvatores Kamera eingefangen hat.</p>
+      </div>
+      <div class="kz-timeline">
+        <div class="kz-tl-item">
+          <div class="kz-tl-dot"></div>
+          <div class="kz-tl-year">~1000 v. Chr.</div>
+          <div class="kz-tl-event">Erste griechische Siedlung — Kastelorizo liegt auf dem Handelsweg zwischen Zypern, Rhodos und der kleinasiatischen Küste. Der Naturhafen ist einer der wenigen sicheren Ankerplätze der Region.</div>
+        </div>
+        <div class="kz-tl-item">
+          <div class="kz-tl-dot"></div>
+          <div class="kz-tl-year">1306</div>
+          <div class="kz-tl-event">Johanniter-Ritter bauen das Kastro auf dem roten Felsen über dem Hafen — daher der Name: Castel Rosso (Rote Burg), aus dem griechisch Kastellorizo wurde. Die roten Kalksteinfelsen gaben der Insel ihren Namen.</div>
+        </div>
+        <div class="kz-tl-item">
+          <div class="kz-tl-dot"></div>
+          <div class="kz-tl-year">1522–1913</div>
+          <div class="kz-tl-event">Osmanische Herrschaft — Kastelorizo wird Handelszentrum zwischen dem osmanischen Reich und Europa. Griechische Kaufleute florieren, die Segelflotte wächst auf über 100 Schiffe. Blütezeit des Hafens.</div>
+        </div>
+        <div class="kz-tl-item">
+          <div class="kz-tl-dot"></div>
+          <div class="kz-tl-year">1913–1947</div>
+          <div class="kz-tl-event">Wechselnde Kontrolle: Frankreich, Italien, britische Besatzung. Emigration beginnt mit dem Niedergang des Segelhandels. Die neoklassizistischen Herrenhäuser werden gebaut — als letzte Investition in eine Zukunft, die nicht kam.</div>
+        </div>
+        <div class="kz-tl-item">
+          <div class="kz-tl-dot"></div>
+          <div class="kz-tl-year">1944</div>
+          <div class="kz-tl-event">Ein Feuer vernichtet große Teile der Insel — die genaue Ursache ist bis heute umstritten. Die bereits evakuierte Bevölkerung verliert ihre Häuser. Viele kehren nie zurück. Die Einwohnerzahl fällt unter 1.000.</div>
+        </div>
+        <div class="kz-tl-item">
+          <div class="kz-tl-dot"></div>
+          <div class="kz-tl-year">1991</div>
+          <div class="kz-tl-event">Der Film "Mediterrano" von Gabriele Salvatores wird hier gedreht und gewinnt den Oscar. Kastelorizo erscheint auf der Weltkarte. Erste Restaurierungen der Herrenhäuser, langsame Wiederbelebung des Hafens und seiner Geschichte.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kz-section">
+    <div class="kz-section-head">
+      <p class="kz-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="kz-section-title">Blaue Grotte, Kastro<br><em>und der schönste Hafen Griechenlands</em></h2>
+      <div class="kz-divider"></div>
+    </div>
+    <div class="kz-sights-grid">
+
+      <div class="kz-sight-card">
+        <div class="kz-sight-visual sv-kz-harbour"></div>
+        <div class="kz-sight-body">
+          <p class="kz-sight-cat">Hafen · Architektur · Ikonisch</p>
+          <h3 class="kz-sight-name">Der Hafen von Kastelorizo</h3>
+          <p class="kz-sight-desc">Die Hafenfront ist das eindrucksvollste Bild der Insel — neoklassizistische Herrenhäuser in Rot, Ocker, Hellblau und Rosa direkt am Wasser, mit dem osmanischen Kastro auf dem roten Felsen darüber und der türkischen Küste im Hintergrund. Eine Kulisse, die unwahrscheinlich real ist.</p>
+        </div>
+      </div>
+
+      <div class="kz-sight-card">
+        <div class="kz-sight-visual sv-kz-kastro"></div>
+        <div class="kz-sight-body">
+          <p class="kz-sight-cat">Kastro · Geschichte</p>
+          <h3 class="kz-sight-name">Kastro &amp; Museum</h3>
+          <p class="kz-sight-desc">Das Johanniter-Kastro auf dem roten Kalksteinfelsen über dem Hafen — das kleine Archäologische Museum im Inneren zeigt Funde aus prähistorischer Zeit bis zur osmanischen Epoche. Der Blick von oben auf den Hafen, die Insel und die türkische Küste 2 km entfernt ist der beste der Ägäis.</p>
+        </div>
+      </div>
+
+      <div class="kz-sight-card">
+        <div class="kz-sight-visual sv-kz-cave"></div>
+        <div class="kz-sight-body">
+          <p class="kz-sight-cat">Naturwunder · Blaues Licht</p>
+          <h3 class="kz-sight-name">Blaue Grotte (Fokiali)</h3>
+          <p class="kz-sight-desc">Die Blaue Grotte von Kastelorizo ist eine der eindrucksvollsten der Ägäis — nur per Ruderboot erreichbar, durch eine niedrige Einfahrt, die man liegend passiert. Im Inneren verwandelt das Licht das Wasser in leuchtendes Türkis und Blau. Täglich Bootsausflüge vom Hafen.</p>
+        </div>
+      </div>
+
+      <div class="kz-sight-card">
+        <div class="kz-sight-visual sv-kz-turkey"></div>
+        <div class="kz-sight-body">
+          <p class="kz-sight-cat">Grenze · Besonderes Erlebnis</p>
+          <h3 class="kz-sight-name">Blick zur Türkei</h3>
+          <p class="kz-sight-desc">Kastelorizo liegt 2 km vom türkischen Kas entfernt — man sieht die Häuser, die Minarette, die Autos auf der Küstenstraße. Wer ein gültiges türkisches Visum hat, kann mit dem Wassertaxi nach Kas und an einem Nachmittag zwei Länder in Europa verbinden.</p>
+        </div>
+      </div>
+
+      <div class="kz-sight-card">
+        <div class="kz-sight-visual sv-kz-film"></div>
+        <div class="kz-sight-body">
+          <p class="kz-sight-cat">Film · Oscar-Geschichte</p>
+          <h3 class="kz-sight-name">Mediterrano-Orte</h3>
+          <p class="kz-sight-desc">Der Oscar-gekrönte Film "Mediterrano" (1991) wurde hier gedreht — im Hafen, an der Uferpromenade, in der Moschee, auf dem Kastro. Eine selbstgemachte Tour zu den Drehorten ist in zwei Stunden erledigt: die Insel ist klein genug, dass man jeden Filmschauplatz zu Fuß findet.</p>
+        </div>
+      </div>
+
+      <div class="kz-sight-card">
+        <div class="kz-sight-visual sv-kz-mosque"></div>
+        <div class="kz-sight-body">
+          <p class="kz-sight-cat">Architektur · Osmanisch</p>
+          <h3 class="kz-sight-name">Moschee &amp; Lykisches Grab</h3>
+          <p class="kz-sight-desc">Die osmanische Moschee am Hafen — heute Museum, mit einem erhaltenen Minaret und Innenraum. Daneben im Fels: ein lykisches Grab aus dem 4. Jahrhundert v. Chr., direkt in den roten Kalkstein gehauen. Zwei Epochen, zwei Meter auseinander, beide unkommentiert.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="kz-section">
+    <div class="kz-section-head">
+      <p class="kz-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="kz-section-title">Am Ende der Welt<br><em>gut essen</em></h2>
+      <div class="kz-divider"></div>
+    </div>
+    <div class="kz-tav-grid">
+
+      <div class="kz-tav-card">
+        <div class="kz-tav-top">
+          <div>
+            <h3 class="kz-tav-name">Lazarakis</h3>
+            <div class="kz-tav-loc">📍 Hafen, Uferpromenade</div>
+          </div>
+          <div class="kz-tav-stars">★★★★★</div>
+        </div>
+        <p class="kz-tav-desc">Das bekannteste Restaurant am Hafen — Tische direkt am Wasser, mit der farbigen Häuserzeile links und dem Kastro rechts. Frischer Fisch täglich, Hummer aus der eigenen Reuse, Garnelen mit Knoblauch. Der Ort, an dem der Film "Mediterrano" gegessen hätte, wenn er ein Restaurant-Empfehlungsfilm wäre.</p>
+        <div class="kz-tav-dishes">
+          <span class="kz-tav-dish">Hummer lokal</span>
+          <span class="kz-tav-dish">Tintenfisch gefüllt</span>
+          <span class="kz-tav-dish">Fagri gegrillt</span>
+        </div>
+        <p class="kz-tav-price">Preisklasse: <span>€€€ · Hafen-Kulisse unbezahlbar</span></p>
+      </div>
+
+      <div class="kz-tav-card">
+        <div class="kz-tav-top">
+          <div>
+            <h3 class="kz-tav-name">Taverna Akrotiri</h3>
+            <div class="kz-tav-loc">📍 Hafen, östliches Ende</div>
+          </div>
+          <div class="kz-tav-stars">★★★★★</div>
+        </div>
+        <p class="kz-tav-desc">Am östlichsten Ende der Hafenpromenade — mit dem besten Blick auf die vollständige Häuserzeile und die türkische Küste dahinter. Weniger touristisch als Lazarakis, frischer Fisch genauso, Preise fairer. Abends kommen auch die Einwohner der Insel hierher.</p>
+        <div class="kz-tav-dishes">
+          <span class="kz-tav-dish">Lavraki in Salzkruste</span>
+          <span class="kz-tav-dish">Oktopus-Salat</span>
+          <span class="kz-tav-dish">Lokaler Wein</span>
+        </div>
+        <p class="kz-tav-price">Preisklasse: <span>€€ · Insider-Wahl</span></p>
+      </div>
+
+      <div class="kz-tav-card">
+        <div class="kz-tav-top">
+          <div>
+            <h3 class="kz-tav-name">Kafeneio tou Mihali</h3>
+            <div class="kz-tav-loc">📍 Dorfplatz, hinter dem Hafen</div>
+          </div>
+          <div class="kz-tav-stars">★★★★☆</div>
+        </div>
+        <p class="kz-tav-desc">Das älteste Kafeneio der Insel — Mihali serviert Kaffee für Menschen, die Zeit haben. Griechischer Kaffee, Ouzo, einfache Mezedes. An der Wand: Fotos aus den 1950er Jahren, als der Hafen noch mit Dutzenden Booten voll war. Die alten Einwohner kennen jeden darauf.</p>
+        <div class="kz-tav-dishes">
+          <span class="kz-tav-dish">Ellinikos Kafes</span>
+          <span class="kz-tav-dish">Ouzo mit Kalamarakia</span>
+          <span class="kz-tav-dish">Dakos (Kritharoto)</span>
+        </div>
+        <p class="kz-tav-price">Preisklasse: <span>€ · Geschichte inklusive</span></p>
+      </div>
+
+      <div class="kz-tav-card">
+        <div class="kz-tav-top">
+          <div>
+            <h3 class="kz-tav-name">Platanos</h3>
+            <div class="kz-tav-loc">📍 Unter dem großen Platanen</div>
+          </div>
+          <div class="kz-tav-stars">★★★★☆</div>
+        </div>
+        <p class="kz-tav-desc">Unter dem größten Platanen der Insel — schattig, kühl, mit einfacher griechischer Küche und dem besten Mittagessen der Insel nach dem Schwimmen. Moussaka, gefüllte Zucchini, Salat. Kein Meeresfrüchte-Aufpreis, kein Touristenmenü. Gutes Essen für normale Preise, was auf Kastelorizo selten ist.</p>
+        <div class="kz-tav-dishes">
+          <span class="kz-tav-dish">Moussaka vom Blech</span>
+          <span class="kz-tav-dish">Gemista (gefüllte Zucchini)</span>
+          <span class="kz-tav-dish">Fetasalat mit Kapern</span>
+        </div>
+        <p class="kz-tav-price">Preisklasse: <span>€ · Ehrliche Hausmannskost</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="kz-section">
+    <div class="kz-section-head">
+      <p class="kz-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="kz-section-title">Das Ende Europas<br><em>und sein Licht</em></h2>
+      <div class="kz-divider"></div>
+    </div>
+    <div class="kz-viertel-grid">
+
+      <div class="kz-viertel-card">
+        <div class="kz-viertel-emoji">🏘️</div>
+        <h3 class="kz-viertel-name">Der Hafen</h3>
+        <p class="kz-viertel-desc">Die gesamte Insel ist im Wesentlichen ein Hafen mit Umland — alle Häuser, alle Tavernen, alle Geschichte konzentriert sich auf die eine Seite der Insel, die das Wasser berührt. In dreißig Minuten läuft man die gesamte Promenade ab und fühlt sich wie am Ende von etwas.</p>
+      </div>
+
+      <div class="kz-viertel-card">
+        <div class="kz-viertel-emoji">🗿</div>
+        <h3 class="kz-viertel-name">Lykisches Grab</h3>
+        <p class="kz-viertel-desc">Ein lykisches Felsgrab aus dem 4. Jahrhundert v. Chr. — direkt in den roten Kalkstein über dem Hafen gehauen, unbeschildert, uneingehegt. Ein Monument aus der Zeit vor Griechenland, Ritter und Osmanen, das alle überlebt hat, direkt neben der Moschee. Geschichte ohne Kuratel.</p>
+      </div>
+
+      <div class="kz-viertel-card">
+        <div class="kz-viertel-emoji">🎬</div>
+        <h3 class="kz-viertel-name">Mediterrano-Erbe</h3>
+        <p class="kz-viertel-desc">Der Oscar-Film von 1991 hat die Insel gerettet — buchstäblich. Ohne den internationalen Aufmerksamkeitsschub wären noch mehr Häuser verfallen, noch mehr Einwohner ausgewandert. Die Filmcrew ist Teil der Inselgeschichte, manche kehren regelmäßig zurück.</p>
+      </div>
+
+      <div class="kz-viertel-card">
+        <div class="kz-viertel-emoji">🚤</div>
+        <h3 class="kz-viertel-name">Blaue Grotte</h3>
+        <p class="kz-viertel-desc">Die Blaue Grotte an der Ostseite der Insel ist nur per Ruderboot erreichbar — und nur bei ruhiger See. Die Einfahrt ist so niedrig, dass man sich hinlegen muss. Im Inneren: ein Wasser, das man in keiner anderen Farbe auf der Welt findet.</p>
+      </div>
+
+      <div class="kz-viertel-card">
+        <div class="kz-viertel-emoji">🌍</div>
+        <h3 class="kz-viertel-name">Östlichstes Europa</h3>
+        <p class="kz-viertel-desc">Kastelorizo ist der östlichste bewohnte Punkt der EU — 570 km von Athen, 2 km von Kaş/Türkei. Wer von der Kastro-Spitze aus ostwärts schaut, sieht Asien. Das ist kein Marketingversprechen, das ist Geographie. Es gibt einen Ort auf der Insel, der einfach "Grenze" heißt.</p>
+      </div>
+
+      <div class="kz-viertel-card">
+        <div class="kz-viertel-emoji">👥</div>
+        <h3 class="kz-viertel-name">Diaspora</h3>
+        <p class="kz-viertel-epoch">Mehr Kasteloizioten leben in Melbourne als auf der Insel selbst — die australische Diaspora ist eine der stärksten griechischen Gemeinschaften außerhalb Griechenlands. Im Sommer kommen viele zurück. Die Insel füllt sich kurzzeitig, wird lauter, lebendiger. Dann geht die Fähre.</p>
+      </div>
+
+    </div>
+
+    <div class="kz-tip-banner">
+      <div class="kz-tip-emoji">🌅</div>
+      <div class="kz-tip-text">
+        <h3>Die Insel, die fast verschwunden wäre — und froh ist, dass sie es nicht tat</h3>
+        <p>Kastelorizo ist das einzige Beispiel einer griechischen Insel, die einen Oscar hat und ihn verdient. "Mediterrano" hat die Welt auf diesen unwahrscheinlichen Ort aufmerksam gemacht — eine Insel mit 500 Einwohnern, 2 km von der Türkei, mit dem schönsten kleinen Hafen Griechenlands und einer Geschichte aus Reichtum, Exil und Rückkehr. Wer einmal am Abend auf der Promenade sitzt und die Häuser sich im Wasser spiegeln sieht, versteht, warum Salvatores Kamera nicht mehr weggehen wollte.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>

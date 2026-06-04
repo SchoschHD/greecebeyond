@@ -291,7 +291,25 @@ function openKalymnos() {
     openPage('kalymnos-page');
   }
 }
-function closeSchinoussa() { closePage('schinoussa-page'); }
+function closeKalymnos() { closePage('kalymnos-page'); }
+
+function openKarpathos() {
+  if (typeof loadPage === 'function') {
+    loadPage('karpathos-page', 'islands/dodekanes/karpathos.html').then(() => openPage('karpathos-page'));
+  } else {
+    openPage('karpathos-page');
+  }
+}
+function closeKarpathos() { closePage('karpathos-page'); }
+
+function openKasos() {
+  if (typeof loadPage === 'function') {
+    loadPage('kasos-page', 'islands/dodekanes/kasos.html').then(() => openPage('kasos-page'));
+  } else {
+    openPage('kasos-page');
+  }
+}
+function closeKasos() { closePage('kasos-page'); }
 
 function openSymi() {
   if (typeof loadPage === 'function') {
@@ -339,3 +357,29 @@ function openNisyros() {
 }
 function closeNisyros() { closePage('nisyros-page'); }
 
+function openLeros() {
+  if (typeof loadPage === 'function') {
+    loadPage('leros-page', 'islands/dodekanes/leros.html').then(() => openPage('leros-page')); 
+  } else {
+    openPage('leros-page');
+  } 
+}
+function closeLeros() { closePage('leros-page'); }  
+
+function openKastellorizo() {
+  if (typeof loadPage === 'function') {
+    loadPage('kastellorizo-page', 'islands/dodekanes/kastellorizo.html').then(() => openPage('kastellorizo-page')); 
+  } else {
+    openPage('kastellorizo-page');
+  }   
+}
+function closeKastellorizo() { closePage('kastellorizo-page'); }    
+
+function openLeipsi() {
+  if (typeof loadPage === 'function') {
+    loadPage('leipsi-page', 'islands/dodekanes/leipsi.html').then(() => openPage('leipsi-page')); 
+  } else {
+    openPage('leipsi-page');
+  }   
+}
+function closeLeipsi() { closePage('leipsi-page'); }  

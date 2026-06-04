@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leros — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="leros.css" />
+</head>
+<body>
+<div id="leros-page">
+
+<div class="le-back-bar">
+  <button class="le-back-btn" type="button" onclick="closeLeros()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="le-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Leros</span></p>
+</div>
+
+<div class="le-hero">
+  <div class="le-hero-bg"></div>
+  <div class="le-hero-dots"></div>
+  <!-- Leros silhouette: Art Deco Lakki harbour buildings, Byzantine kastro on hill, deep bays -->
+  <svg class="le-hero-silhouette" viewBox="0 0 860 180" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Island base — deeply indented coastline -->
+    <path d="M30,172 Q80,125 150,105 Q210,88 270,92 Q320,96 350,88 Q390,78 430,75 Q470,72 510,78 Q560,85 610,80 Q660,75 710,85 Q760,95 820,120 L840,172Z" opacity="0.35"/>
+    <!-- Art Deco Lakki buildings — characteristic rounded/geometric Italian fascist architecture -->
+    <!-- Large Deco civic building left -->
+    <rect x="60" y="105" width="80" height="65"/>
+    <!-- Rounded top Art Deco feature -->
+    <path d="M60,105 Q100,88 140,105" fill="white"/>
+    <rect x="80" y="88" width="40" height="20"/>
+    <rect x="86" y="78" width="28" height="12"/>
+    <!-- Windows in rows -->
+    <rect x="70" y="115" width="12" height="14"/>
+    <rect x="88" y="115" width="12" height="14"/>
+    <rect x="106" y="115" width="12" height="14"/>
+    <rect x="124" y="115" width="12" height="14"/>
+    <rect x="70" y="135" width="12" height="14"/>
+    <rect x="88" y="135" width="12" height="14"/>
+    <rect x="106" y="135" width="12" height="14"/>
+    <rect x="124" y="135" width="12" height="14"/>
+    <!-- Deco cinema/theatre building -->
+    <rect x="148" y="118" width="55" height="52"/>
+    <rect x="148" y="108" width="55" height="12"/>
+    <path d="M148,108 L175,96 L203,108" fill="white"/>
+    <rect x="160" y="128" width="14" height="18"/>
+    <rect x="178" y="128" width="14" height="18"/>
+    <!-- Kastro on the high central hill -->
+    <path d="M300,172 Q340,120 380,95 Q420,70 460,68 Q500,66 530,78 Q560,90 580,110 L580,172Z" opacity="0.25"/>
+    <rect x="400" y="42" width="55" height="42"/>
+    <rect x="395" y="34" width="12" height="12"/>
+    <rect x="412" y="34" width="12" height="12"/>
+    <rect x="429" y="34" width="12" height="12"/>
+    <rect x="446" y="34" width="12" height="12"/>
+    <!-- Kastro tower -->
+    <rect x="418" y="18" width="18" height="26"/>
+    <polygon points="416,18 427,6 438,18"/>
+    <!-- Church on kastro -->
+    <rect x="445" y="50" width="18" height="22"/>
+    <polygon points="445,50 454,38 463,50"/>
+    <!-- Agia Marina village right -->
+    <rect x="640" y="108" width="25" height="35"/>
+    <polygon points="640,108 652,96 664,108"/>
+    <rect x="670" y="112" width="22" height="31"/>
+    <polygon points="670,112 681,101 692,112"/>
+    <rect x="698" y="116" width="20" height="27"/>
+    <polygon points="698,116 708,106 718,116"/>
+    <!-- Sea shimmer -->
+    <path d="M0,168 Q215,160 430,166 Q645,172 860,163 L860,180 L0,180Z" opacity="0.15"/>
+  </svg>
+  <div class="le-hero-overlay"></div>
+  <div class="le-hero-content">
+    <p class="le-hero-tag">Dodekanes · Nördliche Inseln</p>
+    <h1 class="le-hero-title">Leros<em>Λέρος</em></h1>
+    <p class="le-hero-sub">Die Insel mit dem schönsten Architektur-Erbe des Dodekanes — der tiefe Hafen Lakki ist von einer vollständigen italienischen Art-Déco-Stadtanlage umgeben, die einzige ihrer Art in Griechenland. Darüber thront das byzantinische Kastro, darunter schlafen tiefe Buchten mit türkisem Wasser.</p>
+    <div class="le-hero-pills">
+      <span class="le-hero-pill">Art Déco Lakki</span>
+      <span class="le-hero-pill">Byzantinisches Kastro</span>
+      <span class="le-hero-pill">Tiefe Buchten</span>
+      <span class="le-hero-pill">Kriegsgeschichte</span>
+      <span class="le-hero-pill">Authentisch</span>
+    </div>
+  </div>
+  <div class="le-hero-waves"></div>
+</div>
+
+<div class="le-stats-bar">
+  <div class="le-stat-item">
+    <div class="le-stat-num">~8.000</div>
+    <div class="le-stat-lbl">Einwohner</div>
+  </div>
+  <div class="le-stat-item">
+    <div class="le-stat-num">53 km²</div>
+    <div class="le-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="le-stat-item">
+    <div class="le-stat-num">1923</div>
+    <div class="le-stat-lbl">Lakki als Marinebasis gebaut</div>
+  </div>
+  <div class="le-stat-item">
+    <div class="le-stat-num">1943</div>
+    <div class="le-stat-lbl">Leros-Kampagne · WWII</div>
+  </div>
+  <div class="le-stat-item">
+    <div class="le-stat-num">5</div>
+    <div class="le-stat-lbl">Tiefe Naturhäfen</div>
+  </div>
+</div>
+
+<div class="le-content">
+
+  <section class="le-section">
+    <div class="le-section-head">
+      <p class="le-section-label">01 — Geschichte</p>
+      <h2 class="le-section-title">Artemis, Mussolini<br><em>und die vergessene Seeschlacht</em></h2>
+      <div class="le-divider"></div>
+    </div>
+    <div class="le-history-grid">
+      <div class="le-history-text">
+        <p>Leros war in der Antike der Ort des Artemis-Heiligtums — die Göttin der Jagd war Schutzpatronin der Insel, die Frauen von Leros galten als besonders frei und selbstständig, was die alten Griechen mit gemischten Gefühlen zur Kenntnis nahmen. Das Kastro auf dem Zentralhügel überblickt seit Jahrhunderten alle fünf tiefen Buchten der Insel zugleich — ein strategischer Vorteil, der die Geschichte von Leros geprägt hat.</p>
+        <p>Zwischen 1912 und 1943 war Leros eine italienische Marinebasis — und die Italiener bauten Lakki als Modellstadt des Faschismus im Stil des rationalistischen Art Déco: breite Alleen, runde Plätze, Kino, Rathaus, Krankenhaus, Kaserne — alle aus demselben Beton, alle mit demselben charakteristischen Formensprache. Lakki ist heute die am vollständigsten erhaltene faschistische Stadtanlage der Welt außerhalb Italiens.</p>
+        <p>Im November 1943 fand auf Leros einer der blutigsten Kämpfe des Zweiten Weltkriegs im Mittelmeer statt — die Leros-Kampagne. Britische und griechische Truppen verteidigten die Insel gegen deutsche Fallschirmjäger. Nach zwölf Tagen Kampf kapitulierte die Garnison. Das Inselinnere trägt noch heute die Narben: Bunker, Munitionsdepots, Kanonenstellungen — alles zugänglich, alles still.</p>
+      </div>
+      <div class="le-timeline">
+        <div class="le-tl-item">
+          <div class="le-tl-dot"></div>
+          <div class="le-tl-year">~500 v. Chr.</div>
+          <div class="le-tl-event">Blütezeit des Artemis-Heiligtums auf Leros — die Insel ist für ihre unabhängigen Frauen bekannt. Aristophanes erwähnt die "Lerier" als Symbol für ungehorsame Weiber, was wahrscheinlich ein Kompliment war.</div>
+        </div>
+        <div class="le-tl-item">
+          <div class="le-tl-dot"></div>
+          <div class="le-tl-year">1309</div>
+          <div class="le-tl-event">Die Johanniter-Ritter bauen das Kastro auf dem Zentralhügel aus — es überblickt alle fünf Buchten der Insel und wird zum uneinnehmbarsten Punkt des nördlichen Dodekanes.</div>
+        </div>
+        <div class="le-tl-item">
+          <div class="le-tl-dot"></div>
+          <div class="le-tl-year">1912</div>
+          <div class="le-tl-event">Italien übernimmt Leros im Zuge des Italienisch-Türkischen Krieges. Die tiefen Naturhäfen machen Leros zur wichtigsten Marinebasis der Regia Marina im östlichen Mittelmeer.</div>
+        </div>
+        <div class="le-tl-item">
+          <div class="le-tl-dot"></div>
+          <div class="le-tl-year">1923–1938</div>
+          <div class="le-tl-event">Bau der Modellstadt Lakki — breite Boulevards, Art-Déco-Verwaltungsgebäude, Kino, Kaserne, Wassertürme. Alles nach dem Stadtplan des rationalistischen Architekten Rodolfo Petracco. Eine faschistische Traumstadt am Ende der Welt.</div>
+        </div>
+        <div class="le-tl-item">
+          <div class="le-tl-dot"></div>
+          <div class="le-tl-year">Nov. 1943</div>
+          <div class="le-tl-event">Die Leros-Kampagne — zwölf Tage Kampf zwischen deutschen Fallschirmjägern und alliierten Truppen. Über 600 britische Soldaten sterben, Tausende werden gefangen. Churchill nennt es "den größten alliierten Misserfolg im Mittelmeer".</div>
+        </div>
+        <div class="le-tl-item">
+          <div class="le-tl-dot"></div>
+          <div class="le-tl-year">1947</div>
+          <div class="le-tl-event">Anschluss an Griechenland. Leros übernimmt die italienischen Gebäude, die teilweise bis heute als Krankenhaus, Rathaus und Kulturzentrum genutzt werden. Das WWII-Erbe wird langsam zur touristischen Attraktion.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="le-section">
+    <div class="le-section-head">
+      <p class="le-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="le-section-title">Art Déco, Kastro<br><em>und Bunker im Gestrüpp</em></h2>
+      <div class="le-divider"></div>
+    </div>
+    <div class="le-sights-grid">
+
+      <div class="le-sight-card">
+        <div class="le-sight-visual sv-le-kastro"></div>
+        <div class="le-sight-body">
+          <p class="le-sight-cat">Kastro · Johanniter · Aussicht</p>
+          <h3 class="le-sight-name">Kastro von Pandeli</h3>
+          <p class="le-sight-desc">Das byzantinisch-johannitische Kastro auf dem Zentralhügel ist das Herzstück der Insel — von hier sieht man alle fünf Buchten gleichzeitig und an klaren Tagen bis nach Patmos und Kalymnos. Die Kapelle der Heiligen Marina im Inneren ist noch aktiv, die Mauern aus dem 11. Jahrhundert intakt.</p>
+        </div>
+      </div>
+
+      <div class="le-sight-card">
+        <div class="le-sight-visual sv-le-lakki"></div>
+        <div class="le-sight-body">
+          <p class="le-sight-cat">Architektur · Art Déco · Unikat</p>
+          <h3 class="le-sight-name">Lakki — die Déco-Stadt</h3>
+          <p class="le-sight-desc">Der Hafen Lakki ist ein architektonisches Gesamtkunstwerk aus der Mussolini-Ära — breite Alleen, runde Plätze, das Kino Lux, das Rathaus mit Uhrturm, die Kaserne. Alles in rationalem Art Déco aus den 1930ern, alles leicht verfallen, alles faszinierend. Eine Filmkulisse, die niemand gebaut hat.</p>
+        </div>
+      </div>
+
+      <div class="le-sight-card">
+        <div class="le-sight-visual sv-le-agia"></div>
+        <div class="le-sight-body">
+          <p class="le-sight-cat">Kirche · Wallfahrt</p>
+          <h3 class="le-sight-name">Agia Marina &amp; Platanos</h3>
+          <p class="le-sight-desc">Agia Marina ist das lebhafteste Dorf der Insel — am Wasser, mit einer schönen Uferpromenade und der Kirche der Heiligen Marina. Platanos darüber ist die eigentliche Hauptstadt: ein Dorf auf dem Hügel, von dem aus man das Kastro zu Fuß in zehn Minuten erreicht.</p>
+        </div>
+      </div>
+
+      <div class="le-sight-card">
+        <div class="le-sight-visual sv-le-panteli"></div>
+        <div class="le-sight-body">
+          <p class="le-sight-cat">Dorf · Hafen · Fischerei</p>
+          <h3 class="le-sight-name">Panteli</h3>
+          <p class="le-sight-desc">Das schönste Fischerdorf der Insel — direkt unter dem Kastro, mit einer Handvoll Tavernen direkt am Wasser, Fischerbooten im kleinen Hafen und Katzen auf jeder Mauer. Abends beleuchtet sich das Kastro über dem Dorf und das Bild ist besser als jedes Poster.</p>
+        </div>
+      </div>
+
+      <div class="le-sight-card">
+        <div class="le-sight-visual sv-le-beach"></div>
+        <div class="le-sight-body">
+          <p class="le-sight-cat">Strände · Buchten</p>
+          <h3 class="le-sight-name">Vromolithos &amp; Blefouti</h3>
+          <p class="le-sight-desc">Leros hat keine langen Sandstrände — dafür viele intime Buchten zwischen Felsen. Vromolithos ist der schönste Kieselstrand mit Blick auf das Kastro, Blefouti der einsamste. Xirokampos im Süden hat feinen Sand und eine Taverne, die morgens um sieben öffnet.</p>
+        </div>
+      </div>
+
+      <div class="le-sight-card">
+        <div class="le-sight-visual sv-le-merika"></div>
+        <div class="le-sight-body">
+          <p class="le-sight-cat">Kriegsgeschichte · WWII</p>
+          <h3 class="le-sight-name">Kriegsmuseum &amp; Bunker</h3>
+          <p class="le-sight-desc">Das Kriegsmuseum in Merika dokumentiert die Leros-Kampagne 1943 mit Originalrelikten — Uniformen, Waffen, Fotos, persönliche Gegenstände. Im ganzen Inselinneren verteilt: Bunker, Kanonenstellungen und unterirdische Munitionslager, die man zu Fuß erreichen kann.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="le-section">
+    <div class="le-section-head">
+      <p class="le-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="le-section-title">Unter dem Kastro<br><em>am Wasser essen</em></h2>
+      <div class="le-divider"></div>
+    </div>
+    <div class="le-tav-grid">
+
+      <div class="le-tav-card">
+        <div class="le-tav-top">
+          <div>
+            <h3 class="le-tav-name">Taverna Mylos</h3>
+            <div class="le-tav-loc">📍 Panteli, direkt am Wasser</div>
+          </div>
+          <div class="le-tav-stars">★★★★★</div>
+        </div>
+        <p class="le-tav-desc">Im alten Fischerhafen Panteli, direkt am Wasser unter dem Kastro — frischer Fisch täglich vom Boot, Oktopus-Carpaccio, Seebarsch in Salzkruste. Das Abendlicht fällt durch die Fischernetze, das Kastro beleuchtet sich langsam oberhalb. Reservierung im Sommer dringend empfohlen.</p>
+        <div class="le-tav-dishes">
+          <span class="le-tav-dish">Lavraki in Salzkruste</span>
+          <span class="le-tav-dish">Oktopus-Carpaccio</span>
+          <span class="le-tav-dish">Garnelen mit Ouzo</span>
+        </div>
+        <p class="le-tav-price">Preisklasse: <span>€€ · Kastro-Blick inklusive</span></p>
+      </div>
+
+      <div class="le-tav-card">
+        <div class="le-tav-top">
+          <div>
+            <h3 class="le-tav-name">Petrino</h3>
+            <div class="le-tav-loc">📍 Agia Marina, Uferpromenade</div>
+          </div>
+          <div class="le-tav-stars">★★★★★</div>
+        </div>
+        <p class="le-tav-desc">Das eleganteste Restaurant von Leros — in einem restaurierten Steinhaus an der Uferpromenade von Agia Marina. Mediterrane Küche mit griechischen Produkten: Ziegenkäse-Salat mit Feigen, gegrillte Auberginen, Lammkoteletts mit Kräuterbutter. Gute Weinauswahl aus dem Dodekanes.</p>
+        <div class="le-tav-dishes">
+          <span class="le-tav-dish">Lammkoteletts vom Grill</span>
+          <span class="le-tav-dish">Ziegenkäse mit Feigen</span>
+          <span class="le-tav-dish">Auberginen-Meze</span>
+        </div>
+        <p class="le-tav-price">Preisklasse: <span>€€ · Eleganter Abend</span></p>
+      </div>
+
+      <div class="le-tav-card">
+        <div class="le-tav-top">
+          <div>
+            <h3 class="le-tav-name">Kafeneio Platanos</h3>
+            <div class="le-tav-loc">📍 Platanos, Hauptplatz</div>
+          </div>
+          <div class="le-tav-stars">★★★★☆</div>
+        </div>
+        <p class="le-tav-desc">Unter dem namensgebenden Platanen auf dem Hauptplatz des Bergdorfs Platanos — das Herzstück des sozialen Lebens auf Leros. Morgens die Fischer, mittags die Mütter, abends alle zusammen. Griechischer Kaffee, Ouzo, einfache Mezedes. Der Ort, an dem man versteht, wie Leros tickt.</p>
+        <div class="le-tav-dishes">
+          <span class="le-tav-dish">Ellinikos Kafes</span>
+          <span class="le-tav-dish">Spanakopita frisch</span>
+          <span class="le-tav-dish">Ouzo Plomari</span>
+        </div>
+        <p class="le-tav-price">Preisklasse: <span>€ · Inselseele am Platanen</span></p>
+      </div>
+
+      <div class="le-tav-card">
+        <div class="le-tav-top">
+          <div>
+            <h3 class="le-tav-name">Taverna Vromolithos</h3>
+            <div class="le-tav-loc">📍 Strand Vromolithos</div>
+          </div>
+          <div class="le-tav-stars">★★★★☆</div>
+        </div>
+        <p class="le-tav-desc">Die Strand-Taverne direkt am Kieselstrand von Vromolithos — Tische im Schatten eines alten Johannisbrotbaums, das Wasser zwei Meter entfernt, das Kastro direkt oberhalb. Mittags Fisch, abends Fleisch vom Grill, immer selbstgemachtes Brot und Tarama aus dem eigenen Glas.</p>
+        <div class="le-tav-dishes">
+          <span class="le-tav-dish">Tagesfisch gegrillt</span>
+          <span class="le-tav-dish">Taramosalata hausgemacht</span>
+          <span class="le-tav-dish">Choriatiki Salat</span>
+        </div>
+        <p class="le-tav-price">Preisklasse: <span>€ · Füße im Sand optional</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="le-section">
+    <div class="le-section-head">
+      <p class="le-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="le-section-title">Tief, komplex<br><em>und zu Unrecht vergessen</em></h2>
+      <div class="le-divider"></div>
+    </div>
+    <div class="le-viertel-grid">
+
+      <div class="le-viertel-card">
+        <div class="le-viertel-emoji">🏛️</div>
+        <h3 class="le-viertel-name">Lakki</h3>
+        <p class="le-viertel-desc">Der tiefe Naturhafen mit der vollständig erhaltenen Art-Déco-Stadtanlage aus der Mussolini-Ära. Breite Alleen ohne Verkehr, Gebäude zwischen restauriert und verfallen, eine Stille, die mit der Geschichte des Ortes zu tun hat. Architekturliebhaber brauchen einen halben Tag.</p>
+      </div>
+
+      <div class="le-viertel-card">
+        <div class="le-viertel-emoji">🏰</div>
+        <h3 class="le-viertel-name">Platanos &amp; Panteli</h3>
+        <p class="le-viertel-desc">Das Bergdorf Platanos mit dem Kastro darüber und das Fischerdorf Panteli direkt am Wasser darunter — zwei Ortsteile, fünf Gehminuten, zwei völlig verschiedene Welten. Abends fließen beide zusammen auf der Terrasse über dem Hafen.</p>
+      </div>
+
+      <div class="le-viertel-card">
+        <div class="le-viertel-emoji">⚓</div>
+        <h3 class="le-viertel-name">Agia Marina</h3>
+        <p class="le-viertel-desc">Die lebendigste Uferpromenade der Insel — wo die Schnellfähren anlegen, die Kafeneia morgens öffnen und die besten Restaurants abends füllen. Agia Marina ist der Puls von Leros: weniger romantisch als Panteli, ehrlicher als Lakki, lebendiger als beides.</p>
+      </div>
+
+      <div class="le-viertel-card">
+        <div class="le-viertel-emoji">🎖️</div>
+        <h3 class="le-viertel-name">WWII-Erbe</h3>
+        <p class="le-viertel-desc">Leros ist eine Insel, auf der Krieg stattgefunden hat — und man sieht es noch. Bunker im Gestrüpp, Kanonenstellungen auf den Hügeln, ein Kriegsfriedhof mit britischen und deutschen Gräbern. Kein Museum, keine Führung nötig: man findet die Orte auf eigene Faust.</p>
+      </div>
+
+      <div class="le-viertel-card">
+        <div class="le-viertel-emoji">🏊</div>
+        <h3 class="le-viertel-name">Buchten &amp; Strände</h3>
+        <p class="le-viertel-desc">Fünf tiefe Buchten, viele kleine Strände — Vromolithos, Xirokampos, Blefouti, Gourna. Keine überfüllt, keine mit Liegestuhl-Monokultur. Leros ist eine Insel fürs Schwimmen und Erkunden, nicht für organisiertes Strandleben.</p>
+      </div>
+
+      <div class="le-viertel-card">
+        <div class="le-viertel-emoji">🌿</div>
+        <h3 class="le-viertel-name">Natur &amp; Wandern</h3>
+        <p class="le-viertel-desc">Leros ist überraschend grün — feuchte Schluchten, Olivenhaine, Johannisbrotbäume, wilde Kapern. Das Wanderwegenetz verbindet alle Dörfer und Buchten; wer zu Fuß unterwegs ist, findet verlassene Mühlen, byzantinische Kapellen und Kriegsrelikte zwischen dem Buschwerk.</p>
+      </div>
+
+    </div>
+
+    <div class="le-tip-banner">
+      <div class="le-tip-emoji">🏛️</div>
+      <div class="le-tip-text">
+        <h3>Die Insel, die mehr Schichten hat als jede andere</h3>
+        <p>Leros ist die am meisten unterschätzte Insel des Dodekanes — und vielleicht deshalb die interessanteste. Wer ankommt, sieht zuerst den unheimlichen Glanz der Art-Déco-Bauten von Lakki, dann das Kastro über Panteli, dann die Kriegsbunker im Gestrüpp, dann die Menschen, die in all dem Alltag leben. Jede Schicht hat ihre eigene Geschichte. Zusammen ergeben sie eine Insel, über die man nach dem Urlaub noch lange nachdenkt.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>
