@@ -1,9 +1,260 @@
-<section class="island-page">
-  <header class="island-hero isle-ikaria">
-    <h1>Ikaria</h1>
-    <p>Platzhalterseite für Ikaria — Inhalte hier ergänzen.</p>
-  </header>
-  <article class="island-content">
-    <p>Mehr Infos, Bilder und Sehenswürdigkeiten folgen.</p>
-  </article>
-</section>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ikaria — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="ikaria.css" />
+</head>
+<body>
+<div id="ikaria-page">
+
+<div class="ik-back-bar">
+  <button class="ik-back-btn" onclick="closeIkaria()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ik-breadcrumb">Hellas &nbsp;/&nbsp; Nördliche Ägäis &nbsp;/&nbsp; <span>Ikaria</span></p>
+</div>
+
+<div class="ik-hero">
+  <div class="ik-hero-bg"></div>
+  <div class="ik-hero-dots"></div>
+  <!-- Silhouette: Ikaros-Mythos, Steinhäuser, Berge -->
+  <svg class="ik-hero-silhouette" viewBox="0 0 820 170" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M100,150 L200,40 L300,150 Z" opacity="0.3"/>
+    <path d="M300,150 L500,20 L700,150 Z" opacity="0.2"/>
+    <path d="M400,110 L430,90 L440,110 Z" opacity="0.9"/> <!-- Ikaros -->
+    <path d="M0,155 Q410,135 820,155 L820,170 L0,170Z" opacity="0.3"/>
+  </svg>
+  <div class="ik-hero-overlay"></div>
+  <div class="ik-hero-content">
+    <p class="ik-hero-tag">Nördliche Ägäis · Blue Zone</p>
+    <h1 class="ik-hero-title">Ikaria<em>Ικαρία</em></h1>
+    <p class="ik-hero-sub">Die Insel, auf der das Vergessen regiert. Ikaria ist berühmt als eine der weltweiten "Blue Zones", wo Menschen außergewöhnlich alt werden – dank einer Philosophie der Entschleunigung, exzellentem Wein und radikaler Freiheit.</p>
+    <div class="ik-hero-pills">
+      <span class="ik-hero-pill">Blue Zone</span>
+      <span class="ik-hero-pill">Panigiria</span>
+      <span class="ik-hero-pill">Radikale Entspannung</span>
+      <span class="ik-hero-pill">Pramnios-Wein</span>
+      <span class="ik-hero-pill">Ikaros-Mythos</span>
+    </div>
+  </div>
+  <div class="ik-hero-waves"></div>
+</div>
+
+<div class="ik-stats-bar">
+  <div class="ik-stat-item">
+    <div class="ik-stat-num">8.400</div>
+    <div class="ik-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ik-stat-item">
+    <div class="ik-stat-num">255 km²</div>
+    <div class="ik-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="ik-stat-item">
+    <div class="ik-stat-num">100+</div>
+    <div class="ik-stat-lbl">Jahre Lebensdauer</div>
+  </div>
+  <div class="ik-stat-item">
+    <div class="ik-stat-num">1.037 m</div>
+    <div class="ik-stat-lbl">Atheras Gebirge</div>
+  </div>
+  <div class="ik-stat-item">
+    <div class="ik-stat-num">Wild</div>
+    <div class="ik-stat-lbl">Natur-Charakter</div>
+  </div>
+</div>
+
+<div class="ik-content">
+
+  <section class="ik-section">
+    <div class="ik-section-head">
+      <p class="ik-section-label">01 — Geschichte & Mythos</p>
+      <h2 class="ik-section-title">Fall ins Meer,<br><em>und das Leben in Zeitlupe</em></h2>
+      <div class="ik-divider"></div>
+    </div>
+    <div class="ik-history-grid">
+      <div class="ik-history-text">
+        <p>Der Mythos besagt, dass Ikaros, Sohn des Daidalos, hier ins Meer stürzte, als seine mit Wachs befestigten Flügel schmolzen. Doch Ikaria ist weit mehr als diese tragische Sage. Jahrhundertelang war die Insel vor Piraten gezwungen, im Verborgenen zu leben.</p>
+        <p>Die Ikarioten entwickelten eine einzigartige Lebensart: "Antikastro". Sie bauten Häuser in Höhlen und Felsspalten, versteckt vor den Blicken vom Meer aus. Diese Isolation prägte eine Kultur der Genügsamkeit und der gegenseitigen Hilfe, die bis heute anhält. Es gibt keinen Stress, keine Eile – Zeit wird hier nicht gemessen, sondern gefühlt.</p>
+        <p>In jüngerer Zeit erregte Ikaria weltweit Aufmerksamkeit als "Blue Zone". Die Wissenschaft ist sich einig: Die Kombination aus gesunder Ernährung, täglicher Bewegung in steilem Gelände, starkem sozialen Zusammenhalt und dem berüchtigten ikariotischen Schlaf (jederzeit und überall) führt dazu, dass die Menschen hier signifikant öfter über 90 werden.</p>
+      </div>
+      <div class="ik-timeline">
+        <div class="ik-tl-item">
+          <div class="ik-tl-dot"></div>
+          <div class="ik-tl-year">Antike</div>
+          <div class="ik-tl-event">Sage des Ikaros. Die Insel wurde auch bekannt für ihren heilkräftigen Pramnios-Wein, der schon bei Homer erwähnt wurde.</div>
+        </div>
+        <div class="ik-tl-item">
+          <div class="ik-tl-dot"></div>
+          <div class="ik-tl-year">15. - 19. Jhd.</div>
+          <div class="ik-tl-event">"Antikastro"-Zeit. Die Bewohner verstecken ihre Dörfer in den Bergen vor Piraten und bilden eine fast autarke, egalitäre Gesellschaft.</div>
+        </div>
+        <div class="ik-tl-item">
+          <div class="ik-tl-dot"></div>
+          <div class="ik-tl-year">1912</div>
+          <div class="ik-tl-event">Der "Freistaat Ikaria". Die Insel erklärt für einige Monate ihre Unabhängigkeit von der osmanischen Herrschaft, bevor sie zu Griechenland kommt.</div>
+        </div>
+        <div class="ik-tl-item">
+          <div class="ik-tl-dot"></div>
+          <div class="ik-tl-year">1940er</div>
+          <div class="ik-tl-event">Insel der Exilierten. Tausende politische Gefangene werden während des griechischen Bürgerkriegs hierher verbannt. Die Einheimischen teilen ihr Essen mit ihnen.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ik-section">
+    <div class="ik-section-head">
+      <p class="ik-section-label">02 — Highlights</p>
+      <h2 class="ik-section-title">Granitküsten,<br><em>heiße Quellen & wilde Freiheit</em></h2>
+      <div class="ik-divider"></div>
+    </div>
+    <div class="ik-sights-grid">
+
+      <div class="ik-sight-card">
+        <div class="ik-sight-visual sv-ik-seychelles"></div>
+        <div class="ik-sight-body">
+          <p class="ik-sight-cat">Strand · Natur</p>
+          <h3 class="ik-sight-name">Seychelles Beach</h3>
+          <p class="ik-sight-desc">Durch einen Erdrutsch entstanden, wirkt dieser Strand wie aus der Südsee importiert. Türkises Wasser, eingerahmt von bizarren, weißen Granitfelsen.</p>
+        </div>
+      </div>
+
+      <div class="ik-sight-card">
+        <div class="ik-sight-visual sv-ik-therma"></div>
+        <div class="ik-sight-body">
+          <p class="ik-sight-cat">Heilquelle · Wellness</p>
+          <h3 class="ik-sight-name">Therma</h3>
+          <p class="ik-sight-desc">Bekannt für radioaktive Heilquellen, die schon seit der Antike genutzt werden. Man badet hier direkt im Meer, wo heißes Quellwasser und kühles Meerwasser verschmelzen.</p>
+        </div>
+      </div>
+
+      <div class="ik-sight-card">
+        <div class="ik-sight-visual sv-ik-nas"></div>
+        <div class="ik-sight-body">
+          <p class="ik-sight-cat">Geschichte · Schlucht</p>
+          <h3 class="ik-sight-name">Nas</h3>
+          <p class="ik-sight-desc">Wo die Schlucht von Chalares ins Meer mündet. Einst gab es hier einen Tempel der Artemis. Heute ist es ein Ort für Freigeister, umgeben von purer, wilder Natur.</p>
+        </div>
+      </div>
+
+      <div class="ik-sight-card">
+        <div class="ik-sight-visual sv-ik-evdilos"></div>
+        <div class="ik-sight-body">
+          <p class="ik-sight-cat">Hafen · Architektur</p>
+          <h3 class="ik-sight-name">Evdilos</h3>
+          <p class="ik-sight-desc">Der alte Hafen der Insel. Ein Ort, der den Charme der traditionellen Steinarchitektur bewahrt hat und perfekt ist, um den Tag beim Kaffeetrinken zu verbringen.</p>
+        </div>
+      </div>
+
+      <div class="ik-sight-card">
+        <div class="ik-sight-visual sv-ik-ragada"></div>
+        <div class="ik-sight-body">
+          <p class="ik-sight-cat">Bergdorf · Tradition</p>
+          <h3 class="ik-sight-name">Raches</h3>
+          <p class="ik-sight-desc">Bekannt als "die Dörfer, die niemals schlafen". Hier findet das Leben nachts statt. Die Einheimischen öffnen ihre Läden erst am späten Abend.</p>
+        </div>
+      </div>
+
+      <div class="ik-sight-card">
+        <div class="ik-sight-visual sv-ik-draxo"></div>
+        <div class="ik-sight-body">
+          <p class="ik-sight-cat">Wandern · Aussicht</p>
+          <h3 class="ik-sight-name">Draxo & Atheras</h3>
+          <p class="ik-sight-desc">Das Rückgrat der Insel. Die Wanderwege durch die Bergwelt führen zu verlassenen Klöstern und bieten einen Blick bis weit über die Ägäis.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ik-section">
+    <div class="ik-section-head">
+      <p class="ik-section-label">03 — Kulinarik & Lebensart</p>
+      <h2 class="ik-section-title">Pramnios-Wein,<br><em>Panigiria & Langlebigkeit</em></h2>
+      <div class="ik-divider"></div>
+    </div>
+    <div class="ik-tav-grid">
+
+      <div class="ik-tav-card">
+        <div class="ik-tav-top">
+          <div>
+            <h3 class="ik-tav-name">Orea Ikaria</h3>
+            <div class="ik-tav-loc">📍 Armenistis</div>
+          </div>
+          <div class="ik-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ik-tav-desc">Hier gibt es das authentischste ikariotische Essen. Alles ist lokal, saisonal und kommt von den Hängen oberhalb des Meeres. Probieren Sie unbedingt die mit Kräutern gefüllten Zucchini-Blüten.</p>
+        <div class="ik-tav-dishes">
+          <span class="ik-tav-dish">Gefüllte Zucchiniblüten</span>
+          <span class="ik-tav-dish">Lokaler Ziegenkäse</span>
+          <span class="ik-tav-dish">Pramnios-Wein</span>
+        </div>
+        <p class="ik-tav-price">Preisklasse: <span>€€ · Ehrlich & Herzhaft</span></p>
+      </div>
+
+      <div class="ik-tav-card">
+        <div class="ik-tav-top">
+          <div>
+            <h3 class="ik-tav-name">Panigiri-Tradition</h3>
+            <div class="ik-tav-loc">📍 Inselweit (Dorfplätze)</div>
+          </div>
+          <div class="ik-tav-stars">★★★★★</div>
+        </div>
+        <p class="ik-tav-desc">Keine Taverne im herkömmlichen Sinn, sondern das Herz der Kultur: Die Panigiria sind Dorf-Feste. Man tanzt stundenlang den Ikariotikos, isst gemeinsam und trinkt Wein bis in den frühen Morgen.</p>
+        <div class="ik-tav-dishes">
+          <span class="ik-tav-dish">Gebratenes Zicklein</span>
+          <span class="ik-tav-dish">Wein in Karaffen</span>
+          <span class="ik-tav-dish">Ikariotikos-Tanz</span>
+        </div>
+        <p class="ik-tav-price">Preisklasse: <span>€ · Das echte Ikaria</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ik-section">
+    <div class="ik-section-head">
+      <p class="ik-section-label">04 — Ikariotische Philosophie</p>
+      <h2 class="ik-section-title">Die Insel<br><em>der langsamen Zeit</em></h2>
+      <div class="ik-divider"></div>
+    </div>
+    <div class="ik-viertel-grid">
+
+      <div class="ik-viertel-card">
+        <div class="ik-viertel-emoji">🐢</div>
+        <h3 class="ik-viertel-name">"Blue Zone"</h3>
+        <p class="ik-viertel-desc">Warum werden Menschen hier so alt? Es ist die Kombination aus biologischen Produkten, natürlichem Honig, wildem Bergtee und vor allem dem Fehlen jeglichen Zeitdrucks.</p>
+      </div>
+
+      <div class="ik-viertel-card">
+        <div class="ik-viertel-emoji">🍷</div>
+        <h3 class="ik-viertel-name">Pramnios-Wein</h3>
+        <p class="ik-viertel-desc">Schon Homer pries ihn. Er ist kräftig, dunkel und wird auf Ikaria als Teil eines gesunden Lebensstils genossen – immer in Gesellschaft.</p>
+      </div>
+
+      <div class="ik-viertel-card">
+        <div class="ik-viertel-emoji">💃</div>
+        <h3 class="ik-viertel-name">Ikariotikos</h3>
+        <p class="ik-viertel-desc">Der traditionelle Tanz. Er ist kein Performance-Akt, sondern ein Gemeinschaftstanz. Wenn man sich in die Kette einreiht, gehört man dazu.</p>
+      </div>
+
+    </div>
+
+    <div class="ik-tip-banner">
+      <div class="ik-tip-emoji">⏱️</div>
+      <div class="ik-tip-text">
+        <h3>Lassen Sie die Uhr im Koffer</h3>
+        <p>Der größte Fehler auf Ikaria ist, eine feste Agenda zu haben. Wenn Sie im Restaurant 45 Minuten auf die Karte warten, ist das kein schlechter Service, sondern ein Zeichen dafür, dass Sie Zeit haben. Gehen Sie mit dem Fluss. Suchen Sie sich einen schattigen Platz in Raches, bestellen Sie einen griechischen Kaffee und beobachten Sie das Leben, das hier einfach so vor sich hin pulsiert. Ikaria ist kein Ort zum Besichtigen – es ist ein Ort zum Sein.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>
