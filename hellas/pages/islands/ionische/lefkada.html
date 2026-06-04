@@ -1,15 +1,340 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="de">
 <head>
-  <meta charset="utf-8">
-  <title>Lefkáda — Hellas Inseln</title>
-  <link rel="stylesheet" href="../../css/islands/ionische/lefkada.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lefkada — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="lefkada.css" />
 </head>
 <body>
-  <p class="lf-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Lefkáda</span></p>
-  <div class="lf-hero">
-    <p class="lf-hero-tag">Ionische Inseln · Ionisches Meer</p>
-    <p class="lf-hero-sub">Berühmt für windgefegte Strände und perfekte Bedingungen für Segler und Kitesurfer.</p>
+<div id="lefkada-page">
+
+<div class="ti-back-bar">
+  <button class="ti-back-btn" type="button" onclick="closeLefkada()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ti-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Lefkada</span></p>
+</div>
+
+<div class="ti-hero">
+  <div class="ti-hero-bg"></div>
+  <div class="ti-hero-dots"></div>
+  <svg class="ti-hero-silhouette" viewBox="0 0 840 175" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Meereslinie -->
+    <path d="M0,160 Q210,152 420,156 Q630,160 840,154 L840,175 L0,175Z" opacity="0.18"/>
+    
+    <!-- Die Festung Agia Mavra (Inseleingang rechts / schwimmende Brücke) -->
+    <rect x="680" y="115" width="90" height="40" opacity="0.25"/>
+    <rect x="670" y="135" width="110" height="12" opacity="0.3"/>
+    <polygon points="695,115 700,95 710,95 715,115" opacity="0.25"/>
+    <polygon points="745,115 750,95 760,95 765,115" opacity="0.25"/>
+
+    <!-- Monumentale weiße Steilklippen der Westküste (Porto Katsiki / Egremni) -->
+    <path d="M0,175 Q90,30 180,15 Q240,10 280,175Z" opacity="0.26"/>
+    <path d="M220,175 Q270,70 320,55 Q360,45 390,175Z" opacity="0.18"/>
+    
+    <!-- Kap Doukato (Lefkatas) mit dem berühmten Leuchtturm ganz links auf der Klippe -->
+    <rect x="115" y="0" width="10" height="25" opacity="0.4"/>
+    <polygon points="112,0 120,-8 128,0" opacity="0.4"/>
+    <line x1="120" y1="5" x2="150" y2="5" stroke="white" stroke-width="1" opacity="0.3"/>
+    
+    <!-- Kitesurfer / Segel-Motiv in der Bucht von Vassiliki / Milos -->
+    <path d="M510,110 Q535,80 525,145 Z" fill="white" opacity="0.22"/>
+    <line x1="510" y1="145" x2="526" y2="145" stroke="white" stroke-width="2" opacity="0.3"/>
+    <path d="M490,95 Q515,60 550,105" fill="none" stroke="white" stroke-width="1.5" opacity="0.15"/>
+
+    <!-- Hügeliges Hinterland (Nydri / Elati Berg) -->
+    <path d="M380,175 Q460,110 540,95 Q600,85 690,175Z" opacity="0.15"/>
+
+    <!-- Meeresvögel -->
+    <path d="M340,60 Q350,50 360,58" fill="none" stroke="white" stroke-width="1.5" opacity="0.25"/>
+    <path d="M355,65 Q365,55 375,63" fill="none" stroke="white" stroke-width="1.5" opacity="0.18"/>
+  </svg>
+  <div class="ti-hero-overlay"></div>
+  <div class="ti-hero-content">
+    <p class="ti-hero-tag">Ionische Inseln · Westgriechenland</p>
+    <h1 class="ti-hero-title">Lefkada<em>Λευκάδα</em></h1>
+    <p class="ti-hero-sub">Die weiße Insel der Karibik-Strände — über eine bewegliche Brücke fest mit dem Festland verbunden, geprägt von schwindelerregenden Kreidefelsen, wilden Passatwinden für Surfer und dem tiefen Mythos der Dichterin Sappho.</p>
+    <div class="ti-hero-pills">
+      <span class="ti-hero-pill">Porto Katsiki</span>
+      <span class="ti-hero-pill">Milos &amp; Egremni</span>
+      <span class="ti-hero-pill">Kap Doukato</span>
+      <span class="ti-hero-pill">Kitesurf-Mekka</span>
+      <span class="ti-hero-pill">Agia Mavra</span>
+    </div>
   </div>
+  <div class="ti-hero-waves"></div>
+</div>
+
+<div class="ti-stats-bar">
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">23.000</div>
+    <div class="ti-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">325 km²</div>
+    <div class="ti-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">50 Meter</div>
+    <div class="ti-stat-lbl">Länge der Schwimmbrücke</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">1.158 m</div>
+    <div class="ti-stat-lbl">Höchster Punkt (Elati)</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">Top 3</div>
+    <div class="ti-stat-lbl">Europas Surfspots</div>
+  </div>
+</div>
+
+<div class="ti-content">
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">01 — Mythos &amp; Geografie</p>
+      <h2 class="ti-section-title">Die Insel, die eigentlich<br><em>eine Halbinsel sein wollte</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-history-grid">
+      <div class="ti-history-text">
+        <p>Lefkada verdankt ihren Namen den markanten, weißen Kalksteinklippen (leukos = weiß) im Süden und Westen der Insel. Geografisch nimmt sie eine Sonderrolle ein: Sie ist die einzige ionische Insel, die man ohne Fähre über eine 50 Meter lange, schwimmende Drehbrücke direkt vom griechischen Festland aus mit dem Auto erreichen kann. Korinthische Kolonisten gruben im 7. Jahrhundert v. Chr. den schmalen Kanal, der sie erst zur echten Insel machte.</p>
+        <p>Kulturell stand Lefkada wie ihre Nachbarn unter venezianischer, fränkischer und britischer Herrschaft, bewahrte aber stets ein raueres, urwüchsigeres Gesicht im bergigen Inselinneren. Berühmt ist die Insel auch für ihre literarische Seele – sie brachte bedeutende griechische Dichter wie Aristotelis Valaoritis hervor.</p>
+        <p>Der dramatischste Ort der Insel liegt am südlichsten Zipfel, dem Kap Doukato. Hier stürzen die weißen Klippen senkrecht in das tosende Meer. In der Antike stand hier ein Tempel des Apollon; der Ort galt als Grenze zur Unterwelt. Dem Mythos nach stürzte sich die antike Dichterin Sappho hier aus Liebeskummer von den Klippen in den Tod.</p>
+      </div>
+      <div class="ti-timeline">
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">7. Jh. v. Chr.</div>
+          <div class="ti-tl-event">Siedler aus Korinth durchstechen die flache Landzunge zum Festland. Lefkada wird künstlich vom Festland getrennt, um den Schiffsverkehr im ionischen Meer zu sichern.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">1300</div>
+          <div class="ti-tl-event">Der fränkische Herrscher Giovanni Orsini baut die mächtige Festung Agia Mavra am inländischen Kanal, um die Insel vor Piraten und den Osmanen zu schützen.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">1684–1797</div>
+          <div class="ti-tl-event">Die Venezianer vertreiben die Osmanen. Anders als auf den restlichen Ionischen Inseln wird die Hauptstadt näher an die Lagune verlegt, und es entsteht das erdbebensichere Fachwerk-Design der Chora.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">1963</div>
+          <div class="ti-tl-event">Der griechische Reeder-Milliardär Aristoteles Onassis kauft die kleine, Lefkada vorgelagerte Insel Skorpios. Der Jetset hält Einzug und bringt weltweite Aufmerksamkeit in die Region.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">2003</div>
+          <div class="ti-tl-event">Ein starkes Erdbeben beschädigt Teile der Westküste. Die Strände formieren sich neu, behalten aber durch die ständige Zufuhr von frischem Kalkstaub ihr beispielloses, helltürkises Wasser.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ti-section-title">Milchiges Türkiswasser, Wasserfälle<br><em>und geschichtsträchtige Kaps</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-sights-grid">
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-le-portokatsiki"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Strand · Postkartenmotiv</p>
+          <h3 class="ti-sight-name">Porto Katsiki</h3>
+          <p class="ti-sight-desc">Ein weltberühmtes Naturwunder. Eine gigantische, konkav geformte Kreidewand umschließt den Strand. Das Wasser leuchtet durch den feinen Kalkstein fast unwirklich neon-türkis.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-le-egremni"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Natur · Endlose Weite</p>
+          <h3 class="ti-sight-name">Egremni Beach</h3>
+          <p class="ti-sight-desc">Kilometerlanger, wilder Sand- und Kieselstrand unter steilen Felswänden. Nur per Boot oder über eine spektakuläre Treppenanlage erreichbar – oft menschenleer und ungezähmt.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-le-doukato"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Mythologie · Landmarke</p>
+          <h3 class="ti-sight-name">Kap Doukato</h3>
+          <p class="ti-sight-desc">Das dramatische Südende der Insel. Wo einst antike Opfer dargebracht wurden, thront heute ein einsamer Leuchtturm über den 60 Meter tiefen Abgründen der Klippen.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-le-nidri"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Schlucht · Oase</p>
+          <h3 class="ti-sight-name">Dimosari Wasserfall</h3>
+          <p class="ti-sight-desc">Ein grünes Kontrastprogramm zur Küste bei Nydri. Ein schattiger Pfad führt durch eine dichte, kühle Felsschlucht zu einem versteckten, natürlichen Pool mit eiskaltem Quellwasser.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-le-vassiliki"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Bucht · Aktivsport</p>
+          <h3 class="ti-sight-name">Vassiliki &amp; Agios Ioannis</h3>
+          <p class="ti-sight-desc">Zwei der weltweit besten Reviere für Wind- und Kitesurfer. Durch den thermischen "Eric"-Wind verwandeln sich die Buchten jeden Nachmittag in ein buntes Meer aus Segeln.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-le-kastro"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Historie · Architektur</p>
+          <h3 class="ti-sight-name">Festung Agia Mavra</h3>
+          <p class="ti-sight-desc">Das steinerne Tor zur Insel. Die im 14. Jahrhundert erbaute Festungsanlage bewacht die Lagune und zeugt von der strategischen Bedeutung Lefkadas in der Seegeschichte.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">03 — Tavernen &amp; Kulinarik</p>
+      <h2 class="ti-section-title">Bergthymian-Honig<br><em>und herzhafte Linsen aus Eglouvi</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-tav-grid">
+
+      <div class="ti-tav-card">
+        <div class="ti-tav-top">
+          <div>
+            <h3 class="ti-tav-name">Thymari</h3>
+            <div class="ti-tav-loc">📍 Lefkada-Stadt, Altstadtgassen</div>
+          </div>
+          <div class="ti-tav-stars">★★★★★</div>
+        </div>
+        <p class="ti-tav-desc">Ein kulinarisches Juwel in einem romantischen Innenhof der Chora. Bekannt für eine moderne Interpretation traditioneller ionischer Küche. Die Weinkarte bietet eine exzellente Auswahl lokaler, fast vergessener Rebsorten wie Vardea und Vertzami.</p>
+        <div class="ti-tav-dishes">
+          <span class="ti-tav-dish">Lamm in Thymiankruste</span>
+          <span class="ti-tav-dish">Risotto mit Meeresfrüchten</span>
+          <span class="ti-tav-dish">Lokaler Vertzami-Rotwein</span>
+        </div>
+        <p class="ti-tav-price">Preisklasse: <span>€€€ · Abendessen · Innenhof</span></p>
+      </div>
+
+      <div class="ti-tav-card">
+        <div class="ti-tav-top">
+          <div>
+            <h3 class="ti-tav-name">Rachi</h3>
+            <div class="ti-tav-loc">📍 Exanthia, Bergdorf</div>
+          </div>
+          <div class="ti-tav-stars">★★★★★</div>
+        </div>
+        <p class="ti-tav-desc">Die wohl spektakulärste Location der Insel. Das Restaurant liegt auf einem Bergkamm im Westen. Man isst auf einer freischwebenden Terrasse über den Wolken, während unter einem die Gleitschirmflieger in den Sonnenuntergang segeln.</p>
+        <div class="ti-tav-dishes">
+          <span class="ti-tav-dish">Schweinefilet mit Feigensauce</span>
+          <span class="ti-tav-dish">Eglouvi-Linsensalat</span>
+          <span class="ti-tav-dish">Frittierter Feta mit Honig</span>
+        </div>
+        <p class="ti-tav-price">Preisklasse: <span>€€ · Abendessen · Sunset-Ausblick</span></p>
+      </div>
+
+      <div class="ti-tav-card">
+        <div class="ti-tav-top">
+          <div>
+            <h3 class="ti-tav-name">Taverna b00za</h3>
+            <div class="ti-tav-loc">📍 Athani, nahe Porto Katsiki</div>
+          </div>
+          <div class="ti-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ti-tav-desc">Ehrliche, rustikale Dorftaverne auf dem Weg zu den Südstränden. Hier kocht die Familie noch selbst nach alten Rezepten: exzellenter, fangfrischer Fisch, hausgemachtes Moussaka und Salate mit Olivenöl aus den eigenen Hainen.</p>
+        <div class="ti-tav-dishes">
+          <span class="ti-tav-dish">Gegrillte Rote Meerbarbe</span>
+          <span class="ti-tav-dish">Traditionelles Moussaka</span>
+          <span class="ti-tav-dish">Hausgemachter kühler Rosé</span>
+        </div>
+        <p class="ti-tav-price">Preisklasse: <span>€ · Mittagessen · Authentisch</span></p>
+      </div>
+
+      <div class="ti-tav-card">
+        <div class="ti-tav-top">
+          <div>
+            <h3 class="ti-tav-name">Elena</h3>
+            <div class="ti-tav-loc">📍 Ligia, Fischerhafen</div>
+          </div>
+          <div class="ti-tav-stars">★★★★★</div>
+        </div>
+        <p class="ti-tav-desc">Direkt an der Kaimauer des ruhigen Fischerdorfs Ligia. Hier kauft der Wirt morgens den besten Fang der lokalen Fischer auf. Perfekt für einen langen, entspannten Mittag mit Mezedes und Ouzo, während das Wasser an die Holzstühle schwappt.</p>
+        <div class="ti-tav-dishes">
+          <span class="ti-tav-dish">Oktopus in Essig-Öl-Schnittlauch</span>
+          <span class="ti-tav-dish">Frittierte Sardinen</span>
+          <span class="ti-tav-dish">Gegrillte Calamari</span>
+        </div>
+        <p class="ti-tav-price">Preisklasse: <span>€€ · Mittagessen · Hafenfront</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">04 — Regionen &amp; Charakter</p>
+      <h2 class="ti-section-title">Zwischen schroffen Abgründen<br><em>und sanften Lagunen</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-viertel-grid">
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🏘️</div>
+        <h3 class="ti-viertel-name">Die Chora</h3>
+        <p class="ti-viertel-desc">Die Hauptstadt im Norden beeindruckt mit bunten Blech- und Holzfassaden (erdbebensicher konstruiert), einer lebendigen Fußgängerzone und einer weiten Lagune.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🌊</div>
+        <h3 class="ti-viertel-name">Die Westküste</h3>
+        <p class="ti-viertel-desc">Das wilde Gesicht Lefkadas. Vertikale Klippen, dichte Pinienwälder und Strände, die regelmäßig zu den schönsten der Welt gewählt werden. Nichts für Menschen mit Höhenangst.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">⛵</div>
+        <h3 class="ti-viertel-name">Nydri &amp; der Osten</h3>
+        <p class="ti-viertel-desc">Das geschützte Segelrevier. Ruhiges Wasser, unzählige kleine, vorgelagerte grüne Inseln (wie Meganisi und Skorpios) und eine trubelige, maritime Promenade.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🦅</div>
+        <h3 class="ti-viertel-name">Eglouvi &amp; die Berge</h3>
+        <p class="ti-viertel-desc">Das ursprüngliche Herz auf über 700 Höhenmetern. Hier wachsen auf Hochebenen die berühmtesten Linsen Griechenlands. Alte Steinhütten prägen das karge Bild.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🏄‍♂️</div>
+        <h3 class="ti-viertel-name">Südbucht Vassiliki</h3>
+        <p class="ti-viertel-desc">Das Eldorado der Surfszene. Vormittags spiegelglatt, bricht hier verlässlich ab 14 Uhr ein starker Fallwind aus den Bergen herein – perfekt für Profis und Schulen.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">⚓</div>
+        <h3 class="ti-viertel-name">Sivota</h3>
+        <p class="ti-viertel-desc">Ein tief in eine bewaldete Bucht eingeschnittenes, fjordähnliches Fischerdorf im Süden. Ein geschützter Naturhafen und absoluter Liebling von Yachtbesitzern.</p>
+      </div>
+
+    </div>
+
+    <div class="ti-tip-banner">
+      <div class="ti-tip-emoji">🌊</div>
+      <div class="ti-tip-text">
+        <h3>Das Geheimnis des leuchtenden Wassers</h3>
+        <p>Wer zum ersten Mal an den Klippen der Westküste steht, glaubt seinen Augen kaum. Das Meer leuchtet nicht einfach blau – es wirkt wie eine milchige, neon-cyanfarbene Leuchtmasse. Das Geheimnis liegt in den weichen Kreide- und Kalksteinfelsen. Die starke Brandung des Ionischen Meeres reibt permanent winzige Partikel von den Felsen ab, die als Schwebstoffe im Wasser verbleiben. Sie reflektieren das Sonnenlicht auf eine einzigartige Weise. Lefkada verbindet diese spektakuläre, karibische Dramatik der Küsten perfekt mit der Erreichbarkeit des Festlands und der Ruhe seiner authentischen Bergdörfer.</p>
+      </div>
+    </div>
+
+  </section>
+</div>
+</div>
 </body>
 </html>

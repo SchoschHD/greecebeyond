@@ -1,15 +1,235 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="de">
 <head>
-  <meta charset="utf-8">
-  <title>Ithakí — Hellas Inseln</title>
-  <link rel="stylesheet" href="../../css/islands/ionische/ithaki.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ithaki — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="ithaki.css" />
 </head>
 <body>
-  <p class="it-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Ithakí</span></p>
-  <div class="it-hero">
-    <p class="it-hero-tag">Ionische Inseln · Ionisches Meer</p>
-    <p class="it-hero-sub">Mythische Landschaften, Olivenhaine und stille Buchten — die Insel des Odysseus.</p>
+<div id="ithaki-page">
+
+<div class="it-back-bar">
+  <button class="it-back-btn" onclick="closeIthaki()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="it-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Ithaki</span></p>
+</div>
+
+<div class="it-hero">
+  <div class="it-hero-bg"></div>
+  <div class="it-hero-dots"></div>
+  
+  <svg class="it-hero-silhouette" viewBox="0 0 820 170" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,130 Q120,60 280,110 Q400,140 520,70 Q680,40 820,120 L820,170 L0,170 Z" opacity="0.15"/>
+    <path d="M380,145 L460,145 L480,125 L360,125 Z" fill="white" opacity="0.5"/>
+    <line x1="420" y1="60" x2="420" y2="125" stroke="white" stroke-width="3" opacity="0.6"/>
+    <polygon points="420,70 465,95 420,110" fill="white" opacity="0.4"/>
+    <path d="M0,160 Q205,148 410,155 Q615,162 820,150 L820,170 L0,170Z" opacity="0.3"/>
+  </svg>
+  
+  <div class="it-hero-overlay"></div>
+  <div class="it-hero-content">
+    <p class="it-hero-tag">Ionische Inseln · Das ewige Symbol der Heimkehr</p>
+    <h1 class="it-hero-title">Ithaki<em>Ιθάκη</em></h1>
+    <p class="it-hero-sub">Die legendäre Heimat des Odysseus. Eine Insel, die seit Jahrtausenden für Sehnsucht, Treue und die Erfüllung einer langen Reise steht. Steile grüne Hänge treffen auf fjordartige, tiefblaue Buchten.</p>
+    <div class="it-hero-pills">
+      <span class="it-hero-pill">Odysseus</span>
+      <span class="it-hero-pill">Homer</span>
+      <span class="it-hero-pill">Fjordbuchten</span>
+      <span class="it-hero-pill">Sailing Paradise</span>
+      <span class="it-hero-pill">Ruhe & Poesie</span>
+    </div>
   </div>
+  <div class="it-hero-waves"></div>
+</div>
+
+<div class="it-stats-bar">
+  <div class="it-stat-item">
+    <div class="it-stat-num">3.200</div>
+    <div class="it-stat-lbl">Einwohner</div>
+  </div>
+  <div class="it-stat-item">
+    <div class="it-stat-num">96 km²</div>
+    <div class="it-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="it-stat-item">
+    <div class="it-stat-num">20</div>
+    <div class="it-stat-lbl">Jahre Irrfahrt</div>
+  </div>
+  <div class="it-stat-item">
+    <div class="it-stat-num">800m</div>
+    <div class="it-stat-lbl">Höchster Gipfel</div>
+  </div>
+  <div class="it-stat-item">
+    <div class="it-stat-num">#1</div>
+    <div class="it-stat-lbl">Kulturerbe der Weltliteratur</div>
+  </div>
+</div>
+
+<div class="it-content">
+
+  <section class="it-section">
+    <div class="it-section-head">
+      <p class="it-section-label">01 — Mythos & Epos</p>
+      <h2 class="it-section-title">Die Heimat im Herzen,<br><em>Homers unsterbliche Kulisse</em></h2>
+      <div class="it-divider"></div>
+    </div>
+    <div class="it-history-grid">
+      <div class="it-history-text">
+        <p>Ithaka ist kein bloßer Ort, es ist ein Zustand. Durch Homers „Odyssee“ wurde die Insel zum weltweiten Symbol für das Ziel einer lebenslangen Reise. Zehn Jahre kämpfte Odysseus vor Troja, weitere zehn Jahre irrte er über die Meere, stets angetrieben von der Sehnsucht nach den felsigen Küsten seiner Heimat Ithaka und seiner treuen Frau Penelope.</p>
+        <p>Archäologische Funde belegen, dass die Insel im 2. Jahrtausend v. Chr. ein bedeutendes Zentrum der mykenischen Kultur war. Das macht die Existenz eines mächtigen lokalen Herrschers, wie Homer ihn beschreibt, historisch durchaus plausibel.</p>
+        <p>In späteren Jahrhunderten stand Ithaka unter wechselnden Flaggen. Besonders die venezianische Epoche (1504–1797) prägte das Bild der heutigen Siedlungen. Die Venezianer holten die Bevölkerung aus den Bergen zurück an die Küsten und bauten die wunderschönen Hafenorte auf, die noch heute den unberührten Charme der Insel ausmachen.</p>
+      </div>
+      <div class="it-timeline">
+        <div class="it-tl-item">
+          <div class="it-tl-dot"></div>
+          <div class="it-tl-year">1200 v. Chr.</div>
+          <div class="it-tl-event">Blütezeit des mykenischen Ithaka. Vermutete Regierungszeit eines realen Königs, der Homers Epos inspirierte.</div>
+        </div>
+        <div class="it-tl-item">
+          <div class="it-tl-dot"></div>
+          <div class="it-tl-year">1504</div>
+          <div class="it-tl-event">Die Venezianer besiedeln die nach Piratenangriffen fast menschenleere Insel neu und gewähren Steuerfreiheit für Olivenbauern.</div>
+        </div>
+        <div class="it-tl-item">
+          <div class="it-tl-dot"></div>
+          <div class="it-tl-year">1800+</div>
+          <div class="it-tl-event">Ithaka wird ein wichtiges maritimes Zentrum. Lokale Reeder bauen eine beeindruckende Flotte im Ionischen Meer auf.</div>
+        </div>
+        <div class="it-tl-item">
+          <div class="it-tl-dot"></div>
+          <div class="it-tl-year">1953</div>
+          <div class="it-tl-event">Ein schweres Erdbeben zerstört Teile der historischen Architektur. Der Wiederaufbau erfolgt streng nach altem, venezianischem Vorbild.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="it-section">
+    <div class="it-section-head">
+      <p class="it-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="it-section-title">Auf den Spuren des Königs<br><em>und idyllische Fischerdörfer</em></h2>
+      <div class="it-divider"></div>
+    </div>
+    <div class="it-sights-grid">
+
+      <div class="it-sight-card">
+        <div class="it-sight-visual sv-it-vathy"></div>
+        <div class="it-sight-body">
+          <p class="it-sight-cat">Hauptstadt · Naturfjord</p>
+          <h3 class="it-sight-name">Bucht von Vathy</h3>
+          <p class="it-sight-desc">Die Hauptstadt schmiegt sich amphitheatralisch in eine extrem tiefe, fjordartige Bucht. Inmitten des Hafens liegt die winzige, geschichtsträchtige Insel Lazaretto.</p>
+        </div>
+      </div>
+
+      <div class="it-sight-card">
+        <div class="it-sight-visual sv-it-kioni"></div>
+        <div class="it-sight-body">
+          <p class="it-sight-cat">Architektur · Romantik</p>
+          <h3 class="it-sight-name">Fischerdorf Kioni</h3>
+          <p class="it-sight-desc">Ein malerisches Juwel im Norden. Die farbenfrohen Häuser überstanden das Erdbeben von 1953 fast unbeschadet. Cafés und Tavernen liegen hier unmittelbar an der Kaimauer.</p>
+        </div>
+      </div>
+
+      <div class="it-sight-card">
+        <div class="it-sight-visual sv-it-kathara"></div>
+        <div class="it-sight-body">
+          <p class="it-sight-cat">Kloster · Aussichtspunkt</p>
+          <h3 class="it-sight-name">Monastery Panagia Kathariotissa</h3>
+          <p class="it-sight-desc">Das auf über 600 Metern Höhe gelegene Kloster ist das spirituelle Herz der Insel. Von der Terrasse aus bietet sich ein monumentaler Blick über die gesamte Meerenge bis nach Kefalonia.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="it-section">
+    <div class="it-section-head">
+      <p class="it-section-label">03 — Tavernen & Küche</p>
+      <h2 class="it-section-title">Echte Hausmannskost &<br><em>das legendäre Rovani</em></h2>
+      <div class="it-divider"></div>
+    </div>
+    <div class="it-tav-grid">
+
+      <div class="it-tav-card">
+        <div class="it-tav-top">
+          <div>
+            <h3 class="it-tav-name">Mills (Treis Myloi)</h3>
+            <div class="pa-tav-loc">📍 Kioni (Hafenbogen)</div>
+          </div>
+          <div class="it-tav-stars">★★★★★</div>
+        </div>
+        <p class="it-tav-desc">Berühmt für exzellente mediterrane Fischgerichte und den unverstellten Blick auf die Segelyachten. Absolut frische Zutaten und hervorragender lokaler Wein.</p>
+        <div class="it-tav-dishes">
+          <span class="it-tav-dish">Fisch-Saganaki</span>
+          <span class="it-tav-dish">Gegrillte Calamari</span>
+          <span class="it-tav-dish">Hausgemachtes Rovani</span>
+        </div>
+        <p class="it-tav-price">Preisklasse: <span>€€€ · Exzellente Lage · Am Kai</span></p>
+      </div>
+
+      <div class="it-tav-card">
+        <div class="it-tav-top">
+          <div>
+            <h3 class="it-tav-name">Kantouni</h3>
+            <div class="it-tav-loc">📍 Vathy (Altstadtgassen)</div>
+          </div>
+          <div class="it-tav-stars">★★★★★</div>
+        </div>
+        <p class="it-tav-desc">Versteckt in den malerischen Gassen hinter der Hafenfront von Vathy. Hier kocht die Familie noch selbst nach Rezepten, die seit Generationen weitergegeben werden.</p>
+        <div class="it-tav-dishes">
+          <span class="it-tav-dish">Savoro (Fischspezialität)</span>
+          <span class="it-tav-dish">Gefülltes Kaninchen</span>
+          <span class="it-tav-dish">Zucchini-Puffer</span>
+        </div>
+        <p class="it-tav-price">Preisklasse: <span>€€ · Authentisch · Familiär</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="it-section">
+    <div class="it-section-head">
+      <p class="it-section-label">04 — Orte & Spirit</p>
+      <h2 class="it-section-title">Die Magie der<br><em>Ruhe begreifen</em></h2>
+      <div class="it-divider"></div>
+    </div>
+    <div class="it-viertel-grid">
+
+      <div class="it-viertel-card">
+        <div class="it-viertel-emoji">⛵</div>
+        <h3 class="it-viertel-name">Segler-Eldorado</h3>
+        <p class="it-viertel-desc">Durch die geschützten, tiefen Buchten gilt Ithaka weltweit als einer der besten und schönsten Stützpunkte für Segler im gesamten Mittelmeer.</p>
+      </div>
+
+      <div class="it-viertel-card">
+        <div class="it-viertel-emoji">🏔️</div>
+        <h3 class="it-viertel-name">Anogi & Die Menhire</h3>
+        <p class="it-viertel-desc">Das Bergdorf Anogi wirkt wie aus der Zeit gefallen. In der Umgebung stehen mystische, bis zu 9 Meter hohe Monolithen (Menhire) mitten in der kargen Landschaft.</p>
+      </div>
+
+      <div class="it-viertel-card">
+        <div class="it-viertel-emoji">🍯</div>
+        <h3 class="it-viertel-name">Das süße Rovani</h3>
+        <p class="it-viertel-desc">Die traditionelle Süßspeise der Insel. Ein herrlich saftiger Kuchen aus Reis, Honig und Olivenöl – perfekt serviert mit einer Kugel Vanilleeis am Hafen.</p>
+      </div>
+
+    </div>
+
+    <div class="it-tip-banner">
+      <div class="it-tip-emoji">✍️</div>
+      <div class="it-tip-text">
+        <h3>Kavafis Weisheit — Behalte Ithaka stets im Sinn</h3>
+        <p>„Wenn du aufbrichst nach Ithaka, wünsche dir eine lange Reise“, schrieb der Dichter Konstantinos Kavafis in seinem berühmten Gedicht. Ithaka lehrt uns, dass der Weg das eigentliche Ziel ist. Die Insel hat sich bewusst gegen den lauten Massentourismus entschieden. Wer hierher kommt, sucht keine Partys, sondern die poetische Ruhe, das glasklare, unberührte Meer und die tiefe Zufriedenheit einer angekommenen Seele.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
 </body>
 </html>

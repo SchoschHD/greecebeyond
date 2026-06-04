@@ -1,15 +1,330 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="de">
 <head>
-  <meta charset="utf-8">
-  <title>Kýthira — Hellas Inseln</title>
-  <link rel="stylesheet" href="../../css/islands/ionische/kythira.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kythira — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="kythira.css" />
 </head>
 <body>
-  <p class="ky-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Kýthira</span></p>
-  <div class="ky-hero">
-    <p class="ky-hero-tag">Ionische Inseln · Ionisches Meer</p>
-    <p class="ky-hero-sub">Zwischen Ionischem Meer und Ägäis: Klöster, Wasserfälle und einsame Buchten.</p>
+<div id="kythira-page">
+
+<div class="ky-back-bar">
+  <button class="ky-back-btn" onclick="closeKythira()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ky-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Kythira</span></p>
+</div>
+
+<div class="ky-hero">
+  <div class="ky-hero-bg"></div>
+  <div class="ky-hero-dots"></div>
+  
+  <svg class="ky-hero-silhouette" viewBox="0 0 820 170" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M40,140 Q60,110 80,140 Q100,110 120,140 Q140,110 160,140 Q180,110 200,140" fill="none" stroke="white" stroke-width="6"/>
+    <rect x="30" y="105" width="180" height="8"/>
+    <path d="M200,160 Q400,120 500,80 L750,80 L800,160 Z" opacity="0.6"/>
+    <rect x="520" y="40" width="180" height="40"/>
+    <rect x="515" y="30" width="190" height="10"/>
+    <rect x="530" y="15" width="20" height="15"/>
+    <rect x="570" y="15" width="20" height="15"/>
+    <rect x="610" y="15" width="20" height="15"/>
+    <rect x="650" y="15" width="20" height="15"/>
+    <rect x="690" y="15" width="20" height="15"/>
+    <path d="M0,160 Q205,148 410,155 Q615,162 820,150 L820,170 L0,170Z" opacity="0.3"/>
+  </svg>
+  
+  <div class="ky-hero-overlay"></div>
+  <div class="ky-hero-content">
+    <p class="ky-hero-tag">Ionische Inseln · Am Rande der Ägäis</p>
+    <h1 class="ky-hero-title">Kythira<em>Κύθηρα</em></h1>
+    <p class="ky-hero-sub">Wo das Ionische Meer auf die Ägäis trifft und die himmlische Aphrodite aus dem Schaum der Wellen geboren wurde. Eine raue, ursprüngliche Insel voller venezianischer Burgen, versteckter Wasserfälle und tiefer Schluchten.</p>
+    <div class="ky-hero-pills">
+      <span class="ky-hero-pill">Aphrodite</span>
+      <span class="ky-hero-pill">Venezianisch</span>
+      <span class="ky-hero-pill">Wasserfälle</span>
+      <span class="ky-hero-pill">Geisterstädte</span>
+      <span class="ky-hero-pill">Entschleunigung</span>
+    </div>
   </div>
+  <div class="ky-hero-waves"></div>
+</div>
+
+<div class="ky-stats-bar">
+  <div class="ky-stat-item">
+    <div class="ky-stat-num">3.000</div>
+    <div class="ky-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ky-stat-item">
+    <div class="ky-stat-num">60+</div>
+    <div class="ky-stat-lbl">Malerische Dörfer</div>
+  </div>
+  <div class="ky-stat-item">
+    <div class="ky-stat-num">280 km²</div>
+    <div class="ky-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="ky-stat-item">
+    <div class="ky-stat-num">1537</div>
+    <div class="ky-stat-lbl">Barbarossas Angriff</div>
+  </div>
+  <div class="ky-stat-item">
+    <div class="ky-stat-num">#1</div>
+    <div class="ky-stat-lbl">Geheimtipp der Griechen</div>
+  </div>
+</div>
+
+<div class="ky-content">
+
+  <section class="ky-section">
+    <div class="ky-section-head">
+      <p class="ky-section-label">01 — Geschichte</p>
+      <h2 class="ky-section-title">Auge von Kreta,<br><em>Heimat der Liebesgöttin</em></h2>
+      <div class="ky-divider"></div>
+    </div>
+    <div class="ky-history-grid">
+      <div class="ky-history-text">
+        <p>Kythira gilt nach dem Dichter Hesiod als der wahre Geburtsort der himmlischen Aphrodite. Die Göttin der Liebe und Schönheit entstieg hier dem Meeresschaum, bevor die Zephyre sie weiter nach Zypern trugen.</p>
+        <p>Strategisch am Knotenpunkt zwischen dem Peloponnes und Kreta gelegen, weckte die Insel stets Begehrlichkeiten. Jahrhundertelang herrschte die Republik Venedig über das Eiland, das sie „Cerigo“ nannten. Als „Auge von Kreta“ diente Kythira den Venezianern als unverzichtbarer Wachposten gegen osmanische Flotten und Piraten.</p>
+        <p>Die tragischste Zäsur erlebte Kythira 1537, als der gefürchtete Korsar Barbarossa die stark befestigte byzantinische Hauptstadt Paleochora zerstörte und die Einwohner verschleppte. Heute zeugen britische Steinbrücken, byzantinische Ruinen und mächtige venezianische Kastelle von einer äußerst bewegten Vergangenheit.</p>
+      </div>
+      <div class="ky-timeline">
+        <div class="ky-tl-item">
+          <div class="ky-tl-dot"></div>
+          <div class="ky-tl-year">Mythologie</div>
+          <div class="ky-tl-event">Geburt der himmlischen Aphrodite aus dem Schaum des Meeres vor der Küste Kythiras.</div>
+        </div>
+        <div class="ky-tl-item">
+          <div class="ky-tl-dot"></div>
+          <div class="ky-tl-year">1207</div>
+          <div class="ky-tl-event">Beginn der venezianischen Herrschaft. Die Insel wird fortan „Cerigo“ genannt und als wichtiger Flottenstützpunkt ausgebaut.</div>
+        </div>
+        <div class="ky-tl-item">
+          <div class="ky-tl-dot"></div>
+          <div class="ky-tl-year">1537</div>
+          <div class="ky-tl-event">Der Korsar Barbarossa erobert und zerstört die uneinnehmbar geglaubte byzantinische Hauptstadt Paleochora.</div>
+        </div>
+        <div class="ky-tl-item">
+          <div class="ky-tl-dot"></div>
+          <div class="ky-tl-year">1797</div>
+          <div class="ky-tl-event">Fall der Republik Venedig. Es folgen wechselnde Herrschaften von Franzosen, Russen und schließlich Briten.</div>
+        </div>
+        <div class="ky-tl-item">
+          <div class="ky-tl-dot"></div>
+          <div class="ky-tl-year">1864</div>
+          <div class="ky-tl-event">Vereinigung mit dem modernen griechischen Staat, zusammen mit den restlichen Ionischen Inseln.</div>
+        </div>
+        <div class="ky-tl-item">
+          <div class="ky-tl-dot"></div>
+          <div class="ky-tl-year">1900</div>
+          <div class="ky-tl-event">Schwammtaucher entdecken vor der Nachbarinsel Antikythera den berühmten antiken „Mechanismus von Antikythera“.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ky-section">
+    <div class="ky-section-head">
+      <p class="ky-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ky-section-title">Venezianische Burgen<br><em>bis versteckte Schluchten</em></h2>
+      <div class="ky-divider"></div>
+    </div>
+    <div class="ky-sights-grid">
+
+      <div class="ky-sight-card">
+        <div class="ky-sight-visual sv-ky-castle"></div>
+        <div class="ky-sight-body">
+          <p class="ky-sight-cat">Festung · Panorama</p>
+          <h3 class="ky-sight-name">Kastro von Chora</h3>
+          <p class="ky-sight-desc">Die im 16. Jahrhundert erbaute venezianische Burg überragt die Hauptstadt. Von hier überblickt man das Ionische Meer, die Ägäis und das Kretische Meer gleichzeitig sowie die Zwillingsbuchten von Kapsali.</p>
+        </div>
+      </div>
+
+      <div class="ky-sight-card">
+        <div class="ky-sight-visual sv-ky-waterfall"></div>
+        <div class="ky-sight-body">
+          <p class="ky-sight-cat">Natur · Mystik</p>
+          <h3 class="ky-sight-name">Fonissa Wasserfälle</h3>
+          <p class="ky-sight-desc">Nahe dem Dorf Mylopotamos verbirgt sich eine grüne Oase mit alten Wassermühlen, Platanen und eisigen, smaragdgrünen Teichen. Ein magischer Ort tief im Tal, völlig unerwartet auf einer kargen Insel.</p>
+        </div>
+      </div>
+
+      <div class="ky-sight-card">
+        <div class="ky-sight-visual sv-ky-paleochora"></div>
+        <div class="ky-sight-body">
+          <p class="ky-sight-cat">Byzanz · Geisterstadt</p>
+          <h3 class="ky-sight-name">Ruinen von Paleochora</h3>
+          <p class="ky-sight-desc">Die ehemalige byzantinische Hauptstadt, erbaut in einer steilen Schlucht zum Schutz vor Piraten. Seit der Zerstörung durch Barbarossa im Jahr 1537 ist sie eine faszinierende, verlassene Ruinenstadt.</p>
+        </div>
+      </div>
+
+      <div class="ky-sight-card">
+        <div class="ky-sight-visual sv-ky-monastery"></div>
+        <div class="ky-sight-body">
+          <p class="ky-sight-cat">Glaube · Architektur</p>
+          <h3 class="ky-sight-name">Panagia Myrtidiotissa</h3>
+          <p class="ky-sight-desc">Das wichtigste Kloster und spirituelle Zentrum der Insel, umgeben von Myrtenbüschen. Die hier aufbewahrte schwarze Ikone der Muttergottes ist die heilige Schutzpatronin aller Kythirianer.</p>
+        </div>
+      </div>
+
+      <div class="ky-sight-card">
+        <div class="ky-sight-visual sv-ky-avlemonas"></div>
+        <div class="ky-sight-body">
+          <p class="ky-sight-cat">Küste · Kykladenflair</p>
+          <h3 class="ky-sight-name">Hafen von Avlemonas</h3>
+          <p class="ky-sight-desc">Das malerischste Fischerdorf Kythiras. Die geschützte Bucht wirkt mit ihrem smaragdgrünen Wasser wie ein natürlicher Pool, der von einem winzigen venezianischen Kastell überragt wird.</p>
+        </div>
+      </div>
+
+      <div class="ky-sight-card">
+        <div class="ky-sight-visual sv-ky-beach"></div>
+        <div class="ky-sight-body">
+          <p class="ky-sight-cat">Strand · Klippen</p>
+          <h3 class="ky-sight-name">Kaladi Beach</h3>
+          <p class="ky-sight-desc">Das fotografische Aushängeschild der Insel: Ein Omega-förmiger Kieselstrand mit markanten Zwillingsfelsen im Wasser. Der Abstieg führt über Steinstufen direkt in glasklares Wasser.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ky-section">
+    <div class="ky-section-head">
+      <p class="ky-section-label">03 — Tavernen & Küche</p>
+      <h2 class="ky-section-title">Wilde Kräuter,<br><em>Olivenöl und Fatourada</em></h2>
+      <div class="ky-divider"></div>
+    </div>
+    <div class="ky-tav-grid">
+
+      <div class="ky-tav-card">
+        <div class="ky-tav-top">
+          <div>
+            <h3 class="ky-tav-name">Skandeia</h3>
+            <div class="ky-tav-loc">📍 Paleopoli (nahe Avlemonas)</div>
+          </div>
+          <div class="ky-tav-stars">★★★★★</div>
+        </div>
+        <p class="ky-tav-desc">Eine der besten Tavernen der Insel, berühmt für traditionelle kythirianische Gerichte. Unter einem dichten Blätterdach genießt man hier die absolute Ruhe des Ostens.</p>
+        <div class="ky-tav-dishes">
+          <span class="ky-tav-dish">Auberginen im Ofen</span>
+          <span class="ky-tav-dish">Lokales Ziegenfleisch</span>
+          <span class="ky-tav-dish">Tsirigiotiko Wein</span>
+        </div>
+        <p class="ky-tav-price">Preisklasse: <span>€€ · Abendessen · Schattig</span></p>
+      </div>
+
+      <div class="ky-tav-card">
+        <div class="ky-tav-top">
+          <div>
+            <h3 class="ky-tav-name">Filio</h3>
+            <div class="ky-tav-loc">📍 Kalamos (Inselmitte)</div>
+          </div>
+          <div class="ky-tav-stars">★★★★★</div>
+        </div>
+        <p class="ky-tav-desc">Versteckt im Landesinneren bietet diese Familientaverne die authentischste Hausmannskost Kythiras. Fast alle Zutaten stammen vom eigenen Hof. Ein echter Tipp für hausgemachte Pasta.</p>
+        <div class="ky-tav-dishes">
+          <span class="ky-tav-dish">Hahn in Weinsoße</span>
+          <span class="ky-tav-dish">Hausgemachte Nudeln</span>
+          <span class="ky-tav-dish">Fatourada (Likör)</span>
+        </div>
+        <p class="ky-tav-price">Preisklasse: <span>€€ · Abendessen · Authentisch</span></p>
+      </div>
+
+      <div class="ky-tav-card">
+        <div class="ky-tav-top">
+          <div>
+            <h3 class="ky-tav-name">Pierros</h3>
+            <div class="ky-tav-loc">📍 Livadi (Süden)</div>
+          </div>
+          <div class="ky-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ky-tav-desc">Der lebhafte Treffpunkt für Einheimische und Rückkehrer aus Übersee. Unkompliziert, laut und herzlich. Hier gibt es ehrliches Souvlaki, frische Pitas und meisterhaft gegrilltes Fleisch.</p>
+        <div class="ky-tav-dishes">
+          <span class="ky-tav-dish">Pork Souvlaki</span>
+          <span class="ky-tav-dish">Griechischer Salat</span>
+          <span class="ky-tav-dish">Kaltes Mythos</span>
+        </div>
+        <p class="ky-tav-price">Preisklasse: <span>€ · Mittag & Abend · Beliebt</span></p>
+      </div>
+
+      <div class="ky-tav-card">
+        <div class="ky-tav-top">
+          <div>
+            <h3 class="ky-tav-name">Platanos</h3>
+            <div class="ky-tav-loc">📍 Mylopotamos (Dorfplatz)</div>
+          </div>
+          <div class="ky-tav-stars">★★★★★</div>
+        </div>
+        <p class="ky-tav-desc">Der Name ist Programm: Man speist unter riesigen, uralten Platanen direkt am pittoresken Dorfplatz von Mylopotamos. Ein idealer Zwischenstopp nach der Wanderung zum Wasserfall.</p>
+        <div class="ky-tav-dishes">
+          <span class="ky-tav-dish">Lammkoteletts</span>
+          <span class="ky-tav-dish">Gefüllte Weinblätter</span>
+          <span class="ky-tav-dish">Gebackener Feta</span>
+        </div>
+        <p class="ky-tav-price">Preisklasse: <span>€€ · Mittagessen unter Bäumen</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ky-section">
+    <div class="ky-section-head">
+      <p class="ky-section-label">04 — Orte & Charakter</p>
+      <h2 class="ky-section-title">Die Insel<br><em>mit dem Auto erobern</em></h2>
+      <div class="ky-divider"></div>
+    </div>
+    <div class="ky-viertel-grid">
+
+      <div class="ky-viertel-card">
+        <div class="ky-viertel-emoji">🚙</div>
+        <h3 class="ky-viertel-name">Mietwagen-Pflicht</h3>
+        <p class="ky-viertel-desc">Anders als flache Inseln ist Kythira groß, bergig und weitläufig zersiedelt. Um die über 60 Dörfer und abgelegenen Buchten flexibel zu erkunden, ist ein Auto absolut unerlässlich.</p>
+      </div>
+
+      <div class="ky-viertel-card">
+        <div class="ky-viertel-emoji">🏰</div>
+        <h3 class="ky-viertel-name">Chora (Hauptstadt)</h3>
+        <p class="ky-viertel-desc">Weiße, kubische Häuser drängen sich den Hügel hinauf bis zum venezianischen Kastro. Enge Gassen, kleine Handwerkskunst-Boutiquen und ein Flair, das stark an die Kykladen erinnert.</p>
+      </div>
+
+      <div class="ky-viertel-card">
+        <div class="ky-viertel-emoji">🌙</div>
+        <h3 class="ky-viertel-name">Kapsali</h3>
+        <p class="ky-viertel-desc">Die malerische Zwillingsbucht direkt unterhalb der Chora. Hier schlägt das abendliche Herz der Insel: Cafés, Fischerboote und der beste Blick hoch zur hell erleuchteten Festung.</p>
+      </div>
+
+      <div class="ky-viertel-card">
+        <div class="ky-viertel-emoji">🌿</div>
+        <h3 class="ky-viertel-name">Mylopotamos</h3>
+        <p class="ky-viertel-desc">Das traditionelle Dorf des Wassers im Westen. Mit seinem venezianischen Löwen am Tor, alten Brücken und dem üppigen grünen Tal bildet es ein tolles Kontrastprogramm zur Küste.</p>
+      </div>
+
+      <div class="ky-viertel-card">
+        <div class="ky-viertel-emoji">⚓</div>
+        <h3 class="ky-viertel-name">Diakofti</h3>
+        <p class="ky-viertel-desc">Der Haupthafen im Osten empfängt Ankommende mit einer fast karibischen Farbpalette. Flaches, extrem türkisfarbenes Wasser und ein weißer Sandstrand laden sofort zum Baden ein.</p>
+      </div>
+
+      <div class="ky-viertel-card">
+        <div class="ky-viertel-emoji">🍷</div>
+        <h3 class="ky-viertel-name">Tsirigo-Tradition</h3>
+        <p class="ky-viertel-desc">Die Insel hat eine riesige Diaspora in Australien. Im Sommer kehren viele Auswanderer-Familien zurück und verleihen der tiefgriechischen Insel einen faszinierenden, kosmopolitischen Vibe.</p>
+      </div>
+
+    </div>
+
+    <div class="ky-tip-banner">
+      <div class="ky-tip-emoji">⏳</div>
+      <div class="ky-tip-text">
+        <h3>Tsirigo — Die Kunst der Entschleunigung</h3>
+        <p>Die Einheimischen nennen ihre Insel noch immer liebevoll „Tsirigo“. Wer hierher kommt, muss Zeit mitbringen. Die Entfernungen auf den kurvigen Straßen sind trügerisch, die Strände nicht immer leicht zugänglich. Doch genau das schützt Kythira: Hier gibt es keinen Massentourismus. Wer sich dem ruhigen Takt der Insel anpasst und abends bei einem Glas kühler Fatourada (Nelken-Zimt-Likör) den Sternenhimmel genießt, versteht, warum die Göttin der Liebe diesen Ort wählte.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
 </body>
 </html>
