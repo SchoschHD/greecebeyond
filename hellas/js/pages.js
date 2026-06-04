@@ -385,14 +385,14 @@ function openLeipsi() {
 function closeLeipsi() { closePage('leipsi-page'); }
 
 // Convenience-Funktionen für Ionische Inseln
-function openCorfu() {
+function openKorfu() {
   if (typeof loadPage === 'function') {
-    loadPage('corfu-page', 'islands/ionische/corfu.html').then(() => openPage('corfu-page'));
+    loadPage('korfu-page', 'islands/ionische/korfu.html').then(() => openPage('korfu-page'));
   } else {
-    openPage('corfu-page');
+    openPage('korfu-page');
   }
 }
-function closeCorfu() { closePage('corfu-page'); }
+function closeKorfu() { closePage('korfu-page'); }
 
 function openKefalonia() {
   if (typeof loadPage === 'function') {
