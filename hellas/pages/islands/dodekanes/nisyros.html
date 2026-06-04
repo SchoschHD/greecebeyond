@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nisyros — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="nisyros.css" />
+</head>
+<body>
+<div id="nisyros-page">
+
+<div class="ni-back-bar">
+  <button class="ni-back-btn" type="button" onclick="closeNisyros()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ni-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Nisyros</span></p>
+</div>
+
+<div class="ni-hero">
+  <div class="ni-hero-bg"></div>
+  <div class="ni-hero-dots"></div>
+  <!-- Nisyros silhouette: volcanic caldera rim, Mandraki village, windmills -->
+  <svg class="ni-hero-silhouette" viewBox="0 0 860 185" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Volcanic island rim — high flanks dropping to sea -->
+    <path d="M20,175 Q60,110 130,85 Q190,65 250,72 Q310,79 360,70 Q410,61 450,55 Q500,49 545,55 Q590,61 630,72 Q680,85 740,100 Q800,115 840,135 L860,175Z" opacity="0.38"/>
+    <!-- Caldera depression centre (lower area) -->
+    <path d="M300,175 Q370,140 430,130 Q490,120 545,130 Q600,140 640,165 L640,175Z" opacity="0.20"/>
+    <!-- Crater fumarole wisps (smoke) -->
+    <path d="M420,128 Q418,115 422,102 Q424,94 420,85" fill="none" stroke="white" stroke-width="2" opacity="0.50"/>
+    <path d="M440,130 Q438,115 445,100 Q450,88 444,76" fill="none" stroke="white" stroke-width="1.5" opacity="0.40"/>
+    <path d="M460,132 Q462,118 458,104 Q455,92 462,80" fill="none" stroke="white" stroke-width="1.5" opacity="0.38"/>
+    <!-- Mandraki village left coast -->
+    <!-- Row of houses -->
+    <rect x="80" y="110" width="22" height="32"/>
+    <polygon points="80,110 91,98 102,110"/>
+    <rect x="108" y="106" width="22" height="36"/>
+    <polygon points="108,106 119,93 130,106"/>
+    <rect x="136" y="113" width="18" height="29"/>
+    <polygon points="136,113 145,102 154,113"/>
+    <!-- Kastro on hilltop above Mandraki -->
+    <rect x="60" y="64" width="46" height="36"/>
+    <rect x="56" y="56" width="12" height="12"/>
+    <rect x="72" y="56" width="12" height="12"/>
+    <rect x="88" y="56" width="12" height="12"/>
+    <!-- Windmills on ridge -->
+    <rect x="230" y="56" width="9" height="30"/>
+    <circle cx="234.5" cy="56" r="6" fill="none" stroke="white" stroke-width="2"/>
+    <line x1="234" y1="50" x2="224" y2="38" stroke="white" stroke-width="2"/>
+    <line x1="234" y1="50" x2="244" y2="38" stroke="white" stroke-width="2"/>
+    <line x1="234" y1="50" x2="227" y2="64" stroke="white" stroke-width="2"/>
+    <line x1="234" y1="50" x2="241" y2="64" stroke="white" stroke-width="2"/>
+    <!-- Second windmill -->
+    <rect x="262" y="60" width="9" height="28"/>
+    <line x1="266" y1="60" x2="258" y2="48" stroke="white" stroke-width="2"/>
+    <line x1="266" y1="60" x2="274" y2="48" stroke="white" stroke-width="2"/>
+    <line x1="266" y1="60" x2="261" y2="72" stroke="white" stroke-width="2"/>
+    <line x1="266" y1="60" x2="271" y2="72" stroke="white" stroke-width="2"/>
+    <!-- Nikia village right hillside -->
+    <rect x="670" y="72" width="18" height="26"/>
+    <polygon points="670,72 679,60 688,72"/>
+    <rect x="694" y="76" width="16" height="22"/>
+    <polygon points="694,76 702,65 710,76"/>
+    <!-- Sea shimmer -->
+    <path d="M0,170 Q215,162 430,168 Q645,174 860,165 L860,180 L0,180Z" opacity="0.15"/>
+  </svg>
+  <div class="ni-hero-overlay"></div>
+  <div class="ni-hero-content">
+    <p class="ni-hero-tag">Dodekanes · Südliche Ägäis</p>
+    <h1 class="ni-hero-title">Nisyros<em>Νίσυρος</em></h1>
+    <p class="ni-hero-sub">Griechenlands einziger aktiver Vulkan — und eine der erstaunlichsten Inseln der Ägäis. Der Krater dampft, der Schwefel riecht, der Boden ist warm. Drumherum: eine grüne Insel mit weißen Dörfern, schwarzen Stränden und einer Bevölkerung, die auf einem Vulkan lebt, als wäre es das Normalste der Welt.</p>
+    <div class="ni-hero-pills">
+      <span class="ni-hero-pill">Aktiver Vulkan</span>
+      <span class="ni-hero-pill">Caldera</span>
+      <span class="ni-hero-pill">Mandraki</span>
+      <span class="ni-hero-pill">Thermalquellen</span>
+      <span class="ni-hero-pill">Schwarzer Strand</span>
+    </div>
+  </div>
+  <div class="ni-hero-waves"></div>
+</div>
+
+<div class="ni-stats-bar">
+  <div class="ni-stat-item">
+    <div class="ni-stat-num">~1.000</div>
+    <div class="ni-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ni-stat-item">
+    <div class="ni-stat-num">41 km²</div>
+    <div class="ni-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="ni-stat-item">
+    <div class="ni-stat-num">422 m</div>
+    <div class="ni-stat-lbl">Höchster Punkt</div>
+  </div>
+  <div class="ni-stat-item">
+    <div class="ni-stat-num">161.000</div>
+    <div class="ni-stat-lbl">Jahre Vulkanaktivität</div>
+  </div>
+  <div class="ni-stat-item">
+    <div class="ni-stat-num">1422</div>
+    <div class="ni-stat-lbl">Letzte große Eruption</div>
+  </div>
+</div>
+
+<div class="ni-content">
+
+  <section class="ni-section">
+    <div class="ni-section-head">
+      <p class="ni-section-label">01 — Geschichte</p>
+      <h2 class="ni-section-title">Poseidon, Feuer<br><em>und eine Insel, die atmet</em></h2>
+      <div class="ni-divider"></div>
+    </div>
+    <div class="ni-history-grid">
+      <div class="ni-history-text">
+        <p>Die Griechen hatten eine Erklärung für die Vulkantätigkeit auf Nisyros: Der Titan Polybotes floh vor Poseidon, dem Gott des Meeres, der ihm einen Felsbrocken von Kos hinterherschleuderte. Der Fels traf Polybotes und begrub ihn unter der Insel. Seitdem zuckt er, und der Vulkan antwortet. Kein anderes Volk der Antike hat seine Geologie so elegant in Mythologie übersetzt.</p>
+        <p>Die Caldera von Nisyros ist eindrucksvoll: ein Kraterfeld von fast vier Kilometern Durchmesser, umgeben von steilen Hängen, mit mehreren aktiven Kratern im Zentrum. Der größte davon, Stefanos, hat einen Durchmesser von über 300 Metern. Der Boden ist gelb von Schwefel, dampfende Fumarolen zischen, und der Geruch von Schwefeldioxid liegt in der Luft. Die letzte große Eruption war 1422 — aber "ruhig" ist der Vulkan nie.</p>
+        <p>Nisyros war trotz — oder wegen — seiner geologischen Natur stets besiedelt. Mandraki, die Hauptstadt, liegt an der Nordküste unter einem mittelalterlichen Kastro. Die Häuser sind weiß und gepflegt, die Gassen gepflastert. Ein Ort, der den Vulkan unter sich täglich spürt und sich davon nicht aufhalten lässt.</p>
+      </div>
+      <div class="ni-timeline">
+        <div class="ni-tl-item">
+          <div class="ni-tl-dot"></div>
+          <div class="ni-tl-year">~3500 v. Chr.</div>
+          <div class="ni-tl-event">Erste Besiedlung auf Nisyros — Spuren früher Kykladen-verwandter Kulturen. Die Insel ist Teil des Handelsnetzes zwischen Rhodos, Kos und den südlichen Inseln der Ägäis.</div>
+        </div>
+        <div class="ni-tl-item">
+          <div class="ni-tl-dot"></div>
+          <div class="ni-tl-year">600 v. Chr.</div>
+          <div class="ni-tl-event">Nisyros gehört zur dorischen Gemeinschaft der Hexapolis — dem Bund aus Rhodos, Kos, Knidos und anderen Städten. Lokale Münzprägung belegt eine entwickelte wirtschaftliche Infrastruktur.</div>
+        </div>
+        <div class="ni-tl-item">
+          <div class="ni-tl-dot"></div>
+          <div class="ni-tl-year">1309</div>
+          <div class="ni-tl-event">Die Johanniter-Ritter übernehmen Nisyros als Teil des Dodekanes. Das Kastro von Mandraki wird ausgebaut. Die Insel dient als Vorposten und Agrarinsel für die Verteidigung von Rhodos.</div>
+        </div>
+        <div class="ni-tl-item">
+          <div class="ni-tl-dot"></div>
+          <div class="ni-tl-year">1422</div>
+          <div class="ni-tl-event">Letzte große Eruption des Nisyros-Vulkans — weithin hörbar, mit Ascheregen bis nach Kos und Rhodos. Die Insel bleibt danach bewohnt. Die Bewohner deuten das Ereignis als Strafe und bauen eine Kirche auf dem Kraterrand.</div>
+        </div>
+        <div class="ni-tl-item">
+          <div class="ni-tl-dot"></div>
+          <div class="ni-tl-year">1522</div>
+          <div class="ni-tl-event">Osmanische Herrschaft nach der Einnahme von Rhodos. Nisyros behält einen gewissen Grad an Selbstverwaltung. Der Weinbau und die Landwirtschaft auf den fruchtbaren Vulkanböden sichern den Wohlstand.</div>
+        </div>
+        <div class="ni-tl-item">
+          <div class="ni-tl-dot"></div>
+          <div class="ni-tl-year">1871</div>
+          <div class="ni-tl-event">Schwere seismische Aktivität mit sichtbaren Kraterneubildungen — die Caldera verändert ihr Gesicht. Internationale Geologen reisen an; Nisyros tritt auf die wissenschaftliche Weltkarte der Vulkanologie.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ni-section">
+    <div class="ni-section-head">
+      <p class="ni-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ni-section-title">Crater, Kastro<br><em>und das grüne Vulkaninnere</em></h2>
+      <div class="ni-divider"></div>
+    </div>
+    <div class="ni-sights-grid">
+
+      <div class="ni-sight-card">
+        <div class="ni-sight-visual sv-ni-crater"></div>
+        <div class="ni-sight-body">
+          <p class="ni-sight-cat">Vulkan · Caldera · Natur</p>
+          <h3 class="ni-sight-name">Stefanos-Krater</h3>
+          <p class="ni-sight-desc">Der Hauptkrater der Caldera — 330 Meter Durchmesser, schwefelgelber Boden, dampfende Fumarolen, der Geruch nach Erde und Feuer. Man kann hineinsteigen und auf dem Kraterboden stehen. Der Boden ist warm unter den Schuhsohlen. Kein Bild bereitet darauf vor.</p>
+        </div>
+      </div>
+
+      <div class="ni-sight-card">
+        <div class="ni-sight-visual sv-ni-mandraki"></div>
+        <div class="ni-sight-body">
+          <p class="ni-sight-cat">Hauptort · Kastro</p>
+          <h3 class="ni-sight-name">Mandraki &amp; Kastro</h3>
+          <p class="ni-sight-desc">Die weißeste Hauptstadt des Dodekanes — Mandraki liegt an der Nordküste unter einem Johanniter-Kastro mit einer der ältesten erhaltenen Zyklopen-Mauern Griechenlands (900 v. Chr.). Die Gassen sind so sauber und gepflegt, als wäre der Bürgermeister täglich unterwegs.</p>
+        </div>
+      </div>
+
+      <div class="ni-sight-card">
+        <div class="ni-sight-visual sv-ni-emborios"></div>
+        <div class="ni-sight-body">
+          <p class="ni-sight-cat">Bergdorf · Caldera-Rand</p>
+          <h3 class="ni-sight-name">Emborios &amp; Nikia</h3>
+          <p class="ni-sight-desc">Zwei Dörfer am Rand der Caldera — Emborios fast verlassen, mit gespenstisch leeren Herrenhäusern und Panoramablick in den Krater; Nikia weiß und lebendig, mit Rundplatz, Kafeneio und dem schönsten Blick auf die Caldera von oben.</p>
+        </div>
+      </div>
+
+      <div class="ni-sight-card">
+        <div class="ni-sight-visual sv-ni-beach"></div>
+        <div class="ni-sight-body">
+          <p class="ni-sight-cat">Strand · Vulkangestein</p>
+          <h3 class="ni-sight-name">Schwarze Strände</h3>
+          <p class="ni-sight-desc">Die Strände von Nisyros sind aus vulkanischem Gestein — dunkler Kies, schwarzer Sand, Bimssteinbrocken. Lies, Pachia Ammos, Avlaki: rau, ursprünglich, mit türkisem Wasser, das gegen das Schwarz der Steine auffällig hell wirkt. Kein Liegestuhl weit und breit.</p>
+        </div>
+      </div>
+
+      <div class="ni-sight-card">
+        <div class="ni-sight-visual sv-ni-thermal"></div>
+        <div class="ni-sight-body">
+          <p class="ni-sight-cat">Thermalquellen · Wellness</p>
+          <h3 class="ni-sight-name">Loutra — Thermalbäder</h3>
+          <p class="ni-sight-event">Die natürlichen Thermalquellen von Loutra an der Ostküste — seit der Antike genutzt, im 19. Jahrhundert als Kuranlage ausgebaut. Das Thermalwasser kommt aus dem Vulkan, riecht nach Schwefel und soll Haut, Gelenke und Seele kurieren. Ob man das glaubt oder nicht.</p>
+        </div>
+      </div>
+
+      <div class="ni-sight-card">
+        <div class="ni-sight-visual sv-ni-nikia"></div>
+        <div class="ni-sight-body">
+          <p class="ni-sight-cat">Wandern · Caldera</p>
+          <h3 class="ni-sight-name">Caldera-Wanderweg</h3>
+          <p class="ni-sight-desc">Der Weg von Nikia in die Caldera hinunter — ein markierter Pfad durch Vulkangestein, Wildkräuter und Euphorbien, der in etwa 45 Minuten vom Dorfrand bis auf den Kraterboden führt. Die langsamste und eindrucksvollste Art, einen aktiven Vulkan zu betreten.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ni-section">
+    <div class="ni-section-head">
+      <p class="ni-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="ni-section-title">Vulkanböden<br><em>machen die besten Zutaten</em></h2>
+      <div class="ni-divider"></div>
+    </div>
+    <div class="ni-tav-grid">
+
+      <div class="ni-tav-card">
+        <div class="ni-tav-top">
+          <div>
+            <h3 class="ni-tav-name">Taverna Nissiros</h3>
+            <div class="ni-tav-loc">📍 Mandraki, Hauptplatz</div>
+          </div>
+          <div class="ni-tav-stars">★★★★★</div>
+        </div>
+        <p class="ni-tav-desc">Das Institution am Hauptplatz von Mandraki — familienbetrieben, mit Produkten aus dem eigenen Garten auf den Vulkanböden. Nisyriotische Spezialitäten: Pitties (gefüllte Teigtaschen), lokaler Käse, Lammfleisch das besser schmeckt als sonst wo, weil das Gras vom Vulkanboden kommt.</p>
+        <div class="ni-tav-dishes">
+          <span class="ni-tav-dish">Pitties (Teigspezialität)</span>
+          <span class="ni-tav-dish">Lammkleftiko</span>
+          <span class="ni-tav-dish">Nisyriotischer Käse</span>
+        </div>
+        <p class="ni-tav-price">Preisklasse: <span>€ · Vulkanküche ohne Aufpreis</span></p>
+      </div>
+
+      <div class="ni-tav-card">
+        <div class="ni-tav-top">
+          <div>
+            <h3 class="ni-tav-name">Irini</h3>
+            <div class="ni-tav-loc">📍 Mandraki, nahe Hafen</div>
+          </div>
+          <div class="ni-tav-stars">★★★★★</div>
+        </div>
+        <p class="ni-tav-desc">Irinis Küche ist das beste Argument gegen Restaurantketten. Alles frisch, alles lokal, alles mit der Akkuratesse einer Frau, die seit vierzig Jahren kocht und jeden Gast so behandelt, als käme er zum Abendessen nach Hause. Der Oktopus-Eintopf ist legendär.</p>
+        <div class="ni-tav-dishes">
+          <span class="ni-tav-dish">Oktopus-Eintopf</span>
+          <span class="ni-tav-dish">Gemüse vom Vulkangarten</span>
+          <span class="ni-tav-dish">Rizogalo (Reispudding)</span>
+        </div>
+        <p class="ch-tav-price">Preisklasse: <span>€ · Hausgemacht auf höchstem Niveau</span></p>
+      </div>
+
+      <div class="ni-tav-card">
+        <div class="ni-tav-top">
+          <div>
+            <h3 class="ni-tav-name">Kafeneio Nikia</h3>
+            <div class="ni-tav-loc">📍 Dorf Nikia, Rundplatz</div>
+          </div>
+          <div class="ni-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ni-tav-desc">Das einzige Kafé im Dorf Nikia am Caldera-Rand — auf dem schönsten Rundplatz der Insel, mit Blick auf das Kraterfeld und, bei Klarsicht, bis nach Kos. Ein Ouzo nach dem Caldera-Abstieg hier oben hat eine Qualität, die mit dem Ort zu tun hat und nicht mit dem Alkohol.</p>
+        <div class="ni-tav-dishes">
+          <span class="ni-tav-dish">Ouzo mit Meze</span>
+          <span class="ni-tav-dish">Griechischer Kaffee</span>
+          <span class="ni-tav-dish">Honig vom Vulkankräuter</span>
+        </div>
+        <p class="ni-tav-price">Preisklasse: <span>€ · Caldera-Blick inklusive</span></p>
+      </div>
+
+      <div class="ni-tav-card">
+        <div class="ni-tav-top">
+          <div>
+            <h3 class="ni-tav-name">Taverna Emborios</h3>
+            <div class="ni-tav-loc">📍 Dorf Emborios</div>
+          </div>
+          <div class="ni-tav-stars">★★★★☆</div>
+        </div>
+        <p class="ni-tav-desc">Im fast verlassenen Dorf Emborios steht noch eine Taverne — geöffnet an Wochenenden und wenn es Besucher gibt. Die Besitzerin öffnet auf Anfrage auch unter der Woche. Ziegenkäse, Salat, Wein aus dem Tank. Die Aussicht in die Caldera gehört zum Menü, ohne Aufpreis.</p>
+        <div class="ni-tav-dishes">
+          <span class="ni-tav-dish">Ziegenkäse vom Dorf</span>
+          <span class="ni-tav-dish">Salat mit Kapern</span>
+          <span class="ni-tav-dish">Hauswein rosé</span>
+        </div>
+        <p class="ni-tav-price">Preisklasse: <span>€ · Nur auf Anfrage</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ni-section">
+    <div class="ni-section-head">
+      <p class="ni-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="ni-section-title">Feuer unter den Füßen<br><em>Alltag über dem Krater</em></h2>
+      <div class="ni-divider"></div>
+    </div>
+    <div class="ni-viertel-grid">
+
+      <div class="ni-viertel-card">
+        <div class="ni-viertel-emoji">🌋</div>
+        <h3 class="ni-viertel-name">Die Caldera</h3>
+        <p class="ni-viertel-desc">Das Herzstück der Insel — ein aktives Kraterfeld mit mehreren Kratern, Fumarolen und einem schwefelgelben Boden, der warm ist. Man kann hineinspazieren, auf dem Rand stehen und in Europa nirgends das Gefühl haben, näher am Innern der Erde zu sein.</p>
+      </div>
+
+      <div class="ni-viertel-card">
+        <div class="ni-viertel-emoji">🏘️</div>
+        <h3 class="ni-viertel-name">Mandraki</h3>
+        <p class="ni-viertel-desc">Die Hauptstadt unter dem Kastro — eine der gepflegtesten und authentischsten kleinen Inselhausgemeinden des Dodekanes. Weiß, ruhig, mit einem Dorfplatz voller alten Platanen und einer Atmosphäre, die Tagestouristen von der Fähre nie ganz zu fassen kriegen.</p>
+      </div>
+
+      <div class="ni-viertel-card">
+        <div class="ni-viertel-emoji">🪨</div>
+        <h3 class="ni-viertel-name">Nikia &amp; Emborios</h3>
+        <p class="ni-viertel-desc">Die zwei Caldera-Randdörfer — Nikia lebendig und weiß, Emborios fast verlassen und geisterhaft. Beide haben Aussichten, die man in keinem Reiseführer findet, weil Fotos sie nicht übertragen. Man muss stehen, schauen, und den Schwefelgeruch dazu einatmen.</p>
+      </div>
+
+      <div class="ni-viertel-card">
+        <div class="ni-viertel-emoji">🌿</div>
+        <h3 class="ni-viertel-name">Vulkanböden</h3>
+        <p class="ni-viertel-desc">Vulkanische Böden sind die fruchtbarsten der Welt — Nisyros ist überraschend grün für eine Ägäisinsel. Feigen, Mandeln, Kräuter, Weinreben, Kapernbüsche: das Innere der Insel ist ein Garten, der von den mineralreichen Böden des Kraters lebt.</p>
+      </div>
+
+      <div class="ni-viertel-card">
+        <div class="ni-viertel-emoji">🚢</div>
+        <h3 class="ni-viertel-name">Tagesausflügler</h3>
+        <p class="ni-viertel-desc">Im Sommer kommen täglich Tagestouristen von Kos und Rhodos — sie sehen den Krater, essen zu Mittag in Mandraki und fahren abends wieder. Wer bleibt, hat die Insel von vier Uhr nachmittags an fast für sich. Das ist der richtige Moment, um Nisyros zu verstehen.</p>
+      </div>
+
+      <div class="ni-viertel-card">
+        <div class="ni-viertel-emoji">🔬</div>
+        <h3 class="ni-viertel-name">Vulkanologie</h3>
+        <p class="ni-viertel-desc">Nisyros steht auf der Beobachtungsliste europäischer Vulkanologen — die Aktivität schwankt, Bodendeformationen werden gemessen, die Fumarolen analysiert. Ein kleines Informationszentrum am Kraterparkplatz erklärt die Geologie für alle, die nicht nur dampfen sehen wollen.</p>
+      </div>
+
+    </div>
+
+    <div class="ni-tip-banner">
+      <div class="ni-tip-emoji">🌋</div>
+      <div class="ni-tip-text">
+        <h3>Die Insel, die noch lebt — im wörtlichsten Sinne</h3>
+        <p>Nisyros ist die einzige Insel der Ägäis, auf der die Erde unter den Füßen warm ist. Das ist keine Metapher. Der Caldera-Boden hat eine Temperatur von über 100 Grad — direkt unter dem Kies, auf dem man steht. Die Einwohner haben sich damit arrangiert wie mit einem schwierigen, aber interessanten Nachbarn: respektvoll, aufmerksam, ohne Hysterie. Diese Gelassenheit gegenüber dem Feuer ist das Eigenartigste und Schönste an der Insel.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>

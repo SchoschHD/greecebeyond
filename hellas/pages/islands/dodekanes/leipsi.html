@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leipsi — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="leipsi.css" />
+</head>
+<body>
+<div id="leipsi-page">
+
+<div class="lp-back-bar">
+  <button class="lp-back-btn" type="button" onclick="closeLeipsi()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="lp-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Leipsi</span></p>
+</div>
+
+<div class="lp-hero">
+  <div class="lp-hero-bg"></div>
+  <div class="lp-hero-dots"></div>
+  <!-- Leipsi silhouette: small flat island, harbour, chapel, turquoise bays -->
+  <svg class="lp-hero-silhouette" viewBox="0 0 780 155" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Main island — low and flat with gentle curves -->
+    <path d="M50,148 Q110,108 180,95 Q250,82 320,85 Q380,88 430,80 Q480,72 530,76 Q580,80 630,90 Q680,100 720,118 L740,148Z" opacity="0.38"/>
+    <!-- Small satellite islets -->
+    <ellipse cx="28" cy="144" rx="40" ry="10" opacity="0.22"/>
+    <ellipse cx="755" cy="142" rx="30" ry="9" opacity="0.20"/>
+    <!-- Harbour with small quay -->
+    <rect x="230" y="115" width="90" height="32" opacity="0.28"/>
+    <!-- Quay wall -->
+    <rect x="228" y="110" width="92" height="6" opacity="0.40"/>
+    <!-- Harbour lighthouse/post -->
+    <rect x="318" y="90" width="6" height="24"/>
+    <polygon points="315,90 321,82 327,90" opacity="0.80"/>
+    <!-- Chora / village cluster -->
+    <rect x="245" y="98" width="20" height="24"/>
+    <polygon points="245,98 255,87 265,98"/>
+    <rect x="270" y="100" width="18" height="22"/>
+    <polygon points="270,100 279,90 288,100"/>
+    <rect x="293" y="102" width="16" height="20"/>
+    <polygon points="293,102 301,93 309,102"/>
+    <!-- White chapel on small rise -->
+    <rect x="355" y="76" width="18" height="22"/>
+    <polygon points="355,76 364,64 373,76"/>
+    <!-- Cross on chapel -->
+    <line x1="364" y1="60" x2="364" y2="54" stroke="white" stroke-width="2"/>
+    <line x1="361" y1="57" x2="367" y2="57" stroke="white" stroke-width="2"/>
+    <!-- Second chapel east -->
+    <rect x="460" y="82" width="16" height="20"/>
+    <polygon points="460,82 468,71 476,82"/>
+    <!-- Windmill on hill -->
+    <rect x="410" y="64" width="9" height="24"/>
+    <line x1="414" y1="64" x2="404" y2="52" stroke="white" stroke-width="2"/>
+    <line x1="414" y1="64" x2="424" y2="52" stroke="white" stroke-width="2"/>
+    <line x1="414" y1="64" x2="408" y2="76" stroke="white" stroke-width="2"/>
+    <line x1="414" y1="64" x2="420" y2="76" stroke="white" stroke-width="2"/>
+    <!-- Boat in harbour -->
+    <path d="M250,138 Q270,132 290,134 Q298,136 295,142 L250,142Z" opacity="0.30"/>
+    <!-- Sea shimmer -->
+    <path d="M0,150 Q195,143 390,148 Q585,153 780,146 L780,158 L0,158Z" opacity="0.15"/>
+  </svg>
+  <div class="lp-hero-overlay"></div>
+  <div class="lp-hero-content">
+    <p class="lp-hero-tag">Dodekanes · Nördliche Inseln</p>
+    <h1 class="lp-hero-title">Leipsi<em>Λειψοί</em></h1>
+    <p class="lp-hero-sub">Die türkiseste Insel des Dodekanes — eine kleine, flache, fast vollständig weiße Insel mit dem klarsten Wasser der nördlichen Ägäis. Keine Highseason-Infrastruktur, keine Nachtclubs, keine Strände mit Liegestühlen aus Plastik. Nur das Wasser, die Kapellen und eine Langsamkeit, die sofort ansteckt.</p>
+    <div class="lp-hero-pills">
+      <span class="lp-hero-pill">Türkises Wasser</span>
+      <span class="lp-hero-pill">Stille Buchten</span>
+      <span class="lp-hero-pill">Weiße Kapellen</span>
+      <span class="lp-hero-pill">Fischerei</span>
+      <span class="lp-hero-pill">Unentdeckt</span>
+    </div>
+  </div>
+  <div class="lp-hero-waves"></div>
+</div>
+
+<div class="lp-stats-bar">
+  <div class="lp-stat-item">
+    <div class="lp-stat-num">~700</div>
+    <div class="lp-stat-lbl">Einwohner</div>
+  </div>
+  <div class="lp-stat-item">
+    <div class="lp-stat-num">17 km²</div>
+    <div class="lp-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="lp-stat-item">
+    <div class="lp-stat-num">30+</div>
+    <div class="lp-stat-lbl">Kapellen auf der Insel</div>
+  </div>
+  <div class="lp-stat-item">
+    <div class="lp-stat-num">1</div>
+    <div class="lp-stat-lbl">Dorf — alles hier</div>
+  </div>
+  <div class="lp-stat-item">
+    <div class="lp-stat-num">Patmos</div>
+    <div class="lp-stat-lbl">Nachbarin (45 Min. Fähre)</div>
+  </div>
+</div>
+
+<div class="lp-content">
+
+  <section class="lp-section">
+    <div class="lp-section-head">
+      <p class="lp-section-label">01 — Geschichte</p>
+      <h2 class="lp-section-title">Kalypso, Wein<br><em>und eine Insel fast ohne Vergangenheit</em></h2>
+      <div class="lp-divider"></div>
+    </div>
+    <div class="lp-history-grid">
+      <div class="lp-history-text">
+        <p>Manche Inseln haben keine Geschichte — oder zumindest keine, die die großen Bücher interessiert hat. Leipsi ist so eine Insel. Klein, flach, wenig strategisch, wenig mythologisch — es gibt eine Tradition, die die Insel mit Kalypso, der Nymphe aus der Odyssee, verbindet, aber diese Tradition ist dünn und schön zugleich. Was man weiß: Leipsi war immer eine Insel der Fischer und Bauern, und daran hat sich wenig geändert.</p>
+        <p>In antiker Zeit war die Insel, die damals Lipsos hieß, ein kleiner Hafen auf dem Handelsweg zwischen Samos und Rhodos. Die Johanniter erwähnten Leipsi kaum — es gab nichts zu befestigen. In osmanischer Zeit war die Insel eine Abhängigkeit von Patmos, verwaltet von der Klostergemeinschaft. Der Alltag: Fischen, Wein anbauen, leben.</p>
+        <p>Heute ist Leipsi das, was Reisende als "unentdeckt" bezeichnen, wenn sie meinen: hier sind noch keine Touristenbusse. Das stimmt. Die Insel hat ein Dorf, eine Taverne an der anderen, ein paar Pensionen, Buchten mit dem türkisesten Wasser des Dodekanes und eine Gemeinschaft, die jeden Fremden nach dem zweiten Tag beim Namen kennt. Mehr braucht es nicht.</p>
+      </div>
+      <div class="lp-timeline">
+        <div class="lp-tl-item">
+          <div class="lp-tl-dot"></div>
+          <div class="lp-tl-year">Antike</div>
+          <div class="lp-tl-event">Lipsos — kleiner Zwischenstopp auf dem Handelsweg zwischen den Nordkykladen und dem Dodekanes. Antike Scherben und Grundmauern auf dem Hügel über dem heutigen Hafen belegen frühe Besiedlung, aber keine Bedeutung.</div>
+        </div>
+        <div class="lp-tl-item">
+          <div class="lp-tl-dot"></div>
+          <div class="lp-tl-year">Mythologie</div>
+          <div class="lp-tl-event">Lokale Tradition verbindet Lipsos mit Kalypso, der Nymphe der Odyssee, die Odysseus sieben Jahre auf ihrer Insel festhielt. Ob das stimmt, ist unbeweisbar — aber als Metapher für Leipsi passt es: eine Insel, die festhalten kann.</div>
+        </div>
+        <div class="lp-tl-item">
+          <div class="lp-tl-dot"></div>
+          <div class="lp-tl-year">1309–1912</div>
+          <div class="lp-tl-event">Verwaltung durch das Johanniter-Kloster Patmos — Leipsi liefert Wein, Fisch und Olivenöl. Die Insel ist autonom genug, um eigene Kapellen zu bauen (über 30 heute), aber abhängig genug, um kein eigenes Kastro zu brauchen.</div>
+        </div>
+        <div class="lp-tl-item">
+          <div class="lp-tl-dot"></div>
+          <div class="lp-tl-year">1912–1947</div>
+          <div class="lp-tl-event">Italienische Herrschaft als Teil des Dodekanes. Für Leipsi ändert sich wenig — die Insel ist zu klein für Militärpräsenz, zu ruhig für Investitionen. Die Einwohner fischen weiter, bauen Wein an, leben.</div>
+        </div>
+        <div class="lp-tl-item">
+          <div class="lp-tl-dot"></div>
+          <div class="lp-tl-year">1947</div>
+          <div class="lp-tl-event">Anschluss an Griechenland. Keine große Feier — Leipsi war auch vorher griechisch im Herzen. Die Fährlinie nach Piräus wird aufgebaut. Langsame Öffnung zur Außenwelt, die die Insel grundsätzlich nicht verändert.</div>
+        </div>
+        <div class="lp-tl-item">
+          <div class="lp-tl-dot"></div>
+          <div class="lp-tl-year">Heute</div>
+          <div class="lp-tl-event">Leipsi lebt vom Sommertourismus — ruhig, bewusst, ohne Masseninfrastruktur. Lokaler Wein, lokaler Fisch, lokale Kapellen. Die Insel kennt sich selbst gut genug, um nicht zu werden, was sie nicht ist.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="lp-section-head">
+      <p class="lp-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="lp-section-title">Kapellen, Buchten<br><em>und das türkiseste Wasser</em></h2>
+      <div class="lp-divider"></div>
+    </div>
+    <div class="lp-sights-grid">
+
+      <div class="lp-sight-card">
+        <div class="lp-sight-visual sv-lp-blefouti"></div>
+        <div class="lp-sight-body">
+          <p class="lp-sight-cat">Strand · Türkis</p>
+          <h3 class="lp-sight-name">Blefouti &amp; Katsadia</h3>
+          <p class="lp-sight-desc">Die zwei schönsten Strände der Insel — Blefouti mit türkisem flachem Wasser und weißen Kieseln, perfekt für Familien; Katsadia einsamer und wilder, mit einer Taverne direkt am Wasser. Beide in zehn bis fünfzehn Minuten mit dem Motorrad vom Dorf erreichbar.</p>
+        </div>
+      </div>
+
+      <div class="lp-sight-card">
+        <div class="lp-sight-visual sv-lp-chora"></div>
+        <div class="lp-sight-body">
+          <p class="lp-sight-cat">Dorf · Hafen · Leben</p>
+          <h3 class="lp-sight-name">Chora &amp; Hafen</h3>
+          <p class="lp-sight-desc">Das einzige Dorf der Insel — weiß, kompakt, mit einer Hauptgasse voller Bougainvillea, einem kleinen Hafen und einem Dorfplatz, auf dem abends die gesamte Inselgemeinschaft zusammenkommt. In dreißig Minuten vollständig zu Fuß erkundet.</p>
+        </div>
+      </div>
+
+      <div class="lp-sight-card">
+        <div class="lp-sight-visual sv-lp-leros"></div>
+        <div class="lp-sight-body">
+          <p class="lp-sight-cat">Ausflug · Nachbarinseln</p>
+          <h3 class="lp-sight-name">Patmos &amp; Leros</h3>
+          <p class="lp-sight-desc">Leipsi liegt zwischen Patmos und Leros — beide in 45 Minuten per Schnellfähre erreichbar. Tagesausflüge zu beiden Inseln sind möglich; viele Besucher nutzen Leipsi bewusst als ruhige Basis und erkunden die Nachbarinseln ohne dort zu übernachten.</p>
+        </div>
+      </div>
+
+      <div class="lp-sight-card">
+        <div class="lp-sight-visual sv-lp-katsadia"></div>
+        <div class="lp-sight-body">
+          <p class="lp-sight-cat">Strand · Einsamkeit</p>
+          <h3 class="lp-sight-name">Katsadia</h3>
+          <p class="lp-sight-desc">Die schönste Bucht der Insel für alle, die Ruhe wollen — feiner Sand, Posidonia-Seegrasbüschel im Wasser als Zeichen der Reinheit, eine einzige Taverne. Katsadia ist das Argument, das man braucht, wenn jemand fragt: warum Leipsi? Man zeigt das Foto und sagt nichts.</p>
+        </div>
+      </div>
+
+      <div class="lp-sight-card">
+        <div class="lp-sight-visual sv-lp-sunset"></div>
+        <div class="lp-sight-body">
+          <p class="lp-sight-cat">Abend · Aussicht</p>
+          <h3 class="lp-sight-name">Kapellen &amp; Sonnenuntergang</h3>
+          <p class="lp-sight-desc">Über dreißig Kapellen verteilt auf einer Insel von 17 km² — das ist eine Kapelle pro 0,5 km². Viele stehen auf Hügeln, viele öffnen nur an Namenstagen, alle sind offen für jeden, der klopft. Bei Sonnenuntergang: ein Hügel, eine Kapelle, das Meer in vier Richtungen.</p>
+        </div>
+      </div>
+
+      <div class="lp-sight-card">
+        <div class="lp-sight-visual sv-lp-paths"></div>
+        <div class="lp-sight-body">
+          <p class="lp-sight-cat">Wein · Natur</p>
+          <h3 class="lp-sight-name">Weinbau &amp; Wandern</h3>
+          <p class="lp-sight-desc">Leipsi produziert seit der Antike Wein — der lokale Muskatwein ist weich und aromatisch, auf der Insel und nirgendwo sonst zu finden. Zwischen den Weinbergen führen Pfade durch Macchia, Feigenplantagen und das flache Inselinnere. Klein, aber vollständig.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="lp-section-head">
+      <p class="lp-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="lp-section-title">Lokaler Wein<br><em>und Fisch vom Morgen</em></h2>
+      <div class="lp-divider"></div>
+    </div>
+    <div class="lp-tav-grid">
+
+      <div class="lp-tav-card">
+        <div class="lp-tav-top">
+          <div>
+            <h3 class="lp-tav-name">Taverna Dionysos</h3>
+            <div class="lp-tav-loc">📍 Chora, Dorfplatz</div>
+          </div>
+          <div class="lp-tav-stars">★★★★★</div>
+        </div>
+        <p class="lp-tav-desc">Das Herzstück des Dorfplatzes — Dionysos ist so etwas wie die Schaltzentrale der Insel. Fisch was da ist, Fleisch was da ist, Wein aus dem eigenen Fass. Der Besitzer kennt jeden Fischer der Insel beim Namen und kauft täglich direkt vom Boot. Abends wächst die Taverne auf den Platz hinaus.</p>
+        <div class="lp-tav-dishes">
+          <span class="lp-tav-dish">Tagesfisch gegrillt</span>
+          <span class="lp-tav-dish">Lokal-Muskatwein</span>
+          <span class="lp-tav-dish">Revithokeftedes (Kichererbsen)</span>
+        </div>
+        <p class="lp-tav-price">Preisklasse: <span>€ · Insel-Mittelpunkt</span></p>
+      </div>
+
+      <div class="lp-tav-card">
+        <div class="lp-tav-top">
+          <div>
+            <h3 class="lp-tav-name">Taverna Katsadia</h3>
+            <div class="lp-tav-loc">📍 Strand Katsadia</div>
+          </div>
+          <div class="lp-tav-stars">★★★★★</div>
+        </div>
+        <p class="lp-tav-desc">Die einzige Taverne am schönsten Strand der Insel — Tische direkt am Wasser, manchmal buchstäblich nass von der Welle. Mittags nach dem Schwimmen: Oktopus, Salat, lokaler Wein kalt. Der Betreiber fährt morgens selbst raus und bringt den Fisch. Einfacher und besser geht es nicht.</p>
+        <div class="lp-tav-dishes">
+          <span class="lp-tav-dish">Oktopus am Grill</span>
+          <span class="lp-tav-dish">Marides gebraten</span>
+          <span class="lp-tav-dish">Horta mit Zitrone</span>
+        </div>
+        <p class="lp-tav-price">Preisklasse: <span>€ · Füße im Sand</span></p>
+      </div>
+
+      <div class="lp-tav-card">
+        <div class="lp-tav-top">
+          <div>
+            <h3 class="lp-tav-name">Kafeneio Plateia</h3>
+            <div class="lp-tav-loc">📍 Chora, Hauptplatz</div>
+          </div>
+          <div class="lp-tav-stars">★★★★☆</div>
+        </div>
+        <p class="lp-tav-desc">Das einzige Kafeneio — offen von sechs Uhr morgens bis nach Mitternacht. Morgens Kaffee für die Fischer, mittags Frappé für die Touristen, abends Ouzo für alle. Die alten Männer spielen Backgammon bis die Sterne stehen. Niemand wird gebeten, schneller zu trinken.</p>
+        <div class="lp-tav-dishes">
+          <span class="lp-tav-dish">Ellinikos Kafes</span>
+          <span class="lp-tav-dish">Loukoumades mit Honig</span>
+          <span class="lp-tav-dish">Ouzo mit Meze</span>
+        </div>
+        <p class="lp-tav-price">Preisklasse: <span>€ · Zeit kostet nichts</span></p>
+      </div>
+
+      <div class="lp-tav-card">
+        <div class="lp-tav-top">
+          <div>
+            <h3 class="lp-tav-name">Pansion &amp; Restaurant Manolis</h3>
+            <div class="lp-tav-loc">📍 Chora, nahe Hafen</div>
+          </div>
+          <div class="lp-tav-stars">★★★★☆</div>
+        </div>
+        <p class="lp-tav-desc">Pension mit Restaurant — Manolis kocht für seine Gäste und alle anderen, die klopfen. Hausgemachte Pastitsio, Moussaka, Stifado. Dazu der eigene Muskatwein aus dem Keller. Der Preis ist fair, die Portion groß, das Gespräch nach dem Essen das Beste auf der ganzen Insel.</p>
+        <div class="lp-tav-dishes">
+          <span class="lp-tav-dish">Pastitsio hausgemacht</span>
+          <span class="lp-tav-dish">Stifado (Rindereintopf)</span>
+          <span class="lp-tav-dish">Muskatwein vom Fass</span>
+        </div>
+        <p class="lp-tav-price">Preisklasse: <span>€ · Familiäre Vollpension</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="lp-section-head">
+      <p class="lp-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="lp-section-title">Klein, türkis<br><em>und mit allem Nötigen</em></h2>
+      <div class="lp-divider"></div>
+    </div>
+    <div class="lp-viertel-grid">
+
+      <div class="lp-viertel-card">
+        <div class="lp-viertel-emoji">🏘️</div>
+        <h3 class="lp-viertel-name">Das Dorf</h3>
+        <p class="lp-viertel-desc">Ein einziges Dorf, ein einziger Platz, ein einziges Kafeneio — Leipsi hat keine Viertel, keine Stadtteile, keine Debatte über das "richtige" Restaurant. Man lernt alle Einwohner kennen, ob man will oder nicht. Das ist kein Nachteil.</p>
+      </div>
+
+      <div class="lp-viertel-card">
+        <div class="lp-viertel-emoji">🌊</div>
+        <h3 class="lp-viertel-name">Blefouti</h3>
+        <p class="lp-viertel-desc">Die familienfreundlichste Bucht der Insel — flaches, warmes, türkises Wasser, weißer Kies, ein paar Sonnenschirme, eine Taverne. Blefouti ist der Beweis, dass man für das schönste Wasser der Ägäis keinen Reiseführer braucht, nur eine Insel wie Leipsi.</p>
+      </div>
+
+      <div class="lp-viertel-card">
+        <div class="lp-viertel-emoji">⛪</div>
+        <h3 class="lp-viertel-name">30+ Kapellen</h3>
+        <p class="lp-viertel-desc">Über dreißig Kapellen für 700 Menschen — eine Kapelle pro 23 Einwohner. Jede Familie hat die ihre, jede auf einem anderen Hügel, in einer anderen Bucht. An Namenstagen brennen Kerzen in der ganzen Insel gleichzeitig.</p>
+      </div>
+
+      <div class="lp-viertel-card">
+        <div class="lp-viertel-emoji">🍇</div>
+        <h3 class="lp-viertel-name">Lokaler Muskatwein</h3>
+        <p class="lp-viertel-desc">Der Muskatwein von Leipsi ist nirgendwo sonst erhältlich — eine alte Sorte, angebaut auf Terrassenfeldern, gekeltert in kleinen Mengen, verkauft in Flaschen ohne Etikette oder direkt vom Fass. Man nimmt Flaschen mit nach Hause und findet keinen Ersatz.</p>
+      </div>
+
+      <div class="lp-viertel-card">
+        <div class="lp-viertel-emoji">🐟</div>
+        <h3 class="lp-viertel-name">Fischerei</h3>
+        <p class="lp-viertel-desc">Fünfzehn Fischerboote — die gesamte Flotte der Insel. Die Fischer fahren nachts raus und bringen morgens zurück was das Meer schickt. Was da ist, steht auf der Tafel. Was nicht da ist, steht nicht drauf. Das ist das Qualitätsmerkmal.</p>
+      </div>
+
+      <div class="lp-viertel-card">
+        <div class="lp-viertel-emoji">⛴️</div>
+        <h3 class="lp-viertel-name">Inselhüpf-Basis</h3>
+        <p class="lp-viertel-desc">Leichy's günstige Pensionen und zentrale Lage zwischen Patmos und Leros machen die Insel zur perfekten ruhigen Basis für den Inselhüpf. Morgens Fähre nach Patmos, nachmittags zurück, abends auf dem Dorfplatz von Leipsi — das ist ein guter Tag.</p>
+      </div>
+
+    </div>
+
+    <div class="lp-tip-banner">
+      <div class="lp-tip-emoji">🌊</div>
+      <div class="lp-tip-text">
+        <h3>Die Insel, auf der das Wasser die beste Sehenswürdigkeit ist</h3>
+        <p>Auf Leipsi gibt es keine Sehenswürdigkeiten im klassischen Sinn — kein Welterbe, keine berühmte Höhle, keine ikonische Architektur. Was es gibt, ist das türkiseste Wasser des nördlichen Dodekanes, über dreißig weiße Kapellen auf Hügeln, ein lokaler Wein den man nirgendwo kaufen kann, und eine Gemeinschaft, die jeden kennt. Das ist genug. Manchmal ist das sogar mehr als genug.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+</body>
+</html>

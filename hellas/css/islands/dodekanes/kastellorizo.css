@@ -1,0 +1,258 @@
+/* =============================================
+   KASTELORIZO — Insel-Unterseite
+   Akzentfarbe: Tiefrot / Ägäisches Gold (Mediterrano-Rot)
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#kastelorizo-page {
+  font-family: 'Outfit', sans-serif;
+  color: #120408;
+  background: #faf3f0;
+}
+
+/* ── BACK BAR ── */
+.kz-back-bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 3rem;
+  background: rgba(250,243,240,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(168,28,28,0.18);
+}
+.kz-back-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: none; border: 1px solid rgba(168,28,28,0.35);
+  padding: 0.45rem 1.1rem; border-radius: 30px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  color: #a81c1c; transition: all 0.2s;
+}
+.kz-back-btn:hover { background: #fce8e0; border-color: #a81c1c; }
+.kz-back-btn svg {
+  width: 14px; height: 14px; stroke: currentColor;
+  fill: none; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.kz-breadcrumb { font-size: 0.8rem; color: #8a7070; letter-spacing: 0.05em; }
+.kz-breadcrumb span { color: #a81c1c; }
+
+/* ── HERO ── */
+.kz-hero {
+  height: 80vh; min-height: 520px;
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.kz-hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(166deg, #060002 0%, #1a0408 18%, #501018 40%, #980830 62%, #d84050 80%, #f09080 94%, #fcd0c0 100%);
+}
+.kz-hero-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(ellipse 62% 52% at 50% 66%, rgba(200,40,60,0.24) 0%, transparent 70%),
+    radial-gradient(ellipse 38% 28% at 78% 18%, rgba(60,8,20,0.42) 0%, transparent 60%),
+    radial-gradient(ellipse 25% 20% at 20% 78%, rgba(200,140,80,0.18) 0%, transparent 55%);
+}
+.kz-hero-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.040) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+.kz-hero-silhouette {
+  position: absolute; bottom: 108px; left: 50%; transform: translateX(-50%);
+  width: 860px; height: 180px;
+  opacity: 0.12;
+}
+.kz-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(8,0,4,0.52);
+}
+.kz-hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23faf3f0' fill-opacity='1' d='M0,60L80,68C160,76,320,90,480,86C640,82,800,58,960,50C1120,42,1280,54,1360,60L1440,66L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.kz-hero-content { position: relative; z-index: 2; color: white; padding: 0 2rem; }
+.kz-hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: rgba(255,255,255,0.45);
+  margin-bottom: 1.2rem;
+}
+.kz-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.2rem, 7.5vw, 7rem);
+  font-weight: 300; line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+.kz-hero-title em { font-style: italic; display: block; color: #ffc8a8; }
+.kz-hero-sub {
+  max-width: 570px; font-size: 1rem; margin: 0 auto 2.5rem;
+  color: rgba(255,255,255,0.65); line-height: 1.75; font-weight: 300;
+}
+.kz-hero-pills { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+.kz-hero-pill {
+  padding: 5px 16px;
+  border: 1px solid rgba(255,255,255,0.20);
+  border-radius: 30px;
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.78);
+}
+
+/* ── STATS BAR ── */
+.kz-stats-bar {
+  display: flex; justify-content: center;
+  background: white;
+  border-bottom: 1px solid rgba(168,28,28,0.12);
+}
+.kz-stat-item {
+  flex: 1; max-width: 200px;
+  text-align: center; padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(168,28,28,0.09);
+}
+.kz-stat-item:last-child { border-right: none; }
+.kz-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 600; color: #a81c1c; line-height: 1;
+}
+.kz-stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: #8a7070; margin-top: 0.3rem;
+}
+
+/* ── CONTENT ── */
+.kz-content { max-width: 1200px; margin: 0 auto; padding: 0 3rem 6rem; }
+.kz-section { padding: 4rem 0 2rem; }
+.kz-section-head { margin-bottom: 2.5rem; }
+.kz-section-label {
+  font-size: 0.68rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: #a81c1c; margin-bottom: 0.8rem;
+}
+.kz-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 300; color: #120408; line-height: 1.15;
+}
+.kz-section-title em { font-style: italic; color: #a81c1c; }
+.kz-divider { width: 40px; height: 2px; background: #a81c1c; margin-top: 1.2rem; }
+
+/* ── GESCHICHTE ── */
+.kz-history-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.kz-history-text p {
+  font-size: 1rem; line-height: 1.9; color: #2a1018;
+  font-weight: 300; margin-bottom: 1.2rem;
+}
+.kz-timeline { position: relative; padding-left: 2rem; }
+.kz-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 0;
+  width: 1px; background: rgba(168,28,28,0.20);
+}
+.kz-tl-item { position: relative; margin-bottom: 1.8rem; }
+.kz-tl-dot {
+  position: absolute; left: -2rem; top: 5px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: white; border: 2px solid #a81c1c;
+}
+.kz-tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 600; color: #a81c1c; margin-bottom: 0.25rem;
+}
+.kz-tl-event { font-size: 0.88rem; color: #2a1018; line-height: 1.6; font-weight: 300; }
+
+/* ── SEHENSWÜRDIGKEITEN ── */
+.kz-sights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.kz-sight-card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid rgba(168,28,28,0.15);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.kz-sight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(20,4,8,0.10); }
+.kz-sight-visual { height: 140px; }
+.kz-sight-body { padding: 1.2rem; }
+.kz-sight-cat {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #a81c1c; margin-bottom: 0.35rem;
+}
+.kz-sight-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 300; color: #120408; margin-bottom: 0.4rem;
+}
+.kz-sight-desc { font-size: 0.83rem; color: #3a1820; line-height: 1.65; font-weight: 300; }
+
+.sv-kz-harbour  { background: linear-gradient(160deg, #0c0002 0%, #400818 50%, #a82030 75%, #e06060 100%); }
+.sv-kz-kastro   { background: linear-gradient(160deg, #080406 0%, #281018 55%, #702040 80%, #c06080 100%); }
+.sv-kz-cave     { background: linear-gradient(160deg, #020808 0%, #082838 55%, #1868a8 80%, #50a8e0 100%); }
+.sv-kz-turkey   { background: linear-gradient(160deg, #060804 0%, #202c10 55%, #507830 80%, #90b860 100%); }
+.sv-kz-film     { background: linear-gradient(160deg, #100802 0%, #402010 50%, #c07020 75%, #e8b058 100%); }
+.sv-kz-mosque   { background: linear-gradient(160deg, #060408 0%, #201028 55%, #582868 80%, #9858a8 100%); }
+
+/* ── TAVERNEN ── */
+.kz-tav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.kz-tav-card {
+  padding: 1.8rem; background: white;
+  border: 1px solid rgba(168,28,28,0.15);
+  border-radius: 4px; border-left: 3px solid #a81c1c;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.kz-tav-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(20,4,8,0.08); }
+.kz-tav-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
+.kz-tav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300; color: #120408;
+}
+.kz-tav-loc { font-size: 0.75rem; color: #8a7070; margin-top: 0.2rem; }
+.kz-tav-stars { color: #a81c1c; font-size: 0.85rem; letter-spacing: 2px; }
+.kz-tav-desc { font-size: 0.88rem; color: #2a1018; line-height: 1.75; font-weight: 300; margin-bottom: 1rem; }
+.kz-tav-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.8rem; }
+.kz-tav-dish {
+  padding: 3px 10px; background: #fce8e0; color: #380810;
+  border-radius: 20px; font-size: 0.68rem; letter-spacing: 0.08em;
+}
+.kz-tav-price { font-size: 0.8rem; color: #8a7070; }
+.kz-tav-price span { color: #a81c1c; font-weight: 500; }
+
+/* ── VIERTEL ── */
+.kz-viertel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.kz-viertel-card {
+  padding: 1.8rem; background: #fce8e0;
+  border-radius: 4px; text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.kz-viertel-card:hover { background: #f8d0c0; transform: translateY(-4px); }
+.kz-viertel-emoji { font-size: 2rem; margin-bottom: 0.8rem; }
+.kz-viertel-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300; color: #120408; margin-bottom: 0.5rem;
+}
+.kz-viertel-desc { font-size: 0.82rem; color: #3a1820; line-height: 1.65; font-weight: 300; }
+
+/* ── TIP BANNER ── */
+.kz-tip-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #060002 0%, #400818 40%, #a81c1c 100%);
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; gap: 3rem;
+}
+.kz-tip-emoji { font-size: 4rem; flex-shrink: 0; }
+.kz-tip-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300; color: white; margin-bottom: 0.6rem;
+}
+.kz-tip-text p {
+  font-size: 0.92rem; color: rgba(255,255,255,0.68); line-height: 1.75; font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .kz-back-bar { padding: 0.8rem 1.2rem; }
+  .kz-content { padding: 2rem 1.2rem 4rem; }
+  .kz-history-grid { grid-template-columns: 1fr; }
+  .kz-sights-grid { grid-template-columns: 1fr 1fr; }
+  .kz-tav-grid { grid-template-columns: 1fr; }
+  .kz-viertel-grid { grid-template-columns: 1fr 1fr; }
+  .kz-tip-banner { flex-direction: column; gap: 1.2rem; padding: 2rem; }
+}
