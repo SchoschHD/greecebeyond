@@ -449,6 +449,12 @@ cite {
   grid-template-columns: repeat(4, 1fr);
   gap: 1.2rem;
 }
+/* Ionische Inseln Grid */
+.ionian-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
 /* Rhodos ist large (span 2) */
 .dod-card.large { grid-column: span 2; }
 .dod-card .island-bg    { height: 220px; }
@@ -469,6 +475,11 @@ cite {
 .isle-symi        { background: linear-gradient(160deg, #c86020 0%, #e8a840 40%, #f5dca0 70%, #c8e6f5 100%); }
 .isle-tilos       { background: linear-gradient(160deg, #0a2a1a 0%, #2a7a3a 50%, #90c870 100%); }
 .isle-chalki      { background: linear-gradient(160deg, #0a1a3a 0%, #1a5a9a 45%, #f0c840 100%); }
+.isle-lefkada     { background: linear-gradient(160deg, #163d28 0%, #2a7a4f 50%, #79c5a3 100%); }
+.isle-zakynthos  { background: linear-gradient(160deg, #17384f 0%, #2f76a7 50%, #8ad8e6 100%); }
+.isle-ithaki     { background: linear-gradient(160deg, #2a502c 0%, #5a8a50 50%, #bde0b2 100%); }
+.isle-paxoi      { background: linear-gradient(160deg, #244b45 0%, #4a8a7a 50%, #a0dcbc 100%); }
+.isle-kythira    { background: linear-gradient(160deg, #4a2f36 0%, #8a5a70 50%, #d8b8c8 100%); }
 
 /* ── KYKLADEN GRID ── */
 .kykladen-grid {
