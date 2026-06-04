@@ -447,3 +447,67 @@ function openKythira() {
   }
 }
 function closeKythira() { closePage('kythira-page'); }
+
+// Convenience-Funktionen für Nordostägäis
+function openLesbos() {
+  if (typeof loadPage === 'function') {
+    loadPage('lesbos-page', 'islands/nordostaegaeis/lesbos.html').then(() => openPage('lesbos-page'));
+  } else {
+    openPage('lesbos-page');
+  }
+}
+function closeLesbos() { closePage('lesbos-page'); }
+
+function openChios() {
+  if (typeof loadPage === 'function') {
+    loadPage('chios-page', 'islands/nordostaegaeis/chios.html').then(() => openPage('chios-page'));
+  } else {
+    openPage('chios-page');
+  }
+}
+function closeChios() { closePage('chios-page'); }
+
+function openSamos() {
+  if (typeof loadPage === 'function') {
+    loadPage('samos-page', 'islands/nordostaegaeis/samos.html').then(() => openPage('samos-page'));
+  } else {
+    openPage('samos-page');
+  }
+}
+function closeSamos() { closePage('samos-page'); }
+
+function openIkaria() {
+  if (typeof loadPage === 'function') {
+    loadPage('ikaria-page', 'islands/nordostaegaeis/ikaria.html').then(() => openPage('ikaria-page'));
+  } else {
+    openPage('ikaria-page');
+  }
+}
+function closeIkaria() { closePage('ikaria-page'); }
+
+function openLimnos() {
+  if (typeof loadPage === 'function') {
+    loadPage('limnos-page', 'islands/nordostaegaeis/limnos.html').then(() => openPage('limnos-page'));
+  } else {
+    openPage('limnos-page');
+  }
+}
+function closeLimnos() { closePage('limnos-page'); }
+
+function openThassos() {
+  if (typeof loadPage === 'function') {
+    loadPage('thassos-page', 'islands/nordostaegaeis/thassos.html').then(() => openPage('thassos-page'));
+  } else {
+    openPage('thassos-page');
+  }
+}
+function closeThassos() { closePage('thassos-page'); }
+
+function openSamothraki() {
+  if (typeof loadPage === 'function') {
+    loadPage('samothraki-page', 'islands/nordostaegaeis/samothraki.html').then(() => openPage('samothraki-page'));
+  } else {
+    openPage('samothraki-page');
+  }
+}
+function closeSamothraki() { closePage('samothraki-page'); }

@@ -481,6 +481,22 @@ cite {
 .isle-paxoi      { background: linear-gradient(160deg, #244b45 0%, #4a8a7a 50%, #a0dcbc 100%); }
 .isle-kythira    { background: linear-gradient(160deg, #4a2f36 0%, #8a5a70 50%, #d8b8c8 100%); }
 
+/* Nordostägäis Grid */
+.northaegean-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+/* Nordostägäis Farbpaletten */
+.isle-lesbos       { background: linear-gradient(160deg, #2a4a3a 0%, #3a7a5a 50%, #9fd8b2 100%); }
+.isle-chios        { background: linear-gradient(160deg, #2a3a6a 0%, #4a6aa0 50%, #a8c8f0 100%); }
+.isle-samos        { background: linear-gradient(160deg, #183a2a 0%, #2a7a50 50%, #78d080 100%); }
+.isle-ikaria       { background: linear-gradient(160deg, #3a2a4a 0%, #6a4a8a 50%, #d0b0e8 100%); }
+.isle-limnos       { background: linear-gradient(160deg, #1a3a2a 0%, #3a7a5a 50%, #bfd8b0 100%); }
+.isle-thassos      { background: linear-gradient(160deg, #1a4a6a 0%, #2a6aa0 50%, #90c8e8 100%); }
+.isle-samothraki   { background: linear-gradient(160deg, #3a2a1a 0%, #7a4a2a 50%, #e8c890 100%); }
+
 /* ── KYKLADEN GRID ── */
 .kykladen-grid {
   display: grid;
