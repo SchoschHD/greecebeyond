@@ -1,9 +1,360 @@
-<section class="island-page">
-  <header class="island-hero isle-limnos">
-    <h1>Limnos (Lemnos)</h1>
-    <p>Platzhalterseite für Limnos — Inhalte hier ergänzen.</p>
-  </header>
-  <article class="island-content">
-    <p>Mehr Infos, Bilder und Sehenswürdigkeiten folgen.</p>
-  </article>
-</section>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Limnos — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="limnos.css" />
+</head>
+<body>
+<div id="limnos-page">
+
+<div class="lm-back-bar">
+  <button class="lm-back-btn" type="button" onclick="closeLimnos()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="lm-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Limnos</span></p>
+</div>
+
+<div class="lm-hero">
+  <div class="lm-hero-bg"></div>
+  <div class="lm-hero-dots"></div>
+  <svg class="lm-hero-silhouette" viewBox="0 0 840 175" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Meereslinie -->
+    <path d="M0,162 Q210,150 420,158 Q630,166 840,152 L840,175 L0,175Z" opacity="0.18"/>
+    <!-- Myrina Kastro auf Felssporn links -->
+    <path d="M60,175 Q120,90 190,55 Q235,35 260,175Z" opacity="0.26"/>
+    <!-- Kastro-Mauern -->
+    <rect x="145" y="28" width="90" height="32"/>
+    <rect x="141" y="18" width="98" height="12"/>
+    <rect x="144" y="4" width="14" height="16"/>
+    <rect x="165" y="4" width="14" height="16"/>
+    <rect x="210" y="4" width="14" height="16"/>
+    <rect x="228" y="4" width="14" height="16"/>
+    <!-- Byzant. Türme -->
+    <rect x="180" y="0" width="18" height="22"/>
+    <rect x="176" y="-2" width="26" height="6"/>
+    <!-- Myrina Stadtsilhouette unten -->
+    <rect x="80" y="140" width="16" height="22"/>
+    <rect x="100" y="135" width="18" height="27"/>
+    <rect x="122" y="128" width="16" height="34"/>
+    <!-- Hephaistos-Vulkanlandschaft Mitte (flache Kuppe) -->
+    <path d="M320,175 Q380,128 440,115 Q490,105 520,175Z" opacity="0.20"/>
+    <!-- Hephaistia Ruinen auf Hügel -->
+    <rect x="400" y="100" width="70" height="18"/>
+    <rect x="396" y="92" width="78" height="10"/>
+    <!-- Säulen antik -->
+    <rect x="404" y="72" width="6" height="20"/>
+    <rect x="418" y="72" width="6" height="20"/>
+    <rect x="432" y="72" width="6" height="20"/>
+    <rect x="446" y="72" width="6" height="20"/>
+    <rect x="460" y="72" width="6" height="20"/>
+    <polygon points="394,72 437,52 480,72"/>
+    <!-- Sanddünen Gomati rechts-mitte (einzigartig in Griechenland) -->
+    <path d="M540,175 Q570,148 600,138 Q625,130 640,138 Q658,148 672,175Z" opacity="0.18"/>
+    <path d="M630,138 Q650,125 668,132 Q682,138 692,155 L692,175Z" opacity="0.14"/>
+    <!-- Flamingo-Motiv (Limnos = Flamingos im Winter) -->
+    <line x1="730" y1="175" x2="730" y2="138" stroke="white" stroke-width="2.5" opacity="0.30"/>
+    <path d="M730,138 Q742,125 750,130 Q755,134 748,140" fill="none" stroke="white" stroke-width="2.5" opacity="0.30"/>
+    <ellipse cx="728" cy="136" rx="10" ry="6" opacity="0.28"/>
+    <line x1="760" y1="175" x2="760" y2="142" stroke="white" stroke-width="2.5" opacity="0.25"/>
+    <path d="M760,142 Q772,130 779,134 Q784,138 777,144" fill="none" stroke="white" stroke-width="2.5" opacity="0.25"/>
+    <ellipse cx="758" cy="140" rx="10" ry="6" opacity="0.22"/>
+    <!-- Weinreben-Motiv links unten -->
+    <path d="M30,155 Q45,142 60,150" fill="none" stroke="white" stroke-width="2" opacity="0.22"/>
+    <circle cx="38" cy="148" r="3" opacity="0.20"/>
+    <circle cx="50" cy="144" r="3" opacity="0.20"/>
+  </svg>
+  <div class="lm-hero-overlay"></div>
+  <div class="lm-hero-content">
+    <p class="lm-hero-tag">Nordägäis · Ostmakedonien &amp; Thrakien</p>
+    <h1 class="lm-hero-title">Limnos<em>Λήμνος</em></h1>
+    <p class="lm-hero-sub">Die Insel des Hephaistos — flaches Vulkanland, antike Schlachtfelder, die einzigen Sanddünen Griechenlands, und im Winter Tausende von Flamingos auf den Lagunen. Limnos ist still, weit und von einer Schönheit, die sich nicht aufdrängt.</p>
+    <div class="lm-hero-pills">
+      <span class="lm-hero-pill">Hephaistos-Mythos</span>
+      <span class="lm-hero-pill">Sanddünen Gomati</span>
+      <span class="lm-hero-pill">Flamingos</span>
+      <span class="lm-hero-pill">Myrina Kastro</span>
+      <span class="lm-hero-pill">Kallisti-Wein</span>
+    </div>
+  </div>
+  <div class="lm-hero-waves"></div>
+</div>
+
+<div class="lm-stats-bar">
+  <div class="lm-stat-item">
+    <div class="lm-stat-num">16.700</div>
+    <div class="lm-stat-lbl">Einwohner</div>
+  </div>
+  <div class="lm-stat-item">
+    <div class="lm-stat-num">477 km²</div>
+    <div class="lm-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="lm-stat-item">
+    <div class="lm-stat-num">4000+</div>
+    <div class="lm-stat-lbl">Flamingos im Winter</div>
+  </div>
+  <div class="lm-stat-item">
+    <div class="lm-stat-num">23</div>
+    <div class="lm-stat-lbl">Strände</div>
+  </div>
+  <div class="lm-stat-item">
+    <div class="lm-stat-num">#1</div>
+    <div class="lm-stat-lbl">Sanddünen Griechenlands</div>
+  </div>
+</div>
+
+<div class="lm-content">
+
+  <section class="lm-section">
+    <div class="lm-section-head">
+      <p class="lm-section-label">01 — Geschichte</p>
+      <h2 class="lm-section-title">Hephaistos, Gallipoli<br><em>und das stille Nordmeer</em></h2>
+      <div class="lm-divider"></div>
+    </div>
+    <div class="lm-history-grid">
+      <div class="lm-history-text">
+        <p>Limnos ist die Insel des Hephaistos — dem Mythos nach stürzte der Gott des Feuers vom Olymp und landete auf Limnos, wo er von den Inselbewohnern aufgenommen wurde. Die vulkanische Landschaft der Insel, die erloschenen Lava-Felder und die heiße Erde, aus der in antiker Zeit Feuer aufstieg, schienen den Mythos zu bestätigen. Hephaistos' Schmiede lag hier — und die Limniotinnen galten als die ersten Handwerkerinnen der Ägäis.</p>
+        <p>Die Insel liegt an einer der strategisch bedeutsamsten Wasserstraßen des Mittelmeers — dem Eingang zu den Dardanellen. Das hat Limnos durch die Geschichte zum Schauplatz gemacht: Hier ankerten die alliierten Flotten vor der Gallipoli-Kampagne 1915, hier führten Römer, Byzantiner, Venezianer und Osmanen ihre Kontrolle über die Meerenge aus. Das Militär ist bis heute auf der Insel präsent.</p>
+        <p>Was die meisten Besucher überrascht: Limnos ist kein typisches ägäisches Insel-Erlebnis. Die Landschaft ist flach, weit, fast anatolisch. Weizenstoppeln, Lagunen, Sanddünen. Im Winter ziehen Tausende von Flamingos auf die Salzseen — ein Anblick, den niemand erwartet und niemand vergisst. Die Insel ist ein Geheimnis, das seine Entdecker sorgfältig auswählt.</p>
+      </div>
+      <div class="lm-timeline">
+        <div class="lm-tl-item">
+          <div class="lm-tl-dot"></div>
+          <div class="lm-tl-year">4. Jt. v. Chr.</div>
+          <div class="lm-tl-event">Poliochni — eine der ältesten Städte Europas entsteht auf Limnos, zeitgleich mit Troja. Die bronzezeitliche Siedlung ist heute eine der bedeutendsten archäologischen Stätten der Nordägäis.</div>
+        </div>
+        <div class="lm-tl-item">
+          <div class="lm-tl-dot"></div>
+          <div class="lm-tl-year">Antike</div>
+          <div class="lm-tl-event">Hephaistos wählt Limnos als Werkstatt. Die Insel ist Zentrum des Metallhandwerks und religiöser Kulte. Hephaistia an der Nordküste wird zur bedeutendsten Stadt — ihr antikes Theater blickt aufs Meer.</div>
+        </div>
+        <div class="lm-tl-item">
+          <div class="lm-tl-dot"></div>
+          <div class="lm-tl-year">13. Jh.</div>
+          <div class="lm-tl-event">Venezianische Herrschaft. Das Kastro von Myrina wird ausgebaut — auf einem Felssporn zwischen zwei Buchten, eine der dramatischsten Festungslagen der Ägäis. Die Mauern stehen noch heute.</div>
+        </div>
+        <div class="lm-tl-item">
+          <div class="lm-tl-dot"></div>
+          <div class="lm-tl-year">1915</div>
+          <div class="lm-tl-event">Der Hafen Mudros auf Limnos wird zur Operationsbasis der alliierten Gallipoli-Expedition. Hunderttausende Soldaten durchqueren die Insel. Der Vertrag von Mudros (1918) beendet den Ersten Weltkrieg an der osmanischen Front.</div>
+        </div>
+        <div class="lm-tl-item">
+          <div class="lm-tl-dot"></div>
+          <div class="lm-tl-year">1947</div>
+          <div class="lm-tl-event">Limnos wird Teil Griechenlands. Die Insel bleibt stark militärisch geprägt — der Flughafen ist ein ehemaliger Militärflughafen, die Streitkräfte sind bis heute sichtbar präsent.</div>
+        </div>
+        <div class="lm-tl-item">
+          <div class="lm-tl-dot"></div>
+          <div class="lm-tl-year">Heute</div>
+          <div class="lm-tl-event">Limnos wird von Griechen aus dem Festland entdeckt, die der Kykladen-Überfüllung entkommen wollen. Die Flamingos im Winter, die Sanddünen, der Kallisti-Wein — alles ist da. Es fehlt nur der Andrang.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lm-section">
+    <div class="lm-section-head">
+      <p class="lm-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="lm-section-title">Kastro, Dünen<br><em>und die Stadt die älter ist als Athen</em></h2>
+      <div class="lm-divider"></div>
+    </div>
+    <div class="lm-sights-grid">
+
+      <div class="lm-sight-card">
+        <div class="lm-sight-visual sv-lm-kastro"></div>
+        <div class="lm-sight-body">
+          <p class="lm-sight-cat">Mittelalter · Wahrzeichen</p>
+          <h3 class="lm-sight-name">Kastro Myrina</h3>
+          <p class="lm-sight-desc">Das venezianische Kastro über der Hauptstadt — auf einem schwarzen Lavafelsen zwischen zwei Buchten, mit Blick auf den Athos im Norden und die Dardanellen im Osten. Bei Sonnenuntergang leuchten die Mauern orange. Hirsche leben frei im Inneren der Anlage.</p>
+        </div>
+      </div>
+
+      <div class="lm-sight-card">
+        <div class="lm-sight-visual sv-lm-poliochni"></div>
+        <div class="lm-sight-body">
+          <p class="lm-sight-cat">Archäologie · Bronzezeit</p>
+          <h3 class="lm-sight-name">Poliochni</h3>
+          <p class="lm-sight-desc">Eine der ältesten Städte Europas — 4000 v. Chr., zeitgleich mit Troja. Die Ausgrabungen an der Ostküste von Limnos legen eine vollständige bronzezeitliche Stadtanlage frei: Gassen, Häuser, ein Rathaus. Ein Ort, der das Wort „alt" neu definiert.</p>
+        </div>
+      </div>
+
+      <div class="lm-sight-card">
+        <div class="lm-sight-visual sv-lm-gomati"></div>
+        <div class="lm-sight-body">
+          <p class="lm-sight-cat">Natur · Einzigartig</p>
+          <h3 class="lm-sight-name">Sanddünen Gomati</h3>
+          <p class="lm-sight-desc">Die einzigen Sanddünen Griechenlands — im Nordwesten der Insel, hinter einem langen wilden Strand. Bis zu 25 Meter hoch, von Strandhafer bewachsen, von Winden geformt. Ein Landschaftsbild das niemand mit der Ägäis assoziiert — bis man es sieht.</p>
+        </div>
+      </div>
+
+      <div class="lm-sight-card">
+        <div class="lm-sight-visual sv-lm-flamingo"></div>
+        <div class="lm-sight-body">
+          <p class="lm-sight-cat">Natur · Winter</p>
+          <h3 class="lm-sight-name">Flamingos &amp; Lagunen</h3>
+          <p class="lm-sight-desc">Von November bis März überwintern Tausende von Flamingos auf den Salzseen von Limnos — Alyki und Chortarolimni. Rosafarbene Wolken über der flachen Landschaft, Stille, nur der Wind. Das unwahrscheinlichste Erlebnis der nordgriechischen Inseln.</p>
+        </div>
+      </div>
+
+      <div class="lm-sight-card">
+        <div class="lm-sight-visual sv-lm-hephaistia"></div>
+        <div class="lm-sight-body">
+          <p class="lm-sight-cat">Antike · Theater</p>
+          <h3 class="lm-sight-name">Hephaistia &amp; Kabeirion</h3>
+          <p class="lm-sight-desc">Das antike Hephaistia an der Nordküste — einst die bedeutendste Stadt der Insel, mit einem Theater das aufs Meer blickt. Daneben das Kabeirion-Heiligtum, eines der geheimnisvollsten Mysterienschreine der Antike. Die Ausgrabungen laufen noch immer.</p>
+        </div>
+      </div>
+
+      <div class="lm-sight-card">
+        <div class="lm-sight-visual sv-lm-myrina"></div>
+        <div class="lm-sight-body">
+          <p class="lm-sight-cat">Hauptstadt · Hafen</p>
+          <h3 class="lm-sight-name">Myrina</h3>
+          <p class="lm-sight-desc">Die Hauptstadt von Limnos — eine der schönsten Hafenstädte der Nordägäis. Die lange Strandpromenade, die osmanischen Gassen im alten Viertel Romeikos Gialos, die neugriechischen Kafeneia am Hafen. Myrina ist bodenständig und elegant zugleich.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lm-section">
+    <div class="lm-section-head">
+      <p class="lm-section-label">03 — Tavernen &amp; Küche</p>
+      <h2 class="lm-section-title">Kallisti-Wein<br><em>und die Küche des Nordens</em></h2>
+      <div class="lm-divider"></div>
+    </div>
+    <div class="lm-tav-grid">
+
+      <div class="lm-tav-card">
+        <div class="lm-tav-top">
+          <div>
+            <h3 class="lm-tav-name">O Platanos</h3>
+            <div class="lm-tav-loc">📍 Myrina, Romeikos Gialos</div>
+          </div>
+          <div class="lm-tav-stars">★★★★★</div>
+        </div>
+        <p class="lm-tav-desc">Die Institution im alten Stadtviertel unter einem uralten Platanen — seit drei Generationen dieselbe Familie, dieselben Rezepte. Die Küche von Limnos ist nordhelleneisch und großzügig: Fischeintopf mit Safran, Lamm mit wildem Fenchel, Kallisti-Wein vom Fass. Der Tisch unter dem Baum ist der beste Platz der Insel.</p>
+        <div class="lm-tav-dishes">
+          <span class="lm-tav-dish">Fischeintopf mit Safran</span>
+          <span class="lm-tav-dish">Lamm mit Fenchel</span>
+          <span class="lm-tav-dish">Kallisti-Weißwein</span>
+        </div>
+        <p class="lm-tav-price">Preisklasse: <span>€€ · Abendessen · Tradition</span></p>
+      </div>
+
+      <div class="lm-tav-card">
+        <div class="lm-tav-top">
+          <div>
+            <h3 class="lm-tav-name">To Limanaki</h3>
+            <div class="lm-tav-loc">📍 Myrina, Fischerkai</div>
+          </div>
+          <div class="lm-tav-stars">★★★★★</div>
+        </div>
+        <p class="lm-tav-desc">Das Fischerlokal am kleinen Nebenkai — wo die Fischerboote anlegen und der Fang direkt in die Küche geht. Katzen sitzen auf der Kaimauer, Möwen kreisen darüber, der Koch brüllt durch den Hof. Das authentischste Mittagessen von Limnos: Kalamari fritto, Barsch vom Grill, lokaler Ouzo.</p>
+        <div class="lm-tav-dishes">
+          <span class="lm-tav-dish">Kalamari fritto</span>
+          <span class="lm-tav-dish">Barsch vom Grill</span>
+          <span class="lm-tav-dish">Limnos-Ouzo</span>
+        </div>
+        <p class="lm-tav-price">Preisklasse: <span>€ · Mittag · Fischerkai</span></p>
+      </div>
+
+      <div class="lm-tav-card">
+        <div class="lm-tav-top">
+          <div>
+            <h3 class="lm-tav-name">Kallisti Weingut</h3>
+            <div class="lm-tav-loc">📍 Repanidi, Weingut</div>
+          </div>
+          <div class="lm-tav-stars">★★★★★</div>
+        </div>
+        <p class="lm-tav-desc">Das bekannteste Weingut der Insel — Kallisti produziert aus der autochthonen Muscat-Traube einen der eigenartigsten Weißweine Griechenlands: blumig, trocken, mit einem Hauch von Meersalz. Weinproben im Weinkeller, Blick auf die Weinstöcke, Käseplatte dazu. Ein Nachmittag der sich dehnt.</p>
+        <div class="lm-tav-dishes">
+          <span class="lm-tav-dish">Kallisti Muscat (trocken)</span>
+          <span class="lm-tav-dish">Limnos-Käseplatte</span>
+          <span class="lm-tav-dish">Lokaler Honig</span>
+        </div>
+        <p class="lm-tav-price">Preisklasse: <span>€€ · Weinprobe · Weingut</span></p>
+      </div>
+
+      <div class="lm-tav-card">
+        <div class="lm-tav-top">
+          <div>
+            <h3 class="lm-tav-name">Taverna Keros</h3>
+            <div class="lm-tav-loc">📍 Keros-Strand</div>
+          </div>
+          <div class="lm-tav-stars">★★★★☆</div>
+        </div>
+        <p class="lm-tav-desc">Die Strandtaverne am Keros — dem beliebtesten Windsurf-Strand der Insel. Einfache Speisen, große Portionen, Blick aufs Meer und auf die Windsurfer die über die Bucht fliegen. Das Beste: Nach dem Essen schläft man direkt am Strand ein, und niemand stört sich daran.</p>
+        <div class="lm-tav-dishes">
+          <span class="lm-tav-dish">Gegrillter Fang des Tages</span>
+          <span class="lm-tav-dish">Horiatiki mit Limnos-Käse</span>
+          <span class="lm-tav-dish">Kalter Kallisti-Wein</span>
+        </div>
+        <p class="lm-tav-price">Preisklasse: <span>€ · Strand · Mittag</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lm-section">
+    <div class="lm-section-head">
+      <p class="lm-section-label">04 — Orte &amp; Charakter</p>
+      <h2 class="lm-section-title">Weit, still<br><em>und voller Überraschungen</em></h2>
+      <div class="lm-divider"></div>
+    </div>
+    <div class="lm-viertel-grid">
+
+      <div class="lm-viertel-card">
+        <div class="lm-viertel-emoji">🏰</div>
+        <h3 class="lm-viertel-name">Myrina</h3>
+        <p class="lm-viertel-desc">Die Hauptstadt — Kastro auf Lavafelsen, osmanische Gassen, lange Strandpromenade. Eine der authentischsten Hafenstädte der Nordägäis, ohne Tourismusdekoration. Abends sitzen alle am Hafen.</p>
+      </div>
+
+      <div class="lm-viertel-card">
+        <div class="lm-viertel-emoji">🏛️</div>
+        <h3 class="lm-viertel-name">Poliochni</h3>
+        <p class="lm-viertel-desc">Die älteste Stadt Europas — 4000 v. Chr., älter als Mykene, älter als die ersten ägyptischen Pyramiden. Die Ausgrabungen an der Ostküste sind kaum besucht und umso beeindruckender.</p>
+      </div>
+
+      <div class="lm-viertel-card">
+        <div class="lm-viertel-emoji">🌊</div>
+        <h3 class="lm-viertel-name">Gomati-Dünen</h3>
+        <p class="lm-viertel-desc">Die einzigen Sanddünen Griechenlands — bis 25 Meter hoch, wild, unberührt. Dahinter ein langer leerer Strand. Ein Landschaftsbild das niemand mit Griechenland verbindet. Bis man dort steht.</p>
+      </div>
+
+      <div class="lm-viertel-card">
+        <div class="lm-viertel-emoji">🦩</div>
+        <h3 class="lm-viertel-name">Flamingo-Lagunen</h3>
+        <p class="lm-viertel-desc">Von November bis März — Tausende Flamingos auf den Salzseen. Das unwahrscheinlichste Erlebnis der Ägäis. Alyki und Chortarolimni sind die besten Beobachtungsorte, früh morgens.</p>
+      </div>
+
+      <div class="lm-viertel-card">
+        <div class="lm-viertel-emoji">🍷</div>
+        <h3 class="lm-viertel-name">Kallisti-Wein</h3>
+        <p class="lm-viertel-desc">Der autochthone Muscat von Limnos — trocken, blumig, mit Meersalz. Einer der eigenartigsten Weißweine Griechenlands, kaum exportiert, direkt vom Weingut am besten. Kallisti ist das Geheimnis der Insel im Glas.</p>
+      </div>
+
+      <div class="lm-viertel-card">
+        <div class="lm-viertel-emoji">💨</div>
+        <h3 class="lm-viertel-name">Keros &amp; Windsurfen</h3>
+        <p class="lm-viertel-desc">Keros ist einer der besten Windsurf-Strände Griechenlands — konstanter Meltemi, flaches Wasser, langer Sandstrand. Im Sommer ein internationales Windsurf-Mekka, das trotzdem nie überlaufen wirkt.</p>
+      </div>
+
+    </div>
+
+    <div class="lm-tip-banner">
+      <div class="lm-tip-emoji">🦩</div>
+      <div class="lm-tip-text">
+        <h3>November auf Limnos: wenn die Flamingos kommen</h3>
+        <p>Wenn der Sommer geht und die anderen Inseln schließen, öffnet Limnos sein bestes Kapitel. Im November landen die ersten Flamingos auf den Salzseen — erst Hunderte, dann Tausende. Die Salzseen von Alyki liegen still unter dem Novemberlicht, und die Flamingos stehen darin wie hingemalt. Kein Reiseführer listet das als Hauptattraktion. Wer es weiß, kommt extra dafür. Die Insel im Winter ist ein anderes Limnos — leer, tief, und von einer Schönheit die sich nicht fotografieren lässt.</p>
+      </div>
+    </div>
+
+  </section>
+</div>
+</div>
+</body>
+</html>

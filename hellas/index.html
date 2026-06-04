@@ -70,6 +70,12 @@
   <link rel="stylesheet" href="css/islands/ionische/leukada.css">
   <link rel="stylesheet" href="css/islands/ionische/zakynthos.css">
   
+   <!-- Insel-Detail-Styles Nordostern-->
+  <link rel="stylesheet" href="css/islands/nordostaegaeis/samos.css">
+  <link rel="stylesheet" href="css/islands/nordostaegaeis/chios.css">
+  <link rel="stylesheet" href="css/islands/nordostaegaeis/lesvos.css">
+  <link rel="stylesheet" href="css/islands/nordostaegaeis/limnos.css">
+  <link rel="stylesheet" href="css/islands/nordostaegaeis/ikaria.css">
 
 
   <!-- Rezept-Styles -->
@@ -1232,9 +1238,9 @@
   async function loadPage(id, file) {
     const container = document.getElementById(id);
     if (container.innerHTML.trim() === '') {
-    const res = await fetch('pages/' + file);
-    const text = await res.text();
-   if (id === 'athens-page' && !document.getElementById('athens-inline-styles')) {
+      const res = await fetch('pages/' + file);
+      const text = await res.text();
+      if (id === 'athens-page' && !document.getElementById('athens-inline-styles')) {
         const styleMatch = text.match(/<style[^>]*>([\s\S]*?)<\/style>/i);
         if (styleMatch) {
           const styleElement = document.createElement('style');
