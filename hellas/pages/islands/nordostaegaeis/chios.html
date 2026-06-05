@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chios — Hellas Inseln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="chios.css" />
+</head>
+<body>
+<div id="chios-page">
+
+<div class="ti-back-bar">
+  <button class="ti-back-btn" type="button" onclick="closeChios()">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Zurück
+  </button>
+  <p class="ti-breadcrumb">Hellas &nbsp;/&nbsp; Inseln &nbsp;/&nbsp; <span>Chios</span></p>
+</div>
+
+<div class="ti-hero">
+  <div class="ti-hero-bg"></div>
+  <div class="ti-hero-dots"></div>
+  <svg class="ti-hero-silhouette" viewBox="0 0 840 175" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <!-- Küstenlinie -->
+    <path d="M0,158 Q250,150 480,155 Q680,162 840,156 L840,175 L0,175Z" opacity="0.15"/>
+    
+    <!-- Pyrgi & Mesta: Geometrische Häuser & Festungsmauern (Mitte bis Rechts) -->
+    <rect x="520" y="95" width="45" height="60" opacity="0.25"/>
+    <rect x="565" y="75" width="55" height="80" opacity="0.3"/>
+    <rect x="620" y="105" width="40" height="50" opacity="0.2"/>
+    <polygon points="565,75 592,50 620,75" opacity="0.22"/>
+    <!-- Brückenbogen / Befestigungsgasse -->
+    <path d="M500,120 Q510,105 520,120 L520,155 L500,155 Z" opacity="0.25"/>
+    
+    <!-- Die berühmten Windmühlen von Chios (Links) -->
+    <rect x="180" y="95" width="22" height="60" rx="4" opacity="0.28"/>
+    <circle cx="191" cy="105" r="2" opacity="0.4"/>
+    <line x1="191" y1="105" x2="160" y2="85" stroke="white" stroke-width="1" opacity="0.25"/>
+    <line x1="191" y1="105" x2="222" y2="125" stroke="white" stroke-width="1" opacity="0.25"/>
+    <line x1="191" y1="105" x2="171" y2="135" stroke="white" stroke-width="1" opacity="0.25"/>
+    <line x1="191" y1="105" x2="211" y2="75" stroke="white" stroke-width="1" opacity="0.25"/>
+
+    <rect x="230" y="100" width="20" height="55" rx="4" opacity="0.2"/>
+    <line x1="240" y1="110" x2="215" y2="95" stroke="white" stroke-width="0.8" opacity="0.18"/>
+    <line x1="240" y1="110" x2="265" y2="125" stroke="white" stroke-width="0.8" opacity="0.18"/>
+
+    <!-- Knorrige Mastixbäume (Mitte links) -->
+    <path d="M340,155 Q345,130 335,120 Q350,110 365,125 Q360,140 368,155" fill="none" stroke="white" stroke-width="4" opacity="0.25"/>
+    <circle cx="335" cy="115" r="12" opacity="0.15"/>
+    <circle cx="365" cy="120" r="14" opacity="0.15"/>
+    
+    <!-- Bergkonturen (Pelinaio Massiv im Norden) -->
+    <path d="M0,155 Q100,80 260,70 Q380,60 540,155 Z" opacity="0.1"/>
+  </svg>
+  <div class="ti-hero-overlay"></div>
+  <div class="ti-hero-content">
+    <p class="ti-hero-tag">Ostägäische Inseln · Heimat des Mastix</p>
+    <h1 class="ti-hero-title">Chios<em>Χίος</em></h1>
+    <p class="ti-hero-sub">Die geheimnisvolle Kulturinsel — geprägt von den weltweit einzigartigen „Tränen“ der Mastixbäume, genuesischen Adelslandsitzen und wehrhaften Dörfern, deren Fassaden wie monochrome Kunstwerke anmuten.</p>
+    <div class="ti-hero-pills">
+      <span class="ti-hero-pill">Mastichochoria</span>
+      <span class="ti-hero-pill">Pyrgi &amp; Mesta</span>
+      <span class="ti-hero-pill">Kampos-Zitrusgärten</span>
+      <span class="ti-hero-pill">Nea Moni (UNESCO)</span>
+      <span class="ti-hero-pill">Mavro Volia</span>
+    </div>
+  </div>
+  <div class="ti-hero-waves"></div>
+</div>
+
+<div class="ti-stats-bar">
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">51.000</div>
+    <div class="ti-stat-lbl">Einwohner</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">842 km²</div>
+    <div class="ti-stat-lbl">Inselfläche</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">24</div>
+    <div class="ti-stat-lbl">Mastix-Dörfer</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">1.297 m</div>
+    <div class="ti-stat-lbl">Höchster Berg (Pelinaio)</div>
+  </div>
+  <div class="ti-stat-item">
+    <div class="ti-stat-num">100%</div>
+    <div class="ti-stat-lbl">Weltmonopol für echtes Mastix</div>
+  </div>
+</div>
+
+<div class="ti-content">
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">01 — Erbe &amp; Architektur</p>
+      <h2 class="ti-section-title">Die Tränen der Bäume und<br><em>die Geometrie der Genuesen</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-history-grid">
+      <div class="ti-history-text">
+        <p>Chios ist keine typische Urlaubsinsel – sie ist ein tief verwurzeltes, historisches Handelszentrum. Weltberühmt ist der Süden der Insel für die Kultivierung des Mastix-Strauchs (Pistacia lentiscus). Obwohl diese Pflanze überall im Mittelmeerraum wächst, tritt das kostbare, aromatische Harz nur hier im Süden von Chios aus den angeritzten Rinden aus. Seit der Antike gilt es als Heilmittel, Kaugummi und Luxusgut.</p>
+        <p>Dieses Monopol brachte der Insel über Jahrhunderte enormen Reichtum, zog aber auch Eroberer an. Im Mittelalter bauten die Genuesen den Süden zu einer uneinnehmbaren Festungslandschaft aus, um den Schmuggel des "weißen Goldes" zu verhindern. Es entstanden die Mastichochoria – Dörfer ohne offene Fenster nach außen, die wie kompakte Trutzburgen wirken.</p>
+        <p>Ein architektonisches Phänomen ist das Dorf Pyrgi. Die Häuser sind komplett mit den sogenannten „Xysta“ verziert: komplexe, geometrische Kratzputz-Muster in Schwarz und Weiß, die von den genuesischen Kolonialherren inspiriert wurden und der Insel ein absolut unverwechselbares Gesicht verleihen.</p>
+      </div>
+      <div class="ti-timeline">
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">Antike</div>
+          <div class="ti-tl-event">Chios blüht als einer der mächtigsten Stadtstaaten der Seegeschichte. Die Insel gilt laut antiken Quellen als der wahrscheinlichste Geburtsort des Dichters Homer.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">1042</div>
+          <div class="ti-tl-event">Kaiser Konstantinos IX. stiftet das Kloster Nea Moni im Zentrum der Insel. Seine byzantinischen Goldmosaike gehören heute zum UNESCO-Weltkulturerbe.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">1346–1566</div>
+          <div class="ti-tl-event">Die genuesische Handelsgesellschaft „Maona“ beherrscht Chios. Sie plant die Festungsdörfer Mesta, Olympi und Pyrgi am Reißbrett, um die Mastix-Ernte militarisiert zu schützen.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">1822</div>
+          <div class="ti-tl-event">Das dunkelste Kapitel: Das Massaker von Chios durch die osmanischen Besatzer fordert Zehntausende Leben und traumatisiert ganz Europa – verewigt im weltberühmten Gemälde von Eugène Delacroix.</div>
+        </div>
+        <div class="ti-tl-item">
+          <div class="ti-tl-dot"></div>
+          <div class="ti-tl-year">Heute</div>
+          <div class="ti-tl-event">Die traditionsreiche Genossenschaft der Mastix-Bauern sichert das Welterbe. Das Harz boomt weltweit in der Medizin, Kosmetik und gehobenen Gastronomie.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">02 — Sehenswürdigkeiten</p>
+      <h2 class="ti-section-title">Kratzputzkunst, Labyrinthe<br><em>und tiefschwarze Vulkanstrände</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-sights-grid">
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-ch-pyrgi"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Architektur · Kultur</p>
+          <h3 class="ti-sight-name">Pyrgi (Das gemalte Dorf)</h3>
+          <p class="ti-sight-desc">Jede Hauswand, jeder Balkon und jeder Torbogen ist hier mit filigranen, handgekratzten Graustufen-Mustern überzogen. Ein optisch faszinierendes Freiluftmuseum.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-ch-mesta"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Mittelalter · Festung</p>
+          <h3 class="ti-sight-name">Mesta</h3>
+          <p class="ti-sight-desc">Das am besten erhaltene Festungsdorf. Ein Labyrinth aus tunnelartigen, kopfsteingepflasterten Gassen, Kreuzgewölben und lückenlosen, steinernen Wehrmauern.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-ch-mavrovolia"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Strand · Geologie</p>
+          <h3 class="ti-sight-name">Mavro Volia</h3>
+          <p class="ti-sight-desc">Ein dramatischer Strand im Süden, bedeckt mit tiefschwarzen, spiegelglatten Kieselsteinen eines erloschenen Vulkans. Das Wasser ist tiefblau, glasklar und erfrischend kühl.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-ch-kampos"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Gärten · Herrenhäuser</p>
+          <h3 class="ti-sight-name">Die Ebene von Kampos</h3>
+          <p class="ti-sight-desc">Ein riesiges, grünes Tal voller Zitrusplantagen, geschützt von hohen rötlichen Steinmauern. Mittendrin thronen die prachtvollen, aristokratischen Genueser-Villen.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-ch-neamoni"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">UNESCO · Sakralbau</p>
+          <h3 class="ti-sight-name">Kloster Nea Moni</h3>
+          <p class="ti-sight-desc">Versteckt in den bewaldeten Bergen des Inselzentrums. Die monumentalen Goldmosaike aus dem 11. Jahrhundert zählen zu den wichtigsten Meisterwerken der byzantinischen Kunst.</p>
+        </div>
+      </div>
+
+      <div class="ti-sight-card">
+        <div class="ti-sight-visual sv-ch-anavatos"></div>
+        <div class="ti-sight-body">
+          <p class="ti-sight-cat">Geisterdorf · Panorama</p>
+          <h3 class="ti-sight-name">Anavatos</h3>
+          <p class="ti-sight-desc">Das „Mystras der Ägäis“. Ein verlassenes Steindorf, das wie eine natürliche Fortsetzung spektakulär und schwindelerregend auf einem steilen Felssporn aus der Tiefe wächst.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">03 — Tavernen &amp; Kulinarik</p>
+      <h2 class="ti-section-title">Erlesene Mastix-Liköre<br><em>und sonnengetrockneter Oktopus</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-tav-grid">
+
+      <div class="ti-tav-card">
+        <div class="ti-tav-top">
+          <div>
+            <h3 class="ti-tav-name">Hotzas</h3>
+            <div class="ti-tav-loc">📍 Chios-Stadt (Chora)</div>
+          </div>
+          <div class="ti-tav-stars">★★★★★</div>
+        </div>
+        <p class="ti-tav-desc">Eine geschichtsträchtige Taverne seit 1882 in einem idyllischen Garten. Der Wirt kocht nach jahrhundertealten Rezepten der kleinasiatischen Flüchtlinge. Berühmt für Schmorgerichte und die Verwendung regionaler Zitrusfrüchte.</p>
+        <div class="ti-tav-dishes">
+          <span class="ti-tav-dish">Mastix-Hühnchen</span>
+          <span class="ti-tav-dish">Handgemachte Nudeln (Xerotigana)</span>
+          <span class="ti-tav-dish">Auberginen-Mousse</span>
+        </div>
+        <p class="ti-tav-price">Preisklasse: <span>€€ · Abendessen · Uralte Tradition</span></p>
+      </div>
+
+      <div class="ti-tav-card">
+        <div class="ti-tav-top">
+          <div>
+            <h3 class="ti-tav-name">Mesta Ouzeri</h3>
+            <div class="ti-tav-loc">📍 Mesta, Zentraler Dorfplatz</div>
+          </div>
+          <div class="ti-tav-stars">★★★★★</div>
+        </div>
+        <p class="ti-tav-desc">Unter einem dichten Blätterdach auf dem winzigen, mittelalterlichen Platz von Mesta. Perfekt für Mezedes am Mittag. Hier trinkt man Souma (Feigenschnaps) und genießt lokalen Käse aus Ziegenmilch.</p>
+        <div class="ti-tav-dishes">
+          <span class="ti-tav-dish">Mastelo (Gegrillter Inselkäse)</span>
+          <span class="ti-tav-dish">Zucchiniblüten mit Reis</span>
+          <span class="ti-tav-dish">Eisgekühlte Souma</span>
+        </div>
+        <p class="ti-tav-price">Preisklasse: <span>€ · Mittagessen · Romantisch</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ti-section">
+    <div class="ti-section-head">
+      <p class="ti-section-label">04 — Regionen &amp; Charakter</p>
+      <h2 class="ti-section-title">Vom herben, felsigen Norden<br><em>zu den süßen Hainbuchen des Südens</em></h2>
+      <div class="ti-divider"></div>
+    </div>
+    <div class="ti-viertel-grid">
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🌳</div>
+        <h3 class="ti-viertel-name">Die Mastichochoria</h3>
+        <p class="ti-viertel-desc">Die 24 Dörfer im sanften Süden. Das Epizentrum der Mastix-Kultur, dominiert von Festungsarchitektur und den charakteristischen, knorrigen Plantagen.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">🍊</div>
+        <h3 class="ti-viertel-name">Der Kampos</h3>
+        <p class="ti-viertel-desc">Ein herrschaftlicher Mikrokosmos direkt südlich der Chora. Genuesischer Prunk trifft auf dichte, betörend duftende Mandarinen- und Zitronenhaine.</p>
+      </div>
+
+      <div class="ti-viertel-card">
+        <div class="ti-viertel-emoji">⛰️</div>
+        <h3 class="ti-viertel-name">Der raue Norden</h3>
+        <p class="ti-viertel-desc">Ein schroffer, alpiner und kaum besiedelter Kontrast. Steile Bergstraßen führen vorbei an alten Minendörfern zu einsamen, windgepeitschten Meeresbuchten.</p>
+      </div>
+
+    </div>
+
+    <div class="ti-tip-banner">
+      <div class="ti-tip-emoji">🏺</div>
+      <div class="ti-tip-text">
+        <h3>Das Naturwunder des Mastix</h3>
+        <p>Versuche niemals, die Rinde eines Mastixbaumes außerhalb von Chios zu ritzen – sie wird austrocknen, ohne den magischen Saft zu spenden. Wissenschaftler rätseln bis heute, warum nur der Süden von Chios dieses Weltmonopol besitzt. Es ist das Zusammenspiel aus einem jahrtausendealten Klon der Pflanze, kalkhaltigem Boden und einem extrem trockenen Mikroklima. Wenn die Bauern im Spätsommer den Boden mit weißem Kalkpulver bestreuen und die Stämme ritzen, fallen die "Tränen" zu Boden, erstarren und werden in wochenlanger Handarbeit von den Frauen der Dörfer gewaschen und verlesen. Ein echter Kultursegen, den man schmecken und spüren kann.</p>
+      </div>
+    </div>
+
+  </section>
+</div>
+</div>
+</body>
+</html>
