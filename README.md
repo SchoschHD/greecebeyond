@@ -38,3 +38,13 @@ Kategorie
 Bild
 Detailseite
 Dann gibst du die Karten programmgesteuert aus und musst nicht jedes Mal HTML duplizieren.
+
+
+----------------------------
+Priorisierte Quick‑Wins
+
+Bilder: konvertieren zu WebP, generiere responsive srcset, lossless/visuelle Komprimierung + loading="lazy". (größter Impact)
+Render‑blocking CSS: kritisches CSS inline, rest asynchron laden; CSS-Dateien bündeln/minifizieren.
+Unbenutztes CSS: viele per‑Insel Dateien zusammenführen oder dynamisch laden.
+Assets ausliefern: gzip/brotli + Cache‑Header (oder CDN).
+Kleine Fixes: favicon hinzufügen (vermeidet 404), Preload für Hero/LCP‑Bild.
