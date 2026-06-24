@@ -20,18 +20,10 @@ CREATE TABLE IF NOT EXISTS destinations (
   KEY idx_destination_sort (sort_order)
 );
 
-INSERT INTO destinations
+INSERT IGNORE INTO destinations
   (type, slug, name, region, subtitle, description, image_path, detail_path, sort_order)
 VALUES
   ('island', 'santorini', 'Santorini', 'Kykladen', 'Caldera und weiße Kuben', 'Bekannte Insel mit ikonischen Sonnenuntergängen und Blick auf die Caldera.', 'assets/img/islands/kyklades/santorini/santorinibild01.jpg', 'pages/islands/kyklades/santorini.html', 10),
   ('island', 'mykonos', 'Mykonos', 'Kykladen', 'Windmühlen und Strandbars', 'Lebhafte Insel mit weiß getünchten Gassen und langen Strandtagen.', 'assets/img/islands/kyklades/mykonos/mykonosbild01.jpg', 'pages/islands/kyklades/mykonos.html', 20),
   ('city', 'athens', 'Athen', 'Attika', 'Antike und Gegenwart', 'Die Hauptstadt verbindet archäologische Stätten mit dichtem Stadtleben.', NULL, 'pages/cities/athens.html', 30),
-  ('food', 'tzatziki', 'Tzatziki', 'Griechische Küche', 'Joghurt, Gurke, Knoblauch', 'Ein Klassiker der griechischen Küche, frisch und kühl serviert.', NULL, 'pages/food/tzatziki.html', 40)
-ON DUPLICATE KEY UPDATE
-  name = VALUES(name),
-  region = VALUES(region),
-  subtitle = VALUES(subtitle),
-  description = VALUES(description),
-  image_path = VALUES(image_path),
-  detail_path = VALUES(detail_path),
-  sort_order = VALUES(sort_order);
+  ('food', 'tzatziki', 'Tzatziki', 'Griechische Küche', 'Joghurt, Gurke, Knoblauch', 'Ein Klassiker der griechischen Küche, frisch und kühl serviert.', NULL, 'pages/food/tzatziki.html', 40);

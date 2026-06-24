@@ -1,0 +1,146 @@
+/* =============================================
+   DATABASE LIVE VIEW
+   ============================================= */
+
+.database {
+  padding: 2rem 3rem 6rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.database-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 2rem 1.25rem;
+  color: #5a4d41;
+  font-size: 0.92rem;
+}
+
+.database-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7a6a58;
+}
+
+.database-status::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #b04d1c;
+  box-shadow: 0 0 0 4px rgba(176, 77, 28, 0.12);
+}
+
+.database-status.is-ready::before {
+  background: #1b7a4c;
+  box-shadow: 0 0 0 4px rgba(27, 122, 76, 0.12);
+}
+
+.database-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.database-card {
+  overflow: hidden;
+  border: 1px solid #e6ddcf;
+  border-radius: 2px;
+  background: #fffaf2;
+  min-height: 100%;
+}
+
+.database-media {
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, #163e5c 0%, #2f6f8a 55%, #c57a42 100%);
+  position: relative;
+}
+
+.database-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.database-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: end;
+  padding: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.database-body {
+  padding: 1rem 1rem 1.1rem;
+}
+
+.database-meta {
+  font-size: 0.66rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #a18263;
+  margin-bottom: 0.7rem;
+}
+
+.database-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #1f2f3b;
+  margin-bottom: 0.45rem;
+}
+
+.database-subtitle {
+  color: #5e564d;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 0.85rem;
+}
+
+.database-desc {
+  color: #675d51;
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+.database-empty {
+  grid-column: 1 / -1;
+  padding: 1.5rem 1rem;
+  border: 1px dashed #d8cbb8;
+  color: #75685a;
+  background: #fcf7ef;
+}
+
+@media (max-width: 1100px) {
+  .database-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .database {
+    padding-inline: 1rem;
+  }
+
+  .database-summary {
+    margin-inline: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .database-grid {
+    grid-template-columns: 1fr;
+  }
+}

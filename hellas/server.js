@@ -4,6 +4,33 @@ const path = require('path');
 const { URL } = require('url');
 const { pool, ping } = require('./db');
 
+function loadEnvFile(filePath) {
+  if (!fs.existsSync(filePath)) {
+    return;
+  }
+
+  const content = fs.readFileSync(filePath, 'utf8');
+  for (const rawLine of content.split(/\r?\n/)) {
+    const line = rawLine.trim();
+    if (!line || line.startsWith('#')) {
+      continue;
+    }
+
+    const equalsIndex = line.indexOf('=');
+    if (equalsIndex === -1) {
+      continue;
+    }
+
+    const key = line.slice(0, equalsIndex).trim();
+    const value = line.slice(equalsIndex + 1).trim();
+    if (key && (!Object.prototype.hasOwnProperty.call(process.env, key) || process.env[key] === '')) {
+      process.env[key] = value;
+    }
+  }
+}
+
+loadEnvFile(path.join(__dirname, '.env'));
+
 const root = __dirname;
 const port = Number(process.env.PORT || 3000);
 
