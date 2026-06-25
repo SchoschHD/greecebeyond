@@ -47,5 +47,12 @@ VALUES
   ('island', 'sikinos', 'Sikinos', 'Kykladen', 'Unhurried and authentic', 'Sikinos stays quiet, simple and far from mass tourism.', NULL, 'pages/islands/kyklades/sikinos.html', 220),
   ('island', 'thirassia', 'Thirassia', 'Kykladen', 'Across from Santorini', 'The small neighbor of Santorini shows a quieter side of the region.', NULL, 'pages/islands/kyklades/thirassia.html', 230),
   ('island', 'ios', 'Ios', 'Kykladen', 'Young, bright, lively', 'Ios is known for beach days, summer nights and steep village lanes.', 'assets/img/islands/kyklades/ios/iosbild01.jpg', 'pages/islands/kyklades/ios.html', 240),
+  ('island', 'korfu', 'Korfu', 'Ionische Inseln', 'Green hills and Venetian traces', 'Corfu combines old-town architecture, olive groves and a strong coastal identity.', 'assets/img/islands/ionische/korfu/korfuBild01.jpg', 'pages/islands/ionische/korfu.html', 300),
+  ('island', 'kefalonia', 'Kefalonia', 'Ionische Inseln', 'Cliffs, coves and blue water', 'Kefalonia is known for dramatic beaches, caves and mountain landscapes.', 'assets/img/islands/ionische/kefalonia/kefaloniaBild01.jpg', 'pages/islands/ionische/kefalonia.html', 310),
+  ('island', 'lefkada', 'Lefkada', 'Ionische Inseln', 'Dramatic beaches and bridges', 'Lefkada brings long beaches, turquoise water and easy mainland access.', NULL, 'pages/islands/ionische/lefkada.html', 320),
+  ('island', 'zakynthos', 'Zakynthos', 'Ionische Inseln', 'Blue caves and shipwreck bay', 'Zakynthos mixes famous beaches, caves and a vivid summer atmosphere.', NULL, 'pages/islands/ionische/zakynthos.html', 330),
+  ('island', 'ithaki', 'Ithaki', 'Ionische Inseln', 'Odysseus and quiet harbors', 'A calm island with literary weight, small villages and sheltered bays.', NULL, 'pages/islands/ionische/ithaki.html', 340),
+  ('island', 'paxoi', 'Paxoi', 'Ionische Inseln', 'Tiny island, deep blue sea', 'Paxoi is a compact island set with olive trees, clear water and a slow pace.', NULL, 'pages/islands/ionische/paxoi.html', 350),
+  ('island', 'kythira', 'Kythira', 'Ionische Inseln', 'Between Ionian and Aegean', 'Kythira feels remote and poetic, with waterfalls, villages and quiet shores.', NULL, 'pages/islands/ionische/kythira.html', 360),
   ('city', 'athens', 'Athens', 'Attica', 'Antique and present day', 'The capital connects archaeological sites with dense city life.', NULL, 'pages/cities/athens.html', 300),
   ('food', 'tzatziki', 'Tzatziki', 'Greek cuisine', 'Yogurt, cucumber, garlic', 'A classic Greek dish, fresh and cool.', NULL, 'pages/food/tzatziki.html', 400);
